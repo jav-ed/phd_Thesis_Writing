@@ -66,20 +66,25 @@
 // ========================================================================== //
 // ================================== Main ================================== //
 // ========================================================================== //
-#include "2_Wr/11_To_Include/0_File.typ"
+// #include "2_Wr/11_To_Include/0_File.typ"
+
+
+#include "2_Wr/1_Chapters/0_Chap/0_File.typ"
+#include "2_Wr/1_Chapters/0_Chap/1_File.typ"
+
 
 // ------------------------------- introducion ------------------------------ //
-#include "2_Wr/0_Chap/0_File.typ"
-#include "2_Wr/0_Chap/1_File.typ"
-#include "2_Wr/0_Chap/2_File.typ"
-#include "2_Wr/0_Chap/3_File.typ"
+// #include "2_Wr/0_Chap/0_File.typ"
+// #include "2_Wr/0_Chap/1_File.typ"
+// #include "2_Wr/0_Chap/2_File.typ"
+// #include "2_Wr/0_Chap/3_File.typ"
 
 // -------------------------------- chapter 1 ------------------------------- //
-#include "2_Wr/1_Chap/0_File.typ"
-#include "2_Wr/1_Chap/1_File.typ"
-#include "2_Wr/1_Chap/2_File.typ"
-#include "2_Wr/1_Chap/3_File.typ"
-#include "2_Wr/1_Chap/4_File.typ"
+// #include "2_Wr/1_Chap/0_File.typ"
+// #include "2_Wr/1_Chap/1_File.typ"
+// #include "2_Wr/1_Chap/2_File.typ"
+// #include "2_Wr/1_Chap/3_File.typ"
+// #include "2_Wr/1_Chap/4_File.typ"
 // #include "2_Wr/1_Chap/10_File.typ"
 
 
@@ -91,10 +96,10 @@
 
 
 // -------------------------------- Appendix -------------------------------- //
-#include "2_Wr/10_Appendix/0_File.typ"
+// #include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
-#include "2_Wr/100_Chapter/1_Glossary.typ"
+// #include "2_Wr/100_Chapter/1_Glossary.typ"
 
 
 // ----------------------------------- Bib ---------------------------------- //
