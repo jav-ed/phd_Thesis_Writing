@@ -36,10 +36,16 @@
       desc: "TBD",
     ),
     (
+      key: "swith",
+      short: "SWITH",
+      long: [*W* ing-Structure-Integrated high-pressure Hydrogen Tanks],
+      desc: "pronounced sweets",
+    ),
+    (
       key: "cfk",
       short: "CFK",
       long: "Kohlenstofffaserverstärkter Kunststoff",
-      desc: "TBD",
+      desc: " pronounced sweets",
     ),
     (
       key: "lee",

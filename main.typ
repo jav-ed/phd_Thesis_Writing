@@ -99,7 +99,7 @@
 // #include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
-// #include "2_Wr/100_Chapter/1_Glossary.typ"
+#include "2_Wr/3_Additional/1_Glossary.typ"
 
 
 // ----------------------------------- Bib ---------------------------------- //
