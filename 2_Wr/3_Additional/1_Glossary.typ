@@ -38,20 +38,9 @@
     (
       key: "swith",
       short: "SWITH",
-      long: [Wing-Structure-Integrated high-pressure Hydrogen Tanks],
+      long: [
+        #text(weight: "bold")[W]ing-#text(weight: "bold")[S]tructure-#text(weight: "bold")[I]ntegrated high-pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
       desc: "pronounced sweets",
-    ),
-    (
-      key: "cfk",
-      short: "CFK",
-      long: "Kohlenstofffaserverstärkter Kunststoff",
-      desc: " pronounced sweets",
-    ),
-    (
-      key: "lee",
-      short: "LEE",
-      long: "Lasteinleitungselemente",
-      desc: "TBD",
     ),
     (
       key: "fea",

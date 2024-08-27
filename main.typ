@@ -8,7 +8,7 @@
   font: "New Computer Modern",
   size: default_Font_Size,
   
-  lang: "de"
+  lang: "en"
 )
 // #show link: set text(fill: blue)
 
