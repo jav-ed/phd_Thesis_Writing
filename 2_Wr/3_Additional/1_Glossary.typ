@@ -38,7 +38,7 @@
     (
       key: "swith",
       short: "SWITH",
-      long: [*W* ing-Structure-Integrated high-pressure Hydrogen Tanks],
+      long: [Wing-Structure-Integrated high-pressure Hydrogen Tanks],
       desc: "pronounced sweets",
     ),
     (
