@@ -64,12 +64,60 @@ With the latter, the location of the 4 hydrogen tubes can be made visible easier
 
 
 == Motivation and Importance of #gl_("swith") <chap_0_2>
+Within this section the need for this research contribution shall be given.
+Modern world heavily reilies on aircraft, whether it be for personal flighty for regular customers or for the budiness sector.
+Regular consumers needs aircraft for a comfortable, secure and fast option to get from one location to another.
+In the buisness sector it can be seen as reliable and fast transportion of goods.
+These goods could comprise a high amount of small good, that would also fit inside a car, or could itself be bigger than a regular car.
+While there are many more reasons the reader himself can think about, why aviation has become indispensable, the negative impact on the environment is hihgly disliked by governments and many consumers.
+In order to keep the benefits of aircraft more environmentally friendly alternatives are demanded.
+One approach as mentioned in @chap_0_1 is the replacement of current fuel kersoin with hydrogen.
+Hydrogen has very specific properties, of which some could be reagrded as hihgly benefical.
+Yet, being not aware of some of them, could cause serious damage to humans and surroing environment. 
+Besides that there are still many open tasks questions regarding dealing with hydrogen.
+More about hydrogen can be found in 
+//
+// TODO
+// @chap_2_0 .
+The point is, finding an alternative fuel for the aerospace is of high importantce.
+However, in the case of hydrogen, gaining knowledge hwo to work with hydorgen can be reqraded equally import as finding an alternative fuel.
+The latter is because of the wide application fields of hydrogen. 
+Considering only the mobility sector, hydrogen could power, among others, ships, motor cycles, cars, vans, helicopters, trains and quadcopters.
+Be it the mobility industry or the energy sector, mubtle mistakes could cause big damage and thus a deeper exploation on hydrogen is required for more than just aviation.
+
+Based on used literature for this thesis, the author can state the following. 
+The science on hydrogen allows one domain x to help anothern seemonlgy unrelated domain y. 
+
+1. Aviation has become an indispensable part of global economy
+2. Research on alternative fuel is required
+3. Hydrogen is of hihg importance, not only for aviation. Thus, general research on hydrogen can have high value
+4. #gl_("swith", pl:true) at this stage are on a science level. Showing progress here benefits the image of the state
+5. science is importance. in order to mesaure once progress in world, scieinfic progress is one of the major fields that are looked upon
+6. increasing stiffness of the wing
+7. optial usage of space - no bare placing of the hydrogen tanks - unsused space
+
+helicopter saving lifes, urgent transportation
 
 == Research Objectives <chap_0_3>
 
 == Structure of This Work <chap_0_4>
 
 == Novelty and Significance of this work <chap_0_5>
+Aviation has become an indispensable part of global economy. Its importance is evident in
+the private sector, where it is connecting destinations worldwide and in the business sector,
+where goods are transported and business trips are undertaken. Since an aircraft burns fuel
+and thus emits carbon dioxide (CO2), nitrogen oxide (NOx) and sulphur dioxide (SO2) its
+impact on the environment is significant and cannot be neglected. Emissions are so high that
+the European commission has formulated a document called Flightpath 2050, where it defines
+two of its goals to be reduction of CO2 and NOx emission by 75% per passenger kilometer
+and 90%, respectively. Currently, commercial aviation is responsible for around 3.5 % of the
+global carbon dioxide and nitrogen oxide emission [17] and it can be assumed that in an
+increasingly globalized world the demand for fast and convenient mobility will not diminish.
+Industry and governments around the world realized that taking active steps towards a cleaner
+flying are essential for saving the planet earth. In 2010, the international Civil Aviation Or-
+ganization (ICAO) formulated industry-wide goals for reducing carbon emissions. These
+goals can be summarized by 2 main objectives, to establish carbon-neutral growth beyond
+year 2020 and to further reduce carbon emissions to half of the current level by the year 2050.
 
 
 // TODO: This section for the moment only consits of fractions
