@@ -2,6 +2,7 @@
 #import "2_Default_Libs.typ": *
 #import "3_German_Specific.typ": *
 #import "4_Glos_Fcns.typ": *
+#import "5_Highlighting.typ": *
 
 // algo
 // glossarium
@@ -146,49 +147,4 @@
   ]
 }
 
-
-// ========================================================================== //
-// ====================== template for asking questions ===================== //
-// ========================================================================== //
-
-#let default_Font_Size = 1.17em
-
-#let ask_Questions(
-    question,
-    img_Path: "../../1_Data/2_Figures/1_Svgs/rocket.svg",
-
-    // because the main document is scaled with 1.17em -> adding here 1.17em will make it bigger than 1.17em -> somehow multiplicative effect. Thus  choose 1em here
-    font_Size: 1em
-    ) = {
-    // adapt color
-    set text(
-        weight: "black",
-        spacing: 127%,
-        size: font_Size,
-    )
-
-    // see: https://typst.app/docs/reference/layout/block/
-    block(
-        // fill: luma(230),
-        inset: 1em,
-        width: 100%,
-        radius: 5pt,
-        stroke: 1pt + blue,
-   
-        // see: https://typst.app/docs/reference/layout/box/
-        [#box(
-            height: 1.43em,
-            image(img_Path),
-            // stroke: 5pt + black,
-            // outset: 20pt,
-            // inset: 10pt,
-            baseline: 20%
-
-            )
-            #h(0.33cm)
-            // add the actual question here - no empty line
-            #question
-            ]
-    )
-        }
 
