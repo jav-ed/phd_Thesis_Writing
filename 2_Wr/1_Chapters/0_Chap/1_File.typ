@@ -47,3 +47,12 @@ Once these methods are identified, they need to be assessed based on reasonable 
 Based on this evaluation, if feasible, a preferred method for physically introducing forces into the #gl_("swith") should be recommended. This recommendation needs to be well-justified, taking into account the strengths and limitations of each approach in the context of #gl_("swith", pl:true) structural verification. 
 
 
+/* ------------------------------ optimization ------------------------------ */
+The arugibly most important task is the optimization. 
+Optimization shall be used in order to answer some questions that are asked in real-world application.
+Questions like: how many #gl_("lie") are required, which forces needs to applied, is there
+
+Give some fundamentals about optimization.
+Explain in detail which method was chosen and why.
+
+Find physically resoanable constrains
