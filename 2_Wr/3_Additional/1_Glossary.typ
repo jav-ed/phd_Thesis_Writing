@@ -28,19 +28,19 @@
 
     // ----------------------------- keys start ----------------------------- //
     (
-      key: "fem",
-      short: "FEM",
-
-      // if long form is added, then it will appear as short (long) when the acronoym appears the first time
-      long: "Finite Element Method",
-      desc: "TBD",
-    ),
-    (
       key: "swith",
       short: "SWITH",
       long: [
         #text(weight: "bold")[W]ing-#text(weight: "bold")[S]tructure-#text(weight: "bold")[I]ntegrated high-pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
       desc: "pronounced sweets",
+    ),
+    (
+      key: "lie",
+      short: "LIE",
+
+      // if long form is added, then it will appear as short (long) when the acronoym appears the first time
+      long: [#text(weight: "bold")[L]oad #text(weight: "bold")[I]ntroduction #text(weight: "bold")[E]lement],
+      desc: "A structural component designed to distribute or transfer forces from one part of a structure to another. In aerospace engineering, these elements can be used to surround the profile of a local section of the span. The physical surrounding object can then transfer loads to the local surrounded area, helping manage stresses and maintain structural integrity. They can take various forms depending on their specific function and location. Load introduction elements are also known as load transfer elements, load-bearing elements, force distribution components, or stress transfer devices. These components are essential in engineering design, particularly in complex structures where managing and distributing forces is critical for performance and safety",
     ),
     (
       key: "fea",

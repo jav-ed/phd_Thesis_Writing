@@ -7,6 +7,10 @@
 #import "../../3_Code/2_Custom_Libs/glossarium_v_0_4_1.typ": * 
 #show: make-glossary
 
+
+// avail functions:
+
+
 // define default color for highlighting
 #let color_Link = gray.darken(60%)
 #let color_High = blue
@@ -41,6 +45,7 @@
     first_Letter_Up: false,
     suffix:none,
     display:none, 
+    long: false,
 
     // plural
     pl: false) = {
@@ -59,7 +64,7 @@
 
     else{
         // track the acronym
-        gls(inp, suffix:suffix, display:display)
+        gls(inp, suffix:suffix, display:display, long:long)
 
     }
     

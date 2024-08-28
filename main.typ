@@ -71,6 +71,7 @@
 
 #include "2_Wr/1_Chapters/0_Chap/0_File.typ"
 #include "2_Wr/1_Chapters/0_Chap/1_File.typ"
+#include "2_Wr/1_Chapters/0_Chap/2_File.typ"
 
 
 // ------------------------------- introducion ------------------------------ //

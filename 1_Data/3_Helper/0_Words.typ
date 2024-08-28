@@ -150,3 +150,51 @@ Example: The product has some flaws; that being said, it's still the best option
 
 At the same time
 Example: She appreciated his honesty; at the same time, his words hurt her feelings.
+
+/* ---------------------------------- Next ---------------------------------- */
+== Alternatives for "Next"
+
+Subsequently
+Example: We'll review the budget and subsequently discuss the new project proposals.
+
+Following this
+Example: We'll analyze the data; following this, we'll draw our conclusions.
+
+Thereafter
+Example: The meeting will end at noon; thereafter, we'll break for lunch.
+
+Afterwards
+Example: Please complete the survey; afterwards, you're free to leave.
+
+Then
+Example: First, preheat the oven; then, prepare the ingredients.
+
+Later
+Example: We'll address your concerns now and tackle the budget issues later.
+
+In turn
+Example: Each team member will present their findings; in turn, we'll discuss the implications.
+
+Consecutively
+Example: The speakers will present consecutively, with short breaks in between.
+
+Ensuing
+Example: The initial experiment yielded promising results; the ensuing tests confirmed our hypothesis.
+
+Succeeding
+Example: This chapter covers the basics; the succeeding chapters delve into more advanced topics.
+
+Subsequently
+Example: We'll review the current policies and subsequently implement necessary changes.
+
+In sequence
+Example: The tasks must be completed in sequence to ensure optimal results.
+
+Successively
+Example: The company launched three products successively over the course of the year.
+
+In succession
+Example: The athlete won three gold medals in succession, setting a new record.
+
+Following on
+Example: We'll start with team introductions, following on with a brief project overview.

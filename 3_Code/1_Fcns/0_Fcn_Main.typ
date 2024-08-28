@@ -1,8 +1,17 @@
-// import functions from default code, that was not modifed by javed
+
+/* ----------------------------- settings import ---------------------------- */
+#import "../4_Settings/0_Layout.typ": *
+
+
+
+
+/* ------------------------------- import fcns ------------------------------ */
 #import "2_Default_Libs.typ": *
 #import "3_German_Specific.typ": *
 #import "4_Glos_Fcns.typ": *
 #import "5_Highlighting.typ": *
+
+
 
 // algo
 // glossarium
