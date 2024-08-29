@@ -3,145 +3,116 @@
 /* -------------------------------------------------------------------------- */
 
 
-== Novelty and Significance of this work <chap_0_5>
-In this section the value of this work shall be highlighted.
-For that the provided arugments shall be seperated into direct and indirect visible benefits.
-The different arguments are those that can be found directly through reading the thesis and can be found in @chap_0_5_0.
-The indirect aguments are noticeable impacts that can be observered on a borader scale.
+== Novelty and Significance of This Work <chap_0_5>
+In this section, the value of this work shall be highlighted. The provided arguments are categorized into two main groups: immediately apparent benefits and potential long-term impacts. The directly observable arguments, which are evident through reading the thesis, are presented in @chap_0_5_0. These encompass the clear, tangible contributions of the research. The indirect arguments, which represent potential broader impacts that could manifest over time, are mentioned in @chap_0_5_1.
+
+This structure aims to provide a comprehensive overview of the research's significance, addressing both its immediate contributions to the field and its potential to influence wider scientific, economic, and societal domains. By separating these aspects, readers can appreciate both the concrete outcomes of the work and its broader implications for future research and applications.
 
 
-=== Direct points of Significance <chap_0_5_0>
-In this subsection
-Overall it shall be shall be explained which main goal the developement of #gl_("swith", pl:true) follows.
-Next, which benefits reader could get going through this thesis.
-Afterwards it shall be hihglighted which concrete benefits especially the industry could gain thorugh the proposed optimization framework.
-Finally, besides the direct beenfits, the indirect beenfits shall be mentioned.
-It also shall be explained why these indirect points are of value.
+/* --------------------------------- direct --------------------------------- */
+=== Direct Points of Significance <chap_0_5_0>
 
-The main problem that #gl_("swith", pl:true) tries to solve or at least to reduce is the negative impact of the aviation on the climate crisis. 
-Since #gl_("swith", pl:true) are pwoered by hydrogen, it is possible to keep aircraft, while having no or a reduced impact on the environment.
-In order to grasph how important the aviation is, the reader can get some arguments for its neccisity in @chap_0_2.
+This subsection presents the tangible benefits that are obtainable through this work. It begins by reiterating the primary objective driving the development of #gl_("swith", pl:true). Subsequently, it details other concrete advantages that this thesis offers. 
+Finally, it underscores the specific benefits that industry stakeholders can realize through the proposed optimization framework.
 
-Next in 
+The central issue that #gl_("swith", pl:true) address is the substantial impact of aviation on climate change. 
+As #gl_("swith", pl:true) utilize hydrogen for power, they offer a pathway to maintain air travel in this high-demand while significantly reducing environmental impact. To appreciate the critical role of aviation, readers are directed to @chap_0_2 for a review of its necessity.
+
+/* ---------------------------------- norms --------------------------------- */
+In
+//
+// TODO
+// @chap_T_B_D
+this work examines the applicability of existing standards from various sectors, including aerospace and automotive, to #gl_("swith") for future certification processes. It clearly outlines the associated challenges and uncertainties, acknowledging the current lack of a comprehensive standard for #gl_("swith").
+In response to this gap, the research identifies alternative solutions and explicitly addresses their limitations. These findings offer valuable insights to certification bodies as they work towards developing the necessary standards for #gl_("swith", pl:true).
+
+
+/* --------------------------------- 525 bar -------------------------------- */
+Next, in
+//
+// TODO
+// @chap_T_B_D
+the work explains the methodology for determining the maximum nominal working pressure for high-pressure tanks intended for burst tests. The findings reveal a current upper limit of 525 bar, a constraint imposed by the limitations of existing test facilities. This study emphasizes that these standards should function as flexible guiding frameworks rather than rigid protocols, thereby encouraging the progressive development of #gl_("swith", pl:true).
+
+/* --------------------------- hydrogen detonation -------------------------- */
+Subsequently, in
+//
+// TODO
+// @chap_T_B_D
+the reader is introduced to the general properties of hydrogen, followed by a comprehensive exploration of potential hazards associated with its use. This exploration is substantiated by both experimental and simulation results. The work identifies key factors that can trigger risks, such as ignition and detonation, and includes methods to mitigate these situations.
+
+/* --------------------------------- roadmap -------------------------------- */
+Furthermore,
+//
+// TODO
+// @chap_T_B_D
+proposes a detailed roadmap with two primary objectives:
+1. To enable the conduct of experimental tests on hydrogen #gl_("swith", pl:true) at scales equivalent to large aircraft for their certification.
+2. To advance simulation techniques to a point where they might be able to replace most costly experimental tests while offering sufficient accuracy for #gl_("swith") certification.
+
+This roadmap encompasses a series of smaller-scale experimental and numerical studies. The findings affirm that hydrogen can be safely used in aviation when responsibly managed. However, the research advises against direct large-scale experimental testing on #gl_("swith", pl:true) due to current limitations in knowledge and technology.
+
+
+/* -------------------------------- curvature ------------------------------- */
+Continuing in
+//
+// TODO
+// @chap_T_B_D,
+this work demonstrates how numerical simulation and openly available research can address a critical question in the structural testing of #gl_("swith", pl:true): Can an alternative medium be used if the testing institution lacks the experience, financial resources, or safety equipment for experimental testing with hydrogen? To answer this question, a curvature study was introduced, thoroughly explained, conducted, and its results interpreted, enabling others to replicate and build upon this work.
+
+
+/* ----------------------------- optimization 0 ----------------------------- */
+Building upon this, the work in
+//
+// TODO
+// @chap_T_B_D
+demonstrates the application of optimization techniques to resolve key challenges in the structural testing of #gl_("swith"). The study tackles critical questions such as determining the optimal number of #gl_("lie", pl:true), their ideal placement, dimensions, and the necessary applied forces. A significant focus of this research lies in developing methods that do not require access to high-performance computers, making the calculations feasible on standard laptops.
+
+In 
 //
 // TODO
 // @chap_T_B_D 
-the potential applicability of existing standards from various domains, including
-aerospace and automotive, to #gl_("swith") for a potential future certification process of to #gl_("swith", pl:true)  were given.
-It was highlighted the associated challenges and uncertainties, acknowledging the absence of a single, all-
-encompassing standard for #gl_("swith").  
-Due the latter, alternatives solutions were identified. The limitaiton of the proposed alternative werealso mentioned clearly. These findings could support certification institutions to come up with the currenlty missing standard that is valid for #gl_("swith", pl:true).
-
-Next in
-//
-// TODO
-// @chap_T_B_D 
-it was explained how the maximum nominal working pressure for high-pressure tanks intended for burst tests could be found.
-Our findings revealed a current upper limit of 525 bar, imposed by the limitations of existing test
-facilities. The study underscored that these standards should serve as flexible guiding frameworks
-rather than rigid protocols, encouraging progressive development of #gl_("swith", pl:true)
-
-Next in
-//
-// TODO
-// @chap_T_B_D 
-the reader is introduced to general properties of hydrogen. Followed by a detailed exploration of the potential hazards associated with its use, substantiated with experimental and simulation results. Key factors that can trigger risks, such as ignition and detonation, are identified and methods to avoid these
-situations are included. 
-Subsequently, a detailed roadmap with two primary objectives is
-proposed: to enable the conduction of experimental tests on hydrogen #gl_("swith", pl:true) at scales
-equivalent to large aircraft for their certification. 
-Secondly, to advance simulation techniques to a
-point where they can replace most costly experimental tests and offer sufficient accuracy for
-#gl_("swith") certification. This roadmap includes a series of smaller-scale experimental and numerical
-studies. The findings affirms hydrogen's safe usage in aviation if responsibly managed, but
-advises against direct large-scale experimental testing on #gl_("swith", pl:true) due to current knowledge and technology limitations.
-
-
-Next in
-//
-// TODO
-// @chap_T_B_D 
-it is explained how numerical simulation and some openly available research can be used to answer a question that is of high importance for a real-world attempt to structrally test #gl_("swith", pl:true).
-If the testing instiution does not have enough experince, money or safetey equipment for experimentally testing with hydrogen, can another medium be used.
-To answer this question the curvature study was introduced, explained in detail, carried out and the results were interpreted. Such that, other could reuse this work.
-
-Next in 
-//
-// TODO
-// @chap_T_B_D 
-it is explained how optimization can be used to answer questions that are improtant for a real-world attempt to strucutrally test a #gl_("swith"). Questions like: how many #gl_("lie", pl:true) are required, what is their optimal placement, their dimensions, and the forces that need to be applied. 
-For the work effort was put in finding methods that do not require aceess to high performance computers.
-Thus, in principle if a regular laptop is available, the calculations could be redone.
-Next, the theory behind the used method is explained in detail as well how they link to optimization process. 
-So the calcualtions can be run on a regular laptop that would return the results within a reasonable time manner. 
-As a result, one can save money by not having to rent high performance clusters and do many calcualtions within one day.
-Because of the choice of the coding language, that the beam model is much easier to understand compared to a FEM calculation many benefits can be mentioned. Among them are, the code itself can be understood easier.
-Consequently adapting it to required needs it easier. It could be potentially used for teachign students at the univeristy.
-Because the optimization and the beam model caluclation are performed with open-source projects, there is no need to pay much money for commerical FEM licenses.
-
-While these points are important from the simulation view, there are more points to mention from the experintal viewpoint. 
-The availibility of such an optimization framework can save a high amount of time and costs for developing a concept to put loads on a #gl_("swith") in an experiment.
-Because the continuous aerodnymic force that the wings bear in reaility, on ground in reaility these forces needs to be replicated. 
-Without an optimiaztion the operater either could try to radnomly decide on the number of #gl_("lie"), the same for their posistion, their dimension and the force that shall be applied. 
-This approach could lead to finding the proper confogutaiton such that the continious aerodynamic is replicated to some satsifying degree. 
-However, the chances can be assumed to be very low. 
-A more smart way would be to try multiple configurations in a sysmteaically way.
-In any case, not knowing knowing how many #gl_("lie") to buy, not knowing their dimensions and where to place them can be assumed to cost a lot of money, time and personal.
-The next issue could be determining experimanlly wheter the continous aerodynamic in the air is actually apprxoimated through the #gl_("lie") configutration.
-Either special mesaurements in the air or in a wind tunnel are required. To compare them with differnt #gl_("lie") configutration additional measurement technology is required. 
-All in all it can be said, that trying to find the proper #gl_("lie") configutration experimentally would cost magntiudes of order more than using a free optimiaztion framework.
-
-
+an in-depth explanation of the theoretical foundations underlying these methods and their integration into the optimization process is provided. This approach enables the execution of calculations on regular laptops within reasonable timeframes, offering substantial cost savings by eliminating the need for high-performance cluster rentals and allowing multiple calculations to be performed in a single day.
+The choice of coding language and the implementation of a beam model, which is more readily comprehensible than FEM calculations, yield numerous advantages. The resulting code is more accessible and easier to understand, facilitating adaptation to specific requirements. 
+This accessibility also renders the model potentially valuable as a teaching tool for university students.
+An additional benefit stems from the utilization of open-source projects for both the optimization process and the beam model calculations. This approach eliminates the need for costly commercial FEM licenses, further enhancing the cost-effectiveness and accessibility of the research.
 
 
 /* -------------------------------------------------------------------------- */
+While these aspects are crucial from a simulation perspective, there are additional points to consider from the experimental viewpoint. The availability of such an optimization framework can significantly reduce time and costs associated with developing a concept to apply loads on a #gl_("swith") in an experimental setting.
+In reality, aircraft wings experience continuous aerodynamic forces during flight. These forces must be accurately replicated in ground-based experiments. Without optimization, an operator might resort to randomly testing different configurations for the number of #gl_("lie"), their positions, dimensions, and applied forces. Although this approach could potentially lead to a configuration that replicates continuous aerodynamics to a satisfactory degree, the probability of success is likely to be very low.
 
-1. Scientific Leadership and Innovation:
-   - By investing in cutting-edge research like #gl_("swith") technology, a nation could enhance its position in scientific innovation.
-   - This potential leadership role might attract talented scientists and researchers from around the world, possibly creating a virtuous cycle of knowledge creation and intellectual capital accumulation.
+A more efficient approach involves systematically evaluating multiple configurations. However, the process of determining the appropriate number of #gl_("lie") to procure, their dimensions, and optimal placement can be extremely costly in terms of financial resources, time, and personnel.
+An additional challenge lies in experimentally verifying whether the continuous aerodynamics experienced in flight are accurately approximated by the #gl_("lie") configuration. This verification would necessitate either specialized in-flight measurements or wind tunnel testing. Comparing these results with different #gl_("lie") configurations would require additional measurement technology during the experimental tests, further increasing complexity and cost.
 
-2. Economic Benefits:
-   - Advanced research often has the potential to lead to patentable technologies and spin-off industries, which could generate economic returns.
-   - The development of expertise in hydrogen technologies and innovative aircraft design might open opportunities for contracts and partnerships with aerospace companies and other nations.
-
-3. Geopolitical Influence:
-   - Demonstrating technological prowess in critical areas like sustainable aviation could potentially enhance a nation's soft power and diplomatic leverage.
-   - Leadership in green technologies may contribute to improving a country's global image and influence in international climate negotiations.
-
-4. Environmental Stewardship:
-   - By actively pursuing solutions to reduce aviation's carbon footprint, a nation can demonstrate its commitment to addressing climate change.
-   - This approach might boost public support both domestically and internationally, as citizens increasingly prioritize environmental concerns.
-
-5. Educational and Workforce Development:
-   - Research programs of this nature have the potential to stimulate interest in STEM fields among students, possibly helping to cultivate the next generation of scientists and engineers.
-   - The skills and knowledge developed through such research could have spillover effects, potentially benefiting other sectors of the economy.
-
-6. International Collaboration:
-   - Pioneering research may create opportunities for international scientific collaboration, potentially fostering diplomatic ties and knowledge exchange.
-   - Such collaborations could lead to shared resources, reduced costs, and accelerated progress in addressing global challenges.
-
-7. National Security and Energy Independence:
-   - Advancements in hydrogen technology might contribute to energy diversification and potentially reduce dependence on fossil fuels, possibly enhancing national security.
-   - The dual-use nature of aerospace technologies could have implications for defense capabilities.
-
-8. Public Perception and National Pride:
-   - High-profile scientific achievements have the potential to boost national morale and foster a sense of pride among citizens.
-   - This could translate into broader support for science funding and evidence-based policymaking.
+In conclusion, attempting to determine the optimal #gl_("lie") configuration through purely experimental means would likely incur costs orders of magnitude higher than utilizing a free optimization framework. This comparison underscores the significant value that the proposed optimization approach brings to the field of #gl_("swith") research and development.
 
 
-In conclusion, while the primary goal of this research is to advance our scientific understanding of #gl_("swith") technology and its potential for sustainable aviation, the broader implications of such research may extend far beyond the laboratory. Nations that invest in this type of pioneering work could position themselves to reap multifaceted benefits spanning economic, geopolitical, environmental, and social domains. As we delve deeper into the technical aspects of #gl_("swith") in subsequent chapters, it's important to keep in mind this broader context and the potential transformative impact this research might have on both the sponsoring nation and the global community.
 
-/* -------------------------------------------------------------------------- */
+/* -------------------------------- indirect -------------------------------- */
+=== Indirect Points of Significance <chap_0_5_1>
+This subsection explores the potential broader, long-term impacts that may arise from continued development and implementation of #gl_("swith", pl:true), of which this thesis forms a part. While these benefits are not immediately apparent and cannot be guaranteed, they represent possible outcomes that could influence various sectors of society, economy, and global dynamics.
+The indirect benefits of research in this field may extend beyond the immediate technological advancements and environmental impacts mentioned in the previous @chap_0_5_0. These potential outcomes could encompass a range of areas, including scientific innovation, economic growth, geopolitical influence, and public perception.
+By examining these indirect points of significance, insights into how continued research into #gl_("swith", pl:true) might shape future developments across multiple domains can be provided. 
+It is crucial to recognize that this thesis represents one component of the remaining extensive research and development necessary to fully realize these potential benefits. The actualization of these outcomes depends on continued efforts across multiple disciplines and sectors.
 
+Investment in cutting-edge research, such as #gl_("swith", pl:true), offers potential benefits that extend far beyond the immediate technological advancements. One significant aspect is the enhancement of a nation's position in scientific innovation. By fostering groundbreaking research, a country can establish itself as a leader in the field, potentially attracting talented scientists and researchers from around the world. This influx of intellectual capital could create a virtuous cycle of knowledge creation and accumulation, further solidifying the nation's scientific standing.
 
-The focus of this work is on science. Yet, science needs financial sponsoring to be carried out properly.
-The nation that is able to showcase it's ability to fund the science on such a new, promising and complex endeavour gains many benefits. 
-First of all, it is generally assumed that top science would be highly linked to the overall progress of a nation.
-The progress of a nation is encapsulates a wide meaning. 
-It would capture aspects like living standards, storing wealth in a country, reliability to invest wealth, personal freedom
+The economic implications of such advanced research are equally noteworthy. The development of #gl_("swith", pl:true) has the potential to lead to patentable innovations and spawn new spin-off industries. These developments could generate substantial economic returns, creating new job opportunities and contributing to economic growth. Moreover, the expertise gained in hydrogen technologies and innovative aircraft design could open doors to lucrative contracts and partnerships with aerospace companies and other nations, further boosting the economic benefits.
+/* ------------------------------ geopolitical ------------------------------ */
+From a geopolitical perspective, demonstrating technological prowess in critical areas like sustainable aviation could enhance a nation's soft power and diplomatic leverage on the global stage. 
+Leadership in green technologies, exemplified by advancements in #gl_("swith") research, may contribute significantly to improving a country's global image. This enhanced reputation could translate into increased influence in international climate negotiations and other global forums, positioning the nation as a key player in shaping future environmental policies and technological standards.
 
-Among them are, more scientists are attacted for doing research in this nation.
-The overall image for foreign governments, industries and scientific centres is improved.
-The latter helps to build trust and consequently opens other doors.
-Besides the assumigly strong economically benefit, local residents could argue, their govement would care about the current climate cirsis.
-If the image on the global scale becomes better and the local residents 
+The development of #gl_("swith", pl:true) also has the potential to significantly impact environmental stewardship, education, and international collaboration. In terms of environmental impact, nations actively pursuing solutions to reduce aviation's carbon footprint can demonstrate their commitment to addressing climate change. This approach may boost public support both domestically and internationally, as citizens increasingly prioritize environmental concerns.
+/* -------------------------------- education ------------------------------- */
+From an educational perspective, research programs focused on #gl_("swith", pl:true) have the potential to stimulate interest in STEM fields among students. This could help cultivate the next generation of scientists and engineers, fostering a skilled workforce prepared to tackle future technological challenges. Moreover, the skills and knowledge developed through such research could have spillover effects, potentially benefiting other sectors of the economy and driving innovation across various industries.
+
+/* ----------------- international scientific collaboration ----------------- */
+The pioneering nature of #gl_("swith", pl:true) research may also create opportunities for international scientific collaboration. Such collaborations could foster diplomatic ties and facilitate knowledge exchange between nations. By pooling resources and expertise, countries could potentially reduce costs and accelerate progress in addressing global challenges related to sustainable aviation and beyond. These collaborative efforts might lead to shared resources, more efficient research processes, and faster advancements in addressing complex technological and environmental issues on a global scale.
+/* ---------------------------- national security --------------------------- */
+Advancements in #gl_("swith", pl:true), particularly in the realm of hydrogen utilization, have potential implications for national security and energy independence. The development of hydrogen-based technologies could contribute significantly to energy diversification efforts, potentially reducing dependence on fossil fuels. This shift towards more sustainable and locally producible energy sources might enhance national security by decreasing reliance on foreign energy supplies.
+
+/* ---------------------------- public perception --------------------------- */
+The pursuit of high-profile scientific achievements, such as the development of #gl_("swith", pl:true), can have a profound impact on public perception and national pride. Successful advancements in this field have the potential to boost national morale and foster a sense of collective achievement among citizens. This increased public engagement with scientific progress could translate into broader support for science funding and evidence-based policymaking. As the public becomes more aware of and invested in such cutting-edge research, it may lead to a more scientifically literate society, better equipped to address complex global challenges.
+
+In conclusion, while the primary objective of this thesis is to advance specific aspects of #gl_("swith") research, it is part of a broader scientific endeavor with potentially far-reaching implications. It is crucial to consider that the realization of these indirect benefits requires continued investment, further research, and successful implementation beyond the scope of this work. As subsequent chapters delve deeper into the technical aspects of #gl_("swith", pl:true), readers should view these potential broader impacts as aspirational goals that may guide future research directions rather than guaranteed outcomes of this specific thesis.
