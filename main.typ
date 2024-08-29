@@ -19,7 +19,10 @@
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
-
+// get latex style for referencing - inshallah
+#show heading.where(level: 1): set heading(supplement: [Chapter])
+#show heading.where(level: 2): set heading(supplement: [Section])
+#show heading.where(level: 3): set heading(supplement: [Subsection])
 
 // ----------------------------- report specific ---------------------------- //
 // blocksatz = justify alignment

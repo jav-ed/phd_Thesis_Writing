@@ -5,7 +5,14 @@
 
 == Novelty and Significance of this work <chap_0_5>
 In this section the value of this work shall be highlighted.
-For that it shall be explained which main goal the developement of #gl_("swith", pl:true) follows.
+For that the provided arugments shall be seperated into direct and indirect visible benefits.
+The different arguments are those that can be found directly through reading the thesis and can be found in @chap_0_5_0.
+The indirect aguments are noticeable impacts that can be observered on a borader scale.
+
+
+=== Direct points of Significance <chap_0_5_0>
+In this subsection
+Overall it shall be shall be explained which main goal the developement of #gl_("swith", pl:true) follows.
 Next, which benefits reader could get going through this thesis.
 Afterwards it shall be hihglighted which concrete benefits especially the industry could gain thorugh the proposed optimization framework.
 Finally, besides the direct beenfits, the indirect beenfits shall be mentioned.
@@ -45,30 +52,47 @@ proposed: to enable the conduction of experimental tests on hydrogen #gl_("swith
 equivalent to large aircraft for their certification. 
 Secondly, to advance simulation techniques to a
 point where they can replace most costly experimental tests and offer sufficient accuracy for
-SWITH certification. This roadmap includes a series of smaller-scale experimental and numerical
+#gl_("swith") certification. This roadmap includes a series of smaller-scale experimental and numerical
 studies. The findings affirms hydrogen's safe usage in aviation if responsibly managed, but
 advises against direct large-scale experimental testing on #gl_("swith", pl:true) due to current knowledge and technology limitations.
 
 
+Next in
+//
+// TODO
+// @chap_T_B_D 
+it is explained how numerical simulation and some openly available research can be used to answer a question that is of high importance for a real-world attempt to structrally test #gl_("swith", pl:true).
+If the testing instiution does not have enough experince, money or safetey equipment for experimentally testing with hydrogen, can another medium be used.
+To answer this question the curvature study was introduced, explained in detail, carried out and the results were interpreted. Such that, other could reuse this work.
+
+Next in 
+//
+// TODO
+// @chap_T_B_D 
+it is explained how optimization can be used to answer questions that are improtant for a real-world attempt to strucutrally test a #gl_("swith"). Questions like: how many #gl_("lie", pl:true) are required, what is their optimal placement, their dimensions, and the forces that need to be applied. 
+For the work effort was put in finding methods that do not require aceess to high performance computers.
+Thus, in principle if a regular laptop is available, the calculations could be redone.
+Next, the theory behind the used method is explained in detail as well how they link to optimization process. 
+So the calcualtions can be run on a regular laptop that would return the results within a reasonable time manner. 
+As a result, one can save money by not having to rent high performance clusters and do many calcualtions within one day.
+Because of the choice of the coding language, that the beam model is much easier to understand compared to a FEM calculation many benefits can be mentioned. Among them are, the code itself can be understood easier.
+Consequently adapting it to required needs it easier. It could be potentially used for teachign students at the univeristy.
+Because the optimization and the beam model caluclation are performed with open-source projects, there is no need to pay much money for commerical FEM licenses.
+
+While these points are important from the simulation view, there are more points to mention from the experintal viewpoint. 
+The availibility of such an optimization framework can save a high amount of time and costs for developing a concept to put loads on a #gl_("swith") in an experiment.
+Because the continuous aerodnymic force that the wings bear in reaility, on ground in reaility these forces needs to be replicated. 
+Without an optimiaztion the operater either could try to radnomly decide on the number of #gl_("lie"), the same for their posistion, their dimension and the force that shall be applied. 
+This approach could lead to finding the proper confogutaiton such that the continious aerodynamic is replicated to some satsifying degree. 
+However, the chances can be assumed to be very low. 
+A more smart way would be to try multiple configurations in a sysmteaically way.
+In any case, not knowing knowing how many #gl_("lie") to buy, not knowing their dimensions and where to place them can be assumed to cost a lot of money, time and personal.
+The next issue could be determining experimanlly wheter the continous aerodynamic in the air is actually apprxoimated through the #gl_("lie") configutration.
+Either special mesaurements in the air or in a wind tunnel are required. To compare them with differnt #gl_("lie") configutration additional measurement technology is required. 
+All in all it can be said, that trying to find the proper #gl_("lie") configutration experimentally would cost magntiudes of order more than using a free optimiaztion framework.
 
 
- alternative standards that are best suited for
 
-Aviation has become an indispensable part of global economy. Its importance is evident in
-the private sector, where it is connecting destinations worldwide and in the business sector,
-where goods are transported and business trips are undertaken. Since an aircraft burns fuel
-and thus emits carbon dioxide (CO2), nitrogen oxide (NOx) and sulphur dioxide (SO2) its
-impact on the environment is significant and cannot be neglected. Emissions are so high that
-the European commission has formulated a document called Flightpath 2050, where it defines
-two of its goals to be reduction of CO2 and NOx emission by 75% per passenger kilometer
-and 90%, respectively. Currently, commercial aviation is responsible for around 3.5 % of the
-global carbon dioxide and nitrogen oxide emission [17] and it can be assumed that in an
-increasingly globalized world the demand for fast and convenient mobility will not diminish.
-Industry and governments around the world realized that taking active steps towards a cleaner
-flying are essential for saving the planet earth. In 2010, the international Civil Aviation Or-
-ganization (ICAO) formulated industry-wide goals for reducing carbon emissions. These
-goals can be summarized by 2 main objectives, to establish carbon-neutral growth beyond
-year 2020 and to further reduce carbon emissions to half of the current level by the year 2050.
 
 /* -------------------------------------------------------------------------- */
 
