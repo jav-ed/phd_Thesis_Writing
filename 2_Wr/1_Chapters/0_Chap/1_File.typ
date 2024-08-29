@@ -48,11 +48,16 @@ Based on this evaluation, if feasible, a preferred method for physically introdu
 
 
 /* ------------------------------ optimization ------------------------------ */
-The arugibly most important task is the optimization. 
-Optimization shall be used in order to answer some questions that are asked in real-world application.
-Questions like: how many #gl_("lie") are required, which forces needs to applied, is there
+Optimization stands as a crucial task in this research. 
+The study needs to employ optimization techniques to address some real-world application questions concerning #gl_("swith", pl:true).
+Questions like the number of required #gl_("lie", pl:true), their optimal placement, dimensions, and the forces that need to be applied. 
+To lay the groundwork for this aim, the research should first provide fundamental concepts of optimization. 
+Following this, a detailed explanation of the methods used for numerical simulations is necessary. 
+These simulation methods need to be thoroughly described, potentially in dedicated sections if multiple approaches are combined. 
+The research must highlight the connection between the chosen simulation methods and the optimization process. With the optimization framework established, the study should clearly define the optimization problem. If bounds or constraints are utilized, their selection needs to be justified with reasoning ideally backed by physical principles. Where feasible, the final optimization framework should be tested under different scenarios, with a clear explanation of why these specific scenarios were chosen. 
+Next, the research needs to present and interpret the obtained results. 
+Finally, it is important to highlight whether the real-world questions mentioned above could be answered or not. If not, explain why.
 
-Give some fundamentals about optimization.
-Explain in detail which method was chosen and why.
-
-Find physically resoanable constrains
+/* ---------------------------- discussion demand --------------------------- */
+The next requirement, while not demanding research on a new topic, can still be considered part of the research objectives. Namely, the need to convey the research in an easily graspable way. 
+Given the multidisciplinary nature of the thesis, covering various fields, it is crucial to include a dedicated section that collect the important findings.
