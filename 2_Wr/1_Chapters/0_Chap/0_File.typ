@@ -63,7 +63,7 @@ With the latter, the location of the 4 hydrogen tubes can be made visible easier
 
 
 
-/* ---------------------- Motivation and Importance of ---------------------- */
+/* ------------------------------- Motivation ------------------------------- */
 == Motivation <chap_0_2>
 This section outlines the fundamental reasons inspiring this research contribution.
 The contemporary world heavily relies on aviation, serving crucial functions in both personal and business spheres that extend far beyond mere transportation.

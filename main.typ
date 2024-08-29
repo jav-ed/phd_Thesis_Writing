@@ -39,6 +39,27 @@
 // #include "0_Manag/0_Tab_Of_Cont/2_Ver.typ"
 
 
+/* ---------------------------------- tocs ---------------------------------- */
+#outline(
+  indent: auto,
+)
+#pagebreak(weak:true)
+
+// // toc figure
+// #outline(
+//   title: [List of Figures],
+//   target: figure.where(kind: image),
+// )
+// #pagebreak(weak:true)
+
+// // toc table
+// #outline(
+//   title: [List of Tables],
+//   target: figure.where(kind: table),
+// )
+// #pagebreak(weak:true)
+
+
 // ========================================================================== //
 // ================================= Trials ================================= //
 // ========================================================================== //
