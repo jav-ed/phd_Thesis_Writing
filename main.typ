@@ -94,6 +94,7 @@
 #include "2_Wr/1_Chapters/0_Chap/1_File.typ"
 #include "2_Wr/1_Chapters/0_Chap/2_File.typ"
 #include "2_Wr/1_Chapters/0_Chap/3_File.typ"
+#include "2_Wr/1_Chapters/0_Chap/4_File.typ"
 
 
 // ------------------------------- introducion ------------------------------ //

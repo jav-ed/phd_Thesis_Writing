@@ -4,6 +4,56 @@
 
 
 == Novelty and Significance of this work <chap_0_5>
+In this section the value of this work shall be highlighted.
+For that it shall be explained which main goal the developement of #gl_("swith", pl:true) follows.
+Next, which benefits reader could get going through this thesis.
+Afterwards it shall be hihglighted which concrete benefits especially the industry could gain thorugh the proposed optimization framework.
+Finally, besides the direct beenfits, the indirect beenfits shall be mentioned.
+It also shall be explained why these indirect points are of value.
+
+The main problem that #gl_("swith", pl:true) tries to solve or at least to reduce is the negative impact of the aviation on the climate crisis. 
+Since #gl_("swith", pl:true) are pwoered by hydrogen, it is possible to keep aircraft, while having no or a reduced impact on the environment.
+In order to grasph how important the aviation is, the reader can get some arguments for its neccisity in @chap_0_2.
+
+Next in 
+//
+// TODO
+// @chap_T_B_D 
+the potential applicability of existing standards from various domains, including
+aerospace and automotive, to #gl_("swith") for a potential future certification process of to #gl_("swith", pl:true)  were given.
+It was highlighted the associated challenges and uncertainties, acknowledging the absence of a single, all-
+encompassing standard for #gl_("swith").  
+Due the latter, alternatives solutions were identified. The limitaiton of the proposed alternative werealso mentioned clearly. These findings could support certification institutions to come up with the currenlty missing standard that is valid for #gl_("swith", pl:true).
+
+Next in
+//
+// TODO
+// @chap_T_B_D 
+it was explained how the maximum nominal working pressure for high-pressure tanks intended for burst tests could be found.
+Our findings revealed a current upper limit of 525 bar, imposed by the limitations of existing test
+facilities. The study underscored that these standards should serve as flexible guiding frameworks
+rather than rigid protocols, encouraging progressive development of #gl_("swith", pl:true)
+
+Next in
+//
+// TODO
+// @chap_T_B_D 
+the reader is introduced to general properties of hydrogen. Followed by a detailed exploration of the potential hazards associated with its use, substantiated with experimental and simulation results. Key factors that can trigger risks, such as ignition and detonation, are identified and methods to avoid these
+situations are included. 
+Subsequently, a detailed roadmap with two primary objectives is
+proposed: to enable the conduction of experimental tests on hydrogen #gl_("swith", pl:true) at scales
+equivalent to large aircraft for their certification. 
+Secondly, to advance simulation techniques to a
+point where they can replace most costly experimental tests and offer sufficient accuracy for
+SWITH certification. This roadmap includes a series of smaller-scale experimental and numerical
+studies. The findings affirms hydrogen's safe usage in aviation if responsibly managed, but
+advises against direct large-scale experimental testing on #gl_("swith", pl:true) due to current knowledge and technology limitations.
+
+
+
+
+ alternative standards that are best suited for
+
 Aviation has become an indispensable part of global economy. Its importance is evident in
 the private sector, where it is connecting destinations worldwide and in the business sector,
 where goods are transported and business trips are undertaken. Since an aircraft burns fuel
@@ -71,18 +121,3 @@ The overall image for foreign governments, industries and scientific centres is 
 The latter helps to build trust and consequently opens other doors.
 Besides the assumigly strong economically benefit, local residents could argue, their govement would care about the current climate cirsis.
 If the image on the global scale becomes better and the local residents 
-
-/* -------------------------------------------------------------------------- */
-
-// TODO: This section for the moment only consits of fractions
-== Research Enabler <chap_0_6>
-Before going into more depths for #gl_("swith"), the author of thesis would like to highlight the following fact.
-This work was financially supported by the TU-Dresden. Besides the financial support the the co workers and the professor of the chair also guided this work. 
-Next, the Klimawandel DEutscher Staat...
-IMA 
-
-Include Images
-
-They all contributed togehter to enable this work. Besides provind the author the ability to express his graditute to all the mentioned parnter, there is one more importnat reason to mention it here.
-Research experts and many readers might ask themselves about the money provider.
-Based on this outcome, the trust in the results can vary. Having transparently provided these informaiton, the reader can decide for himself whether there was any pressure from outside to present the results in one or another way.
