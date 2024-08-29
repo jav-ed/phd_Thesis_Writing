@@ -57,6 +57,7 @@ These simulation methods need to be thoroughly described, potentially in dedicat
 The research must highlight the connection between the chosen simulation methods and the optimization process. With the optimization framework established, the study should clearly define the optimization problem. If bounds or constraints are utilized, their selection needs to be justified with reasoning ideally backed by physical principles. Where feasible, the final optimization framework should be tested under different scenarios, with a clear explanation of why these specific scenarios were chosen. 
 Next, the research needs to present and interpret the obtained results. 
 Finally, it is important to highlight whether the real-world questions mentioned above could be answered or not. If not, explain why.
+Successfully answering these questions would demonstrate the power of interdisciplinary research in solving complex real-world engineering problems, showcasing how the integration of optimization techniques, existing literature, and numerical simulations can yield practical solutions.
 
 /* ---------------------------- discussion demand --------------------------- */
 The next requirement, while not demanding research on a new topic, can still be considered part of the research objectives. Namely, the need to convey the research in an easily graspable way. 
