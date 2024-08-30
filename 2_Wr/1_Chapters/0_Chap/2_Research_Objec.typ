@@ -11,13 +11,13 @@ The concrete topics to be covered in this research are as follows:
 
 /* ---------------------------------- intro --------------------------------- */
 One primary objective of this research is to develop a comprehensive understanding of the #gl_("swith") concept. This involves precisely defining what a #gl_("swith") is, exploring its potential applications in aviation and elucidating its crucial relationship with hydrogen as the fuel. 
-The study should evaluate the benefits that #gl_("swith") technology could bring to aircraft aviation and environment. 
+The study should evaluate the benefits that #gl_("swith", pl:true) could bring to aircraft aviation and environment. 
 Following this, the research needs to conduct a analysis of the current state of the art in #gl_("swith", pl:true), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field. 
 
 /* ---------------------------------- norms --------------------------------- */
-Another critical objective is to examine the regulatory landscape for #gl_("swith", pl:true). This includes investigating the current processes and requirements for licensing #gl_("swith") technology and analyzing the steps necessary to make #gl_("swith", pl:true) available for daily commercial deployment. 
+Another critical objective is to examine the regulatory landscape for #gl_("swith", pl:true). This examination aims to gain insights crucial for the real-world certification of #gl_("swith", pl:true). This includes investigating the current processes and requirements for licensing #gl_("swith", pl:true) and analyzing the steps necessary to make #gl_("swith", pl:true) available for daily commercial deployment. 
 The research should identify current limitations in the regulatory framework and propose potential solutions to overcome these barriers. 
-For that a key goal is to determine critical load cases for a #gl_("swith") certification. 
+For that one goal is to determine critical load cases for a #gl_("swith") certification. 
 This involves the identification and prioritization of load cases that are most likely to be scrutinized in the certification process.
 In case of non-existing regulations for #gl_("swith") certification, this work could thereby contribute to the eventual certification and implementation of this innovative technology in commercial aviation.
 
@@ -26,9 +26,9 @@ Given the critical role of hydrogen in #gl_("swith", pl:true), a comprehensive i
 The study should focus particularly on the unique characteristics of hydrogen that pose challenges in its real-world application. 
 A key objective is to investigate whether hydrogen can be safely and effectively used in experimental investigations of #gl_("swith", pl:true). 
 This research aims to design and analyze potential experimental setups based on the critical load cases identified earlier, with the goal of maximizing the relevance of these experiments to certification institutions. 
-These experimental investigations can be crucial in demonstrating the viability and safety of #gl_("swith") technology to regulatory bodies. 
+These experimental investigations can be crucial in demonstrating the viability and safety of #gl_("swith", pl:true) to regulatory bodies. 
 Furthermore, the study needs explore whether certain potentially dangerous properties of hydrogen can be safely disregarded in experimental structural verification of #gl_("swith", pl:true) without compromising the integrity or validity of the tests. 
-This analysis is vital for developing safe, practical, and cost-effective testing protocols that can contribute to the eventual certification process for #gl_("swith") technology in commercial aviation.
+This analysis is vital for developing safe, practical, and cost-effective testing protocols that can contribute to the eventual certification process for #gl_("swith", pl:true) in commercial aviation.
 
 /* ---------------------- curvature, impact fill medium --------------------- */
 Should the research determine that hydrogen is not suitable as a filling agent for experimental investigations, a thorough justification for this conclusion needs to be provided. The study should then focus on identifying and evaluating alternative filling agents that could be used in place of hydrogen. 
@@ -48,9 +48,10 @@ Based on this evaluation, if feasible, a preferred method for physically introdu
 
 
 /* ------------------------------ optimization ------------------------------ */
-Optimization stands as a crucial task in this research. 
-The study needs to employ optimization techniques to address some real-world application questions concerning #gl_("swith", pl:true).
-Questions like the number of required #gl_("lie", pl:true), their optimal placement, dimensions, and the forces that need to be applied. 
+Optimization stands as a crucial task in this research.
+The study needs to employ optimization techniques to address real-world application questions concerning #gl_("swith", pl:true) certification.
+For the certification of #gl_("swith", pl:true), one part is to conduct an experimental structural validation test.
+Through optimization, questions such as the number of required #gl_("lie", pl:true), their optimal placement, dimensions, and the forces that need to be applied, shall be answered.
 To lay the groundwork for this aim, the research should first provide fundamental concepts of optimization. 
 Following this, a detailed explanation of the methods used for numerical simulations is necessary. 
 These simulation methods need to be thoroughly described, potentially in dedicated sections if multiple approaches are combined. 

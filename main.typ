@@ -93,11 +93,17 @@
 // #include "2_Wr/11_To_Include/0_File.typ"
 
 
-#include "2_Wr/1_Chapters/0_Chap/0_File.typ"
-#include "2_Wr/1_Chapters/0_Chap/1_File.typ"
-#include "2_Wr/1_Chapters/0_Chap/2_File.typ"
-#include "2_Wr/1_Chapters/0_Chap/3_File.typ"
-#include "2_Wr/1_Chapters/0_Chap/4_File.typ"
+/* ---------------------------------- Intro --------------------------------- */
+#include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
+#include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
+#include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
+#include "2_Wr/1_Chapters/0_Chap/3_Work_Strucutre.typ"
+#include "2_Wr/1_Chapters/0_Chap/4_Novelty.typ"
+#include "2_Wr/1_Chapters/0_Chap/5_Research_Enabler.typ"
+
+/* ---------------------------- State of the art ---------------------------- */
+#include "2_Wr/1_Chapters/1_Chap/0_State_Of_Art.typ"
+
 
 
 // ------------------------------- introducion ------------------------------ //

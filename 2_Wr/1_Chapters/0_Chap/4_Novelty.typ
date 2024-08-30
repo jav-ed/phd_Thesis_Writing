@@ -25,6 +25,7 @@ In
 // @chap_T_B_D
 this work examines the applicability of existing standards from various sectors, including aerospace and automotive, to #gl_("swith") for future certification processes. It clearly outlines the associated challenges and uncertainties, acknowledging the current lack of a comprehensive standard for #gl_("swith").
 In response to this gap, the research identifies alternative solutions and explicitly addresses their limitations. These findings offer valuable insights to certification bodies as they work towards developing the necessary standards for #gl_("swith", pl:true).
+Thus, this research contributes to the potential certification of #gl_("swith", pl:true) and their commercial availability.
 
 
 /* --------------------------------- 525 bar -------------------------------- */
@@ -40,6 +41,7 @@ Subsequently, in
 // TODO
 // @chap_T_B_D
 the reader is introduced to the general properties of hydrogen, followed by a comprehensive exploration of potential hazards associated with its use. This exploration is substantiated by both experimental and simulation results. The work identifies key factors that can trigger risks, such as ignition and detonation, and includes methods to mitigate these situations.
+The benefit of this comprehensive exploration becomes especially evident when designing and conducting an experimental structural verification test, which can be assumed to become mandatory for the commercial certification of a #gl_("swith").
 
 /* --------------------------------- roadmap -------------------------------- */
 Furthermore,
@@ -58,7 +60,8 @@ Continuing in
 //
 // TODO
 // @chap_T_B_D,
-this work demonstrates how numerical simulation and openly available research can address a critical question in the structural testing of #gl_("swith", pl:true): Can an alternative medium be used if the testing institution lacks the experience, financial resources, or safety equipment for experimental testing with hydrogen? To answer this question, a curvature study was introduced, thoroughly explained, conducted, and its results interpreted, enabling others to replicate and build upon this work.
+this work addresses a critical question for the experimental structural testing of #gl_("swith", pl:true).
+This question is of high importance for real-world certification: Can an alternative medium be used if the testing institution lacks the experience, financial resources, or safety equipment for experimental testing with hydrogen? To answer this question, a curvature study was introduced, thoroughly explained, conducted, and its results interpreted, enabling others to replicate and build upon this work.
 
 
 /* ----------------------------- optimization 0 ----------------------------- */

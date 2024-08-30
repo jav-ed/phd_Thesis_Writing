@@ -3,68 +3,6 @@
 /* -------------------------------------------------------------------------- */
 
 
-// TODO
-// Needs to be reviewed in depth
-/* ------------------------------ Introduction ------------------------------ */
-= Introduction <chap_0>
-In the starting chapter of this work, first some inital background regarding the niche field shall be given 
-in @chap_0_1. 
-This aims to give the reader a broad overview of the field of research.
-The deeper look into this subject can inshallah be found in 
-//
-// TODO
-// @chap_2_0 .
-Once a rough understanding of #gl_("swith"), pronounced sweets, is obtained, the motivation behind this work shall be explained in @chap_0_2.
-The next @chap_0_3 shall outline the overall goals of this work. The reader can refer to it for gaining a quick overview about the topics that are covered.
-In @chap_0_4 the systematic strucutre of writing this thesis is given.
-The following @chap_0_5 highlights the novelty and significance of this work.
-Finally in @chap_0_6 the financial funding is made transparent such that the reader can decide for himself whether any manipulation from outside occured.
-
-
-/* ---------------------------- Inital Background --------------------------- */
-== Inital Background <chap_0_1>
-In this subsection a quick and rough defintion of the term #gl_("swith") shall be given. 
-Concrete detailed information about #gl_("swith", pl:true) can be found at
-//
-// TODO
-// @chap_2_0 .
-The reason for initally starting with a brief defintion of #gl_("swith") is to work systematically.
-First a overall idea is presented, which in most #emp_[]cases can be assumed to be easier to undertand, especially for non-specialists.
-Once basics are understood properly, depth knowledge becomes easier to grasp.
-
-There are many aspects in the field of aviation, which scienntists and industries areound the world try to improve. 
-One of them is the impact that aircrafts have on the environment.
-The main goal in the latter field is to investigate, how the harm already caused to the planet earth, can be reduced.
-Among the many options that are actively researched on, the potential soluition this work deals with is the applicaiton of hydrogen.
-In this case hydrogen would replace the conventional fuel, that is, cerosine, as the power supplier. 
-If working with hydrogen, the engineers currenlty have two viable options. 
-Hydrogen in to decide between working with gaseous and liquid hydrogen.
-For this work, gaseous hydrogen will be chosen. 
-Because of the latter and the desire of a feasible flight range, the hydrogen must be stored under very high pressure.
-For now the following simpliefied explanation shall suffice. 
-Gas can be compressed and with high pressure we can compress hydrogen such that we can store comprably more hydorgen within a given and constant volumne.
-Due to the high pressure, pressure resitant hydrogen storages are required.
-The direct approach would to devote a secure space to storing the hydrogen tanks within the aircraft.
-The concrete location for placing the hydrogen tanks is not easy and depeneds on a high number of factors.
-However, another apporach is to have the hydrogen high pressure tanks inside the wing and furthermore conntected to the wingskin.
-As a consequence of the tank and wing skin being strucutrally connected, the loads are shared.
-In more concrete terms, if the wings feels any lift distirbution, part of it will be passed to the hydrogen tanks.
-On the other hand, acceptable defecltions caused by the high pressure within the tanks will put stress on the wing skin. 
-Because of the strucutral connections of the wing and the tanks, the connection areas allow load paths to be created.
-
-An illustraitve example of the wing of a #gl_("swith") is given in @fig_0. 
-While for #gl_("swith", pl:true) the wing skin usally surrounds the pressure tanks fully, in @fig_0 the view is made free on purpose.
-With the latter, the location of the 4 hydrogen tubes can be made visible easier. 
-
-
-#figure(
-  image("../../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png", 
-  width: 100%),
-  caption: [ Illustrative example of a #gl_("swith")],
-) <fig_0>
-
-
-
 
 // Some review already happened
 /* ------------------------------- Motivation ------------------------------- */
@@ -72,10 +10,10 @@ With the latter, the location of the 4 hydrogen tubes can be made visible easier
 This section outlines the fundamental reasons inspiring this research contribution.
 The contemporary world heavily relies on aviation, serving crucial functions in both personal and business spheres that extend far beyond mere transportation.
 For individual consumers, aircraft provide a comfortable, secure, and expeditious option to traverse vast distances. 
-This capability has changed personal travel, enabling people to explore distant lands, reunite with loved ones, and broaden their cultural horizons in ways previously might be very hard to impossible. The speed and efficiency of air travel have impact on international understanding and cultural exchange.
+This capability has changed personal travel, enabling people to explore distant lands, reunite with loved ones, and broaden their cultural horizons in ways that were previously difficult or impossible. The speed and efficiency of air travel have an impact on international understanding and cultural exchange.
 
-In the business sector, aviation stands as a indispensable part of global commerce. It offers reliable and swift transportation of goods, ranging from small, high-value items to oversized cargo that exceeds the capacity of standard ground or some sea transport. 
-This logistical advancements has enabled the development of complex, international supply chains that are an essential part of modern industry. 
+In the business sector, aviation stands as an indispensable part of global commerce. It offers reliable and swift transportation of goods, ranging from small, high-value items to oversized cargo that exceeds the capacity of standard ground or some sea transport. 
+These logistical advancements have enabled the development of complex, international supply chains that are an essential part of modern industry. 
 Furthermore, business travel facilitated by aviation has become integral to maintaining personal relationships in an increasingly globalized economy, where face-to-face meetings can make or break crucial deals and partnerships.
 The importance of aircraft extends well beyond these primary functions. In the realm of emergency services, aircraft play a vital role in search and rescue operations, medical evacuations, and disaster relief efforts. 
 Their ability to quickly reach remote or inaccessible areas has saved many lives and provided critical aid in times of crisis. Additionally, aircraft serve essential functions in scientific research, enabling atmospheric studies, wildlife tracking, and earth observation that contribute to our understanding of climate change and other global phenomena.
@@ -90,7 +28,8 @@ To maintain the benefits of aircraft while addressing environmental concerns, mo
 These emissions include carbon dioxide (CO2), nitrogen oxides (NOx), and sulphur dioxide (SO2), all of which contribute to climate change and air pollution.
 The magnitude of this issue is reflected in policy initiatives such as the European Commission's Flightpath 2050. This document sets ambitious goals for the aviation industry, including a 75% reduction in CO2 emissions and a 90% reduction in NOx emissions per passenger kilometer. These targets underscore the urgent need for innovative solutions in aviation technology and fuel systems.
 
-One promising approach to meeting these environmental challenges, as mentioned in  @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to potentially eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. However, lack of awareness or mishandling of these properties could potentially cause serious damage to humans and the surrounding environment. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation. A more detailed discussion of hydrogen's properties and challenges can be found in 
+One promising approach to meeting these environmental challenges, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to potentially eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. However, lack of awareness or mishandling of these properties could potentially cause serious damage to humans and the surrounding environment. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation.
+These are especially of importance in the face of conducting experimental structural validation tests that are mandatory for certifying any aircraft. A more detailed examination of hydrogen's properties and challenges can be found in 
 //
 // TODO
 // @chap_2_0 .
@@ -98,9 +37,16 @@ One promising approach to meeting these environmental challenges, as mentioned i
 Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen. Considering only the mobility sector, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
-
 #gl_("swith", pl:true) represent a relatively new field of research. While their primary objective is to address current environmental challenges in aviation, they do so in a distinctive manner. By integrating fuel tanks within the wing structure, #gl_("swith", pl:true) aim to maximize space utilization, avoiding wastage. This approach contrasts with the use of conventional hydrogen tanks solely for fuel storage, which would not contribute to alleviating the loads experienced by the wing. Consequently, #gl_("swith") are designed to serve dual purposes: providing fuel storage and potentially reducing wing loads.
 
+However, the dual functionality of #gl_("swith", pl:true) - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
+Certification authorities need to ensure that #gl_("swith", pl:true) can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in 
+//
+// TODO
+// @chap_2_0 .
+
+First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #gl_("swith", pl:true).
+Second, as mentioned before, even when assuming knowledge of what to test, there remains a significant challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #gl_("swith", pl:true) in commercial aviation.
 
 The focus of this work is primarily scientific, aiming to advance our understanding of #gl_("swith", pl:true). 
 However, it is essential to acknowledge that scientific research, particularly in such novel and complex fields, requires substantial financial support to be conducted effectively. Nations and organizations that demonstrate the capability and commitment to fund research into such promising and challenging endeavors may position themselves to gain numerous benefits beyond the immediate scientific outcomes. These potential benefits, which extend to economic, technological, and strategic domains, are further elaborated in @chap_0_5.
