@@ -31,21 +31,47 @@ In this subsection, a concise definition of the term #gl_("swith") shall be prov
 // @chap_2_0 .
 The rationale for beginning with a brief definition of #gl_("swith") is to approach the topic systematically. Presenting an overall concept first is generally easier to comprehend, especially for non-specialists. Once the basics are properly understood, in-depth knowledge becomes more accessible.
 
-The aviation industry is actively pursuing improvements in various aspects, with a significant focus on reducing environmental impact. Among the numerous options being researched, this work explores the application of hydrogen as a potential solution. In this context, hydrogen would replace conventional fuel (kerosene) as the power source for aircraft.
+The aviation industry is actively pursuing improvements in various aspects, with a significant focus on reducing environmental impact 
+@Rupcic2023 @Afonso2023 @Ansell2023 @Abrantes2024 @Ficca2023.
+Among the numerous options being researched, this work explores the application of hydrogen as a potential solution. In this context, hydrogen would replace conventional fuel (kerosene) as the power source for aircraft
+@Rupcic2023 @Afonso2023 @Ansell2023 @Ficca2023 
+@Manigandan2023 @Mueller2023 @Degirmenci2023 @Eissele2023 .
+When working with hydrogen, engineers currently have two viable options: gaseous 
+//
+@Manigandan2023 @Yusaf2024 @Meissner2023
+//
+and liquid hydrogen
+//
+@Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024 
+//
+. This work focuses on gaseous hydrogen. To achieve a feasible flight range, the hydrogen must be stored under very high pressure. A simplified explanation is that gas can be compressed, and high pressure allows for storing comparatively more hydrogen within a given constant volume. Due to the high pressure, pressure-resistant hydrogen storage systems are required.
 
-When working with hydrogen, engineers currently have two viable options: gaseous and liquid hydrogen. This work focuses on gaseous hydrogen. To achieve a feasible flight range, the hydrogen must be stored under very high pressure. A simplified explanation is that gas can be compressed, and high pressure allows for storing comparatively more hydrogen within a given constant volume. Due to the high pressure, pressure-resistant hydrogen storage systems are required.
+The obvious approach would be to allocate a secure space for storing hydrogen tanks within the aircraft 
+@Eissele2023 @Adler2024. An illustrative example of how such an placement could look like is provided in @fig_0. 
 
-The obvious approach would be to allocate a secure space for storing hydrogen tanks within the aircraft. The specific location for placing these tanks is complex and depends on numerous factors. However, an alternative approach involves integrating high-pressure hydrogen tanks inside the wing and connecting them structurally to the wing skin. As a consequence of this structural connection, loads are shared between the tanks and the wing.
+#figure(
+  image("../../../1_Data/2_Figs/0_Content/0_Chap/1_Long_Short.jpeg", 
+  width: 77%),
+  caption: [Illustrative example of how non-integrated hydrogen tanks could be placed within an existing configuration of an aircraft @Adler2024],
+) <fig_0>
 
+
+/* ========================================================================== */
+/* ============================== stopped here ============================== */
+/* ========================================================================== */
+// enxt points are to find refs that talk about strucutre integrated aircrafts. also check your current papers, wheter they talk about swiths already
+The specific location for placing these tanks is complex and depends on numerous factors
+//
+@Adler2024 @Onorato2022 @Prewitz2023 @Huete2021
+. However, an alternative approach involves integrating high-pressure hydrogen tanks inside the wing and connecting them structurally to the wing skin. As a consequence of this structural connection, loads are shared between the tanks and the wing.
 More specifically, when the wing experiences lift distribution, part of the load is transferred to the hydrogen tanks. Conversely, acceptable deformations caused by the high pressure within the tanks will exert stress on the wing skin. The structural connections between the wing and tanks create load paths in the connection areas.
-
-An illustrative example of the wing of a #gl_("swith") is provided in @fig_0. While the wing skin typically envelops the pressure tanks completely in #gl_("swith", pl:true), the view in @fig_0 is intentionally unobstructed to clearly show the location of the four hydrogen tubes.
+An illustrative example of the wing of a #gl_("swith") is provided in @fig_1. While the wing skin typically envelops the pressure tanks completely in #gl_("swith", pl:true), the view in @fig_1 is intentionally unobstructed to clearly show the location of the four hydrogen tubes.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png", 
   width: 100%),
-  caption: [ Illustrative example of a wing of a #gl_("swith")],
-) <fig_0>
+  caption: [Illustrative example of a wing of a #gl_("swith")],
+) <fig_1>
 
 When working with #gl_("swith", pl:true), it is crucial to understand the implications arising from the key difference between regular aircraft or non-wing-structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. To emphasize this critical point:
 Placing hydrogen tanks securely in the aircraft requires modifying space arrangement and alters mass distribution. 
