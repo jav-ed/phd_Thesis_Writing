@@ -45,8 +45,8 @@
     (
       key: "fea",
       short: "FEA",
-      long: "Finite-Elemente-Analyse",
-      desc: "TBD",
+      long: [#text(weight: "bold")[F]inite #text(weight: "bold")[E]lement #text(weight: "bold")[A]nalysis],
+      desc: [A numerical method used in engineering and mathematical physics to solve complex problems by dividing a large system into smaller, simpler parts called finite elements. In structural engineering and aerospace applications, FEA is widely used to analyze the behavior of materials and structures under various loads and conditions. It involves creating a mathematical model of an entire system as a network of discrete elements, then using software to simulate how the structure will react to real-world forces, vibration, heat, fluid flow, and other physical effects. FEA allows engineers to identify potential design weaknesses, optimize material usage, predict product performance, and solve intricate structural, thermal, and multiphysics problems. This method is particularly valuable in situations where analytical solutions are difficult or currently impossible to obtain, enabling an efficient and cost-effective design process, especially for complex geometries and multifaceted engineering challenges.],
     ),
     (
       key: "ld",
@@ -58,14 +58,17 @@
       key: "cpu",
       short: "CPU",
       long: [#text(weight: "bold")[C]entral #text(weight: "bold")[P]rocessing #text(weight: "bold")[U]nit],
-      desc: "Computer-Prozessor",
+
+      // TODO
+      // add references
+      desc: [The CPU is the primary component of a computer that performs most of the processing inside the computer. It executes computer program instructions and performs basic arithmetic, logical, control and input/output (I/O) operations specified by the instructions. The CPU is often referred to as the 'brain' of the computer. Modern CPUs are typically contain multiple processing cores, allowing for parallel processing of tasks. The performance of a CPU is generally determined by factors such as clock speed, number of cores, cache size, and instruction set architecture.],
     ),
     (
       key: "gpu",
       short: "GPU",
       long: [#text(weight: "bold")[G]raphics #text(weight: "bold")[P]rocessing #text(weight: "bold")[U]nit],
-      desc: "Grafikprozessor",
-    ),
+      desc: [GPU],
+      ),
     (
       key: "llm",
       short: "LLM",

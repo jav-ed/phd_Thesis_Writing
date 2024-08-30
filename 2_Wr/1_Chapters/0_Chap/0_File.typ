@@ -2,6 +2,9 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+
+// TODO
+// Needs to be reviewed in depth
 /* ------------------------------ Introduction ------------------------------ */
 = Introduction <chap_0>
 In the starting chapter of this work, first some inital background regarding the niche field shall be given 
@@ -11,7 +14,7 @@ The deeper look into this subject can inshallah be found in
 //
 // TODO
 // @chap_2_0 .
-Once a rough understanding of #gl_("swith"), pronounced #emph("sweets"),  is obtained, the motivation behind this work shall be explained in @chap_0_2.
+Once a rough understanding of #gl_("swith"), pronounced sweets, is obtained, the motivation behind this work shall be explained in @chap_0_2.
 The next @chap_0_3 shall outline the overall goals of this work. The reader can refer to it for gaining a quick overview about the topics that are covered.
 In @chap_0_4 the systematic strucutre of writing this thesis is given.
 The following @chap_0_5 highlights the novelty and significance of this work.
@@ -63,6 +66,7 @@ With the latter, the location of the 4 hydrogen tubes can be made visible easier
 
 
 
+// Some review already happened
 /* ------------------------------- Motivation ------------------------------- */
 == Motivation <chap_0_2>
 This section outlines the fundamental reasons inspiring this research contribution.
