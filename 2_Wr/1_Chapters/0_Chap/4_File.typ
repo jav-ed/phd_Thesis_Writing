@@ -2,16 +2,13 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO: This section for the moment only consits of fractions
+
 == Research Enabler <chap_0_6>
-Before going into more depths for #gl_("swith"), the author of thesis would like to highlight the following fact.
-The Federal Ministry for Economic Affairs and Climate Action provided sponsored the research project called Konzeptprüfstand für Kleinflugzeugflügel mit hochintegralen Hochdruckwasserstofftanks under the id 20M2117B.
+This section provides context for the research environment that facilitated this study on #gl_("swith", pl:true). It outlines the funding sources that enabled this contribution to #gl_("swith",pl:true). By transparently presenting this information, readers can better understand the research ecosystem and form their own opinions on the study's context.
 
-This research project was granted to the TU Dresden.
-At the TU Dresden the author worked on that project and was allowed to use some of the outcome for a PhD thesis.
-Thus, this work was financially supported by the TU Dresden and the Federal Ministry for Economic Affairs and Climate Action. 
-Besides the financial support, some co worker, the project manager and the professor of the chair guided this work. 
+Thus, before delving deeper into research on #gl_("swith", pl:true), it is important to acknowledge the following:
+The Federal Ministry for Economic Affairs and Climate Action sponsored the research project titled "Konzeptprüfstand für Kleinflugzeugflügel mit hochintegralen Hochdruckwasserstofftanks" under the identification number 20M2117B. This project was awarded to the TU Dresden, where the author of this thesis was employed and granted permission to utilize some of the project outcomes for doctoral research.
+The project involved collaboration with an industry partner, Die IMA Materialforschung und Anwendungstechnik GmbH in Dresden, bringing valuable industry perspective to the research context.
 
-They all contributed togehter to enable this work. Besides provind the author the ability to express his graditute to all the mentioned parnter, there is one more importnat reason to mention here.
-Research experts and many readers might ask themselves about the money provider.
-Based on this outcome, the trust in the results can vary. Having transparently provided these informaiton, the reader can decide for himself whether there was any pressure from outside to present the results in one or another way.
+As a result, this work received financial support from both the TU Dresden and the Federal Ministry for Economic Affairs and Climate Action. These institutions and partners provided the enabling factors for this research.
+While expressing gratitude to all involved parties is significant, there is another crucial reason for disclosing this information. Research experts and readers might be interested in understanding the funding sources and collaborative context, as this knowledge could potentially inform their interpretation of the results. By providing these details transparently, readers are empowered to form their own opinions regarding the research environment.
