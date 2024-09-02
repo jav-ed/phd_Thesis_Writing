@@ -8,28 +8,32 @@
 /* ------------------------------- Motivation ------------------------------- */
 == Motivation <chap_0_2>
 This section outlines the fundamental reasons inspiring this research contribution.
-The contemporary world heavily relies on aviation, serving crucial functions in both personal and business spheres that extend far beyond mere transportation.
+The contemporary world heavily relies on aviation, serving crucial functions in both personal and business spheres that extend far beyond mere transportation
+@Rupcic2023 @Afonso2023 @Ansell2023 @Abrantes2024 @Ficca2023.
 For individual consumers, aircraft provide a comfortable, secure, and expeditious option to traverse vast distances. 
 This capability has changed personal travel, enabling people to explore distant lands, reunite with loved ones, and broaden their cultural horizons in ways that were previously difficult or impossible. The speed and efficiency of air travel have an impact on international understanding and cultural exchange.
 
-In the business sector, aviation stands as an indispensable part of global commerce. It offers reliable and swift transportation of goods, ranging from small, high-value items to oversized cargo that exceeds the capacity of standard ground or some sea transport. 
+In the business sector, aviation stands as an indispensable part of global commerce
+@FloridoBenitez2023 @Li2024
+. It offers reliable and swift transportation of goods, ranging from small, high-value items to oversized cargo that exceeds the capacity of standard ground or some sea transport. 
 These logistical advancements have enabled the development of complex, international supply chains that are an essential part of modern industry. 
-Furthermore, business travel facilitated by aviation has become integral to maintaining personal relationships in an increasingly globalized economy, where face-to-face meetings can make or break crucial deals and partnerships.
-The importance of aircraft extends well beyond these primary functions. In the realm of emergency services, aircraft play a vital role in search and rescue operations, medical evacuations, and disaster relief efforts. 
-Their ability to quickly reach remote or inaccessible areas has saved many lives and provided critical aid in times of crisis. Additionally, aircraft serve essential functions in scientific research, enabling atmospheric studies, wildlife tracking, and earth observation that contribute to our understanding of climate change and other global phenomena.
+Furthermore, business travel @Lai2022 facilitated by aviation has become integral to maintaining personal relationships in an increasingly globalized economy, where face-to-face meetings can make or break crucial deals and partnerships.
+The importance of aircraft extends well beyond these primary functions @Zachariah2023. 
+In the realm of emergency services, aircraft play a vital role in search and rescue operations @Lawson2023, medical evacuations @Herstein2023, and disaster relief efforts @Pak2021. 
+Their ability to quickly reach remote or inaccessible areas has saved many lives and provided critical aid in times of crisis. Additionally, aircraft serve essential functions in scientific research, enabling atmospheric studies @Hamilton2022, wildlife tracking @Marzioli2024, and earth observation @Tsokas2022 that contribute to our understanding of climate change and other global phenomena.
 
-The agricultural sector also benefits significantly from aviation. Crop dusting and aerial surveying can benefit farming practices, increasing efficiency and yield in food production. 
-Moreover, the aviation industry itself is a major economic driver, creating thousands of jobs worldwide in manufacturing, maintenance, airport operations, and associated services. It supports a vast ecosystem of businesses, from small local suppliers to multinational corporations, contributing significantly to global economic growth and technological innovation.
-While there are many more reasons why aviation has become indispensable, it is crucial to acknowledge that this progress comes at an environmental cost. 
+The agricultural sector @Bikov2022 also benefits significantly from aviation. Crop spraying and aerial surveying can benefit farming practices, increasing efficiency and yield in food production. 
+Moreover, the aviation industry itself is a major economic driver, creating millions of jobs worldwide in manufacturing, maintenance, airport operations, and associated services @Zhang2020. It supports a vast ecosystem of businesses, from small local suppliers to multinational corporations, contributing significantly to global economic growth and technological innovation.
+While there are many more reasons why aviation has become indispensable @Meijer2020 @Lenaerts2021, it is crucial to acknowledge that this progress comes at an environmental cost. 
 The negative impact of aircraft emissions on the environment is a growing concern for governments, industry stakeholders, and consumers. 
 This dichotomy between the essential nature of aviation and its environmental footprint underscores the urgent need for sustainable solutions in the sector, providing a compelling motivation for the research presented in this thesis.
 
 To maintain the benefits of aircraft while addressing environmental concerns, more environmentally friendly alternatives are in high demand. The environmental impact of aviation is significant and cannot be neglected, primarily due to the emissions produced when aircraft burn fuel. 
-These emissions include carbon dioxide (CO2), nitrogen oxides (NOx), and sulphur dioxide (SO2), all of which contribute to climate change and air pollution.
-The magnitude of this issue is reflected in policy initiatives such as the European Commission's Flightpath 2050. 
-This document sets ambitious goals for the aviation industry, including a 75% reduction in CO2 emissions and a 90% reduction in NOx emissions per passenger kilometer. These targets underscore the urgent need for innovative solutions in aviation technology and fuel systems.
+These emissions include carbon dioxide (CO2), nitrogen oxides (NOx), and sulphur dioxide (SO2), all of which contribute to climate change and air pollution @Rupcic2023.
+The magnitude of this issue is reflected in policy initiatives such as the European Commission's Flightpath 2050 @Zaporozhets2021. 
+This document sets ambitious goals for the aviation industry, including a 75% reduction in CO2 emissions and a 90% reduction in NOx emissions per passenger kilometer @Zaporozhets2021. These targets underscore the urgent need for innovative solutions in aviation technology and fuel systems.
 
-One promising approach to meeting these environmental challenges, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to potentially eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. However, lack of awareness or mishandling of these properties could potentially cause serious damage to humans and the surrounding environment. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation.
+One promising approach to meeting these environmental challenges, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to potentially eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. However, lack of awareness or mishandling of these properties could potentially cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation.
 These are especially of importance in the face of conducting experimental structural validation tests that are mandatory for certifying any aircraft. A more detailed examination of hydrogen's properties and challenges can be found in 
 //
 // TODO
