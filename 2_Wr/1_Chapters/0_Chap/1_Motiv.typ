@@ -39,7 +39,14 @@ These are especially of importance in the face of conducting experimental struct
 // TODO
 // @chap_2_0 .
 
-Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen. Considering only the mobility sector, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
+Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022. 
+Considering only the mobility sector 
+// ========================================================================== //
+// ================================== here ================================== //
+// ========================================================================== //
+//
+//TODO see wheter @Rasul2022 can be mentioned also for mobility
+@Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
 #gl_("swith", pl:true) represent a relatively new field of research. While their primary objective is to address current environmental challenges in aviation, they do so in a distinctive manner. By integrating fuel tanks within the wing structure, #gl_("swith", pl:true) aim to maximize space utilization, avoiding wastage. This approach contrasts with the use of conventional hydrogen tanks solely for fuel storage, which would not contribute to alleviating the loads experienced by the wing. Consequently, #gl_("swith") are designed to serve dual purposes: providing fuel storage and potentially reducing wing loads.
