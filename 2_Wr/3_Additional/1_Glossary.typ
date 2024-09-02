@@ -31,7 +31,7 @@
       key: "swith",
       short: "SWITH",
       long: [
-        #text(weight: "bold")[W]ing-#text(weight: "bold")[S]tructure-#text(weight: "bold")[I]ntegrated high-pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
+        #text(weight: "bold")[W]ing #text(weight: "bold")[S]tructure #text(weight: "bold")[I]ntegrated High-Pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
       desc: "pronounced sweets",
     ),
     (

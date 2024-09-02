@@ -15,7 +15,7 @@ The deeper look into this subject can inshallah be found in
 //
 // TODO
 // @chap_2_0 .
-Once a rough understanding of #gl_("swith"), pronounced sweets, is obtained, the motivation behind this work shall be explained in @chap_0_2.
+Once a rough understanding of #gl_("swith", long:true), pronounced sweet, is obtained, the motivation behind this work shall be explained in @chap_0_2.
 The next @chap_0_3 shall outline the overall goals of this work. The reader can refer to it for gaining a quick overview about the topics that are covered.
 In @chap_0_4 the systematic strucutre of writing this thesis is given.
 The following @chap_0_5 highlights the novelty and significance of this work.
@@ -25,7 +25,7 @@ Finally in @chap_0_6 the financial funding is made transparent such that the rea
 /* ---------------------------- Inital Background --------------------------- */
 == Initial Background <chap_0_1>
 
-In this subsection, a concise definition of the term #gl_("swith") shall be provided. Detailed information about #gl_("swith", pl:true) can be found in
+In this subsection, a concise definition of the term #gl_("swith", long:true) shall be provided. Detailed information about #gl_("swith", pl:true) can be found in
 //
 // TODO
 // @chap_2_0 .
@@ -46,8 +46,10 @@ and liquid hydrogen
 //
 . This work focuses on gaseous hydrogen. To achieve a feasible flight range, the hydrogen must be stored under very high pressure. A simplified explanation is that gas can be compressed, and high pressure allows for storing comparatively more hydrogen within a given constant volume. Due to the high pressure, pressure-resistant hydrogen storage systems are required.
 
-The obvious approach would be to allocate a secure space for storing hydrogen tanks within the aircraft 
-@Eissele2023 @Adler2024. An illustrative example of how such an placement could look like is provided in @fig_0. 
+The obvious approach would be to allocate a secure space for storing hydrogen tanks within the aircraft
+@Eissele2023 @Adler2024.
+Another approach would be to keep the given configuration and add some additional space.
+An illustrative example of the latter is given in @fig_0.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/1_Long_Short.jpeg", 
@@ -56,14 +58,19 @@ The obvious approach would be to allocate a secure space for storing hydrogen ta
 ) <fig_0>
 
 
-/* ========================================================================== */
-/* ============================== stopped here ============================== */
-/* ========================================================================== */
-// enxt points are to find refs that talk about strucutre integrated aircrafts. also check your current papers, wheter they talk about swiths already
 The specific location for placing these tanks is complex and depends on numerous factors
 //
-@Adler2024 @Onorato2022 @Prewitz2023 @Huete2021
-. However, an alternative approach involves integrating high-pressure hydrogen tanks inside the wing and connecting them structurally to the wing skin. As a consequence of this structural connection, loads are shared between the tanks and the wing.
+//TODO use the complete list inshallah when talking in detail about it
+@Adler2024 @Onorato2022
+@Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022
+. However, an alternative approach involves integrating high-pressure hydrogen tanks structurally inside the fuselage
+//
+//TODO use the complete list inshallah when talking in detail about it
+@Eissele2023 @Adler2024
+@Onorato2022 @Prewitz2023 @Huete2021 @Baroutaji2019 @Huete2022 @Cipolla2022 @Verstraete2013 @onorato2021fuel @onorato2021fuel
+.
+This work, on the other hand, deals with the structural integration of the high-pressure hydrogen tanks to the wing.
+As a consequence of this structural connection, loads are shared between the tanks and the wing.
 More specifically, when the wing experiences lift distribution, part of the load is transferred to the hydrogen tanks. Conversely, acceptable deformations caused by the high pressure within the tanks will exert stress on the wing skin. The structural connections between the wing and tanks create load paths in the connection areas.
 An illustrative example of the wing of a #gl_("swith") is provided in @fig_1. While the wing skin typically envelops the pressure tanks completely in #gl_("swith", pl:true), the view in @fig_1 is intentionally unobstructed to clearly show the location of the four hydrogen tubes.
 
@@ -73,8 +80,10 @@ An illustrative example of the wing of a #gl_("swith") is provided in @fig_1. Wh
   caption: [Illustrative example of a wing of a #gl_("swith")],
 ) <fig_1>
 
-When working with #gl_("swith", pl:true), it is crucial to understand the implications arising from the key difference between regular aircraft or non-wing-structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. To emphasize this critical point:
+When working with #gl_("swith", pl:true), it is crucial to understand the implications arising from the key difference between regular aircraft or non-wing structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. To emphasize this critical point:
 Placing hydrogen tanks securely in the aircraft requires modifying space arrangement and alters mass distribution. 
-However, the distinguishing feature of #gl_("swith", pl:true) is the addition of high pressure loads to the wing structure. This characteristic sets them apart from both conventional aircraft and those with non-integrated hydrogen tanks. The wings of #gl_("swith", pl:true) must withstand not only the usual aerodynamic loads but also the newly added pressure loads from the integrated tanks. In some cases, these pressure loads might have a greater structural impact on the wing than the aerodynamic loads themselves.
+However, the distinguishing feature of #gl_("swith", pl:true) is the addition of high pressure loads to the wing structure. 
+This characteristic sets them apart from both conventional aircraft and those with non-integrated hydrogen tanks. 
+The wings of #gl_("swith", pl:true) must withstand not only the usual aerodynamic loads but also the newly added pressure loads from the integrated tanks. In some cases, these pressure loads might have a greater structural impact on the wing than the aerodynamic loads themselves.
 This fundamental difference underscores the importance of a comprehensive approach to the design, analysis, and testing of #gl_("swith", pl:true). The interplay between aerodynamic and pressure loads presents both challenges and opportunities for innovation in aircraft structural design.
 This insight, among others, must be incorporated into numerical simulations, certification standards, and experimental structural validation tests for #gl_("swith", pl:true).
