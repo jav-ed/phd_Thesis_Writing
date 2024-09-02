@@ -46,6 +46,7 @@ Considering only the mobility sector
 // ========================================================================== //
 //
 //TODO see wheter @Rasul2022 can be mentioned also for mobility
+// infact check all the 3 refs
 @Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
