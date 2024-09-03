@@ -54,7 +54,7 @@ An illustrative example of the latter is given in @fig_0.
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/1_Long_Short.jpeg", 
   width: 77%),
-  caption: [Illustrative example of how non-integrated hydrogen tanks could be placed within an existing configuration of an aircraft @Adler2024],
+  caption: [Illustrative example of how an existing aircraft configuration can be kept and non-integrated hydrogen tanks could be added @Adler2024.],
 ) <fig_0>
 
 

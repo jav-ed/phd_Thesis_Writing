@@ -39,17 +39,38 @@ One big advantage of this configutation is the leverage of the available space w
 In contrast to that none strucutre integrated hydrogen tanks are placed within the aircraft. 
 While they could be placed within the wing, mostly they are placed within the fueselage. Their mean difference to #gl_("swith", pl:true) is do not serve a dual purpose. Non strcutre intregral hydrogen tanks only store fuel without structrally alleviating any other part of the aircraft, that is, they do not share loads with any other part of the aircraft.
 Another approach is to integrate the tanks not within the wings as with #gl_("swith", pl:true), but inside the fusellage. 
-In this scneario, they would also carry loads, but because of the shape of regular tube-and-wing configuration, the loads experinced within the fuesellage would be much lower than in the case of a #gl_("swith").
+Some variations for that are given in @fig_2.
 
+#figure(
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Fuselage_Integration.jpg", 
+  width: 100%),
+  caption: [Demonstrative example of how fuselage strucutre integrated hydrogen tanks could look like @Adler2023.],
+) <fig_2>
+
+
+In the scneario of fueselage integrated hydrogen tanks, the tanks would also carry loads, but because of the shape of regular tube-and-wing configuration, the loads experinced within the fuesellage would be much lower than in the case of a #gl_("swith").
 The main advantage of hydrogen powered aircrafts is to reduce the negative environmental impact that kersoine driven aircrafts have. This is what all hydrogen variations, wheter it be, non strucutre integrated, fuselage sutructre integrated or wing strucutre integrated (#gl_("swith")), have in common.
 Another point that at least the two strucutre integrated vairations have it that they are niche field.
 However, by doing literature research it stands out that there is compertively much more work on fuselage integrated hydrogen tanks than on #gl_("swith", pl:true).
 In the time of writing this thesis, the author of this thesis could find only one public available scnieitfic paper that deals with wing integrated high-pressue gaesous hydrogen tanks @Friedmann2023.
-The paper itself also does not mention any other scientifc work that would deal with #gl_("swith", pl:true), besides patents like from APUS @APUS_0 @Scheffel2015
-It 
+Besides patents like @Scheffel2015 from APUS @APUS_0, the paper itself does not mention any other scientifc work that would deal with #gl_("swith", pl:true).
 
-A concrete 
-- manufacturing difficulties
-- find concern that can create so long tubes, cfk
-- one part long 
-Due to the novely of this kind of approach, it can be assumed that 
+Due to the scarictiy of openly available scientific work on #gl_("swith", pl:true) and the fact that there are not many aircraft manufacturers that can display a working #gl_("swith"), it can be assumed that the manufacuring industry will also face diffculties in the manufacuring process.
+The main obstacle that could be observed is that it is hihgly changeling to procude a single part that contains the wing and the tubes.
+Considering the openly available information provided by APUS @APUS_1, it can be observed that the full length of the wings are 13.2 meters.
+However, the structral integrated part of the wing can be assumed to be close to the half. 
+So, from first impression we might demand the tube length to be around 7 meters.
+Generally, we can say, with a given pressure, the higher the length of the tubes are the more hydrogen can be stored. 
+Thus,  for higher flight ranges, assuming already haven chosen the highest alloweable pressure, even longer tubes could be requierd.
+Staying with the 7 meter assumption, we can alrady assume that the manufactures will need to find new methods or improve existing methods to craft such high dimensional and complex structres, while using required materials and obeying manufacturing accuracy demands.
+  
+  
+/* --------------------------------- summary -------------------------------- */
+#summary_([
+In summary it can be said all hydrogen powered aircraft concepts have the same main goal, that is, reude the negative environmental impact.
+Integrating hydrogen tanks structrally allows to leverage the tanks in a dual sense. The hydrogen tanks not only store the hydrogen, but they also share the load with the attached strucutre component.
+While writing this work, there are two different types of strucutre integrtated approached, fuselage and wing.
+For wing integrated high-pressure hydrogen tanks there is a lack of availability of scientifc papers, which offeres both, advantages and disadvantges. The lack of current available scientifc work first gives more value to the research field of #gl_("swith", pl:true). Second, should encourge more researcher to work on this topic.
+The drawback however is the scientists have less prework that they can rely on.
+
+])

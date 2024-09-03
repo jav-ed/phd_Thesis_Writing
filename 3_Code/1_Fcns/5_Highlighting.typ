@@ -1,34 +1,19 @@
 // ========================================================================== //
 // ====================== template for asking questions ===================== //
 // ========================================================================== //
-
+#import "../4_Settings/0_Layout.typ": *
 
 /* ---------------------------- 0_Chap/1_File.typ --------------------------- */
 #let summary_(
     question,
     // img_Path: "../../1_Data/2_Figures/1_Svgs/rocket.svg",
     img_Path: "../../1_Data/2_Figs/1_Highlighter/0_Pencil.svg",
-
-    // because the main document is scaled with 1.17em -> adding here 1.17em will make it bigger than 1.17em -> somehow multiplicative effect. Thus  choose 1em here
-    font_Size: 1em
     ) = {
-    // adapt color
-    set text(
-        // weight: "black",
-        spacing: 127%,
-        size: font_Size,
-    )
 
-    // see: https://typst.app/docs/reference/layout/block/
-    block(
-        // fill: luma(230),
-        inset: 1em,
-        width: 100%,
-        radius: 5pt,
-        stroke: 1pt + green,
-   
         // see: https://typst.app/docs/reference/layout/box/
-        [#box(
+        [ #v(0.5em)
+        
+         #box(
             height: 1.43em,
             image(img_Path),
             // stroke: 5pt + black,
@@ -39,9 +24,13 @@
             )
             #h(0.33cm)
             // add the actual question here - no empty line
-            Summary #v(0.5em) #question
+             #underline(
+                offset: 0.3em,
+                extent:0.33em,
+                stroke: (thickness: 0.2em, paint: green, cap: "round"),
+                [*Summary*]) #v(0.5em) #question
             ]
-    )
+    
         }
 
 
