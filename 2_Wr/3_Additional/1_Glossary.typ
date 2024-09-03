@@ -21,7 +21,8 @@
 // color of key and description
 // #set text(fill: color_Link)
 // #set text(fill: gray.darken(70%))
-
+= Glossary
+#v(0.5em)
 #print-glossary(
 
   (

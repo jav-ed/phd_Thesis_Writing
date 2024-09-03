@@ -44,27 +44,22 @@ Considering only the mobility sector
 @Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
-#gl_("swith", pl:true) represent a relatively new field of research. While their primary objective is to address current environmental challenges in aviation, they do so in a distinctive manner. By integrating fuel tanks within the wing structure, #gl_("swith", pl:true) aim to maximize space utilization, avoiding wastage. This approach contrasts with the use of conventional hydrogen tanks solely for fuel storage, which would not contribute to alleviating the loads experienced by the wing. Consequently, #gl_("swith") are designed to serve dual purposes: providing fuel storage and potentially reducing wing loads. 
 
-// ========================================================================== //
-// ================================== here ================================== //
-// ========================================================================== //
-// does this paragraph work out here
-Structure-integrated hydrogen tanks represent a niche research field. Existing literature predominantly focuses on fuselage integration rather than wing integration as in #gl_("swith", pl:true). Thus, #gl_("swith", pl:true) differ significantly from most structure-integrated approaches reviewed in literature. 
-In conventional tube-and-wing configurations, structurally integrated fuselage tanks experience aerodynamic loads to a much lesser extent compared to wing-integrated tanks.
+#gl_("swith", pl:true) represent a novel approach in aviation fuel storage, integrating hydrogen tanks within the wing structure. This design aims to maximize space utilization while potentially contributing to load-bearing, distinguishing it from conventional fuel storage methods. Besides the scarcity of literature about #gl_("swith", pl:true), their unique characteristics present significant challenges. Unlike most structure-integrated approaches reviewed in literature, which predominantly focus on fuselage integration, #gl_("swith", pl:true) involve wing integration. This distinction is crucial, as wing-integrated tanks experience substantially greater aerodynamic loads compared to fuselage-integrated tanks in conventional tube-and-wing configurations.
 
-Besides the scarcity of literature about #gl_("swith", pl:true), the dual functionality especially of #gl_("swith", pl:true) - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
+The dual functionality of #gl_("swith", pl:true) - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
 Certification authorities need to ensure that #gl_("swith", pl:true) can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in 
 //
 // TODO
 // @chap_2_0 .
 
 First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #gl_("swith", pl:true).
-Second, as mentioned before, even when assuming knowledge of what to test, there remains a significant challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #gl_("swith", pl:true) in commercial aviation.
+Second, even when assuming ti know of what to test, there remains a significant challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #gl_("swith", pl:true) in commercial aviation.
 
 The focus of this work is primarily scientific, aiming to advance our understanding of #gl_("swith", pl:true). 
-However, it is essential to acknowledge that scientific research, particularly in such novel and complex fields, requires substantial financial support to be conducted effectively. Nations and organizations that demonstrate the capability and commitment to fund research into such promising and challenging endeavors may position themselves to gain numerous benefits beyond the immediate scientific outcomes. These potential benefits, which extend to economic, technological, and strategic domains, are further elaborated in @chap_0_5.
 
+However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #gl_("swith", pl:true) could have significant implications in economic, technological, and strategic domains.
+While a detailed exploration of these broader impacts is beyond the scope of this motivation chapter, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These potential advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive discussion of these aspects is presented in @chap_0_5.
 
 
 /* --------------------------------- summary -------------------------------- */
