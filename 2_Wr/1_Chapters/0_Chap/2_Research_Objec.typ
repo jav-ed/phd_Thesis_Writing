@@ -12,7 +12,7 @@ The concrete topics to be covered in this research are as follows:
 /* ---------------------------------- intro --------------------------------- */
 One primary objective of this research is to develop a comprehensive understanding of the #gl_("swith") concept. This involves precisely defining what a #gl_("swith") is, exploring its potential applications in aviation and elucidating its crucial relationship with hydrogen as the fuel. 
 The study should evaluate the benefits that #gl_("swith", pl:true) could bring to aircraft aviation and environment. 
-Following this, the research needs to conduct a analysis of the current state of the art in #gl_("swith", pl:true), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field. 
+Following this, the research needs to conduct a analysis of the current state of the art in #gl_("swith", pl:true), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field.
 
 /* ---------------------------------- norms --------------------------------- */
 Another critical objective is to examine the regulatory landscape for #gl_("swith", pl:true). This examination aims to gain insights crucial for the real-world certification of #gl_("swith", pl:true). This includes investigating the current processes and requirements for licensing #gl_("swith", pl:true) and analyzing the steps necessary to make #gl_("swith", pl:true) available for daily commercial deployment. 

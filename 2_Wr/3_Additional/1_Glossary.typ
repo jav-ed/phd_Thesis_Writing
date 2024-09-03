@@ -33,7 +33,7 @@
       short: "SWITH",
       long: [
         #text(weight: "bold")[W]ing #text(weight: "bold")[S]tructure #text(weight: "bold")[I]ntegrated High-Pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
-      desc: "pronounced sweets",
+      desc: [SWITH is pronounced sweets. t is an aircraft design concept where hydrogen fuel storage tanks are incorporated directly into the wing structure. The hydrogen tanks are under high pressure to increase the amount of hydrogen that can be carried. The structural integration between the wing and the tanks allows the wing and tanks to share aerodynamic and pressure loads.],
     ),
     (
       key: "lie",
