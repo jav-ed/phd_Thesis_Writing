@@ -11,6 +11,10 @@
 // create clear seperation between content and glossary
 #pagebreak()
 
+#set heading(numbering: none)
+
+
+
 // adapt color
 // #show link: set text(fill: green.darken(30%))
 

@@ -198,3 +198,51 @@ Example: The athlete won three gold medals in succession, setting a new record.
 
 Following on
 Example: We'll start with team introductions, following on with a brief project overview.
+
+
+/* ---------------------------------- Thus ---------------------------------- */
+== Alternatives for "Thus"
+Therefore
+Example: The evidence was inconclusive; therefore, we cannot draw a definitive conclusion.
+
+Consequently
+Example: The storm damaged the power lines; consequently, many areas lost electricity.
+
+Hence
+Example: The experiment failed twice; hence, we need to revise our methodology.
+
+Accordingly
+Example: The budget was reduced; accordingly, we must prioritize our expenses.
+
+As a result
+Example: He studied diligently; as a result, he passed the exam with flying colors.
+
+Ergo
+Example: I think, ergo I am.
+
+So
+Example: The roads were icy, so we decided to stay home.
+
+For this reason
+Example: The project was behind schedule; for this reason, we hired additional staff.
+
+Thereby
+Example: She completed her degree, thereby increasing her job prospects.
+
+In consequence
+Example: The company invested heavily in research; in consequence, they developed several innovative products.
+
+Correspondingly
+Example: The demand for our product increased; correspondingly, we ramped up production.
+
+Resultantly
+Example: The new policy was implemented; resultantly, customer satisfaction improved.
+
+Accordingly
+Example: The weather forecast predicted rain; accordingly, we moved the event indoors.
+
+In effect
+Example: He missed the deadline; in effect, he lost the opportunity to participate.
+
+Consequently
+Example: The bridge was closed for repairs; consequently, traffic was redirected to alternate routes.

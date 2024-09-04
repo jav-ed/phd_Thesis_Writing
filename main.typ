@@ -14,7 +14,7 @@
 // #set enum(indent: 0.7em)
 
 // see: https://typst.app/docs/guides/page-setup-guide/
-#set page(numbering: "1")
+#set page(numbering: "I")
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
@@ -61,6 +61,9 @@
 // )
 // #pagebreak(weak:true)
 
+/* -------------------------- start from zero page -------------------------- */
+#set page(numbering: "1")
+#counter(page).update(1)
 
 // ========================================================================== //
 // ================================= Trials ================================= //

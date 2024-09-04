@@ -145,7 +145,7 @@
   publisher = {Hoboken, NJ},
   series    = {Aerospace series},
   subtitle  = {Introductory computational aerodynamics with MATLAB R/OCTAVE},
-  groups    = {gnereal_aero},
+  groups    = {Aero},
   ppn_gvk   = {1679601547},
 }
 
@@ -156,7 +156,7 @@
   doi       = {10.1007/978-3-8348-8243-1},
   isbn      = {9783834882431},
   publisher = {Vieweg+Teubner Verlag},
-  groups    = {aero_Car},
+  groups    = {Aero},
 }
 
 @Book{McLean2014,
@@ -170,7 +170,7 @@
   publisher = {Wiley},
   series    = {Aerospace series},
   subtitle  = {Arguing from the real physics},
-  groups    = {gnereal_aero},
+  groups    = {Aero},
   ppn_gvk   = {1724647245},
 }
 
@@ -181,7 +181,7 @@
   doi          = {10.1007/978-94-017-9747-4},
   isbn         = {9789401797474},
   publisher    = {Springer Netherlands},
-  groups       = {gnereal_aero},
+  groups       = {Aero},
   issn         = {2215-0056},
   journaltitle = {Fluid Mechanics and Its Applications},
 }
@@ -193,7 +193,7 @@
   doi       = {10.1007/978-3-658-12818-0},
   isbn      = {9783658128180},
   publisher = {Springer Fachmedien Wiesbaden},
-  groups    = {aero_Car},
+  groups    = {Aero},
 }
 
 @Book{Schlichting2017,
@@ -203,7 +203,7 @@
   doi       = {10.1007/978-3-662-52919-5},
   isbn      = {9783662529195},
   publisher = {Springer Berlin Heidelberg},
-  groups    = {gnereal_aero},
+  groups    = {Aero},
 }
 
 @Book{Kaushik2019,
@@ -213,7 +213,7 @@
   doi       = {10.1007/978-981-13-1678-4},
   isbn      = {9789811316784},
   publisher = {Springer Singapore},
-  groups    = {gnereal_aero},
+  groups    = {Aero},
 }
 
 
@@ -224,7 +224,7 @@
   doi       = {10.1007/978-3-030-60777-7},
   isbn      = {9783030607777},
   publisher = {Springer International Publishing},
-  groups    = {gnereal_aero},
+  groups    = {Aero},
 }
 
 @Book{Schuetz_2023,
@@ -234,7 +234,7 @@
   doi          = {10.1007/978-3-658-35833-4},
   isbn         = {9783658358334},
   publisher    = {Springer Fachmedien Wiesbaden},
-  groups       = {gnereal_aero, aero_Car},
+  groups       = {Aero},
   issn         = {2628-1058},
   journaltitle = {ATZ/MTZ-Fachbuch},
 }
@@ -519,6 +519,14 @@
   year   = {2006},
 }
 
+@Misc{kmeans_Visual_Explanation,
+  title  = {k-means++ visual explanation},
+  note   = {https://theory.stanford.edu/~sergei/slides/BATS-Means.pdf - 30.11.2021},
+  url    = {https://theory.stanford.edu/~sergei/slides/BATS-Means.pdf},
+  groups = {master, kmeans},
+  owner  = {Sergei Vassilvitskii},
+}
+
 @Misc{kmeans_Init_Points,
   title  = {k-means finding set of initial points},
   note   = {https://theory.stanford.edu/~sergei/slides/kdd10-thclust.pdf - 30.11.2021},
@@ -696,6 +704,18 @@ Now available to download in full as a PDF.},
   groups  = {master, scikit_learn},
   journal = {Journal of Machine Learning Research},
   year    = {2011},
+}
+
+@Article{Virtanen2020,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and {van der Walt}, St{\'e}fan J. and Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, C J and Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and Harris, Charles R. and Archibald, Anne M. and Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and {van Mulbregt}, Paul and {SciPy 1.0 Contributors}},
+  journal = {Nature Methods},
+  title   = {{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in Python}},
+  year    = {2020},
+  pages   = {261--272},
+  volume  = {17},
+  adsurl  = {https://rdcu.be/b08Wh},
+  doi     = {10.1038/s41592-019-0686-2},
+  groups  = {master},
 }
 
 @Article{Brunton2016,
@@ -949,12 +969,20 @@ Now available to download in full as a PDF.},
   year        = {2020},
 }
 
+@InProceedings{acosta2010gastef,
+  author    = {Acosta, B and Moretto, P and Frischauf, N and Harskamp, F and Bonato, C},
+  booktitle = {Proceedings of the eighteenth world hydrogen energy conference},
+  title     = {GASTEF: the JRC-IE compressed hydrogen gas tanks testing facility},
+  pages     = {16--21},
+  groups    = {hydro_Plane},
+  year      = {2010},
+}
+
 @Misc{img_Toyota,
   author = {Darren Halstead},
   title  = {Image, Toyota hydrogen model car},
   note   = {https://unsplash.com/photos/yhXcqS-f-X4 - 18.08.2022},
   url    = {https://unsplash.com/photos/yhXcqS-f-X4},
-  urldate = {2022-08-18},
   groups = {webpages},
 }
 
@@ -963,7 +991,6 @@ Now available to download in full as a PDF.},
   title  = {Image, truck},
   note   = {https://unsplash.com/photos/YnSWpIPX3pE - 18.08.2022},
   url    = {https://unsplash.com/photos/YnSWpIPX3pE},
-  urldate = {2022-08-18},
   groups = {webpages},
 }
 
@@ -972,7 +999,6 @@ Now available to download in full as a PDF.},
   title  = {Image, ground storage},
   note   = {https://unsplash.com/photos/ZVkDLrXGMdw - 18.08.2022},
   url    = {https://unsplash.com/photos/ZVkDLrXGMdw},
-  urldate = {2022-08-18},
   groups = {webpages},
 }
 
@@ -1003,7 +1029,6 @@ Now available to download in full as a PDF.},
   title  = {Image, Flying bird},
   note   = {https://pixabay.com/photos/crows-birds-animals-nature-7381423/ - 21.08.2022},
   url    = {https://pixabay.com/photos/crows-birds-animals-nature-7381423/},
-  urldate = {2022-08-21},
   groups = {webpages},
 }
 
@@ -1067,12 +1092,32 @@ Now available to download in full as a PDF.},
   year      = {2006},
 }
 
+@Misc{APUS_0,
+  author = {Unkown},
+  month  = feb,
+  note   = {https://group.apus-aero.com/zero-emission - 27.02.2024},
+  title  = {APUS, aircraft manufacturer},
+  year   = {2024},
+  groups = {webpages},
+  url    = {https://group.apus-aero.com/zero-emission/},
+}
+
+
+@Misc{APUS_1,
+  author = {Unkown},
+  month  = feb,
+  note   = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf - 27.02.2024},
+  title  = {APUS, aircraft manufacturer},
+  year   = {2024},
+  groups = {webpages},
+  url    = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf},
+}
+
 @Misc{img_Transport,
   author = {Bernd Dittrich},
   title  = {Image, shall represent transportation},
   note   = {https://unsplash.com/photos/eCc7FjMoR74- 18.08.2022},
   url    = {https://unsplash.com/photos/eCc7FjMoR74},
-  urldate = {2022-08-18},
   groups = {webpages},
   owner  = {Bernd Dittrich},
 }
@@ -1083,7 +1128,7 @@ Now available to download in full as a PDF.},
   title     = {Technische Fluidmechanik},
   doi       = {10.1007/978-3-662-64629-8},
   publisher = {Springer Berlin Heidelberg},
-  groups    = {fluid_dynamics},
+  groups    = {hydro_Plane},
 }
 
 @Article{schefer2009visible,
@@ -1201,7 +1246,6 @@ Now available to download in full as a PDF.},
   title  = {Homepage of Airbus},
   note   = {https://aircraft.airbus.com/en/aircraft/a350-clean-sheet-clean-start/a350-1000 - 03.04.2024},
   url    = {https://aircraft.airbus.com/en/aircraft/a350-clean-sheet-clean-start/a350-1000},
-  urldate = {2024-04-03},
   groups = {webpages},
   owner  = {Airbus},
 }
@@ -1287,7 +1331,7 @@ Now available to download in full as a PDF.},
   number       = {36},
   pages        = {13705--13730},
   volume       = {48},
-  groups       = {Report_2, hydro_Harms},
+  groups       = {Report_2},
   publisher    = {Elsevier BV},
 }
 
@@ -1406,7 +1450,7 @@ Now available to download in full as a PDF.},
   doi       = {10.1007/978-3-658-35061-1},
   isbn      = {9783658350611},
   publisher = {Springer Fachmedien Wiesbaden},
-  groups    = {Report_2, hydro_books},
+  groups    = {Report_2},
 }
 
 
@@ -1673,13 +1717,12 @@ Now available to download in full as a PDF.},
 }
 
 @Misc{link_Mixtral_8_7,
-  author  = {Mixtral},
-  title   = {Homepage of Mixtral AI},
-  note    = {https://mistral.ai/news/mixtral-of-experts/ - 03.04.2024},
-  url     = {https://mistral.ai/news/mixtral-of-experts/},
-  urldate = {2024-04-03},
-  groups  = {webpages},
-  owner   = {Mixtral},
+  author = {Mixtral},
+  title  = {Homepage of Mixtral AI},
+  note   = {https://mistral.ai/news/mixtral-of-experts/ - 03.04.2024},
+  url    = {https://mistral.ai/news/mixtral-of-experts/},
+  groups = {webpages},
+  owner  = {Mixtral},
 }
 
 @InProceedings{wu2003non,
@@ -2005,6 +2048,14 @@ Now available to download in full as a PDF.},
   publisher    = {Wiley},
 }
 
+@Misc{link_Kmeans_Img_Proc,
+  title  = {k-means++ visual explanation},
+  note   = {https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning - 03.04.2024},
+  url    = {https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning},
+  groups = {master, kmeans},
+  owner  = {Shervine Amidi, Stanford},
+}
+
  
 @Article{Ikotun2023,
   author       = {Ikotun, Abiodun M. and Ezugwu, Absalom E. and Abualigah, Laith and Abuhaija, Belal and Heming, Jia},
@@ -2229,6 +2280,21 @@ Now available to download in full as a PDF.},
   year         = {2024},
 }
 
+ 
+@Article{Chen2024,
+  author       = {Chen, Richard J. and Ding, Tong and Lu, Ming Y. and Williamson, Drew F. K. and Jaume, Guillaume and Song, Andrew H. and Chen, Bowen and Zhang, Andrew and Shao, Daniel and Shaban, Muhammad and Williams, Mane and Oldenburg, Lukas and Weishaupt, Luca L. and Wang, Judy J. and Vaidya, Anurag and Le, Long Phi and Gerber, Georg and Sahai, Sharifa and Williams, Walt and Mahmood, Faisal},
+  date         = {2024-03},
+  journaltitle = {Nature Medicine},
+  title        = {Towards a general-purpose foundation model for computational pathology},
+  doi          = {10.1038/s41591-024-02857-3},
+  issn         = {1546-170X},
+  number       = {3},
+  pages        = {850--862},
+  volume       = {30},
+  groups       = {scikit_learn},
+  publisher    = {Springer Science and Business Media LLC},
+}
+
 @Misc{link_Cluster_Meth,
   author = {scikit-learn},
   title  = {Comparing different clustering algorithms on toy datasets},
@@ -2351,6 +2417,15 @@ Now available to download in full as a PDF.},
   publisher = {The Eurographics Association},
 }
 
+@Misc{Gross2017,
+  author    = {Gross, Dietmar and Ehlers, Wolfgang and Wriggers, Peter and Schröder, Jörg and Müller, Ralf},
+  date      = {2017},
+  title     = {Formeln und Aufgaben zur Technischen Mechanik 2},
+  doi       = {10.1007/978-3-662-53675-9},
+  groups    = {technische_mechanik},
+  publisher = {Springer Berlin Heidelberg},
+}
+
 @Misc{Spura2019,
   author    = {Spura, Christian},
   date      = {2019},
@@ -2374,6 +2449,24 @@ Now available to download in full as a PDF.},
   date      = {2021},
   title     = {Technische Mechanik 3},
   doi       = {10.1007/978-3-662-63065-5},
+  groups    = {technische_mechanik},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Gross2021b,
+  author    = {Gross, Dietmar and Ehlers, Wolfgang and Wriggers, Peter and Schröder, Jörg and Müller, Ralf},
+  date      = {2021},
+  title     = {Formeln und Aufgaben zur Technischen Mechanik 1},
+  doi       = {10.1007/978-3-662-61864-6},
+  groups    = {technische_mechanik},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Gross2019a,
+  author    = {Gross, Dietmar and Ehlers, Wolfgang and Wriggers, Peter and Schröder, Jörg and Müller, Ralf},
+  date      = {2019},
+  title     = {Formeln und Aufgaben zur Technischen Mechanik 3},
+  doi       = {10.1007/978-3-662-59681-4},
   groups    = {technische_mechanik},
   publisher = {Springer Berlin Heidelberg},
 }
@@ -2653,6 +2746,19 @@ Now available to download in full as a PDF.},
   year         = {2024},
 }
 
+@Article{Chen2024a,
+  author       = {Chen, Richard and Ding, Tong and Lu, Ming and Williamson, Drew and Jaume, Guillaume and Song, Andrew and Chen, Bowen and Zhang, Andrew and Shao, Daniel and Shaban, Muhammad and Williams, Mane and Oldenburg, Lukas and Weishaupt, Luca and Wang, Judy and Vaidya, Anurag and Le, Long and Gerber, Georg and Sahai, Sharifa and Williams, Walt and Mahmood, Faisal},
+  date         = {2024-03},
+  journaltitle = {Nature Medicine},
+  title        = {Towards a general-purpose foundation model for computational pathology},
+  doi          = {10.1038/s41591-024-02857-3},
+  number       = {3},
+  pages        = {850-862},
+  volume       = {30},
+  groups       = {pytorch},
+  publisher    = {Springer Science and Business Media LLC},
+}
+
 @InProceedings{NEURIPS2023_4a47dd69,
   author    = {Zhang, Beichen and Zhou, Kun and Wei, Xilin and Zhao, Xin and Sha, Jing and Wang, Shijin and Wen, Ji-Rong},
   booktitle = {Advances in Neural Information Processing Systems},
@@ -2728,6 +2834,22 @@ Now available to download in full as a PDF.},
   month        = {3},
   publisher    = {Association for the Advancement of Artificial Intelligence (AAAI)},
   year         = {2024},
+}
+
+@Article{Virtanen2020a,
+  author       = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and Van Der Walt, Stéfan and Brett, Matthew and Wilson, Joshua and Millman, K and Mayorov, Nikolay and Nelson, Andrew and Jones, Eric and Kern, Robert and Larson, Eric and Carey, C and Polat, İlhan and Feng, Yu and Moore, Eric and Vanderplas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E and Harris, Charles and Archibald, Anne and Ribeiro, Antônio and Pedregosa, Fabian and Van Mulbregt, Paul and Vijaykumar, Aditya and Bardelli, Alessandro and Rothberg, Alex and Hilboll, Andreas and Kloeckner, Andreas and Scopatz, Anthony and Lee, Antony and Rokem, Ariel and Woods, C and Fulton, Chad and Masson, Charles and Häggström, Christian and Fitzgerald, Clark and Nicholson, David and Hagen, David and Pasechnik, Dmitrii and Olivetti, Emanuele and Martin, Eric and Wieser, Eric and Silva, Fabrice and Lenders, Felix and Wilhelm, Florian and Young, G and Price, Gavin and Ingold, Gert-Ludwig and Allen, Gregory and Lee, Gregory and Audren, Hervé and Probst, Irvin and Dietrich, Jörg and Silterra, Jacob and Webber, James and Slavič, Janko and Nothman, Joel and Buchner, Johannes and Kulick, Johannes and Schönberger, Johannes and De Miranda Cardoso, José and Reimer, Joscha and Harrington, Joseph and Rodríguez, Juan and Nunez-Iglesias, Juan and Kuczynski, Justin and Tritz, Kevin and Thoma, Martin and Newville, Matthew and Kümmerer, Matthias and Bolingbroke, Maximilian and Tartre, Michael and Pak, Mikhail and Smith, Nathaniel and Nowaczyk, Nikolai and Shebanov, Nikolay and Pavlyk, Oleksandr and Brodtkorb, Per and Lee, Perry and Mcgibbon, Robert and Feldbauer, Roman and Lewis, Sam and Tygier, Sam and Sievert, Scott and Vigna, Sebastiano and Peterson, Stefan and More, Surhud and Pudlik, Tadeusz and Oshima, Takuya and Pingel, Thomas and Robitaille, Thomas and Spura, Thomas and Jones, Thouis and Cera, Tim and Leslie, Tim and Zito, Tiziano and Krauss, Tom and Upadhyay, Utkarsh and Halchenko, Yaroslav and Vázquez-Baeza, Yoshiki},
+  date         = {2020-02-03},
+  journaltitle = {Nature Methods},
+  title        = {SciPy 1.0: fundamental algorithms for scientific computing in Python},
+  doi          = {10.1038/s41592-019-0686-2},
+  number       = {3},
+  pages        = {261-272},
+  volume       = {17},
+  day          = {3},
+  groups       = {sympy},
+  month        = {2},
+  publisher    = {Springer Science and Business Media LLC},
+  year         = {2020},
 }
 
 @Article{symbeam_tool,
@@ -2836,6 +2958,87 @@ Now available to download in full as a PDF.},
   year         = {2021},
 }
 
+@Misc{Gritzmann2013,
+  author    = {Gritzmann, Peter},
+  date      = {2013},
+  title     = {Grundlagen der Mathematischen Optimierung},
+  doi       = {10.1007/978-3-8348-2011-2},
+  groups    = {optimization_books},
+  publisher = {Springer Fachmedien Wiesbaden},
+}
+
+@Misc{Stein2018,
+  author    = {Stein, Oliver},
+  date      = {2018},
+  title     = {Grundzüge der Globalen Optimierung},
+  doi       = {10.1007/978-3-662-55360-2},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Stein2018a,
+  author    = {Stein, Oliver},
+  date      = {2018},
+  title     = {Grundzüge der Nichtlinearen Optimierung},
+  doi       = {10.1007/978-3-662-55593-4},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Koop2018,
+  author    = {Koop, Andreas and Moock, Hardy},
+  date      = {2018},
+  title     = {Lineare Optimierung – eine anwendungsorientierte Einführung in Operations Research},
+  doi       = {10.1007/978-3-662-56141-6},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Jarre2019,
+  author    = {Jarre, Florian and Stoer, Josef},
+  date      = {2019},
+  title     = {Optimierung},
+  doi       = {10.1007/978-3-662-58855-0},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Grimme2018,
+  author    = {Grimme, Christian and Bossek, Jakob},
+  date      = {2018},
+  title     = {Einführung in die Optimierung},
+  doi       = {10.1007/978-3-658-21151-6},
+  groups    = {optimization_books},
+  publisher = {Springer Fachmedien Wiesbaden},
+}
+
+@Misc{Scholz2018,
+  author    = {Scholz, Daniel},
+  date      = {2018},
+  title     = {Optimierung interaktiv},
+  doi       = {10.1007/978-3-662-57953-4},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Dietz2019,
+  author    = {Dietz, Hans},
+  date      = {2019},
+  title     = {Mathematik für Wirtschaftswissenschaftler},
+  doi       = {10.1007/978-3-662-58702-7},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
+@Misc{Schumacher2020,
+  author    = {Schumacher, Axel},
+  date      = {2020},
+  title     = {Optimierung mechanischer Strukturen},
+  doi       = {10.1007/978-3-662-60328-4},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
+}
+
 @Book{mdobook,
   author    = {Joaquim R. R. A. Martins and Andrew Ning},
   title     = {Engineering Design Optimization},
@@ -2847,6 +3050,15 @@ Now available to download in full as a PDF.},
   groups    = {mdo},
   month     = {January},
   year      = {2022},
+}
+
+@Misc{Papageorgiou2015,
+  author    = {Papageorgiou, Markos and Leibold, Marion and Buss, Martin},
+  date      = {2015},
+  title     = {Optimierung},
+  doi       = {10.1007/978-3-662-46936-1},
+  groups    = {optimization_books},
+  publisher = {Springer Berlin Heidelberg},
 }
 
 @Article{Li2016,
@@ -2957,7 +3169,7 @@ Now available to download in full as a PDF.},
   title       = {ILR-LFT / 23-09 TR: LuFo VI-2 Zwischenbericht zum Vorhaben K2H2 (Berichtszeitraum 01.04.2022 bis 31.12.2022)},
   number      = {23-09},
   type        = {techreport},
-  groups      = {Eigene_Berichte:K2H2},
+  groups      = {Eigene_Berichte:K2H2, lisa},
 }
 
 @TechReport{tober2023a,
@@ -2967,7 +3179,7 @@ Now available to download in full as a PDF.},
   title       = {IR 23-12: Konzept zur Messmittelintegration in einen Tragflügel mit integralen Wasserstofftanks},
   number      = {23-12},
   type        = {resreport},
-  groups      = {Eigene_Berichte:K2H2},
+  groups      = {Eigene_Berichte:K2H2, lisa},
 }
 
 @TechReport{tober2023,
@@ -2976,7 +3188,7 @@ Now available to download in full as a PDF.},
   institution = {TU Dresden},
   title       = {Lastenkatalog Prüfstand (Prüfgegenstandsseite)},
   number      = {IR23-03},
-  groups      = {Lastenbericht_Februar_2023:K2H2},
+  groups      = {Lastenbericht_Februar_2023:K2H2, lisa},
 }
 
 @Article{Bednarska2020,
@@ -2989,6 +3201,7 @@ Now available to download in full as a PDF.},
   pages        = {2249},
   volume       = {13},
   day          = {13},
+  groups       = {lisa},
   month        = {5},
   publisher    = {MDPI AG},
   year         = {2020},
@@ -3004,6 +3217,7 @@ Now available to download in full as a PDF.},
   pages        = {545},
   volume       = {19},
   day          = {28},
+  groups       = {lisa},
   month        = {1},
   publisher    = {MDPI AG},
   year         = {2019},
@@ -3019,6 +3233,7 @@ Now available to download in full as a PDF.},
   pages        = {6685},
   volume       = {20},
   day          = {22},
+  groups       = {lisa},
   month        = {11},
   publisher    = {MDPI AG},
   year         = {2020},
@@ -3034,6 +3249,7 @@ Now available to download in full as a PDF.},
   pages        = {2000-2010},
   volume       = {234},
   day          = {25},
+  groups       = {lisa},
   month        = {8},
   publisher    = {SAGE Publications},
   year         = {2020},
@@ -3049,6 +3265,7 @@ Now available to download in full as a PDF.},
   pages        = {1665},
   volume       = {20},
   day          = {17},
+  groups       = {lisa},
   month        = {3},
   publisher    = {MDPI AG},
   year         = {2020},
@@ -3063,6 +3280,7 @@ Now available to download in full as a PDF.},
   number       = {4},
   volume       = {40},
   day          = {7},
+  groups       = {lisa},
   month        = {10},
   publisher    = {Springer Science and Business Media LLC},
   year         = {2021},
@@ -3076,6 +3294,7 @@ Now available to download in full as a PDF.},
   doi          = {10.1016/j.matdes.2021.109754},
   pages        = {109754},
   volume       = {205},
+  groups       = {lisa},
   publisher    = {Elsevier BV},
 }
 
@@ -3089,6 +3308,7 @@ Now available to download in full as a PDF.},
   pages        = {2990-3017},
   volume       = {21},
   day          = {27},
+  groups       = {lisa},
   month        = {12},
   publisher    = {SAGE Publications},
   year         = {2021},
@@ -3104,6 +3324,7 @@ Now available to download in full as a PDF.},
   pages        = {15494-15519},
   volume       = {15},
   day          = {30},
+  groups       = {lisa},
   month        = {6},
   publisher    = {MDPI AG},
   year         = {2015},
@@ -3114,6 +3335,7 @@ Now available to download in full as a PDF.},
   date         = {2010},
   journaltitle = {Norm},
   title        = {Europäisches Parlament (Veranst.): Verordnung (EU) Nr. 406/2010 der Kommission vom 26.April 2010 zur Durchführung der Verordnung (EG) Nr. 79/2009 des Europäischen Parlaments und des Rates über die Typgenehmigung von wasserstoffbetriebenen Kraftfahrzeugen},
+  groups       = {lisa},
 }
 
 @Article{EASA2018,
@@ -3121,6 +3343,7 @@ Now available to download in full as a PDF.},
   date         = {2018-06},
   journaltitle = {Norm},
   title        = {EASA: Easy Access Rules for Normal, Utility, Aerobatic and Commuter Category Aeroplanes (CS-23) (Amendment 4). EASA,},
+  groups       = {lisa},
 }
 
 @InBook{Gasior2018,
@@ -3131,8 +3354,10 @@ Now available to download in full as a PDF.},
   doi       = {10.1115/pvp2018-85157},
   publisher = {American Society of Mechanical Engineers},
   day       = {15},
+  groups    = {lisa},
   month     = {7},
   year      = {2018},
+
 }
 
 @Article{DeMiguel2016,
@@ -3144,6 +3369,7 @@ Now available to download in full as a PDF.},
   number       = {20},
   pages        = {8606-8615},
   volume       = {41},
+  groups       = {lisa},
   publisher    = {Elsevier BV},
 }
 
@@ -3153,6 +3379,7 @@ Now available to download in full as a PDF.},
   title  = {HBM, Structural Health Monitoring},
   note   = {https://www.hbm.com/en/ - 2023},
   url    = {https://www.hbm.com/en/},
+  groups = {lisa},
 }
 
 @Article{Kaeseberg2012,
@@ -3160,817 +3387,51 @@ Now available to download in full as a PDF.},
   date         = {2012},
   journaltitle = {6th European Workshop onStructural Health Monitoring},
   title        = {FRP Systems with Embedded FBG for Structural Monitoring and Retrofitting},
-}
-
-@Article{Rupcic2023,
-  author       = {Rupcic, Lea and Pierrat, Eleonore and Saavedra-Rubio, Karen and Thonemann, Nils and Ogugua, Chizoba and Laurent, Alexis},
-  date         = {2023-06},
-  journaltitle = {Transportation Research Part D: Transport and Environment},
-  title        = {Environmental impacts in the civil aviation sector: Current state and guidance},
-  doi          = {10.1016/j.trd.2023.103717},
-  issn         = {1361-9209},
-  pages        = {103717},
-  volume       = {119},
-  groups       = {general_environment},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Afonso2023,
-  author       = {Afonso, Frederico and Sohst, Martin and Diogo, Carlos M.A. and Rodrigues, Simão S. and Ferreira, Ana and Ribeiro, Inês and Marques, Ricardo and Rego, Francisco F.C. and Sohouli, Abdolrasoul and Portugal-Pereira, Joana and Policarpo, Hugo and Soares, Bruno and Ferreira, Bruna and Fernandes, Edgar C. and Lau, Fernando and Suleman, Afzal},
-  date         = {2023-02},
-  journaltitle = {Progress in Aerospace Sciences},
-  title        = {Strategies towards a more sustainable aviation: A systematic review},
-  doi          = {10.1016/j.paerosci.2022.100878},
-  issn         = {0376-0421},
-  pages        = {100878},
-  volume       = {137},
-  groups       = {general_environment},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Ansell2023,
-  author       = {Ansell, Phillip J.},
-  date         = {2023-08},
-  journaltitle = {Progress in Aerospace Sciences},
-  title        = {Review of sustainable energy carriers for aviation: Benefits, challenges, and future viability},
-  doi          = {10.1016/j.paerosci.2023.100919},
-  issn         = {0376-0421},
-  pages        = {100919},
-  volume       = {141},
-  groups       = {general_environment},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Abrantes2024,
-  author       = {Abrantes, Ivo and Ferreira, Ana F. and Magalhães, Leandro B. and Costa, Mário and Silva, André},
-  date         = {2024-03},
-  journaltitle = {Renewable Energy},
-  title        = {The impact of revolutionary aircraft designs on global aviation emissions},
-  doi          = {10.1016/j.renene.2024.119937},
-  issn         = {0960-1481},
-  pages        = {119937},
-  volume       = {223},
-  groups       = {general_environment},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Ficca2023,
-  author       = {Ficca, Antonio and Marulo, Francesco and Sollo, Antonio},
-  date         = {2023-08},
-  journaltitle = {Progress in Aerospace Sciences},
-  title        = {An open thinking for a vision on sustainable green aviation},
-  doi          = {10.1016/j.paerosci.2023.100928},
-  issn         = {0376-0421},
-  pages        = {100928},
-  volume       = {141},
-  groups       = {general_environment},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Manigandan2023,
-  author       = {Manigandan, S and Praveenkumar, T.R. and Ir Ryu, Je and Nath Verma, Tikendra and Pugazhendhi, Arivalagan},
-  date         = {2023-11},
-  journaltitle = {Fuel},
-  title        = {Role of hydrogen on aviation sector: A review on hydrogen storage, fuel flexibility, flame stability, and emissions reduction on gas turbines engines},
-  doi          = {10.1016/j.fuel.2023.129064},
-  issn         = {0016-2361},
-  pages        = {129064},
-  volume       = {352},
-  groups       = {hydrogen_Aviation, gas_hydro_aviation},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Mueller2023,
-  author       = {Mueller, Tobias and Gronau, Steven},
-  date         = {2023-02},
-  journaltitle = {Energies},
-  title        = {Fostering Macroeconomic Research on Hydrogen-Powered Aviation: A Systematic Literature Review on General Equilibrium Models},
-  doi          = {10.3390/en16031439},
-  issn         = {1996-1073},
-  number       = {3},
-  pages        = {1439},
-  volume       = {16},
-  groups       = {hydrogen_Aviation},
-  publisher    = {MDPI AG},
-}
-
-@Article{Degirmenci2023,
-  author       = {Degirmenci, Hursit and Uludag, Alper and Ekici, Selcuk and Karakoc, T. Hikmet},
-  date         = {2023-08},
-  journaltitle = {Progress in Aerospace Sciences},
-  title        = {Challenges, prospects and potential future orientation of hydrogen aviation and the airport hydrogen supply network: A state-of-art review},
-  doi          = {10.1016/j.paerosci.2023.100923},
-  issn         = {0376-0421},
-  pages        = {100923},
-  volume       = {141},
-  groups       = {hydrogen_Aviation},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Eissele2023,
-  author       = {Eissele, Jona and Lafer, Stefan and Mejía Burbano, Cristian and Schließus, Julian and Wiedmann, Tristan and Mangold, Jonas and Strohmayer, Andreas},
-  date         = {2023-03},
-  journaltitle = {Aerospace},
-  title        = {Hydrogen-Powered Aviation—Design of a Hybrid-Electric Regional Aircraft for Entry into Service in 2040},
-  doi          = {10.3390/aerospace10030277},
-  issn         = {2226-4310},
-  number       = {3},
-  pages        = {277},
-  volume       = {10},
-  groups       = {hydrogen_Aviation, actual_hydro_plane, placing_hydo_tanks_non_integral},
-  publisher    = {MDPI AG},
-}
-
-@Article{Adler2024,
-  author       = {Adler, Eytan J. and Martins, Joaquim R. R. A.},
-  date         = {2024-05},
-  journaltitle = {Journal of Aircraft},
-  title        = {Blended Wing Body Configuration for Hydrogen-Powered Aviation},
-  doi          = {10.2514/1.c037582},
-  issn         = {1533-3868},
-  number       = {3},
-  pages        = {887--901},
-  volume       = {61},
-  groups       = {hydrogen_Aviation, actual_hydro_plane, placing_hydo_tanks_non_integral},
-  publisher    = {American Institute of Aeronautics and Astronautics (AIAA)},
-}
-
-@Article{Tiwari2024,
-  author       = {Tiwari, Saurav and Pekris, Michael J. and Doherty, John J.},
-  date         = {2024-02},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {A review of liquid hydrogen aircraft and propulsion technologies},
-  doi          = {10.1016/j.ijhydene.2023.12.263},
-  issn         = {0360-3199},
-  pages        = {1174--1196},
-  volume       = {57},
-  groups       = {liquid_hydro_aviation},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Yusaf2024,
-  author       = {Yusaf, Talal and Faisal Mahamude, Abu Shadate and Kadirgama, Kumaran and Ramasamy, Devarajan and Farhana, Kaniz and A. Dhahad, Hayder and Abu Talib, ABD Rahim},
-  date         = {2024-01},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Sustainable hydrogen energy in aviation – A narrative review},
-  doi          = {10.1016/j.ijhydene.2023.02.086},
-  issn         = {0360-3199},
-  pages        = {1026--1045},
-  volume       = {52},
-  groups       = {liquid_hydro_aviation, gas_hydro_aviation},
-  publisher    = {Elsevier BV},
-}
-
-
-@Article{Meissner2023,
-  author       = {Meissner, Robert and Sieb, Patrick and Wollenhaupt, Eric and Haberkorn, Stefan and Wicke, Kai and Wende, Gerko},
-  date         = {2023-09},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Towards climate-neutral aviation: Assessment of maintenance requirements for airborne hydrogen storage and distribution systems},
-  doi          = {10.1016/j.ijhydene.2023.04.058},
-  issn         = {0360-3199},
-  number       = {75},
-  pages        = {29367--29390},
-  volume       = {48},
-  groups       = {gas_hydro_aviation},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Onorato2022,
-  author       = {Onorato, G. and Proesmans, P. and Hoogreef, M. F. M.},
-  date         = {2022-09},
-  journaltitle = {CEAS Aeronautical Journal},
-  title        = {Assessment of hydrogen transport aircraft: Effects of fuel tank integration},
-  doi          = {10.1007/s13272-022-00601-6},
-  issn         = {1869-5590},
-  number       = {4},
-  pages        = {813--845},
-  volume       = {13},
-  groups       = {actual_hydro_plane, integral_NON_Wing, integral_fueselage},
-  publisher    = {Springer Science and Business Media LLC},
-}
-
-@Article{Prewitz2023,
-  author       = {Prewitz, Marc and Schwärzer, Jonas and Bardenhagen, Andreas},
-  date         = {2023-07},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Potential analysis of hydrogen storage systems in aircraft design},
-  doi          = {10.1016/j.ijhydene.2023.03.266},
-  issn         = {0360-3199},
-  number       = {65},
-  pages        = {25538--25548},
-  volume       = {48},
-  groups       = {actual_hydro_plane, placing_hydo_tanks_non_integral},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Huete2021,
-  author       = {Huete, Jon and Pilidis, Pericles},
-  date         = {2021-10},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Parametric study on tank integration for hydrogen civil aviation propulsion},
-  doi          = {10.1016/j.ijhydene.2021.08.194},
-  issn         = {0360-3199},
-  number       = {74},
-  pages        = {37049--37062},
-  volume       = {46},
-  groups       = {actual_hydro_plane, integral_fueselage},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Baroutaji2019,
-  author       = {Baroutaji, Ahmad and Wilberforce, Tabbi and Ramadan, Mohamad and Olabi, Abdul Ghani},
-  date         = {2019-05},
-  journaltitle = {Renewable and Sustainable Energy Reviews},
-  title        = {Comprehensive investigation on hydrogen and fuel cell technology in the aviation and aerospace sectors},
-  doi          = {10.1016/j.rser.2019.02.022},
-  issn         = {1364-0321},
-  pages        = {31--40},
-  volume       = {106},
-  groups       = {integral_fueselage},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Huete2022,
-  author       = {Huete, J. and Nalianda, D. and Pilidis, P.},
-  date         = {2022-06},
-  journaltitle = {The Aeronautical Journal},
-  title        = {Impact of tank gravimetric efficiency on propulsion system integration for a first-generation hydrogen civil airliner},
-  doi          = {10.1017/aer.2022.60},
-  issn         = {2059-6464},
-  number       = {1302},
-  pages        = {1324--1332},
-  volume       = {126},
-  groups       = {actual_hydro_plane, placing_hydo_tanks_non_integral},
-  publisher    = {Cambridge University Press (CUP)},
-}
-
-@Article{Cipolla2022,
-  author       = {Cipolla, Vittorio and Zanetti, Davide and Abu Salem, Karim and Binante, Vincenzo and Palaia, Giuseppe},
-  date         = {2022-07},
-  journaltitle = {Applied Sciences},
-  title        = {A Parametric Approach for Conceptual Integration and Performance Studies of Liquid Hydrogen Short–Medium Range Aircraft},
-  doi          = {10.3390/app12146857},
-  issn         = {2076-3417},
-  number       = {14},
-  pages        = {6857},
-  volume       = {12},
-  groups       = {actual_hydro_plane, placing_hydo_tanks_non_integral},
-  publisher    = {MDPI AG},
-}
-
-@Article{Verstraete2013,
-  author       = {Verstraete, Dries},
-  date         = {2013-11},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Long range transport aircraft using hydrogen fuel},
-  doi          = {10.1016/j.ijhydene.2013.09.021},
-  issn         = {0360-3199},
-  number       = {34},
-  pages        = {14824--14831},
-  volume       = {38},
-  groups       = {integral_fueselage},
-  publisher    = {Elsevier BV},
-}
-
-@Article{onorato2021fuel,
-  author = {Onorato, Giuseppe},
-  title  = {Fuel Tank Integration for Hydrogen Airliners},
-  groups = {integral_fueselage},
-  year   = {2021},
-}
-
-
-@Article{FloridoBenitez2023,
-  author       = {Florido-Benítez, Lázaro},
-  date         = {2023-02},
-  journaltitle = {Logistics},
-  title        = {The Role of the Top 50 US Cargo Airports and 25 Air Cargo Airlines in the Logistics of E-Commerce Companies},
-  doi          = {10.3390/logistics7010008},
-  issn         = {2305-6290},
-  number       = {1},
-  pages        = {8},
-  volume       = {7},
-  groups       = {motivation_parts},
-  publisher    = {MDPI AG},
-}
-
-@Article{Li2024,
-  author       = {Li, Xue and Liu, Qiuping},
-  date         = {2024-04},
-  journaltitle = {International Journal of Education and Humanities},
-  title        = {Research on the Development Direction and Countermeasures of Civil Aviation Ticketing Offices: Taking Fuyang Civil Aviation Ticket Office as an Example},
-  doi          = {10.54097/njb5hr17},
-  issn         = {2770-6702},
-  number       = {2},
-  pages        = {232--235},
-  volume       = {13},
-  groups       = {motivation_parts},
-  publisher    = {Darcy & Roy Press Co. Ltd.},
-}
-
-@Article{Lai2022,
-  author       = {Lai, Y.Y. and Christley, E. and Kulanovic, A. and Teng, C.C. and Björklund, A. and Nordensvärd, J. and Karakaya, E. and Urban, F.},
-  date         = {2022-03},
-  journaltitle = {Renewable and Sustainable Energy Reviews},
-  title        = {Analysing the opportunities and challenges for mitigating the climate impact of aviation: A narrative review},
-  doi          = {10.1016/j.rser.2021.111972},
-  issn         = {1364-0321},
-  pages        = {111972},
-  volume       = {156},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Zachariah2023,
-  author       = {Zachariah, Renju Aleyamma and Sharma, Sahil and Kumar, Vijay},
-  date         = {2023-05},
-  journaltitle = {Multimedia Tools and Applications},
-  title        = {Systematic review of passenger demand forecasting in aviation industry},
-  doi          = {10.1007/s11042-023-15552-1},
-  issn         = {1573-7721},
-  number       = {30},
-  pages        = {46483--46519},
-  volume       = {82},
-  groups       = {motivation_parts},
-  publisher    = {Springer Science and Business Media LLC},
-}
-
-@Article{Lawson2023,
-  author       = {Lawson, Catherine T. and Rajan, Karthik Soundara},
-  date         = {2023-05},
-  journaltitle = {Journal of Homeland Security and Emergency Management},
-  title        = {Unmanned Aircraft Systems (UAS): Applications and Integration into Hazard Mitigation Planning},
-  doi          = {10.1515/jhsem-2021-0090},
-  issn         = {1547-7355},
-  number       = {3},
-  pages        = {271--305},
-  volume       = {20},
-  groups       = {motivation_parts},
-  publisher    = {Walter de Gruyter GmbH},
-}
-
-@Article{Herstein2023,
-  author       = {Herstein, Jocelyn J. and Figi, Claire E. and Le, Aurora B. and Beam, Elizabeth L. and Lawler, James V. and Schnaubelt, Elizabeth R. and Carter, Gary W. and Lowe, John J. and Gibbs, Shawn G.},
-  date         = {2023-05},
-  journaltitle = {Air Medical Journal},
-  title        = {An Updated Review of Literature for Air Medical Evacuation High-Level Containment Transport During the Coronavirus Disease 2019 Pandemic},
-  doi          = {10.1016/j.amj.2022.12.007},
-  issn         = {1067-991X},
-  number       = {3},
-  pages        = {201--209},
-  volume       = {42},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@InBook{Pak2021,
-  author    = {Pak, Henry},
-  booktitle = {Automated Low-Altitude Air Delivery},
-  date      = {2021-11},
-  title     = {Use-Cases for Heavy Lift Unmanned Cargo Aircraft},
-  doi       = {10.1007/978-3-030-83144-8_3},
-  isbn      = {9783030831448},
-  pages     = {49--72},
-  publisher = {Springer International Publishing},
-  groups    = {motivation_parts},
-  issn      = {2194-8259},
-}
-
-@Article{Hamilton2022,
-  author       = {Hamilton, Jonathan and de Boer, Gijs and Doddi, Abhiram and Lawrence, Dale A.},
-  date         = {2022-11},
-  journaltitle = {Atmospheric Measurement Techniques},
-  title        = {The DataHawk2 uncrewed aircraft system for atmospheric research},
-  doi          = {10.5194/amt-15-6789-2022},
-  issn         = {1867-8548},
-  number       = {22},
-  pages        = {6789--6806},
-  volume       = {15},
-  groups       = {motivation_parts},
-  publisher    = {Copernicus GmbH},
-}
-
-@Article{Marzioli2024,
-  author       = {Marzioli, Paolo and Garofalo, Riccardo and Frezza, Lorenzo and Nyawade, Andrew and Santilli, Giancarlo and JahJah, Munzer and Santoni, Fabio and Piergentili, Fabrizio},
-  date         = {2024-03},
-  journaltitle = {Drones},
-  title        = {Performance Analysis of a Wildlife Tracking CubeSat Mission Extension to Drones and Stratospheric Vehicles},
-  doi          = {10.3390/drones8040129},
-  issn         = {2504-446X},
-  number       = {4},
-  pages        = {129},
-  volume       = {8},
-  groups       = {motivation_parts},
-  publisher    = {MDPI AG},
-}
-
-@Article{Tsokas2022,
-  author       = {Tsokas, Arsenios and Rysz, Maciej and Pardalos, Panos M. and Dipple, Kathleen},
-  date         = {2022-11},
-  journaltitle = {Expert Systems with Applications},
-  title        = {SAR data applications in earth observation: An overview},
-  doi          = {10.1016/j.eswa.2022.117342},
-  issn         = {0957-4174},
-  pages        = {117342},
-  volume       = {205},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@InProceedings{Bikov2022,
-  author    = {Bikov, Tsvyatko and Mihaylov, Grigor and Iliev, Teodor and Stoyanov, Ivaylo},
-  booktitle = {2022 8th International Conference on Energy Efficiency and Agricultural Engineering (EE&amp;AE)},
-  date      = {2022-06},
-  title     = {Drone Surveillance in the Modern Agriculture},
-  doi       = {10.1109/eeae53789.2022.9831375},
-  publisher = {IEEE},
-  groups    = {motivation_parts},
-}
-
-@Book{Meijer2020,
-  author    = {Meijer, Gert},
-  date      = {2020-07},
-  title     = {Fundamentals of Aviation Operations},
-  doi       = {10.4324/9780429318801},
-  isbn      = {9780429318801},
-  publisher = {Routledge},
-  groups    = {motivation_parts},
-}
-
-@Article{Lenaerts2021,
-  author       = {Lenaerts, Bert and Allroggen, Florian and Malina, Robert},
-  date         = {2021-03},
-  journaltitle = {Journal of Air Transport Management},
-  title        = {The economic impact of aviation: A review on the role of market access},
-  doi          = {10.1016/j.jairtraman.2020.102000},
-  issn         = {0969-6997},
-  pages        = {102000},
-  volume       = {91},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Zhang2020,
-  author       = {Zhang, Fangni and Graham, Daniel J.},
-  date         = {2020-03},
-  journaltitle = {Transport Reviews},
-  title        = {Air transport and economic growth: a review of the impact mechanism and causal relationships},
-  doi          = {10.1080/01441647.2020.1738587},
-  issn         = {1464-5327},
-  number       = {4},
-  pages        = {506--528},
-  volume       = {40},
-  groups       = {motivation_parts},
-  publisher    = {Informa UK Limited},
-}
-
-@Article{Zaporozhets2021,
-  author       = {Zaporozhets, Oleksandr and Isaienko, Volodymyr and Synylo, Kateryna},
-  date         = {2021-07},
-  journaltitle = {CEAS Aeronautical Journal},
-  title        = {PARE preliminary analysis of ACARE FlightPath 2050 environmental impact goals},
-  doi          = {10.1007/s13272-021-00525-7},
-  issn         = {1869-5590},
-  number       = {3},
-  pages        = {653--667},
-  volume       = {12},
-  groups       = {motivation_parts},
-  publisher    = {Springer Science and Business Media LLC},
-}
-
-@Misc{kmeans_Visual_Explanation,
-  title  = {k-means++ visual explanation},
-  note   = {https://theory.stanford.edu/~sergei/slides/BATS-Means.pdf - 02.09.2024},
-  url    = {https://theory.stanford.edu/~sergei/slides/BATS-Means.pdf},
-  groups = {master, kmeans},
-  owner  = {Sergei Vassilvitskii},
-}
-
-@Misc{link_Kmeans_Img_Proc,
-  title  = {Image explaining how kmeans works},
-  note   = {https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning - 03.04.2024},
-  url    = {https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning},
-  groups = {master, kmeans},
-  owner  = {Shervine Amidi, Stanford},
-}
-
-@Misc{Gross2021b,
-  author    = {Gross, Dietmar and Ehlers, Wolfgang and Wriggers, Peter and Schröder, Jörg and Müller, Ralf},
-  date      = {2021},
-  title     = {Formeln und Aufgaben zur Technischen Mechanik 1},
-  doi       = {10.1007/978-3-662-61864-6},
-  groups    = {technische_mechanik},
-  publisher = {Springer Berlin Heidelberg},
-}
-
-@Book{Papageorgiou2015,
-  author    = {Papageorgiou, Markos and Leibold, Marion and Buss, Martin},
-  date      = {2015},
-  title     = {Optimierung: Statische, dynamische, stochastische Verfahren für die Anwendung},
-  doi       = {10.1007/978-3-662-46936-1},
-  isbn      = {9783662469361},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Book{Scholz2018,
-  author    = {Scholz, Daniel},
-  date      = {2018},
-  title     = {Optimierung interaktiv: Grundlagen verstehen, Modelle erforschen und Verfahren anwenden},
-  doi       = {10.1007/978-3-662-57953-4},
-  isbn      = {9783662579534},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Book{Schumacher2020,
-  author    = {Schumacher, Axel},
-  date      = {2020},
-  title     = {Optimierung mechanischer Strukturen: Grundlagen und industrielle Anwendungen},
-  doi       = {10.1007/978-3-662-60328-4},
-  isbn      = {9783662603284},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Book{Grimme2018,
-  author    = {Grimme, Christian and Bossek, Jakob},
-  date      = {2018},
-  title     = {Einführung in die Optimierung: Konzepte, Methoden und Anwendungen},
-  doi       = {10.1007/978-3-658-21151-6},
-  isbn      = {9783658211516},
-  publisher = {Springer Fachmedien Wiesbaden},
-  groups    = {optimization_books},
-}
-
-@Book{Koop2018,
-  author    = {Koop, Andreas and Moock, Hardy},
-  date      = {2018},
-  title     = {Lineare Optimierung – eine anwendungsorientierte Einführung in Operations Research},
-  doi       = {10.1007/978-3-662-56141-6},
-  isbn      = {9783662561416},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Book{Gritzmann2013,
-  author    = {Gritzmann, Peter},
-  date      = {2013},
-  title     = {Grundlagen der Mathematischen Optimierung: Diskrete Strukturen, Komplexitätstheorie, Konvexitätstheorie, Lineare Optimierung, Simplex-Algorithmus, Dualität},
-  doi       = {10.1007/978-3-8348-2011-2},
-  isbn      = {9783834820112},
-  publisher = {Springer Fachmedien Wiesbaden},
-  groups    = {optimization_books},
-}
-
-@Book{Jarre2019,
-  author    = {Jarre, Florian and Stoer, Josef},
-  date      = {2019},
-  title     = {Optimierung: Einführung in mathematische Theorie und Methoden},
-  doi       = {10.1007/978-3-662-58855-0},
-  isbn      = {9783662588550},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Book{Dietz2019,
-  author    = {Dietz, Hans M.},
-  date      = {2019},
-  title     = {Mathematik für Wirtschaftswissenschaftler: Band 2: Lineare Algebra und Optimierung},
-  doi       = {10.1007/978-3-662-58702-7},
-  isbn      = {9783662587027},
-  publisher = {Springer Berlin Heidelberg},
-  groups    = {optimization_books},
-}
-
-@Article{Capurso2022,
-  author       = {Capurso, T. and Stefanizzi, M. and Torresi, M. and Camporeale, S.M.},
-  date         = {2022-01},
-  journaltitle = {Energy Conversion and Management},
-  title        = {Perspective of the role of hydrogen in the 21st century energy transition},
-  doi          = {10.1016/j.enconman.2021.114898},
-  issn         = {0196-8904},
-  pages        = {114898},
-  volume       = {251},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Qureshi2022,
-  author       = {Qureshi, Fazil and Yusuf, Mohammad and Kamyab, Hesam and Zaidi, Sadaf and Junaid Khalil, Mohd and Arham Khan, Mohd and Azad Alam, Mohammad and Masood, Faisal and Bazli, Leila and Chelliapan, Shreeshivadasan and Abdullah, Bawadi},
-  date         = {2022-10},
-  journaltitle = {Sustainable Energy Technologies and Assessments},
-  title        = {Current trends in hydrogen production, storage and applications in India: A review},
-  doi          = {10.1016/j.seta.2022.102677},
-  issn         = {2213-1388},
-  pages        = {102677},
-  volume       = {53},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Rasul2022,
-  author       = {Rasul, M.G. and Hazrat, M.A and Sattar, M.A. and Jahirul, M.I. and Shearer, M.J.},
-  date         = {2022-11},
-  journaltitle = {Energy Conversion and Management},
-  title        = {The future of hydrogen: Challenges on production, storage and applications},
-  doi          = {10.1016/j.enconman.2022.116326},
-  issn         = {0196-8904},
-  pages        = {116326},
-  volume       = {272},
-  groups       = {motivation_parts},
-  publisher    = {Elsevier BV},
-}
-
-@Misc{APUS_0,
-  author  = {Unkown},
-  title   = {APUS, aircraft manufacturer},
-  note    = {https://group.apus-aero.com/zero-emission - 27.02.2024},
-  url     = {https://group.apus-aero.com/zero-emission/},
-  urldate = {2024-02-27},
-  groups  = {webpages},
-  month   = feb,
-  year    = {2024},
+  groups       = {lisa},
 }
 
 @Misc{APUS_1,
-  author  = {Unkown},
-  title   = {APUS, aircraft manufacturer},
-  note    = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf - 27.02.2024},
-  url     = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf},
-  urldate = {2024-02-27},
-  groups  = {webpages},
-  month   = {2},
-  year    = {2024},
-}
-
-@Article{Friedmann2023,
-  author       = {Friedmann, Felix and Rienecker, Hannes and Dexl, Florian and Hauffe, Andreas and Wolf, Klaus},
-  date         = {2023-02},
-  journaltitle = {Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering},
-  title        = {Design studies for a light aircraft wing with highly integrated load-bearing hydrogen tanks using multi-objective optimization methods},
-  doi          = {10.1177/09544100231155697},
-  issn         = {2041-3025},
-  number       = {15},
-  pages        = {3369--3381},
-  volume       = {237},
-  groups       = {swith},
-  publisher    = {SAGE Publications},
-}
-
-@Misc{Scheffel2015,
-  author  = {Phillip Scheffel},
-  date    = {2015},
-  title   = {[Patent] TUBESTRUCT integral high-pressure tube tank The basic idea is a single-tube structure of a wing, where the tubes are loaded under high internal pressure as well as able to absorb thrust and torsion loads from stresses in the flight. The tubes can absorb hydrogen, methane or other volatile gases.},
-  url     = {https://patents.google.com/patent/DE102015008178A1/en?oq=Dokument+DE102015008178A1},
-  urldate = {2024-09-03},
-  groups  = {patents},
-}
-
-@Article{Adler2023,
-  author       = {Adler, Eytan J. and Martins, Joaquim R.R.A.},
-  date         = {2023-08},
-  journaltitle = {Progress in Aerospace Sciences},
-  title        = {Hydrogen-powered aircraft: Fundamental concepts, key technologies, and environmental impacts},
-  doi          = {10.1016/j.paerosci.2023.100922},
-  issn         = {0376-0421},
-  pages        = {100922},
-  volume       = {141},
-  groups       = {actual_hydro_plane},
-  publisher    = {Elsevier BV},
-}
-
-@Misc{APUS_Image,
-  author  = {Unkown},
-  title   = {Image of the APUS i2},
-  note    = {https://www.fachkraefteportal-brandenburg.de/ila-2022/apus-aeronautical-engineering-gmbh - 04.09.2024},
-  url     = {https://www.fachkraefteportal-brandenburg.de/ila-2022/apus-aeronautical-engineering-gmbh},
-  urldate = {2024-09-04},
-  groups  = {webpages},
-  month   = {2},
-  year    = {2024},
-}
-
-@PhdThesis{butt2021development,
-  author = {Butt, Javed},
-  title  = {Development of a module for mission analysis for a gradient-based aerodynamic shape optimization process},
-  groups = {own_research},
-  school = {TU Braunschweig},
-  year   = {2021},
-}
-
-@Article{Viswanathan2022,
-  author       = {Viswanathan, Venkatasubramanian and Epstein, Alan H. and Chiang, Yet-Ming and Takeuchi, Esther and Bradley, Marty and Langford, John and Winter, Michael},
-  date         = {2022-01},
-  journaltitle = {Nature},
-  title        = {The challenges and opportunities of battery-powered flight},
-  doi          = {10.1038/s41586-021-04139-1},
-  issn         = {1476-4687},
-  number       = {7894},
-  pages        = {519--525},
-  volume       = {601},
-  groups       = {state_of_art},
-  publisher    = {Springer Science and Business Media LLC},
-}
-
-@Article{Muthukumar2023,
-  author       = {Muthukumar, P. and Kumar, Alok and Afzal, Mahvash and Bhogilla, Satyasekhar and Sharma, Pratibha and Parida, Abhishek and Jana, Sayantan and Kumar, E Anil and Pai, Ranjith Krishna and Jain, I.P.},
-  date         = {2023-10},
-  journaltitle = {International Journal of Hydrogen Energy},
-  title        = {Review on large-scale hydrogen storage systems for better sustainability},
-  doi          = {10.1016/j.ijhydene.2023.04.304},
-  issn         = {0360-3199},
-  number       = {85},
-  pages        = {33223--33259},
-  volume       = {48},
-  groups       = {state_of_art},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Cheng2024,
-  author       = {Cheng, Qian and Zhang, Ruiqiang and Shi, Zhusheng and Lin, Jianguo},
-  date         = {2024-03},
-  journaltitle = {International Journal of Lightweight Materials and Manufacture},
-  title        = {Review of common hydrogen storage tanks and current manufacturing methods for aluminium alloy tank liners},
-  doi          = {10.1016/j.ijlmm.2023.08.002},
-  issn         = {2588-8404},
-  number       = {2},
-  pages        = {269--284},
-  volume       = {7},
-  groups       = {state_of_art, tank_types},
-  publisher    = {Elsevier BV},
-}
-
-@Article{Bagarello2024,
-  author       = {Bagarello, Sergio and Campagna, Dario and Benedetti, Ivano},
-  date         = {2024-09},
-  journaltitle = {Green Energy and Intelligent Transportation},
-  title        = {A survey on hydrogen tanks for sustainable aviation},
-  doi          = {10.1016/j.geits.2024.100224},
-  issn         = {2773-1537},
-  pages        = {100224},
-  groups       = {tank_types},
-  publisher    = {Elsevier BV},
-}
-
-@Article{verstraete2009potential,
-  author    = {Verstraete, Dries},
-  title     = {The Potential of Liquid Hydrogen for long range aircraft propulsion},
-  groups    = {integral_fueselage},
-  publisher = {Cranfield University},
-  year      = {2009},
+  author = {Unkown},
+  title  = {APUS, aircraft manufacturer},
+  note   = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf - 27.02.2024},
+  url    = {https://group.apus-aero.com/wp-content/uploads/2023/10/APUS_i-2_Broschuere_20231027_Web.pdf},
+  groups = {webpages},
+  month  = feb,
+  year   = {2024},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
+1 StaticGroup:hydro_Plane\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:hydrogen\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:Hydrogen_Tests\;0\;0\;0x8a8a8aff\;\;\;;
-2 StaticGroup:hydro_Plane\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:general_environment\;0\;0\;0x8a8a8aff\;\;\;;
-3 StaticGroup:motivation_parts\;0\;1\;0x7c7c7cff\;\;\;;
-2 StaticGroup:hydrogen_Aviation\;0\;1\;0x8a8a8aff\;\;\;;
-3 StaticGroup:liquid_hydro_aviation\;0\;1\;0x7c7c7cff\;\;\;;
-3 StaticGroup:gas_hydro_aviation\;0\;0\;0x7c7c7cff\;\;\;;
-3 StaticGroup:hydro_Harms\;0\;1\;0x7c7c7cff\;\;\;;
-2 StaticGroup:actual_hydro_plane\;0\;1\;0x8a8a8aff\;\;\;;
-3 StaticGroup:integral_fueselage\;0\;1\;0x7c7c7cff\;\;\;;
-3 StaticGroup:placing_hydo_tanks_non_integral\;0\;1\;0x7c7c7cff\;\;\;;
-2 StaticGroup:hydro_books\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:tank_types\;0\;1\;0x8a8a8aff\;\;\;;
-1 StaticGroup:master\;0\;0\;0x8a8a8aff\;\;\;;
-2 StaticGroup:chaos\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:Hydrogen_Tests\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:master\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:norms\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:swith\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:patents\;0\;1\;0x7c7c7cff\;\;\;;
 1 StaticGroup:webpages\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:Report_2\;0\;1\;0x8a8a8aff\;\;\;;
-1 StaticGroup:structural tests\;0\;0\;0x8a8a8aff\;\;\;;
+1 StaticGroup:chaos\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:structural tests\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:regression\;0\;0\;0x8a8a8aff\;\;\;;
+1 StaticGroup:llms\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:curve_Simplifcation\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:machine_learning\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:curve_Simplifcation\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:regression\;0\;0\;0x8a8a8aff\;\;\;;
-2 StaticGroup:llms\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:chaos\;0\;0\;0x8a8a8aff\;\;\;;
+1 StaticGroup:kmeans\;0\;0\;0x8a8a8aff\;\;\;;
+1 StaticGroup:scikit_learn\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:meshio\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:vtk\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:technische_mechanik\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:python\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:sympy\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:fenics\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:pytorch\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:python_tools\;0\;1\;\;\;\;;
-2 StaticGroup:vtk\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:meshio\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:scikit_learn\;0\;1\;0x8a8a8aff\;\;\;;
-2 StaticGroup:kmeans\;0\;0\;0x8a8a8aff\;\;\;;
+1 StaticGroup:sympy\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:fenics\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:pytorch\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:python_tools\;0\;1\;\;\;\;;
 1 StaticGroup:optimization_algorithm\;0\;1\;\;\;\;;
 2 StaticGroup:optimization_books\;0\;1\;\;\;\;;
 2 StaticGroup:mdo\;0\;1\;\;\;\;;
 2 StaticGroup:mlti_objective\;0\;1\;\;\;\;;
-1 StaticGroup:aerodynamics\;0\;1\;\;\;\;;
-2 StaticGroup:gnereal_aero\;0\;1\;\;\;\;;
-2 StaticGroup:aero_Car\;0\;1\;\;\;\;;
-2 StaticGroup:fluid_dynamics\;0\;1\;\;\;\;;
-1 StaticGroup:own_research\;0\;1\;\;\;\;;
-1 StaticGroup:chapters\;0\;1\;\;\;\;;
-2 StaticGroup:state_of_art\;0\;1\;\;\;\;;
+1 StaticGroup:lisa\;0\;1\;0x8a8a8aff\;\;\;;
 }

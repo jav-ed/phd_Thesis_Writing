@@ -12,9 +12,10 @@ In the starting chapter of this work, first some inital background regarding the
 in @chap_0_1. 
 This aims to give the reader a broad overview of the field of research.
 The deeper look into this subject can inshallah be found in 
+@chap_0_7 and 
 //
-// TODO
-// @chap_2_0 .
+//TODO add ref to the whole chapter 2
+// @chap_0_7 
 Once a rough understanding of #gl_("swith", long:true), pronounced sweet, is obtained, the motivation behind this work shall be explained in @chap_0_2.
 The next @chap_0_3 shall outline the overall goals of this work. The reader can refer to it for gaining a quick overview about the topics that are covered.
 In @chap_0_4 the systematic strucutre of writing this thesis is given.
@@ -25,10 +26,7 @@ Finally in @chap_0_6 the financial funding is made transparent such that the rea
 /* ---------------------------- Inital Background --------------------------- */
 == Initial Background <chap_0_1>
 
-In this subsection, a concise definition of the term #gl_("swith", long:true) shall be provided. Detailed information about #gl_("swith", pl:true) can be found in
-//
-// TODO
-// @chap_2_0 .
+In this subsection, a concise definition of the term #gl_("swith", long:true) shall be provided. Detailed information about #gl_("swith", pl:true) can be found in @chap_0_7
 The rationale for beginning with a brief definition of #gl_("swith") is to approach the topic systematically. Presenting an overall concept first is generally easier to comprehend, especially for non-specialists. Once the basics are properly understood, in-depth knowledge becomes more accessible.
 
 The aviation industry is actively pursuing improvements in various aspects, with a significant focus on reducing environmental impact 
@@ -59,15 +57,10 @@ An illustrative example of the latter is given in @fig_0.
 
 
 The specific location for placing these tanks is complex and depends on numerous factors
-//
-//TODO use the complete list inshallah when talking in detail about it
 @Adler2024 @Onorato2022
-@Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022
+@Prewitz2023 @Huete2021 @Huete2022 @Eissele2023 @Cipolla2022
 . However, an alternative approach involves integrating high-pressure hydrogen tanks structurally inside the fuselage
-//
-//TODO use the complete list inshallah when talking in detail about it
-@Eissele2023 @Adler2024
-@Onorato2022 @Prewitz2023 @Huete2021 @Baroutaji2019 @Huete2022 @Cipolla2022 @Verstraete2013 @onorato2021fuel @onorato2021fuel
+@Onorato2022 @Huete2021 @Baroutaji2019 @Verstraete2013 @onorato2021fuel
 .
 This work, on the other hand, deals with the structural integration of the high-pressure hydrogen tanks to the wing.
 As a consequence of this structural connection, loads are shared between the tanks and the wing.
