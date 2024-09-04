@@ -104,7 +104,8 @@
 #include "2_Wr/1_Chapters/0_Chap/5_Research_Enabler.typ"
 
 /* ---------------------------- State of the art ---------------------------- */
-#include "2_Wr/1_Chapters/1_Chap/0_State_Of_Art.typ"
+#include "2_Wr/1_Chapters/0_Chap/6_State_Of_Art.typ"
+
 
 
 
