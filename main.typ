@@ -3,7 +3,6 @@
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 
 // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
-
 #set text(
   font: "New Computer Modern",
   size: default_Font_Size,
