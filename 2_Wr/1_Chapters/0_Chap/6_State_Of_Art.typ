@@ -4,7 +4,7 @@
 
 == State of The Art <chap_0_7>
 
-This section presents a comprehensive overview of #gl_("swith", pl:true). Initially, a detailed definition of #gl_("swith", long:true) shall be provided. The section then shall examine whether #gl_("swith", pl:true) are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these approaches and #gl_("swith", pl:true).
+This section presents an overview of #gl_("swith", pl:true). Initially, a detailed definition of #gl_("swith", long:true) shall be provided. The section then shall examine whether #gl_("swith", pl:true) are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these approaches and #gl_("swith", pl:true).
 Subsequently, the key benefits of #gl_("swith", pl:true) shall be outlined, followed by a short analysis of potential drawbacks associated with this pioneering approach. By this point, the differences between #gl_("swith", pl:true) and currently available commercial aircraft should be evident. After reading this section, the reader should clearly understand what #gl_("swith", pl:true) are, their main purposes, and how they differ from other existing approaches.
 /* -------------------------------------------------------------------------- */
 
