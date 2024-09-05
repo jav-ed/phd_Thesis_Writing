@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 === II.3 Fundamentals of Pressure Vessels
 
-This section will first provide general basics about pressure tanks. Then, distinctions will be made so that only information relevant to SIHFTs (Structural Integral Hydrogen Fuel Tanks) can be used for further work.
+This section will first provide general basics about pressure tanks. Then, distinctions will be made so that only information relevant to #gl_("swith", pl:true) (Structural Integral Hydrogen Fuel Tanks) can be used for further work.
 
 Pressure tanks are special containers used in various applications for the storage and transport of pressurized gases and liquids. Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the K2H2 project, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
 

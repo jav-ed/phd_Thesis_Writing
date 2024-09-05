@@ -5,7 +5,7 @@
 
 ===  II.12 Pressurized Bodies with External Dynamic Loading
 
-Although nothing could be found in the literature about SIHFTs, structurally integral tanks, regardless of the filling medium, can initially be assumed to be tanks with external loading. Through this assumption, a literature search can be conducted to obtain information on the structural behavior of pressurized cylinders with external loading. In this section, some important results in this regard will be presented.
+Although nothing could be found in the literature about #gl_("swith", pl:true), structurally integral tanks, regardless of the filling medium, can initially be assumed to be tanks with external loading. Through this assumption, a literature search can be conducted to obtain information on the structural behavior of pressurized cylinders with external loading. In this section, some important results in this regard will be presented.
 
 An intensive literature search was conducted on the topic of structural behavior of pressurized bodies with external loading. In [22], a dynamic experimental investigation was carried out. For this purpose, a mass of 2.5 tons was dropped from a height of 2 m onto a high-pressure cylinder. This corresponds to an impact energy of 49 kJ, which is comparable to the impact of a vehicle with a mass of 1 ton and a driving speed of 36 km/h. A graphical representation of the experimental setup is given in Figure 19. The investigation was conducted with the following variable parameters:
 
