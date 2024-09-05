@@ -114,10 +114,16 @@
 #include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
 
 
-/* ---------------------------------- Norms --------------------------------- */
+/* -------------------------------- Standards ------------------------------- */
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Pressure_Vessels.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Aero_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/3_Automotive.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/4_Various_Fields.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/5_Essential_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/6_Patents.typ"
 
-
+/* -------------------------------- Hydrogen -------------------------------- */
 
 // ------------------------------- introducion ------------------------------ //
 // #include "2_Wr/0_Chap/0_File.typ"
