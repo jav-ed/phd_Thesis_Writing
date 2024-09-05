@@ -57,8 +57,8 @@ An illustrative example of the latter is given in @fig_0.
 
 
 The specific location for placing these tanks is complex and depends on numerous factors
-@Adler2024 @Onorato2022
-@Prewitz2023 @Huete2021 @Huete2022 @Eissele2023 @Cipolla2022
+@Eissele2023 @Adler2024 @Onorato2022
+@Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022
 . However, an alternative approach involves integrating high-pressure hydrogen tanks structurally inside the fuselage
 @Onorato2022 @Huete2021 @Baroutaji2019 @Verstraete2013 @onorato2021fuel
 .

@@ -115,7 +115,7 @@
 
 
 /* ---------------------------------- Norms --------------------------------- */
-#include "2_Wr/1_Chapters/1_Chap/0_Norms/0_Norms.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
 
 
 
@@ -156,3 +156,5 @@
 #bibliography("1_Data/1_Bib/bib.bib", 
 // style: "american-institute-of-aeronautics-and-astronautics"
 )
+
+

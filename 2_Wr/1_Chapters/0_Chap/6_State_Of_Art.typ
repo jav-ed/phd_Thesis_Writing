@@ -37,7 +37,7 @@ Given the reasoning above, it can be concluded that for commercial and economica
 . Due to this high pressure and the structural connectivity between the wing and the tanks, the pressure loads from the tanks are shared with the wing. Conversely, the aerodynamic loads acting on the wing are shared with the tanks. Thus, the concept of a #gl_("swith") serves a dual purpose: fuel storage and load sharing between wing and tanks @Adler2023.
 
 A significant advantage of this configuration is the efficient utilization of available space within the aircraft. In contrast, non-structure-integrated hydrogen tanks are typically placed within the aircraft, often in the fuselage 
-@Huete2022 @Cipolla2022 @Eissele2023 @Prewitz2023
+@Eissele2023 @Prewitz2023 @Huete2022 @Cipolla2022 
 , although they could potentially be located within the wing @Huete2021. 
 The key distinction is that these non-structure-integrated tanks do not serve a dual purpose. They solely store fuel without structurally alleviating any other part of the aircraf. In other words, they do not share loads with other aircraft components.
 
@@ -51,7 +51,7 @@ An alternative approach involves integrating the tanks within the fuselage rathe
 
 
 In the scenario of fuselage-integrated hydrogen tanks
-@verstraete2009potential @Verstraete2013 @Baroutaji2019 @onorato2021fuel @Huete2021 @Onorato2022 
+@Onorato2022 @Huete2021  @Baroutaji2019   @Verstraete2013 @onorato2021fuel   @verstraete2009potential   
 , the tanks contribute to load-bearing. However, due to the conventional tube-and-wing configuration, the loads experienced within the fuselage are significantly lower than in a #gl_("swith") design. The primary advantage of hydrogen-powered aircraft is the mitigation of negative environmental impacts associated with kerosene-driven aircraft. This advantage is consistent across all integration methods: non-structure integrated, fuselage-structure integrated, and #gl_("swith").
 
 Both structure-integrated variations constitute niche fields within aerospace engineering, as evidenced by a review of the literature. However, when comparing the two approaches, it is observed that there is substantially more publicly available research on fuselage-integrated high-pressure tanks than on #gl_("swith", pl:true). 
