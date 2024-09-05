@@ -52,7 +52,12 @@ An alternative approach involves integrating the tanks within the fuselage rathe
 
 In the scenario of fuselage-integrated hydrogen tanks
 @Onorato2022 @Huete2021  @Baroutaji2019   @Verstraete2013 @onorato2021fuel   @verstraete2009potential   
-, the tanks contribute to load-bearing. However, due to the conventional tube-and-wing configuration, the loads experienced within the fuselage are significantly lower than in a #gl_("swith") design. The primary advantage of hydrogen-powered aircraft is the mitigation of negative environmental impacts associated with kerosene-driven aircraft. This advantage is consistent across all integration methods: non-structure integrated, fuselage-structure integrated, and #gl_("swith").
+, the tanks contribute to load-bearing. However, due to the conventional tube-and-wing configuration, the loads experienced within the fuselage are significantly lower than in a #gl_("swith") design. 
+
+In addition to aerodynamic loads, conventional aircraft wings bear substantial localized forces from mounted components such as engines and landing gear. #gl_("swith", pl:true)  present a unique advantage in this context. By integrating high-pressure hydrogen tanks within the wing structure, #gl_("swith", pl:true) facilitate a more distributed load-bearing system. This integration enables the hydrogen tanks to partly alleviate the wing structure from the concentrated loads imposed by these attached components.
+
+/* -------------------------------------------------------------------------- */
+That being said, the primary advantage of hydrogen-powered aircraft is the mitigation of negative environmental impacts associated with kerosene-driven aircraft. This advantage is consistent across all integration methods: non-structure integrated, fuselage-structure integrated, and #gl_("swith").
 
 Both structure-integrated variations constitute niche fields within aerospace engineering, as evidenced by a review of the literature. However, when comparing the two approaches, it is observed that there is substantially more publicly available research on fuselage-integrated high-pressure tanks than on #gl_("swith", pl:true). 
 At the time of this thesis's composition, only one publicly available scientific paper addressing wing-integrated high-pressure gaseous hydrogen tanks was identified @Friedmann2023. This paper cites multiple patents related to #gl_("swith", pl:true), including @Scheffel2015 from APUS @APUS_0. Beyond these patents, the paper does not reference any additional scientific work concretely addressing #gl_("swith", pl:true).
