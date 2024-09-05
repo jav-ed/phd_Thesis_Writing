@@ -13,18 +13,35 @@ Aluminum tanks were the alternative at the time, which, however, cost significan
 
 The extent to which a metallic liner differs from a plastic liner and what differences exist between the individual plastics is presented in a detailed study in @Su2021. However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
 
-The superordinate development stages of the pressure tank can be divided into tank types. Figure 1 shows all four common tank types that are available in the free market economy. Contrary to the labeling in Figure 1, tank types are usually labeled with Roman numerals in the literature. Tank type V had already been developed at the time of writing this report. However, it is the most expensive of all variants. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021, and is currently mainly used for military purposes.
+The superordinate development stages of the pressure tank can be divided into tank types. @fig_4 shows all four common tank types that are available in the free market economy. Contrary to the labeling in @fig_4, tank types are usually labeled with Roman numerals in the literature. Tank type V had already been developed at the time of writing this report. However, it is the most expensive of all variants. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021, and is currently mainly used for military purposes.
 
-[Figure 1: Common types of pressure vessels @Su2021]
 
-From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, Table 7 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
+  width: 100%),
+  caption: [Common types of pressure vessels @Su2021],
+) <fig_4>
 
-Table 7: Maximum bearable pressure values according to @khzouz2020hydrogen
 
-| Tank Type | Maximum bearable pressure in bar |
-|-----------|----------------------------------|
-| I         | 200                              |
-| II        | 263                              |
-| III and IV| 300 – 700                        |
+From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
+
+#figure(
+  tablex(
+    columns: 2,
+    header-rows: 1,
+
+    /* --- header --- */
+    [*Tank Type*], [*Maximum bearable pressure in bar*],
+    /* -------------- */
+
+    [I], [200],
+    [II], [263],
+    [III and IV], [300 – 700],
+  ),
+
+  kind: table,
+  caption: [Maximum bearable pressure values according to @khzouz2020hydrogen],
+)<tab_0>
+
 
 In summary, it can be said that there are different tank types that come into question for different requirements. For the K2H2 project, the choice has already been made; it should be a Type IV tank.

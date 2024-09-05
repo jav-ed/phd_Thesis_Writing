@@ -124,10 +124,10 @@
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/6_Patents.typ"
 
 /* -------------------------------- Hydrogen -------------------------------- */
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/0_H2_Prop.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
+// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/0_H2_Prop.typ"
+// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
+// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
+// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
 
 // ------------------------------- introducion ------------------------------ //
 // #include "2_Wr/0_Chap/0_File.typ"
