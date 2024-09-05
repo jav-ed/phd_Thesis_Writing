@@ -59,30 +59,76 @@ citation_mapping = {
 
 }
 
+
+
+# ============================================================================ #
+# =============================== process_file =============================== #
+# ============================================================================ #
 def process_file(file_path: Path):
     content = file_path.read_text()
+    undefined_citations = []
+    modifications = []
     
     def replace_citation(match):
         number = match.group(1)
-        replacement = citation_mapping.get(number, match.group(0))
-        if replacement != match.group(0):
-            print(f"In file {file_path}:")
-            print(f"  Would replace [{number}] with {replacement}")
-        return match.group(0)  # Return original text to avoid making changes
+        
+        if number not in citation_mapping:
+            undefined_citations.append(number)
+            return match.group(0)
+        
+        replacement = citation_mapping[number]
+        modifications.append((number, replacement))
+        
+        # if modifcation desired, replace it, otherwise no replacement
+        return replacement if b_mod_files else match.group(0)
     
-    re.sub(r'\[(\d+)\]', replace_citation, content)
+    new_content = re.sub(r'\[(\d+)\]', replace_citation, content)
     
+    if undefined_citations:
+        print(f"\nWarning: Undefined citations found in {file_path}:")
+        for citation in undefined_citations:
+            print(f"  [{citation}]")
+        print("Please add these citations to the mapping or remove them from the file.")
+        return False
+    
+    if modifications:
+        print(f"\nIn file {file_path}:")
+        for number, replacement in modifications:
+            print(f"  {'Replacing' if b_mod_files else 'Would replace'} [{number}] with {replacement}")
+        
+        if b_mod_files:
+            file_path.write_text(new_content)
+            print("  Changes applied.")
+    
+    return True
 
+# ============================================================================ #
+# ============================= process_directory ============================ #
+# ============================================================================ #
 def process_directory(directory: Path):
+    all_files_processed = True
     for file_path in directory.rglob('*.typ'):
-        process_file(file_path)
+        if not process_file(file_path):
+            all_files_processed = False
+            break
+    return all_files_processed
 
-def main():
-    cwd = Path.cwd()
+def run_Main(script_directory):
+    if process_directory(script_directory):
+        
+        # done
+        print(f"\nAll files processed successfully. {'Changes applied.' if b_mod_files else 'No changes made (preview mode).'}")
+    else:
+        print("\nProcessing stopped due to undefined citations.")
+
+# ---------------------------------------------------------------------------- #
     
-    script_directory = cwd / "2_Wr/1_Chapters/1_Chap/0_Standards"
-    process_directory(script_directory)
-    print("Finished scanning files. No changes were made.")
+# Set this flag to True to modify files, False to preview changes
+b_mod_files = True
 
-if __name__ == "__main__":
-    main()
+# define path
+# script_directory= Path("2_Wr/1_Chapters/1_Chap/0_Standards")
+script_directory= Path("2_Wr/1_Chapters/1_Chap/1_Hydrogen")
+
+
+run_Main(script_directory)
