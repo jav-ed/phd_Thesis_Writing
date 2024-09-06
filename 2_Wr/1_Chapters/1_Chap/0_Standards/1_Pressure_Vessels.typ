@@ -19,7 +19,7 @@ The superordinate development stages of the pressure tank can be divided into ta
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
   width: 100%),
-  caption: [Common types of pressure vessels @Su2021],
+  caption: [Common types of pressure vessels @Su2021.],
 ) <fig_4>
 
 
@@ -48,7 +48,7 @@ From tank type I to IV, the weight decreases on the one hand, and on the other h
   ),
 
   kind: table,
-  caption: [Maximum bearable pressure values according to @khzouz2020hydrogen],
+  caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
 )<tab_0>
 /* -------------------------------------------------------------------------- */
 

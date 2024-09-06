@@ -139,11 +139,13 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/5_Transport.jpg", width: 100%)],
     [
-      - EN 12245
-      - ADR
-      - U.S. DOT
+      
+      - Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR)
+    
     ],
     [
+      - EN 12245
+      - U.S. DOT
       - Apragaz TPED
       - ISO 11119-3:2020
       - ISO 17519:2019
@@ -174,8 +176,8 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/6_Ground.jpg", width: 100%)],
     [
-      - PED
-      - ASME
+      - Pressure Equipment Directive (PED)
+      - American Society of Mechanical Engineers (ASME)
       - EN 12245
       - ISO 19884
     ],
@@ -197,7 +199,8 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
   
     
     /* --- header --- */

@@ -18,7 +18,9 @@ The three overarching categories in @tab_9 allow for a quick initial assessment 
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+
     
     /* --- header --- */
     table.header[*Storage*][*Tank Type*][*Locality*],
@@ -49,7 +51,9 @@ The criteria by which the essential standards are to be determined are given in 
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+
     
     /* --- header --- */
     table.header[*Nr.*][*Criteria*],
@@ -87,7 +91,9 @@ In K2H2, three standards could be found that meet all criteria and complement ea
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+
     
     /* --- header --- */
     table.header[*Nr.*][*Essential Standards*],
@@ -111,7 +117,9 @@ In K2H2, three standards could be found that meet all criteria and complement ea
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+
     
     /* --- header --- */
     table.header[*Nr.*][*Mandatory Tests*],
@@ -146,7 +154,9 @@ In K2H2, three standards could be found that meet all criteria and complement ea
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+
     
     /* --- header --- */
     table.header[*Nr.*][*Optional Tests*],
@@ -180,7 +190,8 @@ For glass, aramid and carbon, the factors are 3.5, 3.0 and 2.25. It follows that
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
     
     /* --- header --- */
     table.header[*Fiber material*][*pwnp EC 406/2010 ISO 19881:2018*][*pwnp ISO 11119-3:2020*],
