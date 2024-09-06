@@ -2,6 +2,7 @@
 // ====================== template for asking questions ===================== //
 // ========================================================================== //
 #import "../4_Settings/0_Layout.typ": *
+#import "6_Layout_Styles.typ": *
 
 /* ---------------------------- 0_Chap/1_File.typ --------------------------- */
 #let summary_(
@@ -11,8 +12,9 @@
     ) = {
 
         // see: https://typst.app/docs/reference/layout/box/
-        [ #v(0.5em)
-        
+        [ 
+        #v(1em)
+        #line(length: 100%) #v(-0.5em)
          #box(
             height: 1.43em,
             image(img_Path),
@@ -28,7 +30,9 @@
                 offset: 0.3em,
                 extent:0.33em,
                 stroke: (thickness: 0.2em, paint: green, cap: "round"),
-                [*Summary*]) #v(0.5em) #question
+                [*Summary*]) #v(0.5em) 
+                #v(-0.7em) #line(length: 100%)
+                #question
             ]
     
         }
@@ -76,4 +80,7 @@
             ]
     )
         }
+
+
+
 

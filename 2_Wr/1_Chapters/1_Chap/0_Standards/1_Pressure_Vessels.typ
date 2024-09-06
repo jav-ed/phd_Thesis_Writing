@@ -25,13 +25,16 @@ The superordinate development stages of the pressure tank can be divided into ta
 
 From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
 
+
 #figure(
   tablex(
     columns: 2,
+    align: center + horizon,
+    auto-vlines: false,
     header-rows: 1,
 
     /* --- header --- */
-    [*Tank Type*], [*Maximum bearable pressure in bar*],
+    [*Tank Type*], [*Maximum bearable pressure [bar]*],
     /* -------------- */
 
     [I], [200],

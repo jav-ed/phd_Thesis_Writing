@@ -150,37 +150,38 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   caption: [Selection of norms for ground and stationary storage],
 )<tab_7>
 
-
 #figure(
   tablex(
-    columns: (auto, auto),
+    columns: (30%, 70%),
     header-rows: 1,
-    
+    align: left,
+    inset: 6pt,
+    // fill: (_, row) => if row == 0 { rgb("#90EE90") } else if odd(row) { luma(240) } else { white },
+
     /* --- header --- */
-    [*ISO/TC 197 Hydrogen Technologies*], [*Description*],
+    [*ISO/TC 197 Hydrogen technologies*], [*Description*],
     /* -------------- */
-    
-    [ISO/AWI 14687], [Hydrogen fuel quality — Product specification, Status: verfügbar und neue Version in Entwicklung],
-    [ISO/AWI TR 15916], [Basic considerations for the safety of hydrogen systems, Status: verfügbar und neue Version in Entwicklung],
-    [ISO/AWI 17268], [Gaseous hydrogen land vehicle refueling connection devices, Status: verfügbar und neue Version in Entwicklung],
-    [ISO/AWI 19880-5], [Gaseous hydrogen — Fuelling stations — Part 5: Dispenser hoses and hose assemblies, Status: verfügbar und neue Version in Entwicklung],
-    [ISO/CD 19880-6], [Gaseous hydrogen — Fueling stations — Part 6: Fittings, Status: in Entwicklung],
-    [ISO/WD 19880-7], [Gaseous hydrogen — Fuelling stations — Part 7: O-rings, Status: in Entwicklung],
+
+    [ISO/AWI 14687], [Hydrogen fuel quality — Product specification, status: available and new version under development],
+    [ISO/AWI TR 15916], [Basic considerations for the safety of hydrogen systems, status: available and new version under development],
+    [ISO/AWI 17268], [Gaseous hydrogen land vehicle refueling connection devices, status: available and new version under development],
+    [ISO/AWI 19880-5], [Gaseous hydrogen — Fuelling stations — Part 5: Dispenser hoses and hose assemblies, status: available and new version under development],
+    [ISO/CD 19880-6], [Gaseous hydrogen — Fueling stations — Part 6: Fittings, status: under development],
+    [ISO/WD 19880-7], [Gaseous hydrogen — Fuelling stations — Part 7: O-rings, status: under development],
     [ISO/AWI 19880-8], [Gaseous hydrogen — Fuelling stations — Part 8: Fuel quality control],
     [ISO/AWI 19880-9], [Gaseous hydrogen — Fuelling stations — Part 9: Sampling for fuel quality analysis],
-    [ISO/AWI 19881], [Gaseous hydrogen — Land vehicle fuel containers, Status: verfügbar und neue Version in Entwicklung],
-    [ISO/AWI 19882], [Gaseous hydrogen — Thermally activated pressure relief devices for compressed hydrogen vehicle fuel containers, Status: verfügbar und neue Version in Entwicklung],
+    [ISO/AWI 19881], [Gaseous hydrogen — Land vehicle fuel containers, status: available and new version under development],
+    [ISO/AWI 19882], [Gaseous hydrogen — Thermally activated pressure relief devices for compressed hydrogen vehicle fuel containers, status: available and new version under development],
     [ISO/WD 19884], [Gaseous hydrogen — Cylinders and tubes for stationary storage],
-    [ISO/CD 19885-1], [Gaseous hydrogen — Fuelling protocols for hydrogen-fuelled vehicles — Part 1: Design and development process for fuelling protocols, Status: in Entwicklung],
+    [ISO/CD 19885-1], [Gaseous hydrogen — Fuelling protocols for hydrogen-fuelled vehicles — Part 1: Design and development process for fuelling protocols, status: under development],
     [ISO/AWI 19885-2], [Gaseous hydrogen — Fuelling protocols for hydrogen-fuelled vehicles — Part 2: Definition of communications between the vehicle and dispenser control systems],
     [ISO/AWI 19885-3], [Gaseous hydrogen — Fuelling protocols for hydrogen-fuelled vehicles — Part 3: High flow hydrogen fuelling protocols for heavy duty road vehicles],
-    [ISO/AWI 19887], [Gaseous Hydrogen — Fuel system components for hydrogen fuelled vehicles, Status: in Entwicklung],
+    [ISO/AWI 19887], [Gaseous Hydrogen — Fuel system components for hydrogen fuelled vehicles, status: under development],
     [ISO/AWI 22734-1], [Hydrogen generators using water electrolysis — Industrial, commercial, and residential applications — Part 1: General requirements, test protocols and safety requirements],
     [ISO/AWI TR 22734-2], [Hydrogen generators using water electrolysis — Part 2: Testing guidance for performing electricity grid service],
   ),
-  
   kind: table,
-  caption: [ISO Wasserstoffnormen - ISO/TC 197 Hydrogen Technologies],
+  caption: [Standards following the ISO/TC 197 - Hydrogen technologies],
 )<tab_8>
 
 [Tables 11-15 with various standards are included here]

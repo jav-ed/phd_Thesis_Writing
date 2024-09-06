@@ -9,7 +9,7 @@
 #import "2_Default_Libs.typ": *
 #import "3_German_Specific.typ": *
 #import "4_Glos_Fcns.typ": *
-#import "5_Highlighting.typ": *
+#import "5_Boxes.typ": *
 
 
 

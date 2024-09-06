@@ -101,19 +101,6 @@
 
 
 
-// -------------------------------- hor line -------------------------------- //
-// two hor lines above and beanth the actual text in the vertical center
-#let hor_Line(text) = {
-
-  line(length: 100%)
-  v(-10pt)
-  [*#text*]
-  v(-10pt)
-  line(length: 100%)
-
-}
-
-
 // ------------------------- colorful table entries ------------------------- //
 
 #let col_X() = {
