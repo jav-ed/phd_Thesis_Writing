@@ -11,12 +11,18 @@ The automotive industry generally includes cars (motor vehicles), buses, and hea
 
 
 #figure(
-  tablex(
-    columns: 2,
-    header-rows: 1,
-
+  table(
+    columns: (0.3fr, 0.7fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: tab_Frame(0.05em),
+    
     /* --- header --- */
-    [*Number*], [*Potential Industry*],
+    table.header[*Number*][*Potential Industry*],
     /* -------------- */
 
     [1.], [Small to large ships],
@@ -38,8 +44,8 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 //
 // TODO
 // render it properly --> not Table 1 Tabkle 2 Table 3 but Table 1 -3
-@tab_5 @tab_6 @tab_7
-. Before further statements are made about the already mentioned standards, the ISO (International Organization for Standardization) standards, which deal exclusively with hydrogen, should be listed in Table 15.
+@tab_5, @tab_6, @tab_7
+. Before further statements are made about the already mentioned standards, the ISO (International Organization for Standardization) standards, which deal exclusively with hydrogen, should be listed in @tab_8.
 
 
 
@@ -47,12 +53,20 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 /* ----------------------------------- car ---------------------------------- */
 
 #figure(
-  tablex(
-    columns: 3,
-    header-rows: 1,
-
+  table(
+    columns: (0.7fr, 0.5fr, 0.5fr),
+    align: left + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
     /* --- header --- */
-    [*Light-Duty vehicles*], [], [],
+    table.header(
+      table.cell(colspan: 3, align: center)[*Light-Duty vehicles*]
+      ) ,
     /* -------------- */
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Car.jpg", width: 100%)],
@@ -80,12 +94,19 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
 /* ------------------------------- heavy-duty ------------------------------- */
 #figure(
-  tablex(
-    columns: 2,
-    header-rows: 1,
-
+  table(
+    columns: (0.7fr, 0.5fr),
+    align: left + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
     /* --- header --- */
-    [*Heavy-Duty vehicles*], [],
+    table.header(
+      table.cell(colspan: 2, align:center)[*Heavy-Duty vehicles*]),
     /* -------------- */
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/4_Truck.jpg", width: 60%)],
@@ -101,12 +122,19 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
 /* --------------------------- transportable tubes -------------------------- */
 #figure(
-  tablex(
-    columns: 3,
-    header-rows: 1,
-
+  table(
+    columns: (0.7fr, 0.5fr, 0.5fr),
+    align: left + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
     /* --- header --- */
-    [*Transportable tubes*], [], [],
+    table.header(
+      table.cell(colspan: 3, align:center)[*Transportable tubes*]),
     /* -------------- */
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/5_Transport.jpg", width: 100%)],
@@ -129,12 +157,19 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
 /* ----------------------------- ground storage ----------------------------- */
 #figure(
-  tablex(
-    columns: 2,
-    header-rows: 1,
-
+  table(
+    columns: (0.7fr, 0.5fr),
+    align: left + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
     /* --- header --- */
-    [*Ground and stationary storage*], [],
+    table.header(
+      table.cell(colspan: 2, align:center)[*Ground and stationary storage*]),
     /* -------------- */
 
     [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/6_Ground.jpg", width: 100%)],
@@ -150,16 +185,23 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   caption: [Selection of norms for ground and stationary storage],
 )<tab_7>
 
-#figure(
-  tablex(
-    columns: (30%, 70%),
-    header-rows: 1,
-    align: left,
-    inset: 6pt,
-    // fill: (_, row) => if row == 0 { rgb("#90EE90") } else if odd(row) { luma(240) } else { white },
 
+// tables that are within figures shoud be breakable 
+#show figure: set block(breakable: true)
+#figure(
+  table(
+    columns: (0.3fr, 1fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: tab_Frame(0.05em),
+  
+    
     /* --- header --- */
-    [*ISO/TC 197 Hydrogen technologies*], [*Description*],
+    table.header[*ISO/TC 197 Hydrogen technologies*][*Description*],
     /* -------------- */
 
     [ISO/AWI 14687], [Hydrogen fuel quality — Product specification, status: available and new version under development],
@@ -184,7 +226,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   caption: [Standards following the ISO/TC 197 - Hydrogen technologies],
 )<tab_8>
 
-[Tables 11-15 with various standards are included here]
+
 
 The ISO has a very good reputation internationally. This increases the chances of partial to potentially full international recognition. The standards for compressed hydrogen will only be listed. Discussing the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
 

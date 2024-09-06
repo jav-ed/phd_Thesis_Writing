@@ -25,26 +25,32 @@ The superordinate development stages of the pressure tank can be divided into ta
 
 From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
 
+/* -------------------------------------------------------------------------- */
 
 #figure(
-  tablex(
-    columns: 2,
+  table(
+    columns: (0.3fr, 0.7fr),
     align: center + horizon,
-    auto-vlines: false,
-    header-rows: 1,
-
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: tab_Frame(0.05em),
+    
     /* --- header --- */
-    [*Tank Type*], [*Maximum bearable pressure [bar]*],
+    table.header[*Tank Type*][*Maximum bearable pressure [bar]*],
     /* -------------- */
-
     [I], [200],
     [II], [263],
     [III and IV], [300 – 700],
+
   ),
 
   kind: table,
   caption: [Maximum bearable pressure values according to @khzouz2020hydrogen],
 )<tab_0>
+/* -------------------------------------------------------------------------- */
 
 
 In summary, it can be said that there are different tank types that come into question for different requirements. For the K2H2 project, the choice has already been made; it should be a Type IV tank.

@@ -21,12 +21,18 @@ In CS-25 Amendment 27, under point CS 25.1453, there is information on the topic
 3) The burst pressure must be maintained for at least 1 minute and must not cause bursting within said time. Deformations, on the other hand, are permissible.
 
 #figure(
-  tablex(
-    columns: 3,
-    header-rows: 1,
-
+  table(
+    columns: (1fr, 0.5fr, 0.5fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: tab_Frame(0.05em),
+    
     /* --- header --- */
-    [*System Element*], [*Test Factor*], [*Burst Factor*],
+    table.header[*System Element*][*Test Factor*][*Burst Factor*],
     /* -------------- */
 
     [Pressure Vessels], [1.5], [2.0],
@@ -48,12 +54,18 @@ Secondly, the desire for hydrogen-powered aircraft has existed for some time, an
 
 
 #figure(
-  tablex(
-    columns: 3,
-    header-rows: 1,
-
+  table(
+    columns: (0.5fr, 1fr, 0.5fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: tab_Frame(0.05em),
+    
     /* --- header --- */
-    [*Hydrogen - Aggregate State*], [*Standard*], [*In Work Since*],
+    table.header[*Hydrogen - Aggregate State*][*Standard*][*In Work Since*],
     /* -------------- */
 
     [Liquid], [SAE AS 6679 Liquid Hydrogen Storage for Aviation], [20.11.2019],

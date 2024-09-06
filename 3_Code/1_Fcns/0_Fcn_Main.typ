@@ -76,15 +76,7 @@
     )
 
 
-/* --------------------------------- colors --------------------------------- */
-// the doc of the following says that algo, that is shown above might be better, when it comes to page breaks
-// #import "@preview/codelst:1.0.0": *
 
-// A library of color palettes for Typst - tailwindcss colors: tailwind.sky-500
-// see: https://github.com/typst/packages/tree/main/packages/preview/splash/0.3.0
-#import "@preview/splash:0.3.0": *
-
-#let twc_Col = tailwind
 
 /* --------------------------------- emojis --------------------------------- */
 // import emojis, see: https://typst.app/docs/reference/symbols/emoji/

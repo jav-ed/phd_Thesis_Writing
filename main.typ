@@ -27,6 +27,8 @@
 // blocksatz = justify alignment
 #set par(justify: true)
 
+
+
 // TODO allow big figures to be shown across pages 
 // #show figure: set block(breakable: true)
 
