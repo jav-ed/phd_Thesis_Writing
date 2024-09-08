@@ -69,7 +69,8 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       ) ,
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Car.jpg", width: 100%)],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Car.jpg", width: 100%) @img_Toyota],
+    
     [
       - EC79/2009 @EU_79_2009
       - EC406/2010 @EU_406_2010
@@ -91,7 +92,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   ),
 
   kind: table,
-  caption: [Selection of standards for light-duty vehicles],
+  caption: [Selection of standards for light-duty vehicles.],
 )<tab_4>
 
 /* ------------------------------- heavy-duty ------------------------------- */
@@ -111,7 +112,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 2, align:center)[*Heavy-Duty vehicles*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/4_Truck.jpg", width: 60%)],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/4_Truck.jpg", width: 60%) @img_Truck],
     [
       - EC79/2009 @EU_79_2009
       - EC406/2010 @EU_406_2010
@@ -120,7 +121,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   ),
 
   kind: table,
-  caption: [Selection of standards for heavy-duty vehicles],
+  caption: [Selection of standards for heavy-duty vehicles.],
 )<tab_5>
 
 /* --------------------------- transportable tubes -------------------------- */
@@ -140,7 +141,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 3, align:center)[*Transportable tubes*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/5_Transport.jpg", width: 100%)],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/5_Transport.jpg", width: 100%) @img_Transport],
     [
       
       - Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR) @adr_2023
@@ -156,7 +157,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   ),
 
   kind: table,
-  caption: [Selection of standards for transportable tubes],
+  caption: [Selection of standards for transportable tubes.],
 )<tab_6>
 
 
@@ -177,7 +178,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 2, align:center)[*Ground and stationary storage*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/6_Ground.jpg", width: 100%)],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/6_Ground.jpg", width: 100%) @img_Ground],
     [
       - Pressure Equipment Directive (PED) @eu_ped
       - American Society of Mechanical Engineers (ASME) @asme_hydro
@@ -187,7 +188,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
   ),
 
   kind: table,
-  caption: [Selection of standards for ground and stationary storage],
+  caption: [Selection of standards for ground and stationary storage.],
 )<tab_7>
 
 
@@ -255,7 +256,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
     [ISO/AWI TR 22734-2], [Hydrogen generators using water electrolysis — Part 2: Testing guidance for performing electricity grid service @iso_22734_2, status: under development],
   ),
   kind: table,
-  caption: [Standards following the ISO/TC 197 - Hydrogen technologies],
+  caption: [Standards following the ISO/TC 197 - Hydrogen technologies.],
 )<tab_8>
 
 
