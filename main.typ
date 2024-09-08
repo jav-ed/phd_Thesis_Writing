@@ -1,6 +1,9 @@
 
 
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "3_Code/5_Layout/0_Layout.typ":*
+
+
 
 // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
 #set text(
@@ -44,9 +47,13 @@
 
 
 /* ---------------------------------- tocs ---------------------------------- */
-#outline(
-  indent: auto,
-)
+// #outline(
+//   indent: auto,
+// )
+
+#table_of_contents()
+
+
 #pagebreak(weak:true)
 
 // // toc figure
