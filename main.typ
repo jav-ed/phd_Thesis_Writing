@@ -21,14 +21,24 @@
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
+
 // get latex style for referencing - inshallah
 #show heading.where(level: 1): set heading(supplement: [Chapter])
 #show heading.where(level: 2): set heading(supplement: [Section])
 #show heading.where(level: 3): set heading(supplement: [Subsection])
 
+// #latex_style_header()
+
+#set page("a4")
+
+
 // ----------------------------- report specific ---------------------------- //
+
+
 // blocksatz = justify alignment
-#set par(justify: true)
+#set par(
+  justify: true,
+  first-line-indent: 1em,)
 
 
 
@@ -71,7 +81,13 @@
 // #pagebreak(weak:true)
 
 /* -------------------------- start from zero page -------------------------- */
-#set page(numbering: "1")
+#set page(numbering: "— 1 —",
+header: [
+  _Javed Butt's Thesis_
+  #h(1fr)
+  National Academy of Sciences
+]
+)
 #counter(page).update(1)
 
 // ========================================================================== //

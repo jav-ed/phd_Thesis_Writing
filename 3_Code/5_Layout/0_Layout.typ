@@ -37,3 +37,14 @@
     \
   ]
 }
+
+
+
+#let latex_style_header() = {
+
+  // get latex style for referencing - inshallah
+  show heading.where(level: 1): set heading(supplement: [Chapter])
+  show heading.where(level: 2): set heading(supplement: [Section])
+  show heading.where(level: 3): set heading(supplement: [Subsection])
+
+}
