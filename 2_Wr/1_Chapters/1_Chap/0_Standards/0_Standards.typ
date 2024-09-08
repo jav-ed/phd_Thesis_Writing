@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 //TODO
 // the intro for the section needs to be checked again
-== Standards <chap_1_0>
+== Standards and Regulations<chap_1_0>
 This section provides a comprehensive overview of the standards relevant to #gl_("swith", pl:true). It begins by examining overarching norms applicable to high-pressure hydrogen systems. 
 
 The fundamentals of pressure vessels are then explored, laying the groundwork for understanding the unique challenges posed by #gl_("swith", pl:true). 
