@@ -12,8 +12,7 @@
 
   // Reset figure counter at each new chapter
   show heading.where(level: 1): it => counter(figure.where(kind: kind_type)).update(0) + it
-
-  repr(image_numbering)
+  
   // Apply custom numbering to figures [images, tables, equations
   show figure.where(kind: kind_type): set figure(numbering: image_numbering)
 
