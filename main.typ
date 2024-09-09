@@ -2,6 +2,9 @@
 
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout.typ":*
+#import "3_Code/5_Layout/1_Latex_Float_Numbering.typ":*
+
+#import "@preview/hydra:0.5.1": hydra
 
 #set page("a4")
 
@@ -89,8 +92,34 @@
 ]
 
 
+#set page( 
+  margin: (y: 6em), numbering: "1", 
+  header: context {
 
-// #latex_style_header()
+    if (hydra(3) != none){
+      emph(hydra(3))
+      h(1fr) 
+      // counter(page)
+    }
+
+    else if (hydra(2) != none){
+      emph(hydra(2))
+      h(1fr) 
+      // counter(page)
+
+    }
+    else if (hydra(1) != none){
+      emph(hydra(skip-starting:true, book: false, 1))
+      h(1fr)
+      // counter(page)
+
+    }
+
+
+  // line(length: 100%)
+})
+
+
 
 
 
@@ -114,39 +143,142 @@
 // #include "0_Manag/0_Tab_Of_Cont/2_Ver.typ"
 
 
+
+
+// --------------------- latex 1.1 figures, tables, eqs --------------------- //
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
+#show: set_eqs_numbering.with(new_format: "1.1")
+
 /* ---------------------------------- tocs ---------------------------------- */
+
+// the first level shall not have the dots
+#show outline.entry.where(
+  level: 1
+): it => {
+  v(2em, weak: true)
+  set text(size:1.1em, weight: "bold")
+  it.body
+  h(1fr)
+  link(it.element.location(), [#it.page])
+}
+
+// Level 2 entries with reduced vertical spacing
+#show outline.entry.where(
+  level: (2,3)
+): it => {
+  set block(spacing: 1em) // Adjust this value to control vertical spacing
+  set par(hanging-indent: 5pt)
+  [#it]
+}
+
+// // Level 3 entries with reduced vertical spacing
+// #show outline.entry.where(
+//   level: 3
+// ): it => {
+//   set block(spacing: 1em) // Adjust this value to control vertical spacing
+//   it
+// }
+
+
+
+
 #outline(
   indent: auto,
+  title : "Table of Contents",
+  fill:   repeat[~~~.],  // none,
 )
+
+
 
 // #table_of_contents()
 
 
 #pagebreak(weak:true)
 
-// // toc figure
-// #outline(
-//   title: [List of Figures],
-//   target: figure.where(kind: image),
-// )
-// #pagebreak(weak:true)
 
-// // toc table
-// #outline(
-//   title: [List of Tables],
-//   target: figure.where(kind: table),
-// )
-// #pagebreak(weak:true)
+
+// ------------------------------- toc figure ------------------------------- //
+// #show outline.entry.where(level:1): it => {
+// it.fields()
+// }
+
+#show outline.entry.where(level:1): it => {
+
+  if it.element.has("kind") and it.element.kind == image {
+
+    let loc = it.element.location()
+    let figure_number = it.element.numbering
+    let supplement = it.element.supplement
+    let caption = it.element.caption
+
+
+  // ------------------------------------------------------------------------ //
+
+  //   // Get the current chapter number using the counter
+  // let current_chapter = counter(heading.where(level: 1)).at(loc).at(0, default: none)
+
+  // // Check if the chapter has changed
+  // let chapter_changed = previous_chapter.get() != current_chapter and previous_chapter.get() != none
+
+  // // Update the previous chapter state
+  // previous_chapter.update(current_chapter)
+
+  // // Add extra vertical space if the chapter has changed
+  // if chapter_changed {
+  //   v(1em)
+  // }
+
+  // ------------------------------------------------------------------------ //
+
+    // repr(it)
+    set text(size:default_Font_Size)
+    v(0.1em)
+    [
+      #link(loc)[#caption]
+      #h(1fr)
+      #link(loc, it.page)
+    ]
+
+  } 
+  
+}
+
+
+#outline(
+  title: [List of Figures],
+  target: figure.where(kind: image),
+)
+
+
+#pagebreak(weak:true)
+
+// -------------------------------- toc table ------------------------------- //
+#outline(
+  title: [List of Tables],
+  target: figure.where(kind: table),
+)
+#pagebreak(weak:true)
+
 
 /* -------------------------- start from zero page -------------------------- */
-#set page(numbering: "1",
-header: [
-  _Javed Arshad Butt_
-  #h(1fr)
-  #context heading
-]
-)
+#set page(numbering: "1")
 #counter(page).update(1)
+
+
+
+// #set page(
+//   numbering: "1",
+//   header: [
+//     _Javed Arshad Butt_
+//     #h(1fr)
+//     #context heading
+// ]
+// )
+
+
+
+
 
 // ========================================================================== //
 // ================================= Trials ================================= //
