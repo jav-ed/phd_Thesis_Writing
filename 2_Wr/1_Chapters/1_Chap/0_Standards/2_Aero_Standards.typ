@@ -29,7 +29,8 @@ In CS-25 Amendment 27, under point CS 25.1453, there is information on the topic
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
     
     /* --- header --- */
     table.header[*System Element*][*Test Factor*][*Burst Factor*],
@@ -62,7 +63,8 @@ Secondly, the desire for hydrogen-powered aircraft has existed for some time, an
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
     
     /* --- header --- */
     table.header[*Hydrogen - Aggregate State*][*Standard*][*In Work Since*],

@@ -36,7 +36,8 @@ From tank type I to IV, the weight decreases on the one hand, and on the other h
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
     
     /* --- header --- */
     table.header[*Tank Type*][*Maximum bearable pressure [bar]*],

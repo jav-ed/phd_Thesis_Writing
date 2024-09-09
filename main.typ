@@ -3,46 +3,104 @@
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout.typ":*
 
+#set page("a4")
+
+// blocksatz = justify alignment
+#set par(
+  justify: true,
+  first-line-indent: 1em,
+  linebreaks: "optimized")
 
 
 // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
 #set text(
   font: "New Computer Modern",
   size: default_Font_Size,
-  
+
   lang: "en"
 )
+
 // #show link: set text(fill: blue)
 
 // #set enum(indent: 0.7em)
 
 // see: https://typst.app/docs/guides/page-setup-guide/
-#set page(numbering: "I")
+#set page(numbering: "— I —")
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
 
 // get latex style for referencing - inshallah
+// the supplement could not be changed expect like the 3 lines below
+// working with heading:it => { // here the supplement are already generated, not outside where we can control what shall be generated}
 #show heading.where(level: 1): set heading(supplement: [Chapter])
 #show heading.where(level: 2): set heading(supplement: [Section])
 #show heading.where(level: 3): set heading(supplement: [Subsection])
 
+
+#show heading.where(level: 1): it => {
+
+  pagebreak(weak: true)
+  // [#it.fields()]
+  set text(size: default_Font_Size, weight: "bold")
+  v(4em)  // Add some vertical space
+
+  if it.numbering == none {
+    // For excluded headings, just return the original heading without modifications
+    
+    block(width: 100%)[
+        #set align(center)
+        #set text(size: 2em, weight: "bold")
+        #smallcaps(it)
+      ]
+    
+
+  } else {
+    // For all other level 1 headings, apply the custom formatting
+    
+    block(width: 100%)[
+      #set align(center)
+      Chapter
+      #v(0.01em)
+      #set align(center)
+      #v(-1em)
+      #set text(size: 2em, weight: "bold")
+      #smallcaps(it)
+    ]
+  
+  }
+
+  v(3em)  // Add some vertical space after the heading
+
+}
+
+#show heading.where(level: 2): it => [
+  // #it.fields()
+  #v(1em)  // Add some vertical space
+  #smallcaps(it)
+  #v(1em)  // Add some vertical space after the heading
+]
+
+#show heading.where(level: 3): it => [
+  // #it.fields()
+  #v(1em)  // Add some vertical space
+  #smallcaps(it)
+  #v(1em)  // Add some vertical space after the heading
+]
+
+
+
 // #latex_style_header()
 
-#set page("a4")
 
 
 // ----------------------------- report specific ---------------------------- //
 
 
-// blocksatz = justify alignment
-#set par(
-  justify: true,
-  first-line-indent: 1em,)
 
 
 
-// TODO allow big figures to be shown across pages 
+// TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
 
 /* -------------------------------- Versions -------------------------------- */
@@ -57,11 +115,11 @@
 
 
 /* ---------------------------------- tocs ---------------------------------- */
-// #outline(
-//   indent: auto,
-// )
+#outline(
+  indent: auto,
+)
 
-#table_of_contents()
+// #table_of_contents()
 
 
 #pagebreak(weak:true)
@@ -81,11 +139,11 @@
 // #pagebreak(weak:true)
 
 /* -------------------------- start from zero page -------------------------- */
-#set page(numbering: "— 1 —",
+#set page(numbering: "1",
 header: [
-  _Javed Butt's Thesis_
+  _Javed Arshad Butt_
   #h(1fr)
-  National Academy of Sciences
+  #context heading
 ]
 )
 #counter(page).update(1)
@@ -188,9 +246,8 @@ header: [
 
 // see: https://typst.app/docs/reference/model/bibliography/#parameters-full
 // and: https://typst.app/project/pQH6zuFPPL_G4NlIOLx9K-
-#bibliography("1_Data/1_Bib/bib.bib", 
+#bibliography("1_Data/1_Bib/bib.bib",
 // style: "american-institute-of-aeronautics-and-astronautics"
 style: "1_Data/1_Bib/0_CSLs/ieee.csl"
 )
-
 

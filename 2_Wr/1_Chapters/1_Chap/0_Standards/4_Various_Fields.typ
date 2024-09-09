@@ -19,7 +19,8 @@ The automotive industry generally includes cars (motor vehicles), buses, and hea
       x: 1em,
       y: 0.7em,
     ),
-    stroke: tab_Frame(0.05em),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
     
     /* --- header --- */
     table.header[*Number*][*Potential Industry*],
