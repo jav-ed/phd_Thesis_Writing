@@ -163,25 +163,6 @@
   link(it.element.location(), [#it.page])
 }
 
-// Level 2 entries with reduced vertical spacing
-#show outline.entry.where(
-  level: (2,3)
-): it => {
-  set block(spacing: 1em) // Adjust this value to control vertical spacing
-  set par(hanging-indent: 5pt)
-  [#it]
-}
-
-// // Level 3 entries with reduced vertical spacing
-// #show outline.entry.where(
-//   level: 3
-// ): it => {
-//   set block(spacing: 1em) // Adjust this value to control vertical spacing
-//   it
-// }
-
-
-
 
 #outline(
   indent: auto,
@@ -208,37 +189,44 @@
   if it.element.has("kind") and it.element.kind == image {
 
     let loc = it.element.location()
-    let figure_number = it.element.numbering
     let supplement = it.element.supplement
     let caption = it.element.caption
 
+    let current_chapter = counter(heading).at(loc).first()
+    let figure_number = counter(figure.where(kind: image)).at(loc)
 
-  // ------------------------------------------------------------------------ //
 
-  //   // Get the current chapter number using the counter
-  // let current_chapter = counter(heading.where(level: 1)).at(loc).at(0, default: none)
 
-  // // Check if the chapter has changed
-  // let chapter_changed = previous_chapter.get() != current_chapter and previous_chapter.get() != none
+    // Check if it's the first table in a new chapter (excluding chapter 1)
+    if current_chapter > 1 and figure_number.first() == 1 {
 
-  // // Update the previous chapter state
-  // previous_chapter.update(current_chapter)
-
-  // // Add extra vertical space if the chapter has changed
-  // if chapter_changed {
-  //   v(1em)
-  // }
-
-  // ------------------------------------------------------------------------ //
+      // Check if the previous chapter had any tables
+      let prev_chapter_figure = query(
+        figure.where(kind: image).before(loc), 
+        loc
+      ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
+      
+      if prev_chapter_figure.len() > 0 {
+        v(0.5em)
+        [------------------]
+        v(0.5em)
+      }
+    }
 
     // repr(it)
     set text(size:default_Font_Size)
-    v(0.1em)
-    [
-      #link(loc)[#caption]
-      #h(1fr)
-      #link(loc, it.page)
-    ]
+    v(0.05em)
+    box(width: 100%, {
+      [
+        #box(width: 95%, {
+          link(loc)[#caption]
+        })
+        #h(1fr)
+        #box(width: 5%, align(right, {
+          link(loc, it.page)
+        }))
+      ]
+    })
 
   } 
   
@@ -254,6 +242,51 @@
 #pagebreak(weak:true)
 
 // -------------------------------- toc table ------------------------------- //
+#show outline.entry.where(level:1): it => {
+
+  if it.element.has("kind") and it.element.kind == table {
+
+    let loc = it.element.location()
+    let supplement = it.element.supplement
+    let caption = it.element.caption
+    let current_chapter = counter(heading).at(loc).first()
+    let table_number = counter(figure.where(kind: table)).at(loc)
+
+    // Check if it's the first table in a new chapter (excluding chapter 1)
+    if current_chapter > 1 and table_number.first() == 1 {
+
+      // Check if the previous chapter had any tables
+      let prev_chapter_tables = query(
+        figure.where(kind: table).before(loc), 
+        loc
+      ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
+      
+      if prev_chapter_tables.len() > 0 {
+        v(0.5em)
+        [------------------]
+        v(0.5em)
+      }
+    }
+
+    // repr(it)
+    set text(size:default_Font_Size)
+    v(0.05em)
+    box(width: 100%, {
+      [
+        #box(width: 95%, {
+          link(loc)[#caption]
+        })
+        #h(1fr)
+        #box(width: 5%, align(right, {
+          link(loc, it.page)
+        }))
+      ]
+    })
+
+  } 
+  
+}
+
 #outline(
   title: [List of Tables],
   target: figure.where(kind: table),
