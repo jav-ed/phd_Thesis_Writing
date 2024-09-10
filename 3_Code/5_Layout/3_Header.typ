@@ -66,7 +66,7 @@
     #v(1em)  // Add some vertical space after the heading
   ]
 
-
+  // --------------------------------- Hydra -------------------------------- //
   #set page( 
     margin: (y: 6em), numbering: "1", 
     header: context {
@@ -80,7 +80,9 @@
       else if (hydra(2) != none){
         emph(hydra(2))
         h(1fr) 
-        // counter(page)
+        // // counter(page)
+        // align(right,image("../../1_Data/2_Figs/0_Content/0_Chap/0_2_tubes.svg",
+        // width: 20%))
 
       }
       else if (hydra(1) != none){
