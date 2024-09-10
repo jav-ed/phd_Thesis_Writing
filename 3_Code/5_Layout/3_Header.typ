@@ -4,6 +4,26 @@
 #import "../1_Fcns/0_Fcn_Main.typ": *
 
 
+// note, regular heading are not the same as page header
+// both are inshallah inlcuded below
+
+#let create_h_entry(
+  proper_number,
+  ct_element,
+  ct_page) = {
+
+  if proper_number != none {
+
+    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #ct_page]
+  }
+
+  else{
+    [#smallcaps(ct_element.body) #h(1fr) #ct_page]
+
+  }
+
+}
+
 
 #let header_style(body) = [
 
@@ -15,10 +35,13 @@
   #show heading.where(level: 2): set heading(supplement: [Section])
   #show heading.where(level: 3): set heading(supplement: [Subsection])
 
-
+  // ======================================================================== //
+  // ================================ heading =============================== //
+  // ======================================================================== //
   #show heading.where(level: 1): it => {
 
     pagebreak(weak: true)
+
     // [#it.fields()]
     set text(size: default_Font_Size, weight: "bold")
     v(4em)  // Add some vertical space
@@ -66,42 +89,110 @@
     #v(1em)  // Add some vertical space after the heading
   ]
 
-  // --------------------------------- Hydra -------------------------------- //
+  // ======================================================================== //
+  // ============================== page header ============================= //
+  // ======================================================================== //
+
   #set page( 
-    margin: (y: 6em), numbering: "1", 
+    margin: (
+      left: 3.5cm,
+      right: 2cm,
+      bottom: 3cm,
+      top: 3cm
+    ), 
+    numbering: "1", 
     header: context {
 
-      if (hydra(3) != none){
-        emph(hydra(3))
-        h(1fr) 
-        // counter(page)
+    // demands: 
+    // 1) no page heading for chapters
+    // 2) when the pags starts with a section or subsection take that
+    // 3) other than that, take from past whatever lvl it might be. if the last level was 2, then heading should be that. if it was level 3 then level 3 shall be taken
+
+    let elems_before = query(selector(heading).before(here()))
+    let elems_after = query(selector(heading).after(here()))
+
+    let b_before_active = false
+    let ct_page = here().page()
+
+    if elems_after.len() > 0 {
+      let ct_after = elems_after.first()
+      let after_page = ct_after.location().page()
+
+      // the found header is on the same page as the current active page
+      if ct_page == after_page {
+
+        // header is only desired for level >= 2, that is, no heading for chapters
+        if ct_after.level >= 2 {
+
+          // a proper manual counting needs to be done
+          let proper_number = numbering(ct_after.numbering, ..counter(heading).at(ct_after.location()))
+
+          create_h_entry(proper_number, ct_after, ct_page)
+
+        }
       }
+      // current page has no header at all. thus, the header needs to be obatained from the before section
+      // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page
+      else{
 
-      else if (hydra(2) != none){
-        emph(hydra(2))
-        h(1fr) 
-        // // counter(page)
-        // align(right,image("../../1_Data/2_Figs/0_Content/0_Chap/0_2_tubes.svg",
-        // width: 20%))
+          if elems_before.len() > 0 {
+            let ct_before = elems_before.last()
+            let before_page = ct_before.location().page()
+
+            if ct_before.numbering != none {
+
+              // a proper manual counting needs to be done
+              let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
+
+              create_h_entry(proper_number, ct_before, ct_page)
+
+            }
+
+            // for entries that have no number like Glossary
+            else{
+              create_h_entry(none, ct_before, ct_page)
+
+            }
+
+        }
 
       }
-      else if (hydra(1) != none){
-        emph(hydra(skip-starting:true, book: false, 1))
-        h(1fr)
-        // counter(page)
+      
+    }
+    // is expected to be the last section (what ever lvl), like for example the Bibliography, Appendix or what ever the current last section might be
+    else if elems_before.len() > 0 {
+        let ct_before = elems_before.last()
+        let before_page = ct_before.location().page()
 
-      }
+        if ct_before.numbering != none {
 
+          // a proper manual counting needs to be done
+          let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
+
+          create_h_entry(proper_number, ct_before, ct_page)
+
+        }
+
+        // for entries that have no number like Glossary
+        else{
+          create_h_entry(none, ct_before, ct_page)
+
+        }
+
+    }
 
     // line(length: 100%)
+    // v(1em)
+
   })
 
 
+  // -------------------------------- keept it -------------------------------- //
 
-
-// -------------------------------- keept it -------------------------------- //
-
-#body
+  #body
 
 
 ]
+
+
+

@@ -6,16 +6,14 @@
 #import "3_Code/5_Layout/2_Latex_Float_Outline.typ":*
 #import "3_Code/5_Layout/3_Header.typ":*
 
-
-
-
 #set page("a4")
 
 // blocksatz = justify alignment
 #set par(
   justify: true,
   first-line-indent: 1em,
-  linebreaks: "optimized")
+  linebreaks: "optimized"
+  )
 
 
 // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
@@ -40,32 +38,17 @@
 #show: header_style
 
 
-
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
 
-/* -------------------------------- Versions -------------------------------- */
-// = Version 0
-// #include "0_Manag/0_Tab_Of_Cont/0_Ver.typ"
-
-// = Version 1
-// #include "0_Manag/0_Tab_Of_Cont/1_Ver.typ"
-
-// = Table of Contents
-// #include "0_Manag/0_Tab_Of_Cont/2_Ver.typ"
-
-
-
-
 // --------------------- latex 1.1 figures, tables, eqs --------------------- //
-#show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
-#show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
-#show: set_eqs_numbering.with(new_format: "1.1")
+// #show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
+// #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
+// #show: set_eqs_numbering.with(new_format: "1.1")
 
 /* ---------------------------------- tocs ---------------------------------- */
-#show: float_tocs
-
-#show: float_text_spacing
+// #show: float_tocs
+// #show: float_text_spacing
 
 /* -------------------------- start from zero page -------------------------- */
 #set page(numbering: "1")
