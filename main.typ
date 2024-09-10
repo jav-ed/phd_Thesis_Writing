@@ -191,6 +191,7 @@
     let loc = it.element.location()
     let supplement = it.element.supplement
     let caption = it.element.caption
+    let fig_capt_nr = it.element.numbering
 
     let current_chapter = counter(heading).at(loc).first()
     let figure_number = counter(figure.where(kind: image)).at(loc)
@@ -219,7 +220,10 @@
     box(width: 100%, {
       [
         #box(width: 95%, {
-          link(loc)[#caption]
+          link(loc)[
+            #it.body.children.at(2) // figure number
+            #caption.body           // caption text
+            ]
         })
         #h(1fr)
         #box(width: 5%, align(right, {
@@ -246,6 +250,7 @@
 
   if it.element.has("kind") and it.element.kind == table {
 
+    // [#it.fields()]
     let loc = it.element.location()
     let supplement = it.element.supplement
     let caption = it.element.caption
@@ -274,7 +279,10 @@
     box(width: 100%, {
       [
         #box(width: 95%, {
-          link(loc)[#caption]
+          link(loc)[
+            #it.body.children.at(2) // table number
+            #caption.body           // caption text
+            ]
         })
         #h(1fr)
         #box(width: 5%, align(right, {
