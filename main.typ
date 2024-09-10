@@ -186,6 +186,7 @@
 // and: https://typst.app/project/pQH6zuFPPL_G4NlIOLx9K-
 #bibliography("1_Data/1_Bib/bib.bib",
 // style: "american-institute-of-aeronautics-and-astronautics"
+// TODO generates issue, where it will not automatically detect [27]-[29]
 style: "1_Data/1_Bib/0_CSLs/ieee.csl"
 )
 
