@@ -3,8 +3,11 @@
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout.typ":*
 #import "3_Code/5_Layout/1_Latex_Float_Numbering.typ":*
+#import "3_Code/5_Layout/2_Latex_Float_Outline.typ":*
+#import "3_Code/5_Layout/3_Header.typ":*
 
-#import "@preview/hydra:0.5.1": hydra
+
+
 
 #set page("a4")
 
@@ -33,100 +36,8 @@
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
-
-// get latex style for referencing - inshallah
-// the supplement could not be changed expect like the 3 lines below
-// working with heading:it => { // here the supplement are already generated, not outside where we can control what shall be generated}
-#show heading.where(level: 1): set heading(supplement: [Chapter])
-#show heading.where(level: 2): set heading(supplement: [Section])
-#show heading.where(level: 3): set heading(supplement: [Subsection])
-
-
-#show heading.where(level: 1): it => {
-
-  pagebreak(weak: true)
-  // [#it.fields()]
-  set text(size: default_Font_Size, weight: "bold")
-  v(4em)  // Add some vertical space
-
-  if it.numbering == none {
-    // For excluded headings, just return the original heading without modifications
-    
-    block(width: 100%)[
-        #set align(center)
-        #set text(size: 2em, weight: "bold")
-        #smallcaps(it)
-      ]
-    
-
-  } else {
-    // For all other level 1 headings, apply the custom formatting
-    
-    block(width: 100%)[
-      #set align(center)
-      Chapter
-      #v(0.01em)
-      #set align(center)
-      #v(-1em)
-      #set text(size: 2em, weight: "bold")
-      #smallcaps(it)
-    ]
-  
-  }
-
-  v(3em)  // Add some vertical space after the heading
-
-}
-
-#show heading.where(level: 2): it => [
-  // #it.fields()
-  #v(1em)  // Add some vertical space
-  #smallcaps(it)
-  #v(1em)  // Add some vertical space after the heading
-]
-
-#show heading.where(level: 3): it => [
-  // #it.fields()
-  #v(1em)  // Add some vertical space
-  #smallcaps(it)
-  #v(1em)  // Add some vertical space after the heading
-]
-
-
-#set page( 
-  margin: (y: 6em), numbering: "1", 
-  header: context {
-
-    if (hydra(3) != none){
-      emph(hydra(3))
-      h(1fr) 
-      // counter(page)
-    }
-
-    else if (hydra(2) != none){
-      emph(hydra(2))
-      h(1fr) 
-      // counter(page)
-
-    }
-    else if (hydra(1) != none){
-      emph(hydra(skip-starting:true, book: false, 1))
-      h(1fr)
-      // counter(page)
-
-    }
-
-
-  // line(length: 100%)
-})
-
-
-
-
-
-// ----------------------------- report specific ---------------------------- //
-
-
+ // --------------------------------- header -------------------------------- //
+#show: header_style
 
 
 
@@ -152,176 +63,9 @@
 #show: set_eqs_numbering.with(new_format: "1.1")
 
 /* ---------------------------------- tocs ---------------------------------- */
+#show: float_tocs
 
-// the first level shall not have the dots
-#show outline.entry.where(
-  level: 1
-): it => {
-  v(2em, weak: true)
-  set text(size:1.1em, weight: "bold")
-  it.body
-  h(1fr)
-  link(it.element.location(), [#it.page])
-}
-
-
-#outline(
-  indent: auto,
-  title : "Table of Contents",
-  fill:   repeat[~~~.],  // none,
-)
-
-
-
-// #table_of_contents()
-
-
-#pagebreak(weak:true)
-
-
-
-// ------------------------------- toc figure ------------------------------- //
-// #show outline.entry.where(level:1): it => {
-// it.fields()
-// }
-
-#show outline.entry.where(level:1): it => {
-
-  if it.element.has("kind") and it.element.kind == image {
-
-    let loc = it.element.location()
-    let supplement = it.element.supplement
-    let caption = it.element.caption
-    let fig_capt_nr = it.element.numbering
-
-    let current_chapter = counter(heading).at(loc).first()
-    let figure_number = counter(figure.where(kind: image)).at(loc)
-
-
-
-    // Check if it's the first table in a new chapter (excluding chapter 1)
-    if current_chapter > 1 and figure_number.first() == 1 {
-
-      // Check if the previous chapter had any tables
-      let prev_chapter_figure = query(
-        figure.where(kind: image).before(loc), 
-        loc
-      ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
-      
-      if prev_chapter_figure.len() > 0 {
-        v(0.5em)
-        [------------------]
-        v(0.5em)
-      }
-    }
-
-    // repr(it)
-    set text(size:default_Font_Size)
-    v(0.05em)
-    box(width: 100%, {
-      [
-        #box(width: 95%, {
-          link(loc)[
-            #it.body.children.at(2) // figure number
-            #caption.body           // caption text
-            ]
-        })
-        #h(1fr)
-        #box(width: 5%, align(right, {
-          link(loc, it.page)
-        }))
-      ]
-    })
-
-  } 
-  
-}
-
-
-#outline(
-  title: [List of Figures],
-  target: figure.where(kind: image),
-)
-
-
-#pagebreak(weak:true)
-
-// -------------------------------- toc table ------------------------------- //
-#show outline.entry.where(level:1): it => {
-
-  if it.element.has("kind") and it.element.kind == table {
-
-    // [#it.fields()]
-    let loc = it.element.location()
-    let supplement = it.element.supplement
-    let caption = it.element.caption
-    let current_chapter = counter(heading).at(loc).first()
-    let table_number = counter(figure.where(kind: table)).at(loc)
-
-    // Check if it's the first table in a new chapter (excluding chapter 1)
-    if current_chapter > 1 and table_number.first() == 1 {
-
-      // Check if the previous chapter had any tables
-      let prev_chapter_tables = query(
-        figure.where(kind: table).before(loc), 
-        loc
-      ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
-      
-      if prev_chapter_tables.len() > 0 {
-        v(0.5em)
-        [------------------]
-        v(0.5em)
-      }
-    }
-
-    // repr(it)
-    set text(size:default_Font_Size)
-    v(0.05em)
-    box(width: 100%, {
-      [
-        #box(width: 95%, {
-          link(loc)[
-            #it.body.children.at(2) // table number
-            #caption.body           // caption text
-            ]
-        })
-        #h(1fr)
-        #box(width: 5%, align(right, {
-          link(loc, it.page)
-        }))
-      ]
-    })
-
-  } 
-  
-}
-
-#outline(
-  title: [List of Tables],
-  target: figure.where(kind: table),
-)
-#pagebreak(weak:true)
-
-
-// --------------------- space between text and figures --------------------- //
-#show figure.where(kind: image): it => {
-  v(0.75em, weak:false)
-  it
-  v(0.75em, weak:false)
-
-}
-// ---------------------- space between text and tables --------------------- //
-#show figure.where(kind: table): it => {
-  v(0.75em, weak:false)
-  it
-  v(0.75em, weak:false)
-
-}
-
-
-// ------------------------ space betwen text and eqs ----------------------- //
-// TODO
-
+#show: float_text_spacing
 
 /* -------------------------- start from zero page -------------------------- */
 #set page(numbering: "1")
