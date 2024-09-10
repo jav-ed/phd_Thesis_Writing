@@ -18,6 +18,7 @@
 // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
 #set text(
   font: "New Computer Modern",
+  // font: "Platipy",
   size: default_Font_Size,
 
   lang: "en"
@@ -300,6 +301,26 @@
   target: figure.where(kind: table),
 )
 #pagebreak(weak:true)
+
+
+// --------------------- space between text and figures --------------------- //
+#show figure.where(kind: image): it => {
+  v(0.75em, weak:false)
+  it
+  v(0.75em, weak:false)
+
+}
+// ---------------------- space between text and tables --------------------- //
+#show figure.where(kind: table): it => {
+  v(0.75em, weak:false)
+  it
+  v(0.75em, weak:false)
+
+}
+
+
+// ------------------------ space betwen text and eqs ----------------------- //
+// TODO
 
 
 /* -------------------------- start from zero page -------------------------- */
