@@ -72,8 +72,8 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_after.numbering, ..counter(heading).at(ct_after.location()))
 
-          // create_h_entry(proper_number, ct_after, ct_page)
-          create_h_entry(proper_number, ct_after, ct_page, debug: "after")
+          create_h_entry(proper_number, ct_after, ct_page)
+          // create_h_entry(proper_number, ct_after, ct_page, debug: "after")
 
         }
 
@@ -92,12 +92,8 @@
 
 
       }
-      // ideally the current page should have no headers at all. however, this is unfortunately not true. we have two scenarios
-      
-      // 1) no header at current page --> thus, the header needs to be obatained from the before section
+      // current page has no header at all. thus, the header needs to be obatained from the before section
       // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page
-
-      // 2) header is there but, it is in the befores.last() element
       else{
 
           if elems_before.len() > 0 {
@@ -109,23 +105,19 @@
               // a proper manual counting needs to be done
               let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-              // create_h_entry(proper_number, ct_before, ct_page)
-              create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+              create_h_entry(proper_number, ct_before, ct_page)
+              // create_h_entry(proper_number, ct_before, ct_page, debug: "before")
 
             }
 
             // for entries that have no number like Glossary
             else{
 
-              if ct_before.level >= 2 {
-                // create_h_entry(none, ct_before, ct_page)
-                create_h_entry(none, ct_before, ct_page, debug: "no number before 0")
-              }
+              // if ct_before.level >= 2 {
 
-              else if ct_before.level == 1 {
-                  create_h_entry(none, ct_before, ct_page, debug: "strange behaviour")
-
-              }
+              create_h_entry(none, ct_before, ct_page)
+              // create_h_entry(none, ct_before, ct_page, debug: "no number before 0")
+              // }
 
 
             }
@@ -145,14 +137,15 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-          // create_h_entry(proper_number, ct_before, ct_page)
-          create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+          create_h_entry(proper_number, ct_before, ct_page)
+          // create_h_entry(proper_number, ct_before, ct_page, debug: "before")
 
         }
 
         // for entries that have no number like Glossary
         else{
-          create_h_entry(none, ct_before, ct_page, debug: "no number before")
+          create_h_entry(none, ct_before, ct_page)
+          // create_h_entry(none, ct_before, ct_page, debug: "no number before")
 
         }
 
