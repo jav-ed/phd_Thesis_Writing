@@ -46,7 +46,10 @@
 // #show: set_eqs_numbering.with(new_format: "1.1")
 
 /* ---------------------------------- tocs ---------------------------------- */
-#show: float_tocs
+
+
+#show: multiple_tocs
+
 #show: float_text_spacing
 
 /* -------------------------- start from zero page -------------------------- */
@@ -133,6 +136,7 @@
 #bibliography("1_Data/1_Bib/bib.bib",
 // style: "american-institute-of-aeronautics-and-astronautics"
 // TODO generates issue, where it will not automatically detect [27]-[29]
-style: "1_Data/1_Bib/0_CSLs/ieee.csl"
+// style: "1_Data/1_Bib/0_CSLs/ieee.csl"
+style: "1_Data/1_Bib/0_CSLs/ieee_Backup.csl"
 )
 

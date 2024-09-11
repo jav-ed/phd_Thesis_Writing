@@ -11,6 +11,7 @@
 
   if proper_number != none {
 
+    set text(fill: twc_Col.gray-700)
     [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #ct_page]
   }
 
