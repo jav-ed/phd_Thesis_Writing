@@ -77,20 +77,6 @@
 
         }
 
-        // // check wheter the last() ebfore element is on that page
-        // else if elems_before.len() > 0{
-
-        //   let ct_before = elems_before.last()
-        //   let before_page = ct_before.location().page()
-
-        //   if ct_page == before_page {
-        //     [Very special here]
-          
-        //   }
-
-        // }
-
-
       }
       // current page has no header at all. thus, the header needs to be obatained from the before section
       // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page

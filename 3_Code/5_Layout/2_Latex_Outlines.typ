@@ -22,16 +22,16 @@
   /* ======================================================================== */
 
   // first attempt
-  show: init_latex_toc
+  // show: init_latex_toc
 
   // second attempt
-  // show: outex
-  // show outline: set par(leading: 1em) // For spacing between level-2+ entries
-  // show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
+  show: outex
+  show outline: set par(leading: 1em) // For spacing between level-2+ entries
+  show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
 
   // should be there 
   outline(
-      indent: auto, // activate for first attempt
+      // indent: auto, // activate for first attempt
       title : "Table of Contents",
       // fill:   repeat[~~~.],  // none,
     )

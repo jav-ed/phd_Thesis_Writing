@@ -15,64 +15,39 @@
 
     let ct_page = here().page()
 
-    let first_header = query(selector(heading)).first()
-    let first_header_page = first_header.location().page()
+    if elems_after.len() > 0 {
+      let ct_after = elems_after.first()
+      let after_page = ct_after.location().page()
 
-    if ct_page <= first_header_page{
+      // the found header is on the same page as the current active page
+      if ct_page == after_page {
 
-      if ct_page == first_header_page {
-        if elems_before.len() > 0 {
-          let ct_before = elems_before.first()
-          if ct_before.level == 1 {
+        [Fxa0 #ct_after.body]
 
-            // [#first_header.body its page is #first_header.location().page()]
-            // set align(left)
-            [#ct_page]
+      }
+      // current page has no header at all. thus, the header needs to be obatained from the before section
+      // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page
+      else{
 
-          }
+          if elems_before.len() > 0 {
+            let ct_before = elems_before.last()
+            let before_page = ct_before.location().page()
+
+            [Fxa1 #ct_before.body]
 
         }
-      }
 
-    }
-
-    // after the first header was found
-    else if ct_page > first_header_page {
-      if elems_after.len() > 0 {
-        let ct_after_first = elems_after.first()
-        [#elems_before.last().body]
       }
       
+    }
+    // is expected to be the last section (what ever lvl), like for example the Bibliography, Appendix or what ever the current last section might be
+    else if elems_before.len() > 0 {
+        let ct_before = elems_before.last()
+        let before_page = ct_before.location().page()
+
+        [Fxa2 #ct_before.body]
 
     }
-
-
-    // [#first_header.body its page is NOT #first_header.location().page()]
-
-
-    // if elems_before.len() > 0 {
-    //   let ct_before_first = elems_before.first()
-
-    //   [#ct_before_first.body len of: #elems_before.len()]
-
-    //   if ct_before_first.level == 1 {
-    //     let before_page = ct_before_first.location().page()
-    //     if ct_page == before_page {
-          
-    //       // [#ct_before_first.body]  
-    //       set align(center)
-    //       counter(page).display("1")
-    //     }
-
-    //   }
-    // }
-
-    /* -------------------------------- after ------------------------------- */
-    // if elems_after.len() > 0 {
-    //   let ct_after_first = elems_after.first()
-    //   [#ct_after_first.body]
-    // }
-    
 
   }
 )
@@ -84,8 +59,8 @@
 #set math.equation(numbering: "(1)")
 
  // --------------------------------- header -------------------------------- //
-#show: page_header 
-#show: text_header 
+#show: page_header
+#show: text_header
 
 
 // TODO allow big figures to be shown across pages
