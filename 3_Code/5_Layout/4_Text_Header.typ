@@ -32,9 +32,9 @@
           #set text(size: 2em, weight: "bold")
           #smallcaps(it)
         ]
-      
-
-    } else {
+    }
+     
+    else {
       // For all other level 1 headings, apply the custom formatting
       
       block(width: 100%)[

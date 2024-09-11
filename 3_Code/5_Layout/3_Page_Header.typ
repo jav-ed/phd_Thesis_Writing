@@ -54,6 +54,8 @@
     // 2) when the pags starts with a section or subsection take that
     // 3) other than that, take from past whatever lvl it might be. if the last level was 2, then heading should be that. if it was level 3 then level 3 shall be taken
 
+    let b_debug = true
+
     let elems_before = query(selector(heading).before(here()))
     let elems_after = query(selector(heading).after(here()))
 
@@ -72,8 +74,23 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_after.numbering, ..counter(heading).at(ct_after.location()))
 
-          create_h_entry(proper_number, ct_after, ct_page)
-          // create_h_entry(proper_number, ct_after, ct_page, debug: "after")
+           if elems_before.len() > 0 {
+              let ct_before = elems_before.last()
+              let before_page = ct_before.location().page()
+              
+              // if before_page == ct_page {
+                if ct_before.level == 1 {
+                  [before page #before_page ct_page #ct_page]
+                }
+              // }
+           }
+
+          if b_debug == false {
+            create_h_entry(proper_number, ct_after, ct_page)
+          }
+          else{
+            create_h_entry(proper_number, ct_after, ct_page, debug: [afterxa #elems_before.last().body])
+          }
 
         }
 
@@ -91,8 +108,13 @@
               // a proper manual counting needs to be done
               let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-              create_h_entry(proper_number, ct_before, ct_page)
-              // create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+              if b_debug == false {
+                create_h_entry(proper_number, ct_before, ct_page)
+              }
+              else{
+                create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+
+              }
 
             }
 
@@ -101,8 +123,12 @@
 
               // if ct_before.level >= 2 {
 
-              create_h_entry(none, ct_before, ct_page)
-              // create_h_entry(none, ct_before, ct_page, debug: "no number before 0")
+              if b_debug == false {
+                create_h_entry(none, ct_before, ct_page)
+              }
+              else{
+                create_h_entry(none, ct_before, ct_page, debug: "no number before 0")
+              }
               // }
 
 
@@ -123,15 +149,23 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-          create_h_entry(proper_number, ct_before, ct_page)
-          // create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+          if b_debug == false {
+            create_h_entry(proper_number, ct_before, ct_page)
+          }
+          else{
+            create_h_entry(proper_number, ct_before, ct_page, debug: "before")
+          }
 
         }
 
         // for entries that have no number like Glossary
         else{
-          create_h_entry(none, ct_before, ct_page)
-          // create_h_entry(none, ct_before, ct_page, debug: "no number before")
+          if b_debug == false {
+            create_h_entry(none, ct_before, ct_page)
+          }
+          else{
+            create_h_entry(none, ct_before, ct_page, debug: "no number before")
+          }
 
         }
 

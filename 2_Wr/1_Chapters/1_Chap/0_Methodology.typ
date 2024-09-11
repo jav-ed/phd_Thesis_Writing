@@ -2,6 +2,12 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+
+
+= Methodology 01 
+= Methodology 02 
+= Methodology 03 
+
 = Methodology <chap_1>
 In this chapter the current state of certification of #gl_("swith", long:true) shall be explained in detail in
 //

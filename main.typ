@@ -7,6 +7,31 @@
 #show: regular_layout
 #pagebreak()
 
+// see: https://typst.app/docs/guides/page-setup-guide/
+#set heading(numbering: "1.")
+#set math.equation(numbering: "(1)")
+
+ // --------------------------------- header -------------------------------- //
+#show: page_header
+#show: text_header
+
+
+// TODO allow big figures to be shown across pages
+// #show figure: set block(breakable: true)
+
+// --------------------- latex 1.1 figures, tables, eqs --------------------- //
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
+// #show: set_eqs_numbering.with(new_format: "1.1")
+
+/* ---------------------------------- tocs ---------------------------------- */
+
+
+#show: multiple_tocs
+
+#show: float_text_spacing
+
+
 #set page(
   footer: context {
 
@@ -33,9 +58,14 @@
             let ct_before = elems_before.last()
             let before_page = ct_before.location().page()
 
-            [Fxa1 #ct_before.body]
-
-        }
+            if ct_before.level == 1 {
+              if before_page == ct_page {
+                // set align(center)
+                // counter(page).display()
+                [Fxa1 #ct_before.body]
+              }
+            }
+          }
 
       }
       
@@ -45,7 +75,12 @@
         let ct_before = elems_before.last()
         let before_page = ct_before.location().page()
 
-        [Fxa2 #ct_before.body]
+        if ct_before.level == 1 {
+          if before_page == ct_page {
+            set align(center)
+            counter(page).display()
+          }
+        }
 
     }
 
@@ -53,30 +88,6 @@
 )
 
 
-
-// see: https://typst.app/docs/guides/page-setup-guide/
-#set heading(numbering: "1.")
-#set math.equation(numbering: "(1)")
-
- // --------------------------------- header -------------------------------- //
-#show: page_header
-#show: text_header
-
-
-// TODO allow big figures to be shown across pages
-// #show figure: set block(breakable: true)
-
-// --------------------- latex 1.1 figures, tables, eqs --------------------- //
-#show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
-#show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
-// #show: set_eqs_numbering.with(new_format: "1.1")
-
-/* ---------------------------------- tocs ---------------------------------- */
-
-
-#show: multiple_tocs
-
-#show: float_text_spacing
 
 // change type of numbering
 #set page(numbering: "1")

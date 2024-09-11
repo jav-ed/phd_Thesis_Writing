@@ -2,65 +2,6 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO
-#pagebreak()
-
-=== mini test here
-
-minsadfnasfs
-afsafd
-afsafdasf
-
-// -------------------------------------------------------------------------- //
-#context {
-let elems_before = query(selector(heading).before(here()))
-let elems_after = query(selector(heading).after(here()))
-
-let ct_before = elems_before.last()
-let ct_after = elems_after.first()
-
-
-v(1em)
-[Before El]
-v(1em)
-// [#elems_before]
-[#repr(ct_before)]
-// [#repr(ct_before.location().page())]
-
-v(1em)
-[After El]
-v(1em)
-// [#elems_after]
-[#repr(ct_after)]
-
-// -------------------------------------------------------------------------- //
-
-// [#elems.at(0)]
-
-// v(2em)
-// if elems.len() > 1 {
-//   [#elems.last()]
-// }
-// else{
-//   [Nothing found]
-// }
-
-// [#repr(here())]
-
-
-// let current_heading = query(heading, here())
-
-// [#current_heading]
-// if current_heading.len() > 0 {
-
-//   let chosen_heading = current_heading.first()
-//   [#chosen_heading.numbering #chosen_heading.body]
-// }
-
-
-}
-
-
 
 == Research Enabler <chap_0_6>
 This section provides context for the research environment that facilitated this study on #gl_("swith", pl:true). It outlines the funding sources that enabled this contribution to #gl_("swith",pl:true). By transparently presenting this information, readers can better understand the research ecosystem and form their own opinions on the study's context.
