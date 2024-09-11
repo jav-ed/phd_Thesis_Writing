@@ -31,9 +31,15 @@
 
 #show: float_text_spacing
 
+// get all headers of level 1
+// for it set the footer
 
 #set page(
   footer: context {
+
+    // show: heading.where(level:1)
+    // let abc = heading.where(level:1)
+
 
     let elems_before = query(selector(heading).before(here()))
     let elems_after = query(selector(heading).after(here()))
