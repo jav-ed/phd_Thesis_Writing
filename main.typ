@@ -1,10 +1,8 @@
 
 
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
-#import "3_Code/5_Layout/0_Layout.typ":*
-#import "3_Code/5_Layout/1_Latex_Float_Numbering.typ":*
-#import "3_Code/5_Layout/2_Latex_Float_Outline.typ":*
-#import "3_Code/5_Layout/3_Header.typ":*
+#import "3_Code/5_Layout/0_Layout_Main.typ":*
+
 
 #set page("a4")
 
@@ -35,62 +33,27 @@
 #set math.equation(numbering: "(1)")
 
  // --------------------------------- header -------------------------------- //
-#show: header_style
+#show: page_header 
+#show: text_header 
 
 
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
 
 // --------------------- latex 1.1 figures, tables, eqs --------------------- //
-// #show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
-// #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
+#show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
 // #show: set_eqs_numbering.with(new_format: "1.1")
 
 /* ---------------------------------- tocs ---------------------------------- */
-// #show: float_tocs
-// #show: float_text_spacing
+#show: float_tocs
+#show: float_text_spacing
 
 /* -------------------------- start from zero page -------------------------- */
 #set page(numbering: "1")
 #counter(page).update(1)
 
 
-
-// #set page(
-//   numbering: "1",
-//   header: [
-//     _Javed Arshad Butt_
-//     #h(1fr)
-//     #context heading
-// ]
-// )
-
-
-
-
-
-// ========================================================================== //
-// ================================= Trials ================================= //
-// ========================================================================== //
-
-// // see: https://github.com/platformer/typst-algorithms
-// #include "10_Trials/0_Wr/0_Code.typ"
-
-// // see: https://github.com/typst/packages/tree/main/packages/preview/colorful-boxes/1.2.0
-// #include "10_Trials/0_Wr/1_Boxes.typ"
-
-// #include "10_Trials/0_Wr/2_Callouts.typ"
-// #include "10_Trials/0_Wr/3_Layouts.typ"
-// #include "10_Trials/0_Wr/4_Colors.typ"
-// #include "10_Trials/0_Wr/5_Emojis.typ"
-// #include "10_Trials/0_Wr/6_Glossary_0.typ"
-// #include "10_Trials/0_Wr/6_Glossary_1.typ"
-// #include "10_Trials/0_Wr/6_Glossary_2.typ"
-
-// -------------------------------- plotting -------------------------------- //
-// #include "10_Trials/1_Plotting/0_Inp_Out.typ"
-// #include "10_Trials/1_Plotting/1_Inp_Out.typ"
-// #include "10_Trials/1_Plotting/2_Figures.typ"
 
 
 // ========================================================================== //

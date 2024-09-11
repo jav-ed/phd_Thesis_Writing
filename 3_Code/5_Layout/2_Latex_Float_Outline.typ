@@ -67,7 +67,7 @@
       v(0.05em)
       box(width: 100%, {
         [
-          #box(width: 95%, {
+          #box(width: 93%, {
             link(loc)[
               #it.body.children.at(2) // figure number
               #caption.body           // caption text
