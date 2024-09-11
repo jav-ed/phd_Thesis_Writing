@@ -4,31 +4,82 @@
 #import "3_Code/5_Layout/0_Layout_Main.typ":*
 
 
-#set page("a4")
+#show: regular_layout
+#pagebreak()
 
-// blocksatz = justify alignment
-#set par(
-  justify: true,
-  first-line-indent: 1em,
-  linebreaks: "optimized"
-  )
+#set page(
+  footer: context {
+
+    let elems_before = query(selector(heading).before(here()))
+    let elems_after = query(selector(heading).after(here()))
+
+    let ct_page = here().page()
+
+    let first_header = query(selector(heading)).first()
+    let first_header_page = first_header.location().page()
+
+    if ct_page <= first_header_page{
+
+      if ct_page == first_header_page {
+        if elems_before.len() > 0 {
+          let ct_before = elems_before.first()
+          if ct_before.level == 1 {
+
+            // [#first_header.body its page is #first_header.location().page()]
+            // set align(left)
+            [#ct_page]
+
+          }
+
+        }
+      }
+
+    }
+
+    // after the first header was found
+    else if ct_page > first_header_page {
+      if elems_after.len() > 0 {
+        let ct_after_first = elems_after.first()
+        [#elems_before.last().body]
+      }
+      
+
+    }
 
 
-// documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
-#set text(
-  font: "New Computer Modern",
-  // font: "Platipy",
-  size: default_Font_Size,
+    // [#first_header.body its page is NOT #first_header.location().page()]
 
-  lang: "en"
+
+    // if elems_before.len() > 0 {
+    //   let ct_before_first = elems_before.first()
+
+    //   [#ct_before_first.body len of: #elems_before.len()]
+
+    //   if ct_before_first.level == 1 {
+    //     let before_page = ct_before_first.location().page()
+    //     if ct_page == before_page {
+          
+    //       // [#ct_before_first.body]  
+    //       set align(center)
+    //       counter(page).display("1")
+    //     }
+
+    //   }
+    // }
+
+    /* -------------------------------- after ------------------------------- */
+    // if elems_after.len() > 0 {
+    //   let ct_after_first = elems_after.first()
+    //   [#ct_after_first.body]
+    // }
+    
+
+  }
 )
 
-// #show link: set text(fill: blue)
 
-// #set enum(indent: 0.7em)
 
 // see: https://typst.app/docs/guides/page-setup-guide/
-#set page(numbering: "— I —")
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
@@ -52,9 +103,8 @@
 
 #show: float_text_spacing
 
-/* -------------------------- start from zero page -------------------------- */
+// change type of numbering
 #set page(numbering: "1")
-#counter(page).update(1)
 
 
 

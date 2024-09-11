@@ -22,24 +22,28 @@
   /* ======================================================================== */
 
   // first attempt
-  // show: init_latex_toc
+  show: init_latex_toc
 
-  // // second attempt
-  show: outex
-  show outline: set par(leading: 1em) // For spacing between level-2+ entries
-  show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
+  // second attempt
+  // show: outex
+  // show outline: set par(leading: 1em) // For spacing between level-2+ entries
+  // show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
 
   // should be there 
   outline(
-      // indent: auto, // activate for first attempt
+      indent: auto, // activate for first attempt
       title : "Table of Contents",
       // fill:   repeat[~~~.],  // none,
     )
+
+  pagebreak(weak:true)
 
 
   // required for lists of figures/table 
   show outline: set par(leading: 1em) // For spacing between level-2+ entries
   show outline: set block(spacing: 1em) // For spacing before level-1 entries
+
+ 
 
   /* ======================================================================== */
   /* ============================== figure tocs ============================= */

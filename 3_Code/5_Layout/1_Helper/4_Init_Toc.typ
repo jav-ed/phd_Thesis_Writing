@@ -30,14 +30,7 @@
     h(1em)
     it.page
   }
-  outline(
-    indent: auto,
-    title : "Table of Contents",
-    // fill:   repeat[~~~.],  // none,
-  )
 
-  
-  pagebreak(weak:true)
 
 /* --------------------------------- keep it -------------------------------- */
 body

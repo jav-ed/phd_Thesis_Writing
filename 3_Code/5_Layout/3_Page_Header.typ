@@ -7,16 +7,36 @@
 #let create_h_entry(
   proper_number,
   ct_element,
-  ct_page) = {
+  ct_page,
+  debug: none) = {
 
   if proper_number != none {
 
     set text(fill: twc_Col.gray-700)
+
+    if debug == none {
     [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #ct_page]
+    }
+
+    else{
+
+    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
+
+    }
   }
 
   else{
-    [#smallcaps(ct_element.body) #h(1fr) #ct_page]
+
+    set text(fill: twc_Col.gray-700)
+
+    if debug == none {
+      [#smallcaps(ct_element.body) #h(1fr) #ct_page]
+    }
+
+    else{
+      [#smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
+
+    }
 
   }
 
@@ -27,13 +47,6 @@
 
 
   #set page( 
-    margin: (
-      left: 3.5cm,
-      right: 2cm,
-      bottom: 3cm,
-      top: 3cm
-    ), 
-    numbering: "1", 
     header: context {
 
     // demands: 
@@ -44,7 +57,6 @@
     let elems_before = query(selector(heading).before(here()))
     let elems_after = query(selector(heading).after(here()))
 
-    let b_before_active = false
     let ct_page = here().page()
 
     if elems_after.len() > 0 {
@@ -60,12 +72,32 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_after.numbering, ..counter(heading).at(ct_after.location()))
 
-          create_h_entry(proper_number, ct_after, ct_page)
+          // create_h_entry(proper_number, ct_after, ct_page)
+          create_h_entry(proper_number, ct_after, ct_page, debug: "after")
 
         }
+
+        // // check wheter the last() ebfore element is on that page
+        // else if elems_before.len() > 0{
+
+        //   let ct_before = elems_before.last()
+        //   let before_page = ct_before.location().page()
+
+        //   if ct_page == before_page {
+        //     [Very special here]
+          
+        //   }
+
+        // }
+
+
       }
-      // current page has no header at all. thus, the header needs to be obatained from the before section
+      // ideally the current page should have no headers at all. however, this is unfortunately not true. we have two scenarios
+      
+      // 1) no header at current page --> thus, the header needs to be obatained from the before section
       // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page
+
+      // 2) header is there but, it is in the befores.last() element
       else{
 
           if elems_before.len() > 0 {
@@ -77,13 +109,24 @@
               // a proper manual counting needs to be done
               let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-              create_h_entry(proper_number, ct_before, ct_page)
+              // create_h_entry(proper_number, ct_before, ct_page)
+              create_h_entry(proper_number, ct_before, ct_page, debug: "before")
 
             }
 
             // for entries that have no number like Glossary
             else{
-              create_h_entry(none, ct_before, ct_page)
+
+              if ct_before.level >= 2 {
+                // create_h_entry(none, ct_before, ct_page)
+                create_h_entry(none, ct_before, ct_page, debug: "no number before 0")
+              }
+
+              else if ct_before.level == 1 {
+                  create_h_entry(none, ct_before, ct_page, debug: "strange behaviour")
+
+              }
+
 
             }
 
@@ -102,13 +145,14 @@
           // a proper manual counting needs to be done
           let proper_number = numbering(ct_before.numbering, ..counter(heading).at(ct_before.location()))
 
-          create_h_entry(proper_number, ct_before, ct_page)
+          // create_h_entry(proper_number, ct_before, ct_page)
+          create_h_entry(proper_number, ct_before, ct_page, debug: "before")
 
         }
 
         // for entries that have no number like Glossary
         else{
-          create_h_entry(none, ct_before, ct_page)
+          create_h_entry(none, ct_before, ct_page, debug: "no number before")
 
         }
 
