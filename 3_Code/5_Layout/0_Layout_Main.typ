@@ -4,6 +4,7 @@
 #import "3_Page_Header.typ":*
 #import "4_Text_Header.typ":*
 #import "5_Regular_Things.typ":*
+#import "6_Page_Footer.typ":*
 
 
 

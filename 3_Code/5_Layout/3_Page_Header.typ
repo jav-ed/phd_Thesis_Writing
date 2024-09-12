@@ -54,7 +54,7 @@
     // 2) when the pags starts with a section or subsection take that
     // 3) other than that, take from past whatever lvl it might be. if the last level was 2, then heading should be that. if it was level 3 then level 3 shall be taken
 
-    let b_debug = true
+    let b_debug = false
 
     let elems_before = query(selector(heading).before(here()))
     let elems_after = query(selector(heading).after(here()))

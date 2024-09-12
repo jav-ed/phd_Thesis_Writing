@@ -4,6 +4,9 @@
 #import "3_Code/5_Layout/0_Layout_Main.typ":*
 
 
+// Note, the order of the show and set rules are of high importance. If they are changed and the changes are not thought through, unexpected layout issues could occur. One example that was observed was: if the terxt_header and page_header are not set after the figure numbering or float_spacing, the page headers are shifted. So when you are in the chapter Methodology, it will not detect it properly. It detected this header to be on one page earlier.
+
+// general rules for the moment are difficult to provide. if you need to add things and the rendeing beahviour is not as expected, you might need to change the order - in a even not quite obious way
 #show: regular_layout
 #pagebreak()
 
@@ -11,88 +14,28 @@
 #set heading(numbering: "1.")
 #set math.equation(numbering: "(1)")
 
- // --------------------------------- header -------------------------------- //
-#show: page_header
-#show: text_header
-
 
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
+
+#show: float_text_spacing
+
 
 // --------------------- latex 1.1 figures, tables, eqs --------------------- //
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
 // #show: set_eqs_numbering.with(new_format: "1.1")
 
+
+
+// --------------------------------- header -------------------------------- //
+#show: text_header
+#show: page_header
+#show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
+
+
 /* ---------------------------------- tocs ---------------------------------- */
-
-
 #show: multiple_tocs
-
-#show: float_text_spacing
-
-// get all headers of level 1
-// for it set the footer
-
-#set page(
-  footer: context {
-
-    // show: heading.where(level:1)
-    // let abc = heading.where(level:1)
-
-
-    let elems_before = query(selector(heading).before(here()))
-    let elems_after = query(selector(heading).after(here()))
-
-    let ct_page = here().page()
-
-    if elems_after.len() > 0 {
-      let ct_after = elems_after.first()
-      let after_page = ct_after.location().page()
-
-      // the found header is on the same page as the current active page
-      if ct_page == after_page {
-
-        [Fxa0 #ct_after.body]
-
-      }
-      // current page has no header at all. thus, the header needs to be obatained from the before section
-      // from the previous page get the last section, which could be anything [lvl >= 1]. so, we also take chapters from the previous page
-      else{
-
-          if elems_before.len() > 0 {
-            let ct_before = elems_before.last()
-            let before_page = ct_before.location().page()
-
-            if ct_before.level == 1 {
-              if before_page == ct_page {
-                // set align(center)
-                // counter(page).display()
-                [Fxa1 #ct_before.body]
-              }
-            }
-          }
-
-      }
-      
-    }
-    // is expected to be the last section (what ever lvl), like for example the Bibliography, Appendix or what ever the current last section might be
-    else if elems_before.len() > 0 {
-        let ct_before = elems_before.last()
-        let before_page = ct_before.location().page()
-
-        if ct_before.level == 1 {
-          if before_page == ct_page {
-            set align(center)
-            counter(page).display()
-          }
-        }
-
-    }
-
-  }
-)
-
 
 
 // change type of numbering
