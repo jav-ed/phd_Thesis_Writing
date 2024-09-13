@@ -3,28 +3,23 @@
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout_Main.typ":*
 
-
 // Note, the order of the show and set rules are of high importance. If they are changed and the changes are not thought through, unexpected layout issues could occur. One example that was observed was: if the terxt_header and page_header are not set after the figure numbering or float_spacing, the page headers are shifted. So when you are in the chapter Methodology, it will not detect it properly. It detected this header to be on one page earlier.
 
 // general rules for the moment are difficult to provide. if you need to add things and the rendeing beahviour is not as expected, you might need to change the order - in a even not quite obious way
 #show: regular_layout
 #pagebreak()
 
-// see: https://typst.app/docs/guides/page-setup-guide/
-#set heading(numbering: "1.")
-#set math.equation(numbering: "(1)")
-
 
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
 
+
 #show: float_text_spacing
 
-
-// --------------------- latex 1.1 figures, tables, eqs --------------------- //
+/* -------------------- latex 1.1 figures, tables, eqs -------------------- */
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
-// #show: set_eqs_numbering.with(new_format: "1.1")
+// show: set_eqs_numbering.with(new_format: "1.1")
 
 
 
@@ -33,11 +28,10 @@
 #show: page_header
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
-
 /* ---------------------------------- tocs ---------------------------------- */
 #show: multiple_tocs
 
-
+/* -------------------------------------------------------------------------- */
 // change type of numbering
 #set page(numbering: "1")
 
@@ -119,9 +113,9 @@
 // see: https://typst.app/docs/reference/model/bibliography/#parameters-full
 // and: https://typst.app/project/pQH6zuFPPL_G4NlIOLx9K-
 #bibliography("1_Data/1_Bib/bib.bib",
-// style: "american-institute-of-aeronautics-and-astronautics"
-// TODO generates issue, where it will not automatically detect [27]-[29]
-// style: "1_Data/1_Bib/0_CSLs/ieee.csl"
-style: "1_Data/1_Bib/0_CSLs/ieee_Backup.csl"
+
+// was modified and obtained through:https://github.com/citation-style-language/styles/blob/master/ieee.csl
+style: "1_Data/1_Bib/0_CSLs/ieee.csl"
+
 )
 

@@ -314,16 +314,34 @@
       </if>
     </choose>
   </macro>
-  <!-- Citation -->
-  <citation>
+  <!-- <citation>
+      <sort>
+        <key variable="citation-number"/>
+      </sort>
+      <layout delimiter=", ">
+        <group prefix="[" suffix="]" delimiter=", ">
+          <text variable="citation-number"/>
+          <text macro="citation-locator"/>
+        </group>
+      </layout>
+    </citation> -->
+  <!-- <citation collapse="citation-number">
+      <sort>
+        <key variable="citation-number"/>
+      </sort>
+      <layout delimiter=", ">
+        <group prefix="[" suffix="]" delimiter=", ">
+          <text variable="citation-number"/>
+          <text macro="citation-locator"/>
+        </group>
+      </layout>
+    </citation> -->
+   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter=", ">
-      <group prefix="[" suffix="]" delimiter=", ">
-        <text variable="citation-number"/>
-        <text macro="citation-locator"/>
-      </group>
+    <layout delimiter=", " prefix="[" suffix="]">
+      <text variable="citation-number"/>
     </layout>
   </citation>
   <!-- Bibliography -->
