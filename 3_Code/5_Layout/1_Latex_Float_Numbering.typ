@@ -39,6 +39,27 @@
 }
 
 
+// --------------------------- float_number_apend --------------------------- //
+#let float_number_apend(it) = {
+
+  let new_format = "A.1"
+  
+  
+  // Set chapter-relative numbering for images
+  let image_numbering = super => numbering(
+    new_format, 
+    counter(heading).get().first(), 
+    super)
+
+  // Reset figure counter at each new chapter
+  show heading.where(level: 1): it => counter(figure.where(kind: kind_type)).update(0) + it
+  
+  // Apply custom numbering to figures [images, tables, equations
+  show figure.where(kind: kind_type): set figure(numbering: image_numbering)
+
+  it
+
+}
 
 
 

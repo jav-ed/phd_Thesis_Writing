@@ -21,6 +21,8 @@
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
 // show: set_eqs_numbering.with(new_format: "1.1")
 
+#show: set_figure_numbering.with(new_format: "A.1", kind_type:"image_app")
+
 
 
 // --------------------------------- header -------------------------------- //
@@ -101,7 +103,7 @@
 
 
 // -------------------------------- Appendix -------------------------------- //
-// #include "2_Wr/10_Appendix/0_File.typ"
+#include "2_Wr/2_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
 #include "2_Wr/3_Additional/1_Glossary.typ"
