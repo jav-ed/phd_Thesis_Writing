@@ -19,9 +19,9 @@
 /* -------------------- latex 1.1 figures, tables, eqs -------------------- */
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:image)
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
-// show: set_eqs_numbering.with(new_format: "1.1")
+#show: set_eqs_numbering.with(new_format: "1.1")
 
-#show: set_figure_numbering.with(new_format: "A.1", kind_type:"image_app")
+// #show: float_number_apend.with()
 
 
 
@@ -31,12 +31,36 @@
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
 /* ---------------------------------- tocs ---------------------------------- */
+
 #show: multiple_tocs
 
 /* -------------------------------------------------------------------------- */
 // change type of numbering
 #set page(numbering: "1")
 
+Here comes it
+
+// -------------------------------- attempt 1 ------------------------------- //
+// #show figure.where(kind:image): it => {
+  
+//     let loc = it.location()
+//     let supplement = it.supplement
+//     let caption = it.caption
+//     let fig_capt_nr = it.numbering
+
+// [#caption]
+// }
+
+// -------------------------------- attempt 2 ------------------------------- //
+#show outline.entry.where(level:1): it => {
+
+  if it.element.has("kind") and it.element.kind == image {
+  // if it.element.has("kind") and it.element.kind== "image_app" {
+
+    repr(it)
+  }
+
+}
 
 
 
@@ -101,8 +125,13 @@
 // #include "2_Wr/2_Chap/2_Commenting.typ"
 // #include "2_Wr/2_Chap/3_Com_Question.typ"
 
-
+$ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_0123>
 // -------------------------------- Appendix -------------------------------- //
+// reset heading counter for Appendix
+#counter(heading).update(0)
+#set heading(numbering: "A")
+// #set math.equation(numbering: "A")
+
 #include "2_Wr/2_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */

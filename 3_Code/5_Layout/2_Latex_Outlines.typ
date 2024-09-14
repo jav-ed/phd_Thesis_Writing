@@ -50,10 +50,10 @@
   /* ======================================================================== */
 
   // the first attempt
-  // show: init_latex_figs
+  show: init_latex_figs
 
   // the second attempt - should be more powerful
-  show: latex_figs
+  // show: latex_figs
 
   outline(
     title: [List of Figures],

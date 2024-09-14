@@ -2,16 +2,19 @@
 #import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-#set heading(numbering: none)
 
-= Appendix
+
+
+= Appendix First
+= Appendix Second
+= Appendix SeconThird
 Here is the appendix
 
 
 #figure(
   image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
   width: 50%),
-  caption: [Visualization of the APUS i2, demonstrating the practical application of #gl_("swith", pl:true) in commercial aircraft design @APUS_Image.],
+  caption: [Test_Appendix_SOmehting.],
 
   kind:"image_app",
   supplement: "Figure"
@@ -46,5 +49,6 @@ here comes a table @tab_apend_0
   caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
 )<tab_apend_0>
 
+lets cite the rthe the follwoing eq: @eq_apend_0
 
 $ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_apend_0>

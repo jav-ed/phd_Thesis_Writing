@@ -44,6 +44,7 @@
 
   let new_format = "A.1"
   
+  // reset chapter numbering
   
   // Set chapter-relative numbering for images
   let image_numbering = super => numbering(
@@ -52,10 +53,23 @@
     super)
 
   // Reset figure counter at each new chapter
-  show heading.where(level: 1): it => counter(figure.where(kind: kind_type)).update(0) + it
+  show heading.where(level: 1): it => counter(figure.where(kind: "image_app")).update(0) + it
+
+  // Reset figure counter at each new chapter
+  show heading.where(level: 1): it => counter(figure.where(kind: "table_apend")).update(0) + it
+
+  // Reset equation counter at each new chapter
+  // show heading.where(level: 1): it => counter(math.equation).update(0) + it
+
   
   // Apply custom numbering to figures [images, tables, equations
-  show figure.where(kind: kind_type): set figure(numbering: image_numbering)
+  show figure.where(kind: "image_app"): set figure(numbering: image_numbering)
+
+  show figure.where(kind: "table_apend"): set figure(numbering: image_numbering)
+
+  // set math.equation(numbering: image_numbering)
+
+
 
   it
 
