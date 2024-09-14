@@ -50,14 +50,15 @@
   /* ======================================================================== */
 
   // the first attempt
-  show: init_latex_figs
+  // show: bod => init_latex_figs(bod, [Figure])
 
   // the second attempt - should be more powerful
-  // show: latex_figs
+  show: latex_figs
 
   outline(
     title: [List of Figures],
-    target: figure.where(kind: image),
+    // target: (figure.where(kind: image) figure.where(kind: "image_app"),
+    target: figure.where(supplement: [Figure]),
   )
 
   pagebreak(weak:true)
@@ -74,7 +75,11 @@
 
   outline(
     title: [List of Tables],
-    target: figure.where(kind: table),
+    // target: figure.where(kind: table),
+    target: figure.where(supplement: [Table]),
+
+    
+
   )
   pagebreak(weak:true)
 

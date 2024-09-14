@@ -21,7 +21,8 @@
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
 #show: set_eqs_numbering.with(new_format: "1.1")
 
-// #show: float_number_apend.with()
+// appendix
+#show: float_number_apend.with()
 
 
 
@@ -38,29 +39,7 @@
 // change type of numbering
 #set page(numbering: "1")
 
-Here comes it
 
-// -------------------------------- attempt 1 ------------------------------- //
-// #show figure.where(kind:image): it => {
-  
-//     let loc = it.location()
-//     let supplement = it.supplement
-//     let caption = it.caption
-//     let fig_capt_nr = it.numbering
-
-// [#caption]
-// }
-
-// -------------------------------- attempt 2 ------------------------------- //
-#show outline.entry.where(level:1): it => {
-
-  if it.element.has("kind") and it.element.kind == image {
-  // if it.element.has("kind") and it.element.kind== "image_app" {
-
-    repr(it)
-  }
-
-}
 
 
 
@@ -129,10 +108,27 @@ $ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_0123>
 // -------------------------------- Appendix -------------------------------- //
 // reset heading counter for Appendix
 #counter(heading).update(0)
+
+// change numbering style for Appendix
 #set heading(numbering: "A")
+
+// Set chapter-relative numbering for images
+#let equation_numbering = super => numbering(
+  "(A.1)", 
+  counter(heading).get().first(), 
+  super)
+
+// Reset equation counter at each new chapter
+#show heading.where(level: 1): it => counter(math.equation).update(0) + it
+
+#set math.equation(numbering: equation_numbering)
+
+
+// #set math.equation(numbering: "(A.1)")
+
 // #set math.equation(numbering: "A")
 
-#include "2_Wr/2_Appendix/0_File.typ"
+#include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
 #include "2_Wr/3_Additional/1_Glossary.typ"

@@ -52,11 +52,15 @@
     counter(heading).get().first(), 
     super)
 
-  // Reset figure counter at each new chapter
+  // Reset figure counter at each new chapter, once if you want to access the figure counting through 
+  // 1) figure.where(kind)
+  // 2) accessing the figures through the supplement attribute
   show heading.where(level: 1): it => counter(figure.where(kind: "image_app")).update(0) + it
+  show heading.where(level: 1): it => counter(figure.where(supplement: [Figure])).update(0) + it
 
   // Reset figure counter at each new chapter
   show heading.where(level: 1): it => counter(figure.where(kind: "table_apend")).update(0) + it
+  show heading.where(level: 1): it => counter(figure.where(supplement: [Table])).update(0) + it
 
   // Reset equation counter at each new chapter
   // show heading.where(level: 1): it => counter(math.equation).update(0) + it

@@ -11,7 +11,12 @@
   fill-pad: (left: 0.5em, right: 1em),
   bold:true,
   space:true,
-) = context{
+  search_supplement: [Figure]
+) = {
+
+  // counting helper, required when we set heading counter manually to other values, like for example before starting with the appendix
+  // let chap_counter_helper = counter("0")
+  let chap_counter_helper = state("x", 1)
 
   show outline.entry: it => { 
     
@@ -36,25 +41,52 @@
 
     let loc = ct_elem.location()
     let current_chapter = counter(heading).at(loc).first()
-    let figure_number = counter(figure.where(kind: image)).at(loc)
+    // let figure_number = counter(figure.where(kind: image)).at(loc)
+    let figure_number = counter(figure.where(supplement: search_supplement)).at(loc)
 
-    // Check if it's the first figure in a new chapter (excluding chapter 1)
-    if current_chapter > 1 and figure_number.first() == 1 {
 
-      // Check if the previous chapter had any figures
-      let prev_chapter_figure = query(
-        figure.where(kind: image).before(loc), 
-        loc
-      ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
-      
-      if prev_chapter_figure.len() > 0 {
-        v(1em)
-        line(length: 13%, 
-          stroke: (thickness: 0.5pt, paint: twc_Col.gray-300)
-          )
-        v(1em)
-      }
+
+    if current_chapter > 1 {
+      chap_counter_helper.update(x=> x+1)
+      // [counter: #context repr(chap_counter_helper.get()) ]
     }
+
+  context {
+
+      let ct_counter_val = chap_counter_helper.get()
+
+      // Check if it's the first figure in a new chapter (excluding chapter 1) and special treatment for the Appendix - heading counting was set to zero
+      if ct_counter_val > 1 and figure_number.first() == 1 {
+
+        // Check if the previous chapter had any figures
+        let prev_chapter_figure = query(
+          figure.where(supplement: search_supplement).before(loc), 
+          loc
+        ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
+
+        // since ct_counter_val > 1 , the current_chapter can only be == 1 again, if we have mopdifed the heading manually, for example we are in the appendix now 
+        if current_chapter == 1 {
+
+          // this should be the case
+          if prev_chapter_figure.len() == 0 {
+
+            // manually catch cases like apendix, where we would have the heading counter reseted
+            prev_chapter_figure = (1,2)
+          }
+
+        }
+        
+        if prev_chapter_figure.len() > 0 {
+          v(1em)
+          line(length: 13%, 
+            stroke: (thickness: 0.5pt, paint: twc_Col.gray-300)
+            )
+          v(1em)
+        }
+      }
+
+
+  }
 
     // [#repr(et)]
     // if ct_elem.numbering != none{
