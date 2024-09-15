@@ -10,14 +10,21 @@
   ct_page,
   debug: none) = {
 
+  // can be used to shopw the page number with the original page numbering style
+  let ct_numbering_style =  ct_element.location().page-numbering()
+  let page_counter_styled = counter(page).display(ct_numbering_style)
+ 
+  // let ct_numbering_style =  ct_element.location()
+
   if proper_number != none {
 
     set text(fill: twc_Col.gray-700)
 
     if debug == none {
-    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #ct_page]
+    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
     }
 
+    // debug
     else{
 
     [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
@@ -30,9 +37,10 @@
     set text(fill: twc_Col.gray-700)
 
     if debug == none {
-      [#smallcaps(ct_element.body) #h(1fr) #ct_page]
+      [#smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
     }
 
+    // debug
     else{
       [#smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
 

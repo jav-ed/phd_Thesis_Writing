@@ -2,7 +2,7 @@
 #import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-= Appendix First
+= First Helper Ap 
 
 #lorem(50)
 
@@ -17,7 +17,7 @@
 
 
 
-== apendix subsection
+== subsection apendix 
 
 #figure(
   image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
@@ -228,7 +228,7 @@ $ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_apend_20>
 
 
 #pagebreak()
-= Appendix Second
+= Second Ap
 
 
 
@@ -237,7 +237,7 @@ $ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_apend_100>
 $ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_apend_200>
 
 #pagebreak()
-= Appendix SeconThird
+=  Third Ap
 Here is the appendix lets refer to fig: @fig_apend_0
 
 

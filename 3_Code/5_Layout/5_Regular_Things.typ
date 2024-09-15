@@ -38,7 +38,7 @@
   // #set enum(indent: 0.7em)
 
   // see: https://typst.app/docs/guides/page-setup-guide/
-  set heading(numbering: "1.")
+  set heading(numbering: "1.1.1")
   set math.equation(numbering: "(1)")
 
 

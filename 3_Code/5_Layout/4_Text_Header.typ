@@ -37,10 +37,34 @@
     else {
       // For all other level 1 headings, apply the custom formatting
       
+      let chap_add = none
+
+      // Could be Appendix
+      if it.numbering.contains("A.1.1") {
+         chap_add = "Appendix"
+      }
+
+      // Could be Prefix
+      else if it.numbering.contains("I.1.1") {
+         chap_add = none
+      }
+
+      // Should be regular chapters
+      else if it.numbering.contains("1.1.1") {
+         chap_add = "Chapter"
+      }
+
+
       block(width: 100%)[
         #set align(center)
-        Chapter
-        #v(0.01em)
+        // [Chapter #repr(it.numbering) ]
+        // [#chap_add #type(it.numbering)] 
+        
+        #if chap_add != none {
+          chap_add
+          v(0.01em)
+        }  
+
         #set align(center)
         #v(-1em)
         #set text(size: 2em, weight: "bold")

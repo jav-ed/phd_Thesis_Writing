@@ -7,7 +7,15 @@
 
 // general rules for the moment are difficult to provide. if you need to add things and the rendeing beahviour is not as expected, you might need to change the order - in a even not quite obious way
 #show: regular_layout
-#pagebreak()
+
+// ------------------------------- cover page ------------------------------- //
+// for the cover page usally the page number is not displayed
+#set page(numbering: none)
+#include("2_Wr/11_To_Include/0_Cover_Page.typ")
+
+// after the coverage page the page number inshallah can be activated again
+#set page(numbering: "— I —")
+
 
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
@@ -30,6 +38,7 @@
 // must be after multiple_tocs, because it depends on the list of tables
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
+
 /* ---------------------------------- tocs ---------------------------------- */
 // table of contents, list of figures, list of tables
 #show: multiple_tocs
@@ -44,12 +53,18 @@
 // ========================================================================== //
 // ================================== Main ================================== //
 // ========================================================================== //
+
+// --------------------------------- Preface -------------------------------- //
+#include "2_Wr/0_Prerequire/0_Preface.typ"
+
 // #include "2_Wr/11_To_Include/0_File.typ"
 
 
 /* ========================================================================== */
 /* ================================== Intro ================================= */
 /* ========================================================================== */
+#counter(heading).update(0)
+
 #include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
 #include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
 #include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
