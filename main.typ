@@ -34,14 +34,17 @@
 // --------------------------------- header -------------------------------- //
 #show: text_header
 #show: page_header
-// ------------------------------- page footer ------------------------------ //
-// must be after multiple_tocs, because it depends on the list of tables
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
+
 
 
 /* ---------------------------------- tocs ---------------------------------- */
 // table of contents, list of figures, list of tables
 #show: multiple_tocs
+
+// ------------------------------- page footer ------------------------------ //
+// must be after multiple_tocs, because it depends on the list of tables
+// #show: doc => def_page_footesr(doc, "Javed Arshad Butt - Thesis")
 
 
 /* -------------------------------------------------------------------------- */

@@ -1,8 +1,13 @@
 
+#import "../1_Fcns/0_Fcn_Main.typ": *
 
 
 #let def_page_footer(body, chapter_txt) = {
 
+  // helper to detect the page number for "list of tables"
+  let list_table_counter = counter("0")
+  let list_tables_page = state("y", -1)
+  
   // get all headers of level 1
   // for it set the footer
   set page(
@@ -11,6 +16,7 @@
 
       let foot_note_content(ct_it) = {
 
+          set text(fill: twc_Col.gray-700)
           // [#smallcaps([Chapter: #ct_it.body]) #h(1fr) #counter(page).display("1")]
           [#smallcaps(chapter_txt) #h(1fr) #counter(page).display("1")]
       }
@@ -21,10 +27,6 @@
 
       let ct_page = here().page()
 
-      // helper to detect the page number for "list of tables"
-      let b_found_list_tables = state("x", -1)
-      let list_tables_page = state("y", -1)
-
       if elems_before.len() > 0 {
 
         let ct_before = elems_before.last()
@@ -34,31 +36,19 @@
 
           // fastest approach - when there is only one header at all on one page
           if ct_before.level == 1 {
-            // foot_note_content(ct_before)
 
-            // before and till "list of tables" chapter
-            if b_found_list_tables.get() == -1 {
+            
+            let ct_numbering_style =  ct_before.location().page-numbering()
+            let page_counter_styled = counter(page).display(ct_numbering_style)
 
-              // list of tables detected
-              let check =  lower(repr(ct_before.body)).contains("[list of tables]")
-              if check{
+            // should be the starting till and incluse the list of tables, that is, inshallah everything before preface
+            if ct_numbering_style == "— I —"{
+            //  [#counter(page).display("- I -") #lower(repr(ct_before.body))]
+              align(center)[#page_counter_styled]
 
-                // update states
-                b_found_list_tables.update(x => eval("1"))  
-                list_tables_page.update(y => eval(str(ct_page)))
-              }
-
-              
-            //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check and more #b_found_list_tables.get()]
-            //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check toc nr #list_tables_page.get()]
-
-              align(center)[#counter(page).display("- I -")]
             }
-
-            // b_found_list_tables was found -> regular page numbering style
+            // regular pages after list of tables, that is, inshallah starting with preface
             else{
-
-              // [#counter(page).display("1") the state is: #b_found_list_tables]
               foot_note_content(ct_before)
 
             }
