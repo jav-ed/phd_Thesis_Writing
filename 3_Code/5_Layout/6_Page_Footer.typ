@@ -26,6 +26,7 @@
       let list_tables_page = state("y", -1)
 
       if elems_before.len() > 0 {
+
         let ct_before = elems_before.last()
         let before_page = ct_before.location().page()
 
@@ -49,7 +50,7 @@
 
               
             //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check and more #b_found_list_tables.get()]
-            //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check toc nr #list_tables_page.get()]
+             [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check toc nr #list_tables_page.get()]
 
               // align(center)[#counter(page).display("- I -")]
             }
@@ -57,8 +58,8 @@
             // b_found_list_tables was found -> regular page numbering style
             else{
 
-              // [#counter(page).display("1") the state is: #b_found_list_tables]
-              foot_note_content(ct_before)
+              [#counter(page).display("1") the state is: #b_found_list_tables]
+              // foot_note_content(ct_before)
 
             }
 

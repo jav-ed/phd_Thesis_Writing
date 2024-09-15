@@ -54,6 +54,16 @@
 
   let page = {
     let page-numbering = el.location().page-numbering()
+
+    // the page-numbering style "— I —" requires too much space in the toc. thus, we inshallah chose another numbering style that requires less space.
+    // also, one could assume or pretend the alternative style, that is, "i" to be the same as the bigger "— I —" original vairaiton. 
+    if page-numbering == "— I —"{
+      page-numbering ="i"
+    }
+
+    // in case no roman letter are desired, get everything in regular arabic numerical digits
+    // let page-numbering = "1"
+    
     if page-numbering == none { page-numbering = "1" }
     numbering(page-numbering, ..counter(page).at(el.location()))
   }

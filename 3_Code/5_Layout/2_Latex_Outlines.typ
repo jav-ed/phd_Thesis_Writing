@@ -30,9 +30,11 @@
   show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
 
   // should be there 
+  heading("Table of Contents", level:1, numbering:none)
   outline(
       // indent: auto, // activate for first attempt
-      title : "Table of Contents",
+      // title : "Table of Contents",
+      title : none,
       // fill:   repeat[~~~.],  // none,
     )
 
@@ -55,8 +57,10 @@
   // the second attempt - should be more powerful
   show: latex_figs
 
+  heading("List of Figures", level:1, numbering:none)
   outline(
-    title: [List of Figures],
+    // title: [List of Figures],
+    title: none,
     // target: (figure.where(kind: image) figure.where(kind: "image_app"),
     target: figure.where(supplement: [Figure]),
   )
@@ -73,12 +77,12 @@
   // second attempt - more latex like
   show: latex_tables
 
+  heading("List of Tables", level:1, numbering:none)
   outline(
-    title: [List of Tables],
+    // title: [List of Tables],
+    title: none,
     // target: figure.where(kind: table),
-    target: figure.where(supplement: [Table]),
-
-    
+    target: figure.where(supplement: [Table]),   
 
   )
   pagebreak(weak:true)
