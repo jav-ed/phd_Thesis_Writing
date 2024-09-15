@@ -5,6 +5,7 @@
 #import "4_Text_Header.typ":*
 #import "5_Regular_Things.typ":*
 #import "6_Page_Footer.typ":*
+#import "7_Appendix_Manag.typ":*
 
 
 

@@ -62,24 +62,34 @@
   show heading.where(level: 1): it => counter(figure.where(kind: "table_apend")).update(0) + it
   show heading.where(level: 1): it => counter(figure.where(supplement: [Table])).update(0) + it
 
-  // Reset equation counter at each new chapter
-  // show heading.where(level: 1): it => counter(math.equation).update(0) + it
-
   
   // Apply custom numbering to figures [images, tables, equations
   show figure.where(kind: "image_app"): set figure(numbering: image_numbering)
 
   show figure.where(kind: "table_apend"): set figure(numbering: image_numbering)
 
-  // set math.equation(numbering: image_numbering)
-
-
-
   it
 
 }
 
 
+// --------------------------- eq_number_appendix --------------------------- //
+#let eq_number_appendix(body) = {
+
+  // Set chapter-relative numbering for equations
+  let equation_numbering = super => numbering(
+    "(A.1)", 
+    counter(heading).get().first(), 
+    super)
+
+  // Reset equation counter at each new chapter
+  show heading.where(level: 1): it => counter(math.equation).update(0) + it
+
+  set math.equation(numbering: equation_numbering)
+
+  // -------------------------------- keep it ------------------------------- //
+  body
+} 
 
 // // --------------------------------- figures -------------------------------- //
 // #import "@preview/i-figured:0.2.4"

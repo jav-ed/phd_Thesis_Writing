@@ -9,10 +9,8 @@
 #show: regular_layout
 #pagebreak()
 
-
 // TODO allow big figures to be shown across pages
 // #show figure: set block(breakable: true)
-
 
 #show: float_text_spacing
 
@@ -25,21 +23,18 @@
 #show: float_number_apend.with()
 
 
-
 // --------------------------------- header -------------------------------- //
 #show: text_header
 #show: page_header
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
 /* ---------------------------------- tocs ---------------------------------- */
-
+// table of contents, list of figures, list of tables
 #show: multiple_tocs
 
 /* -------------------------------------------------------------------------- */
 // change type of numbering
 #set page(numbering: "1")
-
-
 
 
 
@@ -104,29 +99,9 @@
 // #include "2_Wr/2_Chap/2_Commenting.typ"
 // #include "2_Wr/2_Chap/3_Com_Question.typ"
 
-$ sum_(k=1)^n k = (n(n+1)) / 2 $<eq_0123>
+
 // -------------------------------- Appendix -------------------------------- //
-// reset heading counter for Appendix
-#counter(heading).update(0)
-
-// change numbering style for Appendix
-#set heading(numbering: "A")
-
-// Set chapter-relative numbering for images
-#let equation_numbering = super => numbering(
-  "(A.1)", 
-  counter(heading).get().first(), 
-  super)
-
-// Reset equation counter at each new chapter
-#show heading.where(level: 1): it => counter(math.equation).update(0) + it
-
-#set math.equation(numbering: equation_numbering)
-
-
-// #set math.equation(numbering: "(A.1)")
-
-// #set math.equation(numbering: "A")
+#show: appendix_manag
 
 #include "2_Wr/10_Appendix/0_File.typ"
 
