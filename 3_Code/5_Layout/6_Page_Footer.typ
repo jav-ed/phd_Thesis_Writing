@@ -51,7 +51,7 @@
             //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check and more #b_found_list_tables.get()]
             //  [#counter(page).display("- I -") the state is: #b_found_list_tables #lower(repr(ct_before.body)) and check #check toc nr #list_tables_page.get()]
 
-              align(center)[#counter(page).display("- I -")]
+              // align(center)[#counter(page).display("- I -")]
             }
 
             // b_found_list_tables was found -> regular page numbering style

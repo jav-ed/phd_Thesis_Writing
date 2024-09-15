@@ -2,7 +2,7 @@
 #import "../1_Fcns/0_Fcn_Main.typ": *
 
 
-
+// ----------------------------- regular_layout ----------------------------- //
 #let regular_layout(body) = {
 
   set page(
