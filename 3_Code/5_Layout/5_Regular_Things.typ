@@ -20,7 +20,10 @@
   set par(
     justify: true,
     first-line-indent: 1em,
-    linebreaks: "optimized"
+    linebreaks: "optimized",
+    // leading: 0.65em
+    // hanging-indent: 1em
+
     )
 
 
@@ -32,6 +35,9 @@
 
     lang: "en"
   )
+
+  // space between different paragrpahs
+  set block(above:1.6em)
 
   // #show link: set text(fill: blue)
 
