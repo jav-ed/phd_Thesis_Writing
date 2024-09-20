@@ -30,10 +30,15 @@ Standards encapsulate collective knowledge and experience, providing a framework
 Moreover, as more stakeholders adopt these standards, network effects come into play, increasing the value and effectiveness of the standards across the industry @Narayanan2012 @Zoo2017.
 
 In fields characterized by innovation and uncertainty, such as #gl_("swith") development, standards take on heightened importance @Narayanan2012 @Zoo2017 @Morse2018.
-Rather than acting as restrictive barriers, standards in innovative contexts serve as foundational reference points. They offer a structured approach to addressing known obstacles while providing flexibility for novel solutions. 
+Rather than acting as restrictive barriers, standards in innovative contexts serve as foundational reference points. 
+They offer a structured approach to addressing known obstacles while providing flexibility for novel solutions. 
 This balance is crucial in the development of #gl_("swith", pl:true), where the integration of high-pressure hydrogen tanks with aircraft wing structures presents unique engineering hurdles.
+The role of standards extends beyond the physical design of #gl_("swith", pl:true) to encompass the development process, including structural validation testing. 
+For the goal of safely designing and conducting experimental structural validation tests of a #gl_("swith"), standards can be assumed to provide critical guidelines. 
+Moreover, standards form the basis for certification procedures, ensuring that #gl_("swith", pl:true) meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but essential for the successful implementation and certification of #gl_("swith") in aircraft design
 
-The application of standards in such a novel field could offer several advantages. 
+
+As the development of comprehensive standards proves essential for #gl_("swith", pl:true) implementation and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gl_("swith") development offers several key benefits that extend beyond mere regulatory compliance
 Firstly, it provides a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
 Furthermore the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
 Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017 . 
@@ -58,17 +63,10 @@ Consequently, it can be said that the evolution of standards is likely to play a
 #summary_([
 In conclusion, the role of standards in #gl_("swith") development is multifaceted and still in its infancy. 
 While the innovative nature of #gl_("swith", pl:true) presents challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
+At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #gl_("swith", pl:true). This lack of an available certification procedure severely limits the industrial and scientific employment of #gl_("swith", pl:true) . 
+Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
+This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #gl_("swith", pl:true).
 By carefully adapting existing standards and paving the way for #gl_("swith")-specific standards in the future, researchers and engineers could ensure that #gl_("swith", pl:true) are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations. 
-
-
-
-// TODO for aviation subsection
-// At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #gl_("swith", pl:true). This lack of an available certification procedure severely limits the industrial and scientific employment of #gl_("swith", pl:true) . 
-// Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
-// This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #gl_("swith", pl:true).
-
-
-
 
 ])
 

@@ -6,9 +6,9 @@
 
 
 === Aviation Standards <chap_1_0_2>
+In the last @chap_1_0_1 it was explained why standards are important in gnereal and why they are also especially important for #gl_("swith", long:true).
 
 
-/* -------------------------------------------------------------------------- */
 
 Standards should be considered as an initial point of reference for the goal of safely desining and conducting a experimental structrual validation tests of #gl_("swith", pl:true) that is meant to be a first step tpwards the certification of #gl_("swith", pl:true).
 Standards can be translated as guidelines. For instance, in the field of construction, there would be design guidelines defined by standards. Similarly, for structural testing, there would be safety, procedural, setup, and other guidelines. On one hand, guidelines can be seen as unwanted restrictions. However, they allow systems to function safely and reliably. It can be argued that the use of standards in a field with many unknowns provides a certain level of security and reduces the likelihood of errors. Since both the construction and experimental structural investigation of #gl_("swith", pl:true) are innovations, there are particularly many unknowns in the K2H2 project. This also comes with many potential risks.
