@@ -14,8 +14,6 @@ It then delves into the preliminary development of structural integral tanks in 
 This is followed by an examination of specific standards from various sectors and a review of relevant patents. The section concludes by identifying and evaluating the most pertinent standards for #gl_("swith", pl:true). Throughout, the text emphasizes the current standardization challenges, the need for new or adapted standards, and the key technical and safety considerations that must be addressed in the development and implementation of #gl_("swith", pl:true).
 
 
-// TODO bare translation at this moment
-/* -------------------------------------------------------------------------- */
 === Importance of Standards <chap_1_0_1>
 
 The development of #gl_("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with critical structural elements. 
@@ -30,14 +28,16 @@ Standards encapsulate collective knowledge and experience, providing a framework
 Moreover, as more stakeholders adopt these standards, network effects come into play, increasing the value and effectiveness of the standards across the industry @Narayanan2012 @Zoo2017.
 
 In fields characterized by innovation and uncertainty, such as #gl_("swith") development, standards take on heightened importance @Narayanan2012 @Zoo2017 @Morse2018.
+The contribution of experts to the composition and revision of standards ensures consideration of aspects that an individual might not think of, thereby enhancing the safety and reliability of products and systems.
 Rather than acting as restrictive barriers, standards in innovative contexts serve as foundational reference points. 
 They offer a structured approach to addressing known obstacles while providing flexibility for novel solutions. 
 This balance is crucial in the development of #gl_("swith", pl:true), where the integration of high-pressure hydrogen tanks with aircraft wing structures presents unique engineering hurdles.
 The role of standards extends beyond the physical design of #gl_("swith", pl:true) to encompass the development process, including structural validation testing. 
 For the goal of safely designing and conducting experimental structural validation tests of a #gl_("swith"), standards can be assumed to provide critical guidelines. 
-Moreover, standards form the basis for certification procedures, ensuring that #gl_("swith", pl:true) meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but essential for the successful implementation and certification of #gl_("swith") in aircraft design
+Moreover, standards form the basis for certification procedures, ensuring that #gl_("swith", pl:true) meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but essential for the successful implementation and certification of #gl_("swith", pl:true) in aviation.
 
 
+/* ------------------------------- advantages ------------------------------- */
 As the development of comprehensive standards proves essential for #gl_("swith", pl:true) implementation and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gl_("swith") development offers several key benefits that extend beyond mere regulatory compliance
 Firstly, it provides a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
 Furthermore the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
@@ -45,9 +45,10 @@ Secondly, standards help in identifying potential risks and difficulties early i
 This is particularly important for #gl_("swith", pl:true), where the integration of high-pressure hydrogen storage with critical aircraft structures presents unique safety considerations. 
 Lastly they offer a framework for systematic evaluation and validation, indispensable for ensuring the safety and reliability of innovative technologies like #gl_("swith", pl:true). 
 
+
 While the benefits of applying standards to #gl_("swith", pl:true) development are clear, the process is not without its challenges. 
 The primary difficulty lies in the innovative nature of #gl_("swith") itself. 
-As an emerging technology, there are no specific standards tailored to its unique characteristics. This absence, however, does not diminish the importance of standards-based approaches. 
+As an emerging technology, there is no single standard that would cover all the unique characteristics of #gl_("swith", pl:true). This absence, however, does not diminish the importance of standards-based approaches. 
 Instead, it necessitates a careful and considered application of related standards from adjacent fields.
 In the case of #gl_("swith"), relevant adjacent fields include aerospace engineering, hydrogen storage and handling, pressure vessel design, and structural engineering. The task lies in judiciously selecting and adapting these standards to address the specific needs of #gl_("swith") development.
 This adaptive approach is particularly crucial in the realm of experimental structural testing. Standards provide guidance on test methodologies, safety protocols, and data collection and analysis procedures. By leveraging these established practices, researchers can ensure that their experimental work on #gl_("swith") is rigorous, repeatable, and aligned with industry expectations.
@@ -63,7 +64,7 @@ Consequently, it can be said that the evolution of standards is likely to play a
 #summary_([
 In conclusion, the role of standards in #gl_("swith") development is multifaceted and still in its infancy. 
 While the innovative nature of #gl_("swith", pl:true) presents challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
-At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #gl_("swith", pl:true). This lack of an available certification procedure severely limits the industrial and scientific employment of #gl_("swith", pl:true) . 
+At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #gl_("swith", pl:true). This lack of an available certification procedure severely limits the industrial and scientific employment of #gl_("swith", pl:true). 
 Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #gl_("swith", pl:true).
 By carefully adapting existing standards and paving the way for #gl_("swith")-specific standards in the future, researchers and engineers could ensure that #gl_("swith", pl:true) are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations. 
