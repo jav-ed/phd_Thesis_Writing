@@ -21,7 +21,9 @@ $ a^2 + b^2 = c^2 $ <pythagoras>
 
 // and: https://github.com/typst/packages/tree/main/packages/preview/glossarium/0.2.2
 
-#gl_("inshallah"),
+#gl_("inshallah") \
+// gl_("term", pl:true)
+// gl_("term", long:true)
 
 
 // -------------------------------- Equations ------------------------------- //
