@@ -11,7 +11,7 @@
     margin: (
       left: 3.5cm,
       right: 2cm,
-      bottom: 3cm,
+      bottom: 2.7cm,
       top: 3cm
       ), 
     )
