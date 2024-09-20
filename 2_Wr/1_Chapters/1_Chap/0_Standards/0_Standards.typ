@@ -4,6 +4,7 @@
 
 //TODO
 // the intro for the section needs to be checked again
+// the paper provides a nice objection of it, maybe this content can be included here
 == Standards and Regulations<chap_1_0>
 This section provides a comprehensive overview of the standards relevant to #gl_("swith", pl:true). It begins by examining overarching norms applicable to high-pressure hydrogen systems. 
 
@@ -55,9 +56,19 @@ Consequently, it can be said that the evolution of standards is likely to play a
 
 
 #summary_([
-In conclusion, the role of standards in #gl_("swith") development is multifaceted and at the beginning.
-While the innovative nature of #gl_("swith", pl:true) present challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it. 
-By carefully adapting existing standards and paving the way for #gl_("swith")-specific standards in the future, researchers and engineers could ensure that #gl_("swith", pl:true) develop and structurally valided in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
+In conclusion, the role of standards in #gl_("swith") development is multifaceted and still in its infancy. 
+While the innovative nature of #gl_("swith", pl:true) presents challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
+By carefully adapting existing standards and paving the way for #gl_("swith")-specific standards in the future, researchers and engineers could ensure that #gl_("swith", pl:true) are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations. 
+
+
+
+// TODO for aviation subsection
+// At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #gl_("swith", pl:true). This lack of an available certification procedure severely limits the industrial and scientific employment of #gl_("swith", pl:true) . 
+// Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
+// This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #gl_("swith", pl:true).
+
+
+
 
 ])
 

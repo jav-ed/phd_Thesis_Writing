@@ -5,7 +5,6 @@
 
 
 
-
 === Aviation Standards <chap_1_0_2>
 
 
@@ -65,39 +64,27 @@ In summary, it can be said that within this work, it is not possible to rely exc
 
 
 
-=== Fundamentals of Pressure Vessels <chap_1_0_3>
+=== II.4 Potentially Applicable Aerospace Standards
 
+This section provides an overview of possible standards that could be used to cover the lack of a comprehensive standard. In particular, it will refer to standards from general aerospace. Furthermore, it will discuss to what extent the found standards can be considered for K2H2.
 
+At this point, it should be explicitly mentioned again that at the time of writing this report, no single document exists that guarantees Germany-wide recognized standards for the approval of #gl_("swith", pl:true). Nevertheless, in order to build on existing knowledge through standards, similar or sub-areas of #gl_("swith", pl:true) should be considered. For small aircraft certification, there is the CS-23 recognized in Europe. Compared to CS-25, which is intended for regular commercial aircraft, it comes with significantly fewer restrictions. Fewer restrictions also means fewer topics that are addressed and discussed. High standard detailing could offer valuable advantages, especially in terms of safety aspects. Furthermore, concrete ideas for conducting a structural test could also be given, for example, to answer the following questions:
 
-=== II.3 Fundamentals of Pressure Vessels
+- Which measurement technology is allowed, which is preferred and why?
+- What possibilities exist for introducing loads?
+- Which points can be neglected in detail if main aspects are reliably proven?
 
-This section will first provide general basics about pressure tanks. Then, distinctions will be made so that only information relevant to #gl_("swith", pl:true) (Structural Integral Hydrogen Fuel Tanks) can be used for further work.
+In CS-23, the author of this report was unable to extrapolate information that would be valid for a high-pressure hydrogen container. It is quite possible that this will be adjusted in the coming years, as CS-23 could be adapted for hydrogen-powered aircraft. Therefore, the statement made above should be considered only in the context of CS-23 Version 2018. Search terms such as high-pressure containers, hydrogen in all its states of aggregation, and other gases, such as helium, were also consulted to build on possible knowledge from CS-23. The core result is that no helpful knowledge could be gained from CS-23 for #gl_("swith", pl:true).
 
-Pressure tanks are special containers used in various applications for the storage and transport of pressurized gases and liquids. Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the K2H2 project, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
+In CS-25 Amendment 27, under point CS 25.1453, there is information on the topic: Protection of oxygen equipment from rupture. It requires that the chosen working pressure of the oxygen bottles can also be withstood by the bottle. In addition, the maximum operating pressure must be able to withstand the maximum normal operating pressure, the transient pressures and pressure surges, the tolerances of the pressure limiting devices, and possible pressure fluctuations in normal operating conditions. Transient pressures or pressure surges would not need to be considered unless they would exceed the maximum normal operating pressure multiplied by 1-10. Furthermore, the temperature influence and a proof of strength are addressed. Specifically, the following 3 requirements are made for the proof of strength:
 
-The paper @barral2006hydrogen briefly reports on the development history of pressure cylinders. This will be briefly described below. Since the beginning of the 20th century, H2 has been stored in seamless steel bottles. Around the end of the 1960s, steel tubes could also be used. At this time, the so-called hydrogen embrittlement was increasingly encountered. The latter states that, through sufficiently long contact between metal and H2, the metal begins to embrittle or the structural mechanical properties, such as strength and E-modulus, are weakened.
-
-Aluminum tanks were the alternative at the time, which, however, cost significantly more. With the aim of reducing the weight of the steel bottles, a partial to complete composite wrapping of the steel bottles was carried out. Due to the weight savings, the wrapped pressure vessels could now also be used mobile. The next step in development was to replace the metallic so-called liner with plastic. The composite winding is wrapped around the plastic liner.
-
-The extent to which a metallic liner differs from a plastic liner and what differences exist between the individual plastics is presented in a detailed study in @Su2021. However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
-
-The superordinate development stages of the pressure tank can be divided into tank types. @fig_4 shows all four common tank types that are available in the free market economy. Contrary to the labeling in @fig_4, tank types are usually labeled with Roman numerals in the literature. Tank type V had already been developed at the time of writing this report. However, it is the most expensive of all variants. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021, and is currently mainly used for military purposes.
-
-
-#figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
-  width: 100%),
-  caption: [Common types of pressure vessels @Su2021.],
-) <fig_4>
-
-
-From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
-
-/* -------------------------------------------------------------------------- */
+1) Compliance with the test and burst factors from @tab_1: Test and burst factors from CS-25, CS25.1453 @tab_1, when working with maximum operating pressure.
+2) Duration of compliance with the test pressure is at least 2 minutes. There should be no leaks or permanent deformations.
+3) The burst pressure must be maintained for at least 1 minute and must not cause bursting within said time. Deformations, on the other hand, are permissible.
 
 #figure(
   table(
-    columns: (0.3fr, 0.7fr),
+    columns: (1fr, 0.5fr, 0.5fr),
     align: center + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
@@ -108,18 +95,51 @@ From tank type I to IV, the weight decreases on the one hand, and on the other h
     stroke: none,
     
     /* --- header --- */
-    table.header[*Tank Type*][*Maximum bearable pressure [bar]*],
+    table.header[*System Element*][*Test Factor*][*Burst Factor*],
     /* -------------- */
-    [I], [200],
-    [II], [263],
-    [III and IV], [300 – 700],
 
+    [Pressure Vessels], [1.5], [2.0],
+    [Flexible Hoses], [2.0], [4.0],
+    [Pipes and Fittings], [1.5], [3.0],
+    [Other Components], [1.5], [2.0],
   ),
 
   kind: table,
-  caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
-)<tab_0>
-/* -------------------------------------------------------------------------- */
+  caption: [Test and burst factors from CS-25, CS25.1453 @EASA_CS_25],
+)<tab_1>
+
+Perhaps it would be possible, under certain circumstances, to convince the approval authorities of a test factor of 1.5 and a burst factor of 2.0 through argumentative skill. EASA might possibly accept voluminous high-pressure tanks as other components from @tab_1. The hydrogen tank is a pressure vessel whose internal pressure is on the one hand a factor higher than that of oxygen bottles. On the other hand, the tank is many times larger in its dimensions than an oxygen bottle. This simple argumentation is valid and could be used by the approval authorities to reject these proposed factors (1.5 and 2.0). Based on this, aerospace-related areas should be examined more closely.
+
+One option that presents itself is space technology. In this field, the ANSI/AIAA S-081B-2018 Space Systems—Composite Overwrapped Pressure Vessels could be found. ANSI stands for American National Standards Institute. Consequently, these standards are primarily intended for the USA. It often happens that other states or the EU orient themselves on existing standards to adopt their own standards. Complete acceptance of foreign guidelines would be a conceivable possibility, but there is no guarantee of later acceptance. Standards are generally distinguished by adoption locality. Internationally recognized standards are recognized globally. This is followed by continents and individual states. The legislator in a state can, in addition to the international and continental standards, demand additional points for approval in its own state. Without fulfilling all requirements, an innovative project could be strongly influenced by the legislator.
+
+Secondly, the desire for hydrogen-powered aircraft has existed for some time, and the first announcements for designing corresponding standards were made by SAE International on 20.11.2019. @tab_2 lists the two most promising standards for general aviation. It should be explicitly considered that these standards have only been announced and are not yet commercially available at the current time. This report is being written in April 2023. With the legitimate assumption that an institution like SAE International is informed about the standard published in 2018, the following assumption should be discussed. SAE had about 2 years to draft the standard for general aviation for liquid hydrogen. The fact that these 2 years are not sufficient allows the conclusion that the ANSI/AIAA S-081B-2018 Space Systems cannot be applied to general aviation without further ado.
 
 
-In summary, it can be said that there are different tank types that come into question for different requirements. For the K2H2 project, the choice has already been made; it should be a Type IV tank.
+
+#figure(
+  table(
+    columns: (0.5fr, 1fr, 0.5fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+    
+    /* --- header --- */
+    table.header[*Hydrogen - Aggregate State*][*Standard*][*In Work Since*],
+    /* -------------- */
+
+    [Liquid], [SAE AS 6679 Liquid Hydrogen Storage for Aviation], [20.11.2019],
+    [Gaseous], [SAE AS 7373 Gaseous Hydrogen Storage for General Aviation], [06.07.2021],
+  ),
+
+  kind: table,
+  caption: [Promising announced and not yet available standards for general aviation with hydrogen as energy carrier. The information was taken from the official website of SAE International.],
+)<tab_2>
+
+Thirdly, even if SAE AS 7373 were available, it would not be guaranteed that an external load on the hydrogen tanks was taken into account. In other words, it is unclear whether the standards, once completed, will also be applicable to structural integral hydrogen tanks.
+
+It can be noted that standards from aerospace can indeed be found that could be of interest for K2H2. However, with simple arguments, it can be clearly shown why the described standards offer too little security for official recognition. On the one hand, it is partly unclear whether the standards are also applicable in the European area. On the other hand, at this point, it is not clear whether the standards are also valid for structural integral and externally loaded hydrogen pressure tanks. With its requirements, which according to the current state cannot be comprehensively covered by a single standard, K2H2 represents a very special niche research.

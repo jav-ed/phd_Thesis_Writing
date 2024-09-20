@@ -86,8 +86,8 @@
 
 /* -------------------------------- Standards ------------------------------- */
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Pressure_Vessels.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Aero_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Aero_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Pressure_Vessels.typ"
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/3_Automotive.typ"
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/4_Various_Fields.typ"
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/5_Essential_Standards.typ"
@@ -122,9 +122,8 @@
 
 
 // -------------------------------- Appendix -------------------------------- //
-#show: appendix_manag
-
-#include "2_Wr/10_Appendix/0_File.typ"
+// #show: appendix_manag
+// #include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
 #include "2_Wr/3_Additional/1_Glossary.typ"
