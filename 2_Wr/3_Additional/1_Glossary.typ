@@ -54,6 +54,12 @@
       desc: [A numerical method used in engineering and mathematical physics to solve complex problems by dividing a large system into smaller, simpler parts called finite elements. In structural engineering and aerospace applications, FEA is widely used to analyze the behavior of materials and structures under various loads and conditions. It involves creating a mathematical model of an entire system as a network of discrete elements, then using software to simulate how the structure will react to real-world forces, vibration, heat, fluid flow, and other physical effects. FEA allows engineers to identify potential design weaknesses, optimize material usage, predict product performance, and solve intricate structural, thermal, and multiphysics problems. This method is particularly valuable in situations where analytical solutions are difficult or currently impossible to obtain, enabling an efficient and cost-effective design process, especially for complex geometries and multifaceted engineering challenges.],
     ),
     (
+      key: "easa",
+      short: "EASA",
+      long: [#text(weight: "bold")[E]uropean Union #text(weight: "bold")[A]viation #text(weight: "bold")[S]afety #text(weight: "bold")[A]gency],
+      desc: [The European Union Aviation Safety Agency (EASA) is an Agency of the European Union, governed by European law. Its main activities include, among others, developing and implementing safety standards and guidelines, certifying and regulating aircraft, engines, and aeronautical products, conducting safety assessments and inspections, and collaborating with other EU agencies and international organizations @Mensen2013.]
+    ),
+    (
       key: "ld",
       short: "LD",
       long: [#text(weight: "bold")[L]oad #text(weight: "bold")[D]iscretization],

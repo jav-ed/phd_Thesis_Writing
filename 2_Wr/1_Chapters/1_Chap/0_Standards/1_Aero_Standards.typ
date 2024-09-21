@@ -11,28 +11,25 @@ It was mentioned that currently there is no single standard available that could
 Since theren are no rules for a strucutral validation available, there is also no authority that could grant any certication for flying with a #gl_("swith").
 Yet, the the goal of this thesis is to provide some inital work that can be used by industry, scieticits, aerospace certifcation authorities or standard institutions to build upon this work and helping in closing this gap.
 Additional motivation for the need for standards for #gl_("swith", pl:true) as well as a possible next step to it was provided in @chap_1_0_1.
-Based on it, in this subsection important stanadrds that are used in aerosapce shall be mentioned.
-First the overall available standards shall be provided. 
-Afterwards it shall be elaborated in which manner the found stanadrds might be applicable.
-Finally, announced upcoming work shall be meneitoned and examined wheter in future after their availibitly they could used for #gl_("swith") certication. 
+More concretely it could be extrapolated that #gl_("swith", pl:true) consits of multiple subfileds. These include aircraft, hydrogen and pressure vessel and all of the, have their own standards. 
+Based on this, in this subsection the focus will set on the important stanadrds that are used in aviation.
+First the commonly used and available standards for aviation shall be provided. 
+Afterwards it shall be elaborated in which manner the found stanadrds might be applicable with regards to #gl_("swith", pl:true).
+Finally, some standards that are announced to be worked on and relaed in fiture shall be mentioend and examined wheter after their availibitly they could used for #gl_("swith") certication. 
 /* -------------------------------------------------------------------------- */
 
 //TODO
 /* --------------------------- continue from here --------------------------- */
 
-Given that there are standards for both structural testing in aircraft construction and for pure pressure vessels, comparable standards should also be found for the K2H2 project. 
-
-Standards can be translated as guidelines. For instance, in the field of construction, there would be design guidelines defined by standards. Similarly, for structural testing, there would be safety, procedural, setup, and other guidelines. On one hand, guidelines can be seen as unwanted restrictions. However, they allow systems to function safely and reliably. It can be argued that the use of standards in a field with many unknowns provides a certain level of security and reduces the likelihood of errors. Since both the construction and experimental structural investigation of #gl_("swith", pl:true) are innovations, there are particularly many unknowns in the K2H2 project. This also comes with many potential risks.
-
-It is precisely for this reason that it is necessary, as far as possible, to rely on foundations that allow for safe, clearly traceable, and systematic procedures. Standards offer a kind of guideline that engineers and experts can follow. By adhering to standards, it can largely be ensured that all important aspects are considered. It's also worth noting that standards are usually written and revised by expert groups with a deep understanding of the relevant field. This ensures that factors are considered that an individual might not have thought of.
-
-In addition to ensuring the safety and reliability of products and systems, standards also contribute to compliance with legal regulations. They enable products and systems to meet applicable safety standards and minimize negative consequences for the environment and society. By adhering to standards, new or slightly modified systems can be more easily approved for science and industry.
-
-The introduction should have motivated the search for existing standards for #gl_("swith", pl:true). In summary, it can be said that by using appropriate standards, safety and planned feasibility can be optimized. In addition, the industrial project leader (IMA) can thus offer the developed test concept to third parties as a service more quickly and with comparatively lower cost and time expenditure. However, no #gl_("swith") is known in research or publicly accessible industry. Due to the fact that no #gl_("swith") has been publicly approved to date, at the time of writing this report, there is no standard that fully covers the design and physical structural testing of #gl_("swith", pl:true).
-
-The alternative to a missing comprehensive standard is to break #gl_("swith", pl:true) into sub-areas. The two major sub-areas would be aviation and pressure tank standards. In aviation, distinctions are made according to the approval space, maximum takeoff mass, and the general type of flying object. The approval space refers to the region in which the aircraft is to be approved and operated. There are different approval authorities and regulations depending on which country or region the aircraft is to be approved in. In Europe, for example, the European Union Aviation Safety Agency (EASA) @EASA_Homepage is responsible for the approval of aircraft, while in the USA, the Federal Aviation Administration (FAA) @FAA_Homepage performs this task. The maximum takeoff weight (MTOW) refers to the maximum weight an aircraft may have to safely take off and fly. Depending on the size and performance of the aircraft, there are different MTOW classes defined in the standards. The general type of flying object refers to the category of the aircraft, such as commercial aircraft, helicopter, small aircraft, and military aircraft.
+Starting with this subsection it shall be reiterated, as the time of writing this thesis, there is no single standard available that would be pretained to the certifcaiton of #gl_("swith", pl:true).
+Certification means more than burocarcy work. It means that local or global aviation authorties allow the usage of a #gl_("swith"). 
+Only with it a commerical applicaiton of a #gl_("swith") is possible. Coming to sub-area in which the #gl_("swith") can be classified, that is, aviation.
+In aviation, distinctions are made according to the geographical approval location, maximum takeoff mass, and the general type of flying object. The geographical approval space refers to the region in which the aircraft is to be approved and operated. 
+There are different approval authorities and regulations depending on which country or region the aircraft is to be approved in. In Europe, for example, the #gl_("easa", long:true) @EASA_Homepage is responsible for the approval of aircraft, while in the USA, the Federal Aviation Administration (FAA) @FAA_Homepage performs this task. The maximum takeoff weight (MTOW) refers to the maximum weight an aircraft may have to safely take off and fly. Depending on the size and performance of the aircraft, there are different MTOW classes defined in the standards. The general type of flying object refers to the category of the aircraft, such as commercial aircraft, helicopter, small aircraft, and military aircraft.
 
 The present project is being developed for the German market. Therefore, the focus is mainly on European standards. The European Union has established uniform standards for the aviation industry that are binding for all member states. This ensures a uniform basis for the operation of aircraft and safety in air traffic. However, it is known that, for example, American standards do not differ in many areas from European standards. The paragraph numbers are often identical, but details may vary. European aviation standards are referred to as CS (Certification Specifications) @EASA_CS_Genereral. 
+
+// For the table see Book 2013_Book_Habdbuch S 108
 The most important CS are CS-23 @EASA_CS_23, CS-25 @EASA_CS_25, CS-27 @EASA_CS_27, and CS-29 @EASA_CS_29. If an aircraft meets the following conditions:
 
 // TODO check if a concrete Amendment must be mentioned here - also general check the value for phd
