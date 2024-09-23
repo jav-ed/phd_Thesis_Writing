@@ -37,7 +37,7 @@
       short: "SWITH",
       long: [
         #text(weight: "bold")[W]ing #text(weight: "bold")[S]tructure #text(weight: "bold")[I]ntegrated High-Pressure #text(weight: "bold")[H]ydrogen #text(weight: "bold")[T]anks],
-      desc: [SWITH is pronounced sweets. t is an aircraft design concept where hydrogen fuel storage tanks are incorporated directly into the wing structure. The hydrogen tanks are under high pressure to increase the amount of hydrogen that can be carried. The structural integration between the wing and the tanks allows the wing and tanks to share aerodynamic and pressure loads.],
+      desc: [SWITH is pronounced "sweets." It is an aircraft design where hydrogen fuel storage tanks are incorporated directly into the wing structure. In order to increase the amount of gaseous hydrogen that can be carried, the pressure inside the hydrogen tanks is desired to be maximized. The structural integration between the wing and the tanks allows the wing and tanks to share loads like the aerodynamic and pressure loads.],
     ),
     (
       key: "lie",
@@ -57,7 +57,13 @@
       key: "easa",
       short: "EASA",
       long: [#text(weight: "bold")[E]uropean Union #text(weight: "bold")[A]viation #text(weight: "bold")[S]afety #text(weight: "bold")[A]gency],
-      desc: [The European Union Aviation Safety Agency (EASA) is an Agency of the European Union, governed by European law. Its main activities include, among others, developing and implementing safety standards and guidelines, certifying and regulating aircraft, engines, and aeronautical products, conducting safety assessments and inspections, and collaborating with other EU agencies and international organizations @Mensen2013.]
+      desc: [The European Union Aviation Safety Agency (EASA) is an Agency of the European Union, governed by European law. Its main activities include, among others, developing and implementing safety standards and guidelines, certifying and regulating aircraft, engines, and aeronautical products, conducting safety assessments and inspections, and collaborating with other EU agencies and international organizations @Mensen2013[p.~417].]
+    ),
+    (
+      key: "cs",
+      short: "CS",
+      long: [#text(weight: "bold")[C]ertificationan Union #text(weight: "bold")[S]pecification],
+      desc: [The EASA construction regulations are referred to as the Certification Specification (CS) @Mensen2013[p.~109].]
     ),
     (
       key: "ld",
