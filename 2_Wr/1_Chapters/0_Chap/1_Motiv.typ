@@ -59,7 +59,7 @@ Second, even when assuming ti know of what to test, there remains a significant 
 The focus of this work is primarily scientific, aiming to advance our understanding of #gl_("swith", pl:true). 
 
 However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #gl_("swith", pl:true) could have significant implications in economic, technological, and strategic domains.
-While a detailed exploration of these broader impacts is beyond the scope of this motivation chapter, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These potential advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive discussion of these aspects is presented in @chap_0_5.
+While a detailed exploration of these broader impacts is beyond the scope of this motivation chapter, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These potential advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive exploration of these aspects is presented in @chap_0_5.
 
 
 /* --------------------------------- summary -------------------------------- */

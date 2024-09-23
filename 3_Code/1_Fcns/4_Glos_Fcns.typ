@@ -1,3 +1,4 @@
+#import "6_Layout_Styles.typ": *
 
 /* ========================================================================== */
 /* ================================ Glossary ================================ */
@@ -12,10 +13,7 @@
 // gl_("term", pl:true)
 // gl_("term", long:true)
 
-// define default color for highlighting
-#let color_Link = gray.darken(60%)
-#let color_High = blue
-#let color_Comment = green
+
 
 // output and acronoym/gls
 // used when a word shall be highlighted and also is an acronym

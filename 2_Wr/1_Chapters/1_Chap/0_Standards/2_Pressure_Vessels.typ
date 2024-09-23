@@ -4,14 +4,16 @@
 
 
 
-
+/* -------------------------------------------------------------------------- */
 
 
 === Fundamentals of Pressure Vessels <chap_1_0_3>
 
 
+Pressure tank standards were mentioned as the second major sub-area. These guidelines cover tanks that contain high-pressure compressed gas. Depending on the pressure range, the chosen gas, the type of storage, the material of the container, and the area of application, specific standards can be found. A more detailed explanation of this will be given in the following section.
 
-=== II.3 Fundamentals of Pressure Vessels
+
+
 
 This section will first provide general basics about pressure tanks. Then, distinctions will be made so that only information relevant to #gl_("swith", pl:true) (Structural Integral Hydrogen Fuel Tanks) can be used for further work.
 

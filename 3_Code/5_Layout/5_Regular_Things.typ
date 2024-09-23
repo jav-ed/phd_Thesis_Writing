@@ -47,6 +47,7 @@
   set heading(numbering: "1.1.1")
   set math.equation(numbering: "(1)")
 
+  set quote(block: true)
 
 
 

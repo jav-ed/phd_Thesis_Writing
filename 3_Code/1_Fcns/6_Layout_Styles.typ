@@ -14,6 +14,15 @@
 #let table_cl_1 = twc_Col.gray-300
 // calc.rem()
 
+// #let color_High = blue
+// #let color_High = gray.darken(77%)
+#let color_High = twc_Col.gray-500
+
+#let color_Comment = green
+
+
+// define default color for highlighting
+#let color_Link = gray.darken(60%)
 
 // -------------------------------- hor line -------------------------------- //
 // two hor lines above and beanth the actual text in the vertical center
