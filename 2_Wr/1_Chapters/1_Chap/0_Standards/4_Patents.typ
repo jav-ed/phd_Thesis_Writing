@@ -5,6 +5,8 @@
 
 === II.8 Patents
 
+
+// TODO maybe you want to mention the patents that felix's paper had - i think you were able to find only one of them
 In the following, a brief overview of the researched patent situation will be given. In principle, patents could provide information about existing concepts similar to #gl_("swith"). Two German patents from the automotive industry state that they want to pursue the idea of a load-bearing pressure cylinder. @Stahl2017 was already published by BMW in 2015. The idea was to construct the longitudinal member as a pressure cylinder so that it could absorb both fuel and external forces. According to the description on Google Patents, the patent was withdrawn (last viewed on 18.04.2023). Patent @ChristophBechtold2019 was published by Audi in 2017 for motor vehicles with pressure cylinders. The patent description explicitly mentions that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. The idea is that the loads are introduced into the rigid pressure cylinder via pole caps attached at the ends. @fig_7 shows the sketch belonging to the patent. According to Google Patents (last visited on 18.04.2023), the patent expires on 14.12.2037 and is currently still active.
 
 #figure(

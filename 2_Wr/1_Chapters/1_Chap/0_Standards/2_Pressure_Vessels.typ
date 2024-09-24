@@ -5,19 +5,29 @@
 
 
 /* -------------------------------------------------------------------------- */
+These guidelines cover tanks that contain high-pressure compressed gas. Depending on the pressure range, the chosen gas, the type of storage, the material of the container, and the area of application, specific standards can be found. A more detailed explanation of this will be given in the following section.
+
 
 
 === Fundamentals of Pressure Vessels <chap_1_0_3>
+Besides the aviation, according to @chap_1_0_1, one of the other main domains in which #gl_("swith", pl:true) can splitted up, is the domain of the pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. Then, some distinctions will be made so that only information relevant to #gl_("swith", pl:true) can be used for further work.
+Finally, concrete standards for pressure vessels are given in @chap_1_0_6
 
 
-Pressure tank standards were mentioned as the second major sub-area. These guidelines cover tanks that contain high-pressure compressed gas. Depending on the pressure range, the chosen gas, the type of storage, the material of the container, and the area of application, specific standards can be found. A more detailed explanation of this will be given in the following section.
+The goal is to find information that could help to improve the state of the art for certifiying #gl_("swith",pl:true). 
+As motivated in @chap_1_0_6 this shall be done through commercially available standrds. Pressure tank can be regarded as the second major sub-area into which #gl_("swith", pl:true) can be distrbuted. 
+The 
+
+Pressure tanks are special containers used to store compressed gas.
+In literature and patents different pressure vessel geometries can be found @Rosen2018  @blair2015composite 
+
+test @link_Image_Type_4_Cylinder
 
 
+in various applications for the storage and transport of pressurized gases and liquids. 
+Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
 
 
-This section will first provide general basics about pressure tanks. Then, distinctions will be made so that only information relevant to #gl_("swith", pl:true) (Structural Integral Hydrogen Fuel Tanks) can be used for further work.
-
-Pressure tanks are special containers used in various applications for the storage and transport of pressurized gases and liquids. Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the K2H2 project, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
 
 The paper @barral2006hydrogen briefly reports on the development history of pressure cylinders. This will be briefly described below. Since the beginning of the 20th century, H2 has been stored in seamless steel bottles. Around the end of the 1960s, steel tubes could also be used. At this time, the so-called hydrogen embrittlement was increasingly encountered. The latter states that, through sufficiently long contact between metal and H2, the metal begins to embrittle or the structural mechanical properties, such as strength and E-modulus, are weakened.
 

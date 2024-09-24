@@ -453,6 +453,7 @@
           <group delimiter=", " suffix=".">
             <text macro="title"/>
             <text variable="container-title"/>
+            <text variable="annote"/>
           </group>
           <text macro="access"/>
         </else-if>
