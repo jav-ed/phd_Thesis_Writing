@@ -19,33 +19,65 @@ As motivated in @chap_1_0_6 this shall be done through commercially available st
 The 
 
 Pressure tanks are special containers used to store compressed gas.
-In literature and patents different pressure vessel geometries can be found @Rosen2018  @blair2015composite 
-
-test @link_Image_Type_4_Cylinder
-
-
-in various applications for the storage and transport of pressurized gases and liquids. 
-Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
-
-
-
-The paper @barral2006hydrogen briefly reports on the development history of pressure cylinders. This will be briefly described below. Since the beginning of the 20th century, H2 has been stored in seamless steel bottles. Around the end of the 1960s, steel tubes could also be used. At this time, the so-called hydrogen embrittlement was increasingly encountered. The latter states that, through sufficiently long contact between metal and H2, the metal begins to embrittle or the structural mechanical properties, such as strength and E-modulus, are weakened.
-
-Aluminum tanks were the alternative at the time, which, however, cost significantly more. With the aim of reducing the weight of the steel bottles, a partial to complete composite wrapping of the steel bottles was carried out. Due to the weight savings, the wrapped pressure vessels could now also be used mobile. The next step in development was to replace the metallic so-called liner with plastic. The composite winding is wrapped around the plastic liner.
-
-The extent to which a metallic liner differs from a plastic liner and what differences exist between the individual plastics is presented in a detailed study in @Su2021. However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
-
-The superordinate development stages of the pressure tank can be divided into tank types. @fig_4 shows all four common tank types that are available in the free market economy. Contrary to the labeling in @fig_4, tank types are usually labeled with Roman numerals in the literature. Tank type V had already been developed at the time of writing this report. However, it is the most expensive of all variants. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021, and is currently mainly used for military purposes.
-
+In literature and patents different pressure vessel geometries can be found @Rosen2018 @blair2015composite @Jaber2024. 
+An illustrative example of the commonly cylinderical shape of the pressure tanks is provided in @fig_8.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
-  width: 100%),
-  caption: [Common types of pressure vessels @Su2021.],
-) <fig_4>
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/0_Tank.png", 
+  width: 77%),
+  caption: [Illustrative example of the commonly used cylinderical shape of for a hydrogen pressure vessel @link_Image_Type_4_Cylinder.],
+) <fig_8>
+
+/* --------------------- from here to continue inshallah -------------------- */
+
+Next, with @barral2006hydrogen as the main source, briefly the development history of pressure cylinders shall be mentioned. Since the beginning of the 20th century, hydrogen (H2) has been stored in seamless steel bottles. Around the end of the 1960s, steel tubes could also be used. At this time, the so-called hydrogen embrittlement
+@Li2020 @Jia2023 @Campari2023 @Meda2023 @Gong2022
+was increasingly encountered. The latter states that, through sufficiently long contact between metal and H2, the metal begins to embrittle or the structural mechanical properties, such as strength and E-modulus, are weakened.
+
+Aluminum tanks were the alternative at the time, which, however, cost significantly more.
+With the aim of reducing the weight of the steel bottles, a partial to complete composite wrapping of the steel bottles was carried out. Due to the weight savings, the wrapped pressure vessels could now also be used mobile @Jaber2024 @Rivard2019 @khzouz2020hydrogen @Elberry2021. 
+The next step in development was to replace the metallic liner with plastic
+@Wang2021b @Jella2024 @Cheng2024
+. The composite winding is wrapped around the plastic liner.
+
+The extent to which a metallic liner differs from a plastic liner and what differences exist between the individual plastics is presented in a detailed study among others in @Su2021. 
+However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. 
+Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
+
+The superordinate development stages of the pressure tank can be divided into tank types 
+@barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024 
+. @fig_4 shows all four common tank types that are available in the free market economy. 
+Contrary to the labeling in @fig_4, tank types are usually labeled with Roman numerals in the literature
+@Wang2021b @Jella2024 @Cheng2024 @Rivard2019
+. Tank type V  @Air2023 @Air2023a had already been developed at the time of writing this thesis. However, it is the most expensive of all variants @Jaber2024. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021, and several engineering challenges needs to be overcome before they can be adopted commercially and offer a reliable alternative to Type IV tanks @Air2023.
 
 
-From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as the costs increase. Type V weighs about 20% less than Type IV @Su2021, but can only withstand a lower maximum pressure. The choice of tank depends on the pressure range, weight, and cost. Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
+From tank type I to IV, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as usally the costs increase. 
+Type V weighs about 20% less than Type IV @Su2021 and according to @Moradi2019 used to withstand a lower maximum pressure.
+However, more up to date literate @Cheng2024 states that the Type V can bear higher maximal working pressures than the Type IV.
+Moreover it is not straight forwards to give concrete statements about the costs of the tank type. 
+The reason for that among others are, different manaufacturere company have different prices.
+Depending on the choice of the liner material different costs occure @Shin2023.
+Next, desired maximal pressure deinfes the wall thickness of the tank.
+The higher the desired bearable pressure, the more material is required, which increases material usage, consequently costs and weight.
+To hihglight the complex nature of the costs, tank mass, pressure level and hydrogen storage capacties @KubilayKarayel2023 conducted multiple experimental tests, where tank Type I, III and IV were tested under different conudtions. 
+The experimental variations and the results for thes tests undertaken with the tank Type IV are depicted in @fig_9. 
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/1_Experiment.jpg", 
+  width: 77%),
+  caption: [@KubilayKarayel2023.],
+) <fig_9>
+
+For the tank Type-IV hydrogen storage tanks @KubilayKarayel2023 concluded the following.
+Increasing the pressure from 100 bar to 800 bar increased the hydrogen holding capacity by 457.7%. 
+It also would have shown that there is more than 11.7 times increase in hydrogen holding capacity in Type-IV compared to Type-III hydrogen storage tanks.
+Increasing the pressure from 100 bar to 800 bar increases the tank weight by 5.42 times. In addition, the tank weigh shows approximately 45% decrease in Type-IV storage tanks compared to Type-III tanks.
+
+
+The choice of tank depends on the pressure range, weight, and cost. 
+
+Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
 
 /* -------------------------------------------------------------------------- */
 
@@ -67,12 +99,36 @@ From tank type I to IV, the weight decreases on the one hand, and on the other h
     [I], [200],
     [II], [263],
     [III and IV], [300 – 700],
+    [V], [1000 @Cheng2024],
 
   ),
 
   kind: table,
   caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
 )<tab_0>
+
+
+
+/* -------------------------- current applicaitons -------------------------- */
+in various applications for the storage and transport of pressurized gases and liquids. 
+
+
+
+// tank type applicaiton can be found at: https://www.mdpi.com/1996-1073/16/13/5233#B55-energies-16-05233, table 4 cars and trucks
+// manufacturere mentioned as well
+Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
+
+
+
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
+  width: 100%),
+  caption: [Common types of pressure vessels @Su2021.],
+) <fig_4>
+
+
+
 /* -------------------------------------------------------------------------- */
 
 
