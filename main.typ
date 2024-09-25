@@ -8,6 +8,7 @@
 // general rules for the moment are difficult to provide. if you need to add things and the rendeing beahviour is not as expected, you might need to change the order - in a even not quite obious way
 #show: regular_layout
 
+
 // ------------------------------- cover page ------------------------------- //
 // for the cover page usally the page number is not displayed
 #set page(numbering: none)

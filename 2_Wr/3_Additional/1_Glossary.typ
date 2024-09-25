@@ -71,6 +71,14 @@
       long: [#text(weight: "bold")[L]oad #text(weight: "bold")[D]iscretization],
       desc: "Eine kontinuierliche Kraftverteilung durch einzelne Punkt- und Flächenlasten annähern bzw. approximieren.",
     ),
+
+    // TODO description missing
+    (
+      key: "cfrp",
+      short: "CFRP",
+      long: [#text(weight: "bold")[C]arbon-#text(weight: "bold")[F]iber-#text(weight: "bold")[R]einforced-#text(weight: "bold")[P]olymers],
+      desc: "Carbon-fiber-reinforced polymers",
+    ),
     (
       key: "cpu",
       short: "CPU",
