@@ -63,9 +63,9 @@ The extent to which a metallic liner differs from a plastic liner and what diffe
 However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. 
 Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
 
-The superordinate development stages of the pressure tank can be divided into tank types 
-@barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024 
-. @fig_4 shows all four common tank types that are available in the free market economy.
+The superordinate development stages of the pressure tank can be divided into tank Types 
+@barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024. 
+The four common tank types that are available in the free market economy are depicted in @fig_4.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
@@ -74,7 +74,7 @@ The superordinate development stages of the pressure tank can be divided into ta
 ) <fig_4>
 
 
-Contrary to the labeling in @fig_4, tank types are usually labeled with Roman numerals in the literature
+Contrary to the labeling in @fig_4, tank Types are usually labeled with Roman numerals (I,II, III, IV) in the literature
 @Wang2021b @Jella2024 @Cheng2024 @Rivard2019. 
 Tank type V  @Air2023 @Air2023a had already been developed at the time of writing this thesis. However, it is the most expensive of all variants @Jaber2024. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021. 
 Type V weighs about 20% less than Type IV @Su2021 and according to @Moradi2019 used to withstand a lower maximum pressure.
@@ -84,19 +84,14 @@ Yet, several engineering challenges needs to be overcome before they can be adop
 
 /* ---------------------------- general statement --------------------------- */
 From tank Type I to V, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as usally the costs increase.
-/* ---------------------------------- costs --------------------------------- */
-However, it is important such general statements need to be considered as rough view.
-Type I hydrogen tanks are made of metal only @Su2021. 
-Common metals used include steel and aluminium alloys. Because such hydrogen
-tanks are the easiest to manufacture among the five types they are generally the cheapest variant @Cheng2024.
-similar to Type I, Type II hydrogen tanks are also all-metal cylinders except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
-
+However, it is important to consider such general statements espeically with regard to the costs as rough view.
+Generally it can be said that the tank Type II costs more than the Type I and that the Types II IV and V costs more than the Types I and II. 
+First Type I tanks are made of metal only @Su2021 and common metals used include steel and aluminium alloys. Next, because such tanks are the easiest to manufacture among the five types they are generally the cheapest variant @Cheng2024.
+Furhtermore similar to Type I, Type II tanks are also all-metal cylinders except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
 However, considering the costs of the Types III and IV is more complex.
-The Types III to V are more complex to be manufactured, which by itself increases the cost. 
-Moreover the latter has an direct impact on how many companies can manufacture these types of tanks.
-Especially for the tank Types III and IV there is a relationship between maximal allowed pressure, required material and material cost to consider.
+// -------------------------------------------------------------------------- //
 
-In order to build some intuation for this initally some insights provided by @Mori2009 shall be viewed followed by some concrete compairsions made between tank Type III and IV.
+In order to build some intuation for this, initally some insights provided by @Mori2009 shall be viewed followed by some concrete compairsions made between tank Type III and IV.
 Starting with @Mori2009, he showed  that the Types III and IV tanks require less than 40% of the thickness that Type I tanks would need for a given pressue value.
 The visual depiction of this is given in @fig_11.
 
@@ -109,6 +104,7 @@ The visual depiction of this is given in @fig_11.
 Less thickness means less material, which has a benefical impact on reducing tank's weight and reducing raw material costs.
 Next, #gl_("cfrp", long:true) has lower density than steel and aluminum @Hans_Bargel_2022 @Schuermann2007 @Rossow_2014, which also has an weight reduciton impact.
 Thus, the weight of the composite tanks, not only require less material than the steel coutnerpart, but also because #gl_("cfrp") has a lower density than metal, again gains significant weight reduction.
+
 
 Next, in order to see some unexpected behavior that could arise when attempting to give general pricing rules for tank Type III and IV, results from @Cheng2024 shall be viewed.
 For that @Cheng2024 tested compared Type III with 300 and 700 bar with one Type IV 700 bar. 
@@ -125,18 +121,62 @@ However, the Type III for 350 bar is still cheaper than the 700 bar Type IV.
 ) <fig_12>
 
 
-/* -------------------------------------------------------------------------- */
-Thus general pricing infromation for exmaple were provided by @Wang2021b with saying that tank Type III and IV would cost 700 \$/kg and 633 \$/kg , respectively.
+Next, @Shin2023a conducated a detailed comparison between the costs of the tank Type III and IV. 
+It was concluded that the cost of the tank Type III was 46% higher than that
+of the type IV-a, where the appendix a stands was used internal @Shin2023a to differciate between the two different type IV variations.  
+The provided reason for this outcome was the tank Type III incurred higher
+manufacturing costs because of its aluminum liner material.
+The alumium liner required a demanding high-temperature process, which had the highest energy costs.
+The tank Type IV on the other hand used a plastic liner, which are simpler and less expensive to produce @Shin2023a.
+// -------------------------------------------------------------------------- //
 
-These statement are not acurate enough as can be shwon with some outcome of @Cheng2024. 
-Because of latter and @Wang2021b clearly mentions that he cited @Rivard2019, the work of @Rivard2019 was 
-
- himself provided a link to a document that is not available under the provided link anymore. 
+Literature like @Shin2023, who are the same two authors of @Shin2023a and @Wang2021b state that that tank Type III and IV would cost 700 \$/kg and 633 \$/kg , respectively.
+Both resouces mentioned provide these infromation in a tabular form, but do not provide addition informaiton.
+This is problematic, since it is not clear which costs are included in the numbers 700 \$/kg and 633 \$/kg.
+Costs such as raw material, liner material, energy, labor and other manufactoring costs.
+@Shin2023 and @Wang2021b refer to @Rivard2019 and @Rivard2019 himself provided a link to a document that is not available under the provided link anymore. 
 Manual search for the document based on its title and the authors only found one report that has a similar name, the same first two authors and year 2013 @Law2013.
-The reasons why the original document is required is to understand what the general pricing of 700 \$/kg and 633 \$/kg  for the tank Types III and IV, respectively.
+The reasons why the original document is required is to understand the surroudning conitions, whom without, the  general pricing of 700 \$/kg and 633 \$/kg  for the tank Types III and IV, respectively, hide the intricate nature of the cost of the tank Types III and IV.
 
+While @Shin2023 provided the mentioned \$/kg costs, it also provides a literature on the prices of hydrogen storage tanks that range from around \$500 to \$3600.
+To underscore the scientific need for the cost modeling, @Shin2023 additionaly provides a literate review on cost modeling.
+To hihglight the fact that also the choice of the liner material for the tank Type IV is an important informaiton to provide @tab_16 can be viewed.
+The complete listing can be found in @Shin2023 or at @link_plastiker.
 
-Neither @Wang2021b nor the often cited review paper @Rivard2019 explains what is meant with 700 \$/kg and 633 \$/kg  for the tank Types III and IV, respectively.
+#figure(
+  table(
+    columns: (1fr, 1fr, 1fr),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+    
+    /* --- header --- */
+    table.header[*Company*][*Liner Material*][*Raw Material Cost*],
+    /* -------------- */
+    [Hexagon Purus], [HDPE], [0.72 \$/kg],
+    [Toyota], [PA6], [3.13 \$/kg],
+    [Hyundai], [PA6], [3.13 \$/kg],
+
+  ),
+
+  kind: table,
+  caption: [Selection of a few liner materials for Type IV commercial hydrogen storage tanks @Shin2023],
+)<tab_16>
+
+To conclude the analyis about the costs especially for the tank Types III and IV, the following can be said. 
+Which type of tank is more economical depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, light-weight demands, raw material costs and other manufactoring costs.
+Also, it is important to note that even if simplified statements like 633 \$/kg would be backed up with all the required surroudning information, the relationship between required tank mass and desired pressure is not linear.
+The relationship between tank mass and pressure is depicted in 
+The also non linear relationship between hydrogen storage capacity and pressure is depicted in
+
+/* ------------------------- generate plotly figures ------------------------ */
+
+of composite materials was conducted first, as shown i
 
 
 
@@ -161,8 +201,7 @@ Increasing the pressure from 100 bar to 800 bar increased the hydrogen holding c
 It also would have shown that there is more than 11.7 times increase in hydrogen holding capacity in Type-IV compared to Type-III hydrogen storage tanks.
 Increasing the pressure from 100 bar to 800 bar increases the tank weight by 5.42 times. In addition, the tank weigh shows approximately 45% decrease in Type-IV storage tanks compared to Type-III tanks.
 
-
-The choice of tank depends on the pressure range, weight, and cost. 
+/* -------------------------------------------------------------------------- */
 
 Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
 
