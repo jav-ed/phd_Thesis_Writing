@@ -141,7 +141,7 @@ The reasons why the original document is required is to understand the surroudni
 While @Shin2023 provided the mentioned \$/kg costs, it also provides a literature on the prices of hydrogen storage tanks that range from around \$500 to \$3600.
 To underscore the scientific need for the cost modeling, @Shin2023 additionaly provides a literate review on cost modeling.
 To hihglight the fact that also the choice of the liner material for the tank Type IV is an important informaiton to provide @tab_16 can be viewed.
-The complete listing can be found in @Shin2023 or at @link_plastiker.
+The complete listing can be found in @Shin2023 or updated prices at @link_plastiker.
 
 #figure(
   table(
@@ -171,11 +171,31 @@ The complete listing can be found in @Shin2023 or at @link_plastiker.
 To conclude the analyis about the costs especially for the tank Types III and IV, the following can be said. 
 Which type of tank is more economical depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, light-weight demands, raw material costs and other manufactoring costs.
 Also, it is important to note that even if simplified statements like 633 \$/kg would be backed up with all the required surroudning information, the relationship between required tank mass and desired pressure is not linear.
-The relationship between tank mass and pressure is depicted in 
-The also non linear relationship between hydrogen storage capacity and pressure is depicted in
+The illustrative relationship between tank mass and pressure is depicted in figure 
+The also non linear relationship between hydrogen storage capacity and pressure @Yanxing2019 is depicted in figure.
+The data for both,  figure and figure are extracted from @KubilayKarayel2023 in which also their  setups is explained explained based as well on the data given in @KubilayKarayel2023
 
 /* ------------------------- generate plotly figures ------------------------ */
 
+#figure(
+  image("../../../../1_Data/2_Figs/2_Code_Created/mass_cost_type_4.svg", 
+  width: 100%),
+  caption: [@KubilayKarayel2023.],
+) <fig_13>
+
+#figure(
+  image("../../../../1_Data/2_Figs/2_Code_Created/mass_type_4.svg", 
+  width: 97%),
+  caption: [@KubilayKarayel2023.],
+) <fig_14>
+
+#figure(
+  image("../../../../1_Data/2_Figs/2_Code_Created/hydrogen_storage_type_4.svg", 
+  width: 97%),
+  caption: [@KubilayKarayel2023.],
+) <fig_15>
+
+1 2 3 4 5 6 7 8 9 0
 of composite materials was conducted first, as shown i
 
 
