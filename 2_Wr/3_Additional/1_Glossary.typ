@@ -66,6 +66,12 @@
       desc: [The EASA construction regulations are referred to as the Certification Specification (CS) @Mensen2013[p.~109].]
     ),
     (
+      key: "cgh2",
+      short: [CGH#sub[2]],
+      long: [#text(weight: "bold")[C]ompressed #text(weight: "bold")[G]aseous #text(weight: "bold")[H]ydrogen],
+      desc: [hydrogen storage methods based on the ambient temperature compressed gaseous hydrogen (CGH 2)]
+    ),
+    (
       key: "ld",
       short: "LD",
       long: [#text(weight: "bold")[L]oad #text(weight: "bold")[D]iscretization],

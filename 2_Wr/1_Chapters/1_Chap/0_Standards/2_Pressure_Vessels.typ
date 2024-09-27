@@ -177,48 +177,86 @@ Furthermore the relationship between hydrogen storage capacity and pressure is a
 The outcome of some expiremntal data from @KubilayKarayel2023 were taken to display the relationship  between hydrogen storage capacity and pressure for a tank Type IV.
 
 /* ------------------------- generate plotly figures ------------------------ */
-
-
 #figure(
   image("../../../../1_Data/2_Figs/2_Code_Created/hydrogen_storage_type_4.svg", 
   width: 97%),
-  caption: [@KubilayKarayel2023.],
+  caption: [Highlighing the non-linear relationship between pressure rise and gaseous hydrogen storage @KubilayKarayel2023.],
 ) <fig_13>
 
-1 2 3 4 5 6 7 8 9 0
-of composite materials was conducted first, as shown i
-
-// ---------------------------------- here ---------------------------------- //
-mention some of the findings @KubilayKarayel2023 had
 
 // TODO
 // figure_9 is free to use
 /* -------------------------------------------------------------------------- */
 
-The reason for that among others are, different manaufacturere company have different prices.
-Depending on the choice of the liner material different costs occure @Shin2023.
-Next, desired maximal pressure deinfes the wall thickness of the tank.
-The higher the desired bearable pressure, the more material is required, which increases material usage, consequently costs and weight.
-To hihglight the complex nature of the costs, tank mass, pressure level and hydrogen storage capacties @KubilayKarayel2023 conducted multiple experimental tests, where tank Type I, III and IV were tested under different conudtions. 
-The experimental variations and the results for thes tests undertaken with the tank Type IV are depicted in @fig_9. 
+/* -------------------------- current applicaitons -------------------------- */
+One approachable method to infer insights for deciding on a potential tank type for #gl_("swith", pl:true) is to consider pressure vessel in their current application fields @GonzalezGaray2022 @Schmidt2020.
+Hydrogen pressure vessel are known to be required among others in Submarine @barral2006hydrogen @Li2024a, aviation @link_hydro_airbus, personal vehicle  @link_hyundai_nexo @Rath2019, train @link_alstom
+Furthermore  @Rath2019 a comprehensive list of addiotnal hydrogen applications is given. Among them are additional examples for personal vehicles, electronical devices laptop, smartphone, military applications and  toys 
 
+It has been shown that tank Types I and II are  heavier than the Types III - V. 
+Due to the deire to reduce the environmental impact and reduce the cost of fuel or other driving engery in every mobility sector these high weights are undesired.
+Thus, tank of the Type I and II should be considered for statioanry application @barral2006hydrogen.
+Consequently, the remaining lighter Types III - V are more favourable for mobile application like in automtive or aerospace.
+Literatzure research confirms this statement as shown in @tab_17.
+It can be obsevered that automotive soley makes use of the tanks Type greater than II.
+The provided examples suggest that the tank Type IV has the highgest applicaiton rate for personal vehicles.
+
+
+// TODO: add references here from: A Review on the Cost Analysis of Hydrogen Gas Storage Tanks
+for Fuel Cell Vehicles
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/10_Experiment.jpg", 
-  width: 77%),
-  caption: [@KubilayKarayel2023.],
-) <fig_9>
+  table(
+    columns: (auto, auto, auto, auto, auto, auto),
+    align: center + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (x: 1em, y: 0.7em),
+    stroke: none,
+    
+    /* --- header --- */
+    table.header[*Specification*][*Hyundai NEXO (2018)*][*Hyundai ix35(2013)*][*Toyota MIRAI II (2021)*][*Honda Clarity (2016)*][*Mercedes Benz GLC (2017)*],
+    /* -------------- */
+    [Pressure [bar]], [700], [700], [700], [700], [700],
+    [Tank Type], [ IV], [ IV], [ IV], [ III], [ IV],
+    [Tank volume [liter]], [156.6 \ (52/52/52)], [140 \ (36/104)], [142.2 \ (52/25.3/64.9)], [141.3 \ (24/117)], [117 \ (-)],
+    [Tank capacity [H2 kg]], [6.33], [5.64], [5.6], [5.46], [4.4],
+    [Tank weight [kg] estimation], [111  \ (37/37/37)], [104  \ (36/104)], [-], [-], [-],
+    [Gravimetric density [wt%]], [7.18], [6.43 ], [5.7 ], [-], [5.64],
+    [Driving range [km]], [609], [415], [650], [589], [478],
+  ),
 
-For the tank Type-IV hydrogen storage tanks @KubilayKarayel2023 concluded the following.
-Increasing the pressure from 100 bar to 800 bar increased the hydrogen holding capacity by 457.7%. 
-It also would have shown that there is more than 11.7 times increase in hydrogen holding capacity in Type-IV compared to Type-III hydrogen storage tanks.
-Increasing the pressure from 100 bar to 800 bar increases the tank weight by 5.42 times. In addition, the tank weigh shows approximately 45% decrease in Type-IV storage tanks compared to Type-III tanks.
+  kind: table,
+  caption: [Examples of hydrogen vehicles and employed hydrogen tank types. The full listing can be found in @Shin2023],
+)<tab_17>
+
+Yet, the list could be incomplete and more examples could change that perspecitve. 
+However, as elabored erlier due to the higher liner costs of the tank Type III, generally, the costs of the tank Type III are higher than of the tank Type IV @Shin2023a.
+Moreover, as explained with @fig_12, for a pressure of 700bar, the Type III not only costed more than the Type IV, but it also had a higher weight.
+As a result, the tank Type IV currently allows to store the same mass of hydrogen while being lighter.
+The latter translates into that the tank Type IV offers a higher gravimetric density than the Type III.
+This observation is confirmed by the gravimetric density values in @tab_17 and literature like @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021.
+
+
+why not type V and then conclude to swith type 4 currenlty
+
+
+
+
+
+why not type I, II, III and V, but IV 
+// tank type applicaiton can be found at: https://www.mdpi.com/1996-1073/16/13/5233#B55-energies-16-05233, table 4 cars and trucks
+
+Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
+
 
 /* -------------------------------------------------------------------------- */
 
+// ------------------------------ to sum table ------------------------------ //
 Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
 
 /* -------------------------------------------------------------------------- */
 
+
+// TODO get table from Cheng2024
 #figure(
   table(
     columns: (0.3fr, 0.7fr),
@@ -245,16 +283,6 @@ Different values for the maximum bearable pressure can be found in the literatur
   caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
 )<tab_0>
 
-
-
-/* -------------------------- current applicaitons -------------------------- */
-in various applications for the storage and transport of pressurized gases and liquids. 
-
-
-
-// tank type applicaiton can be found at: https://www.mdpi.com/1996-1073/16/13/5233#B55-energies-16-05233, table 4 cars and trucks
-// manufacturere mentioned as well
-Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
 
 
 
