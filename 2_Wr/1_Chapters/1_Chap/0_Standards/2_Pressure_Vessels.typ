@@ -188,9 +188,11 @@ The outcome of some expiremntal data from @KubilayKarayel2023 were taken to disp
 1 2 3 4 5 6 7 8 9 0
 of composite materials was conducted first, as shown i
 
+// ---------------------------------- here ---------------------------------- //
+mention some of the findings @KubilayKarayel2023 had
 
-
-
+// TODO
+// figure_9 is free to use
 /* -------------------------------------------------------------------------- */
 
 The reason for that among others are, different manaufacturere company have different prices.
