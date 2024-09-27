@@ -34,7 +34,7 @@ The aviation industry is actively pursuing improvements in various aspects, with
 Among the numerous options being researched, this work explores the application of hydrogen as a potential solution. In this context, hydrogen would replace conventional fuel (kerosene) as the power source for aircraft
 @Rupcic2023 @Afonso2023 @Ansell2023 @Ficca2023 
 @Manigandan2023 @Mueller2023 @Degirmenci2023 @Eissele2023 .
-When working with hydrogen, engineers currently have two viable options: gaseous 
+When working with hydrogen, engineers currently have two economically viable options @Klell2018[p.~109] @Klell2023[p.~107] @Bosu2024: gaseous 
 //
 @Manigandan2023 @Yusaf2024 @Meissner2023
 //

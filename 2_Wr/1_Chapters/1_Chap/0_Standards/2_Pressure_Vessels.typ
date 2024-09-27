@@ -123,18 +123,18 @@ However, the Type III for 350 bar is still cheaper than the 700 bar Type IV.
 
 Next, @Shin2023a conducated a detailed comparison between the costs of the tank Type III and IV. 
 It was concluded that the cost of the tank Type III was 46% higher than that
-of the type IV-a, where the appendix a stands was used internal @Shin2023a to differciate between the two different type IV variations.  
+of the type IV-a, where the appendix a was internally used in @Shin2023a to differciate between two different type IV configurations.  
 The provided reason for this outcome was the tank Type III incurred higher
 manufacturing costs because of its aluminum liner material.
 The alumium liner required a demanding high-temperature process, which had the highest energy costs.
 The tank Type IV on the other hand used a plastic liner, which are simpler and less expensive to produce @Shin2023a.
 // -------------------------------------------------------------------------- //
 
-Literature like @Shin2023, who are the same two authors of @Shin2023a and @Wang2021b state that that tank Type III and IV would cost 700 \$/kg and 633 \$/kg , respectively.
-Both resouces mentioned provide these infromation in a tabular form, but do not provide addition informaiton.
+Literature like @Shin2023, who are the same two authors of @Shin2023a, @Muthukumar2023 and @Wang2021b state that that tank Type III and IV would cost 700 \$/kg and 633 \$/kg , respectively.
+Mentioned resouces provide these infromation in a tabular form, but do not provide addition informaiton.
 This is problematic, since it is not clear which costs are included in the numbers 700 \$/kg and 633 \$/kg.
 Costs such as raw material, liner material, energy, labor and other manufactoring costs.
-@Shin2023 and @Wang2021b refer to @Rivard2019 and @Rivard2019 himself provided a link to a document that is not available under the provided link anymore. 
+The mentioned literature refer to @Rivard2019 and in @Rivard2019 itself a link to to a document that return a 404 error message or file not found. 
 Manual search for the document based on its title and the authors only found one report that has a similar name, the same first two authors and year 2013 @Law2013.
 The reasons why the original document is required is to understand the surroudning conitions, whom without, the  general pricing of 700 \$/kg and 633 \$/kg  for the tank Types III and IV, respectively, hide the intricate nature of the cost of the tank Types III and IV.
 
@@ -170,30 +170,20 @@ The complete listing can be found in @Shin2023 or updated prices at @link_plasti
 
 To conclude the analyis about the costs especially for the tank Types III and IV, the following can be said. 
 Which type of tank is more economical depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, light-weight demands, raw material costs and other manufactoring costs.
-Also, it is important to note that even if simplified statements like 633 \$/kg would be backed up with all the required surroudning information, the relationship between required tank mass and desired pressure is not linear.
-The illustrative relationship between tank mass and pressure is depicted in figure 
-The also non linear relationship between hydrogen storage capacity and pressure @Yanxing2019 is depicted in figure.
-The data for both,  figure and figure are extracted from @KubilayKarayel2023 in which also their  setups is explained explained based as well on the data given in @KubilayKarayel2023
+Also, it is important to note that even if simplified statements like 633 \$/kg would be backed up with all the required surroudning information some important aspects need to be considered.
+The relationship between required tank mass and desired pressure is not linear as shown with experimental tests in @KubilayKarayel2023.
+Following that, the costs of tank material costs and pressure is non-linear.
+Furthermore the relationship between hydrogen storage capacity and pressure is also non-linear @KubilayKarayel2023 @Yanxing2019.
+The outcome of some expiremntal data from @KubilayKarayel2023 were taken to display the relationship  between hydrogen storage capacity and pressure for a tank Type IV.
 
 /* ------------------------- generate plotly figures ------------------------ */
 
-#figure(
-  image("../../../../1_Data/2_Figs/2_Code_Created/mass_cost_type_4.svg", 
-  width: 100%),
-  caption: [@KubilayKarayel2023.],
-) <fig_13>
-
-#figure(
-  image("../../../../1_Data/2_Figs/2_Code_Created/mass_type_4.svg", 
-  width: 97%),
-  caption: [@KubilayKarayel2023.],
-) <fig_14>
 
 #figure(
   image("../../../../1_Data/2_Figs/2_Code_Created/hydrogen_storage_type_4.svg", 
   width: 97%),
   caption: [@KubilayKarayel2023.],
-) <fig_15>
+) <fig_13>
 
 1 2 3 4 5 6 7 8 9 0
 of composite materials was conducted first, as shown i
