@@ -2,16 +2,11 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-
-
-/* -------------------------------------------------------------------------- */
-These guidelines cover tanks that contain high-pressure compressed gas. Depending on the pressure range, the chosen gas, the type of storage, the material of the container, and the area of application, specific standards can be found. A more detailed explanation of this will be given in the following section.
-
-
-
-=== Fundamentals of Pressure Vessels <chap_1_0_3>
-Besides the aviation, according to @chap_1_0_1, one of the other main domains in which #gl_("swith", pl:true) can splitted up, is the domain of the pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. Then, some distinctions will be made so that only information relevant to #gl_("swith", pl:true) can be used for further work.
-Finally, concrete standards for pressure vessels are given in @chap_1_0_6
+=== Pressure Vessel Fundamentals <chap_1_0_3>
+Besides the aviation, according to @chap_1_0_1, one of the other main domains in which #gl_("swith", pl:true) can splitted up, is the domain of the pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. Then a depth investigation intot the different available tank Types shall be given.
+Since for practical applciaiton costs and current field of applicaitons are of high importance, they are adressed.
+Having provided basis, a pathway for chosing the right tank Type for #gl_("swith", pl:true) shall be given. 
+Linking back to standrds, concrete standards for pressure vessels are given in @chap_1_0_6
 
 
 The goal is to find information that could help to improve the state of the art for certifiying #gl_("swith",pl:true). 
@@ -68,7 +63,7 @@ The superordinate development stages of the pressure tank can be divided into ta
 The four common tank types that are available in the free market economy are depicted in @fig_4.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/0_Tank_Types.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/5_Tank_Types.png", 
   width: 100%),
   caption: [Common types of pressure vessels @Su2021.],
 ) <fig_4>
@@ -117,7 +112,7 @@ However, the Type III for 350 bar is still cheaper than the 700 bar Type IV.
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/3_Type_3_4_Costs.jpg", 
   width: 100%),
-  caption: [Comparison of (a) specific costs, (b) specific weights, and (c) specific sizes of the three types of commonly used hydrogen tanks for storing 1 kg hydrogen @Cheng2024.],
+  caption: [Comparison of (a) specific costs, (b) specific weights and (c) specific sizes of the three types of commonly used hydrogen tanks for storing 1 kg hydrogen @Cheng2024.],
 ) <fig_12>
 
 
@@ -178,15 +173,12 @@ The outcome of some expiremntal data from @KubilayKarayel2023 were taken to disp
 
 /* ------------------------- generate plotly figures ------------------------ */
 #figure(
-  image("../../../../1_Data/2_Figs/2_Code_Created/hydrogen_storage_type_4.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/4_hydrogen_storage_type_4.svg", 
   width: 97%),
   caption: [Highlighing the non-linear relationship between pressure rise and gaseous hydrogen storage @KubilayKarayel2023.],
 ) <fig_13>
 
 
-// TODO
-// figure_9 is free to use
-/* -------------------------------------------------------------------------- */
 
 /* -------------------------- current applicaitons -------------------------- */
 One approachable method to infer insights for deciding on a potential tank type for #gl_("swith", pl:true) is to consider pressure vessel in their current application fields @GonzalezGaray2022 @Schmidt2020.
@@ -201,9 +193,6 @@ Literatzure research confirms this statement as shown in @tab_17.
 It can be obsevered that automotive soley makes use of the tanks Type greater than II.
 The provided examples suggest that the tank Type IV has the highgest applicaiton rate for personal vehicles.
 
-
-// TODO: add references here from: A Review on the Cost Analysis of Hydrogen Gas Storage Tanks
-for Fuel Cell Vehicles
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto, auto),
@@ -215,6 +204,23 @@ for Fuel Cell Vehicles
     /* --- header --- */
     table.header[*Specification*][*Hyundai NEXO (2018)*][*Hyundai ix35(2013)*][*Toyota MIRAI II (2021)*][*Honda Clarity (2016)*][*Mercedes Benz GLC (2017)*],
     /* -------------- */
+    [Demonstrative Image], 
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/6_HMD_NEXO_21.png", fit:"cover")
+    @link_hyundai_nexo_img],
+
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/7_hyundai.jpg", fit:"cover")
+    @link_hyundai_ix35_img],
+
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/8_Toyota_mir.png", fit:"cover")
+    @link_toyota_mirai_ii_img],
+
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/9_Honda.jpg", fit:"cover")
+    @link_honda_clarity_img],
+
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/10_Mercedes.jpg", fit:"cover")
+    @link_mercedes_glc_img],
+
+
     [Pressure [bar]], [700], [700], [700], [700], [700],
     [Tank Type], [ IV], [ IV], [ IV], [ III], [ IV],
     [Tank volume [liter]], [156.6 \ (52/52/52)], [140 \ (36/104)], [142.2 \ (52/25.3/64.9)], [141.3 \ (24/117)], [117 \ (-)],
@@ -225,7 +231,7 @@ for Fuel Cell Vehicles
   ),
 
   kind: table,
-  caption: [Examples of hydrogen vehicles and employed hydrogen tank types. The full listing can be found in @Shin2023],
+  caption: [Examples of hydrogen vehicles and employed hydrogen tank types. The full listing can be found in @Shin2023.],
 )<tab_17>
 
 Yet, the list could be incomplete and more examples could change that perspecitve. 
@@ -234,64 +240,67 @@ Moreover, as explained with @fig_12, for a pressure of 700bar, the Type III not 
 As a result, the tank Type IV currently allows to store the same mass of hydrogen while being lighter.
 The latter translates into that the tank Type IV offers a higher gravimetric density than the Type III.
 This observation is confirmed by the gravimetric density values in @tab_17 and literature like @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021.
+Concluding all the findings up to here, it can be said that the only two remaining Types of tanks that should be considered for an efficient application for #gl_("swith", pl:true)  are the Types IV and V.
 
+Next, a compartison between the Type V and IV shall be made to give some insight, which should be used when.
+First, it can be said that the costs of the Type V are higher than the Type IV. 
+Secondly, as of writign this thesis, the availbility of the tank Type V is very scarce.
+The advantages of the Type V over the tank Type IV are that the Type V is said to be 20% lighter @Su2021 and allowing pressures up to 1000 bar @Cheng2024.
+Since #gl_("swith", pl:true) is an aircraft, lightweight structres are hihgly desired.
+Next, on the first glance, the higher pressure would allow higher compression rates and thus allow more hydrogen to store.
+As a result, longer fligh ranges could be achieved and the outcome seems very postive.
+However, a careful consideration exhibits that, the higher the working pressure the more effort needs to be put on safety aspects @Yanxing2019 @Klell2023 @Zheng2012.
+For #gl_("swith", pl:true) beside the internal pressure, additional external loads needs to be withstood as well.
+Thus, making use of a Type V tank for a #gl_("swith") at the current progress is not advised.
+The pursue of developing a #gl_("swith") is a pioneers project and the tank Type V are not yet widely adopted commercial and still needs development to be considered mature @Air2023 @Air2023a.
+Combing a pioneers project with a non a mature technology should be abstained from, due to safety concerns.
+The tank Type IV vessels are more mature and actively used in commercial applications @Air2023. 
+Thus, as of writing this thesis, #gl_("swith", pl:true) should be operated with tank Type IV.
+However, once enough progress is made with tank Type V, safe utilization of the potential beenfits can be expected, the tank Type IV can be switched to Type V for #gl_("swith", pl:true) 
 
-why not type V and then conclude to swith type 4 currenlty
-
-
-
-
-
-why not type I, II, III and V, but IV 
-// tank type applicaiton can be found at: https://www.mdpi.com/1996-1073/16/13/5233#B55-energies-16-05233, table 4 cars and trucks
-
-Pressure tanks are used, among other things, in transportation, aerospace, energy and environmental technology, as well as various other research and industrial sectors. For the aim of this thesis, however, it can be clearly stated that the propulsion of the small aircraft should be carried out by hydrogen (H2). Accordingly, this work will focus exclusively on pressure tanks for the storage of hydrogen (H2).
-
-
-/* -------------------------------------------------------------------------- */
 
 // ------------------------------ to sum table ------------------------------ //
-Different values for the maximum bearable pressure can be found in the literature. However, @tab_0 can be considered as guideline values. For K2H2, tank type IV has already been chosen and is defined as a non-changeable constant for the project.
+A comprehnsive overview about the tank Types with material infromation as well as maximal bearable pressure is provided in @tab_0.
 
 /* -------------------------------------------------------------------------- */
 
 
-// TODO get table from Cheng2024
 #figure(
   table(
-    columns: (0.3fr, 0.7fr),
+    columns: (auto, auto, auto, auto, auto),
     align: center + horizon,
-    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
-    inset: (
-      x: 1em,
-      y: 0.7em,
-    ),
-    // stroke: tab_Frame(0.05em),
+    fill: (col, row) => if row <= 1 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (x: 1em, y: 0.7em),
     stroke: none,
     
     /* --- header --- */
-    table.header[*Tank Type*][*Maximum bearable pressure [bar]*],
+    table.header(
+      table.cell(rowspan: 2)[*Type*],
+      table.cell(colspan: 3)[*Materials*], table.hline(stroke: 0.05em, start:1),
+      table.cell(rowspan: 2)[*Maximum\ pressure (bar)*],
+      [*Metal*],
+      [*Composite*],
+      [*Polymer*],
+    ),
     /* -------------- */
-    [I], [200],
-    [II], [263],
-    [III and IV], [300 – 700],
-    [V], [1000 @Cheng2024],
+    [I], [Steel/Al], [/], [/], [Al: 175\ Steel: 200],
+    [II], [Steel/Al liner],[Filament windings around the cylinder part], [/], [Al/glass: 263\ Steel/carbon fibre: 299],
+    [III], [Al/Steel liner],[Composite over-wrap (fibre glass/aramid or carbon fibre)], [/], [Al/glass: 305\ Al/aramid: 438\ Al/carbon: 700],
 
+    [IV], [/], [Composite over-wrap (carbon fibre)], [Polymer liner], [350 (buses)\ 700],
+
+    [V], [/], [Composite], [/], [1000]
   ),
-
   kind: table,
-  caption: [Maximum bearable pressure values according to @khzouz2020hydrogen.],
+  caption: [Overview of tank Types with maximal bearbale pressures @Cheng2024. ],
 )<tab_0>
 
 
-
-
-
-
-// TODO
-// make clear which type of tank you want to use for the swiths
-
 /* -------------------------------------------------------------------------- */
 
+In summaray it can be said that there is a vast field of application for hydrogen pressure vessels.
+Most of the applicaiton fields are driven by the uniform goal to reduce the negative impact on the environmental.
+Having showed especially the different areas of mobility which are a major factor of economical and scientific growth the undebinable importance of hydrogen pressure vessels could be underlined.
+Furthermore, it could be observed that the #gl_("swith") developement can build upon current available advances from other mobility sectors.
+From the V known tank Types, their current fields of applications, advantages and disadvantgges could be extracted, such that it could be explained why the tank Type IV should be considered for #gl_("swith") design.
 
-In summary, it can be said that there are different tank types that come into question for different requirements. For the K2H2 project, the choice has already been made; it should be a Type IV tank.

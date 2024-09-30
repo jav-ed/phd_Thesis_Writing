@@ -444,8 +444,8 @@ def hydrogen_storage_line(pr_values_4, hydrogen_storage_4):
     # Update layout
     fig.update_layout(
         title='Hydrogen Storage Capacity: Type 4',
-        xaxis_title='Tank Pressure (bar)',
-        yaxis_title='Hydrogen Storage Capacity (kg)',
+        xaxis_title='Tank Pressure [bar]',
+        yaxis_title='Hydrogen Storage Capacity [kg]',
         hovermode="x unified"
     )
 
