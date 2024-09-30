@@ -2,65 +2,47 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-=== Pressure Vessel Fundamentals <chap_1_0_3>
-Besides the aviation, according to @chap_1_0_1, one of the other main domains in which #gl_("swith", pl:true) can splitted up, is the domain of the pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. Then a depth investigation intot the different available tank Types shall be given.
-Since for practical applciaiton costs and current field of applicaitons are of high importance, they are adressed.
-Having provided basis, a pathway for chosing the right tank Type for #gl_("swith", pl:true) shall be given. 
-Linking back to standrds, concrete standards for pressure vessels are given in @chap_1_0_6
+=== Hydrogen Pressure Vessel Fundamentals <chap_1_0_3>
+
+Besides aviation, according to @chap_1_0_1, one of the other main domains into which #gl_("swith", pl:true) can be divided is the domain of pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. 
+Then, an in-depth investigation into the different available tank types shall be presented. 
+Given this thesis's focus on real-world application, particular attention will be paid to costs and current fields of application, both critical factors in practical implementations. 
+Subsequently, a pathway for selecting the appropriate tank type for #gl_("swith", pl:true) will be outlined. 
+Linking back to industry standards, specific guidelines for pressure vessels are presented in @chap_1_0_6.
+
+// -------------------------------------------------------------------------- //
+The primary objective is to identify information that could enhance the state of the art for certifying #gl_("swith",pl:true). As motivated in @chap_1_0_6, this shall be achieved through commercially available standards. Pressure tanks can be regarded as the second major sub-area into which #gl_("swith", pl:true) can be categorized. These specialized containers are designed to safely store and deliver compressed gases under high pressure.
+The literature and patents reveal various pressure vessel geometries @Rosen2018 @blair2015composite @Jaber2024 @aceves2006advanced @Yersak2019 @Geuskens2011. One of the major motivations for developing conformable pressure vessels is to improve space utilization @aceves2006advanced. 
+Consequently, fields focused on lightweight construction, such as aerospace and automotive @Czerwinski2021 @Wang2023a @Hou2023, or areas where space is at a premium, could significantly benefit from conformable pressure vessels.
+While the aerospace industry is renowned for its emphasis on lightweight structures @Khan2024 @Chen2023 @Acanfora2023 @Okorie2023 @Seo2023, it also grapples with limited free space. Despite the substantial size of commercial aircraft, space remains a critical factor due some of the economic demands of civil aviation. Increased available space translates to either more paying passengers or additional cargo capacity. As a concrete example, conformable pressure vessels could be utilized to design structurally efficient pressure cabins for blended wing-body aircraft @Geuskens2011.
+In the automotive sector, @aceves2006advanced suggests that vehicle range can be extended by 20% to 40%, depending on the geometry of the available space and the degree of vessel conformability. Beyond optimal space utilization, conformable pressure vessels also find applications in storing non-compressible liquids @Geuskens2011.
+
+While conformable pressure vessels can assume various shapes, a demonstrative example is provided in @fig_10.
 
 
-The goal is to find information that could help to improve the state of the art for certifiying #gl_("swith",pl:true). 
-As motivated in @chap_1_0_6 this shall be done through commercially available standrds. Pressure tank can be regarded as the second major sub-area into which #gl_("swith", pl:true) can be distrbuted. 
-Pressure tanks are special containers used to store compressed gas.
-In literature and patents different pressure vessel geometries can be found 
-@Rosen2018 @blair2015composite @Jaber2024 @aceves2006advanced @Yersak2019 @Geuskens2011.
-One of the main reason why conformable pressure vessels are desired is to improve space utilization @aceves2006advanced. 
-Thus, the field of light-weigth construction
-like aerospace and automotive 
-@Czerwinski2021 @Wang2023a @Hou2023
- or fields where space is limited could benefit from conformable pressure vessels.
-While the aerospace industry is commonly known for its focus on light-weigth strucutres 
-@Khan2024 @Chen2023 @Acanfora2023 @Okorie2023 @Seo2023, 
-it also has limited free space.
-Reagrdless of the big sizes of commercially available aircraft, due to the economical demands of civil aviation, space matters.
-More available space means either more paying passengers or more carago that can transported. 
-As an concrete example, conformable pressure vessels could be utlized to design structurally efficient pressure cabin for blended wing–bodies @Geuskens2011.
-For automotive, according to @aceves2006advanced the range can be extended between 20% - 40%
-depending on the geometry of the available space and the level of conformability of the vessel.
-Besides optimital space utilization conformable pressure vessels can be used when the fluid is not a a compressible gas, but liquid @Geuskens2011.
-There are many shapes conformable pressure vessel can take, however, a deomnstrative example is provided in @fig_10.
-
+// -------------------------------------------------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/1_Conformable_Tank.png", 
   width: 60%),
-  caption: [Deomnstrative of an two cell conformable tank from Thiokol @haaland2000high.],
+  caption: [Demonstrative example of a two-cell conformable tank from Thiokol @haaland2000high.],
 ) <fig_10>
 
-Having acknolwedged some of the advantages of conformable pressure vessels, an illustrative example of the commonly cylinderical pressure tank tanks is provided in @fig_8.
+Having acknowledged some of the advantages of conformable pressure vessels, an illustrative example of cylindrical pressure tanks that are commonly used is provided in @fig_8.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/0_Tank.png", 
   width: 77%),
-  caption: [Illustrative example of the commonly used cylinderical shape of for a hydrogen pressure vessel @link_Image_Type_4_Cylinder.],
+  caption: [Illustrative example of the commonly used cylindrical shape for a hydrogen pressure vessel @link_Image_Type_4_Cylinder.],
 ) <fig_8>
 
-/* --------------------- from here to continue inshallah -------------------- */
+// -------------------------------------------------------------------------- //
 
-Next, with @barral2006hydrogen as the main source, briefly the development history of pressure cylinders shall be mentioned. Since the beginning of the 20th century, hydrogen (H2) has been stored in seamless steel bottles. Around the end of the 1960s, steel tubes could also be used. At this time, hydrogen embrittlement
-@Li2020 @Jia2023 @Campari2023 @Meda2023 @Gong2022
-was increasingly encountered. The latter states that, through sufficiently long contact between metal and H2, the metal begins to embrittle or the structural mechanical properties, such as strength and E-modulus, are weakened.
-Aluminum tanks were the alternative at the time, which, however, cost significantly more.
-With the aim of reducing the weight of the steel bottles, a partial to complete composite wrapping of the steel bottles was carried out. Due to the weight savings, the wrapped pressure vessels could now also be used mobile @Jaber2024 @Rivard2019 @khzouz2020hydrogen @Elberry2021. 
-The next step in development was to replace the metallic liner with plastic
-@Wang2021b @Jella2024 @Cheng2024
-. The composite winding is wrapped around the plastic liner.
-The extent to which a metallic liner differs from a plastic liner and what differences exist between the individual plastics is presented in a detailed study among others in @Su2021. 
-However, the most important points are: Metal has a higher density, making it more difficult for H2 to diffuse out. The disadvantage of metal, on the other hand, is its higher weight and embrittlement. 
-Depending on the choice of plastic and utilization of special effects, such as the tortuous effect (addition of fillers), significant influence can be taken on the diffusion behavior. The goal is to let as little H2 diffuse out as possible or to obtain the lowest possible diffusion rate.
-
-The superordinate development stages of the pressure tank can be divided into tank Types 
-@barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024. 
-The four common tank types that are available in the free market economy are depicted in @fig_4.
+The development history of pressure cylinders, primarily sourced from @barral2006hydrogen, reveals a progression of technological advancements. Since the early 20th century, hydrogen (H2) storage has evolved from seamless steel bottles to more sophisticated designs. By the late 1960s, steel tubes were introduced as an alternative storage method. However, this period also saw an increase in hydrogen embrittlement, a phenomenon extensively studied in recent literature @Li2020 @Jia2023 @Campari2023 @Meda2023 @Gong2022. Hydrogen embrittlement occurs when prolonged contact between metal and H2 leads to a deterioration of the metal's structural mechanical properties, including strength and elastic modulus.
+Aluminum tanks emerged as an alternative to steel, offering improved resistance to embrittlement but at a significantly higher cost. To address the weight issues associated with steel bottles, engineers developed partial to complete composite wrapping techniques. This innovation led to substantial weight reductions, enabling the use of these pressure vessels in mobile applications @Jaber2024 @Rivard2019 @khzouz2020hydrogen @Elberry2021.
+The next significant development involved replacing metallic liners with plastic ones @Wang2021b @Jella2024 @Cheng2024. In this design, composite winding encases the plastic liner. A detailed study comparing metallic and plastic liners, as well as differences among various plastics is given in @Su2021. 
+Key findings include that metals, with their higher density, provide better resistance to H2 diffusion. However, metals are heavier and more susceptible to embrittlement. The choice of plastic and the use of special effects, such as the tortuous effect (achieved by adding fillers), can significantly influence diffusion behavior. The primary objective in liner design is to minimize H2 diffusion, thereby achieving the lowest possible diffusion rate.
+The evolution of pressure tank design can be categorized into distinct tank types @barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024. 
+The four common tank types currently available in the commercial market are illustrated in @fig_4. This figure provides a visual representation of the technological progression discussed, showcasing the structural differences between each tank type and their respective materials.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/5_Tank_Types.png", 
@@ -69,73 +51,76 @@ The four common tank types that are available in the free market economy are dep
 ) <fig_4>
 
 
-Contrary to the labeling in @fig_4, tank Types are usually labeled with Roman numerals (I,II, III, IV) in the literature
-@Wang2021b @Jella2024 @Cheng2024 @Rivard2019. 
-Tank type V  @Air2023 @Air2023a had already been developed at the time of writing this thesis. However, it is the most expensive of all variants @Jaber2024. It consists exclusively of fiber-reinforced plastic, has no liner @Su2021. 
-Type V weighs about 20% less than Type IV @Su2021 and according to @Moradi2019 used to withstand a lower maximum pressure.
-However, more up to date literate @Cheng2024 states that the Type V can bear higher pressures than Type IV.
-Yet, several engineering challenges needs to be overcome before they can be adopted commercially and offer a reliable alternative to Type IV tanks @Air2023.
+It is important to note that, contrary to the labeling in @fig_4, tank types are conventionally designated using Roman numerals (I, II, III, IV) in literature @Wang2021b @Jella2024 @Cheng2024 @Rivard2019. At the time of writing this thesis, a Type V tank had also been developed @Air2023 @Air2023a. This latest iteration represents a significant advancement in pressure vessel technology, although it comes with certain trade-offs.
+The Type V tank is characterized by its composition, consisting exclusively of #gl_("cfrp", long:true) without a liner @Su2021. This design offers a notable weight reduction, with Type V tanks weighing approximately 20% less than their Type IV counterparts @Su2021. 
+Initially, Type V tanks were reported to withstand lower maximum pressures compared to Type IV @Moradi2019. Yet, more recent literature @Cheng2024 indicates that Type V tanks can now bear higher pressures than Type IV, suggesting ongoing improvements in their design and manufacturing processes.
+Despite these advancements, Type V tanks remain the most expensive variant among all tank types @Jaber2024. Moreover, their widespread commercial adoption faces several engineering challenges @Air2023. These hurdles must be overcome before Type V tanks can be considered a reliable and commercially viable alternative to the well-established Type IV tanks. The ongoing research and development in this area underscores the complex nature of pressure vessel technology and its potential for further innovation.
 
 
 /* ---------------------------- general statement --------------------------- */
-From tank Type I to V, the weight decreases on the one hand, and on the other hand, the maximum bearable pressure as well as usally the costs increase.
-However, it is important to consider such general statements espeically with regard to the costs as rough view.
-Generally it can be said that the tank Type II costs more than the Type I and that the Types II IV and V costs more than the Types I and II. 
-First Type I tanks are made of metal only @Su2021 and common metals used include steel and aluminium alloys. Next, because such tanks are the easiest to manufacture among the five types they are generally the cheapest variant @Cheng2024.
-Furhtermore similar to Type I, Type II tanks are also all-metal cylinders except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
-However, considering the costs of the Types III and IV is more complex.
-// -------------------------------------------------------------------------- //
-
-In order to build some intuation for this, initally some insights provided by @Mori2009 shall be viewed followed by some concrete compairsions made between tank Type III and IV.
-Starting with @Mori2009, he showed  that the Types III and IV tanks require less than 40% of the thickness that Type I tanks would need for a given pressue value.
-The visual depiction of this is given in @fig_11.
+A general trend can be observed across the tank Types I to V: as the type number increases, there is a decrease in weight accompanied by an increase in maximum bearable pressure and, typically, in cost. 
+However, it is important to consider such general statements, especially with regard to costs, as a rough overview.
+Generally, it can be said that the tank Type II costs more than Type I, and that Types III, IV, and V cost more than Types I and II.
+Type I tanks are made of metal only @Su2021, and common metals used include steel and aluminium alloys. Because such tanks are the easiest to manufacture among the five Types, they are generally the cheapest variant @Cheng2024.
+Furthermore, similar to Type I, Type II tanks are also all-metal cylinders, except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
+Nonetheless, considering the costs of Types III and IV is more complex.
+To build some intuition for this, initially some insights provided by @Mori2009 shall be examined, followed by concrete comparisons made between tank Types III and IV.
+In @Mori2009 it could be shown that the tank Types III and IV require less than 40% of the thickness that tank Type I would need for the same given pressure value.
+A visual depiction of this is given in @fig_11.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/2_Same_Pressure.jpg", 
   width: 50%),
-  caption: [Required wall thickness for different tank types for a pressure of 350 bar. Normalised with respect to the Type I tank @Cheng2024 @Mori2009.],
+  caption: [Required wall thickness for different tank types at a pressure of 350 bar. Normalized with respect to the Type I tank @Cheng2024 @Mori2009.],
 ) <fig_11>
 
-Less thickness means less material, which has a benefical impact on reducing tank's weight and reducing raw material costs.
-Next, #gl_("cfrp", long:true) has lower density than steel and aluminum @Hans_Bargel_2022 @Schuermann2007 @Rossow_2014, which also has an weight reduciton impact.
-Thus, the weight of the composite tanks, not only require less material than the steel coutnerpart, but also because #gl_("cfrp") has a lower density than metal, again gains significant weight reduction.
+// -------------------------------------------------------------------------- //
+Less thickness means less material, which has a beneficial impact on reducing the tank's weight and raw material costs.
+Furthermore, #gl_("cfrp") has a lower density than steel and aluminum @Hans_Bargel_2022 @Schuermann2007 @Rossow_2014, which also contributes to weight reduction.
+Thus, the composite tanks not only require less material than their steel counterparts but also achieve significant weight reduction due to the lower density of #gl_("cfrp") compared to metal.
 
-
-Next, in order to see some unexpected behavior that could arise when attempting to give general pricing rules for tank Type III and IV, results from @Cheng2024 shall be viewed.
-For that @Cheng2024 tested compared Type III with 300 and 700 bar with one Type IV 700 bar. 
-Important findings are depicted in @fig_12.
-It can be obsevered that the manufacturing costs for the tank Type III increased depending on the desired pressure.
-The impact on that the costs of cost 600 \$/kg for 350 bar increased to 1600 \$/kg for 700 bar. 
-Comapring the costs of the 700 bar tank Type III and IV, it can be noted that the Type IV is cheaper than the Type III.
-However, the Type III for 350 bar is still cheaper than the 700 bar Type IV.
+To observe some unexpected behavior that could arise when attempting to give general pricing rules for tank Types III and IV, results from @Cheng2024 shall be examined.
+@Cheng2024 compared Type III tanks at 300 and 700 bar with a Type IV tank at 700 bar. 
+Some of the important findings are depicted in @fig_12.
+It can be observed that the manufacturing costs for the Type III tank increased depending on the desired pressure.
+Specifically, the costs rose from 600 \$/kg for 350 bar to 1600 \$/kg for 700 bar. 
+Comparing the costs of the 700 bar Type III and IV tanks, it can be noted that the Type IV is cheaper than the Type III.
+Still, the Type III tank at 350 bar is still cheaper than the 700 bar Type IV tank.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/3_Type_3_4_Costs.jpg", 
   width: 100%),
-  caption: [Comparison of (a) specific costs, (b) specific weights and (c) specific sizes of the three types of commonly used hydrogen tanks for storing 1 kg hydrogen @Cheng2024.],
+  caption: [Comparison of (a) specific costs, (b) specific weights, and (c) specific sizes of three types of commonly used hydrogen tanks for storing 1 kg of hydrogen @Cheng2024.],
 ) <fig_12>
 
 
 Next, @Shin2023a conducated a detailed comparison between the costs of the tank Type III and IV. 
 It was concluded that the cost of the tank Type III was 46% higher than that
-of the type IV-a, where the appendix a was internally used in @Shin2023a to differciate between two different type IV configurations.  
+of the Type IV-a, where the appendix a was internally used in @Shin2023a to differciate between two different Type IV configurations.  
 The provided reason for this outcome was the tank Type III incurred higher
 manufacturing costs because of its aluminum liner material.
 The alumium liner required a demanding high-temperature process, which had the highest energy costs.
 The tank Type IV on the other hand used a plastic liner, which are simpler and less expensive to produce @Shin2023a.
 // -------------------------------------------------------------------------- //
 
-Literature like @Shin2023, who are the same two authors of @Shin2023a, @Muthukumar2023 and @Wang2021b state that that tank Type III and IV would cost 700 \$/kg and 633 \$/kg , respectively.
-Mentioned resouces provide these infromation in a tabular form, but do not provide addition informaiton.
-This is problematic, since it is not clear which costs are included in the numbers 700 \$/kg and 633 \$/kg.
-Costs such as raw material, liner material, energy, labor and other manufactoring costs.
-The mentioned literature refer to @Rivard2019 and in @Rivard2019 itself a link to to a document that return a 404 error message or file not found. 
-Manual search for the document based on its title and the authors only found one report that has a similar name, the same first two authors and year 2013 @Law2013.
-The reasons why the original document is required is to understand the surroudning conitions, whom without, the  general pricing of 700 \$/kg and 633 \$/kg  for the tank Types III and IV, respectively, hide the intricate nature of the cost of the tank Types III and IV.
+A detailed comparison between the costs of tank Types III and IV was conducted by @Shin2023a. 
+Their study concluded that the cost of the tank Type III was 46% higher than that
+of the Type IV-a, where the appendix 'a' was internally used to differentiate between two different Type IV configurations.  
+The provided reason for this outcome was that the tank Type III incurred higher
+manufacturing costs due to its aluminum liner material.
+The aluminum liner required a demanding high-temperature process, which had the highest energy costs.
+The tank Type IV, on the other hand, used a plastic liner, which is simpler and less expensive to produce @Shin2023a.
+Literature sources including @Shin2023 (who are the same two authors as @Shin2023a), @Muthukumar2023, and @Wang2021b state that tank Types III and IV would cost 700 \$/kg and 633 \$/kg, respectively.
+These resources provide this information in a tabular form but do not provide additional information.
+This is problematic, as it is not clear which costs are included in the figures 700 \$/kg and 633 \$/kg.
+These could include costs such as raw material, liner material, energy, labor, and other manufacturing costs.
+The mentioned literature refers to @Rivard2019, and in this source itself, a link is provided that points to a 404 error message or file not found. 
+A manual search for the document based on its title and authors only found one report that has a similar name, the same first two authors, and the year 2013 @Law2013.
+The original document is required to understand the surrounding conditions, without which the general pricing of 700 \$/kg and 633 \$/kg for tank Types III and IV, respectively, obscures the intricate nature of the costs for these tank types.
 
-While @Shin2023 provided the mentioned \$/kg costs, it also provides a literature on the prices of hydrogen storage tanks that range from around \$500 to \$3600.
-To underscore the scientific need for the cost modeling, @Shin2023 additionaly provides a literate review on cost modeling.
-To hihglight the fact that also the choice of the liner material for the tank Type IV is an important informaiton to provide @tab_16 can be viewed.
+While @Shin2023 provided the mentioned \$/kg costs, it also presents a literature review on the prices of hydrogen storage tanks that range from around \$500 to \$3600.
+To underscore the scientific need for cost modeling, @Shin2023 additionally provides a literature review on this topic.
+To highlight the fact that the choice of liner material for the tank Type IV is also important information, @tab_16 can be viewed.
 The complete listing can be found in @Shin2023 or updated prices at @link_plastiker.
 
 #figure(
@@ -160,38 +145,40 @@ The complete listing can be found in @Shin2023 or updated prices at @link_plasti
   ),
 
   kind: table,
-  caption: [Selection of a few liner materials for Type IV commercial hydrogen storage tanks @Shin2023],
+  caption: [Selection of a few liner materials for commercially available hydrogen storage tanks of Type IV @Shin2023],
 )<tab_16>
 
-To conclude the analyis about the costs especially for the tank Types III and IV, the following can be said. 
-Which type of tank is more economical depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, light-weight demands, raw material costs and other manufactoring costs.
-Also, it is important to note that even if simplified statements like 633 \$/kg would be backed up with all the required surroudning information some important aspects need to be considered.
-The relationship between required tank mass and desired pressure is not linear as shown with experimental tests in @KubilayKarayel2023.
-Following that, the costs of tank material costs and pressure is non-linear.
-Furthermore the relationship between hydrogen storage capacity and pressure is also non-linear @KubilayKarayel2023 @Yanxing2019.
-The outcome of some expiremntal data from @KubilayKarayel2023 were taken to display the relationship  between hydrogen storage capacity and pressure for a tank Type IV.
+To conclude the analysis about the costs, especially for tank Types III and IV, the following can be said. 
+The economic viability of each tank type depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, lightweight demands, raw material costs, and other manufacturing costs.
+It is important to note that even if simplified statements like 633 \$/kg were backed up with all the required surrounding information, some important aspects still need to be considered.
+The relationship between required tank mass and desired pressure is not linear, as shown with experimental tests in @KubilayKarayel2023.
+Following that, the relationship between tank material costs and pressure is non-linear.
+Furthermore, the relationship between hydrogen storage capacity and pressure is also non-linear @KubilayKarayel2023 @Yanxing2019.
+The outcome of some experimental data from @KubilayKarayel2023 was used to display the relationship between hydrogen storage capacity and pressure for a tank Type IV in @fig_13.
 
 /* ------------------------- generate plotly figures ------------------------ */
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/4_hydrogen_storage_type_4.svg", 
-  width: 97%),
-  caption: [Highlighing the non-linear relationship between pressure rise and gaseous hydrogen storage @KubilayKarayel2023.],
+  width: 100%),
+  caption: [Highlighting the non-linear relationship between pressure increase and gaseous hydrogen storage capacity @KubilayKarayel2023.],
 ) <fig_13>
 
 
 
 /* -------------------------- current applicaitons -------------------------- */
-One approachable method to infer insights for deciding on a potential tank type for #gl_("swith", pl:true) is to consider pressure vessel in their current application fields @GonzalezGaray2022 @Schmidt2020.
-Hydrogen pressure vessel are known to be required among others in Submarine @barral2006hydrogen @Li2024a, aviation @link_hydro_airbus, personal vehicle  @link_hyundai_nexo @Rath2019, train @link_alstom
-Furthermore  @Rath2019 a comprehensive list of addiotnal hydrogen applications is given. Among them are additional examples for personal vehicles, electronical devices laptop, smartphone, military applications and  toys 
 
-It has been shown that tank Types I and II are  heavier than the Types III - V. 
-Due to the deire to reduce the environmental impact and reduce the cost of fuel or other driving engery in every mobility sector these high weights are undesired.
-Thus, tank of the Type I and II should be considered for statioanry application @barral2006hydrogen.
-Consequently, the remaining lighter Types III - V are more favourable for mobile application like in automtive or aerospace.
-Literatzure research confirms this statement as shown in @tab_17.
-It can be obsevered that automotive soley makes use of the tanks Type greater than II.
-The provided examples suggest that the tank Type IV has the highgest applicaiton rate for personal vehicles.
+Having examined some of the complex relationships between tank types, costs, and performance characteristics, it is essential to consider how existing real-world applications can be translated for #gl_("swith", pl:true) applications.
+One approachable method to infer insights for this decision is to consider pressure vessels in their current application fields @GonzalezGaray2022 @Schmidt2020.
+Hydrogen pressure vessels are known to be required, among others, in submarines @barral2006hydrogen @Li2024a, aviation @link_hydro_airbus, personal vehicles @link_hyundai_nexo @Rath2019, and trains @link_alstom.
+Furthermore, @Rath2019 provides a comprehensive list of additional hydrogen applications. Among them are additional examples for personal vehicles, electronic devices such as laptops and smartphones, military applications, and toys.
+
+It has been shown that tank Types I and II are heavier than Types III - V. 
+Due to the desire to reduce environmental impact and the cost of fuel or other driving energy in every mobility sector, these high weights are undesired.
+Thus, tanks of Types I and II should be considered for stationary applications @barral2006hydrogen.
+Consequently, the remaining lighter Types III - V are more favorable for mobile applications like in automotive or aerospace sectors.
+Literature research confirms this statement, as shown in @tab_17.
+It can be observed that the automotive sector solely makes use of tank types greater than II.
+Furthermore provided examples in @tab_17 suggest that tank Type IV has the highest application rate for personal vehicles.
 
 #figure(
   table(
@@ -234,33 +221,26 @@ The provided examples suggest that the tank Type IV has the highgest applicaiton
   caption: [Examples of hydrogen vehicles and employed hydrogen tank types. The full listing can be found in @Shin2023.],
 )<tab_17>
 
-Yet, the list could be incomplete and more examples could change that perspecitve. 
-However, as elabored erlier due to the higher liner costs of the tank Type III, generally, the costs of the tank Type III are higher than of the tank Type IV @Shin2023a.
-Moreover, as explained with @fig_12, for a pressure of 700bar, the Type III not only costed more than the Type IV, but it also had a higher weight.
+Yet, the list could be incomplete and more examples could change that perspective.
+However, as elaborated earlier, due to the higher liner costs of the tank Type III, generally, the costs of the tank Type III are higher than those of the tank Type IV @Shin2023a.
+Moreover, as explained with @fig_12, for a pressure of 700 bar, the Type III not only cost more than the Type IV, but it also had a higher weight.
 As a result, the tank Type IV currently allows to store the same mass of hydrogen while being lighter.
-The latter translates into that the tank Type IV offers a higher gravimetric density than the Type III.
-This observation is confirmed by the gravimetric density values in @tab_17 and literature like @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021.
-Concluding all the findings up to here, it can be said that the only two remaining Types of tanks that should be considered for an efficient application for #gl_("swith", pl:true)  are the Types IV and V.
+The latter translates into the tank Type IV offering a higher gravimetric density than the Type III.
+This observation is confirmed by the gravimetric density values in @tab_17 and literature such as @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021.
+Concluding all the findings up to this point, it can be said that the only two remaining types of tanks that should be considered for an efficient application for #gl_("swith", pl:true) are the Types IV and V.
 
-Next, a compartison between the Type V and IV shall be made to give some insight, which should be used when.
-First, it can be said that the costs of the Type V are higher than the Type IV. 
-Secondly, as of writign this thesis, the availbility of the tank Type V is very scarce.
-The advantages of the Type V over the tank Type IV are that the Type V is said to be 20% lighter @Su2021 and allowing pressures up to 1000 bar @Cheng2024.
-Since #gl_("swith", pl:true) is an aircraft, lightweight structres are hihgly desired.
-Next, on the first glance, the higher pressure would allow higher compression rates and thus allow more hydrogen to store.
-As a result, longer fligh ranges could be achieved and the outcome seems very postive.
-However, a careful consideration exhibits that, the higher the working pressure the more effort needs to be put on safety aspects @Yanxing2019 @Klell2023 @Zheng2012.
-For #gl_("swith", pl:true) beside the internal pressure, additional external loads needs to be withstood as well.
-Thus, making use of a Type V tank for a #gl_("swith") at the current progress is not advised.
-The pursue of developing a #gl_("swith") is a pioneers project and the tank Type V are not yet widely adopted commercial and still needs development to be considered mature @Air2023 @Air2023a.
-Combing a pioneers project with a non a mature technology should be abstained from, due to safety concerns.
-The tank Type IV vessels are more mature and actively used in commercial applications @Air2023. 
-Thus, as of writing this thesis, #gl_("swith", pl:true) should be operated with tank Type IV.
-However, once enough progress is made with tank Type V, safe utilization of the potential beenfits can be expected, the tank Type IV can be switched to Type V for #gl_("swith", pl:true) 
+// -------------------------------------------------------------------------- //
+
+Next, a comparison between Type V and IV tanks shall be made to provide insight into which should be used when. First, it can be said that the costs of Type V are higher than Type IV. Secondly, as of writing this thesis, the availability of Type V tanks is very scarce.
+The advantages of Type V over Type IV are that Type V is said to be 20% lighter @Su2021 and allows pressures up to 1000 bar @Cheng2024. Since the #gl_("swith") is an aircraft, lightweight structures are kept highly desired. At first glance, the higher pressure would allow higher compression rates and thus enable more hydrogen storage. As a result, longer flight ranges could be achieved, and the outcome seems very positive.
+However, careful consideration reveals that higher working pressure requires more effort to be put into safety aspects @Yanxing2019 @Klell2023 @Zheng2012. For #gl_("swith", pl:true), besides the internal pressure, additional external loads need to be withstood as well. 
 
 
+The pursuit of developing a #gl_("swith") is a pioneering project. Combining it with Type V tanks could lead to undesired safety concerns, as these tanks are not yet widely adopted commercially and still need development to be considered mature @Air2023 @Air2023a. Given the innovative nature of #gl_("swith"), it is prudent to avoid combining it with non-mature technologies. Instead, Type IV vessels, which are more mature and actively used in commercial applications, present a safer option at this stage @Air2023.
+Consequently, as of writing this thesis, #gl_("swith", pl:true) should be operated with Type IV tanks. However, once enough progress is made with Type V tanks, safe utilization of the potential benefits can be expected, and Type IV can be switched to Type V for #gl_("swith", pl:true).
+//
 // ------------------------------ to sum table ------------------------------ //
-A comprehnsive overview about the tank Types with material infromation as well as maximal bearable pressure is provided in @tab_0.
+Finally, a comprehensive overview of the tank types with material information as well as maximum bearable pressure is provided in @tab_0.
 
 /* -------------------------------------------------------------------------- */
 
@@ -292,15 +272,16 @@ A comprehnsive overview about the tank Types with material infromation as well a
     [V], [/], [Composite], [/], [1000]
   ),
   kind: table,
-  caption: [Overview of tank Types with maximal bearbale pressures @Cheng2024. ],
+  caption: [Overview of tank types with maximal bearbale pressures @Cheng2024. ],
 )<tab_0>
 
 
 /* -------------------------------------------------------------------------- */
 
-In summaray it can be said that there is a vast field of application for hydrogen pressure vessels.
-Most of the applicaiton fields are driven by the uniform goal to reduce the negative impact on the environmental.
-Having showed especially the different areas of mobility which are a major factor of economical and scientific growth the undebinable importance of hydrogen pressure vessels could be underlined.
-Furthermore, it could be observed that the #gl_("swith") developement can build upon current available advances from other mobility sectors.
-From the V known tank Types, their current fields of applications, advantages and disadvantgges could be extracted, such that it could be explained why the tank Type IV should be considered for #gl_("swith") design.
-
+#summary_([
+In summary, it can be said that there is a vast field of application for hydrogen pressure vessels.
+Most of the application fields are driven by the uniform goal to reduce the negative impact on the environment.
+Having shown especially the different areas of mobility, which are a major factor in economic and scientific growth, the undeniable importance of hydrogen pressure vessels could be underlined.
+Furthermore, it could be observed that the #gl_("swith") development can build upon currently available advances from other mobility sectors.
+From the five known tank types, their current fields of applications, advantages, and disadvantages could be extracted. This analysis led to the conclusion that tank Type IV should be considered for #gl_("swith") design due to its maturity, commercial availability, and balance between performance and safety concerns.
+])

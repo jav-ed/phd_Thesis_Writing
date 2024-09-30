@@ -2,11 +2,34 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-=== II.5 Preliminary Development of a Structural Integral Tank from Automotive Engineering
+// TODO proper title
+=== Structural Integral Tanks In Automotive <chap_1_0_4>
 
-This section will explain why findings from automotive engineering could make an important contribution to K2H2. This will be done using a published work that dealt with integral body hydrogen tanks. First, the work will be briefly reported on, in order to be able to evaluate afterwards whether and to what extent this work allows the extraction of additional knowledge for K2H2.
+In previous @chap_1_0_3 it could be observed that espeically the automtive industry offers advancement in hydrogen-driven vehicels.
+Furthermore the automtive industry contributes with a considerable amount of literature and expertise to this field.
+In  previous @chap_1_0_3 it could also be seen that there is a substrional similatiry between the hydrogen driven auotmotive industry and aerospace.
+Both fields desire light #gl_("cfrp") tanks to store among other #gl_("cgh2", pl:true).
+Because of the provided value of the automtive industry to the realization of #gl_("swith", pl:true), a in depth study shall be cariied out.
+The objective for this subsection and this study it to find public available work from the auotmotive industry that deals with external loaded #gl_("cgh2") tanks.
+The found work needs to be investigated in depth to find potential helpful insights for the experimenteal strucutral validation tests of #gl_("swith", pl:true).
+More concretely, this subsection should contain the following.
+First, if simmilar work could be found the work needs to be explained in depth.
+Next, it shall be elaborated on wheter the found work can be leveraged for  experimenteal strucutral validation tests of #gl_("swith", pl:true) or not.
+// -------------------------------------------------------------------------- //
 
-Besides space technology, the automotive industry represents a possible alternative for adhering to known standards. According to the current state of knowledge, no flying cars are known. Thus, a significant difference between the automotive industry and aviation is that aircraft must be able to operate both on the ground and in the air at different flight altitudes. In contrast, the automotive industry produces road-bound vehicles. The vehicle industry is ahead of aviation in terms of incorporating new technologies, such as autonomous driving, object recognition, and voice control. The same applies to hydrogen-powered vehicles. There are already hydrogen cars approved for traffic. This raises the justified question of whether there are already initial concepts for structural integral hydrogen storage in automobiles. One of the main reasons for aviation lagging behind is that aviation has very many and demanding approval requirements and quality requirements. Furthermore, aircraft are significantly larger in dimensions than cars. This results in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were a lot of competition, building aircraft is a highly complex and interdisciplinary intertwined achievement. From concept to finished product, it requires significantly more time expenditure than is necessary for road vehicles.
+The insights obtained from @chap_1_0_3 can be regarded as one part of the motivation for doing a indepth investigation in the auotmotive industry for finding helpful insight for an experimenteal strucutral validation tests of #gl_("swith", pl:true).
+Nonetheless, some additional motivations shall be given.
+First, according to the current state of knowledge, no flying cars are known. Thus, a significant difference between the automotive industry and aviation remains. Namely, that the aircraft must be able to operate both on the ground and in the air at different flight altitudes. 
+In contrast, the automotive industry produces road-bound vehicles. 
+
+// TODO provide references
+Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies, such as autonomous driving, object recognition, and voice control.
+
+// TODO reference: Book1. use 2020_Wasserstoff_technik book
+//	1. p. 436 image to explain why learn from other fields is improtant
+The same applies to hydrogen-powered vehicles. 
+There are already hydrogen cars approved for traffic. This raises the justified question of whether there are already initial concepts for structural integral hydrogen storage in automobiles. One of the main reasons for aviation lagging behind is that aviation has very many and demanding approval requirements and quality requirements. 
+Furthermore, aircraft are significantly larger in dimensions than cars. This results in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were a lot of competition, building aircraft is a highly complex and interdisciplinary intertwined achievement. From concept to finished product, it requires significantly more time expenditure than is necessary for road vehicles.
 
 In the literature, a work could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this, the torsional stiffness of the body was to be increased with the help of CFRP tanks. The latter is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that a first preliminary test was carried out by Opel. In this, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent. The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. The same applies to torsion. The torsion would cause a rotation around the longitudinal axis of the cylinders. Analogously, it would only be a frictional force that would generate resistance.
 
