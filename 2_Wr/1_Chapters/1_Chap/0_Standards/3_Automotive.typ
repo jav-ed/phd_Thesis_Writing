@@ -25,7 +25,11 @@ Yet, the vehicle industry is ahead of aviation in terms of incorporating new tec
 @Zhao2024 @Chib2024 @Teng2023, object recognition
 @Caro2023 @Liu2024a @Wang2023, and 
 drive mode assistance @Suganthi2023 @Monk2023 @Hong2024.
-The same applies to hydrogen-powered vehicles as indicated with @fig_9.
+The same applies to hydrogen-powered vehicles as indicated with @fig_9 through the 
+#text(weight: "bold")[T]echnical 
+#text(weight: "bold")[R]eadiness 
+#text(weight: "bold")[L]evel (TRL).
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
   width: 77%),
@@ -41,9 +45,7 @@ Even if there were a lot of competition, building aircraft is a highly complex a
 In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this, the torsional stiffness of the body was to be increased with the help of #gl_("cfrp") tanks. 
 The latter is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that a first preliminary test was carried out by Opel. 
 In this, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent. 
-The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. 
-The same applies for a moment around the longitudinal axis. 
-The moment would cause a rotation around the longitudinal axis of the cylinders. Analogously, it would only be a frictional force that would generate resistance.
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_KFZ_Tanks.png", 
@@ -51,6 +53,9 @@ The moment would cause a rotation around the longitudinal axis of the cylinders.
   caption: [Tank configuration from the HydroGen project by Opel from @Bleser2012.],
 ) <fig_5>
 
+The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. 
+The same applies for a moment around the longitudinal axis. 
+The moment would cause a rotation around the longitudinal axis of the cylinders. Analogously, it would only be a frictional force that would generate resistance.
 
 
 To now introduce a torsion that a body experiences onto a tank, two #gl_("lie", long:true) are utlized. The concept proposed in @Bleser2012 is shown in @fig_6. 
@@ -100,7 +105,6 @@ Besides academic literature, there is also the field of patens, which could pote
 Since #gl_("swith", pl:true) are a pioneering desire and proper scientific work ethics requires to make use of all public avialable resources, research results from patens shall be presented as well.
 
 // --------------------------------- patents -------------------------------- //
-// TODO maybe you want to mention the patents that felix's paper had - i think you were able to find only one of them
 In principle, patents could provide information about existing concepts similar to #gl_("swith"). Two German patents from the automotive industry state that they want to pursue the idea of a load-bearing pressure cylinder. The first, @Stahl2017 was already published by BMW in 2015. The idea was to construct the longitudinal member as a pressure cylinder so that it could absorb both fuel and external forces. 
 According to the description on Google Patents @Stahl2017, the patent was withdrawn.
 The other, @ChristophBechtold2019 was published by Audi in 2017 for motor vehicles with pressure cylinders. The patent description explicitly mentions that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. 
