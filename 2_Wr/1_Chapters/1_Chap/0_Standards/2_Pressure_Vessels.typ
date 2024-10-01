@@ -2,7 +2,7 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-=== Hydrogen Pressure Vessel Fundamentals <chap_1_0_3>
+=== Hydrogen Pressure Vessels <chap_1_0_3>
 
 Besides aviation, according to @chap_1_0_1, one of the other main domains into which #gl_("swith", pl:true) can be divided is the domain of pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. 
 Then, an in-depth investigation into the different available tank types shall be presented. 
@@ -61,7 +61,7 @@ Despite these advancements, Type V tanks remain the most expensive variant among
 A general trend can be observed across the tank Types I to V: as the type number increases, there is a decrease in weight accompanied by an increase in maximum bearable pressure and, typically, in cost. 
 However, it is important to consider such general statements, especially with regard to costs, as a rough overview.
 Generally, it can be said that the tank Type II costs more than Type I, and that Types III, IV, and V cost more than Types I and II.
-Type I tanks are made of metal only @Su2021, and common metals used include steel and aluminium alloys. Because such tanks are the easiest to manufacture among the five Types, they are generally the cheapest variant @Cheng2024.
+Type I tanks are made of metal only @Su2021, and common metals used include steel and aluminium alloys. Because such tanks are the easiest to manufacture among the five Types, they are generally the cheapest variant @Cheng2024 @khzouz2020hydrogen.
 Furthermore, similar to Type I, Type II tanks are also all-metal cylinders, except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
 Nonetheless, considering the costs of Types III and IV is more complex.
 To build some intuition for this, initially some insights provided by @Mori2009 shall be examined, followed by concrete comparisons made between tank Types III and IV.
@@ -226,7 +226,7 @@ However, as elaborated earlier, due to the higher liner costs of the tank Type I
 Moreover, as explained with @fig_12, for a pressure of 700 bar, the Type III not only cost more than the Type IV, but it also had a higher weight.
 As a result, the tank Type IV currently allows to store the same mass of hydrogen while being lighter.
 The latter translates into the tank Type IV offering a higher gravimetric density than the Type III.
-This observation is confirmed by the gravimetric density values in @tab_17 and literature such as @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021.
+This observation is confirmed by the gravimetric density values in @tab_17 and literature such as @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021 @Wang2021b.
 Concluding all the findings up to this point, it can be said that the only two remaining types of tanks that should be considered for an efficient application for #gl_("swith", pl:true) are the Types IV and V.
 
 // -------------------------------------------------------------------------- //
@@ -240,8 +240,7 @@ The pursuit of developing a #gl_("swith") is a pioneering project. Combining it 
 Consequently, as of writing this thesis, #gl_("swith", pl:true) should be operated with Type IV tanks. However, once enough progress is made with Type V tanks, safe utilization of the potential benefits can be expected, and Type IV can be switched to Type V for #gl_("swith", pl:true).
 //
 // ------------------------------ to sum table ------------------------------ //
-Finally, a comprehensive overview of the tank types with material information as well as maximum bearable pressure is provided in @tab_0.
-
+Finally, @tab_0 provides a comprehensive overview of the tank types, including material information and maximum bearable pressure. Similar, though less detailed, information on maximum bearable pressure values for the tank types can be found in other sources, including @Wang2021b, @Jella2024, @Rivard2019, and @khzouz2020hydrogen
 /* -------------------------------------------------------------------------- */
 
 
