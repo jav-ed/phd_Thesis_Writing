@@ -25,15 +25,14 @@ Yet, the vehicle industry is ahead of aviation in terms of incorporating new tec
 @Zhao2024 @Chib2024 @Teng2023, object recognition
 @Caro2023 @Liu2024a @Wang2023, and 
 drive mode assistance @Suganthi2023 @Monk2023 @Hong2024.
-The same applies to hydrogen-powered vehicles as indicated with @fig_9 through the 
-#text(weight: "bold")[T]echnical 
-#text(weight: "bold")[R]eadiness 
-#text(weight: "bold")[L]evel (TRL).
+The same applies to hydrogen-powered vehicles as indicated with @fig_9.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
   width: 77%),
-  caption: [Technical development status of hydrogen applications in the mobility sector. The image was copied from @Schmidt2020[p.~436] and translated to english.],
+  caption: [#text(weight: "bold")[T]echnical 
+#text(weight: "bold")[R]eadiness 
+#text(weight: "bold")[L]evel (TRL) of hydrogen applications in the mobility sector. The image was copied from @Schmidt2020[p.~436] and translated to english.],
 ) <fig_9>
 
 
