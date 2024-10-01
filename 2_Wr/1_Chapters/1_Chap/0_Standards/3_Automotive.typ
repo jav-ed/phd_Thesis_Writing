@@ -114,7 +114,7 @@ The idea is that the loads are introduced into the rigid pressure cylinder via p
 
 Simmilar to the academic paper @Bleser2012, the mentioned patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. However, neither academic papers not patent descriptions from the auotmive industry propvide additional valueable insights for experimenteal strucutral validation tests of #gl_("swith", pl:true).
 Finally, for completeness, patents from the field of aviation were already mention in @chap_0_7. The only relevant patent here to mention again is @Scheffel2015.
-While @Friedmann2023 mentions 7 patents, only 2 of them could be found, which might be due to the fact, that the other five are before 1950.
+While @Friedmann2023 mentions 7 patents, only 2 of them could be found, which might be due to the fact, that the other five are before 1939.
 
 
 // -------------------------------------------------------------------------- //
