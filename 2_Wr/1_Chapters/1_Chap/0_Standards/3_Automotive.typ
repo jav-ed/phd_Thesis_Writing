@@ -2,149 +2,106 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO proper title
-=== Structural Integral Tanks In Automotive <chap_1_0_4>
+=== Structural Integral Tanks in Automotive <chap_1_0_4>
 
-In previous @chap_1_0_3 it could be observed that espeically the automtive industry offers advancement in hydrogen-driven vehicels.
-Furthermore the automtive industry contributes with a considerable amount of literature and expertise to this field.
-In  previous @chap_1_0_3 it could also be seen that there is a substrional similatiry between the hydrogen driven auotmotive industry and aerospace.
-Both fields desire light #gl_("cfrp") tanks to store among other #gl_("cgh2", pl:true).
-Because of the provided value of the automtive industry to the realization of a #gl_("swith", long:true), a in depth study shall be cariied out.
-The objective for this subsection and this study it to find public available work from the auotmotive industry that deals with external loaded #gl_("cgh2") tanks.
-The found work needs to be investigated in depth to find potential helpful insights for the experimenteal strucutral validation tests of #gl_("swith", pl:true).
-More concretely, this subsection should contain the following.
-First, if simmilar work could be found the work needs to be explained in depth.
-Next, it shall be elaborated on wheter the found work can be leveraged for experimenteal strucutral validation tests of #gl_("swith", pl:true) or not.
+In the previous @chap_1_0_3, it was observed that the automotive industry offers significant advancements in hydrogen-driven vehicles. Furthermore, this industry contributes a considerable amount of literature and expertise to the field. The previous @chap_1_0_3 also highlighted substantial similarities between the hydrogen-driven automotive industry and aerospace. Both fields desire lightweight #gl_("cfrp") tanks to store, among other things, #gl_("cgh2", pl:true). Due to the value the automotive industry provides to the realization of a #gl_("swith", long:true), an in-depth study shall be carried out.
+The objective of this subsection and study is to find publicly available work from the automotive industry that deals with externally loaded #gl_("cgh2") tanks. The identified work needs to be investigated thoroughly to find potentially helpful insights for the experimental structural validation tests of #gl_("swith", pl:true). More specifically, this subsection will address the following: First, if similar work is found, it will be explained in depth. Subsequently, it will be elaborated whether the found work can be leveraged for experimental structural validation tests of #gl_("swith", pl:true).
 // -------------------------------------------------------------------------- //
 
-The insights obtained from @chap_1_0_3 can be regarded as one part of the motivation for doing a indepth investigation in the auotmotive industry for finding helpful insight for an experimenteal strucutral validation tests of #gl_("swith", pl:true).
-Nonetheless, some additional motivations shall be given.
-First, according to the current state of knowledge, no flying cars are known. Thus, a significant difference between the automotive industry and aviation remains. Namely, that the aircraft must be able to operate both on the ground and in the air at different flight altitudes. 
-In contrast, the automotive industry produces road-bound vehicles. 
-Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023, such as autonomous driving 
-@Zhao2024 @Chib2024 @Teng2023, object recognition
-@Caro2023 @Liu2024a @Wang2023, and 
-drive mode assistance @Suganthi2023 @Monk2023 @Hong2024.
-The same applies to hydrogen-powered vehicles as indicated with @fig_9.
+The insights obtained from @chap_1_0_3 can be regarded as one part of the motivation for conducting an in-depth investigation into the automotive industry to find helpful insights for experimental structural validation tests of #gl_("swith", pl:true). Nonetheless, additional motivations shall be presented.
+First, according to the current state of knowledge, no flying cars are known to exist. Thus, a significant difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
   width: 77%),
   caption: [#text(weight: "bold")[T]echnical 
 #text(weight: "bold")[R]eadiness 
-#text(weight: "bold")[L]evel (TRL) of hydrogen applications in the mobility sector. The image was copied from @Schmidt2020[p.~436] and translated to english.],
+#text(weight: "bold")[L]evel (TRL) of hydrogen applications in the mobility sector. Image adapted and translated to English from @Schmidt2020[p.~436].],
 ) <fig_9>
 
-
-There are already hydrogen cars approved for traffic @link_hyundai_nexo_img @link_hyundai_ix35_img @link_toyota_mirai_ii_img @link_honda_clarity_img @link_mercedes_glc_img as demosntrated in @chap_1_0_3. This raises the justified question of whether there are already initial concepts for externally loaded structural integral #gl_("cgh2") tanks in the automtive industry. 
-One of the main reasons for aviation lagging behind is that aviation has very many and demanding approval requirements and quality requirements. 
-Furthermore, aircraft are significantly larger in dimensions than cars. This results in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. 
-Even if there were a lot of competition, building aircraft is a highly complex and interdisciplinary intertwined achievement. Acknowledgig the fact that road vehicles are interdisciplinary, still from concept to finished product, aircraft design, manufacturing and approval requires significantly more time expenditure than is necessary for road vehicles.
-
-In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this, the torque stiffness of the body was to be increased with the help of #gl_("cfrp") tanks. 
-The latter is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that a first preliminary test was carried out by Opel. 
-In this, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent. 
+There are already hydrogen cars approved for traffic @link_hyundai_nexo_img @link_hyundai_ix35_img @link_toyota_mirai_ii_img @link_honda_clarity_img @link_mercedes_glc_img, as demonstrated in @chap_1_0_3. This raises the justified question of whether there are already initial concepts for externally loaded structural integral #gl_("cgh2") tanks in the automotive industry. 
+One of the main reasons for aviation lagging behind is that it has numerous and demanding approval and quality requirements. Furthermore, aircraft are significantly larger in dimensions than cars, resulting in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were substantial competition, building aircraft remains a highly complex and interdisciplinary achievement. While acknowledging that road vehicles are also interdisciplinary, aircraft design, manufacturing, and approval require significantly more time from concept to finished product than is necessary for road vehicles.
+In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this work, the torque stiffness of the body was to be increased with the help of #gl_("cfrp") tanks. This is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that Opel carried out a first preliminary test. In this test, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent.
 
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_KFZ_Tanks.png", 
   width: 77%),
-  caption: [Tank configuration from the HydroGen project by Opel from @Bleser2012.],
+  caption: [Tank configuration of Opel's HydroGen4 project @Bleser2012.],
 ) <fig_5>
 
-The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. 
-The same applies for a moment around the longitudinal axis. 
-The moment would cause a rotation around the longitudinal axis of the cylinders. Analogously, it would only be a frictional force that would generate resistance.
+The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. The same applies for a moment around the longitudinal axis. Such a moment would cause rotation around the longitudinal axis of the cylinders. Analogously, only frictional force would generate resistance in this case as well.
+To introduce torque that a body experiences onto a tank, two #gl_("lie", long:true) are utilized. The concept proposed in @Bleser2012 is shown in @fig_6.
 
-
-To now introduce torque that a body experiences onto a tank, two #gl_("lie", long:true) are utlized. The concept proposed in @Bleser2012 is shown in @fig_6. 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_KFZ_Tanks.png", 
   width: 100%),
-  caption: [Concept from the automobile for introducing a torque from the body to the integral hydrogen tank @Bleser2012.],
+  caption: [Automotive concept for torque transfer from vehicle body to integral hydrogen tank @Bleser2012.],
 ) <fig_6>
 
-The shells are connecting the pressure vessel and a load-bearing part of the car's body.
-The shells, which acts as #gl_("lie", pl:true), can transfer any torque experinced by the car's body to the pressure vessel and vice versa. 
-The connection between the shells or #gl_("lie", pl:true) and the hydrogen tanks is a friction-locked connection and is created using clamping ring bands. 
-The concept certainly represents a possibility to introduce torque into #gl_("cgh2") tanks. 
-However, it requires that the clamping rings can generate sufficiently strong pressures such that a grip or adhesion between the tanks and the shells is maintined.
-Only if a proper contact between the tanks and the shells is given, force transmission via friction is possible. 
-A source of danger here could be the magnitude of the occurring torque.
-In case of a very high torque the pressure that acts on the clamping rings bands and ensures the load transfer is possible, needs to be increased accordingly.
-By doing so, the clamping pressure could become too high for the #gl_("cgh2") tanks to sustain.
-To help in understnading this concept better additional infromaiton shall be given via staic friction illustration. 
-The static friction is given in @eq_0, where $H, mu$, and $N$ are denoted as static friction force, static friction coefficient, and normal force, respectively.
+The shells connect the pressure vessel and a load-bearing part of the car's body. These shells, which act as #gl_("lie", pl:true), can transfer any torque experienced by the car's body to the pressure vessel and vice versa. The connection between the shells (or #gl_("lie", pl:true)) and the hydrogen tanks is a friction-locked connection created using clamping ring bands. 
+This concept certainly represents a possibility to introduce torque into #gl_("cgh2") tanks. However, it requires that the clamping rings can generate sufficiently strong pressures to maintain grip or adhesion between the tanks and the shells. Force transmission via friction is only possible if proper contact between the tanks and the shells is established.
+A potential source of danger could be the magnitude of the occurring torque. In the case of very high torque, the pressure acting on the clamping ring bands, which ensures load transfer, needs to be increased accordingly. However, by doing so, the clamping pressure could become too high for the #gl_("cgh2") tanks to sustain.
+To aid in understanding this concept, additional information shall be provided via static friction illustration. The static friction is given in @eq_0, where $H$, $mu$, and $N$ are denoted as static friction force, static friction coefficient, and normal force, respectively.
 
 $  H <=  mu N $<eq_0>
 
 
-The torque causes a circumferential force that would cause a sliding between hydrogen tanks and the #gl_("lie", pl:true). 
-However, for the circumferential force not to cause sliding between the shell and the tank, the ring clamping force that acts perpendicular to the circumferential force needs to be accordingly high.
-
-// ---------------------------------- here ---------------------------------- //
-Due to friction, the circumferential force invokes the static friction force $H$.
-Having demanded a static relationship, that is, no movement is allowed, this explanation explanaiton can be expressed mathematically as @eq_1, where $F_t$ denotes the circumferential force.
+The torque causes a circumferential force that would induce sliding between the hydrogen tanks and the #gl_("lie", pl:true). However, to prevent this sliding between the shell and the tank, the ring clamping force acting perpendicular to the circumferential force must be sufficiently high.
+Due to friction, the circumferential force invokes the static friction force $H$. Assuming a static relationship, where no movement is allowed, this explanation can be expressed mathematically as @eq_1, where $F_t$ denotes the circumferential force.
 
 $  F_t = H and  H <=  mu N $<eq_1>
 
-The static friction force $H$ as described in @eq_0 allows to create a relationship between two perpendicular forces, namely, the static force $H$ itself and the normal force $N$.
-While the friction force $H$ acts in the opposite direction of the circumferential force $F_t$ they need to be the same in magnitude.
-Moreover based on the current understanding of pyhsics, if one force acts in one direction, either another force same in magnitude, but rotated around 180 degree must resits for maintaining a stationary condition or movement will ocur.
-Thus, the normal force $N$ and the ring clamping force $F_c$ need to point in opposite directions, yet have the same magnitude.
-This explanation is made graphical visible through @fig_14.
+The static friction force $H$, as described in @eq_0, allows for the creation of a relationship between two perpendicular forces: the static force $H$ itself and the normal force $N$. While the friction force $H$ acts in the opposite direction of the circumferential force $F_t$, they must be equal in magnitude.
+Moreover, based on the current understanding of physics, if one force acts in a particular direction, another force of equal magnitude but opposite direction (rotated 180 degrees) must exist to maintain a stationary condition; otherwise, movement will occur. Thus, the normal force $N$ and the ring clamping force $F_c$ must point in opposite directions while having the same magnitude.
+This explanation is made visually apparent through @fig_14.
 
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_Forces.svg", 
   width: 37%),
-  caption: [Visual understanding how the circumferential force $F_t$ and the static friction force $H$ as well as the ring clamping force $F_c$ and the normal fore $N$ are related.],
+  caption: [Visualization of the relationships between circumferential force $F_t$, static friction force $H$, ring clamping force $F_c$, and normal force $N$.],
+
 ) <fig_14>
 
 
-The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu$, which is usually significantly smaller than 1. For stationary consideration, the demand is: $F_t = H = mu N$. If the equation is rearranged, the following can be concluded.
+The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu $, which is usually significantly smaller than 1 @Gross2019. For stationary consideration, the condition is: $F_t = H = mu N$. If the equation is rearranged, the following can be concluded:
 
 $ N = F_t / mu  = H/ mu $<eq_2>
 
-From @eq_2 and with $mu << 1$, it becomes clear that the necessary normal force $N$ or  ring clamping force $F_c$, depending on the friction coefficient $mu$, can turn out to be many times higher than the circumferential force $F_t$. 
-Transferred to the concept shown in @fig_6, it must be ensured that the normal forces (in radial direction) do not turn out to be too high for the tank, which among others could cause buckling of the tank @Rossow_2014 @Parello2024 @Chen2024. 
-In the case of the normal force being too small, the consequence would be a weakened to a negligibly small transfer of the torque to or from the #gl_("cgh2") tanks.
-Furthermore upon closer look at @fig_6 it can be observed that each of the two clamping ring bands is exerting pressure at only a low percentage of tank's available area.
-Consequently, the area that connects the tank with the shells is small.
-Increasing the dimensions of the clamping ring bands and ensuring that they can extert pressure on more area of the shells could offer two beenfits.
-First, when high torque needs to be transfered, effects occuring due to local overloading can be prevented.
-Second, a more reliable connection between the shells and the tanks can be expected.
-Anyhow, @Bleser2012 deomstrates different possible positions where the #gl_("cgh2") tanks could be placed and conencted with the body of the car. 
-Next, they also demonstrate which impact shell geometries ha on mass and stiffness.  Finally, the experimental investigation is mentioned in a short section.
-It can be seen that the autotmive industry also had a simmilar idea of not only using hydrogen tanks as the fuel provider, but leverage them as a integral part of the load bearing car strcutre.
-The presented work from the automtive industry introduces the idea of the potential usage of #gl_("cgh2") tanks as torque bearning vessels also in aersoapce.
-Yet, the insights obtained from @Bleser2012 cannot be directly used for a experimental strucutral validaiton test of #gl_("swith",pl:true).
 
-Besides academic literature, there is also the field of patens, which could potentially give additional helpful informaiton for experimental strucutral validaiton test of #gl_("swith",pl:true).
-Since #gl_("swith", pl:true) are a pioneering desire and proper scientific work ethics requires to make use of all public avialable resources, research results from patens shall be presented as well.
+From @eq_2 and considering that $μ << 1$, it is evident that the required normal force $N$ can reach significantly high magnitudes. Consequently, the ring clamping force $F_c$ attains the same significantly high magnitudes.
+Applied to the concept shown in @fig_6, it must be ensured that the normal forces (in radial direction) do not become too high for the tank, which could, among other effects, cause buckling of the tank @Rossow_2014 @Parello2024 @Chen2024. Conversely, if the normal force is too small, the consequence would be a weakened, possibly negligible, transfer of torque to or from the #gl_("cgh2") tanks.
+Furthermore, upon closer examination of @fig_6, it can be observed that each of the two clamping ring bands exerts pressure on only a small percentage of the tank's available area. 
+As a result, the area connecting the tank with the shells is limited. Increasing the dimensions of the clamping ring bands and ensuring they can exert pressure over a larger area of the shells could offer two benefits. First, when high torque needs to be transferred, effects occurring due to local overloading can be prevented. Second, a more reliable connection between the shells and the tanks can be expected.
+Moreover, @Bleser2012 demonstrates different possible positions where the #gl_("cgh2") tanks could be placed and connected with the body of the car. 
+They also demonstrate the impact of shell geometries on mass and stiffness. 
+Finally, the experimental investigation is briefly mentioned.
 
+It can be seen that the automotive industry also had a similar idea of not only using hydrogen tanks as fuel providers but leveraging them as an integral part of the load-bearing car structure. The presented work from the automotive industry introduces the idea of potentially using #gl_("cgh2") tanks as torque-bearing vessels in aerospace as well. However, the insights obtained from @Bleser2012 cannot be directly applied to an experimental structural validation test of #gl_("swith",pl:true).
+
+In addition to academic literature, the field of patents could offer potential insights for experimental structural validation tests of #gl_("swith", pl:true). Given that #gl_("swith", pl:true) represent a pioneering concept, and adherence to proper scientific work ethics necessitates the utilization of all publicly available resources, it is prudent to examine and present research findings from patents as well.
 // --------------------------------- patents -------------------------------- //
-In overview, patents provided information about existing concepts similar to #gl_("swith"). Two German patents from the automotive industry state that they want to pursue the idea of a load-bearing pressure cylinder. The first, @Stahl2017 was already published by BMW in 2015. 
-The idea was to construct the longitudinal member as a pressure cylinder so that it could absorb both fuel and external forces. 
-According to the description on Google Patents @Stahl2017, the patent was withdrawn, which could be to the novely and complextiy of such a endeavour.
-The other, @ChristophBechtold2019 was published by Audi in 2017 for motor vehicles with pressure cylinders. 
-The patent description explicitly mentions that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. 
-The idea is that the loads are introduced into the rigid pressure cylinder via pole caps attached at the ends. The sketch from the patent is depcited in @fig_7. According to Google Patents @ChristophBechtold2019, the patent expires on 14.12.2037 and thus is currently still active.
+The patent research provided some information about existing concepts similar to #gl_("swith"). Two German patents from the automotive industry are particularly noteworthy in their pursuit of load-bearing pressure cylinder concepts. The first, published by BMW in 2015 @Stahl2017, suggests constructing the first longitudinal structure as a pressure cylinder capable of absorbing both fuel and external forces. However, according to the description on Google Patents @Stahl2017, this patent was withdrawn, possibly due to the novelty and complexity of such an endeavor.
+The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses motor vehicles with pressure cylinders. The patent description explicitly states that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. The concept involves introducing loads into the rigid pressure cylinder via pole caps attached at the ends. The sketch from this patent is depicted in @fig_7. According to Google Patents @ChristophBechtold2019, the patent remains active until its expiration on December 14, 2037.
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/25_Patent.png", 
   width: 77%),
-  caption: [Sketch of the load-bearing pressure cylinder @ChristophBechtold2019.],
+  caption: [Schematic sketch of the load-bearing pressure cylinder design @ChristophBechtold2019.],
 ) <fig_7>
 
-Simmilar to the academic paper @Bleser2012, the mentioned patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. Based on it, some additional potential ideas of how pressuirzed vessel could be also potenitally used in aerospace could be extracted.
-However, neither academic papers not patent descriptions from the auotmive industry propvide additional valueable insights for experimenteal strucutral validation tests of #gl_("swith", pl:true).
-Finally, for completeness, patents from the field of aviation were already mention in @chap_0_7. The only relevant patent here to mention again is @Scheffel2015.
-While @Friedmann2023 mentions 7 patents, only 2 of them could be found, which might be due to the fact, that the other five are before the year 1939.
+
+Similar to the academic paper @Bleser2012, the mentioned patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. 
+Upon further consideration, these automotive concepts could potentially inspire additional load cases for integrated tanks in aerospace applications. 
+However, neither academic papers nor patent descriptions from the automotive industry provide direct additional valuable insights for experimental structural validation tests of #gl_("swith", pl:true).
+For completeness, it shall be stated that patents from the field of aviation were already mentioned in @chap_0_7. The only relevant patent to mention again is @Scheffel2015. While @Friedmann2023 mentions 7 patents, only 2 of them could be found, which might be due to the fact that the other five predate 1939.
 
 
 // -------------------------------------------------------------------------- //
-In summary, it academic work in the auotmive shows that aersoapce have comon aims.
-It could be observed that structral integral hydrogen tanks are not only interesting for avaition, but also for automotive. Yet, the available literature on this field is very scare similar to the field of aerospace.
-The only found academic paper in autotmive @Bleser2012 had its focus focus on utlizing hydrogen tanks as torque absorber and the information mention did not adress much deatails. The latter was particularly noticeable in the experimental part. So that according to the current state, no lucrative added value could be drawn from automtive academic literature for certifacvtion oriented experimenteal strucutral validation tests of #gl_("swith", pl:true).
-While more patents with the aim of using tanks as load-beaing structral integral parts, could be found, the patent descrptions as well did not provide additional informaiton for  experimenteal strucutral validation tests of #gl_("swith", pl:true).
+#summary_([
+In summary, academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks. It is evident that these tanks are of interest not only for aviation but also for automotive applications. However, the available literature in this field is scarce, mirroring the limited research in aerospace.
+The sole academic paper found in the automotive sector @Bleser2012 focused on utilizing hydrogen tanks as torque absorbers. However, the information provided lacked detail, particularly in the experimental section. Consequently, based on the current state of research, no significant added value could be derived from automotive academic literature for certification-oriented experimental structural validation tests of #gl_("swith", pl:true).
+While additional patents aimed at using tanks as load-bearing structural integral parts were identified, their descriptions did not provide substantial additional information for experimental structural validation tests of #gl_("swith", pl:true). This further underscores the need for more comprehensive research in this area across both industries.
+])
