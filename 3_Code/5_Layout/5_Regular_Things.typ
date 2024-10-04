@@ -1,6 +1,9 @@
 
 #import "../1_Fcns/0_Fcn_Main.typ": *
 
+#import "0_Utils/0_Layout_Variables.typ": * 
+
+
 
 // ----------------------------- regular_layout ----------------------------- //
 #let regular_layout(body) = {
@@ -29,9 +32,10 @@
 
   // documentation can be found at https://typst.app/docs/tutorial/writing-in-typst/
   set text(
-    font: "New Computer Modern",
+    font: chosen_font,
     // font: "Platipy",
     size: default_Font_Size,
+    weight: font_weight,
 
     lang: "en"
   )

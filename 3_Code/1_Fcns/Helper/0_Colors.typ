@@ -23,18 +23,3 @@
 
 // define default color for highlighting
 #let color_Link = gray.darken(60%)
-
-// -------------------------------- hor line -------------------------------- //
-// two hor lines above and beanth the actual text in the vertical center
-#let hor_Line(text) = {
-
-  line(length: 100%)
-  v(-0.5em)
-  [*#text*]
-  v(-0.5em)
-  line(length: 100%)
-
-}
-
-
-
