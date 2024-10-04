@@ -25,5 +25,5 @@
 
 // // not suited for pdfs
 // #let chosen_font = "Nunito"
-// #let font_weight = 600
+// #let font_weight = 400
 // #let default_Font_Size = 10pt
