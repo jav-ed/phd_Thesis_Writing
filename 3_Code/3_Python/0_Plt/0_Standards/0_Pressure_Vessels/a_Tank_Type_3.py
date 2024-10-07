@@ -48,7 +48,8 @@ pr_values_4 = data_type_4[3,:]
 def border_less(fig):
     
     chosen_text_size = 15
-    chosen_font = "CMU Serif"
+    # chosen_font = "CMU Serif"
+    chosen_font = "New Computer Modern"
     legend_title_size = chosen_text_size
     legend_entry_size = chosen_text_size-2
     

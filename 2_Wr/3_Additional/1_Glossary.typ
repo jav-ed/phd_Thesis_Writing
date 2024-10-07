@@ -60,6 +60,14 @@
       desc: [The European Union Aviation Safety Agency (EASA) is an Agency of the European Union, governed by European law. Its main activities include, among others, developing and implementing safety standards and guidelines, certifying and regulating aircraft, engines, and aeronautical products, conducting safety assessments and inspections, and collaborating with other EU agencies and international organizations @Mensen2013[p.~417].]
     ),
     (
+      key: "iso",
+      short: "ISO",
+      long: [
+        #text(weight: "bold")[I]nternational
+        #text(weight: "bold")[O]rganization for 
+        #text(weight: "bold")[S]tandardization ],
+    ),
+    (
       key: "cs",
       short: "CS",
       long: [#text(weight: "bold")[C]ertificationan Union #text(weight: "bold")[S]pecification],
@@ -78,27 +86,20 @@
       desc: "Eine kontinuierliche Kraftverteilung durch einzelne Punkt- und Flächenlasten annähern bzw. approximieren.",
     ),
 
-    // TODO description missing
     (
       key: "cfrp",
       short: "CFRP",
       long: [#text(weight: "bold")[C]arbon-#text(weight: "bold")[F]iber-#text(weight: "bold")[R]einforced-#text(weight: "bold")[P]olymers],
-      desc: "Carbon-fiber-reinforced polymers",
     ),
     (
       key: "cpu",
       short: "CPU",
       long: [#text(weight: "bold")[C]entral #text(weight: "bold")[P]rocessing #text(weight: "bold")[U]nit],
-
-      // TODO
-      // add references
-      desc: [The CPU is the primary component of a computer that performs most of the processing inside the computer. It executes computer program instructions and performs basic arithmetic, logical, control and input/output (I/O) operations specified by the instructions. The CPU is often referred to as the 'brain' of the computer. Modern CPUs are typically contain multiple processing cores, allowing for parallel processing of tasks. The performance of a CPU is generally determined by factors such as clock speed, number of cores, cache size, and instruction set architecture.],
     ),
     (
       key: "gpu",
       short: "GPU",
       long: [#text(weight: "bold")[G]raphics #text(weight: "bold")[P]rocessing #text(weight: "bold")[U]nit],
-      desc: [GPU],
       ),
     (
       key: "llm",
@@ -110,12 +111,12 @@
       key: "github",
       short: "Github",
       long: "Github",
-      desc: "https://github.com/",
+      desc: [#link("https://github.com/")[GitHub] is a web-based platform used by developers to host, manage, and collaborate on projects. It primarily focuses on version control and source code management using Git. While it's most commonly used for software development, GitHub also supports various other types of projects, including academic work like PhD theses. The platform hosts a vast number of open-source projects and facilitates collaboration among developers worldwide through features such as pull requests, issue tracking, and code reviews.],
     ),
     (
       key: "cfd",
       short: "CFD",
-      long: "Computaitonal FLuid Dynamics",
+      long: "Computaitonal Fluid Dynamics",
       desc: "Eine numerische Methode um wichitge Kenngrößen einer Strömung herauszufinden. Die Methode kann angewandt werden um beispielsweise die Auftriebsverteilung oder Widerstand eines FLugobjektes zu erhalten.",
     ),
 

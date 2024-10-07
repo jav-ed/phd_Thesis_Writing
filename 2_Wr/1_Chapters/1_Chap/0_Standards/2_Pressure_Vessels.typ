@@ -164,7 +164,6 @@ The outcome of some experimental data from @KubilayKarayel2023 was used to displ
 ) <fig_13>
 
 
-
 /* -------------------------- current applicaitons -------------------------- */
 
 Having examined some of the complex relationships between tank types, costs, and performance characteristics, it is essential to consider how existing real-world applications can be translated for #gl_("swith", pl:true) applications.

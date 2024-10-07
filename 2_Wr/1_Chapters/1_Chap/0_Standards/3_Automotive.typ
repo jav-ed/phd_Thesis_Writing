@@ -25,7 +25,7 @@ In the literature, one contribution could be found that describes the use of str
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_KFZ_Tanks.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_KFZ_Tanks.png", 
   width: 77%),
   caption: [Tank configuration of Opel's HydroGen4 project @Bleser2012.],
 ) <fig_5>
@@ -34,7 +34,7 @@ The tension bands press the cylinders against the carrier system. If a longitudi
 To introduce torque that a body experiences onto a tank, two #gl_("lie", long:true) are utilized. The concept proposed in @Bleser2012 is shown in @fig_6.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_KFZ_Tanks.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/2_KFZ_Tanks.png", 
   width: 100%),
   caption: [Automotive concept for torque transfer from vehicle body to integral hydrogen tank @Bleser2012.],
 ) <fig_6>
@@ -87,7 +87,7 @@ The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses m
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/25_Patent.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/25_Patent.png", 
   width: 77%),
   caption: [Schematic sketch of the load-bearing pressure cylinder design @ChristophBechtold2019.],
 ) <fig_7>

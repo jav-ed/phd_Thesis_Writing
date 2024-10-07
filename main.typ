@@ -53,7 +53,7 @@
 #set page(numbering: "1")
 
 
-// Font Tester
+// Font Tester - New Computer Modern is inshallah the best choice, keep it
 // #include "1_Data/4_Fonts/100_Trials/0_Font_Trial.typ"
 
 

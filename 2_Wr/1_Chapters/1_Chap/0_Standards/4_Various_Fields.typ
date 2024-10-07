@@ -3,16 +3,35 @@
 /* -------------------------------------------------------------------------- */
 
 
-=== II.6 Specific Standards from Various Fields <chap_1_0_5>
+// TODO proper title
+=== Specific Standards from Various Fields <chap_1_0_5>
 
-In the section "Preliminary Development of a Structural Integral Tank from Automotive Engineering," it was already explained that the automotive industry is ahead of aviation in some areas and pursues similar goals as aviation in some areas. Due to similar thought processes, the search was extended to other branches. Therefore, in the following, some important standards from other areas that use high-pressure tanks as a power source will be specified. In addition to these, standards for tanks in mobile applications, independent of a specific branch, will also be mentioned. Furthermore, ISO standards dealing with hydrogen applications will be named.
+In the previous @chap_1_0_4 and @chap_1_0_3 in it was explained that the automotive industry is ahead of aviation in some areas and it could be observed that they pursue similar goals as aviation. 
+Moreover it could be inspected that the usecase for hydorgen is vast.
+While the automtive industry was highlighted, it could be monitored that the mobility sector itself is one of the domains that are targeting the secure, feasible and industrial application of hydrogen.
+The goal of this subsection is provide a list of standardsn from various fields that could have potential linkings to #gl_("swith", long:true). 
+For that it shall be clearly mentioned which domains. were chosen, backed by providing reasoning for choosing these domains.
+Once a comprehensive listing is provided some essential standards shall be reasonably selected in the upcoming @chap_1_0_6.
 
-The automotive industry generally includes cars (motor vehicles), buses, and heavy goods transporters (trucks). Examples of other industrial sectors for which the use of hydrogen as a future energy source is conceivable are listed in @tab_3. It is important to note that some of these industries are actively conducting research to realize hydrogen propulsion. The motivation is the same as in aviation. The mobility and transport economic sectors are of central importance for the economy and private households. The average consumer is actively involved in burdening the environment through daily use of cars, ordering goods, etc. As these industries are heavily used, correspondingly high environmental damage occurs.
+
+
+During the whole @chap_1_0, it could be observed that there are many fields that desire a secure, feasible and industrial appliaction.
+The automotive industry being one of them, especially hihglighted in @chap_1_0_3 and @chap_1_0_4.
+Yet, the automtive industry is only one big domain under the bigger category of mobility.
+Focusing on finding standards that could provide helpful insights for #gl_("swith")-relateable standards.
+Two main reasons why focusing on mobility can be reagrded as areasoble apporachs hall be given.
+First, the #gl_("swith", pl:true) are regular aircrafts with some special modifcations. Aircrafts themselfs are a subset of mobility. Because of the latter it can be assumed hydrogen powered aircrafts offer significant similarities with other mobility sector. One concrete example for that was provided in @chap_1_0_4 through the work of Opel, reported in @Bleser2012.
+Second, economical impactful mobility sectors can be assumed to be regulated and supported through standards. Thus, availability for both, academic publications and science and goverment backed standards should be given.
+Besides targeting the mobility sector another noteworthy approach could be to investigate available standards that are dedicated especially to hydrogen applications.
+As laid out in many occasions in @chap_1_0, currently there is no single standard that could be used for the commerical certification of #gl_("swith", pl:true), and due to the sensibility found in the provided reasoning, both mentioned approaches shall be undertaken.
+
+The automotive industry generally includes cars (motor vehicles), buses, and heavy goods transporters (trucks). The mobility sector on the other hand included automotive and other mentionowrthy sectors. Examples of other mobility industrial sectors for which the use of hydrogen as a potential future energy source is are listed in @tab_3. 
+It is important to note that the mentioned industries are actively conducting research to realize hydrogen powered respective vehicles. 
 
 
 #figure(
   table(
-    columns: (0.3fr, 0.7fr),
+    columns: (auto, auto),
     align: center + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
@@ -23,31 +42,48 @@ The automotive industry generally includes cars (motor vehicles), buses, and hea
     stroke: none,
     
     /* --- header --- */
-    table.header[*Number*][*Potential Industry*],
+    table.cell(colspan: 2)[*Mobility Sector*],
     /* -------------- */
 
-    [1.], [Small to large ships],
-    [2.], [Boats],
-    [3.], [Motorcycles],
-    [4.], [Trains (Alstom)],
-    [5.], [Quadrocopters or similar small aircraft variations],
-    [6.], [Innovative flying taxis for individuals and families],
+    [Cars  @link_hyundai_nexo_img @link_hyundai_ix35_img @link_toyota_mirai_ii_img @link_honda_clarity_img @link_mercedes_glc_img @Rath2019 @Fakhreddine2023 ],
+    [Buses @Rath2019],
+    [Trains @Fakhreddine2023 @Rath2019 @link_alstom ],
+    [Motorcycles @Fakhreddine2023 @Rath2019 
+     @DieterWeigl2015 @Weigl2011 @Hwang2012 @Hwang2010 @Weigl2008   
+    ],
+    [Aircrafts @Rath2019 @link_hydro_airbus],
+    [Ships @Rath2019 @Ustolin2022],
+    [Boats @Rath2019 @Ustolin2022 @Donatini2007 @Alfonsin2014],
+    [Submarines @Ustolin2022  @barral2006hydrogen @Li2024a @Psoma2002],
+
+    [Unmaned Aerial Vehicle (UAV) @Fakhreddine2023 @DeWagter2021 @Yan2023
+    @Kucuk2024 @Tiseira2023 @Gavrilovic2024
+    ],
+
+    [Air taxi @Tiseira2023 @Desantes2022 @PonsPrats2022],
   ),
 
   kind: table,
-  caption: [Hydrogen as an energy source for propulsion of potential industries besides aviation],
+  caption: [Concrete mobility domains for hydrogen application.],
 )<tab_3>
 
+The primary motivation across the mentioned domains can be assumed to be the same as in avaition.
+It is to offer sustainable and affordable transportation to science, industry and  average consumer.
+Even the average consumer is actively involved in burdening the environment, among others, through daily use of cars, ordering goods, flying to other cities and countries in vacany. 
+A significant difference between aviation, and on ground mobility vehicles such as train, cars and motorcycles, lies in the environment conidtion of the pressure vessels. 
+While motor vehicles operate on the ground and are thus not exposed to any large pressure difference, aircraft and other aircraft must be designed for different flight altitudes @Franco2011. 
+This results in high pressure differences, which leads to higher loads in the structural design. 
+Moreover, the temperature changes with the flight attitude, ranging from 288.15 K to 233.15 K or 15 $degree$C  to -50 $degree$C for an altitude from 0 km to 10 km cruise altitude.
+According to @Rossow_2014 the maximal flight height is around 10 km to 13 km and according to @Filippone2010 most commercial airliners and business jets have final cruise altitudes well in beyond of 12 km (40,000 ft). Reaching from 0 km to 11 km the altitude range is called troposphere where the temperatre drops from 288.15 K or 15 $degree$C  to 216.65 K or -57 $degree$C.
+From 11 km to 20 km the strarosphere is reached, where no difference in temperature is to be found.
+So because the temperature remains constant between 11 km and 13 km, it can be said that aircrafts need to withstand constant temperatures between 288.15 K or 15 $degree$C  to 216.65 K or -57 $degree$C, but also variations within this range.
+There are three common atmospheric models the ICAO- @link_icao_atmposhere and the  US-Standard Atmosphere @link_us_atmposhere as well as the Norm Atmosphere DIN 5450 @lecture_notes_Entwerfen_von_Verkehrsflugzeugen_I @Butt2021.
+The temperatre provided above were obtained through the Norm Atmosphere DIN 5450.
+Note, depending on the actual location of the airport temperature on ground can be very different. 
+While 15 $degree$C might be accurate for some locations at some seasons, 15 $degree$C in Dubai in summer could be inacurrate.
 
-A significant difference between aviation, automobile, and motorcycle construction lies in the placement of the pressure vessels. While motor vehicles operate on the ground and are thus not exposed to any large pressure difference, aircraft and other aircraft must be designed for different flight altitudes. This results in high pressure differences, which leads to higher loads in the structural design. Rail vehicles, on the one hand, do not have the mentioned problem of pressure difference. On the other hand, it can be claimed that trains generally have more freely available space than aircraft. Aviation is an area strongly dominated by lightweight construction. The structure should be as light as possible while fulfilling all structural requirements with safety factors. In addition, the space should be ideally utilized so that the economic yield can be optimized by taking as many passengers and/or cargo as possible. Quadrocopters and innovative flying taxis are still too far from implementation to be comparable with functional and long-tested technologies.
-
-For the mobile use of hydrogen-powered means of transport, a significant distinction can be made: is it a light or heavy mobility solution. @tab_4 provides an overview of some of the found standards and projects that deal with compressed hydrogen as fuel for the light mobile sector. Comparables for heavy means of transportation, pressure cylinders in general without a clearly defined case for mobile application, and near-ground static pressure storage standards are given in 
-//
-// TODO
-// render it properly --> not Table 1 Tabkle 2 Table 3 but Table 1 -3
-@tab_5, @tab_6, @tab_7
-. Before further statements are made about the already mentioned standards, the ISO (International Organization for Standardization) standards, which deal exclusively with hydrogen, should be listed in @tab_8.
-
+Furthermore, similar to modern automtive Aviation is an area strongly dominated by lightweight construction. Thus, this information should be considered if hydorgen standards are taken from a non-lightweight focused are.
+Generally, for the hydrogen-powered mobility domains for transport, a significant distinction can be made: is it a light or heavy mobility solution. An overview of some of the found standards and projects that deal with #gl_("cgh2") as fuel for the light mobile sector are provided in @tab_4. Comparables for heavy means of transportation are provided in @tab_5, pressure cylinders in general without a clearly defined case for mobile application in @tab_6, near-ground static pressure storage standards in @tab_7, and the hydrogen based standards provided by #gl_("iso", long:true) are given in @tab_8.
 
 
 /* -------------------------------------------------------------------------- */
@@ -70,7 +106,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       ) ,
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Car.jpg", width: 100%) @img_Toyota],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/3_Car.jpg", width: 100%) @img_Toyota],
     
     [
       - EC79/2009 @EU_79_2009
@@ -99,7 +135,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 /* ------------------------------- heavy-duty ------------------------------- */
 #figure(
   table(
-    columns: (0.7fr, 1fr),
+    columns: (auto, auto),
     align: left + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
@@ -113,7 +149,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 2, align:center)[*Heavy-Duty vehicles*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/4_Truck.jpg", width: 60%) @img_Truck],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/7_H_Bus.png", width: 60%) @link_img_h2_bus],
     [
       - EC79/2009 @EU_79_2009
       - EC406/2010 @EU_406_2010
@@ -142,7 +178,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 3, align:center)[*Transportable tubes*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/5_Transport.jpg", width: 100%) @img_Transport],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/5_Transport.jpg", width: 100%) @img_Transport],
     [
       
       - Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR) @adr_2023
@@ -179,7 +215,7 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
       table.cell(colspan: 2, align:center)[*Ground and stationary storage*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/6_Ground.jpg", width: 100%) @img_Ground],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/6_Ground.jpg", width: 100%) @img_Ground],
     [
       - Pressure Equipment Directive (PED) @eu_ped
       - American Society of Mechanical Engineers (ASME) @asme_hydro
@@ -262,6 +298,13 @@ For the mobile use of hydrogen-powered means of transport, a significant distinc
 
 
 
-The ISO has a very good reputation internationally. This increases the chances of partial to potentially full international recognition. The standards for compressed hydrogen will only be listed. Discussing the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
+Besides the #gl_("iso") having a focus on hydrogen, another reason why #gl_("iso") hydrogen based standards are mentioned is of the very good internationally reputation that the #gl_("iso") has. This increases the chances of partial to potentially full international recognition. 
+As mention in the introduction of this subsection, the goal of of this subsection was to find potential #gl_("cgh2") standards, provide reasons for having chosen them and finally present them in an organised manner.
+Filtering the standards that have the highest potential for providing information for a #gl_("swith") certification happens in the next @chap_1_0_6 based on some chosen criteria.  
 
-It can be summarized that there are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
+
+#summary_([
+It can be summarized that a hihg number of stanadrds could be found that deal with hydrogen. While some of the found standards are already in use, others are to be updated or were just announced and needs to be published for their first time. 
+Regardless of their current status, it can be hihlgited once again, 
+Narrowing down such a high number of hydrogen norms to the most promising needs an systematic approach. 
+])
