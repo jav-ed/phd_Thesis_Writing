@@ -22,7 +22,7 @@ It is important to note that the mentioned industries are actively conducting re
   table(
     columns: (auto, auto),
     // left for better readability
-    align: left + horizon,
+    align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,

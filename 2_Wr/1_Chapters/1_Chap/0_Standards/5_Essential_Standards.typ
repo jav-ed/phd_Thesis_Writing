@@ -2,22 +2,17 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-
+// TODO Title
 === Filtering Essential Standards<chap_1_0_6>
+In previous @chap_1_0_5, an overview of standards from various areas using #gl_("cgh2", long:true) as fuel was presented. Building upon this list of options, this subsection aims to summarize the overarching categories of hydrogen applications and clearly identify the category in which #gl_("swith", long:true) is classified.
+Subsequently, a systematic approach for narrowing down the extensive list to a few essential standards is introduced. 
+These essential standards are selected based on their high potential applicability for #gl_("swith") certification. A comprehensive review of all standards is beyond the scope of this thesis. However, fundamental insights from non-aviation standards are presented to provide a basic understanding of potential tests that authorities might require for commercial certification of #gl_("swith", pl:true).
+These insights are presented in a structured and concise manner, extracted from the essential standards to reinforce their relevance. Special attention is given to the burst test, considered a crucial component of certification. 
+The analysis focuses on two key aspects: the safety factors required for the burst test and the maximum allowable nominal pressures. These parameters, derived from the findings, are critically evaluated to assess their implications for #gl_("swith") design and certification.
 
-Furthermore, going into the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
 
-Are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
-// -------------------------------------------------------------------------- //
+The three overarching categories that can be assumed to facilitate a rapid initial assessment of standards' applicability by experienced personnel are presented in @tab_9. These categories - Storage, Tank Type, and Locality - can be combined in various ways to create specific requirement profiles. For instance, a profile might include #emp_([mobile]) (Storage), #emp_([Type I]) (Tank Type), and either #emp_([air]) or #emp_([ground]) (Locality). The multitude of possible combinations necessitates careful standard selection to ensure precise alignment with the specific requirement profile. This approach allows for tailored standard application, crucial for addressing the unique demands of different hydrogen storage systems, including #gl_("swith").
 
-
-In previous @chap_1_0_5, an overview of standards from various areas using #gl_("cgh2", long:true) as fuel was provided. Having a list of options, this subsection aims to summarize the overarching categories of hydrogen applications that exist.
-Next, it shall clearly be mentioned in which of the found categories #gl_("swith", long:true) is to be classified. 
-Having done so, a systematic approach for narrowing down the long list to a few essential standards.
-These essential standards should reflect the highest potential of applicability for a #gl_("swith") certification.
-The results will be used for subsequent steps. Furthermore, general important aspects of the chosen standards will be examined. Finally, safety factors for the burst test and maximum possible nominal pressures will be recorded.
-
-The three overarching categories in @tab_9 allow for a quick initial assessment of their applicability when experienced in handling standards. Within @tab_9, various combinations can be chosen. For example, it would be possible to choose mobile, Type I and air, just as mobile, Type I and ground. Due to the numerous combination possibilities, the standard must be carefully selected to cover the requirement profile as precisely as possible.
 
 #figure(
   table(
@@ -43,19 +38,28 @@ The three overarching categories in @tab_9 allow for a quick initial assessment 
   ),
 
   kind: table,
-  caption: [Overarching tank application requirements for finding standards],
+  caption: [Overarching categories for hydrogen tank applications to guide standard selection.],
 )<tab_9>
 
 
-The choice for K2H2 is mobile, Type IV and air. It is expected that this selection should also hold true for larger aircraft. Mobile and air are to be considered constants. Type IV is significantly lighter than Types I, II and III. Arguments against tank type V are its price on the one hand and limited availability on the other. If these factors do not change, Type IV tanks can also be used for large aircraft. It follows that the results from K2H2 could also be of value to large aircraft manufacturers.
+The choice for #gl_("swith", pl:true) is mobile, Type IV, and air. The rationale for selecting Type IV is detailed in @chap_1_0_3. While Type V tanks offer potential advantages, their current limited market share affects their viability. As Type V tanks gain prominence, it can be anticipated that their maturity and safety in application will increase. Consequently, more manufacturers may emerge, potentially reducing costs. Once these conditions are met, Type V could become the preferred option.
+Comparing Type IV tanks against Types I to III, Type IV offers a significant weight advantage, particularly when contrasted with stationary Types I and II. A comprehensive analysis of the different types, including their use cases, advantages, disadvantages, and direct comparisons, is provided in @chap_1_0_3. It is important to emphasize that, at the time of writing this thesis, Type IV remains the optimal choice for #gl_("swith", pl:true).
+Furthermore, the selection of Type IV is applicable to both smaller and larger aircraft. Given that aircraft are primarily designed for air transportation, with ground operations being secondary, the #emp_([mobile]) and #emp_([air]) categories can be considered constants, irrespective of the #gl_("swith") size.
 
 The criteria by which the essential standards are to be determined are given in @tab_10. The order of the listing does not follow any weighting. The timeliness stems from the idea that the more recent the publication, the higher the probability that more knowledge from expert teams could be integrated. Standards are often revised precisely for this reason. When new insights become available, these can be seen as potential new requirements. The aim of standard issuers is always to ensure safety and functionality for people and the environment and to minimize existing gaps. It is also conceivable that existing requirements must be removed or adapted.
 
 
+// -------------------------------------------------------------------------- //
+
+The criteria for determining essential standards are presented in @tab_10. It is important to note that the order of these criteria does not imply any specific weighting. Timeliness, a key criterion, is based on the principle that more recent publications are likely to incorporate a greater breadth of knowledge from expert teams. This is often the driving force behind standard revisions: as new insights emerge, they may be integrated as potential new requirements.
+The primary objective of standard-issuing bodies is to ensure safety and functionality for both people and the environment while minimizing existing gaps in regulation. 
+This dynamic nature of standardization also means that existing requirements may need to be modified or even removed as understanding evolves. Consequently, the most recent standards often represent the most comprehensive and up-to-date guidance for technologies such as #gl_("swith", pl:true).
+
+
 #figure(
   table(
-    columns: (auto, 1fr),
-    align: (col, row) => if col == 0 { right + horizon } else { left + horizon },
+    columns: (auto, auto),
+    align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
@@ -66,16 +70,16 @@ The criteria by which the essential standards are to be determined are given in 
 
     
     /* --- header --- */
-    table.header[*Nr.*][*Criteria*],
+    table.header(table.cell(colspan:2, [*Criteria*])),
     /* -------------- */
-    [1)], [Timeliness],
-    [2)], [Actively developed],
-    [3)], [Accessibility and availability],
-    [4)], [Use in research and industry],
-    [5)], [International recognition],
-    [6)], [Europe-wide recognition],
-    [7)], [Costs for acquisition],
-    [8)], [Coverage of K2H2 requirements],
+    [1) Timeliness],
+    [2) Actively developed],
+    [3) Accessibility and availability],
+    [4) Use in research and industry],
+    [5) International recognition],
+    [6) Europe-wide recognition],
+    [7) Costs for acquisition],
+    [8) Coverage of K2H2 requirements],
   ),
 
   kind: table,
@@ -84,7 +88,7 @@ The criteria by which the essential standards are to be determined are given in 
 
 
 
-
+// TODO add the aerospace norms
 The third point, accessibility from @tab_10, is an extremely important criterion, as even excellent standards have no value for research and industry if they cannot be obtained. Points 4-6 indicate experience and successful implementation. The more frequently a standard is used and functional vehicles can be constructed and approved, the more trustworthy this standard becomes. If a standard enjoys a trustworthy reputation, it can generally be assumed that the standard is internationally recognized. Europe-wide recognition becomes important if no standards can be found that have been able to acquire high international esteem. In this case, outside of Germany, the European area would be the next possible larger target group. Costs are particularly important for start-ups, small and medium-sized research and industry institutes. The last point is to ensure that the standard meets the requirements of K2H2 to a certain extent. Understandably, any standard that does not consider the mentioned point would be completely excluded.
 
 In K2H2, three standards could be found that meet all criteria and complement each other. These are listed in @tab_11. Mandatory and optional tests from ISO 11119-3:2020 are given as an example in @tab_12 and @tab_13.
@@ -216,4 +220,13 @@ For glass, aramid and carbon, the factors are 3.5, 3.0 and 2.25. It follows that
 )<tab_14>
 
 
+
+
 In summary, it can be said that three essential standards could be selected for K2H2. The three filtered standards cannot be directly applied to aviation, but provide important indications for K2H2. It was also explained that the working nominal pressure, depending on the standard considered, can be chosen up to a maximum of 525 bar. This limitation is justified by the fact that existing test facilities cannot generate arbitrarily high pressures for experimental verification.
+
+
+
+Furthermore, going into the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
+
+Are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
+// -------------------------------------------------------------------------- //
