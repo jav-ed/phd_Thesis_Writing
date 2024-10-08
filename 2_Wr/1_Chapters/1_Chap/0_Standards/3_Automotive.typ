@@ -2,6 +2,7 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+
 === Structural Integral Tanks in Automotive <chap_1_0_4>
 
 In the previous @chap_1_0_3, it was observed that the automotive industry offers significant advancements in hydrogen-driven vehicles. Furthermore, this industry contributes a considerable amount of literature and expertise to the field. The previous @chap_1_0_3 also highlighted substantial similarities between the hydrogen-driven automotive industry and aerospace. Both fields desire lightweight #gl_("cfrp") tanks to store, among other things, #gl_("cgh2", pl:true). Due to the value the automotive industry provides to the realization of a #gl_("swith", long:true), an in-depth study shall be carried out.
