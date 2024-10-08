@@ -5,13 +5,17 @@
 
 === Filtering Essential Standards<chap_1_0_6>
 
-Furthermore going into the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
+Furthermore, going into the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
 
-are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
+Are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
 // -------------------------------------------------------------------------- //
 
 
-In the previous section, an overview of standards from various areas using compressed hydrogen as fuel was provided. This segment aims to summarize the overarching categories of hydrogen applications that exist and how the application in K2H2 is to be classified. Following this, criteria for filtering the essential standards from the many possible standards will be named and applied. The results will be used for subsequent steps. Furthermore, general important aspects of the chosen standards will be examined. Finally, safety factors for the burst test and maximum possible nominal pressures will be recorded.
+In previous @chap_1_0_5, an overview of standards from various areas using #gl_("cgh2", long:true) as fuel was provided. Having a list of options, this subsection aims to summarize the overarching categories of hydrogen applications that exist.
+Next, it shall clearly be mentioned in which of the found categories #gl_("swith", long:true) is to be classified. 
+Having done so, a systematic approach for narrowing down the long list to a few essential standards.
+These essential standards should reflect the highest potential of applicability for a #gl_("swith") certification.
+The results will be used for subsequent steps. Furthermore, general important aspects of the chosen standards will be examined. Finally, safety factors for the burst test and maximum possible nominal pressures will be recorded.
 
 The three overarching categories in @tab_9 allow for a quick initial assessment of their applicability when experienced in handling standards. Within @tab_9, various combinations can be chosen. For example, it would be possible to choose mobile, Type I and air, just as mobile, Type I and ground. Due to the numerous combination possibilities, the standard must be carefully selected to cover the requirement profile as precisely as possible.
 
