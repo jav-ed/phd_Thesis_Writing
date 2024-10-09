@@ -5,11 +5,38 @@
 
 //TODO
 // the intro for the section needs to be checked again
+// make sure that the given references here actuall work as intented to
+// get proper title Hydrogen alone might not suffice, if the curvature study is included here
 == Hydrogen <chap_2_0>
+A complete definition and the state of the art regarding #gl_("swith", long:true) were given in @chap_0_7.
+In @chap_1_0 an in-depth study was undertaken to present the state of the art of standards and regulations gearing towards the commerical certification of #gl_("swith", long:true).
+Some of the infromaiton found in @chap_1_0 will be used in this section to motivate and reason with for undertaken steps.
+
+Forn this section, first the pioneering approach of evaluating the integration of hydrogen tanks as a load-carrying
+component into an aircraft wing's structure, the study of the fundamental properties of hydrogen shall be initally motivated and then the analyse shall be carried out in @chap_2_0_0. 
+Next, special attention is given to the Safety-Relevant Characteristics of #gl_("cgh2",long:true) in @chap_2_0_1.
+Following that  Experiments and Simulation with Hydrogen is adressed in @chap_2_0_2.
+Next highlights important findings regarding External Dynamic Load on Pressure Vessels in @chap_2_0_3
+
+
 
 === Introductory Properties of Hydrogen <chap_2_0_0>
 
-The testing of wings with hydrogen tanks is a significant novelty aspect in K2H2, which is why the basic properties of hydrogen should be discussed. Safety-relevant hydrogen properties will be addressed in a separate following section and evaluated for K2H2.
+Such understanding is essential to comprehending why hydrogen exhibits such remarkable
+properties, making it a promising alternative fuel option. Properties of hydrogen that hold rele-
+vance to safety aspects are scrutinized separately in section 3. For the sake of convenience, all
+principal information of this section is compiled and presented in Table 1.
+
+Some of these standards permit the pressure vessel to be filled with substances other than hydrogen,
+while others insist on the use of hydrogen as the filling agent. As such, the natural progression
+is to gain a comprehensive understanding of hydrogen’s properties.
+
+
+Due to the innovative nature of #gl_("swith", long:true), scholarly investigation should not only focus on standrds adn regualtions as done in @chap_1_0 but also especially focus  on hydrogen's impact on #gl_("swith", pl:true). Since work around this topic is conspicuously scarce. 
+This notable void in academic discourse underscores the importance of this study, aiming to contribute to a deeper understanding of #gl_("swith", pl:true) and their interactions with hydrogen.
+
+// -------------------------------------------------------------------------- //
+The testing of wings with hydrogen tanks is a significant novelty aspect in thi thesis, which is why the basic properties of hydrogen should be discussed. Safety-relevant hydrogen properties will be addressed in a separate following section and evaluated for K2H2.
 
 Table 22 lists the first important and safety-wise harmless properties of hydrogen.
 

@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 
-===  II.12 Pressurized Bodies with External Dynamic Loading
+===  II.12 Pressurized Bodies with External Dynamic Loading<chap_2_0_3>
 
 Although nothing could be found in the literature about #gl_("swith", pl:true), structurally integral tanks, regardless of the filling medium, can initially be assumed to be tanks with external loading. Through this assumption, a literature search can be conducted to obtain information on the structural behavior of pressurized cylinders with external loading. In this section, some important results in this regard will be presented.
 
