@@ -33,16 +33,15 @@ The aviation industry is actively pursuing improvements in various aspects, with
 @Rupcic2023 @Afonso2023 @Ansell2023 @Abrantes2024 @Ficca2023.
 Among the numerous options being researched, this work explores the application of hydrogen as a potential solution. In this context, hydrogen would replace conventional fuel (kerosene) as the power source for aircraft
 @Rupcic2023 @Afonso2023 @Ansell2023 @Ficca2023 
-@Manigandan2023 @Mueller2023 @Degirmenci2023 @Eissele2023 .
+@Manigandan2023 @Mueller2023 @Degirmenci2023 @Eissele2023.
 When working with hydrogen, engineers currently have two economically viable options @Klell2018[p.~109] @Klell2023[p.~107] @Bosu2024: gaseous 
 //
 @Manigandan2023 @Yusaf2024 @Meissner2023
 //
 and liquid hydrogen
 //
-@Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024 
-//
-. This work focuses on gaseous hydrogen. To achieve a feasible flight range, the hydrogen must be stored under very high pressure. A simplified explanation is that gas can be compressed, and high pressure allows for storing comparatively more hydrogen within a given constant volume. Due to the high pressure, pressure-resistant hydrogen storage systems are required.
+@Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024. 
+This work focuses on gaseous hydrogen. To achieve a feasible flight range, the hydrogen must be stored under very high pressure. A simplified explanation is that gas can be compressed, and high pressure allows for storing comparatively more hydrogen within a given constant volume. Due to the high pressure, pressure-resistant hydrogen storage systems are required.
 
 The obvious approach would be to allocate a secure space for storing hydrogen tanks within the aircraft
 @Eissele2023 @Adler2024.

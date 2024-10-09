@@ -37,7 +37,7 @@ Moreover, standards form the basis for certification procedures, ensuring that #
 As the development of comprehensive standards proves essential for #gl_("swith", pl:true) implementation and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gl_("swith") development offers several key benefits that extend beyond mere regulatory compliance
 Firstly, it provides a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
 Furthermore the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
-Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017 . 
+Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017. 
 This is particularly important for #gl_("swith", pl:true), where the integration of high-pressure hydrogen storage with critical aircraft structures presents unique safety considerations. 
 Lastly they offer a framework for systematic evaluation and validation, indispensable for ensuring the safety and reliability of innovative technologies like #gl_("swith", pl:true). 
 

@@ -1,10 +1,13 @@
 /* -------------------------------------------------------------------------- */
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
+#pagebreak(weak:true)
 
 //TODO
 // the intro for the section needs to be checked again
-== Introductory Properties of Hydrogen <chap_2_0>
+== Hydrogen <chap_2_0>
+
+=== Introductory Properties of Hydrogen <chap_2_0_0>
 
 The testing of wings with hydrogen tanks is a significant novelty aspect in K2H2, which is why the basic properties of hydrogen should be discussed. Safety-relevant hydrogen properties will be addressed in a separate following section and evaluated for K2H2.
 

@@ -39,7 +39,7 @@ These are especially of importance in the face of conducting experimental struct
 // TODO
 // @chap_2_0 .
 
-Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022 @Capurso2022 . 
+Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022 @Capurso2022. 
 Considering only the mobility sector 
 @Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause significant damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
