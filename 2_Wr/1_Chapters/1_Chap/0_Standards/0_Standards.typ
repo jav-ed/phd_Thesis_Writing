@@ -2,16 +2,13 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-//TODO
-// the intro for the section needs to be checked again
-// the paper provides a nice objection of it, maybe this content can be included here
+// Title was checked and is fine - inshallah
 == Standards and Regulations<chap_1_0>
-This section provides a comprehensive overview of the standards relevant to #gl_("swith", pl:true). It begins by examining overarching norms applicable to high-pressure hydrogen systems. 
-The fundamentals of pressure vessels are then explored, laying the groundwork for understanding the unique challenges posed by #gl_("swith", pl:true). 
-The section proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations. 
-It then delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations. 
-This is followed by an examination of specific standards from various sectors and a review of relevant patents. The section concludes by identifying and evaluating the most pertinent standards for #gl_("swith", pl:true). Throughout, the text emphasizes the current standardization challenges, the need for new or adapted standards, and the key technical and safety considerations that must be addressed in the development and implementation of #gl_("swith", pl:true).
-
+This section provides a comprehensive overview of the standards relevant to #gl_("swith", pl:true). It begins by explaining the importance of standards in @chap_1_0_1. The section then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_0_2.
+The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #gl_("swith", pl:true) in @chap_1_0_3. Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_0_4, including a review of relevant patents.
+An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_0_5. The section concludes by identifying and evaluating the most pertinent standards for #gl_("swith", pl:true) in @chap_1_0_6.
+Throughout, the text emphasizes the current standardization challenges and the need for new or adapted standards. 
+The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #gl_("swith", pl:true) geared towards final certification can be understood through @chap_2_0.
 
 === Importance of Standards <chap_1_0_1>
 
