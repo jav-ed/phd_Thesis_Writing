@@ -2,7 +2,7 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO Title
+// Title was tested and is inshallah fine
 === Filtering Essential Standards<chap_1_0_6>
 In previous @chap_1_0_5, an overview of standards from various areas using #gl_("cgh2", long:true) as fuel was presented. Building upon this list of options, this subsection aims to summarize the overarching categories of hydrogen applications and clearly identify the category in which #gl_("swith", long:true) is classified.
 Subsequently, a systematic approach for narrowing down the extensive list to a few essential standards is introduced. 
@@ -42,32 +42,18 @@ The three overarching categories that can be assumed to facilitate a rapid initi
 )<tab_9>
 
 
-// TODO
-// get  the first paragraph implemented properly, rephrased
-// get more infromaiton from the paper and include them here inshallah
-// read the rest and make sure it works out fine
 // ---------------------------------- here ---------------------------------- //
 The classification of #gl_("swith", pl:true) based on @tab_9 is mobile, Type IV, and air.  
-While the term air is selfexplanatory, mobile is used for pressure vessels that feel force through acceleration. Static
-on the other hand refers to pressure vessels that are subjected to force only through their
-own weight. In static, no additional acceleration is experienced, caused by movements
-such as a flying airplane or a moving car.
+The term #emp_[air] in this context is self-evident, referring to the operational environment of aircraft. However, the distinction between #emp_[mobile] and #emp_[static] pressure vessels requires further elucidation. Mobile pressure vessels are characterized by their exposure to forces resulting from acceleration, encompassing both linear and angular acceleration. These vessels experience dynamic loading conditions due to the motion of the vehicle in which they are installed, such as an aircraft in flight or an automobile in motion. 
+Conversely, static pressure vessels are subject solely to the force exerted by their own mass under the influence of gravity. In static applications, the pressure vessel does not undergo additional accelerations beyond those imposed by Earth's gravitational field. 
 
-The rationale for selecting Type IV is detailed in @chap_1_0_3. While Type V tanks offer potential advantages, their current limited market share affects their viability. As Type V tanks gain prominence, it can be anticipated that their maturity and safety in application will increase. Consequently, more manufacturers may emerge, potentially reducing costs. Once these conditions are met, Type V could become the preferred option.
+// ---------------------------------- fine ---------------------------------- //
+The rationale for selecting Type IV is detailed in @chap_1_0_3. While Type V tanks offer potential advantages, their current limited market share affects their viability. As Type V tanks gain prominence, it can be anticipated that their maturity and safety in application will increase. 
+Consequently, more manufacturers may emerge, potentially reducing costs. Once these conditions are met, Type V could become the preferred option.
 Comparing Type IV tanks against Types I to III, Type IV offers a significant weight advantage, particularly when contrasted with stationary Types I and II. A comprehensive analysis of the different types, including their use cases, advantages, disadvantages, and direct comparisons, is provided in @chap_1_0_3. It is important to emphasize that, at the time of writing this thesis, Type IV remains the optimal choice for #gl_("swith", pl:true).
 Furthermore, the selection of Type IV is applicable to both smaller and larger aircraft. 
 Given that aircraft are primarily designed for air transportation, with ground operations being secondary, the #emp_[mobile] and #emp_[air] categories can be considered constants, irrespective of the #gl_("swith") size.
-
-The criteria by which the essential standards are to be determined are given in @tab_10. The order of the listing does not follow any weighting. The timeliness stems from the idea that the more recent the publication, the higher the probability that more knowledge from expert teams could be integrated. Standards are often revised precisely for this reason. When new insights become available, these can be seen as potential new requirements. The aim of standard issuers is always to ensure safety and functionality for people and the environment and to minimize existing gaps. It is also conceivable that existing requirements must be removed or adapted.
-
-
-The criteria for determining essential standards are presented in @tab_10. It is important to note that the order of these criteria does not imply any specific weighting. The first two criteria in @tab_10, #emp_[Timeliness] and #emp_[Actively developed], are intrinsically linked and crucial for emerging technologies such as #gl_("swith", pl:true). Timeliness ensures that standards incorporate the most recent knowledge from expert teams, while active development underscores the dynamic nature of standardization in rapidly evolving fields. Together, these criteria reflect the iterative process of standard creation and revision, where new insights are continuously integrated to address emerging challenges and refine existing guidelines.
-As understanding of pioneering projects like #gl_("swith", pl:true) progresses, standard-issuing bodies should adapt quickly. They may modify or even remove existing requirements to reflect the latest insights and best practices. 
-These adjustments are supposed to be made with the primary objective of ensuring safety and functionality for both people and the environment while minimizing regulatory gaps.
-This dynamic approach results in standards that are not only recent but also continuously updated, representing the most comprehensive and up-to-date guidance for new technologies.
-These standards provide an adaptive framework that can evolve with technological advancements, regulatory changes, and lessons learned from practical implementations. 
-By prioritizing standards that meet both these criteria, researchers and industry practitioners can work with the most current and applicable guidelines, thereby enhancing the safety, efficiency, and regulatory compliance.
-
+The criteria for determining essential standards are presented in @tab_10, with no specific weighting implied by their order.
 
 #figure(
   table(
@@ -86,21 +72,27 @@ By prioritizing standards that meet both these criteria, researchers and industr
     table.header(table.cell(colspan:2, [*Criteria*])),
     /* -------------- */
     [1) Timeliness],
-    [2) Actively developed],
+    [2) Actively development],
     [3) Accessibility and availability],
     [4) Adoption in research and industry],
     [5) International recognition],
     [6) Europe-wide recognition],
     [7) Costs for acquisition],
     [8) Coverage of #gl_("swith") requirements],
-    [9) Clearly understandable and detailed specifications],
+    table.cell(colspan:2, [9) Clearly understandable and detailed specifications]),
   ),
 
   kind: table,
-  caption: [Criteria for selection of essential standards],
+  caption: [Criteria for selection of essential standards.],
 )<tab_10>
 
+Of particular importance for pioneering projects like #gl_("swith", pl:true) are the first two criteria: #emp_[Timeliness] and #emp_[Actively development]. These interlinked criteria are crucial in ensuring that standards remain relevant and effective.
+Timeliness ensures that standards incorporate the most recent knowledge from expert teams. Active development, on the other hand, serves as a mechanism to adapt standards within a reasonable time frame after new information becomes available. Together, these criteria reflect the iterative process of standard creation and revision, where new insights are integrated to address challenges and refine existing guidelines.
 
+In innovative projects like #gl_("swith", pl:true), learning often occurs through trial and error. Standards play a crucial role in this process by helping to prevent the repetition of both serious and minor mistakes. This prevention is enabled through building upon accumulated knowledge. As understanding of these projects deepens, standard-issuing bodies should be prepared to adjust their guidelines. They may modify or even remove existing requirements to reflect lessons learned and best practices identified through practical implementation.
+
+These adjustments, primarily aimed at ensuring safety and functionality for both people and the environment, facilitate the path from manufacturing to commercially viable certification. By capturing and codifying the knowledge gained through iterations of the project, standards serve as a repository of collective experience and guidance in the field. 
+Prioritizing standards that meet both timeliness and active development criteria allows researchers and industry practitioners to work with guidelines that reflect the current state of knowledge. This approach enhances safety, efficiency, and regulatory compliance for pioneering projects, helping to avoid repeated mistakes and paving the way for new advancements built on a solid foundation of understanding.
 
 The accessibility and availability criterion, as outlined in @tab_10, is of paramount importance. Even the most comprehensive standards hold little value for research and industry if they are not readily obtainable.
 Criteria 4-6 in @tab_10 (Adoption in research and industry, International recognition, and Europe-wide recognition) serve as indicators of a standard's experience and successful implementation. The trustworthiness of a standard correlates with the frequency of its adoption and the number of functional vehicles successfully constructed and approved based on its guidelines.
@@ -112,18 +104,12 @@ The cost of acquisition is a critical consideration, particularly for start-ups 
 The coverage of #gl_("swith", pl:true) requirements is a crucial criterion. It is generally understood that any standard failing to consider this aspect would be automatically disqualified from consideration. This criterion acts as a fundamental filter, ensuring that only relevant standards are included in the selection process.
 The final criterion, clearly understandable and detailed specifications, is essential for effective implementation. Standards should provide precise and comprehensive guidelines to ensure consistent application across different projects and organizations. This clarity facilitates accurate interpretation and implementation, reducing the risk of errors or misunderstandings that could compromise safety or performance in #gl_("swith", pl:true) applications.
 
-
-// TODO add the aerospace norms
-For #gl_("swith",pl:true), three standards could be found that meet all criteria and complement each other. These are listed in @tab_11. Mandatory and optional tests from ISO 11119-3:2020 are given as an example in @tab_12 and @tab_13.
-
-// TODO explain why one norm was droppped
-
-
+For #gl_("swith", pl:true), four standards meeting all criteria and complementing each other have been identified in @tab_11.
 
 #figure(
   table(
-    columns: (auto, 1fr),
-    align: (col, row) => if col == 0 { right + horizon } else { left + horizon },
+    columns: (1fr, 1fr),
+    align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
@@ -134,90 +120,47 @@ For #gl_("swith",pl:true), three standards could be found that meet all criteria
 
     
     /* --- header --- */
-    table.header[*Nr.*][*Essential Standards*],
+    table.header(table.cell(colspan:2,[*Essential Standards*])),
     /* -------------- */
-    [1)], [EC 406/2010],
-    [2)], [ISO 19881:2018],
-    [3)], [ISO 11119-3:2020],
+    [1) EC 406/2010 @EU_406_2010],
+    [2) ISO 11119-3:2020 @11119_3_ISO],
+    [3) #gl_("cs")-23 @EASA_CS_23],
+    [4) #gl_("cs")-25 @EASA_CS_25],
   ),
 
   kind: table,
-  caption: [Selection of the 3 essential standards for K2H2],
+  caption: [Selection of four essential standards that, while not fully covering all aspects of #gl_("swith"), collectively represent the current state of the art.],
 )<tab_11>
 
 
-#figure(
-  table(
-    columns: (auto, 1fr),
-    align: (col, row) => if col == 0 { right + horizon } else { left + horizon },
-    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
-    inset: (
-      x: 1em,
-      y: 0.7em,
-    ),
-    // stroke: tab_Frame(0.05em),
-    stroke: none,
+For #gl_("swith", pl:true), four standards meeting all criteria and complementing each other have been identified in @tab_11. 
+It is essential to address important points of the selected standards. EC 406/2010 @EU_406_2010 and ISO 11119-3:2020 @11119_3_ISO are established regulations for the automotive industry. 
+EC 406/2010 is available in multiple languages and is valid across 50 geopolitical regions, including various islands and countries. However, there are several objections to its direct application to aviation. The full title in English states: #emp_[COMMISSION REGULATION (EU) No 406/2010 of 26 April 2010 implementing Regulation (EC) No 79/2009 of the European Parliament and of the Council on type-approval of hydrogen-powered motor vehicles]. While by definition an airplane is also a vehicle, the German translation of EC 406/2010 uses the term  #emp_[Kraftfahrzeug] (motor vehicle), which limits the applications to road vehicles. Consequently, from the title definition in the English version itself, it is not clear whether aviation use would be legally permissible. 
+The limitation to road-bound vehicles is further emphasized by ISO 19881:2018 @iso_19881. This standard, which serves similar purposes as EC 406/2010 @EU_406_2010, explicitly restricts its scope through its title #emp_[Gaseous hydrogen - Land vehicle fuel containers]. The phrase #emp_[Land vehicle] unequivocally precludes application to aircraft. Moreover, ISO 19881:2018 specifically mandates permanently attached tanks, adding another layer of incompatibility with aviation applications. However, for #gl_("swith", pl:true), replaceable tanks could offer significant advantages over permanently attached ones. This potential benefit arises from two main aspects. Firstly, in the event of hydrogen tank issues, replaceable tanks allow for faster substitution, minimizing aircraft inactivity periods. Such efficiency is crucial in airline economics, where prolonged inactivity is highly undesirable. Secondly, replaceable tanks facilitate easier upgrades, such as transitioning from Type IV to Type V tanks when new technological advancements become available.
 
-    
-    /* --- header --- */
-    table.header[*Nr.*][*Mandatory Tests*],
-    /* -------------- */
-    [1)], [hydraulic proof pressure test (8.5.1), or hydraulic elastic expansion test (8.5.2)],
-    [2)], [cylinder burst test (8.5.3)],
-    [3)], [ambient temperature cycle test (8.5.4)],
-    [4)], [environmental cycle test (8.5.6)],
-    [5)], [flaw test (8.5.8)],
-    [6)], [drop/impact test (8.5.9)],
-    [7)], [high-velocity impact (gunfire) test (8.5.10)],
-    [8)], [torque test on cylinder neck boss (8.5.13)],
-    [9)], [leak test (8.5.15)],
-    [10)], [pneumatic cycle test (8.5.16)],
-    [11)], [resin shear strength (8.5.18)],
-    [12)], [glass transition test (8.5.14)],
-  ),
+An additional advantage of replaceable tanks lies in the potential for increased specialization across subdomains. The entire process—encompassing design, manufacturing, attachment, refilling, maintenance (including special inspections), and upgrades—could be more easily outsourced to specialized third parties. #gl_("swith") construction, like regular aircraft construction, is highly multidisciplinary. Outsourcing certain aspects to dedicated experts could benefit both existing aircraft manufacturers, enabling them to produce more reliable aircraft, and newcomers to the aircraft manufacturing industry, facilitating their entry into this complex field.
+The implementation of replaceable tanks in #gl_("swith", pl:true) offers multiple benefits to various stakeholders in the aviation industry. Aircraft manufacturers would benefit from reduced management responsibilities, potentially freeing up resources for additional advancements in other areas of aircraft design and production. This shift towards replaceable tanks could also stimulate the creation of specialized service providers, generating new employment opportunities and potentially contributing to enhanced security and affordability in hydrogen tank technology.
+Furthermore, airlines might realize significant cost and time savings in their refueling operations. With replaceable tanks, hydrogen refilling stations would not necessarily need to be in the immediate vicinity of aircraft landing locations. Instead, pre-filled tanks could be swapped out efficiently, potentially reducing turnaround times compared to on-site refilling. This approach could also mitigate some of the time-consuming security considerations associated with local refilling operations.
 
-  kind: table,
-  caption: [Mandatory tests from ISO 11119-3:2020],
-)<tab_12>
+Returning to EC 406/2010, beyond the aforementioned language considerations, studying the EC 406/2010 reveals that it lacks any direct references to aircraft applications. Furthermore, EC 406/2010 presents additional potential limitations, particularly in its testing requirements. These requirements may exceed available economic resources, as they stipulate that multiple #gl_("swith", pl:true) specimens must undergo a single experimental test.
+This demand for multiple specimens is not unique to EC 406/2010 but is also present in ISO 11119-3:2020 @11119_3_ISO. A notable example is found in ISO-11119-3, paragraph 8.2.1, which explicitly states: #emp_[A minimum of 30 cylinders of the new design shall be made available for prototype testing]. 
+The requirement for multiple #gl_("swith", pl:true) samples is highly undesirable due to the cost-intensive and time-consuming nature of their manufacturing process. To illustrate this point, consider the dimensions of the composite tubes involved: for small aircraft, these range between 8 and 15 meters in length @APUS_0, while for large aircraft, they can extend up to approximately 80 meters @link_Lufthansa_Airbus_380. 
+It is important to recall that a #gl_("swith") consists of a wing with multiple structure-integrated tubes. The integration of multiple tubes, rather than a single one, is driven by the need to optimally utilize all available space within the wing. 
+If a single tube-shaped tank were employed, it would only fit at the location of maximum wing thickness, leaving much of the surrounding space unoccupied.
+While future advancements may potentially yield airfoil-shaped high-pressure hydrogen tanks, the scope of this work is limited to regular-shaped tanks, specifically cylinders. 
 
+Given the reiterated conceptualization of #gl_("swith", pl:true) and the illustrated dimensions of integrated composite tubes, the prohibitive expense of producing multiple #gl_("swith", pl:true) for experimental tests becomes evident. This economic constraint presents a significant challenge in meeting the testing requirements outlined in current standards.
+Another obstacle to the direct applicability of EC 406/2010 to #gl_("swith", pl:true) stems from certain prescribed demands that may be considered excessively stringent. These requirements, found identically in both EC 406/2010 and ISO 19881:2018, relate to the gaseous hydrogen burst ratio criteria. Specifically, these criteria are delineated in section 3.6 of EC 406/2010 and section 7.3.2 of ISO 19881:2018.
+Both standards mandate the fulfillment of @eq_3), where $p_upright("burst")$, $upright("factor")$, and $p_upright("wnp")$ represent the minimal burst pressure, a factor dependent on the over-wrap material, and the nominal working pressure, respectively.
 
+$ p_upright("burst") ≥ upright("factor")  p_upright("wnp") $<eq_3>
 
+The safety factors specified for different fiber materials are as follows: 3.5 for glass, 3.0 for aramid, and 2.25 for carbon. Consequently, when using glass as the fiber material, the hydrogen tank must withstand three times the nominal pressure. For instance, if the nominal pressure for a #gl_("swith") tank were set at $300 upright("bar")$, the tank would need to withstand a minimum of $900 upright("bar")$.
+These high safety factors, as defined in EC 406/2010 and ISO 19881:2018, pose significant technical challenges. Higher safety factors necessitate more material to meet the requirements, resulting in increased mass and weight. This outcome is highly undesirable in aviation, as emphasized on multiple occasions in @chap_1_0.
+The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 upright("bar")$. Depending on the fiber material, maximum working nominal pressures ($p_upright("wnp")$) between 300 and $465 upright("bar")$ can be achieved under EC 406/2010 and ISO 19881:2018 standards. However, when considering the factors specified in ISO 11119-3:2020, the expected maximum working nominal pressures ($p_upright("wnp")$) range between 437.5 and $525 upright("bar")$.
 
-#figure(
-  table(
-    columns: (auto, 1fr),
-    align: (col, row) => if col == 0 { right + horizon } else { left + horizon },
-    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
-    inset: (
-      x: 1em,
-      y: 0.7em,
-    ),
-    // stroke: tab_Frame(0.05em),
-    stroke: none,
+A comprehensive overview of these relationships is provided in @tab_14. The table presents the complete list of fiber material-dependent safety factors for three standards, represented in the denominators of the fractions. Additionally, it illustrates the maximum allowable operating pressures for each combination of fiber material and standard, calculated based on the maximum test pressure of $1050 upright("bar")$ @Cebolla2019.
 
-    
-    /* --- header --- */
-    table.header[*Nr.*][*Optional Tests*],
-    /* -------------- */
-    [1)], [vacuum test (8.5.5) (mandatory if a cylinder is to be exposed to a vacuum in service)],
-    [2)], [environmentally assisted stress rupture test (8.5.7) (mandatory for cylinders with load-sharing glass or aramid fiber)],
-    [3)], [permeability test (8.5.12) if cylinders are manufactured with non-metallic liners or without liners],
-    [4)], [fire resistance test (8.5.11)],
-    [5)], [salt water immersion test (8.5.14) (mandatory for cylinders used in underwater applications)],
-  ),
-
-  kind: table,
-  caption: [Optional tests from ISO 11119-3:2020, if boundary conditions allow],
-)<tab_13>
-
-
-Next, important points of selected standards should be addressed. EC 406/2010 and ISO 19881:2018 are established regulations for the automotive industry. EC 406/2010 is available in several languages and valid for 50 geopolitical regions (islands and countries). Nevertheless, there are some objections to direct application to aviation. Firstly, the full title in English reads COMMISSION REGULATION (EU) No 406/2010 of 26 April 2010 implementing Regulation (EC) No 79/2009 of the European Parliament and of the Council on type-approval of hydrogen-powered motor vehicles. A vehicle is a vehicle. By definition, an airplane is also a vehicle. However, if the German translation of EC 406/2010 is read, the word vehicle is translated as "Kraftfahrzeug" (motor vehicle). This limits the applications to road vehicles. In other words, from the title definition in the English version itself, it is not clear whether aviation use would be legally permissible. In the title of ISO 19881:2018, the restriction to road-bound vehicles is unambiguously underlined: Gaseous hydrogen - Land vehicle fuel containers.
-
-Secondly, ISO 19881:2018 is limited to tanks that are permanently attached to the vehicle. Thirdly, some tests require more than one test object. For example, ISO-11119-3, paragraph 8.2.1 states: "A minimum of 30 cylinders of the new design shall be made available for prototype testing". For K2H2, due to the innovation, only a single wing is available for experimental investigations. Fourthly, some prescribed requirements in EC 406/2010 and ISO 19881:2018, which are identical, could be too high for practical application. As an example, the criteria for the burst ratio with gaseous hydrogen from Table IV.3.6. (EC 406/2010) and 7.3.2 (ISO 19881:2018) are mentioned. The burst ratio is given in Equation (3). The variables pburst, factor and pwnp are referred to as the minimum burst pressure, a factor dependent on the fiber material, and as nominal operating pressure.
-
-pburst ≥ factor · pwnp (3)
-
-For glass, aramid and carbon, the factors are 3.5, 3.0 and 2.25. It follows that when using glass as fiber material, the hydrogen tank must be able to withstand three times the nominal pressure. If the nominal pressure for the K2H2 tank were set at 300 bar, the tank would have to withstand at least 900 bar. The high safety factors defined in EC 406/2010 and ISO 19881:2018 are technically very demanding. The higher the safety factors, the more material is needed to meet these requirements. More material means more mass and thus more weight. This is highly undesirable in aviation. Furthermore, the high-pressure gas tank testing facility of the European (GasTeF) in @Cebolla2019 states that it can test with a maximum internal pressure of 1050 bar. Depending on the fiber material, maximum working nominal pressures pmwnp between 300 and 465 bar can be achieved. However, if the factors of ISO 11119-3:2020 are considered, maximum working nominal pressures pmwnp between 437.5 and 525 bar are to be expected. The complete list of fiber material-dependent safety factors of both standards can be found in the denominator of the fractions in @tab_14. The maximum possible operating pressures, with a maximum test pressure of 1050 bar @Cebolla2019, depending on fiber material and standard, are also given in @tab_14.
 
 #figure(
   table(
@@ -232,7 +175,7 @@ For glass, aramid and carbon, the factors are 3.5, 3.0 and 2.25. It follows that
     stroke: none,
     
     /* --- header --- */
-    table.header[*Fiber material*][*pwnp EC 406/2010 ISO 19881:2018*][*pwnp ISO 11119-3:2020*],
+    table.header[*Fiber material*][*EC 406/2010 &\ ISO 19881:2018\ $p_upright("wnp")$*][*ISO 11119-3:2020 $p_upright("wnp")$*],
     /* -------------- */
     [Glass], [1050/3.5 = 300 bar], [1050/2.4 = 437.5 bar],
     [Aramid], [1050/3.0 = 350 bar], [1050/2.1 = 500 bar],
@@ -240,17 +183,84 @@ For glass, aramid and carbon, the factors are 3.5, 3.0 and 2.25. It follows that
   ),
 
   kind: table,
-  caption: [Fiber material dependent safety factors (in the denominator of the fractions) and associated maximum allowable operating nominal pressure pwnp, when the maximum allowable test pressure of 1050 bar @Cebolla2019 is chosen],
+  caption: [Fiber material-dependent safety factors (denominator of fractions) and associated maximum allowable operating nominal pressure $p_upright("wnp")$, given a maximum allowable test pressure of $1050 upright("bar")$ @Cebolla2019.],
 )<tab_14>
 
+// TODON rephrase
+Despite its limitations, EC 406/2010 remains a viable choice in the selection of applicable standards for #gl_("swith", pl:true). In contrast, ISO 19881:2018 has been disqualified from consideration due to ambiguities in its testing instructions. While copyright restrictions prevent direct quotation of the original document, a description of the problematic aspects can be provided.
+The issue centers on Table 1 - Material tests of ISO 19881:2018. This table presents headers for material test, clause, material type, and four fields corresponding to the four possible tank or container types. For the material type category, multiple metal materials are listed, with each associated field for Type IV tanks marked as applicable. This presentation suggests that these tests are mandatory not only for metal tanks but also for composite (Type IV) tanks. However, the test descriptions lack any explicit reference to composite materials.
+Given the significant differences between metal and plastic liners, one would expect variations in testing protocols. The absence of a clear distinction or an explicit statement indicating uniform testing across all materials introduces ambiguity. This raises a critical question: should composite tanks undergo identical testing procedures as metallic tanks, or are these tests specifically designed for metallic tanks?
+The inability to resolve this ambiguity within a reasonable timeframe and effort has led to the decision to remove ISO 19881:2018 from the list of applicable standards for #gl_("swith", pl:true). This decision underscores the importance of clarity and specificity in standards applicable to novel technologies such as #gl_("swith", pl:true).
+
+To provide a structured overview of potential tests that #gl_("swith", pl:true) might undergo, selected information from the chosen essential standards is presented. A list of the mandatory and optional tests, as outlined in ISO 11119-3:2020, is provided in @tab_12 and @tab_13, respectively. These tables offer a concise summary of the testing requirements, distinguishing between tests that are universally required and those that may be necessary under specific circumstances.
+
+#figure(
+  table(
+    columns: (auto, auto),
+    align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+
+    /* --- header --- */
+    table.header(table.cell(colspan:2, [*Mandatory Tests*])),
+    /* -------------- */
+    [Hydraulic proof pressure test (8.5.1) or hydraulic elastic expansion test (8.5.2)],
+    [Cylinder burst test (8.5.3)],
+    [Ambient temperature cycle test (8.5.4)],
+    [Environmental cycle test (8.5.6)],
+    [Flaw test (8.5.8)],
+    [Drop/impact test (8.5.9)],
+    [High-velocity impact (gunfire) test (8.5.10)],
+    [Torque test on cylinder neck boss (8.5.13)],
+    [Leak test (8.5.15)],
+    [Pneumatic cycle test (8.5.16)],
+    [Resin shear strength test (8.5.18)],
+    [Glass transition temperature test (8.5.14)],
+  ),
+
+  kind: table,
+  caption: [Mandatory tests specified in ISO 11119-3:2020 @11119_3_ISO.],
+)<tab_12>
 
 
+#figure(
+  table(
+    columns: (auto, auto),
+    align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
 
-In summary, it can be said that three essential standards could be selected for K2H2. The three filtered standards cannot be directly applied to aviation, but provide important indications for K2H2. It was also explained that the working nominal pressure, depending on the standard considered, can be chosen up to a maximum of 525 bar. This limitation is justified by the fact that existing test facilities cannot generate arbitrarily high pressures for experimental verification.
+    /* --- header --- */
+    table.header(table.cell(colspan:2, [*Optional Tests*])),
+    /* -------------- */
+    [Vacuum test (8.5.5)\ Mandatory if a cylinder is to be exposed to a vacuum in service],
+    [Environmentally assisted stress rupture test (8.5.7)\ Mandatory for cylinders with load-sharing glass or aramid fiber],
+    [Permeability test (8.5.12)\ For cylinders manufactured with non-metallic liners or without liners],
+    [Fire resistance test (8.5.11)],
+    table.cell(colspan:2, [Salt water immersion test (8.5.14)\ Mandatory for cylinders used in underwater applications]),
+  ),
 
+  kind: table,
+  caption: [Optional tests specified in ISO 11119-3:2020 @11119_3_ISO, with conditions for mandatory application.],
+)<tab_13>
 
+The presentation of these tables, which primarily list test names, does not raise copyright concerns due to their limited content. It is important to note, however, that test names alone provide insufficient information about the specific testing procedures. A comparative analysis of various standards revealed that tests with similar nomenclature often entail significantly different methodologies and requirements.
+Despite this limitation, these tables serve a valuable purpose by offering an overview of the types of tests potentially required for #gl_("swith", pl:true) certification. They provide a general indication of the range and nature of tests that developers and manufacturers should anticipate. It is crucial to recognize that the classification of tests as mandatory or optional may vary depending on the specific circumstances of each project. Some tests listed as optional may become mandatory based on particular design features, intended use, or regulatory requirements of the #gl_("swith") in question.
 
-Furthermore, going into the individual points would not be purposeful, as this would involve too much time expenditure with comparatively very little information gain. Instead, the following section will explain how it was possible to narrow down from the many possible standards to a few.
+While the aforementioned standards primarily address hydrogen containment systems, it is crucial to consider that #gl_("swith", pl:true) must also comply with broader aircraft regulations. This necessity led to the inclusion of #gl_("cs")-23 @EASA_CS_23 and #gl_("cs")-25 @EASA_CS_25 in the list of essential standards in @tab_11.
+While #gl_("cs")-23 is limited to small aircraft, #gl_("cs")-25 can be considered the more comprehensive version that also covers larger aircraft.
 
-Are various different areas that want to use hydrogen as a sustainable energy source. In some of these areas, there are only ideas, while others can already show initial concepts up to functional prototypes. Still others are already selling their technology commercially and have already received official approval. The more advanced industries have specific requirements that differ from aviation. Therefore, it is currently not possible to transfer existing concepts one-to-one to K2H2.
-// -------------------------------------------------------------------------- //
+#summary_[
+This analysis has identified four essential standards pertinent to the development and certification of #gl_("swith", pl:true). While these standards collectively do not address all the unique aspects of #gl_("swith", pl:true), they represent the current state of the art in relevant regulatory frameworks. They provide valuable insights into potential certification requirements and testing protocols for #gl_("swith", pl:true).
+Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from 437.5 to $525 upright("bar")$. This upper limit is constrained by the capabilities of existing test facilities, which cannot generate arbitrarily high pressures for experimental structural verification tests.
+These findings underscore the importance of considering both hydrogen containment and aircraft-specific regulations in the development of #gl_("swith", pl:true), while also highlighting the current technological limitations in testing high-pressure systems.
+]
+
