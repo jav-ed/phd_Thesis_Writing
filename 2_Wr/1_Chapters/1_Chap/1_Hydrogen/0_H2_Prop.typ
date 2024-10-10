@@ -8,66 +8,107 @@
 // make sure that the given references here actuall work as intented to
 // get proper title Hydrogen alone might not suffice, if the curvature study is included here
 == Hydrogen <chap_2_0>
-A complete definition and the state of the art regarding #gl_("swith", long:true) were given in @chap_0_7.
-In @chap_1_0 an in-depth study was undertaken to present the state of the art of standards and regulations gearing towards the commerical certification of #gl_("swith", long:true).
-Some of the infromaiton found in @chap_1_0 will be used in this section to motivate and reason with for undertaken steps.
-
-Forn this section, first the pioneering approach of evaluating the integration of hydrogen tanks as a load-carrying
-component into an aircraft wing's structure, the study of the fundamental properties of hydrogen shall be initally motivated and then the analyse shall be carried out in @chap_2_0_0. 
-Next, special attention is given to the Safety-Relevant Characteristics of #gl_("cgh2",long:true) in @chap_2_0_1.
-Following that  Experiments and Simulation with Hydrogen is adressed in @chap_2_0_2.
-Next highlights important findings regarding External Dynamic Load on Pressure Vessels in @chap_2_0_3
+A comprehensive definition and state-of-the-art review regarding #gl_("swith", long:true) were provided in @chap_0_7. In @chap_1_0, an in-depth study was conducted to present the current standards and regulations pertaining to the commercial certification of #gl_("swith", long:true). Some of the information presented in @chap_1_0 will be utilized in this section to motivate and justify the undertaken steps.
+This section begins by examining the pioneering approach of integrating hydrogen tanks as load-carrying components into an aircraft wing's structure. 
+The study of fundamental hydrogen properties will be initially motivated, followed by a detailed analysis in @chap_2_0_0. Subsequently, special attention is given to the safety-relevant characteristics of #gl_("cgh2",long:true) in @chap_2_0_1. Following this, @chap_2_0_2 addresses experiments and simulations involving hydrogen. Finally, given that #gl_("swith",pl:true)  involves tanks bearing external loads @chap_2_0_3 highlights important findings regarding external dynamic loads on pressure vessels.
 
 
 
 === Introductory Properties of Hydrogen <chap_2_0_0>
+The goal of performing structural validation tests gerared towards #gl_("swith") certifcaiton is a novel desire due to multiple reasons as outlines in many places in this thesis. 
+However, within this subsection the focus shall be put espeically on the hydorgen aspect.
+Desiring to conduct structral tests with compressed hydrogen initally requires both basic knowledge and in-depth invesitgaiton on some special security related properties about hydorgen.
+This subsection deals with some of the basic properties of hydrogen, making it evident why hydrogen is such an attractive alternative to current fossil fuels.
+The potential hazards that can be encountered with hydrogen in practical application are highlighted in @chap_2_0_1.
+Initally, a clear motivation for needing to understand the basic properties of hydrogen needs to be extended.
+Having done so, the fundamental properties shall be given in a clear and structred manner.
 
-Such understanding is essential to comprehending why hydrogen exhibits such remarkable
-properties, making it a promising alternative fuel option. Properties of hydrogen that hold rele-
-vance to safety aspects are scrutinized separately in section 3. For the sake of convenience, all
-principal information of this section is compiled and presented in Table 1.
+The integration of compressed hydrogen in #gl_("swith", pl:true) represents a pioneering approach in aircraft design, directly addressing at least two of the major challenges in sustainable aviation: fuel storage and structural efficiency. 
+However, due to the nature of innovative concepts, there is a scarcity of work around their topics.
+While less available work on the one hand can pose challenges, it also underscores the need for putting effort in its research.
+The necessity to properly understand  hydrogen's properties can be backed by the following.
+First, such understanding is essential for comprehending why hydrogen exhibits remarkable properties, making it a promising alternative fuel option.
+Next it also guides for the successful design, manufacturing, and final commercial certification of #gl_("swith", pl:true). 
+More concretely, this knowledge is pivotal when designing and performing both experimental structural tests and simulations of #gl_("swith", pl:true). Experiments as well as simulation are not only important for potential future certification but also for general science-related desires to enhance the understanding of #gl_("swith", pl:true).
+For the sake of convenience, all principal and safety-wise harmless information of this subsection is compiled and presented in @tab_18.
 
-Some of these standards permit the pressure vessel to be filled with substances other than hydrogen,
-while others insist on the use of hydrogen as the filling agent. As such, the natural progression
-is to gain a comprehensive understanding of hydrogen’s properties.
+    #figure(
+  table(
+    columns: (1fr, 2fr),
+    align: left + horizon,
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
+    /* --- header --- */
+    table.header[*Property*][*Description*],
+    /* -------------- */
+    [Atomic Structure], 
+    [Smallest known atom (H, diameter of 0.07 nm) @Klell2018 @Klell2023],
+
+    [Molecular Form], 
+    [- Occurs as H#sub[2] molecule @Klell2018 @Klell2023 
+    - The H atom itself is highly reactive @Liu2022 @Tarkowski2022 @Li2021b
+    - Generally, if people mention hydrogen, they mean the molecule H#sub[2] and not the atom H],
+  
+    [Chemical Properties], 
+    [- The atom H forms stable bond with another H atom, such that H#sub[2] is created. A stable bond means that both valence electrons are filled and thus a H#sub[2] bond has low reactivity @Kubas2007
+- The H atom has a low electronegativity of 2.2 @Klell2018 @Klell2023. The electronegativity described the ability to pull electrons to create a connection.],
+    
+    [Sensory Properties], 
+    [- Odorless @Hwang2023 @MadadiAvargani2022 @Pal2022
+- Tasteless @MadadiAvargani2022
+- Invisible @Hwang2023 @MadadiAvargani2022 @Pal2022],
+    
+    [Safety Properties], [
+        - Non-toxic @Tang2023 @MadadiAvargani2022 @Jokar2023
+        - Non-carcinogenic @Klell2018 @Klell2023
+        - Not radioactive @Klell2023
+        - Not caustic @Klell2018 @Klell2023],
+    
+    [Production], [Regenerative production possible through water, wind or solar power plants @Rosen2018],
+    
+    [Thermodynamic Properties], 
+    [- Negative Joule-Thompson coefficient @Li2023a @Zhang2024b @Li2023b at high pressures.
+    This means that a positive pressure change produces a negative temperature change and vice versa. If the pressure is increased, this is reflected in a decrease in temperature. This relaiton can be described mathemtically with @eq_4, where T stands for the temperature, p for the pressure, and $delta$ shall signalize a derivative or change of the Temperature when the pressure is changed.
+
+    $ mu_upright("JT") = (delta T) / (delta p) $<eq_4>
+
+- Deviates from ideal gas behavior],
+    
+    [Physical Properties], 
+    [- Lowest density element (about 14 times lighter than air) @Klell2018 @Klell2023)
+- Mainly available in liquid, and gaseous states. 
+- However, there is much research on other forms as well @Usman2022 @Yang2023 @Panigrahi2024: physical and chemical adsorption @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024 and some others as depicted in @fig_15.
+- At $0 degree.c$ and $1.01325 upright("bar")$ hydrogen has a high speed of sound $a_upright("H2") = 1261.1 upright("m/s")$  @Klell2018, where air only has $a_upright("air") = 331.5 upright("m/s")$ @Sigloch2022.],
+    
+    [Abundance], 
+    [- Plentiful, including in air @Pal2022 @Faye2022 @Klopcic2023 @MadadiAvargani2022 @Jokar2023 @Hassan2023
+- Component of many fossil fuels: Methan CH#sub[4], Methanol CH#sub[3]OH, Ethen C#sub[2]H#sub[4], Propan C#sub[3]H#sub[8], Benzene C#sub[6]H#sub[6] @Klell2018],
+    
+    [Regulations], 
+    [Safe handling and storage standards available, comparable to natural gas @Klell2018 @Klell2023 @Rosen2018 @dryer2007spontaneous @Thomas1997],
+  ),
+
+  kind: table,
+  caption: [Basic and harmless properties of hydrogen.],
+)<tab_18>
 
 
-Due to the innovative nature of #gl_("swith", long:true), scholarly investigation should not only focus on standrds adn regualtions as done in @chap_1_0 but also especially focus  on hydrogen's impact on #gl_("swith", pl:true). Since work around this topic is conspicuously scarce. 
-This notable void in academic discourse underscores the importance of this study, aiming to contribute to a deeper understanding of #gl_("swith", pl:true) and their interactions with hydrogen.
 
-// -------------------------------------------------------------------------- //
-The testing of wings with hydrogen tanks is a significant novelty aspect in thi thesis, which is why the basic properties of hydrogen should be discussed. Safety-relevant hydrogen properties will be addressed in a separate following section and evaluated for K2H2.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/0_Types.jpg", 
+  width: 77%),
+  caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
+) <fig_15>
 
-Table 22 lists the first important and safety-wise harmless properties of hydrogen.
 
-[Table 22: Basic and harmless properties of hydrogen]
 
-1) The smallest known atom is the hydrogen atom (H, diameter of 0.07 nm @Klell2018 @Klell2023).
-2) Only occurs as an H2 molecule, as the H atom itself is highly reactive. A lot of energy is needed to obtain a pure, unpaired H atom.
-3) When hydrogen is mentioned, usually the H2 molecule is meant.
-4) H2 forms a stable bond, which means that both valence electrons are filled and thus show low reactivity.
-   In general, the ability to attract electrons from other elements and thus initiate a chemical bond is described by electronegativity. This is lower for H2 than for most other elements (electronegativity of H2 = 2.2 @Klell2018 @Klell2023).
-5) Odorless
-6) Tasteless
-7) Invisible
-8) Non-toxic
-9) Non-carcinogenic
-10) Not radioactive
-11) Not corrosive
-12) Regenerative hydrogen production possible through water, wind or solar power plants. Regenerative production is feasible without competing with food production (occupation of cultivation area) as is known from plant-based biofuels @Rosen2018.
-13) Joule-Thompson coefficient negative at high pressures. This means a positive pressure change produces a negative temperature change and vice versa. When the pressure is increased, this is shown in the form of temperature decrease. The values are only a few Kelvin (about 5-15 Kelvin) even at high pressure changes.
-    μJT = δT/δp
-    For ideal gases, the Joule-Thompson coefficient = 0 @Klell2018 @Klell2023.
-14) Apart from the Joule-Thompson coefficient, it also does not behave like an ideal gas in other aspects (further elaboration follows below).
-15) Hydrogen is the element with the lowest density and is about 14 times lighter than air, although pressure and temperature influence this statement. @Klell2018 @Klell2023.
-16) The regulations and standards for handling are available and storage is just as safe as that of natural gas (CNG) [13, 14, 15]
-17) More than plentiful, also in air.
-18) Most fossil fuels consist of carbon and hydrogen: Methane CH4, Methanol CH3OH, Ethene C2H, Propane C3H8, Benzene C6H6 @Klell2018 @Klell2023.
-19) Available in three possible states: solid, liquid and gaseous.
-20) A very high speed of sound under normal conditions 0 °C and 1.01325 bar
-    aH2 = 1261.1 m/s, cf. aAir = 331.5 m/s
 
-In point 14 in Table 22, it is merely stated that hydrogen does not behave like an ideal gas. To discuss this in more detail, the real gas factor Z should first be introduced. It is also called the compressibility factor and is given in equation (4). Here, the variable m describes the mass of the respective gas. The real gas factor describes the deviation of a gas from the ideal gas.
+In point 14 in @tab_18, it is merely stated that hydrogen does not behave like an ideal gas. To discuss this in more detail, the real gas factor Z should first be introduced. It is also called the compressibility factor and is given in equation (4). Here, the variable m describes the mass of the respective gas. The real gas factor describes the deviation of a gas from the ideal gas.
 
 Z = mideal / mreal (4)
 

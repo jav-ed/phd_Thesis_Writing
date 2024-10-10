@@ -3,16 +3,24 @@
 #import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// in this file the glossary function is used
+// here are some examples how the glossary function are used within the typst docs
+// #gl_("key"), where the key is one of the keys defined below
+// #gl_("swith"), would output SWITH
+// for the plural verison #gl_("swith", pl:true) can be used --> would output SWITHs
+// if desired, the full long version can be outputed as well:
+// for the long verison #gl_("swith", long:true) 
+// if desc fields are available below - they can be used to understand the meaning of the abbreviations or keys used
 
-// see: https://github.com/typst/packages/blob/main/packages/preview/glossarium/0.2.2/example/example.typ
+//see: https://github.com/typst/packages/tree/main/packages/preview/glossarium/0.4.1
 
-// and: https://github.com/typst/packages/tree/main/packages/preview/glossarium/0.2.2
+// if you want to see wheter an update exists go to
+// https://github.com/typst/packages/tree/main/packages/preview/glossarium
 
 // create clear seperation between content and glossary
 #pagebreak()
 
 #set heading(numbering: none)
-
 
 
 // adapt color

@@ -53,6 +53,8 @@
 
   set quote(block: true)
 
+  // allow tables and figure to be displayed across pages, that is, tables are broken properly to the next page
+  show figure: set block(breakable: true)
 
 
   /* -------------------------------- keep it ------------------------------- */
