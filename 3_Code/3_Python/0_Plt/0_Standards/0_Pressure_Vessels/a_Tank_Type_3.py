@@ -51,7 +51,8 @@ def border_less(fig):
     # chosen_font = "CMU Serif"
     chosen_font = "New Computer Modern"
     legend_title_size = chosen_text_size
-    legend_entry_size = chosen_text_size-2
+    # legend_entry_size = chosen_text_size-2
+    legend_entry_size = chosen_text_size
     
     
     fig.update_layout(
@@ -88,8 +89,8 @@ def border_less(fig):
         ),
         
         legend=dict(
-            font=dict(family="CMU Serif", size=legend_entry_size),
-            title=dict(font=dict(family="CMU Serif", size=legend_title_size)),
+            font=dict(family= chosen_font, size=legend_entry_size),
+            title=dict(font=dict(family= chosen_font, size=legend_title_size)),
         ),
         
         

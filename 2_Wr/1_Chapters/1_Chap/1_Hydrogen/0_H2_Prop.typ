@@ -32,7 +32,7 @@ Next it also guides for the successful design, manufacturing, and final commerci
 More concretely, this knowledge is pivotal when designing and performing both experimental structural tests and simulations of #gl_("swith", pl:true). Experiments as well as simulation are not only important for potential future certification but also for general science-related desires to enhance the understanding of #gl_("swith", pl:true).
 For the sake of convenience, all principal and safety-wise harmless information of this subsection is compiled and presented in @tab_18.
 
-    #figure(
+#figure(
   table(
     columns: (1fr, 2fr),
     align: left + horizon,
@@ -47,56 +47,57 @@ For the sake of convenience, all principal and safety-wise harmless information 
     table.header[*Property*][*Description*],
     /* -------------- */
     [Atomic Structure], 
-    [Smallest known atom (H, diameter of 0.07 nm) @Klell2018 @Klell2023],
+    [Hydrogen (H) is the smallest known atom, with a diameter of 0.07 nm @Klell2018 @Klell2023.],
 
     [Molecular Form], 
-    [- Occurs as H#sub[2] molecule @Klell2018 @Klell2023 
+    [- Exists primarily as H#sub[2] molecule @Klell2018 @Klell2023 
     - The H atom itself is highly reactive @Liu2022 @Tarkowski2022 @Li2021b
-    - Generally, if people mention hydrogen, they mean the molecule H#sub[2] and not the atom H],
+    - Generally, references to "hydrogen" denote the H#sub[2] molecule rather than the H atom],
   
     [Chemical Properties], 
-    [- The atom H forms stable bond with another H atom, such that H#sub[2] is created. A stable bond means that both valence electrons are filled and thus a H#sub[2] bond has low reactivity @Kubas2007
-- The H atom has a low electronegativity of 2.2 @Klell2018 @Klell2023. The electronegativity described the ability to pull electrons to create a connection.],
+    [- The H atom forms a stable bond with another H atom to create H#sub[2]. This stable bond results from fully occupied valence electrons, leading to low reactivity of H#sub[2] @Kubas2007
+    - The H atom has a relatively low electronegativity of 2.2 @Klell2018 @Klell2023. Electronegativity describes an atom's ability to attract electrons when forming chemical bonds.],
     
     [Sensory Properties], 
     [- Odorless @Hwang2023 @MadadiAvargani2022 @Pal2022
-- Tasteless @MadadiAvargani2022
-- Invisible @Hwang2023 @MadadiAvargani2022 @Pal2022],
+    - Tasteless @MadadiAvargani2022
+    - Invisible @Hwang2023 @MadadiAvargani2022 @Pal2022],
     
     [Safety Properties], [
-        - Non-toxic @Tang2023 @MadadiAvargani2022 @Jokar2023
-        - Non-carcinogenic @Klell2018 @Klell2023
-        - Not radioactive @Klell2023
-        - Not caustic @Klell2018 @Klell2023],
+    - Non-toxic @Tang2023 @MadadiAvargani2022 @Jokar2023
+    - Non-carcinogenic @Klell2018 @Klell2023
+    - Not radioactive @Klell2023
+    - Not caustic @Klell2018 @Klell2023],
     
-    [Production], [Regenerative production possible through water, wind or solar power plants @Rosen2018],
+    [Production], [Regenerative production is possible through water electrolysis powered by wind, solar, or other renewable energy sources @Rosen2018 @Ishaq2022 @Younas2022 @Dawood2020.],
     
     [Thermodynamic Properties], 
-    [- Negative Joule-Thompson coefficient @Li2023a @Zhang2024b @Li2023b at high pressures.
-    This means that a positive pressure change produces a negative temperature change and vice versa. If the pressure is increased, this is reflected in a decrease in temperature. This relaiton can be described mathemtically with @eq_4, where T stands for the temperature, p for the pressure, and $delta$ shall signalize a derivative or change of the Temperature when the pressure is changed.
+    [- Exhibits a negative Joule-Thomson coefficient at high pressures @Li2023a @Zhang2024b @Li2023b.
+    This implies that an increase in pressure results in a decrease in temperature, and vice versa. This relationship can be mathematically expressed as:
 
     $ mu_upright("JT") = (delta T) / (delta p) $<eq_4>
 
-- Deviates from ideal gas behavior],
+    where T represents temperature, p represents pressure, and $delta$ denotes the derivative or change in temperature with respect to pressure.
+
+    - Deviates from ideal gas behavior],
     
     [Physical Properties], 
-    [- Lowest density element (about 14 times lighter than air) @Klell2018 @Klell2023)
-- Mainly available in liquid, and gaseous states. 
-- However, there is much research on other forms as well @Usman2022 @Yang2023 @Panigrahi2024: physical and chemical adsorption @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024 and some others as depicted in @fig_15.
-- At $0 degree.c$ and $1.01325 upright("bar")$ hydrogen has a high speed of sound $a_upright("H2") = 1261.1 upright("m/s")$  @Klell2018, where air only has $a_upright("air") = 331.5 upright("m/s")$ @Sigloch2022.],
+    [- Lowest density element (approximately 14 times lighter than air) @Klell2018 @Klell2023
+    - Primarily exists in liquid and gaseous states 
+    - Extensive research is ongoing into alternative storage forms @Usman2022 @Yang2023 @Panigrahi2024, including: physical and chemical adsorption @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024 and other methods as illustrated in @fig_15.
+    - At $0 degree.c$ and $1.01325 upright("bar")$, hydrogen has a high speed of sound ($a_upright("H2") = 1261.1 upright("m/s")$  @Klell2018), compared to air ($a_upright("air") = 331.5 upright("m/s")$ @Sigloch2022).],
     
     [Abundance], 
-    [- Plentiful, including in air @Pal2022 @Faye2022 @Klopcic2023 @MadadiAvargani2022 @Jokar2023 @Hassan2023
-- Component of many fossil fuels: Methan CH#sub[4], Methanol CH#sub[3]OH, Ethen C#sub[2]H#sub[4], Propan C#sub[3]H#sub[8], Benzene C#sub[6]H#sub[6] @Klell2018],
+    [- Plentiful, including in Earth's atmosphere @Pal2022 @Faye2022 @Klopcic2023 @MadadiAvargani2022 @Jokar2023 @Hassan2023
+    - Component of many fossil fuels: Methane (CH#sub[4]), Methanol (CH#sub[3]OH), Ethene (C#sub[2]H#sub[4]), Propane (C#sub[3]H#sub[8]), Benzene (C#sub[6]H#sub[6]) @Klell2018],
     
     [Regulations], 
-    [Safe handling and storage standards available, comparable to natural gas @Klell2018 @Klell2023 @Rosen2018 @dryer2007spontaneous @Thomas1997],
+    [Safe handling and storage standards are available, comparable to those for natural gas @Klell2018 @Klell2023 @Rosen2018 @dryer2007spontaneous @Thomas1997],
   ),
 
   kind: table,
   caption: [Basic and harmless properties of hydrogen.],
 )<tab_18>
-
 
 
 #figure(
@@ -105,7 +106,19 @@ For the sake of convenience, all principal and safety-wise harmless information 
   caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
 ) <fig_15>
 
+While @tab_18 provides important informaiton about hydrogen, there is one special aspect of hydrogen that shall be looked into in detail.
+One of the major reasons why hydrogen can be regarded as a attractive candaite for energy deliver is its graviemtric energy  density.
+The graviemtric energy density is described as the energy that can be used within one unit of mass.
+If the graviemtric energy density is hihg it means that with less weight high energy amounts can be employed.
+Due to the environmental crists, most mobility domains are keen on finding a energy medium that allows both, high amount of energy due to economical reasons and being light for environmental reasons.
+The lighter the energy provder, the less mass needs to be transported, which reduces power consumption demands.
 
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/1_H2_densities.svg", 
+  width: 100%),
+  caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
+) <fig_16>
 
 
 In point 14 in @tab_18, it is merely stated that hydrogen does not behave like an ideal gas. To discuss this in more detail, the real gas factor Z should first be introduced. It is also called the compressibility factor and is given in equation (4). Here, the variable m describes the mass of the respective gas. The real gas factor describes the deviation of a gas from the ideal gas.
