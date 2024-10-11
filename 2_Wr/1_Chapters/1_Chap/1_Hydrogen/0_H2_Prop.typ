@@ -112,12 +112,14 @@ The graviemtric energy density is described as the energy that can be used withi
 If the graviemtric energy density is hihg it means that with less weight high energy amounts can be employed.
 Due to the environmental crists, most mobility domains are keen on finding a energy medium that allows both, high amount of energy due to economical reasons and being light for environmental reasons.
 The lighter the energy provder, the less mass needs to be transported, which reduces power consumption demands.
-
+// ---------------------------------- here ---------------------------------- //
+// TODO link to fig_16, explain it, more refs for energy density
+// explain volume energy desnisty
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/1_H2_densities.svg", 
   width: 100%),
-  caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
+  caption: [Gravimetric energy densities of storage systems @Klell2023],
 ) <fig_16>
 
 
