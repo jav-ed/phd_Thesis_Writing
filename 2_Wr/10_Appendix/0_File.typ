@@ -7,7 +7,7 @@
 #lorem(50)
 
 #figure(
-  image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Test_Appendix_SOmehting.],
 
@@ -20,7 +20,7 @@
 == subsection apendix 
 
 #figure(
-  image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Test_Appendix_SOmehting.],
 
@@ -29,7 +29,7 @@
 ) <fig_apend_021>
 
 #figure(
-  image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Test_Appendix_SOmehting.],
 
@@ -242,7 +242,7 @@ Here is the appendix lets refer to fig: @fig_apend_0
 
 
 #figure(
-  image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Test_Appendix_SOmehting.],
 
@@ -251,7 +251,7 @@ Here is the appendix lets refer to fig: @fig_apend_0
 ) <fig_apend_0>
 
 #figure(
-  image("../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Test_Appendix_SOmehting.],
 

@@ -43,6 +43,7 @@
 // $ 288.15 upright("K ") space upright("to") space 233.15 upright("K ") $
 
 // an arbitrary mix is not fine, thus try to use the first of the two fine versions:
+// use the following
 // $ 288.15 upright("K ") upright(" to") space 233.15 upright("K ") $
 
 

@@ -14,7 +14,7 @@ The concept of #gl_("swith", pl:true) has progressed beyond a mere scientific id
 A visual depiction of the i2 is given in @fig_2.
 
 #figure(
-  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Apus_Img.png", 
+  image("../../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
   caption: [Visualization of the APUS i2, demonstrating the practical application of #gl_("swith", pl:true) in commercial aircraft design @APUS_Image.],
 ) <fig_2>
@@ -44,7 +44,7 @@ The key distinction is that these non-structure-integrated tanks do not serve a 
 An alternative approach involves integrating the tanks within the fuselage rather than the wings, as is the case with #gl_("swith", pl:true). Illustrative variations of this approach are given in @fig_3. 
 
 #figure(
-  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Fuselage_Integration.jpg", 
+  image("../../../1_Data/2_Figs/0_Content/0_Chap/2_Fuselage_Integration.jpg", 
   width: 100%),
   caption: [Demonstrative example of how fuselage structure-integrated hydrogen tanks could look like @Adler2023.],
 ) <fig_3>
