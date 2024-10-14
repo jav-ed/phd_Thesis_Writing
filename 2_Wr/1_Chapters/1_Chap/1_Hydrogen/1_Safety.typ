@@ -1,64 +1,151 @@
 /* -------------------------------------------------------------------------- */
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
-=== II.10 Safety-Relevant Properties of Hydrogen<chap_2_0_1>
 
-This section will explain why the choice of filling medium for the experimental project in K2H2 is of great importance. To this end, the safety-relevant properties of hydrogen will be particularly addressed.
 
-Tables 19 and 20 list mandatory and possibly optional tests. These must be demonstrated if high-pressure cylinders are to be certified for approval. ISO 11119-3 states in paragraph 8.5.1.1: "When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen)". Consequently, different filling media are allowed for the pressure approval test. For the permeability test (5.5.12.2), natural gas is also allowed. However, for the pneumatic cycle test (5.5.16.1), only hydrogen is allowed as the filling medium. Summarizing these findings, it can be said that only certain experimental tests allow filling media other than hydrogen. In the context of K2H2, filling medium refers to the medium that is stored in the wing tanks and pressurized. Why the medium with which the tanks are filled and pressurized in the experimental test is of essential importance for the entire testing project becomes understandable when the keywords from Table 23 are discussed.
+=== Safety-Relevant Properties of Hydrogen<chap_2_0_1>
 
-[Table 23: Example influencing factors in the choice of filling medium for an experimental structural test]
+In previous @chap_2_0_0 a high number of hydrogens properties were provided.
+Among others it was explained in detail why hydrogen is so attracive as energy carreier.
+Yet, when targeting the experimental structral validation tests of #gl_("swith", pl:true) towrds final certifaciton the hazard properties of hydrogen are improtant to know.
+Thus the aim for this subseciton is to explain potential dangerous properties of hydrogen.
+They shall be mentioned and explained whether they can be safely navigated in epxeirmtnal applicaiton or not.
 
-Influence on structural properties, such as:
-1) Maximum bearable bending moment
-2) Maximum strain
-3) Tensile strength
-4) Torsional stiffness
-5) E-modulus
-6) Impact strength
 
-Influence on human health:
-1) Carcinogenic
-2) Flammable
-3) Explosive
-4) Odor → attacks nasal mucosa
-5) Radioactive
+In @chap_1_0 much work was carried out to find systematically the standrds that might have a #gl_("swith") relationship.
+These standrds were furhter filtered to find the essential standrds in @chap_1_0_6.
+The essential standrds, while not being developed for #gl_("swith")-cerrifcation, they, still provide some possible tests, scinetists can expect. In @tab_12 the mandatory and in @tab_13 the optional structral tests according to the 11119-3:2020 @11119_3_ISO are listed.
+These must be demonstrated if high-pressure cylinders are to be certified for approval. ISO 11119-3 states in paragraph 8.5.1.1: #emp_[When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen]. 
+Consequently, different filling media are allowed for the pressure approval test.
+In the context of #gl_("swith"), filling medium refers to the medium that is stored in the wing tanks and pressurized. 
+For the permeability test (5.5.12.2), natural gas is also allowed. 
+However, for the pneumatic cycle test (5.5.16.1), only hydrogen is allowed as the filling medium. Summarizing these findings, it can be said that only certain experimental tests allow filling media other than hydrogen. 
+The importance of the  medium with which the tanks are filled and pressurized in the experimental test  becomes evident when the keywords from @tab_20 are viewed.
 
-Manageability in measurement technology:
-1) Visible
-2) Smellable
-3) Tangible
-4) Electric and magnetic fields
-5) Other methods for detecting the medium
 
-Safety for test stand:
-1) Material compatibility (no chemical reactions with test stand structure)
+#figure(
+  table(
+    columns: (1fr),
+    align: (col, row) => if calc.even(row) { center + horizon } else { left + horizon },
+    fill: (_, row) => if calc.even(row) { table_cl_header } else { table_cl_0  },
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
+    [*Influence on Structural Properties*],
+    [
+      - Maximum tolerable bending moment
+      - Maximum elongation
+      - Tensile strength
+      - Torsional stiffness
+      - Young's modulus
+      - Impact strength
+    ],
+    
+    [*Influence on Human Health*],
+    [
+      - Carcinogenic 
+      - Flammable
+      - Explosive
+      - Odor (affects nasal mucosa)
+      - Radioactive
+    ],
+    
+    [*Influence on Measurement*],
+    [
+      - Visible
+      - Detectable by smell
+      - Tangible
+      - Responsive to electric and magnetic fields
+      - Other sensory detection methods
+    ],
+    
+    [*Safety for Test Bench*],
+    [
+      - Material compatibility (absence of chemical reactions with test bench structure)
+    ],
+    
+    [*Availability, Environmental Impact, Economic Efficiency*],
+  ),
+  kind: table,
+  caption: [Examples of factors influencing the choice of filling medium in an experimental and simulative structure test for #gl_("swith", pl:true)],
+) <tab_20>
 
-Availability
-
-Environmental compatibility
-
-Economic efficiency
-
-To answer the question of whether the filling medium has an influence on the experimental structural verification in a striking manner: It makes a difference whether a medium merely smells bad under certain conditions or shows detonable capabilities. The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. In the following, the complications that can arise through hydrogen should be derived. For this, some knowledge and definitions are important @Sigloch2022:
+The points provided in @tab_20 further  strngthen the demand of deeply understanding the medium that is used. For hydrogen the properties mentioned in @chap_1_0_6  are requied to conduct in-depth investigations on special aspects.
+Gnereally when working with different filling agent, for the safety asecpt the following can be said in a striking manner: It makes a difference whether a medium merely smells bad under certain conditions or shows detonable capabilities. 
+In the following, the complications that can arise through hydrogen should be derived. For this, some knowledge and definitions are important @Sigloch2022:
 
 • Deflagration: Flame front propagates at a speed less than the speed of sound.
-• Detonation: With further acceleration of the flame front, supersonic speed is reached and pressure surges are to be expected. In the vicinity of such, hearing protection is absolutely necessary.
-• Explosion: Rapid, almost sudden combustion of combustibles, better explosives. The large volume of combustion gas produced displaces the surrounding air with great intensity.
+• Explosion: Rapid, almost immediate combustion of combustibles, or more specifically, ex-
+plosives. The resulting large volume of combustion gas intensely displaces the surrounding
+air.
+• Detonation: Combustion process taking place at supersonic speed under strong pressure
+increase and pressure shocks are anticipated. Hearing protection is mandatory in such prox-
+imity.
 
-Figure 8 shows what combustion speeds and associated pressure increases are to be expected for the different combustion processes. Figure 9 can now be used to estimate how high the destructive power is at the given pressure increases.
+@tab_21 shows what combustion speeds and associated pressure increases are to be expected for the different combustion processes. @tab_22 can now be used to estimate how high the destructive power is at the given pressure increases.
 
-[Figure 8: Types of combustion with guideline values @Sigloch2022]
 
-[Figure 9: Pressure effects (guideline values) @Sigloch2022]
+#figure(
+  table(
+    columns: (1fr, 1fr, 1fr),
+    align: (col, row) => if row == 0 { center + horizon } else { center + horizon },
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+      inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
+    [*Combustion Process*], [*Combustion Rate*], [*Pressure Rise [bar]*],
+    [Combustion], [$0.1 - 50 "m/s"$], [up to $approx 0$],
+    [Deflagration], [$gt.approx 0.01 "km/s"$], [up to $approx 10$],
+    [Explosion], [$gt.approx 0.1 "km/s"$], [up to $approx 10^3$],
+    [Detonation], [$gt.approx 1 "km/s"$], [up to over $approx 10^5$],
+  ),
+  kind: table,
+  caption: [Combustion types with guide values @Sigloch2022.],
+) <tab_21>
 
-The essential question that arises regarding hydrogen is whether hydrogen can burn, deflagrate, explode, or even detonate? Hydrogen alone is not inherently flammable. Only in combination with the two other important factors given in Table 24 can hydrogen become flammable to detonable. The minimum ignition energy depends on the air content. But in principle, a small spark or static discharge is sufficient to ignite hydrogen in the right gas mixture. A static discharge, such as that caused by friction with a carpet and subsequent touching of a doorknob, is sufficient (20-30 mJ) to ignite the ignitable gas composition. Figure 10 shows the minimum required ignition energy for hydrogen and methane at different air contents of the gas mixture. It can be noted that the mentioned 20 mJ, which result from a static discharge, are more than sufficient to start ignition with the appropriate hydrogen-air composition. When comparing the behavior of hydrogen and methane, the following also becomes clear. Hydrogen not only requires smaller amounts of ignition energies than methane, but is also highly flammable in a significantly larger range.
 
+#figure(
+  table(
+    columns: (0.7fr, 1fr),
+    align: (col, row) => if row == 0 { center + horizon } else { center + horizon },
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+      inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    stroke: none,
+    
+    [*Pressure Rise [bar]*], [*Destruction*],
+    [$gt.approx 0.05$], [window panes],
+    [$gt.approx 0.1$], [half-timbered buildings],
+    [$gt.approx 0.3 - 0.8$], [concrete walls, thickness $12 "to" 24 "cm"$],
+  ),
+  kind: table,
+  caption: [Pressure effects (guide values) @Sigloch2022.],
+) <tab_22>
+
+
+The essential question that arises regarding hydrogen is whether hydrogen can burn, deflagrate, explode, or even detonate? 
+Hydrogen alone is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. 
+Only in combination with the two other important factors given in Table 24 can hydrogen become flammable to detonable. 
+
+// ---------------------------------- here ---------------------------------- //
 [Table 24: Requirements for hydrogen to become flammable to detonable]
 
 1) Sufficiently high ignition energy or ignition temperature
 2) Combustible/detonable gas mixture
 3) Special cases chlorine and fluorine
+  
+
+The minimum ignition energy depends on the air content. But in principle, a small spark or static discharge is sufficient to ignite hydrogen in the right gas mixture. A static discharge, such as that caused by friction with a carpet and subsequent touching of a doorknob, is sufficient (20-30 mJ) to ignite the ignitable gas composition. Figure 10 shows the minimum required ignition energy for hydrogen and methane at different air contents of the gas mixture. It can be noted that the mentioned 20 mJ, which result from a static discharge, are more than sufficient to start ignition with the appropriate hydrogen-air composition. When comparing the behavior of hydrogen and methane, the following also becomes clear. Hydrogen not only requires smaller amounts of ignition energies than methane, but is also highly flammable in a significantly larger range.
+
+
 
 [Figure 10: Simplified representation of the ignition energies under normal conditions of hydrogen and methane in air @Rosen2018]
 
@@ -88,3 +175,8 @@ Another important point that is relevant when handling hydrogen is hydrogen-mate
 [Figure 14: Hydrogen-air mixing limits for different types of ignition, as well as other important values in this context @Klell2018 @Klell2023]
 
 In summary, it can be said that hydrogen is not flammable without the addition of air. However, on the one hand, there is a large air-hydrogen mixture range in which ignition is possible. On the other hand, the smallest static discharges are sufficient to transfer this gas mixture to ignition up to detonation. Apart from the risk of explosion, the diffusion behavior of hydrogen is of central importance. Hydrogen can be better held in the container with metals than with plastic enclosures. But with metals, there is a danger of hydrogen embrittlement.
+
+
+
+// -------------------------------------------------------------------------- //
+// The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. 
