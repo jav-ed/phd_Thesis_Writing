@@ -52,7 +52,17 @@ $kappa_op("krit") <= 0 hat 4$ <eq_0>
 
 
 // ---------------------------------- units --------------------------------- //
-// final version for range
-// $ 288.15 upright("K ") upright("to") 233.15 upright("K ") $
+one attempt for range
+$ 288.15 upright("K ") upright("to") 233.15 upright("K ") $
+
+easier approach
+$ 288.15 "K" "to" 233.15 "K " $ 
+
+
+or direclty
+$ 288.15 "K to" 233.15 "K " $ 
+
+again within "" you need at least two chards, otherwise you will get spacing issues
+
 
 
