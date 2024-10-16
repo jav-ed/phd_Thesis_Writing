@@ -250,18 +250,17 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
 Beyond the air content considerations outlined in @tab_25, @tab_23 highlights two exceptional cases of hydrogen reactivity. Firstly, hydrogen and chlorine can initiate a reaction solely through light irradiation, resulting in a loud, explosive bang known as the chlorine oxyhydrogen reaction @Klell2018 @Klell2023. 
 Secondly, hydrogen exhibits similarly explosive reactions with fluorine @Klell2018 @Klell2023. 
 These cases underscore the diverse and potentially hazardous reactive properties of hydrogen.
-//
-// Transition Metal
 The reactive nature of hydrogen not only manifests in gaseous interactions but also in its interactions with solid materials. 
 Hydrogen-material compatibility emerges as another substantial consideration in hydrogen handling. Metals, in particular, can accumulate hydrogen within their lattices, potentially leading to embrittlement. For a more detailed examination of hydrogen embrittlement, the reader is directed to @chap_1_0_3.
 The process of hydrogen incorporation into metal lattices begins with the dissociation of hydrogen molecules into atoms at the metal surface @Klell2023 @Usman2022. 
 Certain pure metals, including palladium, magnesium, lanthanum, and aluminium, as well as specific alloys such as TiNi-Ti#sub[2]Ni and Mg-Mg#sub[2]Ni, demonstrate the ability to store hydrogen @Klell2023.
 This property of hydrogen storage in metal lattices has an additional beneficial application: it enables the production of highly pure hydrogen (99.99%) @Usman2022 @Du2021 @Nashchekin2020. Consequently, metal lattices can serve as effective hydrogen purification filters, illustrating how a potential challenge can be leveraged for practical benefits in hydrogen processing and purification.
 
-// TODO to long, dicussion, paramoung attention, word repetiation: particularly, insights
+
 In contrast to metals, plastics generally exhibit lower density. While plastics do not suffer from hydrogen embrittlement, they present significant obstacles in containing hydrogen @Su2021. The primary concern is the potential for rapid hydrogen permeation through plastic containers, which could lead to swift depletion of a filled tank. This permeation poses a serious safety risk, especially in enclosed spaces. For instance, if a hydrogen-containing plastic vessel were stored in a car garage, the gradual accumulation of escaped hydrogen could create a hazardous environment, potentially resulting in severe burns or explosions if ignited. Consequently, when considering hydrogen storage and handling, particularly in the context of experimental structural validation tests for #gl_("swith",pl:true), two properties demand special attention: flammability and diffusion behavior.
 The preceding analysis has primarily focused on the theoretical aspects of hydrogen's safety-related properties. 
 
+// ---------------------------------- here ---------------------------------- //
 // TODO
 // idea was to say: if you look at the things before till here and then the next you get
 This comprehensive exploration, encompassing this subsection, the previous @chap_2_0_0, and the forthcoming subsections, underscores two critical points. Firstly, while hydrogen offers significant potential as an energy carrier, it necessitates a profound understanding of its characteristics and behavior. 
