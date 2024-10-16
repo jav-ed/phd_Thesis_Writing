@@ -2,39 +2,33 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-
+// TODO 
+// title
 === Safety-Relevant Properties of Hydrogen<chap_2_0_1>
 
-In previous @chap_2_0_0 a high number of hydrogens properties were provided.
-Among others it was explained in detail why hydrogen is so attracive as energy carreier.
-Yet, when targeting the experimental structral validation tests of #gl_("swith", pl:true) towrds final certifaciton the hazard properties of hydrogen are improtant to know.
-Thus the aim for this subseciton is to explain potential dangerous properties of hydrogen.
-They shall be mentioned and explained whether they can be safely navigated in epxeirmtnal applicaiton or not.
+The previous @chap_2_0_0 provided a comprehensive overview of hydrogen's properties, elucidating its attractiveness as an energy carrier. However, when considering experimental structural validation tests of #gl_("swith", long:true) for a potential final certification, it is crucial to understand the potential hazards associated with hydrogen.
+This investigation can be divided into two complementary approaches: a theoretical foundation and an experimentally supported elaboration. The current subsection focuses on the theoretical knowledge, while the subsequent @chap_2_0_2 complements it with practical insights. To achieve this comprehensive understanding, a thorough study has been undertaken. The primary objective is to highlight the key findings, particularly emphasizing the aspects of hydrogen that require special attention from a safety perspective.
+By thoroughly examining these safety-relevant properties, this study aims to establish a theoretical foundation upon which potential challenges can be identified and mitigation strategies can be developed for the experimental validation and eventual certification of #gl_("swith", pl:true). This groundwork serves as a crucial first step in addressing the complex safety considerations inherent in #gl_("swith") applications.
 
 
-In @chap_1_0 much work was carried out to find systematically the standrds that might have a #gl_("swith") relationship.
-These standrds were furhter filtered to find the essential standrds in @chap_1_0_6.
-The essential standrds, while not being developed for #gl_("swith")-cerrifcation, they, still provide some possible tests, scinetists can expect. In @tab_12 the mandatory and in @tab_13 the optional structral tests according to the 11119-3:2020 @11119_3_ISO are listed.
-These must be demonstrated if high-pressure cylinders are to be certified for approval. ISO 11119-3 states in paragraph 8.5.1.1: #emp_[When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen]. 
-Consequently, different filling media are allowed for the pressure approval test.
-In the context of #gl_("swith"), filling medium refers to the medium that is stored in the wing tanks and pressurized. 
-For the permeability test (5.5.12.2), natural gas is also allowed. 
-However, for the pneumatic cycle test (5.5.16.1), only hydrogen is allowed as the filling medium. Summarizing these findings, it can be said that only certain experimental tests allow filling media other than hydrogen. 
-The importance of the  medium with which the tanks are filled and pressurized in the experimental test  becomes evident when the keywords from @tab_20 are viewed.
+In @chap_1_0, a systematic approach was employed to identify standards potentially relevant to #gl_("swith"). These standards were further refined in @chap_1_0_6 to determine the most essential ones. Although not specifically developed for #gl_("swith") certification, these standards provide insights into potential tests that scientists can anticipate. The mandatory and optional structural tests, as per ISO 11119-3:2020 @11119_3_ISO, are listed in @tab_12 and @tab_13 respectively. These tests must be demonstrated for high-pressure cylinder certification.
+ISO 11119-3 states in paragraph 8.5.1.1: #emp_[When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen]. This stipulation allows for various filling media in pressure approval tests. In the context of #gl_("swith"), the filling medium refers to the substance stored and pressurized within the wing tanks.
+The standard permits additional variations in testing media. For instance, natural gas is allowed in the permeability test (5.5.12.2). However, the pneumatic cycle test (5.5.16.1) specifically requires hydrogen as the filling medium. These findings indicate that only certain experimental tests permit the use of filling media other than hydrogen.
+The significance of the chosen filling medium for experimental tests becomes apparent when considering the factors listed in @tab_20. These factors highlight the diverse implications of different media on structural properties, human health, measurement accuracy, test bench safety, availability, environmental impact, and economic efficiency.
 
 
 #figure(
   table(
     columns: (1fr),
     align: (col, row) => { left + horizon },
-    fill: (_, row) => if calc.even(row) { table_cl_header } else { table_cl_0  },
+    fill: (_, row) => if calc.even(row) { table_cl_header } else { table_cl_0 },
     inset: (
       x: 1em,
       y: 0.7em,
     ),
     stroke: none,
     
-     table.cell(fill:table_cl_header,[*Influence on Structural Properties*]),
+    table.cell(fill:table_cl_header,[*Influence on Structural Properties*]),
       table.cell(fill:table_cl_0,[- Maximum tolerable bending moment]),
       table.cell(fill:table_cl_1,[- Maximum elongation]),
       table.cell(fill:table_cl_0,[- Tensile strength]),
@@ -42,41 +36,42 @@ The importance of the  medium with which the tanks are filled and pressurized in
       table.cell(fill:table_cl_0,[- Young's modulus]),
       table.cell(fill:table_cl_1,[- Impact strength]),
     
-    table.cell(fill:table_cl_header,[*Influence on Human Health*]),
-      table.cell(fill:table_cl_0,[- Carcinogenic ]),
-      table.cell(fill:table_cl_1,[- Flammable]),
-      table.cell(fill:table_cl_0,[- Explosive]),
-      table.cell(fill:table_cl_1,[- Odor (affects nasal mucosa)]),
-      table.cell(fill:table_cl_0,[- Radioactive]),
+    table.cell(fill:table_cl_header,[*Impact on Human Health*]),
+      table.cell(fill:table_cl_0,[- Carcinogenicity]),
+      table.cell(fill:table_cl_1,[- Flammability]),
+      table.cell(fill:table_cl_0,[- Explosiveness]),
+      table.cell(fill:table_cl_1,[- Olfactory effects (impact on nasal mucosa)]),
+      table.cell(fill:table_cl_0,[- Radioactivity]),
     
-    table.cell(fill:table_cl_header,[*Influence on Measurement*]),
+    table.cell(fill:table_cl_header,[*Measurement and Detection Characteristics*]),
+      table.cell(fill:table_cl_0,[- Visibility]),
+      table.cell(fill:table_cl_1,[- Olfactory detectability]),
+      table.cell(fill:table_cl_0,[- Tactile properties]),
+      table.cell(fill:table_cl_1,[- Responsiveness to electromagnetic fields]),
+      table.cell(fill:table_cl_0,[- Alternative sensory detection methods]),
     
-       table.cell(fill:table_cl_0,[- Visible]),
-       table.cell(fill:table_cl_1,[- Detectable by smell]),
-       table.cell(fill:table_cl_0,[- Tangible]),
-       table.cell(fill:table_cl_1,[- Responsive to electric and magnetic fields]),
-       table.cell(fill:table_cl_0,[- Other sensory detection methods]),
+    table.cell(fill:table_cl_header,[*Test Bench Safety Considerations*]),
+    table.cell(fill:table_cl_0,[- Material compatibility (absence of chemical reactions with test bench components)]),
     
-    
-    table.cell(fill:table_cl_header,[*Safety for Test Bench*]),
-    table.cell(fill:table_cl_0,[- Material compatibility (absence of chemical reactions with test bench structure)]),
-  
-    
-    table.cell(fill:table_cl_header,[*Availability, Environmental Impact, Economic Efficiency*]),
+    table.cell(fill:table_cl_header,[*Practical Considerations*]),
+    table.cell(fill:table_cl_0,[- Availability]),
+    table.cell(fill:table_cl_1,[- Environmental impact]),
+    table.cell(fill:table_cl_0,[- Economic efficiency]),
   ),
   kind: table,
-  caption: [Examples of factors influencing the choice of filling medium in an experimental and simulative structure test for #gl_("swith", pl:true)],
+  caption: [Factors influencing the selection of filling medium in experimental and simulative structural tests for #gl_("swith", pl:true).],
 ) <tab_20>
 
-The points provided in @tab_20 further  strngthen the demand of deeply understanding the medium that is used. For hydrogen the properties mentioned in @chap_1_0_6  are requied to conduct in-depth investigations on special aspects.
-Gnereally when working with different filling agent, for the safety asecpt the following can be said in a striking manner: It makes a difference whether a medium merely smells bad under certain conditions or shows detonable capabilities. 
-In the following, the complications that can arise through hydrogen should be derived. For this, some knowledge and definitions are important @Sigloch2022:
+The factors outlined in @tab_20 underscore the necessity for a comprehensive understanding of the medium used in #gl_("swith") applications. For hydrogen specifically, the properties elaborated in @chap_1_0_6 are essential for conducting in-depth investigations into its unique characteristics.
+When evaluating various filling agents for #gl_("swith") applications from a safety perspective, a crucial question emerges: does the medium merely emit an unpleasant odor, or does it possess the potential for detonation under certain conditions? 
+This stark contrast in safety implications underscores the critical nature of medium selection in #gl_("swith") design and operation.
+To elucidate the potential complications arising from hydrogen use, it is imperative to establish some fundamental knowledge and definitions. Sigloch @Sigloch2022 provides the following key concepts:
 
-1. *Deflagration*: Flame front propagates at a speed less than the speed of sound.
-   
-2. *Explosion*: Rapid, almost immediate combustion of combustibles, or more specifically, explosives. The resulting large volume of combustion gas intensely displaces the surrounding air.
-   
-3. *Detonation*: Combustion process taking place at supersonic speed under strong pressure increase and pressure shocks are anticipated. Hearing protection is mandatory in such proximity.
+1. *Deflagration*: A combustion process where the flame front propagates at a speed less than that of sound.
+
+2. *Explosion*: The rapid, nearly instantaneous combustion of combustible materials or explosives, resulting in a large volume of combustion gas that violently displaces the surrounding air.
+
+3. *Detonation*: A combustion process occurring at supersonic speeds, accompanied by a strong pressure increase and anticipated pressure shocks. Due to the intensity of this process, hearing protection is mandatory in proximity to such events.
 
 The combustion speeds and associated pressure increases that are to be expected for the different combustion processes are listed in @tab_21. The magnitude of the destructive power for the given pressure increases can be estimate through @tab_22.
 
@@ -102,7 +97,7 @@ The combustion speeds and associated pressure increases that are to be expected 
   caption: [Combustion types with guide values @Sigloch2022.],
 ) <tab_21>
 
-// --------------------------- prssure destruction -------------------------- //
+// -------------------------- pressure destruction -------------------------- //
 #figure(
   table(
     columns: (0.7fr, 1fr),
@@ -120,13 +115,10 @@ The combustion speeds and associated pressure increases that are to be expected 
     [$gt.approx 0.3 - 0.8$], [concrete walls, thickness $12 "to" 24 "cm"$],
   ),
   kind: table,
-  caption: [Pressure effects (guide values) @Sigloch2022.],
+  caption: [Estimated pressure thresholds for structural damage @Sigloch2022.],
 ) <tab_22>
 
-
-The essential question that arises regarding hydrogen is whether hydrogen can burn, deflagrate, explode, or even detonate? 
-Hydrogen alone is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. 
-Only in combination with the two other important factors given in @tab_23 can hydrogen become flammable to detonable. 
+A critical consideration in experimental investigations involving hydrogen is its potential for various combustion processes, including burning, deflagration, explosion, and detonation. It is important to note that hydrogen, in isolation, is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. However, hydrogen can become flammable or even detonable when combined with specific factors. These crucial factors, as outlined in @tab_23, create the conditions necessary for hydrogen's combustibility.
 
 #figure(
   table(
@@ -139,101 +131,94 @@ Only in combination with the two other important factors given in @tab_23 can hy
     ),
     stroke: none,
     
-    [1. Adequate ignition energy or ignition temperature @Bane2013 @Dimitriou2017 @FernandezTarrazo2023],
-    [ 2. Flammable/detonable gas mixture  @Cheikhravat2012 @Crowl2007 @Yang2021 @Gao2016 @Zhang2016],
-    [ 3. Special cases: chlorine and fluorine @Klell2018 @Klell2023 @Sullivan1975 @Gustin2005],
+    [1. Presence of sufficient ignition energy or attainment of ignition temperature @Bane2013 @Dimitriou2017 @FernandezTarrazo2023],
+    [2. Formation of a flammable or detonable gas mixture @Cheikhravat2012 @Crowl2007 @Yang2021 @Gao2016 @Zhang2016],
+    [3. Special reactive cases: presence of chlorine or fluorine @Klell2018 @Klell2023 @Sullivan1975 @Gustin2005],
   ),
   kind: table,
-  caption: [Conditions for Hydrogen to become ignitable to detonable.],
+  caption: [Essential conditions for hydrogen to become ignitable to detonable.],
 ) <tab_23>
 
+// ---------------------------------- here ---------------------------------- //
   
-The minimum ignition energy depends on the air content. But in principle, a small spark or static discharge is sufficient to ignite hydrogen in the right gas mixture. 
-A static discharge, such as that caused by friction with a carpet and subsequent touching of a doorknob, is sufficient ($20 "to" 30 "mJ"$) to ignite the ignitable gas composition @Klell2018. 
-Minimum ignition energies for hydrogen, methane and propane at different air contents of the gas mixture are displayed in @fig_19. 
+The minimum ignition energy for hydrogen is highly dependent on the air content in the gas mixture. In principle, a small spark or static discharge is sufficient to ignite hydrogen when the gas mixture is within the flammable range. For instance, a static discharge resulting from walking on a carpet and subsequently touching a doorknob, which typically generates $20 "to" 30 "mJ"$ of energy, is capable of igniting a flammable hydrogen-air mixture @Klell2018. 
+The minimum ignition energies for hydrogen, methane, and propane across various air content levels in the gas mixture, illustrated in @fig_19, provide a comparative perspective on the ignition sensitivity of these gases.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/0_Ingition_Energy.png", 
   width: 87%),
-  caption: [Simplified representation of the ignition energies under norstandardmal conditions of hydrogen, methane and propane in air @Klell2018.],
+  caption: [Comparison of minimum ignition energies for hydrogen, methane, and propane in air under standard conditions @Klell2018.],
 ) <fig_19>
 
-Vieweing @fig_19, ut can be noted that the mentioned $20 "mJ"$, which result from a static discharge, are more than sufficient to start ignition with the appropriate hydrogen-air composition. 
-When comparing the behavior of hydrogen with the two other gases, that is, methane and propane, the following also becomes clear. 
-Hydrogen not only requires smaller amounts of ignition energies than methane, but is also highly flammable in a significantly larger range.
 
-For further important considerations, two technical terms should be defined:
+An analysis of @fig_19 reveals that the aforementioned $20 "mJ"$ energy from a static discharge exceeds the minimum ignition energy required for an appropriate hydrogen-air composition. Comparing hydrogen to methane and propane, two key observations emerge: hydrogen not only requires lower ignition energies than methane but also exhibits flammability across a substantially wider range of air-fuel mixtures.
+To promote deeper understanding, it is essential to define two critical technical terms:
 
-- *The flash point* of a flammable liquid is the lowest liquid temperature at which, under specified conditions, vapors develop in such quantity that an ignitable vapor/air mixture is formed above the liquid surface by external ignition. If the ignition source is removed, the flames extinguish @Klell2018 @Klell2023.
+1. *Flash point*: For a flammable liquid, this refers to the lowest temperature at which, under specified conditions, sufficient vapors are produced to form an ignitable vapor/air mixture above the liquid surface upon external ignition. Notably, if the ignition source is removed, the flames extinguish @Klell2018 @Klell2023.
 
-- *The ignition temperature* is the lowest temperature at which spontaneous ignition of the fuel occurs in an open vessel @Klell2018 @Klell2023.
+2. *Ignition temperature*: This denotes the lowest temperature at which spontaneous ignition of the fuel occurs in an open vessel @Klell2018 @Klell2023.
 
-In both cases, ignition can only occur if a certain proportion of air is present. Important information on the ignition or explosion behavior of hydrogen and other fuels are listed in @tab_24. 
+It is important to note that in both cases, ignition can only occur if an appropriate proportion of air is present. Comprehensive data on the ignition and explosion characteristics of hydrogen and other fuels are provided in @tab_24.
 
 #figure(
-table(
-columns: (auto, auto, auto, auto, auto, auto),
-align: (col, row) => if row == 0 or row == 1 { center + horizon } else { center + horizon },
-fill: (col, row) => if row <= 1 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
-inset: (
-x: 1em,
-y: 0.7em,
-),
-stroke: none,
-/* --- header --- */
-[*Substance *], [*Lower explosion limit*], [*Upper explosion limit*], [*Flash point*], [*Ignition temperature*], [*Minimum ignition energy*],
-[], [*[Vol% in air]*], [*[Vol% in air]*], [*[°C]*], [*[°C]*], [*[mJ]*],
-/* -------------- */
+  table(
+    columns: (auto, auto, auto, auto, auto, auto),
+    align: (col, row) => if row == 0 or row == 1 { center + horizon } else { center + horizon },
+    fill: (col, row) => if row <= 1 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+    x: 1em,
+    y: 0.7em,
+    ),
+    stroke: none,
+    /* --- header --- */
+    [*Substance *], [*Lower explosion limit*], [*Upper explosion limit*], [*Flash point*], [*Ignition temperature*], [*Minimum ignition energy*],
+    [], [*[Vol% in air]*], [*[Vol% in air]*], [*[°C]*], [*[°C]*], [*[mJ]*],
+    /* -------------- */
 
-[Acetylene], [1.5], [82], [-136], [305], [0.019],
-[Ammonia (l)], [15], [34], [132], [651], [14],
-[Gasoline (l)], [0.6], [8], [> -20], [240-500], [0.8],
-[Natural gas], [4.5], [13.5], [> -188], [600], [0.3],
-[Carbon monoxide], [12.5], [75], [-191], [605], [> 0.3],
-[Methane], [5], [15], [-188], [595], [0.3],
-[Petroleum (l)], [0.7], [5], [55], [280], [0.25],
-[Propane (l)], [2.1], [9.5], [-104], [470], [0.25],
-[Hydrogen], [4], [75.6], [-270.8], [585], [0.017],
+    [Acetylene], [1.5], [82], [-136], [305], [0.019],
+    [Ammonia (l)], [15], [34], [132], [651], [14],
+    [Gasoline (l)], [0.6], [8], [> -20], [240-500], [0.8],
+    [Natural gas], [4.5], [13.5], [> -188], [600], [0.3],
+    [Carbon monoxide], [12.5], [75], [-191], [605], [> 0.3],
+    [Methane], [5], [15], [-188], [595], [0.3],
+    [Petroleum (l)], [0.7], [5], [55], [280], [0.25],
+    [Propane (l)], [2.1], [9.5], [-104], [470], [0.25],
+    [Hydrogen], [4], [75.6], [-270.8], [585], [0.017],
 
-),
-kind: table,
-caption: [ Ignition-relevant properties of hydrogen and various other fuels @Klell2023. Notation: (l) stands for liquid, otherwise gaseous ],
+    ),
+    kind: table,
+    caption: [Comparison of ignition-relevant properties for hydrogen and various other fuels @Klell2023. Note: (l) denotes liquid state; all others are in gaseous state.],
 )<tab_24>
 
-Considering @tab_24 it can be observed that the  ignition temperature of hydrogen is quite high compared to other gases. 
-However, the large spectrum in which a hydrogen-air mixture is flammable is also comparatively large. 
-This might be acceptable through various safety measures. 
-However, hydrogen has the lowest minimum ignition energy from the shown other fuels in @tab_24. This poses the greatest safety challenge for preventing unwanted and accidental ignitions.
-Moreover, hydrogen itself is not visible to the naked eye. Experimental investigations in @schefer2009visible show recordings of hydrogen flames. 
-A copy of the visual depiciton is given in @fig_20. 
+An analysis of @tab_24 reveals that hydrogen exhibits a relatively high ignition temperature compared to other gases. However, it is crucial to note that hydrogen-air mixtures remain flammable across a comparatively wide range of concentrations. While this broad flammability range might be manageable through appropriate safety measures, hydrogen presents a unique challenge due to its exceptionally low minimum ignition energy—the lowest among the fuels listed in @tab_24. This characteristic poses a significant safety concern, as it increases the risk of unwanted and accidental ignitions.
+Further complicating safety considerations is the fact that hydrogen is invisible to the naked eye. However, experimental investigations conducted by @schefer2009visible have successfully recorded hydrogen flames under specific conditions. A visual representation of these flames is provided in @fig_20, offering insights into the observable characteristics of hydrogen combustion.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/1_H2_Flame.png", 
   // keep the 10% here. seems to be a very high dimensional image
   width: 10%),
-  caption: [Recording of a hydrogen flame at a laminar jet velocity of 47 m/s, a Reynolds number of 837. The image was taken without filter, with the Sony DSC D700 with an aperture of f/2.4 @schefer2009visible.],
+  caption: [Visibility of a hydrogen flame under specific conditions: laminar jet velocity of 47 m/s, Reynolds number of 837. Image captured using a Sony DSC D700 camera (aperture f/2.4, no filter) @schefer2009visible.],
 ) <fig_20>
 
 
-The recording in @fig_20 was made for a laminar jet velocity of 47 m/s, a Reynolds number of 837, with the Sony DSC D700 (1344 × 1024 pixels), with an f/2.4 aperture and without filter. 
-Often it is thought that hydrogen flames are also not visible. 
-However, @fig_20 shows that this is not the case @schefer2009visible. 
-The flame is visible, although not as strongly visible as hydrocarbons when ignited @schefer2009visible. 
-The influence of the oxygen content in the oxygen-hydrogen mixture is shown in @fig_21. 
+The image presented in @fig_20 was captured under specific experimental conditions: a laminar jet velocity of 47 m/s, a Reynolds number of 837, using a Sony DSC D700 camera (1344 × 1024 pixels) with an f/2.4 aperture and no filter. Contrary to the common misconception that hydrogen flames are invisible, @fig_20 clearly demonstrates their visibility @schefer2009visible. It is important to note, however, that while hydrogen flames are indeed visible, they exhibit lower luminosity compared to the flames of ignited hydrocarbons @schefer2009visible. This difference in visibility has significant implications for safety and detection methods in hydrogen applications.
+The visibility of hydrogen flames is further influenced by the oxygen content in the oxygen-hydrogen mixture, as illustrated in @fig_21. 
+
+// -------------------------------- from here ------------------------------- //
+// TODO only the text needs to be modified, inshallah the floats are fine
+This relationship between flame visibility and mixture composition can provide valuable insights for safety considerations for hydrogen applications.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/2_H2_Multi_Flame.png", 
   width: 57%),
-  caption: [Influence of oxygen content. The higher $phi$ becomes, the better the approximation to stoichiometric combustion properties (a) $phi = 1.0$, (b) $phi = 0.8$, (c)$phi = 0.7$, (d) $phi = 0.62$, jet velocity of $33 "m/s"$, Reynolds number of 580, aperture f/2.4, turbulent @schefer2009visible.],
+  caption: [Effect of oxygen content on hydrogen flame visibility. Images show flames at different equivalence ratios $phi$: (a) $phi = 1.0$, (b) $phi = 0.8$, (c) $phi = 0.7$, (d) $phi = 0.62$. Higher $phi$ values indicate closer approximation to stoichiometric combustion. Experimental conditions: jet velocity $33 "m/s"$, Reynolds number 580, turbulent flow, camera aperture f/2.4 @schefer2009visible.],
 ) <fig_21>
 
 
-In this context, the equivalence ratio, denoted as $phi$, is defined as the actual air–fuel ratio to the stoichiometric air–fuel ratio for combustion @Salaudeen2019.  
-Consequently, $phi = 1$ means best combustibility and values smaller stand for $phi$ suggest suboptimal conditions for combustion. The results show that the higher $phi$ is, the better the visibility of the flame becomes. 
-The conditions that led to this recording can be found in the figure description. 
-In @schefer2009visible it is concluded that for good visibility, low lighting should be provided.
-Detailed information on hydrogen-air mixing limits for different types of ignition and names other important parameters in this context are provided in @tab_25. 
-However, it should be explicitly noted that under normal conditions ($0 degree.c$, $1.01325 "bar"$) hydrogen is flammable at an air content of $4% "to" 75.6%$ and detonable at an air content of $18 "to" 58.9%$. 
+In inspecting hydrogen flame visibility, the equivalence ratio, denoted as $phi$, plays a crucial role. $phi$ is defined as the ratio of the actual air-fuel ratio to the stoichiometric air-fuel ratio for combustion @Salaudeen2019. An equivalence ratio of $phi = 1$ represents optimal combustibility, while lower values of $phi$ indicate suboptimal combustion conditions. The experimental results demonstrate a positive correlation between $phi$ and flame visibility: as $phi$ increases, the flame becomes more visible.
+The specific experimental conditions for these observations are detailed in the description of @fig_21. Notably, @schefer2009visible concludes that low ambient lighting conditions are conducive to better flame visibility, an important consideration for practical hydrogen flame detection.
+Comprehensive information on hydrogen-air mixing limits for various ignition types and other relevant parameters are provided in @tab_25. It is critical to emphasize that under standard conditions ($0 degree.c$ and $1.01325 "bar"$), hydrogen exhibits a wide flammability range, being flammable at air concentrations of $4% "to" 75.6%$. 
+Moreover, hydrogen becomes detonable within a narrower but still significant range of $18% "to" 58.9%$ air content.
 
 #figure(
   table(
@@ -246,7 +231,7 @@ However, it should be explicitly noted that under normal conditions ($0 degree.c
     stroke: none,
     
     /* --- header --- */
-    table.cell(colspan:2, [*Mixtures with air*]),
+    table.cell(colspan:2, [*Hydrogen-Air Mixture Properties*]),
     /* -------------- */
     [Lower explosion limit (ignition limit)], [$4$ Vol% H#sub[2]],
     [Lower detonation limit], [$18$ Vol% H#sub[2]],
@@ -259,34 +244,44 @@ However, it should be explicitly noted that under normal conditions ($0 degree.c
     [Maximum adiabatic combustion temperature], [$approx 2200 " " degree.c =^hat 2473.15 "K "$],
   ),
   kind: table,
-  caption: [Hydrogen-air mixture limits for different types of combustions, as well as other important values in this context @Klell2018 ],
+  caption: [Combustion characteristics and critical values for hydrogen-air mixtures @Klell2018],
 )<tab_25>
 
 
-Apart from the air content mentioned in @tab_25, two special cases were mentioned in @tab_23. These are, first hydrogen and chlorine can already carry out a reaction just by light irradiation. This is perceived as a loud and explosive bang (chlorine oxyhydrogen reaction) @Klell2018 @Klell2023.
-Seconds, hydrogen reacts similarly explosively with fluorine @Klell2018 @Klell2023.
-Another important point that is relevant when handling hydrogen is hydrogen-material compatibility. 
-Hydrogen can accumulate in metal lattices and cause embrittlement, which is not observed in plastics. 
-The embrittlement aspect was already covered in @chap_1_0_3, thus the reader is refered to it. 
-On the other hand, because hydrogen can be stored insde the lattice of the metal as metal hydride, hydrogen in a very pure form (99.99%) can be obtained @Usman2022 @Du2021 @Nashchekin2020. 
-Here, the metal lattice is used as a filter. 
 
-// ---------------------------------- here ---------------------------------- //
-For metal hydride, the hydrogen molecules dissociate into atomic hydrogen at the surface and then diffuses into  that they can easily diffuse through less dense materials. Plastics are an example of materials with lower density. 
-While there is no danger of metal embrittlement with plastics, holding hydrogen in a plastic container is significantly more difficult. 
-In the worst case, this would mean that a filled tank would empty in a very short time because the hydrogen cannot be held in the pressure vessel. 
-If this container were surrounded by another closed space, the hydrogen would now be present in this space. 
-Specifically, a car garage should be mentioned. If the hydrogen could accumulate in it and the residents don't know about it, it could possibly lead to life-threatening burns. It follows that the two properties that should be given the highest attention are the flammability and the diffusion behavior of hydrogen.
+Beyond the air content considerations outlined in @tab_25, @tab_23 highlights two exceptional cases of hydrogen reactivity. Firstly, hydrogen and chlorine can initiate a reaction solely through light irradiation, resulting in a loud, explosive bang known as the chlorine oxyhydrogen reaction @Klell2018 @Klell2023. 
+Secondly, hydrogen exhibits similarly explosive reactions with fluorine @Klell2018 @Klell2023. 
+These cases underscore the diverse and potentially hazardous reactive properties of hydrogen.
 
+// Transition Metal
+Hydrogen-material compatibility is another critical consideration in hydrogen handling. Metals can accumulate hydrogen within their lattices, potentially leading to embrittlement. For a more detailed examination of hydrogen embrittlement, the reader is directed to @chap_1_0_3. 
+The process of hydrogen incorporation into metal lattices begins with the dissociation of hydrogen molecules into atoms at the metal surface @Klell2023 @Usman2022. 
 
-// TODO
-explain why you need the other part that is inshallah about to come
-real world applicaiton is required to see what was done to get explosions. what to do to prevent it.
+// TODO check such as 
+Certain pure metals such as palladium, magnesium, lanthanum, and aluminium and specific alloys such as TiNi-Ti#sub[2]Ni and Mg-Mg#sub[2]Ni demonstrate the capacity to store hydrogen @Klell2023.
+This property of hydrogen storage in metal lattices has an additional beneficial application: it enables the production of highly pure hydrogen (99.99%) @Usman2022 @Du2021 @Nashchekin2020. Consequently, metal lattices can serve as effective hydrogen purification filters, illustrating how a potential challenge (hydrogen absorption in metals) can be leveraged for practical benefits in hydrogen processing and purification.
 
+// TODO to long, dicussion, paramoung attention, word repetiation: particularly, insights
+In contrast to metals, plastics generally exhibit lower density. While plastics do not suffer from hydrogen embrittlement, they present significant challenges in containing hydrogen @Su2021. The primary concern is the potential for rapid hydrogen permeation through plastic containers, which could lead to swift depletion of a filled tank. This permeation poses a serious safety risk, particularly in enclosed spaces. For instance, if a hydrogen-containing plastic vessel were stored in a car garage, the gradual accumulation of escaped hydrogen could create a hazardous environment, potentially resulting in severe burns or explosions if ignited. Consequently, when considering hydrogen storage and handling, particularly in the context of experimental structural validation tests for #gl_("swith",pl:true), two properties demand paramount attention: hydrogen's flammability and its diffusion behavior.
+The preceding discussion has primarily focused on the theoretical aspects of hydrogen's safety-related properties. This comprehensive exploration, encompassing this subsection, the previous @chap_2_0_0, and the forthcoming subsections, underscores two critical points. Firstly, while hydrogen offers significant potential as an energy carrier, it necessitates a profound understanding of its properties and behavior. Secondly, the need for special considerations when working experimentally with hydrogen has been made evident. While the theoretical background provided is crucial for conducting structural validation tests aimed at initial steps toward #gl_("swith") certification, the ultimate goal extends beyond theory to real-world applications. Therefore, it is imperative to seek detailed information on hydrogen applications in practical settings. Such knowledge offers multiple benefits, including guidance on real-world hydrogen usage and insights into intricate properties of hydrogen that may not be fully captured by theoretical models.
 
-In summary, it can be said that hydrogen is not flammable without the addition of air. However, on the one hand, there is a large air-hydrogen mixture range in which ignition is possible. On the other hand, the smallest static discharges are sufficient to transfer this gas mixture to ignition up to detonation. Apart from the risk of explosion, the diffusion behavior of hydrogen is of central importance. Hydrogen can be better held in the container with metals than with plastic enclosures. But with metals, there is a danger of hydrogen embrittlement.
+Theory, in essence, is an attempt to model reality. However, experiments conducted in the real world are not constrained by theoretical knowledge or models; rather, they are bound by actual physical phenomena. This distinction highlights a significant difference between theoretical knowledge, simulations, and experimental investigations. While numerical simulations may consume substantial computational resources, energy, and time, they are not exposed to direct physical risks when dealing with hydrogen. 
+In contrast, experimental work with hydrogen carries potential hazards, including the risk of explosions, thus presenting tangible threats to life and safety. 
+This stark contrast in risk profiles between theoretical and experimental approaches emphasizes the critical importance of understanding real-world hydrogen applications. Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen applications, providing valuable insights into the challenges and considerations of working with hydrogen in real-world settings.
 
 
+#summary_[
+In conclusion, hydrogen presents significant theoretical potential for ignition, explosion, and detonation. However, these risks are contingent upon the presence of proper air-hydrogen mixtures. 
+The safety concerns are amplified by two key factors: firstly, the wide range of air-hydrogen mixture ratios that support ignition.
+Secondly, the sufficiency of small static discharges to initiate ignition or even detonation in these mixtures. 
+Beyond the explosion risk, hydrogen's diffusion behavior is essential to consider for safety.
+Material compatibility emerges as a critical factor in hydrogen containment. 
+While metals generally offer superior hydrogen retention compared to plastic enclosures, they are susceptible to hydrogen embrittlement. 
+The theoretical knowledge presented herein emphasizes the necessity for careful attention to hydrogen safety, especially in real-world applications.
+Moreover, it motivates for gathering information from conducted experimental tests with hydrogen. 
+Such data can be crucial for bridging potential gaps between theoretical models and real-world behavior. 
+This alignment between theory and practice is particularly vital for the experimental structural validation tests of #gl_("swith", pl:true), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
+]
 
 // -------------------------------------------------------------------------- //
 // The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. 
