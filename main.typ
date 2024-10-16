@@ -44,8 +44,9 @@
 #show: multiple_tocs
 
 // ------------------------------- page footer ------------------------------ //
+// TODO is the following required?
 // must be after multiple_tocs, because it depends on the list of tables
-// #show: doc => def_page_footesr(doc, "Javed Arshad Butt - Thesis")
+// #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
 
 /* -------------------------------------------------------------------------- */
@@ -86,6 +87,9 @@
 /* ========================================================================== */
 /* =============================== Methodology ============================== */
 /* ========================================================================== */
+
+
+
 #include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
 
 
@@ -102,6 +106,10 @@
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
+
+
+
+
 
 // ------------------------------- introducion ------------------------------ //
 // #include "2_Wr/0_Chap/0_File.typ"

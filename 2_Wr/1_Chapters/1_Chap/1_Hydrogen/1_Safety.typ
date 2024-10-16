@@ -118,7 +118,7 @@ The combustion speeds and associated pressure increases that are to be expected 
   caption: [Estimated pressure thresholds for structural damage @Sigloch2022.],
 ) <tab_22>
 
-A critical consideration in experimental investigations involving hydrogen is its potential for various combustion processes, including burning, deflagration, explosion, and detonation. It is important to note that hydrogen, in isolation, is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. However, hydrogen can become flammable or even detonable when combined with specific factors. These crucial factors, as outlined in @tab_23, create the conditions necessary for hydrogen's combustibility.
+A vital consideration in experimental investigations involving hydrogen is its potential for various combustion processes, including burning, deflagration, explosion, and detonation. It is important to note that hydrogen, in isolation, is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. However, hydrogen can become flammable or even detonable when combined with specific factors. These crucial factors, as outlined in @tab_23, create the conditions necessary for hydrogen's combustibility.
 
 #figure(
   table(
@@ -203,10 +203,7 @@ Further complicating safety considerations is the fact that hydrogen is invisibl
 
 The image presented in @fig_20 was captured under specific experimental conditions: a laminar jet velocity of 47 m/s, a Reynolds number of 837, using a Sony DSC D700 camera (1344 × 1024 pixels) with an f/2.4 aperture and no filter. Contrary to the common misconception that hydrogen flames are invisible, @fig_20 clearly demonstrates their visibility @schefer2009visible. It is important to note, however, that while hydrogen flames are indeed visible, they exhibit lower luminosity compared to the flames of ignited hydrocarbons @schefer2009visible. This difference in visibility has significant implications for safety and detection methods in hydrogen applications.
 The visibility of hydrogen flames is further influenced by the oxygen content in the oxygen-hydrogen mixture, as illustrated in @fig_21. 
-
-// -------------------------------- from here ------------------------------- //
-// TODO only the text needs to be modified, inshallah the floats are fine
-This relationship between flame visibility and mixture composition can provide valuable insights for safety considerations for hydrogen applications.
+The correlation between flame visibility and mixture composition offers valuable findings for safety considerations in hydrogen applications. 
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/2_H2_Multi_Flame.png", 
@@ -215,7 +212,8 @@ This relationship between flame visibility and mixture composition can provide v
 ) <fig_21>
 
 
-In inspecting hydrogen flame visibility, the equivalence ratio, denoted as $phi$, plays a crucial role. $phi$ is defined as the ratio of the actual air-fuel ratio to the stoichiometric air-fuel ratio for combustion @Salaudeen2019. An equivalence ratio of $phi = 1$ represents optimal combustibility, while lower values of $phi$ indicate suboptimal combustion conditions. The experimental results demonstrate a positive correlation between $phi$ and flame visibility: as $phi$ increases, the flame becomes more visible.
+In inspecting hydrogen flame visibility, the equivalence ratio, denoted as $phi$, plays a crucial role. $phi$ is defined as the ratio of the actual air-fuel ratio to the stoichiometric air-fuel ratio for combustion @Salaudeen2019. An equivalence ratio of $phi = 1$ represents optimal combustibility, while lower values of $phi$ indicate suboptimal combustion conditions. 
+The experimental results reveal a direct relationship between $phi$ and flame visibility: as $phi$ increases, the flame becomes more visible.
 The specific experimental conditions for these observations are detailed in the description of @fig_21. Notably, @schefer2009visible concludes that low ambient lighting conditions are conducive to better flame visibility, an important consideration for practical hydrogen flame detection.
 Comprehensive information on hydrogen-air mixing limits for various ignition types and other relevant parameters are provided in @tab_25. It is critical to emphasize that under standard conditions ($0 degree.c$ and $1.01325 "bar"$), hydrogen exhibits a wide flammability range, being flammable at air concentrations of $4% "to" 75.6%$. 
 Moreover, hydrogen becomes detonable within a narrower but still significant range of $18% "to" 58.9%$ air content.
@@ -252,36 +250,50 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
 Beyond the air content considerations outlined in @tab_25, @tab_23 highlights two exceptional cases of hydrogen reactivity. Firstly, hydrogen and chlorine can initiate a reaction solely through light irradiation, resulting in a loud, explosive bang known as the chlorine oxyhydrogen reaction @Klell2018 @Klell2023. 
 Secondly, hydrogen exhibits similarly explosive reactions with fluorine @Klell2018 @Klell2023. 
 These cases underscore the diverse and potentially hazardous reactive properties of hydrogen.
-
+//
 // Transition Metal
-Hydrogen-material compatibility is another critical consideration in hydrogen handling. Metals can accumulate hydrogen within their lattices, potentially leading to embrittlement. For a more detailed examination of hydrogen embrittlement, the reader is directed to @chap_1_0_3. 
+The reactive nature of hydrogen not only manifests in gaseous interactions but also in its interactions with solid materials. 
+Hydrogen-material compatibility emerges as another substantial consideration in hydrogen handling. Metals, in particular, can accumulate hydrogen within their lattices, potentially leading to embrittlement. For a more detailed examination of hydrogen embrittlement, the reader is directed to @chap_1_0_3.
 The process of hydrogen incorporation into metal lattices begins with the dissociation of hydrogen molecules into atoms at the metal surface @Klell2023 @Usman2022. 
-
-// TODO check such as 
-Certain pure metals such as palladium, magnesium, lanthanum, and aluminium and specific alloys such as TiNi-Ti#sub[2]Ni and Mg-Mg#sub[2]Ni demonstrate the capacity to store hydrogen @Klell2023.
-This property of hydrogen storage in metal lattices has an additional beneficial application: it enables the production of highly pure hydrogen (99.99%) @Usman2022 @Du2021 @Nashchekin2020. Consequently, metal lattices can serve as effective hydrogen purification filters, illustrating how a potential challenge (hydrogen absorption in metals) can be leveraged for practical benefits in hydrogen processing and purification.
+Certain pure metals, including palladium, magnesium, lanthanum, and aluminium, as well as specific alloys such as TiNi-Ti#sub[2]Ni and Mg-Mg#sub[2]Ni, demonstrate the ability to store hydrogen @Klell2023.
+This property of hydrogen storage in metal lattices has an additional beneficial application: it enables the production of highly pure hydrogen (99.99%) @Usman2022 @Du2021 @Nashchekin2020. Consequently, metal lattices can serve as effective hydrogen purification filters, illustrating how a potential challenge can be leveraged for practical benefits in hydrogen processing and purification.
 
 // TODO to long, dicussion, paramoung attention, word repetiation: particularly, insights
-In contrast to metals, plastics generally exhibit lower density. While plastics do not suffer from hydrogen embrittlement, they present significant challenges in containing hydrogen @Su2021. The primary concern is the potential for rapid hydrogen permeation through plastic containers, which could lead to swift depletion of a filled tank. This permeation poses a serious safety risk, particularly in enclosed spaces. For instance, if a hydrogen-containing plastic vessel were stored in a car garage, the gradual accumulation of escaped hydrogen could create a hazardous environment, potentially resulting in severe burns or explosions if ignited. Consequently, when considering hydrogen storage and handling, particularly in the context of experimental structural validation tests for #gl_("swith",pl:true), two properties demand paramount attention: hydrogen's flammability and its diffusion behavior.
-The preceding discussion has primarily focused on the theoretical aspects of hydrogen's safety-related properties. This comprehensive exploration, encompassing this subsection, the previous @chap_2_0_0, and the forthcoming subsections, underscores two critical points. Firstly, while hydrogen offers significant potential as an energy carrier, it necessitates a profound understanding of its properties and behavior. Secondly, the need for special considerations when working experimentally with hydrogen has been made evident. While the theoretical background provided is crucial for conducting structural validation tests aimed at initial steps toward #gl_("swith") certification, the ultimate goal extends beyond theory to real-world applications. Therefore, it is imperative to seek detailed information on hydrogen applications in practical settings. Such knowledge offers multiple benefits, including guidance on real-world hydrogen usage and insights into intricate properties of hydrogen that may not be fully captured by theoretical models.
+In contrast to metals, plastics generally exhibit lower density. While plastics do not suffer from hydrogen embrittlement, they present significant obstacles in containing hydrogen @Su2021. The primary concern is the potential for rapid hydrogen permeation through plastic containers, which could lead to swift depletion of a filled tank. This permeation poses a serious safety risk, especially in enclosed spaces. For instance, if a hydrogen-containing plastic vessel were stored in a car garage, the gradual accumulation of escaped hydrogen could create a hazardous environment, potentially resulting in severe burns or explosions if ignited. Consequently, when considering hydrogen storage and handling, particularly in the context of experimental structural validation tests for #gl_("swith",pl:true), two properties demand special attention: flammability and diffusion behavior.
+The preceding analysis has primarily focused on the theoretical aspects of hydrogen's safety-related properties. 
 
-Theory, in essence, is an attempt to model reality. However, experiments conducted in the real world are not constrained by theoretical knowledge or models; rather, they are bound by actual physical phenomena. This distinction highlights a significant difference between theoretical knowledge, simulations, and experimental investigations. While numerical simulations may consume substantial computational resources, energy, and time, they are not exposed to direct physical risks when dealing with hydrogen. 
+// TODO
+// idea was to say: if you look at the things before till here and then the next you get
+This comprehensive exploration, encompassing this subsection, the previous @chap_2_0_0, and the forthcoming subsections, underscores two critical points. Firstly, while hydrogen offers significant potential as an energy carrier, it necessitates a profound understanding of its characteristics and behavior. 
+
+Secondly, the need for special considerations in experimental work with hydrogen has been made evident. 
+
+While the theoretical background provided is crucial for conducting structural validation tests aimed at initial steps toward #gl_("swith") certification, the ultimate goal extends beyond theory to real-world applications. Therefore, it is imperative to seek detailed information on practical hydrogen applications. Such knowledge offers multiple benefits, including guidance on real-world usage and insights into intricate properties that may not be fully captured by theoretical models.
+
+// -------------------------------------------------------------------------- //
+
+Theory, in essence, is an attempt to model reality. 
+However, experiments conducted in the real world are not constrained by theoretical knowledge or models; rather, they are bound by actual physical phenomena.
+This distinction highlights a significant difference between theoretical knowledge, simulations, and experimental investigations. 
+While numerical simulations may consume substantial computational resources, energy, and time, they are not exposed to direct physical risks when dealing with hydrogen. 
 In contrast, experimental work with hydrogen carries potential hazards, including the risk of explosions, thus presenting tangible threats to life and safety. 
-This stark contrast in risk profiles between theoretical and experimental approaches emphasizes the critical importance of understanding real-world hydrogen applications. Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen applications, providing valuable insights into the challenges and considerations of working with hydrogen in real-world settings.
+This stark contrast in risk profiles between theoretical and experimental approaches emphasizes the critical importance of understanding real-world hydrogen applications.
+Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen applications, providing valuable insights into the challenges and considerations of working with hydrogen in real-world settings.
 
 
-#summary_[
+#summary_([
 In conclusion, hydrogen presents significant theoretical potential for ignition, explosion, and detonation. However, these risks are contingent upon the presence of proper air-hydrogen mixtures. 
 The safety concerns are amplified by two key factors: firstly, the wide range of air-hydrogen mixture ratios that support ignition.
 Secondly, the sufficiency of small static discharges to initiate ignition or even detonation in these mixtures. 
 Beyond the explosion risk, hydrogen's diffusion behavior is essential to consider for safety.
 Material compatibility emerges as a critical factor in hydrogen containment. 
-While metals generally offer superior hydrogen retention compared to plastic enclosures, they are susceptible to hydrogen embrittlement. 
+While metals generally offer superior hydrogen retention compared to plastic enclosures, they are susceptible to hydrogen embrittlement.
 The theoretical knowledge presented herein emphasizes the necessity for careful attention to hydrogen safety, especially in real-world applications.
 Moreover, it motivates for gathering information from conducted experimental tests with hydrogen. 
-Such data can be crucial for bridging potential gaps between theoretical models and real-world behavior. 
-This alignment between theory and practice is particularly vital for the experimental structural validation tests of #gl_("swith", pl:true), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
-]
+Such data can be crucial for bridging potential gaps between theoretical models and real-world behavior.
+This alignment between theory and practice is particularly vital for the experimental structural validation tests of #gl_("swith", pl:true), where accurate prediction and management of hydrogen behavior are pivotal for both safety and performance.
+])
 
-// -------------------------------------------------------------------------- //
-// The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. 
+// // -------------------------------------------------------------------------- //
+// // The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. 
+

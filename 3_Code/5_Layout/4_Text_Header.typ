@@ -18,7 +18,16 @@
   // ======================================================================== //
   #show heading.where(level: 1): it => {
 
+    // pagebreak(weak: true)
+
+    // see: https://forum.typst.app/t/why-is-the-page-counter-in-the-background-of-my-page-wrong-after-using-counter-update/531/11?u=quachpas
+    // or see conversation: https://discord.com/channels/1054443721975922748/1296100370795335700
     pagebreak(weak: true)
+    // if the even page contains nothing but the counter update,
+    // it doesn't work. An invisible dot fixes this; since this
+    // page is by definition otherwise empty, the dot shouldn't
+    // affect anything.
+    hide[.]
 
     // [#it.fields()]
     set text(size: default_Font_Size, weight: "bold")

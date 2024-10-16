@@ -4,7 +4,7 @@
 
 // TODO 
 // title
-=== II.11 Experiments and Simulation of and with Hydrogen<chap_2_0_2>
+=== Experiments and Simulation of and with Hydrogen<chap_2_0_2>
 
 In this section, the previously theoretically conveyed knowledge about hydrogen will be expanded through insights from experimental and simulative investigations with hydrogen for practical application. Based on this, relevant statements for K2H2 will be made.
 
@@ -68,3 +68,5 @@ Nevertheless, to achieve the best possible results with the available resources,
 The results from Figure 18 show that it should be theoretically possible to eliminate one of the critical safety concerns. To prevent self-ignition or detonation from occurring, the working environment would have to be placed under protective gas. In the work @jallais2017effects, it was shown that acetylene exhibits particularly positive safety-enhancing properties. But helium, for example, has a fairly high speed of sound (according to Figure 16: 1005 m/s) and on the other hand is a noble gas. Therefore, helium may be more suitable as an ambient gas than acetylene. Noble gases have their outer shells completely filled with valence electrons and are therefore difficult to get to react. Other possibilities would be the remaining noble gases (Ne, Ar, Kr, Xe, Rn, Og). To make a decision, further experimental investigations would have to be carried out first. The goal should be to answer the question of whether helium, other noble gases, and other desired gases can prevent self-ignition of hydrogen. For this, the gases must form the free atmosphere as in the experiment of @jallais2017effects. If the results are positive and ordinary mouth-nose masks can offer sufficient health safety to the personnel, the next step of evaluation can be initiated. In this, an optimal gas must be selected according to cost and availability. But even if the safe application of hydrogen were now realized, other questions arise that concern the measurement technology. What influences do the respective gases have on surrounding hardware, especially on measurement accuracy? This question requires intensive research, possibly simulations, and with high probability experiments.
 
 In summary, it can be said that hydrogen has, as the author of this report finds, highly appealing and positive properties. But on the other hand, both simulative and experimental investigations have shown that working with hydrogen can be associated with considerable safety concerns. Due to the high safety requirements, there is a possibility that for the experimental structural test, the state of the art is not sufficient to fill the tanks with hydrogen.
+
+

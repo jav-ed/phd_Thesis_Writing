@@ -10,7 +10,7 @@
 
 /* ---------------------------- 0_Chap/1_File.typ --------------------------- */
 #let summary_(
-    question,
+    inpt_txt,
     // img_Path: "../../1_Data/2_Figures/1_Svgs/rocket.svg",
     img_Path: "../../1_Data/2_Figs/1_Highlighter/0_Pencil.svg",
     ) = {
@@ -29,14 +29,14 @@
 
             )
             #h(0.33cm)
-            // add the actual question here - no empty line
+            // add the actual inpt_txt here - no empty line
              #underline(
                 offset: 0.3em,
                 extent:0.33em,
                 stroke: (thickness: 0.2em, paint: green, cap: "round"),
                 [*Summary*]) #v(0.5em) 
                 #v(-0.7em) #line(length: 100%)
-                #question
+                #inpt_txt
             ]
     
         }
