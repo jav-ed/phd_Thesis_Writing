@@ -130,11 +130,11 @@ $ Z = m_upright("ideal") / m_upright("real") $<eq_5>
 
 When $Z = 1$, there is no difference between real and ideal gas behavior. 
 When $Z$ exceeds 1 ($m_upright("ideal") > m_upright("real") => Z > 1$), the ideal gas equation overestimates the mass. Conversely, when $Z$ is less than 1 ($m_upright("ideal") < m_upright("real") => Z < 1$), the equation underestimates the mass. 
-Real gas factors are typically determined empirically and presented as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p$, $T$, and $R$ denote pressure, temperature, and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ represent coefficients specific to the regression model.
+Real gas factors are typically determined empirically and presented as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ represent coefficients specific to the regression model.
 
 $ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 upright("MPa")))^(c_i) $<eq_6>
 
-The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Examining @eq_6, it is evident that the first term corresponds to the widely known ideal gas equation, $ Z(p,T) = p / (rho R T)$. The subsequent terms in the equation represent the regression-based modifications that account for the real gas behavior. These additional terms quantify the deviation from ideal gas behavior as a function of temperature and pressure.
+The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Examining @eq_6, it is evident that the first term corresponds to the widely known ideal gas equation, $ p / (rho R T)$ @Stephan2013. The subsequent terms in the equation represent the regression-based modifications that account for the real gas behavior. These additional terms quantify the deviation from ideal gas behavior as a function of temperature and pressure.
 
 #figure(
   table(
