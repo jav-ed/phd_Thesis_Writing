@@ -82,7 +82,7 @@ For convenience, all principal and safety-wise harmless information of this subs
 
     - At $0 degree.c$ and $1.01325 upright("bar")$, hydrogen has a high speed of sound ($a_upright("H2") = 1261.1 upright("m/s")$ @Klell2018), compared to air ($a_upright("air") = 331.5 upright("m/s")$ @Sigloch2022). 
 
-    - Extensive research is ongoing into alternative storage forms @Usman2022 @Yang2023 @Panigrahi2024, including physical and chemical adsorption @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024, and other methods as illustrated in @fig_15.],
+    - Extensive research is ongoing into alternative storage forms @Usman2022 @Yang2023 @Panigrahi2024, including physical and chemical adsorption (metallic hydride) @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024, and other methods as illustrated in @fig_15.],
     
     [Abundance], 
     [- Hydrogen is plentiful, including in Earth's atmosphere @Pal2022 @Faye2022 @Klopcic2023 @MadadiAvargani2022 @Jokar2023 @Hassan2023. 
@@ -100,7 +100,7 @@ For convenience, all principal and safety-wise harmless information of this subs
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/0_Types.jpg", 
-  width: 77%),
+  width: 87%),
   caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
 ) <fig_15>
 
@@ -121,7 +121,7 @@ A comparison of gravimetric energy densities between pure forms and practical st
 ) <fig_16>
 
 
-$ upright("MJ") =^arrowhead  (upright("kWh")) / 3.6 $ <eq_7>
+$ 1 upright("MJ") =^arrowhead  (upright("kWh")) / 3.6 $ <eq_7>
 
 Considering only the gravimetric energy density of pure hydrogen, the information depicted in @fig_16 clearly demonstrates that hydrogen offers more energy than other commonly used fuel mediums, such as natural gas, gasoline, or diesel.
 While @tab_18 briefly mentions that hydrogen does not behave like an ideal gas, this aspect requires further elaboration. To provide more detail, first the real gas factor $Z$ @Mahmoud2013, also known as the compressibility factor, should be introduced. This factor is given in @eq_5, where the variable $m$ describes the mass of the respective gas. The real gas factor $Z$ quantifies the deviation of a gas from ideal gas behavior.
