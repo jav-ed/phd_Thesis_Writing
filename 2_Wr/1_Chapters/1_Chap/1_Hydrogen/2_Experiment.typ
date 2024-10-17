@@ -16,8 +16,6 @@ This section aims to expand upon the previously established theoretical framewor
 The content will commence with a detailed exposition of the rationale behind investing additional resources in gathering information from numerical simulations and experimental studies. 
 Subsequently, the findings will be presented. The subsection will conclude by synthesizing the findings from these investigations and drawing relevant conclusions for experimental structural validation tests for #gl_("swith", pl:true). 
 
-// -------------------------------------------------------------------------- //
-
 The understanding of hydrogen's safety-critical properties, as elaborated in the preceding sections, provides a crucial framework for assessing the potential risks and challenges associated with hydrogen use in #gl_("swith", pl:true). This knowledge base comprises three interconnected components: theoretical data, theoretical models (including numerical simulations), and experimental investigations.
 Theoretical data forms the foundation of our understanding, offering fundamental principles and measured properties of hydrogen. Theoretical models, including numerical simulations, build upon this data to predict hydrogen behavior in complex systems. 
 It is important to note that numerical models, while often more sophisticated, are still a form of theoretical knowledge as they represent attempts to model reality mathematically.
@@ -30,26 +28,29 @@ A comprehensive understanding of hydrogen behavior necessitates the integration 
 By synthesizing insights from theoretical data, advanced numerical models, and carefully conducted experiments, the chances of bridging the gap between theoretical understanding and practical implementation increase. 
 // -------------------------------------------------------------------------- //
 
-The first investigation is dedicated to pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These occur when supersonic velocities arise locally at one point. Pressure shocks are an complex phenomena and shall only be explained here to the extent necessary for understanding the results. The effects of pressure shocks cause the following three central points. First they cause very high pressures.
-The temperatures can be extreme and reach several thousand Kelvin ($3000 "K " $ @Xu2009). Finally, rapid and significant changes in pressure lead to airborne noise, necessitating the use of hearing protection.
-In @Xu2009, an attempt was made to simulate the effect of pressure shocks. The hydrogen is initially compressed at $250 "bar"$ in a pressure vessel. This is supposed to flow out into the free atmosphere through a nozzle. 
-The results of the simulation are shown for different times after exiting the nozzle in @fig_22. The Mach number indicates the multiple of the speed of sound. 
-A Mach number of 5 means that locally five times the speed of sound prevails.
+The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K"$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
+An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. In their study, hydrogen was initially compressed to $250 "bar"$ in a pressure vessel and allowed to flow into the free atmosphere through a nozzle. The simulation results, shown in @fig_22, depict the system at different times after the hydrogen exits the nozzle.
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/0_H2_Pressure_Venting.png", 
   width: 87%),
-  caption: [Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Mach number contours can be seen at 6 different time points @Xu2009.],
+  caption: [Simulative investigation of hydrogen release into the ambient environment from a pressure vessel at $250 "bar"$. Mach number contours are displayed at six distinct time points @Xu2009.],
 ) <fig_22>
 
 
-In @fig_22, it can be seen that the Mach scale goes up to a maximum value of 7. Already at a value of 1, pressure shocks result with the already mentioned consequences. But at such high Mach numbers, it is to be expected that high temperatures, high pressures, and high volume are multiplied many times over. To better interpret these results, @tab_26 should be considered. 
+The Mach number, indicating the multiple of the speed of sound, is used to represent the flow velocity. Its mathematically description is provided in @eq_9,where $v$ and $a$ denote the current speed of the medium and its speed of sound, respectively. 
+
+$ "Ma" = v/a $<eq_9>
+
+For instance, a Mach number of 5 indicates that the local velocity is five times the speed of sound. Based on the results of @Xu2009, @fig_22 illustrates that the Mach scale extends to a maximum value of 7. Pressure shocks, with their aforementioned consequences, occur at Mach 1. At higher Mach numbers, it is expected that the effects—high temperatures, high pressures, and increased volume—are significantly amplified. For a more comprehensive interpretation of these results, @tab_26 should be examined.
 
 
+// -------------------------- speed of sound table -------------------------- //
 #figure(
   table(
-    columns: (auto, auto),
-    align: (col, row) => (left, center).at(col),
+    columns: (auto, auto, 2em, auto, auto ),
+    align: (col, row) => (left, center, center, left, center).at(col),
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
@@ -58,49 +59,67 @@ In @fig_22, it can be seen that the Mach scale goes up to a maximum value of 7. 
     // stroke: tab_Frame(0.05em),
     stroke: none,
       
-    [*Medium*], [*Speed of sound [m/s]*],
-    [Steel], [$5170$],
-    [Cast Iron], [$3210$],
-    [Concrete], [$3730$],
+    [*Medium*], [*Speed of sound [m/s]*],[],[*Medium*], [*Speed of sound [m/s]*],
+    [Steel], [$5170$],[],
+    [Cast Iron], [$3210$], 
+
+    [Concrete], [$3730$],[],
     [Polymer: PVC], [$1462$],
-    [Polymer: PE], [$973$],
+
+    [Polymer: PE], [$973$], [],
     [Wood], [$4500$],
-    [Glass], [$5300$],
+
+    [Glass], [$5300$],[],
     [Water], [$1437$],
-    [Diesel], [$1206$],
+
+    [Diesel], [$1206$],[],
     [Gasoline], [$1062$],
-    [Air (dry)], [$343$],
+
+    [Air (dry)], [$343$],[],
     [Helium], [$1005$],
-    [Hydrogen], [$1300$],
+
+    [Hydrogen], [$1300$],[],
     [Argon], [$318$],
-    [Nitrogen], [$349$],
+
+    [Nitrogen], [$349$],[],
     [Methane], [$446$],
   ),
   kind: table,
-  caption: [Speed of sound of various substances, gases at $20 degree.c; 1 "bar"$ @Sigloch2022.],
+  caption: [Speed of sound in various substances. Gases are measured at $20 degree.c$ and $1 "bar"$ @Sigloch2022.],
 ) <tab_26>
 
+Each medium possesses a characteristic speed of sound, which represents how pressure changes or sound waves propagate through it. The mathematical description is given in @eq_8, where $a$, $p$, and $rho$ denote the speed of sound, pressure, and density, respectively @Sigloch2022.
+
+$ a = sqrt((d p)/(d rho)) $<eq_8>
+
+A high speed of sound in a substance corresponds to a high information transmission speed. For instance, when one end of a steel rod is struck, the sound travels to the other end at $5170 "m/s"$, making it quickly audible. The speed of sound in hydrogen at $20 degree.c$ and $1 "bar"$ is $1300 "m/s"$, significantly higher than in air ($343 "m/s"$). Consequently, information exchange within hydrogen occurs more rapidly than in air.
+This characteristic is crucial for understanding the behavior of pressurized hydrogen released into the atmosphere. Air experiences a pressure shock at $343 "m/s"$, resulting in a substantial temperature increase. In contrast, hydrogen can reach nearly four times this speed before a pressure shock occurs.
+A proposed simplified explanation for the high temperature increase during pressure shocks is as follows: When air molecules lack sufficient time to adapt to pressure changes due to slow information transport, they are forced to change abruptly. This phenomenon is analogous to a supersonic aircraft encountering air molecules before they can "receive information" about its approach. The resulting rapid compression and numerous, hard, impulsive collisions lead to a significant conversion of kinetic energy into thermal energy, causing a substantial temperature increase. It's worth noting that this process occurs primarily in compressible media such as gases, which is why shock waves are prominent in air and hydrogen.
+The temperature contours associated with @fig_22 are presented in @fig_23. Notably, temperatures exceeding $1000 "K"$ are typically associated with explosions @Frost2021 @Lebel2013 @Cashdollar2007 @Goroshin2006.
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/1_H2_T_Venting.png", 
+  width: 87%),
+  caption: [Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Temperature contours can be seen at 6 different time points @Xu2009],
+) <fig_23>
+
+The derived model, when applied to the results, shows that as hydrogen flows out into the free environment, its outflow velocity is already higher than the speed of sound of the surrounding air. This means that the air would already experience a shock wave and develop very high temperatures due to rapid compression. The hydrogen itself, however, would not have reached its own speed of sound and would therefore not generate its own shock wave initially. 
+The high temperatures in the vicinity of the hydrogen, caused by the air shock wave, may not lead to immediate detonation of the hydrogen. However, as hydrogen moves in the air and diffusion processes take place, an ignitable concentration in the oxygen-hydrogen mixture is eventually reached. At this point, the surrounding high temperature becomes sufficient to cause ignition, which under certain conditions can escalate to detonation.
+
+It's important to note that this explanation is a simplified model designed to illustrate the core concepts. The actual physics of shock wave formation and the resulting temperature increase involve more complex thermodynamic processes. For a more comprehensive treatment, readers are directed to advanced non-linear compressible fluid dynamics texts @Sasoh2020.
+
+// -------------------------------------------------------------------------- //
 
 
+Ignitions in which no external ignition sources are used are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. 
+There are various theoretical models (reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, mechanical friction and impact ignition) for self-ignition are mentioned @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
+Compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are said to be unlikely ignition mechanisms for most unintentional releases of hydrogen at ambient temperature. 
+Moreover, it is also quite possible that several of the mentioned mechanisms together would produce a self-ignition @astbury2007spontaneous. 
+Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment are carried out in @dryer2007spontaneous. Furthermore, it was noted here that simple 1-D shock calculations would suggest the following. The sudden release of compressed methane and natural gas can also cause spontaneous ignitions. This, however, at considerably higher compression pressures than with hydrogen.
+Other work doing invesigations with shock cylinderical tubes are 
+@Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Jiang2019. Reviews on the topic of spontaneous ignition mechanism of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Qiu2024.
 
-Each medium has its own specific speed of sound, which in simple words reproduces how pressure changes or sound propagate in a medium. If the speed of sound of a substance is high, then the information transmission speed is correspondingly high. For example, if one end of a steel rod is struck, the sound is transmitted to the other end of the rod at a speed of 7850 m/s and thus audible there. The speed of sound of hydrogen at 20°C and 1 bar is 1300 m/s, which is significantly higher than that of air (343 m/s). This results in the exchange of information within hydrogen occurring faster than in air. This is one of the important considerations to understand what to expect when pressurized hydrogen is released into the free atmosphere.
-
-
-As soon as air reaches a speed of 343 m/s, the first pressure shock occurs, which leads to, among other things, a high temperature increase. Hydrogen, on the other hand, can increase its speed by almost 4 times before a pressure shock occurs. A possible explanation for why pressure shocks generate such high temperature increases could be the following. When the air atoms do not have enough time to adapt to a pressure change because the information transport is too slow, the atoms are abruptly forced to change. An airplane flying at supersonic speed hits the air atoms without the air atoms having received the information about the approaching airplane beforehand. As a result, the air particles cannot avoid the airplane and many hard impulsive collisions occur. This results in a lot of friction, which in turn manifests itself through the conversion of kinetic energy into heat energy (increase in temperature). The temperature contours associated with @fig_22 are given in Figure 17. The high temperatures up to 2900 K are as high as would be expected in explosions.
-
-The derived model should be applied to the results. The hydrogen flows out into the free environment. The outflow velocity of the hydrogen is already higher than the speed of sound of the surrounding air. This means that the air would already suffer a pressure shock and develop very high temperatures. The hydrogen itself, however, would not have reached its own speed of sound and would therefore not generate its own pressure shock. The high temperatures in the vicinity of the hydrogen, caused by the air pressure shock, may not lead to immediate detonation by hydrogen. But hydrogen moves in the air and diffusion processes take place. As soon as an ignitable concentration in the oxygen-hydrogen mixture is reached, the surrounding temperature is sufficient and ignition up to detonation occurs.
-
-[Figure 17: Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Temperature contours can be seen at 6 different time points @Xu2009]
-
-
-// TODO see:
-// https://www.sciencedirect.com/topics/physics-and-astronomy/spontaneous-combustion
-// self/auto/spontaneous -  ignition/cumbustion
-Ignitions in which no obvious external ignition sources are used are referred to as self-ignitions or spontaneous ignitions. 
-
-A work in which various theoretical models (reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition) for self-ignition are mentioned is @astbury2007spontaneous. 
-Compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are said to be unlikely ignition mechanisms for most unintentional releases of hydrogen at ambient temperature. Moreover, it is also quite possible that several of the mentioned mechanisms together would produce a self-ignition. In @dryer2007spontaneous, intensive experimental investigations on the outflow of pressurized hydrogen into the free environment are carried out. Furthermore, it was noted here that simple 1-D shock calculations would suggest the following. The sudden release of compressed methane and natural gas can also cause spontaneous ignitions. This, however, at considerably higher compression pressures than with hydrogen.
-
+// ---------------------------------- here ---------------------------------- //
 The next work to be discussed in detail is @jallais2017effects. In the experiment presented therein, the effect of oxidizing agents, such as air, pure oxygen O₂, nitrous oxide N₂O, and acetylene C₂H₂, on the spontaneous ignition of hydrogen was investigated. The various oxidizing agents flow perpendicular to the hydrogen jet. Similar to the investigations already discussed, the hydrogen is also released here from a high-pressure vessel through a nozzle into the atmosphere. However, this atmosphere is now flowed through by various oxidizing agents, which represents a significant difference from earlier investigations with a free atmosphere. For the experiments, a straight expansion tube with a diameter of 4 mm and a length of 10 cm was used. The spontaneous ignition was observed with a high-speed camera and the external overpressures were measured.
 
 The results of the experiments in @jallais2017effects are shown in Figure 18. These illustrate the influence of the pressure in the hydrogen container and the ambient gas on causing a possible self-ignition.
@@ -111,6 +130,17 @@ First, it can be seen from the results in Figure 18 that increasing pressure in 
 
 Various literature sources, some of which are mentioned in @Rosen2018, can be used to derive recurring essential parameters to minimize the probability of occurrence of self-ignition. These are found in Table 25.
 
+
+// TODO 
+// check that with 
+// 1. Research progress on the self-ignition of high-pressure hydrogen discharge: A review 
+// 	1. https://www.sciencedirect.com/science/article/pii/S036031992200060X 
+// 	2. tube geomtry
+// 	3. used
+// 2. A review on spontaneous ignition mechanism of pressurized hydrogen released through tubes
+// 	1. https://www.sciencedirect.com/science/article/pii/S0360319924036231#sec3 
+// 	2. a lot of pipe paremter, length, diameter, cross section
+// 	3. used
 [Table 25: Choice of influence parameters to avoid the probability of occurrence of hydrogen self-ignition and other known influence parameters.]
 
 1) Keep pipe length short <<
