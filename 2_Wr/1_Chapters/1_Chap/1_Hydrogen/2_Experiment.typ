@@ -2,6 +2,17 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+
+Theory, in essence, represents an attempt to model reality. However, experiments conducted in the real world are not constrained by theoretical knowledge or models; rather, they are bound by actual physical phenomena. This distinction underscores a significant difference between theoretical knowledge, simulations, and experimental investigations.
+
+Numerical simulations, while potentially consuming substantial computational resources, energy, and time, do not expose researchers to direct physical risks when dealing with hydrogen. In contrast, experimental work with hydrogen carries potential hazards, including the risk of explosions, thus presenting tangible threats to life and safety. This stark contrast in risk profiles between theoretical and experimental approaches emphasizes the critical importance of understanding real-world hydrogen applications.
+
+The disparity between theoretical models and experimental realities is particularly relevant in hydrogen research. While simulations provide valuable insights, they may not fully capture the complexities and unpredictabilities of real-world hydrogen behavior. This limitation further underscores the necessity of practical experimentation, despite its inherent risks.
+
+Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen applications, providing valuable insights into the challenges and considerations of working with hydrogen in real-world settings. This exploration will bridge the gap between theoretical understanding and practical implementation, offering a more comprehensive perspective on hydrogen safety and handling.
+
+
+// -------------------------------------------------------------------------- //
 // TODO 
 // title
 === Experiments and Simulation of and with Hydrogen<chap_2_0_2>

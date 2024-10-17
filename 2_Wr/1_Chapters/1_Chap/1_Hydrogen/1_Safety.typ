@@ -260,21 +260,13 @@ This property of hydrogen storage in metal lattices has an additional beneficial
 In contrast to metals, plastics generally exhibit lower density. While plastics do not suffer from hydrogen embrittlement, they present significant obstacles in containing hydrogen @Su2021. The primary concern is the potential for rapid hydrogen permeation through plastic containers, which could lead to swift depletion of a filled tank. This permeation poses a serious safety risk, especially in enclosed spaces. For instance, if a hydrogen-containing plastic vessel were stored in a car garage, the gradual accumulation of escaped hydrogen could create a hazardous environment, potentially resulting in severe burns or explosions if ignited. Consequently, when considering hydrogen storage and handling, particularly in the context of experimental structural validation tests for #gl_("swith",pl:true), two properties demand special attention: flammability and diffusion behavior.
 The preceding analysis has primarily focused on the theoretical aspects of hydrogen's safety-related properties. 
 
-// ---------------------------------- here ---------------------------------- //
-// TODO
-// idea was to say: if you look at the things before till here and then the next you get
-This comprehensive exploration, encompassing this subsection, the previous @chap_2_0_0, and the forthcoming subsections, underscores two critical points. Firstly, while hydrogen offers significant potential as an energy carrier, it necessitates a profound understanding of its characteristics and behavior. 
-
-Secondly, the need for special considerations in experimental work with hydrogen has been made evident. 
-
-While the theoretical background provided is crucial for conducting structural validation tests aimed at initial steps toward #gl_("swith") certification, the ultimate goal extends beyond theory to real-world applications. Therefore, it is imperative to seek detailed information on practical hydrogen applications. Such knowledge offers multiple benefits, including guidance on real-world usage and insights into intricate properties that may not be fully captured by theoretical models.
-
-// -------------------------------------------------------------------------- //
+The analysis thus far has elucidated two primary aspects. Firstly, considering this subsection in conjunction with the previous @chap_2_0_0 and forthcoming subsections, it becomes evident that hydrogen possesses numerous unique properties warranting thorough examination. Secondly, the necessity for specialized considerations in experimental work involving hydrogen has been clearly demonstrated.
+While the theoretical foundation provided is essential for conducting structural validation tests aimed at initial steps toward #gl_("swith") certification, the ultimate objective extends beyond theory to real-world applications. Consequently, it is imperative to acquire detailed information on practical hydrogen applications. Such knowledge offers multiple benefits, including guidance on real-world usage and insights into intricate properties that may not be fully captured by theoretical knowledge and models.
 
 Theory, in essence, is an attempt to model reality. 
 However, experiments conducted in the real world are not constrained by theoretical knowledge or models; rather, they are bound by actual physical phenomena.
 This distinction highlights a significant difference between theoretical knowledge, simulations, and experimental investigations. 
-While numerical simulations may consume substantial computational resources, energy, and time, they are not exposed to direct physical risks when dealing with hydrogen. 
+Numerical simulations, while potentially consuming substantial computational resources, energy, and time, do not expose researchers to direct physical risks when dealing with hydrogen. 
 In contrast, experimental work with hydrogen carries potential hazards, including the risk of explosions, thus presenting tangible threats to life and safety. 
 This stark contrast in risk profiles between theoretical and experimental approaches emphasizes the critical importance of understanding real-world hydrogen applications.
 Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen applications, providing valuable insights into the challenges and considerations of working with hydrogen in real-world settings.
@@ -282,7 +274,7 @@ Consequently, the subsequent @chap_2_0_2 will delve into practical hydrogen appl
 
 #summary_([
 In conclusion, hydrogen presents significant theoretical potential for ignition, explosion, and detonation. However, these risks are contingent upon the presence of proper air-hydrogen mixtures. 
-The safety concerns are amplified by two key factors: firstly, the wide range of air-hydrogen mixture ratios that support ignition.
+The safety concerns are amplified by two key factors. Firstly, the wide range of air-hydrogen mixture ratios that support ignition.
 Secondly, the sufficiency of small static discharges to initiate ignition or even detonation in these mixtures. 
 Beyond the explosion risk, hydrogen's diffusion behavior is essential to consider for safety.
 Material compatibility emerges as a critical factor in hydrogen containment. 
@@ -292,7 +284,4 @@ Moreover, it motivates for gathering information from conducted experimental tes
 Such data can be crucial for bridging potential gaps between theoretical models and real-world behavior.
 This alignment between theory and practice is particularly vital for the experimental structural validation tests of #gl_("swith", pl:true), where accurate prediction and management of hydrogen behavior are pivotal for both safety and performance.
 ])
-
-// // -------------------------------------------------------------------------- //
-// // The latter represents the motivation to use the possibilities offered by the standards, instead of wanting to test exclusively with hydrogen. 
 
