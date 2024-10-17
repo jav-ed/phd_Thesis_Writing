@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
-=== Theoretical Foundations of Safety-Critical Hydrogen Properties<chap_2_0_1>
+=== Theoretical Foundations of Hydrogen Safety Properties<chap_2_0_1>
 
 The previous @chap_2_0_0 provided a comprehensive overview of hydrogen's properties, elucidating its attractiveness as an energy carrier. However, when considering experimental structural validation tests of #gl_("swith", long:true) for a potential final certification, it is crucial to understand the potential hazards associated with hydrogen.
 

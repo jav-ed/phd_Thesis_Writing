@@ -28,7 +28,7 @@
 
 // only link color
 // #show link: set text(fill: blue)
-#show link: set text(fill: color_Link)
+// #show link: set text(fill: color_Link)
 
 // color of key and description
 // #set text(fill: color_Link)
