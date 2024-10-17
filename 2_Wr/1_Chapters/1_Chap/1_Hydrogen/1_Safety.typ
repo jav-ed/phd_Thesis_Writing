@@ -165,7 +165,7 @@ It is important to note that in both cases, ignition can only occur if an approp
   table(
     columns: (auto, auto, auto, auto, auto, auto),
     align: (col, row) => if row == 0 or row == 1 { center + horizon } else { center + horizon },
-    fill: (col, row) => if row <= 1 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    fill: (col, row) => if row <= 1 {table_cl_header} else {(table_cl_0, table_cl_1).at(calc.rem(row, 2))},
     inset: (
     x: 1em,
     y: 0.7em,
@@ -223,10 +223,12 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
   table(
     columns: (auto, auto),
     align: (col, row) => if row == 0 { center + horizon } else { left + horizon },
-    fill: (col, row) => if row == 0 { rgb("#7FFF7F") } 
-                        else if calc.odd(row) { rgb("#D3D3D3") }
-                        else { white },
-    inset: (x: 1em, y: 0.7em),
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    // stroke: tab_Frame(0.05em),
     stroke: none,
     
     /* --- header --- */

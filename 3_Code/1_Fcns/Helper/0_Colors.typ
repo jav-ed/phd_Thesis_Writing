@@ -9,7 +9,8 @@
 // twc_Col.slate-50, twc_Col.gray-500, ...
 #let twc_Col = tailwind
 
-#let table_cl_header = twc_Col.green-400
+#let table_cl_header = rgb("#7FFF7F")
+// #let table_cl_header = twc_Col.green-400
 #let table_cl_0 = twc_Col.slate-50
 #let table_cl_1 = twc_Col.gray-300
 // calc.rem()

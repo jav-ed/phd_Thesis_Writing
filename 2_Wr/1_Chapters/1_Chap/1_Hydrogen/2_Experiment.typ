@@ -11,41 +11,86 @@
 // title
 === Experiments and Simulation of and with Hydrogen<chap_2_0_2>
 In @chap_2_0_0 essential properties of hydrogen were introduced, followed by an elaboration of the safety-relevant properties of hydrogen from a theoretical perspective in @chap_2_0_1. The analysis conducted in @chap_2_0_1 came to the conclusion that theoretical knowledge for hydrogen application is of paramount importance. Yet, for the final goal of conducting structural validation tests for #gl_("swith", long:true), additional information from experimental investigations and numerical simulations is required. This serves as a method to close the gap between theoretical knowledge and models and observed physical phenomena. Through this, important information could be obtained, such as whether there are known methods to suppress hydrogen ignition and reduce explosion damage.
-Only with these three fields—theoretical knowledge, numerical simulation, and knowledge about physically conducted experiments—can conclusions about further progress regarding experimental structure validation tests for #gl_("swith", pl:true) be made. Thus, in this section, the previously theoretically conveyed knowledge about hydrogen will be expanded through insights from experimental and simulative investigations with hydrogen for practical application.
-This subsection shall begin by providing a clear and expanded motivation for why additional effort should be invested in collecting further information from numerical simulations and experimental investigations. Following this, the findings will be presented. The subsection will conclude by synthesizing the findings from these investigations and drawing relevant conclusions for experimental structural validation tests for #gl_("swith", pl:true). These conclusions will be firmly grounded in the provided findings and will aim to offer valuable insights for the practical implementation of #gl_("swith") technology.
-// -------------------------------------------------------------------------- //
-
-The theoretical foundations of hydrogen's safety-critical properties, as elaborated in the preceding sections, provide a crucial framework for understanding the potential risks and challenges associated with hydrogen use in #gl_("swith", pl:true). However, relying solely on theoretical knowledge presents limitations that necessitate a broader approach to fully comprehend the complexities of hydrogen behavior in real-world applications.
-While theoretical models offer valuable insights, they often simplify complex physical phenomena and may not fully capture the nuanced interactions that occur in practical scenarios. Numerical simulations serve as an intermediate step, allowing for more detailed modeling of complex systems and interactions. However, even advanced simulations may not account for all real-world variables and uncertainties. The gap between theoretical predictions, simulation results, and real-world outcomes becomes particularly significant when dealing with a substance as volatile and potentially hazardous as hydrogen. Factors such as material interactions, environmental variables, and unforeseen system dynamics can lead to discrepancies between theoretical expectations, simulation results, and experimental observations.
-Moreover, the safety-critical nature of #gl_("swith", pl:true) demands a level of certainty that theoretical models and simulations alone cannot provide. Experimental data offers tangible evidence of hydrogen behavior under various conditions, validating theoretical predictions and simulation results where they align and highlighting areas where further investigation is needed. This empirical approach is essential for identifying potential safety issues that may not be apparent from theoretical considerations or simulations alone.
-
-Furthermore, regulatory bodies and certification processes for #gl_("swith") technologies will likely require experimental validation of safety measures, in addition to theoretical justifications and simulation results. A comprehensive understanding of conducted experiments and simulations not only enhances the collective knowledge base but also informs the development of robust safety protocols and design considerations for practical applications.
-Therefore, to bridge the gap between theoretical understanding and practical implementation, it is imperative to conduct a review of both numerical simulations and experimental literature pertaining to hydrogen safety in contexts relevant to #gl_("swith") applications. This review can complement the theoretical foundation, providing a more holistic understanding of the challenges and considerations involved in ensuring the safe use of hydrogen in integrated wing tank structures.
-This subsections will delve into selected numerical studies and experimental investigations, focusing on their findings, and implications for #gl_("swith") safety protocols. 
-By synthesizing theoretical knowledge with simulation results and experimental evidence, a comprehensive framework for addressing the safety-critical aspects of hydrogen use in advanced aircraft fuel systems can be developed.
+The synergy of theoretical knowledge, numerical simulation, and empirical data from physical experiments is essential for drawing comprehensive conclusions regarding the progress of experimental structural validation tests for #gl_("swith", pl:true). 
+This section aims to expand upon the previously established theoretical framework of hydrogen properties by incorporating insights from experimental and simulative investigations, with a focus on practical applications. 
+The content will commence with a detailed exposition of the rationale behind investing additional resources in gathering information from numerical simulations and experimental studies. 
+Subsequently, the findings will be presented. The subsection will conclude by synthesizing the findings from these investigations and drawing relevant conclusions for experimental structural validation tests for #gl_("swith", pl:true). 
 
 // -------------------------------------------------------------------------- //
 
-The first investigation is dedicated to pressure shocks. These occur when supersonic velocities arise locally at one point. Pressure shocks are complex phenomena and shall only be explained here to the extent necessary for understanding the results. The effects of pressure shocks cause the following three central points:
+The understanding of hydrogen's safety-critical properties, as elaborated in the preceding sections, provides a crucial framework for assessing the potential risks and challenges associated with hydrogen use in #gl_("swith", pl:true). This knowledge base comprises three interconnected components: theoretical data, theoretical models (including numerical simulations), and experimental investigations.
+Theoretical data forms the foundation of our understanding, offering fundamental principles and measured properties of hydrogen. Theoretical models, including numerical simulations, build upon this data to predict hydrogen behavior in complex systems. 
+It is important to note that numerical models, while often more sophisticated, are still a form of theoretical knowledge as they represent attempts to model reality mathematically.
+While these theoretical approaches offer valuable insights, they often simplify complex physical phenomena and may not fully capture the nuanced interactions that occur in practical scenarios. Factors such as material interactions, environmental variables, and unforeseen system dynamics can lead to discrepancies between theoretical expectations and real-world outcomes. This limitation becomes particularly significant when dealing with a substance as volatile and potentially hazardous as hydrogen.
 
-1) Very high pressures arise.
-2) The temperatures can be extreme and reach several thousand Kelvin
-   (3000 K in @Xu2009).
-3) High and rapid pressure changes lead to air sound, which necessitates hearing protection
+Experimental investigations bridge the gap between theory and practice, offering tangible evidence of hydrogen behavior under various conditions. This empirical approach is essential for several reasons. Firstly, experiments can validate theoretical predictions and simulation results, confirming where they align with reality and highlighting areas where further investigation is needed. Secondly, the safety-critical nature of #gl_("swith", pl:true) demands a level of certainty that theoretical approaches alone cannot provide. Experimental data is crucial for identifying potential safety issues that may not be apparent from theoretical considerations. Moreover, regulatory bodies and certification processes for #gl_("swith") technologies will likely require experimental validation of safety measures, in addition to theoretical justifications. Lastly, experiments provide direct observations of physical phenomena, offering insights into intricate properties and behaviors that may not be fully captured by theoretical approaches.
+However, it is important to note the contrasting risk profiles between theoretical/numerical approaches and experimental/practical applications. While theoretical and numerical work shields researchers from direct physical dangers, experimental work involves tangible hazards, including the risk of explosions, which pose real threats to life and safety.
 
-In @Xu2009, an attempt was made to simulate the effect of pressure shocks. The hydrogen is initially compressed at 250 bar in a pressure vessel. This is supposed to flow out into the free atmosphere through a nozzle. The results of the simulation are shown for different times after exiting the nozzle in Figure 15. The Mach number indicates the multiple of the speed of sound. A Mach number of 5 means that locally five times the speed of sound prevails.
+A comprehensive understanding of hydrogen behavior necessitates the integration of all three knowledge types. This holistic approach not only enhances the collective knowledge base but also informs the development of robust safety protocols and design considerations for practical applications of #gl_("swith") technology.
+By synthesizing insights from theoretical data, advanced numerical models, and carefully conducted experiments, the chances of bridging the gap between theoretical understanding and practical implementation increase. 
+// -------------------------------------------------------------------------- //
 
-[Figure 15: Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under 250 bar. Mach number contours can be seen at 6 different time points @Xu2009]
+The first investigation is dedicated to pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These occur when supersonic velocities arise locally at one point. Pressure shocks are an complex phenomena and shall only be explained here to the extent necessary for understanding the results. The effects of pressure shocks cause the following three central points. First they cause very high pressures.
+The temperatures can be extreme and reach several thousand Kelvin ($3000 "K " $ @Xu2009). Finally, rapid and significant changes in pressure lead to airborne noise, necessitating the use of hearing protection.
+In @Xu2009, an attempt was made to simulate the effect of pressure shocks. The hydrogen is initially compressed at $250 "bar"$ in a pressure vessel. This is supposed to flow out into the free atmosphere through a nozzle. 
+The results of the simulation are shown for different times after exiting the nozzle in @fig_22. The Mach number indicates the multiple of the speed of sound. 
+A Mach number of 5 means that locally five times the speed of sound prevails.
 
-In Figure 15, it can be seen that the Mach scale goes up to a maximum value of 7. Already at a value of 1, pressure shocks result with the already mentioned consequences. But at such high Mach numbers, it is to be expected that high temperatures, high pressures, and high volume are multiplied many times over. To better interpret these results, Figure 16 should be considered. Each medium has its own specific speed of sound, which in simple words reproduces how pressure changes or sound propagate in a medium. If the speed of sound of a substance is high, then the information transmission speed is correspondingly high. For example, if one end of a steel rod is struck, the sound is transmitted to the other end of the rod at a speed of 7850 m/s and thus audible there. The speed of sound of hydrogen at 20°C and 1 bar is 1300 m/s, which is significantly higher than that of air (343 m/s). This results in the exchange of information within hydrogen occurring faster than in air. This is one of the important considerations to understand what to expect when pressurized hydrogen is released into the free atmosphere.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/0_H2_Pressure_Venting.png", 
+  width: 87%),
+  caption: [Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Mach number contours can be seen at 6 different time points @Xu2009.],
+) <fig_22>
 
-[Figure 16: Speed of sound of various substances. Gases at 20°C; 1 bar @Sigloch2022]
 
-As soon as air reaches a speed of 343 m/s, the first pressure shock occurs, which leads to, among other things, a high temperature increase. Hydrogen, on the other hand, can increase its speed by almost 4 times before a pressure shock occurs. A possible explanation for why pressure shocks generate such high temperature increases could be the following. When the air atoms do not have enough time to adapt to a pressure change because the information transport is too slow, the atoms are abruptly forced to change. An airplane flying at supersonic speed hits the air atoms without the air atoms having received the information about the approaching airplane beforehand. As a result, the air particles cannot avoid the airplane and many hard impulsive collisions occur. This results in a lot of friction, which in turn manifests itself through the conversion of kinetic energy into heat energy (increase in temperature). The temperature contours associated with Figure 15 are given in Figure 17. The high temperatures up to 2900 K are as high as would be expected in explosions.
+In @fig_22, it can be seen that the Mach scale goes up to a maximum value of 7. Already at a value of 1, pressure shocks result with the already mentioned consequences. But at such high Mach numbers, it is to be expected that high temperatures, high pressures, and high volume are multiplied many times over. To better interpret these results, @tab_26 should be considered. 
+
+
+#figure(
+  table(
+    columns: (auto, auto),
+    align: (col, row) => (left, center).at(col),
+    fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
+    inset: (
+      x: 1em,
+      y: 0.7em,
+    ),
+    // stroke: tab_Frame(0.05em),
+    stroke: none,
+      
+    [*Medium*], [*Speed of sound [m/s]*],
+    [Steel], [$5170$],
+    [Cast Iron], [$3210$],
+    [Concrete], [$3730$],
+    [Polymer: PVC], [$1462$],
+    [Polymer: PE], [$973$],
+    [Wood], [$4500$],
+    [Glass], [$5300$],
+    [Water], [$1437$],
+    [Diesel], [$1206$],
+    [Gasoline], [$1062$],
+    [Air (dry)], [$343$],
+    [Helium], [$1005$],
+    [Hydrogen], [$1300$],
+    [Argon], [$318$],
+    [Nitrogen], [$349$],
+    [Methane], [$446$],
+  ),
+  kind: table,
+  caption: [Speed of sound of various substances, gases at $20 degree.c; 1 "bar"$ @Sigloch2022.],
+) <tab_26>
+
+
+
+
+Each medium has its own specific speed of sound, which in simple words reproduces how pressure changes or sound propagate in a medium. If the speed of sound of a substance is high, then the information transmission speed is correspondingly high. For example, if one end of a steel rod is struck, the sound is transmitted to the other end of the rod at a speed of 7850 m/s and thus audible there. The speed of sound of hydrogen at 20°C and 1 bar is 1300 m/s, which is significantly higher than that of air (343 m/s). This results in the exchange of information within hydrogen occurring faster than in air. This is one of the important considerations to understand what to expect when pressurized hydrogen is released into the free atmosphere.
+
+
+As soon as air reaches a speed of 343 m/s, the first pressure shock occurs, which leads to, among other things, a high temperature increase. Hydrogen, on the other hand, can increase its speed by almost 4 times before a pressure shock occurs. A possible explanation for why pressure shocks generate such high temperature increases could be the following. When the air atoms do not have enough time to adapt to a pressure change because the information transport is too slow, the atoms are abruptly forced to change. An airplane flying at supersonic speed hits the air atoms without the air atoms having received the information about the approaching airplane beforehand. As a result, the air particles cannot avoid the airplane and many hard impulsive collisions occur. This results in a lot of friction, which in turn manifests itself through the conversion of kinetic energy into heat energy (increase in temperature). The temperature contours associated with @fig_22 are given in Figure 17. The high temperatures up to 2900 K are as high as would be expected in explosions.
 
 The derived model should be applied to the results. The hydrogen flows out into the free environment. The outflow velocity of the hydrogen is already higher than the speed of sound of the surrounding air. This means that the air would already suffer a pressure shock and develop very high temperatures. The hydrogen itself, however, would not have reached its own speed of sound and would therefore not generate its own pressure shock. The high temperatures in the vicinity of the hydrogen, caused by the air pressure shock, may not lead to immediate detonation by hydrogen. But hydrogen moves in the air and diffusion processes take place. As soon as an ignitable concentration in the oxygen-hydrogen mixture is reached, the surrounding temperature is sufficient and ignition up to detonation occurs.
 
-[Figure 17: Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under 250 bar. Temperature contours can be seen at 6 different time points @Xu2009]
+[Figure 17: Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Temperature contours can be seen at 6 different time points @Xu2009]
 
 
 // TODO see:
@@ -83,7 +128,7 @@ To apply the collected knowledge to the project in K2H2, some points should be r
 
 Nevertheless, to achieve the best possible results with the available resources, extensive investigations were carried out to define a suitable alternative filling medium.
 
-The results from Figure 18 show that it should be theoretically possible to eliminate one of the critical safety concerns. To prevent self-ignition or detonation from occurring, the working environment would have to be placed under protective gas. In the work @jallais2017effects, it was shown that acetylene exhibits particularly positive safety-enhancing properties. But helium, for example, has a fairly high speed of sound (according to Figure 16: 1005 m/s) and on the other hand is a noble gas. Therefore, helium may be more suitable as an ambient gas than acetylene. Noble gases have their outer shells completely filled with valence electrons and are therefore difficult to get to react. Other possibilities would be the remaining noble gases (Ne, Ar, Kr, Xe, Rn, Og). To make a decision, further experimental investigations would have to be carried out first. The goal should be to answer the question of whether helium, other noble gases, and other desired gases can prevent self-ignition of hydrogen. For this, the gases must form the free atmosphere as in the experiment of @jallais2017effects. If the results are positive and ordinary mouth-nose masks can offer sufficient health safety to the personnel, the next step of evaluation can be initiated. In this, an optimal gas must be selected according to cost and availability. But even if the safe application of hydrogen were now realized, other questions arise that concern the measurement technology. What influences do the respective gases have on surrounding hardware, especially on measurement accuracy? This question requires intensive research, possibly simulations, and with high probability experiments.
+The results from Figure 18 show that it should be theoretically possible to eliminate one of the critical safety concerns. To prevent self-ignition or detonation from occurring, the working environment would have to be placed under protective gas. In the work @jallais2017effects, it was shown that acetylene exhibits particularly positive safety-enhancing properties. But helium, for example, has a fairly high speed of sound (according to @tab_26 16: 1005 m/s) and on the other hand is a noble gas. Therefore, helium may be more suitable as an ambient gas than acetylene. Noble gases have their outer shells completely filled with valence electrons and are therefore difficult to get to react. Other possibilities would be the remaining noble gases (Ne, Ar, Kr, Xe, Rn, Og). To make a decision, further experimental investigations would have to be carried out first. The goal should be to answer the question of whether helium, other noble gases, and other desired gases can prevent self-ignition of hydrogen. For this, the gases must form the free atmosphere as in the experiment of @jallais2017effects. If the results are positive and ordinary mouth-nose masks can offer sufficient health safety to the personnel, the next step of evaluation can be initiated. In this, an optimal gas must be selected according to cost and availability. But even if the safe application of hydrogen were now realized, other questions arise that concern the measurement technology. What influences do the respective gases have on surrounding hardware, especially on measurement accuracy? This question requires intensive research, possibly simulations, and with high probability experiments.
 
 In summary, it can be said that hydrogen has, as the author of this report finds, highly appealing and positive properties. But on the other hand, both simulative and experimental investigations have shown that working with hydrogen can be associated with considerable safety concerns. Due to the high safety requirements, there is a possibility that for the experimental structural test, the state of the art is not sufficient to fill the tanks with hydrogen.
 
