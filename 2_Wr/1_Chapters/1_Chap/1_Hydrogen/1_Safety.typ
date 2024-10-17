@@ -2,9 +2,8 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO 
-// title
-=== Safety-Relevant Properties of Hydrogen<chap_2_0_1>
+// Title was tested and is inshallah fine
+=== Theoretical Foundations of Safety-Critical Hydrogen Properties<chap_2_0_1>
 
 The previous @chap_2_0_0 provided a comprehensive overview of hydrogen's properties, elucidating its attractiveness as an energy carrier. However, when considering experimental structural validation tests of #gl_("swith", long:true) for a potential final certification, it is crucial to understand the potential hazards associated with hydrogen.
 This investigation can be divided into two complementary approaches: a theoretical foundation and an experimentally supported elaboration. The current subsection focuses on the theoretical knowledge, while the subsequent @chap_2_0_2 complements it with practical insights. To achieve this comprehensive understanding, a thorough study has been undertaken. The primary objective is to highlight the key findings, particularly emphasizing the aspects of hydrogen that require special attention from a safety perspective.
