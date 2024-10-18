@@ -151,15 +151,15 @@ While future advancements may potentially yield airfoil-shaped high-pressure hyd
 
 Given the reiterated conceptualization of #gl_("swith", pl:true) and the illustrated dimensions of integrated composite tubes, the prohibitive expense of producing multiple #gl_("swith", pl:true) for experimental tests becomes evident. This economic constraint presents a significant challenge in meeting the testing requirements outlined in current standards.
 Another obstacle to the direct applicability of EC 406/2010 to #gl_("swith", pl:true) stems from certain prescribed demands that may be considered excessively stringent. These requirements, found identically in both EC 406/2010 and ISO 19881:2018, relate to the gaseous hydrogen burst ratio criteria. Specifically, these criteria are delineated in section 3.6 of EC 406/2010 and section 7.3.2 of ISO 19881:2018.
-Both standards mandate the fulfillment of @eq_3), where $p_upright("burst")$, $upright("factor")$, and $p_upright("wnp")$ represent the minimal burst pressure, a factor dependent on the over-wrap material, and the nominal working pressure, respectively.
+Both standards mandate the fulfillment of @eq_3, where $p_"burst"$, $"factor"$, and $p_"wnp"$ represent the minimal burst pressure, a factor dependent on the over-wrap material, and the nominal working pressure, respectively.
 
-$ p_upright("burst") ≥ upright("factor")  p_upright("wnp") $<eq_3>
+$ p_"burst" ≥ "factor"  p_"wnp" $<eq_3>
 
-The safety factors specified for different fiber materials are as follows: 3.5 for glass, 3.0 for aramid, and 2.25 for carbon. Consequently, when using glass as the fiber material, the hydrogen tank must withstand three times the nominal pressure. For instance, if the nominal pressure for a #gl_("swith") tank were set at $300 upright("bar")$, the tank would need to withstand a minimum of $900 upright("bar")$.
+The safety factors specified for different fiber materials are as follows: 3.5 for glass, 3.0 for aramid, and 2.25 for carbon. Consequently, when using glass as the fiber material, the hydrogen tank must withstand three times the nominal pressure. For instance, if the nominal pressure for a #gl_("swith") tank were set at $300 "bar"$, the tank would need to withstand a minimum of $900 "bar"$.
 These high safety factors, as defined in EC 406/2010 and ISO 19881:2018, pose significant technical challenges. Higher safety factors necessitate more material to meet the requirements, resulting in increased mass and weight. This outcome is highly undesirable in aviation, as emphasized on multiple occasions in @chap_1_0.
-The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 upright("bar")$. Depending on the fiber material, maximum working nominal pressures ($p_upright("wnp")$) between 300 and $465 upright("bar")$ can be achieved under EC 406/2010 and ISO 19881:2018 standards. However, when considering the factors specified in ISO 11119-3:2020, the expected maximum working nominal pressures ($p_upright("wnp")$) range between 437.5 and $525 upright("bar")$.
+The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 "bar"$. Depending on the fiber material, maximum working nominal pressures ($p_"wnp"$) between 300 and $465 "bar"$ can be achieved under EC 406/2010 and ISO 19881:2018 standards. However, when considering the factors specified in ISO 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between 437.5 and $525 "bar"$.
 
-A comprehensive overview of these relationships is provided in @tab_14. The table presents the complete list of fiber material-dependent safety factors for three standards, represented in the denominators of the fractions. Additionally, it illustrates the maximum allowable operating pressures for each combination of fiber material and standard, calculated based on the maximum test pressure of $1050 upright("bar")$ @Cebolla2019.
+A comprehensive overview of these relationships is provided in @tab_14. The table presents the complete list of fiber material-dependent safety factors for three standards, represented in the denominators of the fractions. Additionally, it illustrates the maximum allowable operating pressures for each combination of fiber material and standard, calculated based on the maximum test pressure of $1050 "bar"$ @Cebolla2019.
 
 
 #figure(
@@ -175,7 +175,7 @@ A comprehensive overview of these relationships is provided in @tab_14. The tabl
     stroke: none,
     
     /* --- header --- */
-    table.header[*Fiber material*][*EC 406/2010 &\ ISO 19881:2018\ $p_upright("wnp")$*][*ISO 11119-3:2020 $p_upright("wnp")$*],
+    table.header[*Fiber material*][*EC 406/2010 &\ ISO 19881:2018\ $p_"wnp"$*][*ISO 11119-3:2020 $p_"wnp"$*],
     /* -------------- */
     [Glass], [1050/3.5 = 300 bar], [1050/2.4 = 437.5 bar],
     [Aramid], [1050/3.0 = 350 bar], [1050/2.1 = 500 bar],
@@ -183,7 +183,7 @@ A comprehensive overview of these relationships is provided in @tab_14. The tabl
   ),
 
   kind: table,
-  caption: [Fiber material-dependent safety factors (denominator of fractions) and associated maximum allowable operating nominal pressure $p_upright("wnp")$, given a maximum allowable test pressure of $1050 upright("bar")$ @Cebolla2019.],
+  caption: [Fiber material-dependent safety factors (denominator of fractions) and associated maximum allowable operating nominal pressure $p_"wnp"$, given a maximum allowable test pressure of $1050 "bar"$ @Cebolla2019.],
 )<tab_14>
 
 // TODON rephrase
@@ -260,7 +260,7 @@ While #gl_("cs")-23 is limited to small aircraft, #gl_("cs")-25 can be considere
 
 #summary_[
 From the numerous available standards, the introduced assessment criteria were used to obtain a few essential standards in a structured manner. This analysis has identified four essential standards pertinent to the development and certification of #gl_("swith", pl:true). While these standards collectively do not address all the unique aspects of #gl_("swith", pl:true), they represent the current state of the art in relevant regulatory frameworks. They provide valuable insights into potential certification requirements and testing protocols for #gl_("swith", pl:true).
-Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from 437.5 to $525 upright("bar")$. This upper limit is constrained by the capabilities of existing test facilities, which cannot generate arbitrarily high pressures for experimental structural verification tests.
+Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from 437.5 to $525 "bar"$. This upper limit is constrained by the capabilities of existing test facilities, which cannot generate arbitrarily high pressures for experimental structural verification tests.
 These findings underscore the importance of considering both hydrogen containment and aircraft-specific regulations in the development of #gl_("swith", pl:true), while also highlighting the current technological limitations in testing high-pressure systems.
 ]
 

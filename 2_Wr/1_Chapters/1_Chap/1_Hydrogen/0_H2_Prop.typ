@@ -72,7 +72,7 @@ For convenience, all principal and safety-wise harmless information of this subs
     
     [Thermodynamic Properties],[Exhibits a negative Joule-Thomson coefficient at high pressures @Li2023a @Zhang2024b @Li2023b. This implies that an increase in pressure results in a decrease in temperature, and vice versa. This relationship can be mathematically expressed as:
 
-    $ mu_upright("JT") = (delta T) / (delta p) $<eq_4>
+    $ mu_"JT" = (delta T) / (delta p) $<eq_4>
 
     where T represents temperature, p represents pressure, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
     
@@ -81,7 +81,7 @@ For convenience, all principal and safety-wise harmless information of this subs
     
     - It primarily exists in liquid and gaseous states. 
 
-    - At $0 degree.c$ and $1.01325 upright("bar")$, hydrogen has a high speed of sound ($a_upright("H2") = 1261.1 upright("m/s")$ @Klell2018), compared to air ($a_upright("air") = 331.5 upright("m/s")$ @Sigloch2022). 
+    - At $0 " " degree.c$ and $1.01325 "bar"$, hydrogen has a high speed of sound ($a_"H2" = 1261.1 "m/s"$ @Klell2018), compared to air ($a_"air" = 331.5 "m/s" $ @Sigloch2022). 
 
     - Extensive research is ongoing into alternative storage forms @Usman2022 @Yang2023 @Panigrahi2024, including physical and chemical adsorption (metallic hydride) @Drawer2024 @Nivedhitha2024 @Boateng2023, supercritical or cryo-compressed storage @Yan2024 @Aceves2010 @Jaramillo2024, and other methods as illustrated in @fig_15.],
     
@@ -122,18 +122,18 @@ A comparison of gravimetric energy densities between pure forms and practical st
 ) <fig_16>
 
 
-$ 1 upright("MJ") =^arrowhead  (upright("kWh")) / 3.6 $ <eq_7>
+$ 1 "MJ" =^arrowhead  ("kWh") / 3.6 $ <eq_7>
 
 Considering only the gravimetric energy density of pure hydrogen, the information depicted in @fig_16 clearly demonstrates that hydrogen offers more energy than other commonly used fuel mediums, such as natural gas, gasoline, or diesel.
 While @tab_18 briefly mentions that hydrogen does not behave like an ideal gas, this aspect requires further elaboration. To provide more detail, first the real gas factor $Z$ @Mahmoud2013, also known as the compressibility factor, should be introduced. This factor is given in @eq_5, where the variable $m$ describes the mass of the respective gas. The real gas factor $Z$ quantifies the deviation of a gas from ideal gas behavior.
 
-$ Z = m_upright("ideal") / m_upright("real") $<eq_5>
+$ Z = m_"ideal" / m_"real" $<eq_5>
 
 When $Z = 1$, there is no difference between real and ideal gas behavior. 
-When $Z$ exceeds 1 ($m_upright("ideal") > m_upright("real") => Z > 1$), the ideal gas equation overestimates the mass. Conversely, when $Z$ is less than 1 ($m_upright("ideal") < m_upright("real") => Z < 1$), the equation underestimates the mass. 
+When $Z$ exceeds 1 ($m_"ideal" > m_"real" => Z > 1$), the ideal gas equation overestimates the mass. Conversely, when $Z$ is less than 1 ($m_"ideal" < m_"real" => Z < 1$), the equation underestimates the mass. 
 Real gas factors are typically determined empirically and presented as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ represent coefficients specific to the regression model.
 
-$ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 upright("MPa")))^(c_i) $<eq_6>
+$ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 "MPa"))^(c_i) $<eq_6>
 
 The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Examining @eq_6, it is evident that the first term corresponds to the widely known ideal gas equation, $ p / (rho R T)$ @Stephan2013. The subsequent terms in the equation represent the regression-based modifications that account for the real gas behavior. These additional terms quantify the deviation from ideal gas behavior as a function of temperature and pressure.
 
@@ -165,9 +165,9 @@ The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Exami
   caption: [Constants $a_i, b_i, c_i$ used in the @eq_6 for approximating the compressibility factor $Z$ of hydrogen as a real gas @Lemmon2008.],
 )<tab_19>                         
 
-The difference between ideal and real gas for selected different temperatures, over a pressure range of $ 0 upright("bar") upright("to") 700 upright("bar")$ 
+The difference between ideal and real gas for selected different temperatures, over a pressure range of $ 0 "bar" "to" 700 "bar"$ 
 compressed hydrogen and over the real gas factors is depicted in @fig_17. It is clearly evident that the deviation between ideal and real gas behavior becomes more pronounced with increasing pressure. Additionally, the temperature influence between 
-$ 50 upright("K ") upright("and") 100 upright("K ")$ exhibits strongly nonlinear behavior. These observations highlight the importance of considering real gas effects when dealing with hydrogen at high pressures and varying temperatures.
+$ 50 "K and" 100 "K "$ exhibits strongly nonlinear behavior. These observations highlight the importance of considering real gas effects when dealing with hydrogen at high pressures and varying temperatures.
 
 
 #figure(

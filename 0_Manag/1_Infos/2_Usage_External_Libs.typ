@@ -84,19 +84,19 @@ $num("12512e5")$
 
 
 // there is a special dealing with ranges
-// $ 288.15 upright("K ") space upright("to") space 233.15 upright("K ") $ 
+// $ 288.15 "K " space "to" space 233.15 "K " $ 
 
 // this vesion with upright(" to") comes close to the above one, however, it is not the same
 // use the following
-// $ 288.15 upright("K ") upright(" to") space 233.15 upright("K ") $ or
+// $ 288.15 "K " upright(" to") space 233.15 "K " $ or
 
 
 // both versions are the same, either one free char space or use a space before. a space after the to has no impact
-// $ 288.15 upright("K ") upright(" to") space 233.15 upright("K ") $
-// $ 288.15 space upright("K") space upright("to") space 233.15 space upright("K") $
+// $ 288.15 "K " upright(" to") space 233.15 "K " $
+// $ 288.15 space upright("K") space "to" space 233.15 space upright("K") $
 
 // however the following mixture will not produce the very same output
-// $ 288.15 upright("K ") space upright("to") space 233.15 upright("K ") $
+// $ 288.15 "K " space "to" space 233.15 "K " $
 
 // an arbitrary mix is not fine, thus try to use the first of the two fine versions:
-// $ 288.15 upright("K ") upright(" to") space 233.15 upright("K ") $
+// $ 288.15 "K " upright(" to") space 233.15 "K " $

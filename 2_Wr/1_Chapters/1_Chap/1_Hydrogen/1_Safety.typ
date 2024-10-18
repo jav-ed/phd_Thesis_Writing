@@ -216,7 +216,7 @@ The correlation between flame visibility and mixture composition offers valuable
 In inspecting hydrogen flame visibility, the equivalence ratio, denoted as $phi$, plays a crucial role. $phi$ is defined as the ratio of the actual air-fuel ratio to the stoichiometric air-fuel ratio for combustion @Salaudeen2019. An equivalence ratio of $phi = 1$ represents optimal combustibility, while lower values of $phi$ indicate suboptimal combustion conditions. 
 The experimental results reveal a direct relationship between $phi$ and flame visibility: as $phi$ increases, the flame becomes more visible.
 The specific experimental conditions for these observations are detailed in the description of @fig_21. Notably, @schefer2009visible concludes that low ambient lighting conditions are conducive to better flame visibility, an important consideration for practical hydrogen flame detection.
-Comprehensive information on hydrogen-air mixing limits for various ignition types and other relevant parameters are provided in @tab_25. It is critical to emphasize that under standard conditions ($0 degree.c$ and $1.01325 "bar"$), hydrogen exhibits a wide flammability range, being flammable at air concentrations of $4% "to" 75.6%$. 
+Comprehensive information on hydrogen-air mixing limits for various ignition types and other relevant parameters are provided in @tab_25. It is critical to emphasize that under standard conditions ($0 " " degree.c$ and $1.01325 "bar"$), hydrogen exhibits a wide flammability range, being flammable at air concentrations of $4% "to" 75.6%$. 
 Moreover, hydrogen becomes detonable within a narrower but still significant range of $18% "to" 58.9%$ air content.
 
 #figure(

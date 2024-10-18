@@ -28,7 +28,7 @@ A comprehensive understanding of hydrogen behavior necessitates the integration 
 By synthesizing insights from theoretical data, advanced numerical models, and carefully conducted experiments, the chances of bridging the gap between theoretical understanding and practical implementation increase. 
 // -------------------------------------------------------------------------- //
 
-The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K"$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
+The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K "$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
 An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. In their study, hydrogen was initially compressed to $250 "bar"$ in a pressure vessel and allowed to flow into the free atmosphere through a nozzle. The simulation results, shown in @fig_22, depict the system at different times after the hydrogen exits the nozzle.
 
 
@@ -85,17 +85,17 @@ For instance, a Mach number of 5 indicates that the local velocity is five times
     [Methane], [$446$],
   ),
   kind: table,
-  caption: [Speed of sound in various substances. Gases are measured at $20 degree.c$ and $1 "bar"$ @Sigloch2022.],
+  caption: [Speed of sound in various substances. Gases are measured at $20 " " degree.c$ and $1 "bar"$ @Sigloch2022.],
 ) <tab_26>
 
 Each medium possesses a characteristic speed of sound, which represents how pressure changes or sound waves propagate through it. The mathematical description is given in @eq_8, where $a$, $p$, and $rho$ denote the speed of sound, pressure, and density, respectively @Sigloch2022.
 
 $ a = sqrt((d p)/(d rho)) $<eq_8>
 
-A high speed of sound in a substance corresponds to a high information transmission speed. For instance, when one end of a steel rod is struck, the sound travels to the other end at $5170 "m/s"$, making it quickly audible. The speed of sound in hydrogen at $20 degree.c$ and $1 "bar"$ is $1300 "m/s"$, significantly higher than in air ($343 "m/s"$). Consequently, information exchange within hydrogen occurs more rapidly than in air.
+A high speed of sound in a substance corresponds to a high information transmission speed. For instance, when one end of a steel rod is struck, the sound travels to the other end at $5170 "m/s"$, making it quickly audible. The speed of sound in hydrogen at $20 " " degree.c$ and $1 "bar"$ is $1300 "m/s"$, significantly higher than in air ($343 "m/s"$). Consequently, information exchange within hydrogen occurs more rapidly than in air.
 This characteristic is crucial for understanding the behavior of pressurized hydrogen released into the atmosphere. Air experiences a pressure shock at $343 "m/s"$, resulting in a substantial temperature increase. In contrast, hydrogen can reach nearly four times this speed before a pressure shock occurs.
 A proposed simplified explanation for the high temperature increase during pressure shocks is as follows: When air molecules lack sufficient time to adapt to pressure changes due to slow information transport, they are forced to change abruptly. This phenomenon is analogous to a supersonic aircraft encountering air molecules before they can "receive information" about its approach. The resulting rapid compression and numerous, hard, impulsive collisions lead to a significant conversion of kinetic energy into thermal energy, causing a substantial temperature increase. It's worth noting that this process occurs primarily in compressible media such as gases, which is why shock waves are prominent in air and hydrogen.
-The temperature contours associated with @fig_22 are presented in @fig_23. Notably, temperatures exceeding $1000 "K"$ are typically associated with explosions @Frost2021 @Lebel2013 @Cashdollar2007 @Goroshin2006.
+The temperature contours associated with @fig_22 are presented in @fig_23. Notably, temperatures exceeding $1000 "K "$ are typically associated with explosions @Frost2021 @Lebel2013 @Cashdollar2007 @Goroshin2006.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/1_H2_T_Venting.png", 
@@ -115,22 +115,13 @@ Ignitions in which no external ignition sources are used are referred to as self
 There are various theoretical models (reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, mechanical friction and impact ignition) for self-ignition are mentioned @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
 Compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are said to be unlikely ignition mechanisms for most unintentional releases of hydrogen at ambient temperature. 
 Moreover, it is also quite possible that several of the mentioned mechanisms together would produce a self-ignition @astbury2007spontaneous. 
-Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment are carried out in @dryer2007spontaneous. Furthermore, it was noted here that simple 1-D shock calculations would suggest the following. The sudden release of compressed methane and natural gas can also cause spontaneous ignitions. This, however, at considerably higher compression pressures than with hydrogen.
+Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment are carried out in @dryer2007spontaneous. 
 Other work doing invesigations with shock cylinderical tubes are 
-@Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Jiang2019. Reviews on the topic of spontaneous ignition mechanism of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Qiu2024.
-
-// ---------------------------------- here ---------------------------------- //
-The next work to be discussed in detail is @jallais2017effects. In the experiment presented therein, the effect of oxidizing agents, such as air, pure oxygen O₂, nitrous oxide N₂O, and acetylene C₂H₂, on the spontaneous ignition of hydrogen was investigated. The various oxidizing agents flow perpendicular to the hydrogen jet. Similar to the investigations already discussed, the hydrogen is also released here from a high-pressure vessel through a nozzle into the atmosphere. However, this atmosphere is now flowed through by various oxidizing agents, which represents a significant difference from earlier investigations with a free atmosphere. For the experiments, a straight expansion tube with a diameter of 4 mm and a length of 10 cm was used. The spontaneous ignition was observed with a high-speed camera and the external overpressures were measured.
-
-The results of the experiments in @jallais2017effects are shown in Figure 18. These illustrate the influence of the pressure in the hydrogen container and the ambient gas on causing a possible self-ignition.
-
-[Figure 18: Influence of pressure in the hydrogen container and surrounding gas atmosphere on the self-ignition of a hydrogen jet @jallais2017effects]
-
-First, it can be seen from the results in Figure 18 that increasing pressure in the hydrogen container increases the probability of self-ignition. Furthermore, it can be noted that at low pressure values, self-ignition could be avoided in all investigated gas environments. Preventing unwanted hydrogen ignitions is considered one of the most important safety requirements for the application of hydrogen in practice. If focusing exclusively on this criterion, the following conclusions can be drawn. Oxygen O₂ as the ambient gas leads to the most unsafe working conditions for working with hydrogen. Pure air and nitrous oxide N₂O, which according to the results are preferable, are nevertheless classified as unsafe by the author of this report. Only acetylene C₂H₂, which represents a combustible gas, could meet the safety requirements for p < 230 bar.
-
-Various literature sources, some of which are mentioned in @Rosen2018, can be used to derive recurring essential parameters to minimize the probability of occurrence of self-ignition. These are found in Table 25.
+@Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Grune2014 @Duan2016 @Kitabayashi2013 @Gong2016 @Jiang2019 @Kim2013 @Wang2019. Reviews on the topic of spontaneous ignition mechanism of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Yang2021.
+The findings from these experimental investigations are not only helpful for conducting expmerintal investigations with hydrogen but also for the design of #gl_("swith", pl:true).
 
 
+// TODO their output linking to design for swith 
 // TODO 
 // check that with 
 // 1. Research progress on the self-ignition of high-pressure hydrogen discharge: A review 
@@ -153,6 +144,24 @@ Other influencing factors:
 6) Gas or medium in the external environment
 7) External pressure
 8) External temperature
+
+// ---------------------------------- here ---------------------------------- //
+The next work to be examined in detail is @jallais2017effects. In the experiment presented therein, the effect of oxidizing agents, such as air, pure oxygen O#sub[2], nitrous oxide N#sub[2]O, and acetylene C#sub[2]H#sub[2], on the spontaneous ignition of hydrogen was investigated. 
+The various oxidizing agents flow perpendicular to the hydrogen jet. 
+Similar to the previous mentioned investigations, hydrogen is also released here from a high-pressure vessel through a nozzle into the atmosphere. 
+However, this atmosphere is now flowed through by various oxidizing agents, which represents a significant difference from earlier investigations with a free atmosphere. 
+For the experiments, a straight expansion tube with a diameter of $4 "mm"$ and a length of $10 "cm"$ was used. The spontaneous ignition was observed with a high-speed camera and the external overpressures were measured.
+
+The results of the experiments in @jallais2017effects are shown in Figure 18. These illustrate the influence of the pressure in the hydrogen container and the ambient gas on causing a possible self-ignition.
+
+[Figure 18: Influence of pressure in the hydrogen container and surrounding gas atmosphere on the self-ignition of a hydrogen jet @jallais2017effects]
+
+First, it can be seen from the results in Figure 18 that increasing pressure in the hydrogen container increases the probability of self-ignition. Furthermore, it can be noted that at low pressure values, self-ignition could be avoided in all investigated gas environments. Preventing unwanted hydrogen ignitions is considered one of the most important safety requirements for the application of hydrogen in practice. If focusing exclusively on this criterion, the following conclusions can be drawn. Oxygen O₂ as the ambient gas leads to the most unsafe working conditions for working with hydrogen. Pure air and nitrous oxide N₂O, which according to the results are preferable, are nevertheless classified as unsafe by the author of this report. Only acetylene C₂H₂, which represents a combustible gas, could meet the safety requirements for p < 230 bar.
+
+Various literature sources, some of which are mentioned in @Rosen2018, can be used to derive recurring essential parameters to minimize the probability of occurrence of self-ignition. These are found in Table 25.
+
+
+
 
 To apply the collected knowledge to the project in K2H2, some points should be reconsidered. The hydrogen is to be used in an experimental investigation and it is under very high pressure. Assuming a working nominal pressure of 300 bar and a burst factor of 2.25, at least 675 bar must be applied for a burst test. It involves 4 structurally integral CFRP tanks with a length of 9.2 m. The experimental investigation requires the attachment of various measuring devices, lines to get the hydrogen into the tanks on the one hand and to generate the pressure on the other hand. In addition, a method is needed to apply the aerodynamic loads. The listed points show considerable safety concerns. While handling hydrogen is already dangerous at comparatively low pressures, the K2H2 wing represents an innovative technology. At the time of writing this report, there are no publicly accessible or known comparable investigations for this.
 

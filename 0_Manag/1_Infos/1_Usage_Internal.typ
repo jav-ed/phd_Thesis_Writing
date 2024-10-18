@@ -53,7 +53,7 @@ $kappa_op("krit") <= 0 hat 4$ <eq_0>
 
 // ---------------------------------- units --------------------------------- //
 one attempt for range
-$ 288.15 upright("K ") upright("to") 233.15 upright("K ") $
+$ 288.15 "K " "to" 233.15 "K " $
 
 easier approach
 $ 288.15 "K" "to" 233.15 "K " $ 
