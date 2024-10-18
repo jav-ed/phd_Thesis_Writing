@@ -110,30 +110,19 @@ It's important to note that this explanation is a simplified model designed to i
 
 // -------------------------------------------------------------------------- //
 
-Ignitions in which no external ignition sources are used are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. 
-There are various theoretical models (reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, mechanical friction and impact ignition) for self-ignition are mentioned @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
-Compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are said to be unlikely ignition mechanisms for most unintentional releases of hydrogen at ambient temperature. 
-Moreover, it is also quite possible that several of the mentioned mechanisms together would produce a self-ignition @astbury2007spontaneous. 
-Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment are carried out in @dryer2007spontaneous. 
-Other work doing invesigations with shock cylinderical tubes are 
-@Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Kim2013 @Kitabayashi2013 @Grune2014 @Gong2016 @Duan2016 @Jiang2019  @Wang2019. 
-Reviews and summaries on the topic of spontaneous ignition mechanism of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Yang2021.
-Some of tge finding are not only helpful for conducting expmerintal investigations with hydrogen but also for the design of #gl_("swith", pl:true).
-These shall be first mentioned folowed by concrete explanations, why these findings are found to be improtant.
+Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. However, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. It is noteworthy that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
+Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment have been conducted by @dryer2007spontaneous. Additional studies using shock cylindrical tubes have been carried out by various researchers @Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Kim2013 @Kitabayashi2013 @Grune2014 @Gong2016 @Duan2016 @Jiang2019 @Wang2019. Comprehensive reviews and summaries on the spontaneous ignition mechanisms of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Yang2021.
+The findings from these studies are not only valuable for conducting experimental investigations with hydrogen but also have significant implications for the design of #gl_("swith", pl:true). These findings will be presented in detail, followed by explanations of their importance in the context of #gl_("swith") design and experimental procedures.
 
-When pressuiorzed hydrogen is released from its vessel, some geometrical aspects have an high impact on the subsequent spontaneous ingition.
-One of them is the tube length. Both numerical simulations as well as experimental studies on releasing the pressureiized hydrogen indicates that the longer the pipe is, the greater the chance of the occurence of a spontaneous ignition @Qiu2024 @Zhou2022 @Yang2021 @Jin2021.
-However, when the length of the tube exceeds a certain threshold, the tendency for self-ignition of high-pressure hydrogen becomes weaker @Zhou2022.
-According to @Wang2019 the self-ignition tendency will be weakened only after the length of the tube exceeds $1700 "mm"$.
-For this thesis the shape of the tubes that contains the #gl_("cgh2", long:true) was defined to be cylinderical. 
-For explaining its length it was emntioned that for economical reasons high ranges are desired.
-Yet, if long tubes could increase the risk of a self-ignition, the choice for the tube length becomes more complex.
-In this case for desinging #gl_("swith", pl:true) additionally to the available literature of experimental self-igntiions tests  own simmilar tests with potentially much higher lengths could be required first.
-The reason for much higher lengths in the order between $~ 5"m and" ~70 "m"$ is due to the economical desire of increasing flight range.
-Also, because the tanks integrated inside the wings and the length of the wingts of commerical aircraft is much higher than the length of tubes that are commonly used for experimental tests.
-The rationale behind preferring shorter tubes, that is, less than $5 "m "$ are the involved costs and efforts. Scientists generally are constrainted on costs and available time. 
-According to the reviews of @Qiu2024 @Zhou2022 @Yang2021 @Wang2019 indicates that generally experimental tests are generally conducated with tubes with a length of $ <= 4200 "mm"$. Noteably, lengths around $<= 1000 "mm"$ are more common than comperatively high tube length of $4200 "mm"$ in @Kitabayashi2013.
-A comprehsive list according to @Yang2021 is given in @tab_27.
+
+
+
+When pressurized hydrogen is released from its vessel, certain geometrical aspects have a significant impact on the subsequent spontaneous ignition. One crucial factor is the tube length. Both numerical simulations and experimental studies on releasing pressurized hydrogen indicate that the longer the pipe, the greater the chance of spontaneous ignition occurring @Qiu2024 @Zhou2022 @Yang2021 @Jin2021. However, when the length of the tube exceeds a certain threshold, the tendency for self-ignition of high-pressure hydrogen becomes weaker @Zhou2022. According to @Wang2019, this weakening of the self-ignition tendency occurs only after the tube length exceeds $1700 "mm"$.
+For this thesis, the shape of the tubes containing the #gl_("cgh2", long:true) was defined as cylindrical. Regarding tube length, it was previously noted that high ranges are desired for economic reasons. However, if longer tubes could increase the risk of self-ignition, the determination of optimal tube length becomes more complex.
+
+For designing #gl_("swith", pl:true), in addition to the available literature on experimental self-ignition tests, it may be necessary to conduct similar tests with significantly longer tubes. The need for much longer tubes, in the range of $~ 5"m to" ~70 "m"$, is driven by the economic desire to increase flight range and the fact that tanks integrated inside the wings of commercial aircraft are much longer than the tubes commonly used in experimental tests.
+The preference for shorter tubes (less than $5 "m"$) in current experiments is primarily due to cost and time constraints faced by researchers. According to reviews by @Qiu2024 @Zhou2022 @Yang2021 @Wang2019, experimental tests are generally conducted with tubes of length $ <= 4200 "mm"$. Notably, tubes with lengths $<= 1000 "mm"$ are more common than the comparatively long tubes of $4200 "mm"$ used in @Kitabayashi2013.
+A comprehensive list of experimental parameters, including tube lengths used in various studies, is provided in @tab_27, as compiled by @Yang2021. This table highlights the current limitations in experimental setups and underscores the need for tests more closely aligned with the actual dimensions of #gl_("swith", pl:true) applications.
 
 #figure(
   table(
@@ -146,7 +135,7 @@ A comprehsive list according to @Yang2021 is given in @tab_27.
     ),
     // stroke: tab_Frame(0.05em),
     stroke: none,
-    [*Experiment*], [*Burst pressure (MPa)*], [*Tube length (mm)*], [*Diameter (mm)*], [*Cross-section of tube*],
+    [*Experiment*], [*Burst pressure [MPa]*], [*Tube length [mm]*], [*Diameter [mm]*], [*Cross-section of tube*],
     [Dryer 2007 @dryer2007spontaneous], [1.4-11.3], [38.1-3000], [4/12.7], [cylinder],
     [Mogi 2008 @Mogi2008], [4-30], [3-300], [5/10], [cylinder], 
     [Golub 2008 @Golub2008], [2-13], [65-185], [10], [cylinder/rectangle], 
@@ -162,25 +151,18 @@ A comprehsive list according to @Yang2021 is given in @tab_27.
     [Wang 2019 @Wang2019], [2-12], [300-3000], [10], [cylinder],
   ),
   kind: table,
-  caption: [Experimental parameters and setups for various studies on diffusion ignition @Yang2021.],
+  caption: [Experimental parameters and setups for various studies on hydrogen diffusion ignition @Yang2021.],
 ) <tab_27>
 
 
 // ----------------------------- dimated impact ----------------------------- //
-Depedning on the outcome of the self-ignition experiments for aircraft-relevant tube lenghts more advanced mehtos like optimization could be required to find the proper tube lenghts.
-Besides the length of the tube length, the tube diamter is also an improtant geometrical variable.
-It has been found that tubes with smaller diameters are more prone to spontaneous ignition @Qiu2024 @Zhou2022 @Kim2013a.
-Thus, from the curent state of the art, generally a higher diameter is suggested when it comes to preventing the self-ingnition.
-Another important gemotrical parameter that is invesigated in regards to spontaneous ignition is the cross-section area @Xu2012 @Xu2014.
-Deacreasing (contraction) or increasing the local  emonstrate a lower minimum release pressure required for ignition compared to constant cross-section tubes @Qiu2024 @Xu2012 @Xu2014.
-The general shape of the tube does not  affect the minimum burst pressure required for spontaneous ignition @Qiu2024.
-Yet, it can be noted that when the spontaneous ignition is induced in a non-circular cross-section tube, the possible turbulent flow in the corner of the tube increases can promote the mixing of hydrogen and air, thus producing more amount of the hydrogen/air mixture @Li2019.
-Both, diamter as well as corss section are important parameter for desinging the tubes of #gl_("swith", pl:true).
-Tube length, diameter and cross section together are the main parameter that govern the maximal volume the tubes for the #gl_("swith", pl:true) or general cylinderical pressure vessel have.
-For the sake of easy accessiblily a concise summary of these findings is presented in @tab_28.
+Depending on the outcome of self-ignition experiments for aircraft-relevant tube lengths, more advanced methods like optimization might be required to determine the optimal tube lengths. Besides length, tube diameter is another crucial geometrical variable. Studies have shown that tubes with smaller diameters are more prone to spontaneous ignition @Qiu2024 @Zhou2022 @Kim2013a. Consequently, based on the current state of the art, a larger diameter is generally recommended to mitigate the risk of self-ignition.
+
+Cross-sectional area is another important geometrical parameter investigated in relation to spontaneous ignition @Xu2012 @Xu2014. Decreasing (contraction) or increasing the local cross-section demonstrates a lower minimum release pressure required for ignition compared to constant cross-section tubes @Qiu2024 @Xu2012 @Xu2014. 
+The general shape of the tube does not significantly affect the minimum burst pressure required for spontaneous ignition @Qiu2024. However, in non-circular cross-section tubes, potential turbulent flow in the corners can promote the mixing of hydrogen and air. This enhanced mixing can result in the production of a larger amount of the hydrogen/air mixture @Li2019.
+Both diameter and cross-section are critical parameters for designing the tubes of #gl_("swith", pl:true). Together with tube length, these factors govern the maximum volume of the tubes for #gl_("swith", pl:true) or general cylindrical pressure vessels. For ease of reference, a concise summary of these findings is presented in @tab_28.
 
 
-// optimization, cross section that is shape of the tube, 
 #figure(
   table(
     columns: (auto, auto),
@@ -209,23 +191,17 @@ For the sake of easy accessiblily a concise summary of these findings is present
 
   ),
   kind: table,
-  caption: [Choice of influence parameters to avoid the risk of occurrence of hydrogen self-ignition and other potential influence parameters.],
+  caption: [Key parameters influencing hydrogen self-ignition risk and additional factors potentially affecting ignition dynamics.],
 ) <tab_28>
 
 
 // ---------------------------------- here ---------------------------------- //
-Up to now it could be highlighted that the risk of self-ignition not only theory based, but is met in real-world application.
-For experimental validation tests for #gl_("swith", pl:true) practical hydrogen is key.
-Thus, for providing safe methods to work with hydrogen further investigations are required.
-Following that and explaning why @tab_28 mentions that the pressure inside the container should be low, the work @jallais2017effects shall be exmained in detail. 
-In the experiment presented therein, the effect of oxidizing agents, such as air, pure oxygen O#sub[2], nitrous oxide N#sub[2]O, and acetylene C#sub[2]H#sub[2], on the spontaneous ignition of hydrogen was investigated. 
-The various oxidizing agents flow perpendicular to the hydrogen jet. 
-Similar to the previous mentioned investigations, hydrogen is also released here from a high-pressure vessel through a nozzle into the atmosphere. 
-However, this atmosphere is now flowed through by various oxidizing agents, which represents a significant difference from earlier investigations with a free atmosphere. 
-For the experiments, a straight expansion tube with a diameter of $4 "mm"$ and a length of $10 "cm"$ was used. The spontaneous ignition was observed with a high-speed camera and the external overpressures were measured.
-The results of the experiments in @jallais2017effects are shown in @fig_24. 
-These illustrate the influence of the pressure in the hydrogen container and the ambient gas on causing a possible self-ignition.
-
+The risk of self-ignition has been shown to be not only theoretically based but also observed in real-world applications. For experimental validation tests of #gl_("swith", pl:true), practical hydrogen handling is crucial, necessitating further investigations to establish safe working methods.
+To elucidate why @tab_28 recommends low pressure inside the container, the work of @jallais2017effects warrants detailed examination. Their experiment investigated the effect of various oxidizing agents on the spontaneous ignition of hydrogen, including air, pure oxygen (O#sub[2]), nitrous oxide (N#sub[2]O), and acetylene (C#sub[2]H#sub[2]). These oxidizing agents flowed perpendicular to the hydrogen jet.
+Similar to previously mentioned studies, hydrogen was released from a high-pressure vessel through a nozzle into the atmosphere. 
+However, this setup differed significantly from earlier investigations with a free atmosphere, as the surrounding environment now consisted of a constant flow of various oxidizing agents.
+The experiments utilized a straight expansion tube with a diameter of $4 "mm"$ and a length of $10 "cm"$. Spontaneous ignition was observed using a high-speed camera, while external overpressures were measured.
+The results of these experiments, presented in @fig_24, illustrate the influence of both the pressure in the hydrogen container and the ambient gas composition on the likelihood of self-ignition.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/2_H2_Experiments.png", 
@@ -234,43 +210,37 @@ These illustrate the influence of the pressure in the hydrogen container and the
 ) <fig_24>
 
 
-First, it can be seen from the results in @fig_24 that increasing pressure in the hydrogen container increases the probability of self-ignition. 
-Furthermore, it can be noted that at low pressure values, self-ignition could be avoided in all investigated gas environments. Preventing unwanted hydrogen ignitions is considered one of the most important safety requirements for the application of hydrogen in practice. 
-If focusing exclusively on this criterion, the following conclusions can be drawn. Oxygen O#sub[2] as the ambient gas leads to the most unsafe working conditions for working with hydrogen. 
-Pure air and nitrous oxide N#sub[2]O, which according to the results are preferable, are nevertheless classified as unsafe by the author of this thesis. Only acetylene C#sub[2]H#sub[2], which represents a combustible gas, could meet the safety requirements for $p < 230 "bar"$.
+The results presented in @fig_24 reveal several key insights. Firstly, there is a clear correlation between increasing pressure in the hydrogen container and a higher probability of self-ignition. Conversely, at low pressure values, self-ignition could be avoided across all investigated gas environments. This finding is particularly significant, as preventing unwanted hydrogen ignitions is considered a paramount safety requirement for practical hydrogen applications.
+When evaluating the results based solely on the criterion of preventing self-ignition, a hierarchy of safety emerges among the tested ambient gases. Oxygen (O#sub[2]) as the ambient gas presents the most hazardous working conditions for hydrogen applications. While pure air and nitrous oxide (N#sub[2]O) show more favorable results compared to oxygen, they are still deemed unsafe by the author of this thesis. Among the tested gases, only acetylene (C#sub[2]H#sub[2]), a combustible gas itself, demonstrated the ability to meet safety requirements for pressures below $230 "bar"$.
 
-// -------------------------------------------------------------------------- //
-By revisiting key points stated in previous @chap_2_0_1 and this subsection, it can be confirmed that hydorgen offers safety concering propeties. 
-Yet, despite potential hazards, hydrogen possesses many beneficial properties and,
-therefore, could be considered a potentially safe option for practical applications when handled responsibly and with a comprehensive understanding of its unique characteristics @Landucci2010 @jallais2017effects @Klell2018 @Rosen2018 @Thomas1997.  The outcome of @Landucci2010 is that the risks of compressed hydrogen are comparable with
-liquefied petroleum gas and natural gas.
-The referenced studies primarily stem from specialized testing environments or the automotive industry. 
-Although their results offer useful insights for #gl_("swith",pl: true), significant differences exist between these contexts.
-To understand these nuances, some specificities of #gl_("swith",pl: true) shall be revisted.
+Revisiting key points from @chap_2_0_1 and this subsection confirms that hydrogen possesses both safety-concerning and beneficial properties. Despite potential hazards, hydrogen could be considered a viable option for practical applications when handled responsibly and with a comprehensive understanding of its unique characteristics @Landucci2010 @jallais2017effects @Klell2018 @Rosen2018 @Thomas1997. Notably, @Landucci2010 concludes that the risks associated with compressed hydrogen are comparable to those of liquefied petroleum gas and natural gas.
+It is important to recognize that the referenced studies primarily originate from specialized testing environments or the automotive industry. 
+While their results offer valuable insights for #gl_("swith",pl: true), significant differences exist between these contexts and the specific requirements of aircraft applications. 
+To fully appreciate these nuances and their implications for #gl_("swith",pl: true), it is necessary to revisit some of the specificities of #gl_("swith",pl: true).
 
 
 // ---------------------------------- here ---------------------------------- //
-In #gl_("swith", pl:true) the hydrogen tanks are integrated into the wings. 
-High internal pressure and volume are required to ensure high volumetric energy densities. Moreover, these tanks bear the dual burden of holding internal pressure while withstanding external loads. 
-The quest for minimal weight in aviation design and high safety demands suggests the use of type IVas explained in @chap_1_0_3. 
-Yet, the high-speed dispersion of #gl_("cfrp", long:true) tank fragments during a rupture could pose severe risks to both people and measurement devices. If #gl_("cfrp") composites break down, they can potentially release tiny particles or fibers into the air, which, if inhaled, can lead to respiratory problems. 
-This risk is amplified if the rupture occurs in a confined, poorly ventilated space. The goal of maximizing the hydrogen load during flight calls for optimizing tank pressure and volume. This leads to one of the key distinctions between #gl_("swith", pl:true) and most other applications of compressed hydrogen cylinders: the size of the tanks. 
-The APUS i-2 @APUS_1, for instance, has a wingspan of $13.2 "m "$, with approximately $gt.approx 50%$ of its length occupied by 4 cylindrical high-pressure tubes. 
-For an comparison, the Airbus A350-1000 has a wingspan of about $approx 64 "m "$ and a flight range of $16482 "km"$ @link_Airbus_350. If it is assumed that 80% of this wingspan should accommodate tubes, this would equate to a tube length of $64 "m " dot 0.5 = 32 "m "$. 
-However, the goals of maximizing tank size and internal pressure can inadvertently enhance the risk of self-ignition as highlighted in this section.
+In #gl_("swith", pl:true), hydrogen tanks are integrated into the aircraft wings. These tanks require high internal pressure and volume to ensure high volumetric energy densities. Moreover, they bear the dual burden of holding internal pressure while withstanding external loads.
+The aviation industry's quest for minimal weight coupled with high safety demands suggests the use of Type IV tanks, as explained in @chap_1_0_3. However, this design choice introduces additional safety considerations. In the event of a rupture, the high-speed dispersion of #gl_("cfrp", long:true) tank fragments could pose severe risks to both personnel and measurement devices. Furthermore, if #gl_("cfrp") composites break down, they may release microscopic particles or fibers into the air. Inhalation of these particles can lead to respiratory problems, a risk that is particularly acute in confined, poorly ventilated spaces.
+The goal of maximizing hydrogen load during flight necessitates the optimization of tank pressure and volume. This requirement highlights a key distinction between #gl_("swith", pl:true) and most other applications of compressed hydrogen cylinders: the size of the tanks.
+For instance, the APUS i-2 @APUS_1 has a wingspan of $13.2 "m"$, with approximately $gt.approx 50%$ of its length occupied by four cylindrical high-pressure tubes. In comparison, the Airbus A350-1000 has a wingspan of about $64 "m"$ and a flight range of $16,482 "km"$ @link_Airbus_350. Assuming that 50% of this wingspan could accommodate tubes, this would equate to a total tube length of $64 "m" times 0.5 = 32 "m"$.
+However, it is important to note that the goals of maximizing tank size and internal pressure can inadvertently enhance the risk of self-ignition, as highlighted earlier in this subsection.
 
-Another distinguishing factor for #gl_("swith",pl:true), particularly from land vehicles, is the range of operational altitudes. #gl_("swith",pl:true) are not confined to a single altitude but operate over a range of altitudes. At high altitudes, the reduced ambient pressure leads to a greater pressure differential, which in turn, increases the speed of hydrogen release. In cases where the speed of sound in hydrogen is not reached, a hydrogen shock wave is not anticipated.
 
-However, at higher altitudes, the speed of sound in air decreases, raising the probability of an air shock wave. When diffusion processes between air and hydrogen reach an ignitable concentration, phenomena ranging from ignition to detonation could be expected. Contrary to this notion, the air density decreases at higher altitudes, which could potentially slow down or complicate the process of reaching ignitable concentrations through the diffusion of air and hydrogen. Moreover, when considering the increased pressure difference and reduced air density in tandem, the speed at which hydrogen is released is not only enhanced due to the decreased ambient pressure but also due to an increased free path length until gas particles collide with each other. In other words, hydrogen can traverse longer paths before it collides with an air molecule, leading to a delayed reduction in speed owing to the conversion of kinetic energy into collision energy, commonly perceived as heat. The reduced air density at higher altitudes allows hydrogen molecules to maintain their high velocity over greater distances. This extended high-velocity travel leads to more rapid dispersion of hydrogen, potentially spreading it over a larger area in less time compared to releases at lower altitudes.
+Another key distinguishing factor for #gl_("swith",pl:true), particularly in comparison to land vehicles, is their operation across a range of altitudes. This variability in operational environment introduces several intricate considerations. At higher altitudes, the reduced ambient pressure results in a greater pressure differential between the hydrogen tanks and the surrounding environment. This increased differential potentially leads to higher velocities of hydrogen release in the event of a leak. It is important to note that if the release velocity does not exceed the speed of sound in hydrogen, a hydrogen shock wave is not anticipated.
+However, the situation is complicated by the fact that the speed of sound in air decreases with altitude. This reduction raises the probability of an air shock wave forming, even at lower hydrogen release velocities. When diffusion processes between the released hydrogen and the surrounding air result in an ignitable concentration, a range of phenomena from ignition to detonation becomes possible.
+Conversely, the decrease in air density at higher altitudes introduces a counteracting effect. The reduced density could potentially slow or complicate the process of achieving ignitable concentrations through the diffusion of air and hydrogen. This factor adds another layer of intricacy to the safety considerations for #gl_("swith",pl:true) operating at various altitudes.
+
+// -------------------------------------------------------------------------- //
+Furthermore, when considering the increased pressure difference and reduced air density in tandem, the behavior of released hydrogen becomes more nuanced. The speed at which hydrogen is released is not only enhanced due to the decreased ambient pressure but also due to an increased mean free path for gas particles. In other words, hydrogen molecules can traverse longer distances before colliding with air molecules, leading to a delayed reduction in speed. This delay is due to the reduced frequency of collisions that would otherwise convert kinetic energy into thermal energy. Consequently, the reduced air density at higher altitudes allows hydrogen molecules to maintain their high velocity over greater distances, potentially resulting in more rapid dispersion and coverage of larger areas compared to releases at lower altitudes.
+
+The impact of decreased temperature at higher altitudes further complicates this scenario. The interplay between temperature, pressure, and density affects various aspects of hydrogen behavior, including its diffusion rate, the formation of ignitable mixtures, and the potential for ignition or detonation.
 To introduce another level of complexity to this thought experiment, the impact of decreased temperature at higher altitudes also warrants consideration. As a result, we can ascertain that the impact of increasing altitude, leading to the consequent alteration of the mentioned parameters and their influence on the probability of causing an ignition to detonation, is a subject that demands further research.
+In light of these multifaceted considerations, it becomes evident that the impact of increasing altitude on hydrogen release dynamics and safety is a subject that demands further research. The complex interplay between pressure differentials, gas densities, temperatures, and molecular behaviors at varying altitudes significantly influences the potential for ignition or detonation events. Comprehensive studies are needed to fully understand these altitude-dependent phenomena and their implications for the safe design and operation of #gl_("swith",pl:true) across their full operational altitude range.
 
+// ---------------------------------- here ---------------------------------- //
 
-The concept of #gl_("swith",pl:true) adds an additional unique aspect to potential types of hydrogen releases caused by overloading. In the first scenario, leaks could occur at the connections between the tanks and the wing, resulting in hydrogen being released into the open airflow. Alternatively, a leak could lead to the accumulation of hydrogen inside the wing, where only the tanks are compromised and the wing remains intact without any further leaks. Generally speaking, aircraft designers will strive to utilize the maximum volume of the wing span for tank integration. This approach, however,
-means that any released hydrogen might accumulate in potentially small, confined spaces within the wing. Such a scenario has already been identified in literature as highly undesirable due to the risks it poses for ignition and explosion @Klell2018 @Klell2023.
-While the insights obtained from experimental tests with small cylinders or in the automotive industry are valuable initial steps, they lack the comprehensiveness needed to fully address the unique requirements of #gl_("swith",pl:true). A more specialized and targeted approach to research is crucial to ensure the safe application of hydrogen in this specific context. 
-
-To facilitate the use of hydrogen in #gl_("swith",pl:true) a experimental structural validation test method must be developed. To conduct these experimental tests, safe working conditions must be guaranteed for both the involved personnel, the instrumentation and the #gl_("swith") itself.
-Attempting to meet this requirement immediately for large #gl_("swith",pl:true), such as those on the scale of the Airbus A350-1000, may not be feasible. Instead, smaller, gradual steps towards the larger goal should be taken. 
+To facilitate the use of hydrogen in #gl_("swith",pl:true) an experimental structural validation test method must be developed. To conduct these experimental tests, safe working conditions must be guaranteed for both the involved personnel, the instrumentation and the #gl_("swith") itself. Attempting to meet this requirement immediately for large #gl_("swith",pl:true), such as those on the scale of the Airbus A350-1000, may not be feasible. Instead, smaller, gradual steps towards the larger goal should be taken. This incremental approach offers several advantages: it allows for better risk management, facilitates the accumulation of knowledge and experience, provides opportunities to identify and address issues at smaller scales before moving to larger, more complex systems, and enables a more cost-effective development process.
 
 
 The outcome of @jallais2017effects depicted in @fig_24 suggests  that it should be theoretically possible to eliminate one of the critical safety concerns. To prevent self-ignition or detonation from occurring, the working environment would have to be placed under protective gas. While Acetylene was found to enhance safety in this regard, Helium could be a more suitable choice due to its high speed of sound (according to @tab_26  1005 m/s) 
@@ -278,11 +248,10 @@ and noble gas properties.
 Noble gases have their outer shells completely filled with valence electrons and are therefore difficult to get to react.
 Other noble gases such as Neon, Argon, Krypton, Xenon, Radon and Oganesson could also be considered.
 Initial small-scale experiments ought to be performed, systematically increasing either the internal pressure or the volume of the cylinders based on the derived results. 
-If the proposed inert gases do not prove successful as surrounding media, alternatives should be examined. 
+If the proposed inert gases do not prove successful as surrounding gas, alternatives should be examined. 
 After examining combinations of maximum internal pressure, maximum volume and the surrounding gas
 where no ignition is observed, the progression of testing should include the addition of external loads. 
-This phase should be initiated with a reduced internal pressure, volume or concurrently decrease of both the volume and internal pressure. Throughout this critical stage, it's of paramount
-importance to rigorously investigate an array of combinations of internal pressure, internal volume, the type (whether static or dynamic) of load and distribution of the external loads, maintain-
+This phase should be initiated with a reduced internal pressure, volume or concurrently decrease of both the volume and internal pressure. Throughout this critical stage, it's of paramount importance to rigorously investigate an array of combinations of internal pressure, internal volume, the type (whether static or dynamic) of load and distribution of the external loads, maintain-
 ing meticulous records of combinations that can be executed without any ignition. This stringent testing strategy is instrumental in gaining an all-encompassing understanding of the variables at
 play and in establishing the safest operational conditions for hydrogen within #gl_("swith",pl:true). Simultaneously, efforts to encapsulate the observed physical behavior in simulations should be undertaken.
 The ultimate goal is to understand precisely how to conduct experimental tests for #gl_("swith",pl:true) up to
