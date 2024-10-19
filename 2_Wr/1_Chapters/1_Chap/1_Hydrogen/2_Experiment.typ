@@ -110,7 +110,17 @@ It's important to note that this explanation is a simplified model designed to i
 
 // -------------------------------------------------------------------------- //
 
-Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. However, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. It is noteworthy that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
+Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. However, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. 
+
+// TODO you need to add a few informairon here regarding diffusion ignition
+// explain diffusion ignition and see that
+Diffusion ignition [19,21,22,27], as proposed by Wolanski and Wojcicki, describes a phenomenon where pressurized hydrogen is released into a chamber containing either pure oxygen or air.
+
+The proocess of difufsion ingnition
+
+Despite this, diffusion ignition theory remains a widely accepted mechanism for spontaneous combustion induced by pressurized hydrogen leakage.
+
+It is noteworthy that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
 Intensive experimental investigations on the outflow of pressurized hydrogen into the free environment have been conducted by @dryer2007spontaneous. Additional studies using shock cylindrical tubes have been carried out by various researchers @Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Kim2013 @Kitabayashi2013 @Grune2014 @Gong2016 @Duan2016 @Jiang2019 @Wang2019. Comprehensive reviews and summaries on the spontaneous ignition mechanisms of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Yang2021.
 The findings from these studies are not only valuable for conducting experimental investigations with hydrogen but also have significant implications for the design of #gl_("swith", pl:true). These findings will be presented in detail, followed by explanations of their importance in the context of #gl_("swith") design and experimental procedures.
 
