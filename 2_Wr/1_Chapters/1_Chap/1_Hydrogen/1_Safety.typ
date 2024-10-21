@@ -245,7 +245,7 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
     [Maximum adiabatic combustion temperature], [$approx 2200 " " degree.c =^hat 2473.15 "K "$],
   ),
   kind: table,
-  caption: [Combustion characteristics and critical values for hydrogen-air mixtures @Klell2018],
+  caption: [Combustion characteristics and critical values for hydrogen-air mixtures @Klell2018 @Klell2023.],
 )<tab_25>
 
 
