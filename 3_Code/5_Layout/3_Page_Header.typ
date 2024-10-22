@@ -3,7 +3,9 @@
 // note, regular text heading are not the same as page header
 // the page header are at the very top of the page. it is not actual part of the reading text. the page headers that are inshallah dealt below are more for navigation, with name of current section, name of author, page or any other pattern that could reoccur on each page.
 
-
+// ========================================================================== //
+// ============================= create_h_entry ============================= //
+// ========================================================================== //
 #let create_h_entry(
   proper_number,
   ct_element,
@@ -51,7 +53,9 @@
 }
 
 
-// ------------------------------- page_header ------------------------------ //
+// ========================================================================== //
+// =============================== page_header ============================== //
+// ========================================================================== //
 #let page_header(body) = [
 
 

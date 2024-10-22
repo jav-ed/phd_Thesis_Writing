@@ -3,15 +3,15 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
-//TODO
-// the intro for the section needs to be checked again
-// make sure that the given references here actuall work as intented to
-// get proper title Hydrogen alone might not suffice, if the curvature study is included here
-== Hydrogen <chap_2_0>
-A comprehensive definition and state-of-the-art review regarding #gl_("swith", long:true) were provided in @chap_0_7. In @chap_1_0, an in-depth study was conducted to present the current standards and regulations pertaining to the commercial certification of #gl_("swith", long:true). Some of the information presented in @chap_1_0 will be utilized in this section to motivate and justify the undertaken steps.
-This section begins by examining the pioneering approach of integrating hydrogen tanks as load-carrying components into an aircraft wing's structure. 
-The study of fundamental hydrogen properties will be initially motivated, followed by a detailed analysis in @chap_2_0_0. Subsequently, special attention is given to the safety-relevant characteristics of #gl_("cgh2",long:true) in @chap_2_0_1. Following this, @chap_2_0_2 addresses experiments and simulations involving hydrogen. Finally, given that #gl_("swith",pl:true)  involves tanks bearing external loads 
-@chap_2_0_3 highlights important findings regarding external dynamic loads on pressure vessels.
+// Title was tested and is inshallah fine
+== High-Pressure Hydrogen Properties and Structural Considerations <chap_2_0>
+A comprehensive definition and state-of-the-art review of #gl_("swith", long:true) were provided in @chap_0_7, establishing the foundational context for this investigation. Building upon this, @chap_1_0 presented an extensive analysis of current standards and regulations governing the commercial certification of #gl_("swith", long:true). The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in this section.
+This section explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: First, @chap_2_0_0 establishes the fundamental properties of hydrogen, examining its basic characteristics and, among others, its gravimetric energy density and its behavior under varying pressure and temperature conditions.
+
+Following this, @chap_2_0_1 conducts an in-depth examination of the safety-relevant characteristics of #gl_("cgh2",long:true), addressing both theoretical considerations and practical implications for structural design.
+The theoretical foundation then transitions to practical applications in @chap_2_0_2, where experimental investigations and numerical simulations provide crucial insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety considerations. 
+Finally, acknowledging that #gl_("swith",pl:true) must withstand both internal pressure and external aerodynamic loads, @chap_2_0_3 analyzes critical findings regarding the behavior of pressure vessels under external dynamic loading conditions.
+This comprehensive approach integrates theoretical understanding, safety considerations, and practical engineering challenges to establish a robust framework for developing and validating #gl_("swith",pl:true).
 
 // Title was tested and is inshallah fine
 === Essential Properties of Hydrogen <chap_2_0_0>

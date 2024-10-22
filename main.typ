@@ -72,6 +72,11 @@
 /* ================================== Intro ================================= */
 /* ========================================================================== */
 #counter(heading).update(0)
+// #show init_glossary
+#show: doc => init_glossary(doc)
+
+
+#show link: set text(fill: color_Link)
 
 
 #include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
@@ -138,8 +143,8 @@
 // #include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
-#include "2_Wr/3_Additional/1_Glossary.typ"
-
+// #include "2_Wr/3_Additional/1_Glossary.typ"
+#final_glossary()
 
 // ----------------------------------- Bib ---------------------------------- //
 #pagebreak()

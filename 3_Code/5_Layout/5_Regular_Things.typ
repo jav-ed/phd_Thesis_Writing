@@ -44,7 +44,7 @@
   set block(above:1.6em)
 
   // show link: set text(fill: blue)
-  show link: set text(fill: color_Link)
+  
 
   // #set enum(indent: 0.7em)
 
