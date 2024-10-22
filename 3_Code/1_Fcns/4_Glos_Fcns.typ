@@ -8,9 +8,12 @@
 /* ========================================================================== */
 // #import "@preview/glossarium:0.2.2": make-glossary, print-glossary, gls, glspl 
 // #import "../../3_Code/1_Libs/glossarium.typ": * 
-#import "../../3_Code/2_Custom_Libs/glossarium_v_0_4_1.typ": * 
-// #import "../../3_Code/2_Custom_Libs/glossarium_v_0_5_0.typ": * 
 
+// does not work with typst v. 12
+#import "../../3_Code/2_Custom_Libs/glossarium_v_0_4_1.typ": * 
+
+// does not work with typst v. 12
+// #import "../../3_Code/2_Custom_Libs/glossarium_v_0_5_0.typ": * 
 
 // avail functions:
 // gl_("term", pl:true)

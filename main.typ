@@ -17,10 +17,6 @@
 // after the coverage page the page number inshallah can be activated again
 #set page(numbering: "— I —")
 
-
-// TODO allow big figures to be shown across pages
-// #show figure: set block(breakable: true)
-
 #show: float_text_spacing
 
 /* -------------------- latex 1.1 figures, tables, eqs -------------------- */

@@ -21,15 +21,18 @@
   if proper_number != none {
 
     set text(fill: twc_Col.gray-700)
+    
+    // space between different paragrpahs
+    // set block(above:1em)
 
     if debug == none {
-    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
+    [#proper_number #h(1em) #smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
     }
 
     // debug
     else{
 
-    [#proper_number #h(0.03fr) #smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
+    [#proper_number #h(1em) #smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
 
     }
   }
