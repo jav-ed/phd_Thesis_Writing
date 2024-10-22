@@ -68,6 +68,8 @@
 /* ================================== Intro ================================= */
 /* ========================================================================== */
 #counter(heading).update(0)
+
+// link color changed here in order not to effect the link color of the tocs
 #show link: set text(fill: color_Link)
 
 
@@ -104,8 +106,7 @@
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
 
-
-
+// ---------------------- loadcase and curvature study ---------------------- //
 
 
 // ------------------------------- introducion ------------------------------ //
