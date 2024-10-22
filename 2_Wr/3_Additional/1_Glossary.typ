@@ -1,4 +1,8 @@
 
+/* -------------------------------------------------------------------------- */
+#import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+/* -------------------------------------------------------------------------- */
+
 // in this file the glossary function is used
 // here are some examples how the glossary function are used within the typst docs
 // #gl_("key"), where the key is one of the keys defined below
@@ -13,13 +17,27 @@
 // if you want to see wheter an update exists go to
 // https://github.com/typst/packages/tree/main/packages/preview/glossarium
 
+// create clear seperation between content and glossary
+#pagebreak()
+
+#set heading(numbering: none)
 
 
+// adapt color
+// #show link: set text(fill: green.darken(30%))
 
+// only link color
+// #show link: set text(fill: blue)
+// #show link: set text(fill: color_Link)
 
+// color of key and description
+// #set text(fill: color_Link)
+// #set text(fill: gray.darken(70%))
+= Glossary
+#v(0.5em)
+#print-glossary(
 
-// #v(0.5em)
-#let glos_entry_list = (
+  (
 
     // ----------------------------- keys start ----------------------------- //
     (
@@ -112,9 +130,7 @@
 
     // ------------------------------ keys end ------------------------------ //
    
-  )
-
-
-
-
-
+  ),
+  // show all term even if they are not referenced, default to true
+  show-all: true
+)
