@@ -2,6 +2,8 @@
 
 // See conversation on discord (11.09.2024): https://discord.com/channels/1054443721975922748/1088372909111783525/threads/1283352970549002240
 
+// inshallah works fine with typst v 0.12.0 -> should not work with typst v 0.11.0
+
 #import "../../1_Fcns/0_Fcn_Main.typ": *
 
 
@@ -60,9 +62,7 @@
 
         // Check if the previous chapter had any figures
         let prev_chapter_figure = query(
-          figure.where(supplement: search_supplement).before(loc), 
-          loc
-        ).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
+          figure.where(supplement: search_supplement).before(loc)).filter(f => counter(heading).at(f.location()).first() == current_chapter - 1)
 
         // since ct_counter_val > 1 , the current_chapter can only be == 1 again, if we have mopdifed the heading manually, for example we are in the appendix now 
         if current_chapter == 1 {
@@ -85,52 +85,50 @@
         }
       }
 
-
-  }
-
-    // [#repr(et)]
-    // if ct_elem.numbering != none{
-    //   [#repr(ct_elem.numbering)]
-    // }
+      // [#repr(et)]
+      // if ct_elem.numbering != none{
+      //   [#repr(ct_elem.numbering)]
+      // }
 
 
-    // let number = if ct_elem.numbering != none {
-    //   numbering(ct_elem.numbering, ..ct_elem.counter.at(ct_elem.location()))
-    // }
+      // let number = if ct_elem.numbering != none {
+      //   numbering(ct_elem.numbering, ..ct_elem.counter.at(ct_elem.location()))
+      // }
 
-    // get the number
-    let number = if ct_elem.numbering != none {
-      it.body.children.at(2)
-    }
+      // get the number
+      let number = if ct_elem.numbering != none {
+        it.body.children.at(2)
+      }
 
-    let page = {
-      let page-numbering = ct_elem.location().page-numbering()
-      if page-numbering == none { page-numbering = "1" }
-      numbering(page-numbering, ct_elem.location().page())
-    }
+      let page = {
+        let page-numbering = ct_elem.location().page-numbering()
+        if page-numbering == none { page-numbering = "1" }
+        numbering(page-numbering, ct_elem.location().page())
+      }
 
-    let number-width = measure(number).width
-    let page-width = measure(page).width
-    
-    // Keep track of the maximum widths of the numbering and page.
-    let state = state("outex:0.1.0/figure/" + repr(ct_elem.kind), (
-      number-width: 0pt,
-      page-width: 0pt,
-    ))
+      let number-width = measure(number).width
+      let page-width = measure(page).width
 
-    state.update(state => {(
-      page-width: calc.max(state.page-width, page-width),
-      number-width: calc.max(state.number-width, number-width)
-    )})
 
-    // Add links
-    let linked = link.with(ct_elem.location())
-    let number = linked(number)
-    let title = linked(ct_elem.caption.body)
-    let page = linked(page)
+      
+      // Keep track of the maximum widths of the numbering and page.
+      let state = state("outex:0.1.0/figure/" + repr(ct_elem.kind), (
+        number-width: 0pt,
+        page-width: 0pt,
+      ))
 
-    // Render with final state
-    context {
+      state.update(state => {(
+        page-width: calc.max(state.page-width, page-width),
+        number-width: calc.max(state.number-width, number-width)
+      )})
+
+      // Add links
+      let linked = link.with(ct_elem.location())
+      let number = linked(number)
+      let title = linked(ct_elem.caption.body)
+      let page = linked(page)
+
+      // Render with final state
       let state = state.final()
       let number-width = state.number-width
       let page-width = state.page-width
@@ -145,6 +143,8 @@
         ),
         align(bottom + end, page)
       ))
+
+     // --------------------------- inside context -------------------------- //
     }
 
   }

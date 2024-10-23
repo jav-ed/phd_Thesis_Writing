@@ -40,7 +40,7 @@
 
 /* ---------------------------------- tocs ---------------------------------- */
 // table of contents, list of figures, list of tables
-// #show: multiple_tocs
+#show: multiple_tocs
 
 // ------------------------------- page footer ------------------------------ //
 // TODO is the following required?

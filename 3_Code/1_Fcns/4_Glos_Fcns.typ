@@ -39,7 +39,7 @@
 
     set heading(numbering: none)
 
-    [= glossary]
+    [= Glossary]
     
     
     print-glossary(
