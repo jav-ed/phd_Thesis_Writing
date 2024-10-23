@@ -26,10 +26,17 @@
     // set block(above:1em)
 
     if debug == none {
-    [#proper_number #h(1em) #smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
+      grid(
+        columns: (auto, 1em, 1fr, auto),
+        align(top, proper_number),
+        [],
+        smallcaps(ct_element.body), // title
+        page_counter_styled         // page nr
+        )
+
     }
 
-    // debug
+    // -------------------------------- debug ------------------------------- //
     else{
 
     [#proper_number #h(1em) #smallcaps(ct_element.body) #debug #h(1fr) #ct_page]
@@ -42,7 +49,14 @@
     set text(fill: twc_Col.gray-700)
 
     if debug == none {
-      [#smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
+      // [#smallcaps(ct_element.body) #h(1fr) #page_counter_styled]
+
+      grid(
+        columns: (1fr, auto),
+        smallcaps(ct_element.body), // title
+        page_counter_styled         // page nr
+        )
+
     }
 
     // debug
