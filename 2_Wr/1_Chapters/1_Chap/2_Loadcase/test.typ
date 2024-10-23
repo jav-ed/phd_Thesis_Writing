@@ -26,4 +26,4 @@
 
 
 
-A comprehensive definition and state-of-the-art review of #gl_("swith", long:true) were pro
+A comprehensive definition and state-of-the-art review of #gls("swith", long:true) were pro

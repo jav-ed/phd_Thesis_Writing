@@ -40,7 +40,7 @@
 
 /* ---------------------------------- tocs ---------------------------------- */
 // table of contents, list of figures, list of tables
-#show: multiple_tocs
+// #show: multiple_tocs
 
 // ------------------------------- page footer ------------------------------ //
 // TODO is the following required?
@@ -76,49 +76,39 @@
 #show link: set text(fill: color_Link)
 
 
-// #register-glossary(glos_entry_list)
 
-= New thing here
-let us talk about somehting that matthers, like what? Maybe we should start by making use of a gls like #glspl("cfd") and #gls("cfd") and #gls("cfd", long:true)
-#glspl("cfd")
+#include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
+#include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
+#include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
+#include "2_Wr/1_Chapters/0_Chap/3_Work_Strucutre.typ"
+#include "2_Wr/1_Chapters/0_Chap/4_Novelty.typ"
+#include "2_Wr/1_Chapters/0_Chap/5_Research_Enabler.typ"
 
-#gl_("cfd")
+/* ---------------------------- State of the art ---------------------------- */
+#include "2_Wr/1_Chapters/0_Chap/6_State_Of_Art.typ"
 
-
-
-
-// #include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
-// #include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
-// #include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
-// #include "2_Wr/1_Chapters/0_Chap/3_Work_Strucutre.typ"
-// #include "2_Wr/1_Chapters/0_Chap/4_Novelty.typ"
-// #include "2_Wr/1_Chapters/0_Chap/5_Research_Enabler.typ"
-
-// /* ---------------------------- State of the art ---------------------------- */
-// #include "2_Wr/1_Chapters/0_Chap/6_State_Of_Art.typ"
-
-// /* ========================================================================== */
-// /* =============================== Methodology ============================== */
-// /* ========================================================================== */
+/* ========================================================================== */
+/* =============================== Methodology ============================== */
+/* ========================================================================== */
 
 
 
-// #include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
 
 
-// /* -------------------------------- Standards ------------------------------- */
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Aero_Standards.typ"
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Pressure_Vessels.typ"
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/3_Automotive.typ"
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/4_Various_Fields.typ"
-// #include "2_Wr/1_Chapters/1_Chap/0_Standards/5_Essential_Standards.typ"
+/* -------------------------------- Standards ------------------------------- */
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Aero_Standards.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Pressure_Vessels.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/3_Automotive.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/4_Various_Fields.typ"
+#include "2_Wr/1_Chapters/1_Chap/0_Standards/5_Essential_Standards.typ"
 
-// /* -------------------------------- Hydrogen -------------------------------- */
-// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/0_H2_Prop.typ"
-// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
-// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
-// #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
+/* -------------------------------- Hydrogen -------------------------------- */
+#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/0_H2_Prop.typ"
+#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
+#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
+#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
 
 // ---------------------- loadcase and curvature study ---------------------- //
 

@@ -4,9 +4,9 @@
 
 
 == Research Enabler <chap_0_6>
-This section provides context for the research environment that facilitated this study on #gl_("swith", pl:true). It outlines the funding sources that enabled this contribution to #gl_("swith",pl:true). By transparently presenting this information, readers can better understand the research ecosystem and form their own opinions on the study's context.
+This section provides context for the research environment that facilitated this study on #glspl("swith"). It outlines the funding sources that enabled this contribution to #glspl("swith"). By transparently presenting this information, readers can better understand the research ecosystem and form their own opinions on the study's context.
 
-Thus, before delving deeper into research on #gl_("swith", pl:true), it is important to acknowledge the following:
+Thus, before delving deeper into research on #glspl("swith"), it is important to acknowledge the following:
 The Federal Ministry for Economic Affairs and Climate Action sponsored the research project titled "Konzeptprüfstand für Kleinflugzeugflügel mit hochintegralen Hochdruckwasserstofftanks" under the identification number 20M2117B. This project was awarded to the TU Dresden, where the author of this thesis was employed and granted permission to utilize some of the project outcomes for doctoral research.
 The project involved collaboration with an industry partner, Die IMA Materialforschung und Anwendungstechnik GmbH in Dresden, bringing valuable industry perspective to the research context.
 

@@ -45,27 +45,27 @@ Considering only the mobility sector
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
 
-#gl_("swith", pl:true) represent a novel approach in aviation fuel storage, integrating hydrogen tanks within the wing structure. This design aims to maximize space utilization while potentially contributing to load-bearing, distinguishing it from conventional fuel storage methods. Besides the scarcity of literature about #gl_("swith", pl:true), their unique characteristics present significant challenges. Unlike most structure-integrated approaches reviewed in literature, which predominantly focus on fuselage integration, #gl_("swith", pl:true) involve wing integration. This distinction is crucial, as wing-integrated tanks experience substantially greater aerodynamic loads compared to fuselage-integrated tanks in conventional tube-and-wing configurations.
+#glspl("swith") represent a novel approach in aviation fuel storage, integrating hydrogen tanks within the wing structure. This design aims to maximize space utilization while potentially contributing to load-bearing, distinguishing it from conventional fuel storage methods. Besides the scarcity of literature about #glspl("swith"), their unique characteristics present significant challenges. Unlike most structure-integrated approaches reviewed in literature, which predominantly focus on fuselage integration, #glspl("swith") involve wing integration. This distinction is crucial, as wing-integrated tanks experience substantially greater aerodynamic loads compared to fuselage-integrated tanks in conventional tube-and-wing configurations.
 
-The dual functionality of #gl_("swith", pl:true) - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
-Certification authorities need to ensure that #gl_("swith", pl:true) can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in 
+The dual functionality of #glspl("swith") - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
+Certification authorities need to ensure that #glspl("swith") can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in 
 //
 // TODO
 // @chap_2_0 .
 
-First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #gl_("swith", pl:true).
-Second, even when assuming ti know of what to test, there remains a significant challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #gl_("swith", pl:true) in commercial aviation.
+First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #glspl("swith").
+Second, even when assuming ti know of what to test, there remains a significant challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #glspl("swith") in commercial aviation.
 
-The focus of this work is primarily scientific, aiming to advance our understanding of #gl_("swith", pl:true). 
+The focus of this work is primarily scientific, aiming to advance our understanding of #glspl("swith"). 
 
-However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #gl_("swith", pl:true) could have significant implications in economic, technological, and strategic domains.
+However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #glspl("swith") could have significant implications in economic, technological, and strategic domains.
 While a detailed exploration of these broader impacts is beyond the scope of this motivation chapter, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These potential advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive exploration of these aspects is presented in @chap_0_5.
 
 
 /* --------------------------------- summary -------------------------------- */
 
 // #summary_([
-// Aviation has become an indispensable part of the global economy, serving both personal and business sectors with fast, reliable transportation. However, its negative environmental impact necessitates research into alternative, more environmentally friendly fuels. Hydrogen emerges as a promising candidate, not only for aviation but across various sectors, making research in this area broadly valuable. In this context, #gl_("swith", pl:true) represent a novel approach. 
+// Aviation has become an indispensable part of the global economy, serving both personal and business sectors with fast, reliable transportation. However, its negative environmental impact necessitates research into alternative, more environmentally friendly fuels. Hydrogen emerges as a promising candidate, not only for aviation but across various sectors, making research in this area broadly valuable. In this context, #glspl("swith") represent a novel approach. 
 // The hydrogen tanks not only store the fuel, but also are an active part of the wing such that loads across wing and hydrogen tanks are shared.
 // This innovative design aims to optimize space usage and potentially increase wing stiffness, showcasing how scientific ingenuity could address multiple challenges simultaneously.
 // ]
