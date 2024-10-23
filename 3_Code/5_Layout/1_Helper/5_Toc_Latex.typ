@@ -6,33 +6,6 @@
 
 /* -------------------------------------------------------------------------- */
 
-// Repeat_custom the given content to fill the full space.
-//
-// Parameters:
-// - gap: The gap between repeat_customed items. (Default: none)
-// - justify: Whether to increase the gap to justify the items. (Default: false)
-//
-// Returns: The repeat_customed content.
-#let repeat_custom(
-  gap: none,
-  justify: false,
-  body
-) = layout(size => context {
-  let pt(length) = length.to-absolute()
-  let width = measure(body).width
-  let amount = calc.floor(pt(size.width + gap) / pt(width + gap))
-
-  let gap = if not justify { gap } else {
-    (size.width - amount * width) / (amount - 1)
-  }
-  
-  let items = ((box(body),) * amount)
-  if type(gap) == length and gap != 0pt {
-    items = items.intersperse(h(gap))
-  }
-
-  items.join()
-})
 
 // Layout a heading entry in an outline.
 //
@@ -208,7 +181,7 @@
   space: true,
   body
 ) = {
-  set outline(fill: align(end, repeat_custom(gap: 0.5em, ".")))
+  set outline(fill: align(end, repeat(gap: 0.5em, ".")))
 
   // Convert fill-pad to dict
   let fill-pad = if type(fill-pad) == dictionary {(

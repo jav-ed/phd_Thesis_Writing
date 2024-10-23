@@ -27,7 +27,10 @@
   // second attempt
   show: outex
   show outline: set par(leading: 1em) // For spacing between level-2+ entries
-  show outline: set block(spacing: 3.5em) // For spacing before level-1 entries
+
+  // For spacing before level-1 entries
+  set par(spacing: 3.5em)
+  // show outline: set block(spacing: 3.5em) 
 
   // should be there 
   heading("Table of Contents", level:1, numbering:none)

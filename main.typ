@@ -111,6 +111,8 @@
 #include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
 
 // ---------------------- loadcase and curvature study ---------------------- //
+#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/0_Loadcase.typ"
+#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/1_Curv_Init.typ"
 
 
 // ------------------------------- introducion ------------------------------ //
