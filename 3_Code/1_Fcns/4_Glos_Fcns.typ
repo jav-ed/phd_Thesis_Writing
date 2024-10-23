@@ -26,6 +26,7 @@
 #let init_glossary(body) = {
     register-glossary(glos_entry_list)
 
+
     // ------------------------------- keep it ------------------------------ //
     body
 
@@ -43,7 +44,10 @@
     
     
     print-glossary(
-        glos_entry_list
+        glos_entry_list,
+
+        // show all term even if they are not referenced, default to true
+        show-all: true
         )
 
     // ------------------------------- keep it ------------------------------ //
