@@ -3,14 +3,11 @@
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout_Main.typ":*
 
-
 // Note, the order of the show and set rules are of high importance. If they are changed and the changes are not thought through, unexpected layout issues could occur. One example that was observed was: if the terxt_header and page_header are not set after the figure numbering or float_spacing, the page headers are shifted. So when you are in the chapter Methodology, it will not detect it properly. It detected this header to be on one page earlier.
 
 // general rules for the moment are difficult to provide. if you need to add things and the rendeing beahviour is not as expected, you might need to change the order - in a even not quite obious way
 #show: regular_layout
 
-// inital registration of the glossary
-#show: init_glossary
 
 // ------------------------------- cover page ------------------------------- //
 // for the cover page usally the page number is not displayed
@@ -76,17 +73,6 @@
 #show link: set text(fill: color_Link)
 
 
-// #register-glossary(glos_entry_list)
-
-= New thing here
-let us talk about somehting that matthers, like what? Maybe we should start by making use of a gls like #glspl("cfd") and #gls("cfd") and #gls("cfd", long:true)
-#glspl("cfd")
-
-#gl_("cfd")
-
-
-
-
 // #include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
 // #include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
 // #include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
@@ -150,7 +136,7 @@ let us talk about somehting that matthers, like what? Maybe we should start by m
 // #include "2_Wr/10_Appendix/0_File.typ"
 
 /* -------------------------------- glossary -------------------------------- */
-#show: output_glossary
+#include "2_Wr/3_Additional/1_Glossary.typ"
 
 // ----------------------------------- Bib ---------------------------------- //
 #pagebreak()
