@@ -93,6 +93,8 @@
 
 
 
+  // reset spacing between par, default is 1.2em
+  set par(spacing: 1.2em)
   // -------------------------------- keep it ------------------------------- //
   body
 

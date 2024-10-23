@@ -473,7 +473,7 @@
             </group>
             <group delimiter=" ">
               <text value="Patent number:"/>
-              <text variable="annote"/>
+              <text variable="note"/>
             </group>
             <text macro="issued"/>
           </group>
@@ -529,6 +529,7 @@
           <group delimiter=", " suffix=". ">
             <text macro="title"/>
             <text variable="container-title" font-style="italic"/>
+            <text variable="note"/>
             <text macro="locators"/>
           </group>
           <text macro="collection"/>
