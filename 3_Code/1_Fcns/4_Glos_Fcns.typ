@@ -2,7 +2,7 @@
 #import "Helper/100_Helper_Main.typ": *
 
 // get the variable that has the glossay keys, descirptions and so on
-#import "../../2_Wr/3_Additional/2_Glossary_V.0.5.0.typ": glos_entry_list
+#import "../../2_Wr/3_Additional/0_Glossary_V.0.5.0.typ": glos_entry_list
 
 
 /* ========================================================================== */
