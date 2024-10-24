@@ -76,9 +76,9 @@ In
 // TODO
 // @chap_T_B_D 
 an in-depth explanation of the theoretical foundations underlying these methods and their integration into the optimization process is provided. This approach enables the execution of calculations on regular laptops within reasonable timeframes, offering substantial cost savings by eliminating the need for high-performance cluster rentals and allowing multiple calculations to be performed in a single day.
-The choice of coding language and the implementation of a beam model, which is more readily comprehensible than FEM calculations, yield numerous advantages. The resulting code is more accessible and easier to understand, facilitating adaptation to specific requirements. 
+The choice of coding language and the implementation of a beam model, which is more readily comprehensible than #gls("fem") calculations, yield numerous advantages. The resulting code is more accessible and easier to understand, facilitating adaptation to specific requirements. 
 This accessibility also renders the model potentially valuable as a teaching tool for university students.
-An additional benefit stems from the utilization of open-source projects for both the optimization process and the beam model calculations. This approach eliminates the need for costly commercial FEM licenses, further enhancing the cost-effectiveness and accessibility of the research.
+An additional benefit stems from the utilization of open-source projects for both the optimization process and the beam model calculations. This approach eliminates the need for costly commercial #gls("fem") licenses, further enhancing the cost-effectiveness and accessibility of the research.
 
 
 /* -------------------------------------------------------------------------- */

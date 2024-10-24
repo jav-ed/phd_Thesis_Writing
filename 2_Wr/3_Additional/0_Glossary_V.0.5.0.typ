@@ -101,7 +101,13 @@
       key: "cfd",
       short: "CFD",
       long: "Computaitonal Fluid Dynamics",
-      description: "Eine numerische Methode um wichitge Kenngrößen einer Strömung herauszufinden. Die Methode kann angewandt werden um beispielsweise die Auftriebsverteilung oder Widerstand eines FLugobjektes zu erhalten.",
+      description:  [Eine numerische Methode um wichitge Kenngrößen einer Strömung herauszufinden. Die Methode kann angewandt werden um beispielsweise die Auftriebsverteilung oder Widerstand eines FLugobjektes zu erhalten],
+    ),
+    (
+      key: "fem",
+      short: "FEM",
+      long: "Finite Element Method",
+      description:  [Eine numerische Methode um wichitge Kenngrößen einer Strömung herauszufinden. Die Methode kann angewandt werden um beispielsweise die Auftriebsverteilung oder Widerstand eines FLugobjektes zu erhalten],
     ),
 
 

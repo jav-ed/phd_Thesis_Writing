@@ -52,29 +52,30 @@ Due to the nature of a lot of machine learning models and espeically deep learni
 // refs to gpus
 // GPU like that (full and short version)
 Thus, in order to reduce the time requird fore training a GPU (Graphics Processing Unit) @Kaur2023 @DeLuca2024 should be used. 
-Because of the high amount of application of machine learning models, the current software ability is so advances that even multiple GPUs can be used in parallel to train the model even faster
+Because of the high amount of application of machine learning models, the current software ability is so advances that even multiple GPUs can be used in parallel to train the model even faster @Paszke2019 @tensorflow2015_whitepaper @Sergeev2018@link_ray2024 @link_deepspeed2024 @link_accelerate2024.
 
-.
-While the training pahse of deep leanring models takes a high amount of time, the inferece time is much lower that the time required for a FEM or a CFD solution @butt2021development. Thus, inference of machine leanring models refers to obtaining their output.
-Furthermore, it is possible to train a deep learning model on a multiple GPUs and run the inference on a single GPU or even CPU. 
-The inference should still be much faster than a high fidelty fem or CFD simualtion.
+While the training pahse of deep leanring models takes a high amount of time, the inferece time is much lower @butt2021development.  The inference of machine leanring models refers to obtaining their output and can be in real-time.
+Furthermore, depending on the size of the neuonal network, it could be that the model that was trained on multiple GPUs, runs smoothly on a single GPU or even CPU. 
+If the models fits within the RAM (Random access memory), generally it can be expected that the inference even on regular CPUs are magnitudes of orders faster than a high fidelty #gls("fem") or #gls("cfd") simualtion.
 
-An example of how machine leanring can be used to obtain faster results for cfd is given in @Kochkov2021 
+
+Some comparisons in how machine learning could help to improve computational speed were conducted in @Edelen2020 for particle accelerator simulations 
+For their primary test case, they found that while the physics simulation required 590 seconds using 8 computing cores, the neural network surrogate model could execute in less than one millisecond on a single laptop core.  This represents a speedup of $cal(O)(10^6)$ times. Beyond raw execution time, the machine learning approach demonstrated broader efficiency gains in the optimization process: it required 132 times fewer simulation evaluations and reduced the total core-hours by a factor of 144 compared to using physics simulations alone. Through iterative retraining, they suggested potential further improvements of 330-550 times fewer simulation evaluations needed. For their more complex test case, the IsoDAR cyclotron, the neural network achieved even greater speedup, executing $cal(O)(10^7)$ times faster than the original physics simulation. Notably, these improvements were achieved while maintaining good accuracy compared to the underlying physics simulations, and the neural network training itself only required about 10 minutes on a laptop. 
+Another example where concrete speedups for using machine learning techniques for #gls("cfd") are given in @Kochkov2021 with factors between 40 and 80.
+
+having mentioned big advatages of using machine learning models as surrogate models, one improtant factor needs to be hihglighted. 
 The main objective behind the machine learning approach is that it still requires the high fidelity simulation data as the input. Thus, before training the machine learnign model, the computaitonal expensive for all desired surrogate models would be required.
 Because of this, the previously mentioned infeasibly high amount of time and effort remains.
 
-
-// refs to torch, tensorflow
-
- These surrogate models attempt to replicate the answers of physical based equations. 
-
-
-still issue - why
-// speed up mentioned in @Kochkov2021 ->  still need ground trurth data that needs to be first created with DNS or other high fidelty method. once done faster machine elanring mdoels or surrograte models like reduced order models can be obtained
-The development and implementation of fast, accurate simulation capabilities would demand extensive resources. This includes not only experienced programmers, fluid mechanics engineers, structural mechanics engineers, and multi disciplinary and multi objective optimization specialists but also substantial computational hardware and qualified personnel to operate the software. Furthermore, the resulting data would require careful interpretation and categorization to identify truly critical load cases. Given the current state of technology, real-time calculation and comparison of all specified load cases with high accuracy remains unfeasible.
+//
+The development and implementation of fast, accurate simulation capabilities would demand extensive resources. This includes not only experienced programmers, fluid mechanics engineers, structural mechanics engineers, and multi disciplinary @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a and multi objective optimization
+@Tian2021 @Li2023d @Ridha2021 specialists but also substantial computational hardware and qualified personnel to operate the software. 
+Furthermore, the resulting data would require careful interpretation and categorization to identify truly critical load cases. Given the current state of technology, real-time calculation and comparison of all specified load cases with high accuracy remains unfeasible.
 
 // TODO references
-The implementation of comprehensive simulation capabilities for this analysis presents significant methodological challenges that extend beyond mere computational resources. While individual multiphysics problems are numerically solvable with current methods, the challenge lies in the unprecedented combination of multiple physical phenomena with an extensive array of load cases. The analysis requires expertise across multiple disciplines: computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, and optimization theory for handling the vast solution space. Furthermore, depending on the specific load case, additional physical phenomena must be considered, including crash dynamics, multi-body interactions, dynamic structural responses, and thermomechanical effects. Each of these domains introduces its own set of numerical complexities and computational demands.
+The implementation of comprehensive simulation capabilities for this analysis presents significant methodological challenges that extend beyond mere computational resources. While individual multiphysics problems are numerically solvable with current methods, the challenge lies in the unprecedented combination of multiple physical phenomena with an extensive array of load cases. 
+The analysis requires expertise across multiple disciplines: computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, and optimization theory for handling the vast solution space. Furthermore, depending on the specific load case, additional physical phenomena must be considered, including crash dynamics
+@PrabhaharanS_2022 @FragosoMedina2021 @MortazaviMoghaddam2021, multi-body interactions @Balena2021 @Rahnejat2023 @Benmeddah2024, dynamic structural responses, and thermomechanical effects. Each of these domains introduces its own set of numerical complexities and computational demands.
 
 The coupling of these physical phenomena further compounds the computational complexity, leading to potential stability issues and increased computational overhead. Even with state-of-the-art high-performance computing infrastructure, the simultaneous consideration of aerodynamic effects, structural responses, and internal pressure loads across multiple load cases remains computationally intractable for real-time analysis. The challenge is not in solving any single multiphysics problem, but rather in the systematic evaluation of numerous load cases, each potentially requiring different combinations of physical models and solver configurations. Moreover, the interpretation of such multidimensional results requires sophisticated post-processing methodologies to identify truly critical load cases, as the interaction between different physical phenomena may lead to non-obvious failure modes. These fundamental challenges in both computation and analysis underscore the current limitations in achieving comprehensive, high-fidelity simulations for all specified load cases.
 
