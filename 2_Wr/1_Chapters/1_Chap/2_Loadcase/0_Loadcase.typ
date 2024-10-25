@@ -96,7 +96,7 @@ MMM's approach involved comprehensive load case simulations followed by statisti
     // ------------------------------- header ------------------------------- //
     [*Probability*], [*Critical Load Case*],
     // ---------------------------------------------------------------------- //
-    [100%], [Elevator maneuver and vertical gust (V-n diagram)],
+    [100%], [Elevator maneuver and vertical gust],
     [90%], [Landing impact],
     [80%], [Aileron maneuver and ground rolling],
     [70%], [Lateral gust and rudder maneuver],
@@ -114,38 +114,56 @@ Within the scope of this thesis, experimental replication of all identified crit
 
 // ------------------------------- v-n-diagram ------------------------------ //
 According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning, thus warranting detailed investigation. 
-As hinted in @tab_29, these loads can be systematically analyzed through V-n diagrams. 
-The V-n diagramm is also called fligh envelope or v-g diagramm.
+This load case can be systematically analyzed through V-n diagrams. 
+The V-n diagramm is also called flight envelope or v-g diagramm.
 The flight envelope shows specific load factors over airspeed that an airplane has been designed to operate within @Gudmundsson2014 @Rossow_2014. 
+It shows two differnt kind of laods, maneuver and gust laods @Rossow_2014.
 An illustrative example is depicted in @fig_28 according to the EASA CS-23 @EASA_CS_23 for the normal category.
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/0_Load/0_Vn_Diag.svg", 
   width: 100%),
-  caption: [EASA CS-23 @EASA_CS_23, flight envelope for the normal category],
+  caption: [illustrative V-n diagramm (flight envelope, V-g diagram) according to EASA CS-23 @EASA_CS_23 for the normal category.],
 ) <fig_28>
 
-The points #emp_[A] to #emp_[G] hihglighted in @fig_28 are important points.
- 
+The horizontal axis of the flight envelope in @fig_28 shows the Equivalent Airspeed (EAS) in knots (KEAS) and is given as @eq_10. The varaiables $rho, rho_0$ and $ V_"TAS"$ denote the density at current flight altitude, density at sea level and the true airspeed, respectively. The true airspeed defines the relative speed between the undistrbed far-field and the aircraft @Gudmundsson2014.
 
-The V-n diagramm limits itself to symtrical flight loads, thus cannot encompass asymtrical load cases.
-The V-n diagramm shows two differnt kind of laods, maneuver and gust laods.
+$ V_"EAS" = sqrt(rho /rho_0) space V_"TAS" $<eq_10>
 
+The vertical axis of @fig_28 shows the load factor n following @Rossow_2014 can be descibed as @eq_11. 
+The variable $P$ is denoted as a force usally acting against the mass force $G$, where $m "and " g$ stand for the mass and gracitional constant. 
+Note that the load factor is unitless and corresponds to the safe load or limit load @Rossow_2014.  
 
+$ n = P/G = P / (m space.thin g) $<eq_11>
 
+Next, some points of the legends in @fig_28 are commonly used and shall be spelled out following the definitions provided by @Rossow_2014 @Gudmundsson2014 @EASA_CS_Abbrevs 
 
-// additional infromation about speed 
-//  what airspeed they can fully deflect control surfaces, what is the dive speed, or the airspeed at which he or she may have to slow down should they encounter turbulent atmospheric conditions, and the list goes on
+- *Design Maneuvering Speed V#sub[A]*: VA is the design limit speed up to which a full deflection of any one control surface (aileron, elevator, and rudder) is possible with retracted flaps without causing structural failure. Simultaneous full deflections of multiple control surfaces as well as multiple deflections of a single control surface are not permitted at V#sub[A].
+  
+- *Design speed for maximum gust intensity VB* Most often used for commuter-class aircraft.
 
-It is of primary interest to the structural engineer, but also helps the pilot better understand the limitations of an aircraft @Gudmundsson2014.
+- *Design Cruising Speed V#sub[C]*: VC is the design speed for cruise flight. When determining VC, economic aspects such as low fuel consumption must be considered along with the boundary conditions specified in the certification requirements applicable to the respective aircraft class.
 
+- *Design Diving Speed V#sub[D]*: V#sub[D] is the maximum flight speed for which the aircraft structure is designed. Certification requirements often mandate a minimum margin between V#sub[D] and V#sub[C], which depends on the aircraft class.
 
+- *Design Flap Speed V#sub[F]*: VF is the maximum design speed for flight with extended high-lift flaps on the wing.
 
+- *Stalling Speed V#sub[S]*: V#sub[S] is the minimum flight speed in level flight with retracted flaps at which no flow separation occurs on the wing (= stall speed). In other words, this is flight at the maximum lift coefficient C#sub[L,max].
+  
 
+Next, it is important to note that generally the V-n diagramm limits itself to symtrical flight loads, thus cannot encompass asymtrical load cases.
+While the banked turn is strictrly asymtrical load case it still can be considered through the V-n diagram @Rossow_2014.
+Besides reading the V-n diagramm to obtain infromation about the aircraft's strucutre, pilots can derive important infomation as well.
+These include,  what airspeed they can fully deflect control surfaces, what is the dive speed, or the airspeed at which slowing down is required @Gudmundsson2014.
 
-This approach provides a standardized framework that readily integrates with existing methodologies.
-While V-n diagrams encompass a broad spectrum of load cases, critical conditions within this spectrum have been well-documented in literature @heinze2023aircraft.
+After having explained some for mor concrete details the reader is refered to literature like  @Rossow_2014 @Gudmundsson2014 @EASA_CS_23. For understnaind how V-n diagrams are drawn @Gudmundsson2014 and standards like @EASA_CS_23 @EASA_CS_25 should be considered. 
+
+Since the load cases obtained through the V-n diagramm can be represnted through load factors, they can easily be integrated in existing strucutre simualtions.
+The latter is true for  simple beam models, where any existing load can be sacled with a factor, but also for more intricate #gls("FEM") models, where the applied loads can be scaled in similar way.
 
 // ---------------------------------- here ---------------------------------- //
+Moreover while V-n diagrams encompass a broad spectrum of load cases, critical conditions within this spectrum have been well-documented in literature @heinze2023aircraft.
+
 // TODO light aircraft, bigb aircraft - focus on light aircraft, because it is believed swith it would be more reasonable to ahve smaller swiths than bigger acs
 Significantly, V-n diagrams maintain validity across various light aircraft configurations, suggesting that findings from this research could potentially extend to other hydrogen-powered light aircraft designs.
 
