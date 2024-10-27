@@ -159,7 +159,7 @@ These include,  what airspeed they can fully deflect control surfaces, what is t
 After having explained some for mor concrete details the reader is refered to literature like  @Rossow_2014 @Gudmundsson2014 @EASA_CS_23. For understnaind how V-n diagrams are drawn @Gudmundsson2014 and standards like @EASA_CS_23 @EASA_CS_25 should be considered. 
 
 Since the load cases obtained through the V-n diagramm can be represnted through load factors, they can easily be integrated in existing strucutre simualtions.
-The latter is true for  simple beam models, where any existing load can be sacled with a factor, but also for more intricate #gls("FEM") models, where the applied loads can be scaled in similar way.
+The latter is true for  simple beam models, where any existing load can be sacled with a factor, but also for more intricate #gls("fem") models, where the applied loads can be scaled in similar way.
 
 // ---------------------------------- here ---------------------------------- //
 Moreover while V-n diagrams encompass a broad spectrum of load cases, critical conditions within this spectrum have been well-documented in literature @heinze2023aircraft.
