@@ -24,12 +24,13 @@ This subsection addresses the significance of identifying critical load cases an
 
 
 Defining critical load cases for structure-integrated hydrogen tanks, designed as integral parts of light aircraft wings, presents a complex engineering challenge. This complexity stems from the dual-nature of #glspl("swith"): the tanks are both integrated into the wing structure, bearing structural loads, and subjected to high internal pressure. Consequently, each conventional load case must be evaluated both without pressure and across various pressure ranges, significantly expanding the testing matrix.
-
 The identification of critical load cases poses significant challenges even for conventional light aircraft, given the vast array of possible scenarios defined in certification standards @EASA_CS_23 @EASA_CS_25. A comprehensive experimental investigation of each load case is neither economically viable nor environmentally sustainable. 
 
-While simulative approaches offer an alternative, they present their own set of challenges. Depending on accuracy requirements, 
-a single aerodynamic load calculation may require months of computational time @Yang2021a @HernandezAguirre2022 @Kochkov2021 @Blazek2015 @Fu2020 .
 
+While simulative approaches offer an alternative, they present their own set of challenges. Depending on accuracy requirements, 
+a single aerodynamic load calculation may require months of computational time @Yang2021a @HernandezAguirre2022 @Kochkov2021 @Blazek2015 @Fu2020.
+
+// --------------------- drawbacks of regular simulation -------------------- //
 According to @Yang2021a Direct Numerical Simulation (DNS)  requires 100 times more computational resources than wall-resolved large-eddy simulation (WRLES) for their considered Reynolds number range ($10^7 <= "Re" <= 10^9$) @Sigloch2022 @Schlichting2017. 
 If Moore's @Moore1998 or Koomey's @Koomey2011 law holds and computing ability doubles every two years, the Reynolds number range that is accessible to WRLES today would be accessible to DNS in about 13 years @Yang2021a. Furthermore, WRLES is significantly more computationally expensive than wall-modeled LES (WMLES), with computational costs scaling as $"Re"^2.72$ and $"Re"^1.14$ respectively @Yang2021a.
 According to @Kochkov2021, despite a direct link between the equations of motion and the basic laws of physics, it would be impossible to carry out direct numerical simulations at the scale required for these important problems such as climate and weather.
@@ -62,25 +63,52 @@ Some comparisons in how machine learning could help to improve computational spe
 For their primary test case, they found that while the physics simulation required 590 seconds using 8 computing cores, the neural network surrogate model could execute in less than one millisecond on a single laptop core.  This represents a speedup of $cal(O)(10^6)$ times. Beyond raw execution time, the machine learning approach demonstrated broader efficiency gains in the optimization process: it required 132 times fewer simulation evaluations and reduced the total core-hours by a factor of 144 compared to using physics simulations alone. Through iterative retraining, they suggested potential further improvements of 330-550 times fewer simulation evaluations needed. For their more complex test case, the IsoDAR cyclotron, the neural network achieved even greater speedup, executing $cal(O)(10^7)$ times faster than the original physics simulation. Notably, these improvements were achieved while maintaining good accuracy compared to the underlying physics simulations, and the neural network training itself only required about 10 minutes on a laptop. 
 Another example where concrete speedups for using machine learning techniques for #gls("cfd") are given in @Kochkov2021 with factors between 40 and 80.
 
-having mentioned big advatages of using machine learning models as surrogate models, two improtant factor shall be reiterated. 
+Having mentioned big advatages of using machine learning models as surrogate models, two improtant factor shall be reiterated. 
 When saying machine learning model would speedup caluclations, the inferece pahse is refered to, not the trianing pahse.
 Next, in order to traing machine learning model, input data is required. For the case of high fidelity simulation, high fidelty time and computaitonal expensive simualtion would need to be carried out. Thus, if no trained model are provided, the inital high fidelty numiercal simulations cannot be skipped. Because of this all diffucilzties faced with high-fidelty simulation are also faced during the data generation stadium for machine learning models.
 
 Given these limitations in both traditional simulation approaches and machine learning alternatives, establishing comprehensive simulation capabilities presents significant resource challenges. 
-
-The  general development and implementation of fast, accurate simulation capabilities is possible. It demands extensive technical expertise and computaitonal resources.
-Depending on the specific loadcase this could encompass expertise computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, multi-disciplinary @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a, and multi-objective optimization techniques @Tian2021 @Li2023d @Ridha2021 for handling  complex requirementsments as well the vast solution space. Furthermore, depending on the specific load case, additional physical phenomena must be considered, including crash dynamics
+Depending on the specific loadcase this could encompass expertise computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, multi-disciplinary @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a, and multi-objective optimization techniques @Tian2021 @Li2023d @Ridha2021 for handling  complex requirementsments as well the vast solution space. 
+Furthermore, depending on the specific load case, additional physical phenomena must be considered, including crash dynamics
 @PrabhaharanS_2022 @FragosoMedina2021 @MortazaviMoghaddam2021, multi-body interactions @Balena2021 @Rahnejat2023 @Benmeddah2024, dynamic structural responses, and thermomechanical effects. Each of these domains introduces its own set of numerical complexities and computational demands.
 
-Moreover, some loadcases could require the coupling of multiple disciplines. These physical phenomena further compounds the computational complexity, leading to potential stability issues and increased computational overhead. Even with state-of-the-art high-performance computing infrastructure, the simultaneous consideration of aerodynamic effects, structural responses, and internal pressure loads across multiple load cases remains computationally intractable for real-time analysis. The challenge is not in solving any single multiphysics problem, but rather in the systematic evaluation of numerous load cases, each potentially requiring different combinations of physical models and solver configurations. 
-Moreover, the interpretation of such multidimensional results requires sophisticated post-processing methodologies to identify truly critical load cases, as the interaction between different physical phenomena may lead to non-obvious failure modes. These fundamental challenges in both computation and analysis underscore the current limitations in achieving comprehensive, high-fidelity simulations for all specified load cases.
+Moreover, some load cases depending on accuracy demands could require the coupling of multiple disciplines. These physical phenomena further compounds the computational complexity, leading to potential stability issues and increased computational overhead. Even with state-of-the-art high-performance computing infrastructure, the simultaneous consideration of aerodynamic effects, structural responses, and internal pressure loads across multiple load cases remains computationally intractable for real-time analysis. 
+
+Yet, it is important to note that the challenge is not in solving any single multiphysics problem, but rather in the systematic evaluation of numerous load cases, each potentially requiring different combinations of physical models and solver configurations. 
+Moreover, the interpretation of such multidimensional results requires sophisticated post-processing methodologies to identify truly critical load cases, as the interaction between different physical phenomena may lead to non-obvious failure modes. 
 
 
-Given these computational challenges, the identification of potentially critical load cases for #glspl("swith") was approached by leveraging established industry knowledge. The analysis draws upon critical load case data originally developed by the former company MMM, as presented in @tab_29. 
-The data was presented in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze.
-MMM's approach involved comprehensive load case simulations followed by statistical evaluation to determine the probability of each load case being dimensioning. Such probabilistic classification of load cases represents valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
+In order to give some perspective on why the simulation of some load cases especially for a #gls("swith") is considered to be complex and multidisciplinary @tab_12 and @tab_13 shall be viewed. It should be understandable that the expertise required to simulate a gunfire test is very different from simualting a pneumicatic cycle test, or a glass trnaistion temperature test.
+The reason for mentioning tests that pressriziruzed cylinder must undergo was given in @chap_1_0_6. In short it can be said, since for this thesis #glspl("swith") are used with #gls("cgh2", long:true) it is reasonable to assume that all or some tests deamnded for pressurized cylinders also could be demanded for high pressure cylinders when they are a load bearing and integratedd part of an aircraft's wing.
+Moreover, the high number of the high amount of laod cases to potentially consider can be viewed in aircrafts standards like @EASA_CS_23 and @EASA_CS_25.
 
 
+// --------------------------- general load cases --------------------------- //
+Zeile 202 - 345
+Next, some general loads that occur during flight and on the ground shall be mentioned @heinze2023aircraft.
+Primary consideration could be given to aerodynamic forces induced during flight operations, specifically the pressure differentials that generate lift and negative lift forces. 
+These aerodynamic loads manifest predominantly during dynamic flight maneuvers. 
+In coordinated turns, the required lift coefficient needs to exceed the weight-induced load factor to maintain the desired flight path. 
+Similarly, during the transition from descent to level flight at low altitudes, necessitate the generation of substantial lift forces that exceed those required for steady-state flight conditions. 
+Atmospheric perturbations, particularly gust loads, constitute another critical category of aerodynamic forces. These are complemented by control surface-induced loads, where rudder deflections alter the pressure distribution patterns and generate supplementary force components. 
+One important phenomenon that needs to be mentioned when talking about general laods that can be met during flight is Buffeting. It is a phenomenon where the aircraft experiences highly non-linear dynamic and fluctuating loads. These loads cause noticeable vibrations in the aircraft structure. Buffeting can occur in various flight conditions such as flying through vortices, during transonic flight, at high angles of attack, when encountering wake turbulence, or due to shock wave oscillations (fluctuating shock location) in transonic @Caruana2005. 
+Other aerodynamical load can occur due to the complex flow interactions for example between the wing-fuselage area
+
+Beyond aerodynamic loads, inertial forces constitute another significant load category. These forces arise whenever the aircraft or its components experience acceleration or deceleration. This encompasses all phases of operation including takeoff acceleration, landing deceleration, and general flight maneuvers. 
+Component-specific vibrations and flutter phenomena also contribute to the inertial load spectrum. Additionally, propulsion-related forces encompass thrust forces, gyroscopic effects from rotational speed variations, and the dynamic interactions between engine, pylon, and airframe systems @heinze2023aircraft.
+Ground operations introduce a distinct set of loads: landing impact forces and subsequent braking loads, runway surface irregularities, towing forces during ground handling, and maintenance-related loads such as jacking operations @heinze2023aircraft. 
+Of particular concern are tool drop scenarios during maintenance, which must be considered in the structural analysis.
+It's important to note that these various load cases do not act uniformly across the aircraft structure, nor do they necessarily occur simultaneously. Rather, specific locations experience characteristic load combinations that can result in critical stress states, forming the fundamental basis for structural dimensioning @heinze2023aircraft.
+
+
+// TODO - 
+// phd link could be added here, either explain what the focus of the phd is 
+// or explain that these loadcase studies would become their own book
+// transition required
+The fundamental challenges in both computation and analysis underscore the current limitations in achieving comprehensive, high-fidelity simulations for all specified load cases.
+Given these challenges, the identification of potentially critical load cases for #glspl("swith") was approached by leveraging established industry knowledge. 
+The former company MBB perfomed a statistical evaluation to determine the probability of each load case being critical.
+Their findings in percentage, that is, in how many times one load case was to be found critical is given in @tab_29.
 
 // TODO
 #figure(
@@ -110,15 +138,39 @@ MMM's approach involved comprehensive load case simulations followed by statisti
 ) <tab_29>
 
 
-Within the scope of this thesis, experimental replication of all identified critical load cases is not feasible due to resource constraints, necessitating a focused approach on one or two critical cases. Similarly, comprehensive simulative modeling of all critical load cases from @tab_29 presents significant challenges, requiring extensive computational resources for high-fidelity #gls("cfd", long:true) calculations, fluid-structure coupling, multi-body simulation, crash analysis, or combinations thereof.
+// here layout 
+For this thesis data for critical load cases given in @tab_29 were obtained through a presention in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze.
+Such data of load cases represents valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
 
+// TODO mention other companies
+Furthermore, meetings with two companies that have concrete intetrest in structrally testing and developing #glspl("swith") were held. They also investigated critical load cases and made them available to the author of this thesis. As this information was provided confidentially, it cannot be shared with the public. However, it should be noted that in this case as well, numerous load cases from the V-n diagram were classified as critical. 
+Therefore, the developed V-n modeler can be considered a valuable component.
+
+// ------------------------------ explain table ----------------------------- //
+Vertical gusts and elevator maneuvers represent the most critical load cases (100% probability), where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014. 
+
+The elevator maneuvers create initial control surface forces leading to complex dynamic structural responses. 
+Landing impact follows at 90% criticality, characterized by the dynamic response of the airframe during touchdown, where vertical acceleration loads are transmitted through the landing gear into the primary structure. 
+Aileron maneuvers and ground rolling (80%) introduce asymmetric lift distributions with substantial moment arms to the wing root, while ground rolling creates dynamic loads through partially-fueled wings interacting with runway irregularities. 
+Lateral gusts and rudder maneuvers (70%) primarily influence fuselage design through asymmetric loading conditions, with distributed side forces and concentrated loads at the vertical tail transmitted through the fuselage structure. 
+Steady pull-up maneuvers (50%) involve transition from descent to level flight, generating elevated but not maximum load factors @heinze2023aircraft. 
+Frontal gusts (40%) create longitudinal loads, though their criticality is generally lower. 
+Crash landing and cabin pressure cases (20%) ensure minimum structural integrity for occupant survivability, with cabin pressure's lower criticality often resulting from other load cases determining basic skin thickness requirements @heinze2023aircraft. 
+Single engine failure and maximum engine thrust (10%) typically become critical only in localized areas around engine mounts and pylons.
+// -------------------------------------------------------------------------- //
+
+
+
+Within the scope of this thesis, experimental and stimulative replication of all identified critical load cases is not feasible.
+The aim of this thesis is not to focus on all found load cases for general aircrafts, but rather contribute with some critical findings that could be used for a final certifaction process of #glspl("swith") within a time and resourcesframe that is feasible and possible for a scientific work.
+This reasoning necessitates on a focused approach, where the focus is set on the one most improtant load case.
 // ------------------------------- v-n-diagram ------------------------------ //
 According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning, thus warranting detailed investigation. 
-This load case can be systematically analyzed through V-n diagrams. 
+This load case can be obtained systematically and analyzed through V-n diagrams. 
 The V-n diagramm is also called flight envelope or v-g diagramm.
 The flight envelope shows specific load factors over airspeed that an airplane has been designed to operate within @Gudmundsson2014 @Rossow_2014. 
-It shows two differnt kind of laods, maneuver and gust laods @Rossow_2014.
-An illustrative example is depicted in @fig_28 according to the EASA CS-23 @EASA_CS_23 for the normal category.
+It shows two differnt kind of loads, maneuver and gust laods @Rossow_2014.
+An illustrative example of a V-n diagramm according to the EASA CS-23 @EASA_CS_23 for the normal category is depicted in @fig_28.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/0_Load/0_Vn_Diag.svg", 
@@ -130,59 +182,52 @@ The horizontal axis of the flight envelope in @fig_28 shows the Equivalent Airsp
 
 $ V_"EAS" = sqrt(rho /rho_0) space V_"TAS" $<eq_10>
 
-The vertical axis of @fig_28 shows the load factor n following @Rossow_2014 can be descibed as @eq_11. 
+The vertical axis of @fig_28 shows the load factor n following @Rossow_2014 can be described as @eq_11. 
 The variable $P$ is denoted as a force usally acting against the mass force $G$, where $m "and " g$ stand for the mass and gracitional constant. 
-Note that the load factor is unitless and corresponds to the safe load or limit load @Rossow_2014.  
 
 $ n = P/G = P / (m space.thin g) $<eq_11>
 
+Note that the load factor is unitless and corresponds to the safe load or limit load @Rossow_2014. The definition of limit load is that is the highest load that is expected during regular operating lifetime without any plastic or remaining defelections to occur @Rossow_2014. 
+No structural failure should occur before reaching the ultimate load, which is given as @eq_12, where the standard safety factor is 1.5. 
+
+$ "ultimate load" = 1.5 times "limit load" $<eq_12>
+
+This is intended to minimize the probability of component failure despite existing variations in loads and material properties, as well as possible inaccuracies in calculation methods. Additionally, this factor helps prevent catastrophic structural failure if operating limits are slightly exceeded @Rossow_2014.
+The flight envelope is obtained by drawing out the outer lines that the gust and maneuver loads create. The loads that occur due to the gusts are indiicated through the orange lines  and the manuever laods are drawn in a pink color @fig_28.
+Their resulting flight envelope is given as the cross-hatched blue region.
 Next, some points of the legends in @fig_28 are commonly used and shall be spelled out following the definitions provided by @Rossow_2014 @Gudmundsson2014 @EASA_CS_Abbrevs 
 
-- *Design Maneuvering Speed V#sub[A]*: VA is the design limit speed up to which a full deflection of any one control surface (aileron, elevator, and rudder) is possible with retracted flaps without causing structural failure. Simultaneous full deflections of multiple control surfaces as well as multiple deflections of a single control surface are not permitted at V#sub[A].
+- *Design Maneuvering Speed V#sub[A]*: V#sub[A] is the design limit speed up to which a full deflection of any one control surface (aileron, elevator, and rudder) is possible with retracted flaps without causing structural failure. Simultaneous full deflections of multiple control surfaces as well as multiple deflections of a single control surface are not permitted at V#sub[A].
   
-- *Design speed for maximum gust intensity VB* Most often used for commuter-class aircraft.
+- *Design speed for maximum gust intensity V#sub[B]*: Most often used for commuter-class aircraft.
 
-- *Design Cruising Speed V#sub[C]*: VC is the design speed for cruise flight. When determining VC, economic aspects such as low fuel consumption must be considered along with the boundary conditions specified in the certification requirements applicable to the respective aircraft class.
+- *Design Cruising Speed V#sub[C]*: V#sub[C] is the design speed for cruise flight. When determining V#sub[C], economic aspects such as low fuel consumption must be considered along with the boundary conditions specified in the certification requirements applicable to the respective aircraft class.
 
 - *Design Diving Speed V#sub[D]*: V#sub[D] is the maximum flight speed for which the aircraft structure is designed. Certification requirements often mandate a minimum margin between V#sub[D] and V#sub[C], which depends on the aircraft class.
 
-- *Design Flap Speed V#sub[F]*: VF is the maximum design speed for flight with extended high-lift flaps on the wing.
+- *Design Flap Speed V#sub[F]*: V#sub[F] is the maximum design speed for flight with extended high-lift flaps on the wing.
 
-- *Stalling Speed V#sub[S]*: V#sub[S] is the minimum flight speed in level flight with retracted flaps at which no flow separation occurs on the wing (= stall speed). In other words, this is flight at the maximum lift coefficient C#sub[L,max].
+- *Stalling Speed V#sub[S]*: V#sub[S] is the minimum flight speed in level flight with retracted flaps at which no flow separation occurs on the wing (stall speed). In other words, this is flight at the maximum lift coefficient C#sub[L,max].
   
-
+// make sure it is understood it shall only be  notice, for the actual equations standrds can be read
+After having spelled the vlecoties out, it is improtant to know that for constructing V-n diagrams, the mathematical relationships between velocities can be found in standards such as @EASA_CS_23 CS-23 and @EASA_CS_25.
 Next, it is important to note that generally the V-n diagramm limits itself to symtrical flight loads, thus cannot encompass asymtrical load cases.
 While the banked turn is strictrly asymtrical load case it still can be considered through the V-n diagram @Rossow_2014.
 Besides reading the V-n diagramm to obtain infromation about the aircraft's strucutre, pilots can derive important infomation as well.
-These include,  what airspeed they can fully deflect control surfaces, what is the dive speed, or the airspeed at which slowing down is required @Gudmundsson2014.
+These include, what airspeed they can fully deflect control surfaces, what is the dive speed, or the airspeed at which slowing down is required @Gudmundsson2014.
 
-After having explained some for mor concrete details the reader is refered to literature like  @Rossow_2014 @Gudmundsson2014 @EASA_CS_23. For understnaind how V-n diagrams are drawn @Gudmundsson2014 and standards like @EASA_CS_23 @EASA_CS_25 should be considered. 
-
-Since the load cases obtained through the V-n diagramm can be represnted through load factors, they can easily be integrated in existing strucutre simualtions.
-The latter is true for  simple beam models, where any existing load can be sacled with a factor, but also for more intricate #gls("fem") models, where the applied loads can be scaled in similar way.
-
-// ---------------------------------- here ---------------------------------- //
-Moreover while V-n diagrams encompass a broad spectrum of load cases, critical conditions within this spectrum have been well-documented in literature @heinze2023aircraft.
-
-// TODO light aircraft, bigb aircraft - focus on light aircraft, because it is believed swith it would be more reasonable to ahve smaller swiths than bigger acs
-Significantly, V-n diagrams maintain validity across various light aircraft configurations, suggesting that findings from this research could potentially extend to other hydrogen-powered light aircraft designs.
-
-This potential for broader applicability motivated the development of independent V-n diagram generation capabilities. An open-source aerodynamics tool, ADRpy 
-// @github_sobester_2023
-, was identified and thoroughly validated against CS-23 specifications for V-n diagram generation. The tool's functionality was subsequently enhanced with additional features to meet specific research requirements.
-
-// -------------------------------------------------------------------------- //
-For this thesis, it is not possible to experimentally replicate all identified load cases. Rather, due to cost and time constraints, it is necessary to select one or at maximum two load cases. 
-Simulative modeling of the critical load cases from @tab_29 is also not readily feasible. Depending on accuracy requirements, high-quality and time-intensive #gls("cfd") calculations, fluid-structure coupling, multi-body simulation, crash analysis, or a combination thereof must be computed.
-Given that vertical gust loading is considered one of the most significant loads, it warrants closer examination.
-The loads can be derived from a V-n diagram and can be practically implemented into existing methods. The V-n diagram itself prescribes an entire range of possible load cases. However, the critical cases among these have already been identified in the literature. Furthermore, the V-n diagram is valid for all common types of light aircraft. Thus, there exists the possibility that the knowledge gained through K2H2 may also be applicable to other hydrogen-powered light aircraft.
-Motivated by this, possibilities for creating V-n diagrams independently were investigated. A free tool was identified (ADRpy, https://github.com/sobester/ADRpy, last accessed on 26.04.2023), which was initially verified against each individual point specified in CS-23 for creating a V-n diagram. Subsequently, the tool was extended with several desired features.
+After having explained some concrete details the reader is refered to literature like  @Rossow_2014 @Gudmundsson2014 @EASA_CS_23. For understanding how V-n diagrams are drawn in detail educational books like @Gudmundsson2014 and standards like @EASA_CS_23 @EASA_CS_25 should be considered. The V-n diagram displayed in @fig_28 was generated with open-source aerodynamics tool #emp_[ADRpy] @link_ADRpy. The tool was compared against the #gls("cs")-23 specifications @EASA_CS_23 and approved for following the given regulations. So within this work, it can only be confirmed that @link_ADRpy generates the V-n diagrams correctly for small aircraft.
+// TODO proper transition
+The only changed that were made, were how the output is generated. Instead of using Matplotlib @Hunter2007 as the default plotting libtary, a sperate plotting code with Plotly @plotly_2015 was generated.
 
 
-Concurrent discussions were held with the light aircraft manufacturer APUS. This company had also investigated critical load cases and made them available to the project consortium. As this information was provided confidentially, it currently cannot be shared with the public. However, it should be noted that in this case as well, numerous load cases from the V-n diagram were classified as critical. Therefore, the developed V-n modeler can be considered a valuable component.
-In summary, it can be stated that from the many possible load case ranges, a significant load case range could be identified and justified. This range prescribes its load cases through a V-n diagram. Motivated by this, K2H2 now has its own small tool available for the creation of V-n diagrams.
+The one main critical load case for this thesis was selected as the vertical gust load case according to @tab_29. This load cases obtained through the V-n diagramm.
+Because the V-n diagram is valid for different categories light aircrafts, such as normal, utility, aerobatic and commuter and large aircraft, the selected load case open doors for #glspl("swith") in the same categories and sizes.
+However, note, depending on the aircraft category and size, different rules apply for creating the flight envelope. 
+Moreover, since the loads from V-n diagrams are defined through velocity and load factor, they can be directly integrated into existing simulation models.
+To demonstrate this with a concrete example: Any point in the flight envelope (@fig_28) can be characterized by its velocity and corresponding load factor. Using these values, the lift coefficient that incorporates the load factor can be determined through @eq_13, where $L$ represents lift, $rho$ density, $u$ velocity, $S$ reference area, and $n$ load factor.
 
-// VN-Diag
+$ C_L = L / ( rho/2 u^2 S) space.thin n $<eq_13>
 
+This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem") models.
 
-// other companies mentioned
