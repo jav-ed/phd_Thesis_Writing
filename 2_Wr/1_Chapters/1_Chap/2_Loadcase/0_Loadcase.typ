@@ -139,15 +139,11 @@ Their findings in percentage, that is, in how many times one load case was to be
 
 
 // here layout 
-For this thesis data for critical load cases given in @tab_29 were obtained through a presention in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze.
+For critical load cases mentiond in @tab_29 were obtained through a presention in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze.
 Such data of load cases represents valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
 
-// TODO mention other companies
-Furthermore, meetings with two companies that have concrete intetrest in structrally testing and developing #glspl("swith") were held. They also investigated critical load cases and made them available to the author of this thesis. As this information was provided confidentially, it cannot be shared with the public. However, it should be noted that in this case as well, numerous load cases from the V-n diagram were classified as critical. 
-Therefore, the developed V-n modeler can be considered a valuable component.
-
 // ------------------------------ explain table ----------------------------- //
-Vertical gusts and elevator maneuvers represent the most critical load cases (100% probability), where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014. 
+In the following very brief explanations about the critical load cases identified in @tab_29 shall be given. Vertical gusts and elevator maneuvers represent the most critical load cases (100% probability), where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014. 
 
 The elevator maneuvers create initial control surface forces leading to complex dynamic structural responses. 
 Landing impact follows at 90% criticality, characterized by the dynamic response of the airframe during touchdown, where vertical acceleration loads are transmitted through the landing gear into the primary structure. 
@@ -160,13 +156,26 @@ Single engine failure and maximum engine thrust (10%) typically become critical 
 // -------------------------------------------------------------------------- //
 
 
-
 Within the scope of this thesis, experimental and stimulative replication of all identified critical load cases is not feasible.
 The aim of this thesis is not to focus on all found load cases for general aircrafts, but rather contribute with some critical findings that could be used for a final certifaction process of #glspl("swith") within a time and resourcesframe that is feasible and possible for a scientific work.
 This reasoning necessitates on a focused approach, where the focus is set on the one most improtant load case.
+
+// ----------------------- selected critical load case ---------------------- //
+According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning.
+Thus, for this thesis the vertical gust loading with additional internal pressure is selected as the critical load for #glspl("swith").
+As elaborated in @chap_1_0_3 the internal pressure has big implications on the weight, costs and safety of the pressure vessel.
+
+From the economicl perspectrive, higher perspective allow to store more hydrogen.
+From the structral perspective: higher pressure values increase the load onto the pressue vessel and because of the structral integration as well on the wing.
+From the safety perspective as elaboratred in @chap_2_0_1 and @chap_2_0_2, in case of leaks, higher pressure value increase the risk of self-ignition.
+From an a practical perspective as mentioned in @chap_1_0_6 with @tab_14 there is a limit on the maximal pressure that can be used for experimental structral validation tests. 
+Moreover @chap_2_0_2 explained and laid out a pathway for conducating stutrucal validation tests with #glspl("swith").
+Answering the question for an internal pressure when the filling agent is #gls("cgh2") is difficult and has huge implications on safety of the #gls("swith"), the test validation environment and the human operators.
+In @chap_3_0_1 it is laid out wheter the filling agent can be replaced with another medium without chaning the structral properties.
+These finding should be used to make a more sophisticated decision.
+
 // ------------------------------- v-n-diagram ------------------------------ //
-According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning, thus warranting detailed investigation. 
-This load case can be obtained systematically and analyzed through V-n diagrams. 
+This vertical gust load can be obtained systematically and analyzed through V-n diagrams. 
 The V-n diagramm is also called flight envelope or v-g diagramm.
 The flight envelope shows specific load factors over airspeed that an airplane has been designed to operate within @Gudmundsson2014 @Rossow_2014. 
 It shows two differnt kind of loads, maneuver and gust laods @Rossow_2014.
@@ -221,7 +230,8 @@ After having explained some concrete details the reader is refered to literature
 The only changed that were made, were how the output is generated. Instead of using Matplotlib @Hunter2007 as the default plotting libtary, a sperate plotting code with Plotly @plotly_2015 was generated.
 
 
-The one main critical load case for this thesis was selected as the vertical gust load case according to @tab_29. This load cases obtained through the V-n diagramm.
+// ---------------------- positve effects because of vn --------------------- //
+Because the vertical gust load case which is declared to be critical can be obtained through the V-n diagramm some postive effects can be mentioned.
 Because the V-n diagram is valid for different categories light aircrafts, such as normal, utility, aerobatic and commuter and large aircraft, the selected load case open doors for #glspl("swith") in the same categories and sizes.
 However, note, depending on the aircraft category and size, different rules apply for creating the flight envelope. 
 Moreover, since the loads from V-n diagrams are defined through velocity and load factor, they can be directly integrated into existing simulation models.
@@ -231,3 +241,13 @@ $ C_L = L / ( rho/2 u^2 S) space.thin n $<eq_13>
 
 This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem") models.
 
+With having provided proper background for the critical load cases and the V-n diagram, the following can be said. Meetings were held with two German companies: a pionieering aircraft manufacturer and one of Europe's leading aerospace testing facilities #footnote[Company names withheld due to confidential knowledge], known for conducting structural validation tests on large commercial aircraft.
+Both organizations have concrete interest in structurally testing, developing and getting #glspl("swith") commerically ertifed. 
+These companies investigated critical load cases and made their findings available to the author. While the specific details are protected under confidentiality and cannot be shared publicly, it is noteworthy that their analyses also identified numerous load cases from the V-n diagram as critical. Therefore, the V-n modeler can be considered a valuable component also for the structural validation test of #glspl("swith").
+
+
+// --------------------------------- summary -------------------------------- //
+#summary_[
+In summary, it can be finding critical laod cases for regualr aircraft is already a highly demanding task. Yet, when it comes to #glspl("swith"), which is a combination of a aircraft and a pressuirzed vessel, load cases from both domains can be expected to become important.
+Thus, finding critical load cases as of wirting of this thesis is hihgly challening.
+Thorugh hihgly valueable staitcal knowledge a list for critical load cases for general aviation could be obtained. From them one critical load case for #glspl("swith") was inferred. The sensibility of the taken approach was confirmed by two leading german aerospace companies. Moreover, important information about the V-n diagramm were provided to expose the link  between the critical load case and the V-n diagram. ]

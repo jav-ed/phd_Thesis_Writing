@@ -16,7 +16,7 @@
     ) = {
 
         // see: https://typst.app/docs/reference/layout/box/
-        [ 
+        [        
         #v(1em)
         #line(length: 100%) #v(-0.5em)
          #box(
