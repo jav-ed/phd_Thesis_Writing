@@ -36,16 +36,10 @@
 #show: page_header
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
-
-
 /* ---------------------------------- tocs ---------------------------------- */
 // table of contents, list of figures, list of tables
 #show: multiple_tocs
 
-// ------------------------------- page footer ------------------------------ //
-// TODO is the following required?
-// must be after multiple_tocs, because it depends on the list of tables
-// #show: doc => def_page_footer(doc, "Javed Arshad Butt - Thesis")
 
 
 /* -------------------------------------------------------------------------- */
@@ -91,10 +85,7 @@
 /* =============================== Methodology ============================== */
 /* ========================================================================== */
 
-
-
 #include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
-
 
 /* -------------------------------- Standards ------------------------------- */
 #include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"

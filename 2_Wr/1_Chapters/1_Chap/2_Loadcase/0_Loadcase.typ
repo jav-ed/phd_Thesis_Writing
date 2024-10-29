@@ -23,76 +23,53 @@ To address this question, the most critical load cases will be examined in @chap
 This subsection addresses the significance of identifying critical load cases and examines how load cases for #glspl("swith") deviate from conventional scenarios. Following this analysis, a methodological approach specific to #glspl("swith") is presented and justified.
 
 
-Defining critical load cases for structure-integrated hydrogen tanks, designed as integral parts of light aircraft wings, presents a complex engineering challenge. This complexity stems from the dual-nature of #glspl("swith"): the tanks are both integrated into the wing structure, bearing structural loads, and subjected to high internal pressure. Consequently, each conventional load case must be evaluated both without pressure and across various pressure ranges, significantly expanding the testing matrix.
-The identification of critical load cases poses significant challenges even for conventional light aircraft, given the vast array of possible scenarios defined in certification standards @EASA_CS_23 @EASA_CS_25. A comprehensive experimental investigation of each load case is neither economically viable nor environmentally sustainable. 
+The identification of critical load cases for structure-integrated hydrogen tanks presents a complex engineering challenge when designed as integral components of general aviation aircraft wings. The inherent complexity arises from the dual-nature of #glspl("swith"): these components simultaneously function as integral elements of the wing structure bearing aerodynamic loads while containing high internal pressures. This duality necessitates that each conventional load case be evaluated across a spectrum of pressure conditions, from unpressurized states through various pressure levels, substantially expanding the testing matrix.
 
+The challenge of identifying critical load cases is significant even for conventional general aviation aircraft, considering the extensive range of scenarios prescribed in certification standards @EASA_CS_23 @EASA_CS_25. A comprehensive experimental investigation encompassing all potential load cases proves prohibitive from both economic and environmental sustainability perspectives.
 
-While simulative approaches offer an alternative, they present their own set of challenges. Depending on accuracy requirements, 
-a single aerodynamic load calculation may require months of computational time @Yang2021a @HernandezAguirre2022 @Kochkov2021 @Blazek2015 @Fu2020.
+While computational approaches offer a potential alternative pathway, these methods introduce their own set of challenges. Single aerodynamic load calculations may require months of processing time, with the computational demands varying significantly based on accuracy requirements @Yang2021a @HernandezAguirre2022 @Kochkov2021 @Blazek2015 @Fu2020
 
 // --------------------- drawbacks of regular simulation -------------------- //
-According to @Yang2021a Direct Numerical Simulation (DNS)  requires 100 times more computational resources than wall-resolved large-eddy simulation (WRLES) for their considered Reynolds number range ($10^7 <= "Re" <= 10^9$) @Sigloch2022 @Schlichting2017. 
-If Moore's @Moore1998 or Koomey's @Koomey2011 law holds and computing ability doubles every two years, the Reynolds number range that is accessible to WRLES today would be accessible to DNS in about 13 years @Yang2021a. Furthermore, WRLES is significantly more computationally expensive than wall-modeled LES (WMLES), with computational costs scaling as $"Re"^2.72$ and $"Re"^1.14$ respectively @Yang2021a.
-According to @Kochkov2021, despite a direct link between the equations of motion and the basic laws of physics, it would be impossible to carry out direct numerical simulations at the scale required for these important problems such as climate and weather.
-The DNS conducted in @Fu2020 took 25 million core hours Argonne's Mira supercomputer. In comparison, thee WMLES cases only required about 150,000 core hours on average on the same machine.
-Thus, the DNS is about 150 times more computationally expensive than WMLES.
-Faster aerodynamical simulations can be achieved by neglecting friction and introducing simplifications @Barba2019 @Drela1989 @aerosandbox_phd_thesis @Verdugo2022 @Liu2022a @Wild2022 . 
-However, these compromises may result in accuracy levels insufficient for certification requirements. 
+According to @Yang2021a, Direct Numerical Simulation (DNS) requires 100 times more computational resources than wall-resolved large-eddy simulation (WRLES) for Reynolds numbers ranging from $10^7$ to $10^9$ @Sigloch2022 @Schlichting2017. 
+Following Moore's @Moore1998 or Koomey's @Koomey2011 law, which predicts computing capability doubling every two years, the Reynolds number range currently accessible to WRLES would become accessible to DNS in approximately 13 years @Yang2021a. The computational hierarchy extends further: WRLES itself demands significantly more resources than wall-modeled LES (WMLES), with computational costs scaling as $"Re"^2.72$ and $"Re"^1.14$ respectively @Yang2021a.
+
+The practical implications of these computational demands are substantial. A DNS study conducted on Argonne's Mira supercomputer demonstrates these resource requirements. The investigation required 25 million core hours, while comparable WMLES cases averaged only 150,000 core hours on the same system, revealing DNS to be approximately 150 times more computationally intensive than WMLES @Fu2020. Direct numerical simulations face significant scalability challenges. Despite their foundation in fundamental physics laws and equations of motion, these simulations remain computationally infeasible at scales necessary for critical applications such as climate and weather modeling @Kochkov2021.
+
+While simplified aerodynamic simulations can be achieved by omitting friction effects and introducing other simplifications @Barba2019 @Drela1989 @aerosandbox_phd_thesis @Verdugo2022 @Liu2022a @Wild2022, such compromises potentially yield accuracy levels that fall short of certification requirements.
+
+
 
 // -------------------------------- ml models ------------------------------- //
-Machine Learning  @Brunton2022 @Bishop2006 and especially deep learning
-@Goodfellow2016 @prince2023understanding
-are used in science and industry to solve a high number of problems
-@Cuomo2022 @Habehh2021 @Alanazi2022 @Masud2021 @Black2022. 
-Focusing on the current given problem, general machine leanring and deep learning can be used to replicate to some degree of acuracy pyhsical based mathematical equations @Brunton2022.
-In order to obtain a surrogate model trainign data is required.
-In the case of high fidelity simulations, the training data would consist of the output of high fidelity simulations.
-If enough trianing data is required a high number of models is available
-@Charbuty2021 @Palimkar2021 @Cristianini2000 @Murty2016 @Suyal2022 @Dumitrescu2022 @Itoo2020 @Ahmad2020 @Li2023c @vaswani2017attention @Sastrawan2022 @You2022 @Qu2024 @Robinson2022.
-The trianing of the model generally requires a lot of computaiton power.
-Due to the nature of a lot of machine learning models and espeically deep learning, their training can be paralliztied. 
-
-Thus, in order to reduce the time requird fore training a GPU (Graphics Processing Unit) @Kaur2023 @DeLuca2024 should be used. 
-Because of the high amount of application of machine learning models, the current software ability is so advances that even multiple GPUs can be used in parallel to train the model even faster @Paszke2019 @tensorflow2015_whitepaper @Sergeev2018@link_ray2024 @link_deepspeed2024 @link_accelerate2024.
-While the training pahse of deep leanring models can take a high amount of time, the inferece time is much lower @butt2021development. The inference of machine learning models refers to obtaining their output and can be in real-time.
-Furthermore, depending on the size of the neuronal network, it could be that the model that was trained on multiple GPUs, runs smoothly on a single GPU or even CPU (Central Processor Unit). 
-If the models fits within the RAM (Random access memory), generally it can be expected that the inference even on regular CPUs are magnitudes of orders faster than a high fidelty #gls("fem") or #gls("cfd") simualtion.
+Machine Learning @Brunton2022 @Bishop2006, and particularly deep learning @Goodfellow2016 @prince2023understanding, have found widespread applications across science and industry for solving diverse problems @Cuomo2022 @Habehh2021 @Alanazi2022 @Masud2021 @Black2022. Machine learning and deep learning approaches demonstrate capability in replicating physics-based mathematical equations with varying degrees of accuracy @Brunton2022.
+The development of surrogate models through these approaches requires substantial training data. For high-fidelity simulations, this training data necessarily comprises outputs from existing high-fidelity computational models. When sufficient training data is available, numerous modeling approaches can be implemented @Charbuty2021 @Palimkar2021 @Cristianini2000 @Murty2016 @Suyal2022 @Dumitrescu2022 @Itoo2020 @Ahmad2020 @Li2023c @vaswani2017attention @Sastrawan2022 @You2022 @Qu2024 @Robinson2022. While model training demands significant computational resources, the inherent structure of machine learning algorithms, particularly deep learning architectures, enables efficient parallelization of these computations.
 
 
-Some comparisons in how machine learning could help to improve computational speed were conducted in @Edelen2020 for particle accelerator simulations 
-For their primary test case, they found that while the physics simulation required 590 seconds using 8 computing cores, the neural network surrogate model could execute in less than one millisecond on a single laptop core.  This represents a speedup of $cal(O)(10^6)$ times. Beyond raw execution time, the machine learning approach demonstrated broader efficiency gains in the optimization process: it required 132 times fewer simulation evaluations and reduced the total core-hours by a factor of 144 compared to using physics simulations alone. Through iterative retraining, they suggested potential further improvements of 330-550 times fewer simulation evaluations needed. For their more complex test case, the IsoDAR cyclotron, the neural network achieved even greater speedup, executing $cal(O)(10^7)$ times faster than the original physics simulation. Notably, these improvements were achieved while maintaining good accuracy compared to the underlying physics simulations, and the neural network training itself only required about 10 minutes on a laptop. 
-Another example where concrete speedups for using machine learning techniques for #gls("cfd") are given in @Kochkov2021 with factors between 40 and 80.
+To reduce training time, GPUs (Graphics Processing Units) @Kaur2023 @DeLuca2024 are essential computational resources. The widespread adoption of machine learning has driven advances in software frameworks that enable parallel training across multiple GPUs, further accelerating model development @Paszke2019 @tensorflow2015_whitepaper @Sergeev2018 @link_ray2024 @link_deepspeed2024 @link_accelerate2024.
+While the training phase of deep learning models can be time-intensive, the subsequent inference time is substantially lower @butt2021development. Inference, which refers to generating model outputs, can often be performed in real-time. Additionally, depending on the neural network architecture, models trained on multiple GPUs may operate efficiently on a single GPU or even a CPU (Central Processing Unit). For models that fit within RAM (Random Access Memory), inference operations on standard CPUs typically execute orders of magnitude faster than high-fidelity #gls("fem") or #gls("cfd") simulations.
 
-Having mentioned big advatages of using machine learning models as surrogate models, two improtant factor shall be reiterated. 
-When saying machine learning model would speedup caluclations, the inferece pahse is refered to, not the trianing pahse.
-Next, in order to traing machine learning model, input data is required. For the case of high fidelity simulation, high fidelty time and computaitonal expensive simualtion would need to be carried out. Thus, if no trained model are provided, the inital high fidelty numiercal simulations cannot be skipped. Because of this all diffucilzties faced with high-fidelty simulation are also faced during the data generation stadium for machine learning models.
 
-Given these limitations in both traditional simulation approaches and machine learning alternatives, establishing comprehensive simulation capabilities presents significant resource challenges. 
-Depending on the specific loadcase this could encompass expertise computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, multi-disciplinary @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a, and multi-objective optimization techniques @Tian2021 @Li2023d @Ridha2021 for handling  complex requirementsments as well the vast solution space. 
-Furthermore, depending on the specific load case, additional physical phenomena must be considered, including crash dynamics
-@PrabhaharanS_2022 @FragosoMedina2021 @MortazaviMoghaddam2021, multi-body interactions @Balena2021 @Rahnejat2023 @Benmeddah2024, dynamic structural responses, and thermomechanical effects. Each of these domains introduces its own set of numerical complexities and computational demands.
+Significant computational speed improvements through machine learning applications have been demonstrated in various fields. An example of this is found in a case study of particle accelerator simulations @Edelen2020. In their primary test case, while the physics simulation required 590 seconds using 8 computing cores, the neural network surrogate model executed in less than one millisecond on a single laptop core, representing a speedup of $cal(O)(10^6)$ times.
+The efficiency gains extended beyond raw execution speed. The machine learning approach required 132 times fewer simulation evaluations and reduced total core-hours by a factor of 144 compared to traditional physics simulations. Through iterative retraining, potential further reductions of 330-550 times fewer simulation evaluations were identified. Their more complex test case, the IsoDAR cyclotron, demonstrated even more substantial improvements, with the neural network executing $cal(O)(10^7)$ times faster than the original physics simulation. These improvements maintained good accuracy compared to the underlying physics simulations, while the neural network training required only 10 minutes on a laptop.
+Comparable efficiency improvements have been documented in fluid dynamics, with speedup factors between 40 and 80 reported for #gls("cfd") applications @Kochkov2021.
 
-Moreover, some load cases depending on accuracy demands could require the coupling of multiple disciplines. These physical phenomena further compounds the computational complexity, leading to potential stability issues and increased computational overhead. Even with state-of-the-art high-performance computing infrastructure, the simultaneous consideration of aerodynamic effects, structural responses, and internal pressure loads across multiple load cases remains computationally intractable for real-time analysis. 
 
-Yet, it is important to note that the challenge is not in solving any single multiphysics problem, but rather in the systematic evaluation of numerous load cases, each potentially requiring different combinations of physical models and solver configurations. 
+Having mentioned some advantages of machine learning models as surrogates, two important factors require emphasis. First, the cited speedup in calculations refers specifically to the inference phase, not the training phase. Second, developing machine learning models requires substantial input data. For high-fidelity simulations, this means conducting computationally expensive simulations to generate training data. Therefore, if pre-trained models are not available, the initial high-fidelity numerical simulations remain necessary. Consequently, all challenges associated with high-fidelity simulations persist during the data generation stage for machine learning models.
+
+Given these limitations in both traditional simulation approaches and machine learning alternatives, establishing comprehensive simulation capabilities presents significant resource challenges beyond just computational power. Even with advanced computing methods, successful analysis requires expertise in several technical domains. These include computational fluid dynamics for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, and multi-disciplinary approaches @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a. The complexity is further increased by the potential need for multi-objective optimization techniques @Tian2021 @Li2023d @Ridha2021 to manage the vast solution space.
+
+The challenge extends to additional physical phenomena such as crash dynamics @PrabhaharanS_2022 @FragosoMedina2021 @MortazaviMoghaddam2021, multi-body interactions @Balena2021 @Rahnejat2023 @Benmeddah2024, dynamic structural responses, and thermomechanical effects. Beyond these individual phenomena, certain analyses require coupling between different disciplines. 
+For example, accurate flutter investigations necessitate the coupling of aerodynamic and structural analyses to capture the complex interactions between airflow and structural deformation @Kaneko2022. Even with state-of-the-art high-performance computing infrastructure, such coupled analyses across multiple load cases remain computationally intractable for real-time analysis.
+Yet, it is important to note that the fundamental challenge lies not in solving any single physics or coupled problem, but rather in the systematic evaluation of numerous load cases, each potentially requiring different combinations of physical models and solver configurations.
 Moreover, the interpretation of such multidimensional results requires sophisticated post-processing methodologies to identify truly critical load cases, as the interaction between different physical phenomena may lead to non-obvious failure modes. 
 
-
-In order to give some perspective on why the simulation of some load cases especially for a #gls("swith") is considered to be complex and multidisciplinary @tab_12 and @tab_13 shall be viewed. It should be understandable that the expertise required to simulate a gunfire test is very different from simualting a pneumicatic cycle test, or a glass trnaistion temperature test.
-The reason for mentioning tests that pressriziruzed cylinder must undergo was given in @chap_1_0_6. In short it can be said, since for this thesis #glspl("swith") are used with #gls("cgh2", long:true) it is reasonable to assume that all or some tests deamnded for pressurized cylinders also could be demanded for high pressure cylinders when they are a load bearing and integratedd part of an aircraft's wing.
-Moreover, the high number of the high amount of laod cases to potentially consider can be viewed in aircrafts standards like @EASA_CS_23 and @EASA_CS_25.
+To give some perspective on why load case simulations for #gls("swith") are complex and multidisciplinary, @tab_12 and @tab_13 provide relevant examples. The diverse expertise required becomes evident when comparing different test scenarios. For instance, simulating a gunfire test demands fundamentally different capabilities than those needed for a pneumatic cycle test or a glass transition temperature test.
+The reasons for inclusion of pressurized cylinder tests for #glspl("swith") were elaborated in @chap_1_0_6. Since this thesis focuses on #glspl("swith") using #gls("cgh2", long:true), it is reasonable to anticipate that some or all tests required for pressurized cylinders may also be applicable to high-pressure vessels when integrated as load-bearing components within an aircraft's wing. Additionally, aircraft standards such as @EASA_CS_23 and @EASA_CS_25 outline numerous potential load cases requiring consideration.
 
 
 // --------------------------- general load cases --------------------------- //
-Zeile 202 - 345
-Next, some general loads that occur during flight and on the ground shall be mentioned @heinze2023aircraft.
-Primary consideration could be given to aerodynamic forces induced during flight operations, specifically the pressure differentials that generate lift and negative lift forces. 
-These aerodynamic loads manifest predominantly during dynamic flight maneuvers. 
-In coordinated turns, the required lift coefficient needs to exceed the weight-induced load factor to maintain the desired flight path. 
-Similarly, during the transition from descent to level flight at low altitudes, necessitate the generation of substantial lift forces that exceed those required for steady-state flight conditions. 
-Atmospheric perturbations, particularly gust loads, constitute another critical category of aerodynamic forces. These are complemented by control surface-induced loads, where rudder deflections alter the pressure distribution patterns and generate supplementary force components. 
-One important phenomenon that needs to be mentioned when talking about general laods that can be met during flight is Buffeting. It is a phenomenon where the aircraft experiences highly non-linear dynamic and fluctuating loads. These loads cause noticeable vibrations in the aircraft structure. Buffeting can occur in various flight conditions such as flying through vortices, during transonic flight, at high angles of attack, when encountering wake turbulence, or due to shock wave oscillations (fluctuating shock location) in transonic @Caruana2005. 
-Other aerodynamical load can occur due to the complex flow interactions for example between the wing-fuselage area
+The following description of general loads that occur during flight and on ground operations draws primarily from @heinze2023aircraft. Aerodynamic forces induced during flight operations, specifically the pressure differentials that generate lift and negative lift forces, constitute a primary category. These aerodynamic loads manifest predominantly during dynamic flight maneuvers. During coordinated turns, the required lift coefficient must exceed the weight-induced load factor to maintain the desired flight path. Similarly, the transition from descent to level flight at low altitudes necessitates substantial lift forces that exceed those required for steady-state flight conditions.
+Atmospheric perturbations, particularly gust loads, constitute another critical category of aerodynamic forces. These are complemented by control surface-induced loads, where rudder deflections alter the pressure distribution patterns and generate supplementary force components.
+Buffeting represents another significant flight phenomenon, characterized by highly non-linear dynamic and fluctuating loads that cause noticeable vibrations in the aircraft structure. This phenomenon can occur in various flight conditions: during transonic flight, at high angles of attack, when flying through vortices, when encountering wake turbulence, or due to shock wave oscillations (fluctuating shock location) in transonic conditions @Caruana2005. Additional aerodynamic loads can arise from complex flow interactions, particularly in regions such as the wing-fuselage junction.
 
 Beyond aerodynamic loads, inertial forces constitute another significant load category. These forces arise whenever the aircraft or its components experience acceleration or deceleration. This encompasses all phases of operation including takeoff acceleration, landing deceleration, and general flight maneuvers. 
 Component-specific vibrations and flutter phenomena also contribute to the inertial load spectrum. Additionally, propulsion-related forces encompass thrust forces, gyroscopic effects from rotational speed variations, and the dynamic interactions between engine, pylon, and airframe systems @heinze2023aircraft.
@@ -102,13 +79,10 @@ It's important to note that these various load cases do not act uniformly across
 
 
 // TODO - 
-// phd link could be added here, either explain what the focus of the phd is 
+
 // or explain that these loadcase studies would become their own book
 // transition required
-The fundamental challenges in both computation and analysis underscore the current limitations in achieving comprehensive, high-fidelity simulations for all specified load cases.
-Given these challenges, the identification of potentially critical load cases for #glspl("swith") was approached by leveraging established industry knowledge. 
-The former company MBB perfomed a statistical evaluation to determine the probability of each load case being critical.
-Their findings in percentage, that is, in how many times one load case was to be found critical is given in @tab_29.
+Given the outlined challenges, this work leverages established industry knowledge to identify potentially critical load cases for #glspl("swith"). The former company MBB performed a statistical evaluation to determine the probability of each load case being critical. Their findings in percentage, that is, in how many times one load case was found to be critical, is given in @tab_29.
 
 // TODO
 #figure(
@@ -137,29 +111,25 @@ Their findings in percentage, that is, in how many times one load case was to be
   caption: [Critical load cases from the lecture #emp_[Design of Commercial Aircraft II] @heinze2023aircraft.],
 ) <tab_29>
 
-
-// here layout 
-For critical load cases mentiond in @tab_29 were obtained through a presention in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze.
-Such data of load cases represents valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
+The critical load cases mentioned in @tab_29 were obtained through a presentation in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze. Such data of load cases represents valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
 
 // ------------------------------ explain table ----------------------------- //
-In the following very brief explanations about the critical load cases identified in @tab_29 shall be given. Vertical gusts and elevator maneuvers represent the most critical load cases (100% probability), where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014. 
-
+In the following brief explanations about the critical load cases identified in @tab_29 shall be given. Vertical gusts and elevator maneuvers represent the most critical load cases with 100% probability, where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014.
 The elevator maneuvers create initial control surface forces leading to complex dynamic structural responses. 
 Landing impact follows at 90% criticality, characterized by the dynamic response of the airframe during touchdown, where vertical acceleration loads are transmitted through the landing gear into the primary structure. 
 Aileron maneuvers and ground rolling (80%) introduce asymmetric lift distributions with substantial moment arms to the wing root, while ground rolling creates dynamic loads through partially-fueled wings interacting with runway irregularities. 
 Lateral gusts and rudder maneuvers (70%) primarily influence fuselage design through asymmetric loading conditions, with distributed side forces and concentrated loads at the vertical tail transmitted through the fuselage structure. 
+
 Steady pull-up maneuvers (50%) involve transition from descent to level flight, generating elevated but not maximum load factors @heinze2023aircraft. 
 Frontal gusts (40%) create longitudinal loads, though their criticality is generally lower. 
 Crash landing and cabin pressure cases (20%) ensure minimum structural integrity for occupant survivability, with cabin pressure's lower criticality often resulting from other load cases determining basic skin thickness requirements @heinze2023aircraft. 
 Single engine failure and maximum engine thrust (10%) typically become critical only in localized areas around engine mounts and pylons.
 // -------------------------------------------------------------------------- //
 
+Within the scope of this thesis, experimental and simulative replication of all identified critical load cases is not feasible. Rather than attempting to address all load cases for general aircraft, this work aims to contribute some important findings. These findings could support a final certification process of #glspl("swith") within a feasible timeframe and available scientific resources. This reasoning necessitates a focused approach, concentrating on the single most important load case.
 
-Within the scope of this thesis, experimental and stimulative replication of all identified critical load cases is not feasible.
-The aim of this thesis is not to focus on all found load cases for general aircrafts, but rather contribute with some critical findings that could be used for a final certifaction process of #glspl("swith") within a time and resourcesframe that is feasible and possible for a scientific work.
-This reasoning necessitates on a focused approach, where the focus is set on the one most improtant load case.
 
+// ---------------------------------- here ---------------------------------- //
 // ----------------------- selected critical load case ---------------------- //
 According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning.
 Thus, for this thesis the vertical gust loading with additional internal pressure is selected as the critical load for #glspl("swith").
