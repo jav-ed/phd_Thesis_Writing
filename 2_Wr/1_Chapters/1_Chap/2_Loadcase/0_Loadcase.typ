@@ -115,6 +115,7 @@ The critical load cases mentioned in @tab_29 were obtained through a presentatio
 
 // ------------------------------ explain table ----------------------------- //
 In the following brief explanations about the critical load cases identified in @tab_29 shall be given. Vertical gusts and elevator maneuvers represent the most critical load cases with 100% probability, where vertical gusts generate significant structural loads through rapid angle of attack changes affecting the entire airframe @Gudmundsson2014.
+// TODO is this true?
 The elevator maneuvers create initial control surface forces leading to complex dynamic structural responses. 
 Landing impact follows at 90% criticality, characterized by the dynamic response of the airframe during touchdown, where vertical acceleration loads are transmitted through the landing gear into the primary structure. 
 Aileron maneuvers and ground rolling (80%) introduce asymmetric lift distributions with substantial moment arms to the wing root, while ground rolling creates dynamic loads through partially-fueled wings interacting with runway irregularities. 
