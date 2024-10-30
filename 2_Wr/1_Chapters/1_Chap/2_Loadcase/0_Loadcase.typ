@@ -4,7 +4,8 @@
 #pagebreak(weak:true)
 
 // TODO Title
-== Loadcase <chap_3_0>
+// new subsection added - theoretical background for curvature study and applying the knowledge gained. Thus, update the intro for this section 
+== Load Case Study and Impact of Filling Agent <chap_3_0>
 In @chap_1_0, the primary objective was to identify specific requirements for experimental structural certification tests of #gls("swith", long:true). The analysis revealed that no single standard currently exists dedicated to the certification of #glspl("swith"). Consequently, existing state-of-the-art standards were evaluated and filtered to establish essential certification requirements.These identified standards not only serve certification purposes but could also be leveraged to inform design decisions.
 
 The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
@@ -15,20 +16,15 @@ The primary objective of this section is to determine whether hydrogen can be su
 To address this question, the most critical load cases will be examined in @chap_3_0_0. These findings will inform the central question addressed in @chap_3_0_1: Can hydrogen be replaced with an alternative medium in the tanks without significantly affecting the structural properties during experimental structural investigation?
 
 
-// TODO Title
-
-// TODO is this intro actually fulfilled?
-// intro should have more content
-=== Most prominent laodcases<chap_3_0_0>
-This subsection addresses the significance of identifying critical load cases and examines how load cases for #glspl("swith") deviate from conventional scenarios. Following this analysis, a methodological approach specific to #glspl("swith") is presented and justified.
-
+// Title was tested and is inshallah fine
+=== Study of Critical Load Cases<chap_3_0_0>
+Findings from @chap_2_0_1 and @chap_2_0_2 demonstrate that conducting experimental structural tests with hydrogen in long tubes under high pressure presents severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
+To address this question, it is first necessary to establish the primary prerequisite: identifying concrete load cases for analysis. Thus, this subsection focuses on identifying critical load cases and explains why testing all potential load cases, either experimentally or through simulation, is not feasible. Based on these constraints, an alternative methodological approach is presented and justified. It is demonstrated how one critical load case can be filtered from the many available scenarios. Additionally, an introduction to the V-n diagram is provided to establish the relationship between the primary critical load case and the flight envelope.
 
 The identification of critical load cases for structure-integrated hydrogen tanks presents a complex engineering challenge when designed as integral components of general aviation aircraft wings. The inherent complexity arises from the dual-nature of #glspl("swith"): these components simultaneously function as integral elements of the wing structure bearing aerodynamic loads while containing high internal pressures. This duality necessitates that each conventional load case be evaluated across a spectrum of pressure conditions, from unpressurized states through various pressure levels, substantially expanding the testing matrix.
-
 The challenge of identifying critical load cases is significant even for conventional general aviation aircraft, considering the extensive range of scenarios prescribed in certification standards @EASA_CS_23 @EASA_CS_25. A comprehensive experimental investigation encompassing all potential load cases proves prohibitive from both economic and environmental sustainability perspectives.
 
 While computational approaches offer a potential alternative pathway, these methods introduce their own set of challenges. Single aerodynamic load calculations may require months of processing time, with the computational demands varying significantly based on accuracy requirements @Yang2021a @HernandezAguirre2022 @Kochkov2021 @Blazek2015 @Fu2020
-
 // --------------------- drawbacks of regular simulation -------------------- //
 According to @Yang2021a, Direct Numerical Simulation (DNS) requires 100 times more computational resources than wall-resolved large-eddy simulation (WRLES) for Reynolds numbers ranging from $10^7$ to $10^9$ @Sigloch2022 @Schlichting2017. 
 Following Moore's @Moore1998 or Koomey's @Koomey2011 law, which predicts computing capability doubling every two years, the Reynolds number range currently accessible to WRLES would become accessible to DNS in approximately 13 years @Yang2021a. The computational hierarchy extends further: WRLES itself demands significantly more resources than wall-modeled LES (WMLES), with computational costs scaling as $"Re"^2.72$ and $"Re"^1.14$ respectively @Yang2021a.
