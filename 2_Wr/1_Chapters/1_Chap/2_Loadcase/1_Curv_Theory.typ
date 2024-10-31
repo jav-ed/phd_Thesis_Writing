@@ -11,80 +11,103 @@
 In the previous sections, the properties of hydrogen were first listed. These were then evaluated with regard to safe experimental feasibility. The results revealed significant safety concerns regarding the use of hydrogen in physical tests. Subsequently, the influence of dynamic external loads on pressurized cylinders was investigated. The evaluations were well received by the industry partner (IMA), and the question of the fill medium's influence on structural behavior under external static loading was deemed particularly important. The following section presents initial findings on this matter.
 
 // -------------------------------------------------------------------------- //
-// ---------------------------------- here ---------------------------------- //
-In @chap_2_0_3 first ivnestigatiosn regardinbg external loads on prssure cylinder were alredy conducated. 
-One rationale for conduction such a study on external dynamical loads on pressure vessels is given throguh the descriptions provided regardinf the selected essential stanrds in @chap_1_0_6.
-The rationale for dynamcal loads from the general aircraft side were given @chap_3_0_0. Due the the dynamical loads for for pressure vessels and aircrafts the correspodning improtance fpt for #glspl("swith"). 
+Initial investigations regarding external loads on pressure cylinders were presented in @chap_2_0_3. The rationale for studying external dynamic loads on pressure vessels stems from the essential standards detailed in @chap_1_0_6. Additional justification for considering dynamic loads in aircraft applications was established in @chap_3_0_0. Given that #glspl("swith") integrate both pressure vessel and aircraft characteristics, the significance of dynamic loading extends naturally to #gls("swith") applications.
 
-Furthermore, possibilty to obtain potential imporotant facts that even have their relevance in dynamical testing but also statical testing.
-The latter is backed by the observation that there is much more openly available literature on external dynamical loading of pressure vessels than static loading.
+Furthermore, these investigations could potentially yield insights relevant to both dynamic and static testing scenarios.
+This consideration is particularly noteworthy given that the literature predominantly focuses on external dynamic loading of pressure vessels rather than external static loading.
+After examining the dynamic loading aspects, the analysis conducted in @chap_3_0_0 established the vertical gust load as the critical static test load for this thesis. 
 
+This choice reflects the universal applicability of vertical gust loads, which can be derived for all commercial aircraft through the V-n diagram. This characteristic enhances the generalizability of this research. Additionally, the experimental setup can accommodate all four required static tests with minimal or no modifications.
+The preference for static testing over dynamic load cases is further supported by the pioneering nature of #glspl("swith") technology. Given the limited knowledge about #glspl("swith") structural testing, static testing could potentially offer better control over safety parameters during this early development phase.
+To gather relevant information about static external loading for #glspl("swith"), an examination of pressure vessel behavior under static external loads is warranted. The validity of this approach was established in @chap_2_0_3. The necessity of referring to pressure vessel research, rather than direct #gls("swith") studies, stems from the limited availability of #gls("swith") research, as previously elaborated in @chap_0_7.
 
-Yet the fforts conducted in @chap_3_0_0 resuktied in chosing a vertical gutst load as the critical static test load for this thesis. 
-The reason for that were that the vertical gust load can be obtained for all commericaly availabel aircrafts through the V-n diagram, thus, it promotes the generability of this work.
+// -------------------------------------------------------------------------- //
+Diving cylinders represent a prime example of pressure vessels subjected to external static pressure during their structural verification process. In this process, a diving cylinder is positioned at a specific water depth where it experiences a uniform external pressure load. The approval procedure involves several steps: first, the cylinder is filled with water and placed within a larger water-filled vessel. This larger container is sealed from above to prevent water escape. An initial internal pressure of $3000 "psig" approx 208 "bar"$ is applied to the diving cylinder. Subsequently, this pressure is increased by a factor of (5/3 = 1.6), resulting in pressure values up to $5000 "psig" approx 345 "bar"$. Detailed specifications of this procedure are documented in regulations 49 CFR Part 180 @reg_water_cylinder.
 
-Furthermore, once a setup is obtained it can without slight or even without any modifcations for four demanded statical tests. Next, because #glspl("swith") are a pioneering project, it could be argued, statical tests should be prefered over dynamical load cases due to safety concerns during the pahse of highly limited knowledge about #glspl("swith") structural testing. 
+The applicability of diving cylinder test methods to #glspl("swith") is limited by two fundamental differences. First, the dimensional disparity is significant, as the tank cylinder dimensions are substantially smaller than those of wing-integrated tanks in aircraft applications. Second, #glspl("swith") require a variable external load distribution across the wingspan, in contrast to the uniform surface pressure load used in diving cylinder tests.
+The measurement methodology for diving cylinder tests is primarily constrained to monitoring water displacement from the surrounding vessel. During pressurization of the diving cylinder, the expelled water is typically channeled through a hose into a measurement vessel on a scale. This approach proves inadequate for #glspl("swith") applications due to two key factors: the requirement for more sophisticated measurement technology and the necessity to accommodate variable load application across the wingspan.
 
-For finding some potenital releveant infromation about static external loading of for #glspl("swith"), static external loading on pressure vessels shall be considered.
-The reason why pressure vessels can be cosnidered was given in @chap_2_0_3.
-The rason why mentioning mentioning any research where #glspl("swith") are loaded externally was elaborated many times in thesis, as for example in @chap_0_7, where the limited availably of #gls("swith") research is hihglighted.
-
-Prssure vessels undergo external static pressure for example are diving cylinders and their structural verrication process. Assuming the diving cylinder rests statically at a certain water depth, a static all-encompassing external pressure load can be assumed. During the approval process, the cylinder is first filled with water and then placed in a larger vessel, which is also filled with water. The larger container is sealed from above so that no water can escape. Subsequently, an initial internal pressure of $3000 "psig" approx 208 "bar"$ is generated in the diving cylinder. After that, the pressure is increased by a factor of (5/3 = 1.6), reaching pressure values up to $5000 "psig" approx 345 "bar"$. Further information about the procedure can be found in regulations 49 CFR Part 180 @reg_water_cylinder. 
-
-However, no helpful conclusions can be drawn for #glspl("swith") for the following two reasons. First, the tank cylinder is significantly smaller than the wing tanks in the size of aircraft. 
-Second, an external load distribution that varies across the wingspan must be applied. This differs significantly from a uniform surface pressure load. In the described test for the diving cylinder, the measurement technology was mainly limited to measuring the water escaping from the large vessel. When the diving cylinder is pressurized, some water escapes from the surrounding vessel. This is usually directed through a hose into a glass on a scale. For #glspl("swith"), on the one hand, the measurement technology is significantly more demanding, and on the other hand, there must be the possibility to apply loads that vary across the wingspan.
-
-A study from which new insights for #glspl("swith") can be derived is @Liu2019. Here, a pipe was filled with different media at various pressures and bent. The investigated media were air, water, and sand, and the pressure levels were [0, 10, 50, 100, 150] bar. The setup of the bending test is shown in @fig_29, where the pipe is located in the middle and held by two supports. It should be noted that the test equipment shown here was designed to prevent partial collapse through large local plastic deformations, in contrast to the commonly used three- and four-point bending devices. Thus, it could be used to determine global bending failure without errors due to high local deformations @Liu2019.
+Relevant insights for #glspl("swith") can be derived from a study conducted by @Liu2019, which investigated the behavior of pipes under bending loads with various fill media and pressure conditions. The experimental setup utilized three distinct fill media (air, water, and sand) across multiple pressure levels [0, 50, 100, 150] bar. As illustrated in @fig_29, the test configuration positioned the pipe centrally between two supports. A notable feature of this test equipment lies in its design to mitigate partial collapse caused by large local plastic deformations, distinguishing it from conventional three- and four-point bending devices. This design characteristic enabled the measurement of global bending failure without interference from localized deformation effects @Liu2019.
 
 // --------------------------- testing environment -------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/0_Bending.jpeg", 
   width: 100%),
-  caption: [Shows the setup of the bending test in @Liu2019.],
+  caption: [Experimental setup for bending tests on pressurized pipes according to @Liu2019.],
 ) <fig_29>
 
 
-In @fig_30, the bending moment M versus curvature $kappa$ is shown without additional internal pressure. The influence of the chosen fill medium of the pipe is clearly visible. Sand exhibits the highest maximum curvature. However, its maximum bending moment is similar to that of the water-filled pipe. When comparing water as a fill medium with air, it can be observed that water-filled pipes can withstand both a higher maximum moment and a larger maximum curvature.
+@fig_30 illustrates the relationship between bending moment M and curvature $kappa$ under conditions without additional internal pressure. The influence of different fill media on the pipe's behavior is distinct. While sand demonstrates the highest maximum curvature, its maximum bending moment approximates that of the water-filled pipe. A comparison between water and air as fill media reveals that water-filled pipes exhibit superior performance in both maximum moment capacity and maximum curvature tolerance.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/1_Bending_Curves.png", 
   width: 67%),
-  caption: [Moment M and curvature $kappa$ of a pipe with different media and without internal pressure @Liu2019.],
+  caption: [Relationship between bending moment M and curvature $kappa$ for pipes filled with different media without additional internal pressure @Liu2019.],
 ) <fig_30>
 
 
-In relation to #glspl("swith"), information about the fill medium, internal pressure, and external loads is important. In @fig_31 for water and in @fig_32 for air, only the internal pressure values with a single medium are given. The influence of pressure is evident in the increasing maximum moments and curvatures that can be sustained.
-This influence is found for both air and water as filling media. A direct comparison between the influence of different fill media and pressure changes is given in @fig_33. At a constant pressure of $50 "bar"$ for water and air, it shows that the water-filled pipe can withstand higher bending moments and curvatures than the air-filled pipe. The same behavior is observed with varying pressure.
+For #glspl("swith") applications, the interrelation between fill medium, internal pressure, and external loads merits careful consideration. @fig_31 and @fig_32 present the internal pressure effects for water and air respectively across multiple pressure levels [0, 50, 100, 150] bar. Each medium is examined in isolation and includes a crucial baseline condition without added internal pressure. 
+This baseline reference point, not present in @fig_33, enables quantification of the structural behavior changes induced by initial pressurization. 
+The progression from the unpressurized state through various pressure levels can be traced independently for each medium.
+A clear correlation emerges between increased pressure and enhanced capacity for maximum moments and curvatures. This pressure-dependent behavior is consistent across both fill media.
+@fig_33 provides a direct comparative analysis of fill media influence under varying pressure conditions. At a constant pressure of $50 "bar"$, water-filled pipes demonstrate superior performance in both bending moment capacity and curvature tolerance compared to air-filled pipes. This characteristic performance difference persists across varying pressure levels.
 
 // ---------------------------------- water --------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/2_Bending_Medium_Water.png", 
   width: 67%),
-  caption: [Behavior of moment M and curvature $kappa$ for a water-filled pipe at different pressure levels @Liu2019],
+  caption: [Relationship between bending moment M and curvature $kappa$ for water-filled pipes at different internal pressures @Liu2019.],
 ) <fig_31>
 
 // ----------------------------------- air ---------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/3_Bending_Medium_Air.png", 
   width: 67%),
-  caption: [Behavior of moment M and curvature $kappa$ for an air-filled pipe at different pressure ratios @Liu2019],
+  caption: [Relationship between bending moment M and curvature $kappa$ for air-filled pipes at different internal pressures @Liu2019.],
 ) <fig_32>
 
 // ------------------------------ air and water ----------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/4_Water_Air.png", 
   width: 67%),
-  caption: [Comparison of moment M and curvature $kappa$ for air and water as fill medium for different pressure levels @Liu2019],
+  caption: [Comparison of bending moment M and curvature $kappa$ relationships between air-filled and water-filled pipes at different internal pressures @Liu2019.],
 ) <fig_33>
 
+At a pressure of $50 "bar"$, an air-filled pipe exhibits a maximum bending moment of 
+$277 "Nm"$ and a maximum curvature of $1.65 space upright("m")^(-1)$. For the same pressure, a water-filled pipe demonstrates higher values, with a maximum bending moment of 
+$336 "Nm"$ and maximum curvature of $2.9 space upright("m")^(-1)$. 
+When the pressure is increased to 
+$150 "bar"$, the air-filled pipe achieves a maximum bending moment of 
+$343 "Nm"$ and maximum curvature of $2.7 space upright("m")^(-1)$, while the water-filled pipe reaches 
+$400 "Nm"$ and $3.2 space upright("m")^(-1)$ respectively.
+These comparative results demonstrate that under constant internal pressure conditions, water-filled pipes consistently achieve higher maximum curvature and maximum bending moment values compared to their air-filled counterparts.
+This pattern indicates that the choice of fill medium significantly influences the pipe's bending behavior. 
 
-The maximum bending moment and maximum curvature of an air-filled pipe at a pressure of $50 "bar"$ are $277 "Nm"$ and $1.65 space upright("m")^(-1)$. In contrast, the maximum bending moment and curvature of a water-filled pipe at a pressure of $50 "bar"$ are $336 "Nm"$ and $2.9 space upright("m")^(-1)$. Increasing the pressure to $150 "bar"$ leads to bending moments and curvatures for air and water of $343 "Nm"$ and $2.7 space upright("m")^(-1)$, and $400 "Nm"$ and $3.2 space upright("m")^(-1)$ respectively. 
-The comparisons show that at constant internal pressure, the maximum curvature and maximum bending moment are higher in the water-filled pipe than in the air-filled pipe. This leads to the conclusion that the fill medium of the pipe is an important factor influencing bending behavior. The deviation between the air- and water-filled pipe in terms of maximum bending moment and curvature at an internal pressure of $50 "bar"$ is given in @eq_14 and  @eq_15  respectively. The same is given for $150 "bar"$ in @eq_16 and @eq_17.
+// ---------------------------------- here ---------------------------------- //
+The impact of pressure in terms of qunaitifcale numbers is given in @eq_new1 @eq_new4
+
+$ Delta M_"air"(150-50) &= M("air",p=150) - M("air",p=50)  \ 
+&= (343 - 277) "Nm"   \
+&= 66 "Nm" $<eq_new1>
+
+$ Delta M_"water"(150-50) &= M("water",p=150) - M("water",p=50)  \ 
+&= (400 - 336) "Nm"   \
+&= 64 "Nm" $<eq_new2>
+
+$ Delta kappa_"air"(150-50) &= kappa("air",p=150) - kappa("air",p=50) \ 
+&= (2.7 - 1.65) space upright("m")^(-1)\
+&= 1.05 space upright("m")^(-1) $<eq_new3>
+
+$ Delta kappa_"water"(150-50) &= kappa("water",p=150) - kappa("water",p=50) \ 
+&= (3.2 - 2.9) space upright("m")^(-1)\
+&= 0.3 space upright("m")^(-1) $<eq_new4>
+
+The quantitative differences between air- and water-filled pipes at varying internal pressures are presented in @eq_14 through @eq_17. For maximum bending moment, a difference of $59 "Nm"$ is observed at $50 "bar"$ pressure (@eq_14), which slightly decreases to $57 "Nm"$ at $150 "bar"$ (@eq_16). The maximum curvature shows more pronounced changes, with a difference of $1.25 space upright("m")^(-1)$ at $50 "bar"$ (@eq_15) that reduces substantially to $0.5 space upright("m")^(-1)$ at $150 "bar"$ (@eq_17).
 
 
 $ Delta M(p=50) &= M("water",p=50) - M("air",p=50)  \ 
-& = (336 - 277) "Nm"   \
-& = 59 "Nm" $<eq_14>
+&= (336 - 277) "Nm"   \
+&= 59 "Nm" $<eq_14>
 
 $ Delta kappa(p=50) &= kappa("water",p=50) - kappa("air",p=50) \ 
 &= (2.9 - 1.65) space upright("m")^(-1)\
@@ -98,13 +121,16 @@ $ Delta kappa(p=150) &= kappa("water",p=150) - kappa("air",p=150)\
 &= (3.2 - 2.7) space upright("m")^(-1)\
 &= 0.5 space upright("m")^(-1) $<eq_17>
 
-The next subject of investigation is whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure levels are changed. 
-To make an initial rough estimate of whether a deviation in maximum bending moments between air- and water-filled pipes is detectable at different pressure levels, @eq_18 should be considered. 
+
+The subsequent investigation examines whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant across varying pressure levels. 
+To provide an initial estimate of the deviations in maximum bending moments between air- and water-filled pipes at different pressure levels, @eq_18 warrants examination.
 
 $ (Delta M(p=150) - Delta M(p=50))/ (Delta M(p=50)) = \
 (57 - 59)/59 = -0.0338 approx -3.4% $<eq_18> 
 
-It can be noted that the deviation of maximum bending moments between air- and water-filled pipes is reduced by only about 3.4%. This initially suggests that the existing difference in maximum bearable bending moments between air- and water-filled pipes has low pressure sensitivity. Thus, a change in pressure would have little influence on the existing difference in maximum possible bending moment between air- and water-filled pipes.
+It can be noted that the deviation of maximum bending moments between air- and water-filled pipes is reduced by only about 3.4%. This suggests that the existing difference in maximum bearable bending moments between air- and water-filled pipes has low pressure sensitivity. Thus, a change in pressure would have little influence on the existing difference in maximum possible bending moment between air- and water-filled pipes.
+
+
 To clarify what the result means, it should be rephrased in different words. 
 It answers the question of whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure values are changed. 
 It can be viewed as pressure sensitivity in relation to bending moment and curvature with different fill materials. A typical engineering question might be: Can it always be claimed that water-filled pipes, regardless of pressure level, always show 3 times more [Nm] or [$upright("m"^(-1))$] than air-filled pipes? The interpreation of the value of 3.4%, is that for a selected fill medium, it can be assumed that the approximate maximum bending moment of one fill medium can be inferred from the known maximum bending moment of the other fill medium.
@@ -120,6 +146,9 @@ First, the pipes used in @Liu2019 are made of steel and have a diameter of $25 "
 Moreover, diameter and lengths differ significantly from @Liu2019. Additionally, #glspl("swith") require higher pressure levels. Nevertheless, there is an obvious motivation to conduct similar tests with adjusted settings using Type IV tanks. 
 If the same or similar effects as described above are observed, the selection of the fill medium for the certification process could be decisive. 
 
+// TODO
+// represented data to consider with cauton, not enough data
+
 Standards such as #gls("iso")11119-3:2020 @11119_3_ISO are globally recognized. Section 8.5.1.1 of ISO 11119-3:2020 explains the procedure for pressure testing verification. It explicitly states that water can be used as a fill medium. Depending on the result of the proposed test, the International Organization for Standardization should be informed about the results.
 
 Another example: In @Cebolla2019, it is stated that helium and nitrogen are used as fill media in the European Union's high-pressure gas tank testing facility in the Netherlands (GasTeF). While both are gases, they do not have the same material properties as gaseous hydrogen. Using water or gases other than hydrogen as fill media for the certification and approval process, and the application of gaseous hydrogen in actual operation, could lead to extremely negative and unexpected phenomena. Because if water as a fill medium allows higher bending moments and curvatures without failure than the hydrogen used in operation, then the aircraft would be approved for inadmissibly high structural loads.
@@ -134,3 +163,52 @@ The same model can also explain why gas as a fill material exhibits lower maximu
 // --------------------------------- summary -------------------------------- //
 In summary, it can be said that under static external loading, the internal pressure and the choice of medium can have an important, non-negligible influence on the maximum bearable bending moment and curvature behavior.
 
+
+
+// -------------------------------------------------------------------------- //
+
+The analysis reveals that the deviation of maximum bending moments between air- and water-filled pipes is reduced by approximately 3.4%. This low reduction indicates low pressure sensitivity in the difference between maximum bending moments of the two fill media. Consequently, pressure variations have limited influence on the relative difference in maximum bending moment between air- and water-filled pipes.
+
+This finding addresses a fundamental engineering consideration regarding the predictability of fill media behavior: whether a consistent ratio exists between the maximum bending moments of water-filled and air-filled pipes across different pressure levels. The observed 3.4% variation suggests a highly stable relationship between the two fill media. In practical terms, if the maximum bending moment is known for one fill medium at a specific pressure, the corresponding value for the other medium can be reasonably approximated with minimal pressure-dependent variation. This relationship provides a reliable basis for predicting maximum bending moments [Nm] and curvatures [$upright("m"^(-1))$] across different pressure conditions.
+
+
+---
+Yes, I understand what this equation represents. It's calculating the relative change in the moment differences between water and air-filled pipes when comparing two pressure levels. Specifically:
+
+$Delta M(p=50)$ = 59 Nm is the difference between water and air at 50 bar
+$Delta M(p=150)$ = 57 Nm is the difference between water and air at 150 bar
+The equation structure $(Delta M(p=150) - Delta M(p=50))/ (Delta M(p=50))$ is calculating:
+
+How much the water-air difference changes between pressure levels
+Normalized by the initial difference at 50 bar
+Expressed as a percentage
+
+The -3.4% result indicates that the difference in maximum bearable moment between water and air-filled pipes decreases only slightly (by 3.4%) when increasing pressure from 50 to 150 bar. This suggests that the advantage water has over air in terms of maximum bearable moment remains relatively constant across different pressure levels.
+This is an important finding because it suggests that the fill medium's effect on maximum bearable moment is relatively pressure-independent - the superiority of water over air remains nearly constant regardless of the pressure level.
+
+---
+When analyzing the pressure effect on each medium, the following equations can be added after your existing text:
+
+$ Delta M_"air"(150-50) &= M("air",p=150) - M("air",p=50)  \ 
+&= (343 - 277) "Nm"   \
+&= 66 "Nm" $<eq_new1>
+
+$ Delta M_"water"(150-50) &= M("water",p=150) - M("water",p=50)  \ 
+&= (400 - 336) "Nm"   \
+&= 64 "Nm" $<eq_new2>
+
+$ Delta kappa_"air"(150-50) &= kappa("air",p=150) - kappa("air",p=50) \ 
+&= (2.7 - 1.65) space upright("m")^(-1)\
+&= 1.05 space upright("m")^(-1) $<eq_new3>
+
+$ Delta kappa_"water"(150-50) &= kappa("water",p=150) - kappa("water",p=50) \ 
+&= (3.2 - 2.9) space upright("m")^(-1)\
+&= 0.3 space upright("m")^(-1) $<eq_new4>
+
+These equations show that:
+1. The air-filled pipe's moment capacity increases by 66 Nm when pressure increases from 50 to 150 bar
+2. The water-filled pipe's moment capacity increases by 64 Nm over the same pressure range
+3. The air-filled pipe's maximum curvature increases by 1.05 m⁻¹
+4. The water-filled pipe's maximum curvature increases by only 0.3 m⁻¹
+
+This analysis reveals that while both media show increased capacity with higher pressure, the magnitude of improvement differs between air and water, particularly for curvature.
