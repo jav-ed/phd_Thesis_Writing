@@ -46,7 +46,7 @@ In @fig_30, the bending moment M versus curvature $kappa$ is shown without addit
 
 
 In relation to #glspl("swith"), information about the fill medium, internal pressure, and external loads is important. In @fig_31 for water and in @fig_32 for air, only the internal pressure values with a single medium are given. The influence of pressure is evident in the increasing maximum moments and curvatures that can be sustained.
-This influence is found for both air and water as filling media. A direct comparison between the influence of different fill media and pressure changes is given in @fig_33. At a constant pressure of 50 bar for water and air, it shows that the water-filled pipe can withstand higher bending moments and curvatures than the air-filled pipe. The same behavior is observed with varying pressure.
+This influence is found for both air and water as filling media. A direct comparison between the influence of different fill media and pressure changes is given in @fig_33. At a constant pressure of $50 "bar"$ for water and air, it shows that the water-filled pipe can withstand higher bending moments and curvatures than the air-filled pipe. The same behavior is observed with varying pressure.
 
 // ---------------------------------- water --------------------------------- //
 #figure(
@@ -70,38 +70,60 @@ This influence is found for both air and water as filling media. A direct compar
 ) <fig_33>
 
 
-The maximum bending moment and maximum curvature of an air-filled pipe at a pressure of $50 "bar"$ are $277 "Nm"$ and $1.65 "1/m"$. In contrast, the maximum bending moment and curvature of a water-filled pipe at a pressure of $50 "bar"$ are $336 "Nm"$ and $2.9 "1/m"$. Increasing the pressure to $150 "bar"$ leads to bending moments and curvatures for air and water of $343 "Nm"$ and $2.7 "1/m"$, and $400 "Nm"$ and $3.2 "1/m"$ respectively. 
-The comparisons show that at constant internal pressure, the maximum curvature and maximum bending moment are higher in the water-filled pipe than in the air-filled pipe. This leads to the conclusion that the fill medium of the pipe is an important factor influencing bending behavior. The deviation between the air- and water-filled pipe in terms of maximum bending moment and curvature at an internal pressure of $50 "bar"$ is given in equations @eq_14 and  @eq_15 (7) respectively. The same is given for $150 "bar"$ in equations   @eq_16 (8) and @eq_17 (9).
+The maximum bending moment and maximum curvature of an air-filled pipe at a pressure of $50 "bar"$ are $277 "Nm"$ and $1.65 space upright("m")^(-1)$. In contrast, the maximum bending moment and curvature of a water-filled pipe at a pressure of $50 "bar"$ are $336 "Nm"$ and $2.9 space upright("m")^(-1)$. Increasing the pressure to $150 "bar"$ leads to bending moments and curvatures for air and water of $343 "Nm"$ and $2.7 space upright("m")^(-1)$, and $400 "Nm"$ and $3.2 space upright("m")^(-1)$ respectively. 
+The comparisons show that at constant internal pressure, the maximum curvature and maximum bending moment are higher in the water-filled pipe than in the air-filled pipe. This leads to the conclusion that the fill medium of the pipe is an important factor influencing bending behavior. The deviation between the air- and water-filled pipe in terms of maximum bending moment and curvature at an internal pressure of $50 "bar"$ is given in @eq_14 and  @eq_15  respectively. The same is given for $150 "bar"$ in @eq_16 and @eq_17.
 
 
 // here equations
-$ Delta M(p=50) = M("water",p=50) - M("air",p=50) = 336 - 277 = 59 "Nm" $<eq_14>
+$ Delta M(p=50) &= M("water",p=50) - M("air",p=50)  \ 
+& = (336 - 277) "Nm"   \
+& = 59 "Nm" $<eq_14>
 
-$ Delta kappa(p=50) = kappa("water",p=50) - kappa("air",p=50) = 2.9 - 1.65 = 1.25 ["1/m"] $<eq_15>
+$ Delta kappa(p=50) &= kappa("water",p=50) - kappa("air",p=50) \ 
+&= (2.9 - 1.65) space upright("m")^(-1)\
+&= 1.25 space upright("m")^(-1) $<eq_15>
 
-$ Delta M(p=150) = M("water",p=150) - M("air",p=150) = 400 - 343 = 57 "Nm" $<eq_16>
+$ Delta M(p=150) &= M("water",p=150) - M("air",p=150) \
+&= (400 - 343) "Nm" \
+&= 57 "Nm" $<eq_16>
 
-$ Delta kappa(p=150) = kappa("water",p=150) - kappa("air",p=150) = 3.2 - 2.7 = 0.5 m-1 $<eq_17>
+$ Delta kappa(p=150) &= kappa("water",p=150) - kappa("air",p=150)\
+&= (3.2 - 2.7) space upright("m")^(-1)\
+&= 0.5 space upright("m")^(-1) $<eq_17>
 
-The next subject of investigation is whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure levels are changed. To make an initial rough estimate of whether a deviation in maximum bending moments between air- and water-filled pipes is detectable at different pressure levels, equation (10) should be considered. It can be noted that the deviation of maximum bending moments between air- and water-filled pipes is reduced by only about 3.4%. This initially suggests that the existing difference in maximum sustainable bending moments between air- and water-filled pipes has low pressure sensitivity. Thus, a change in pressure would have little influence on the existing difference in maximum possible bending moment between air- and water-filled pipes.
-To clarify what the result means, it should be rephrased in different words. It answers the question of whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure values are changed. It can be viewed as pressure sensitivity in relation to bending moment and curvature with different fill materials. A typical engineering question might be: Can it always be claimed that water-filled pipes, regardless of pressure level, always show 3 times more [Nm] or [1/m] than air-filled pipes? With a value of 3.4%, for a selected fill medium, it can be assumed that the approximate maximum bending moment of one fill medium can be inferred from the known maximum bending moment of the other fill medium.
+The next subject of investigation is whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure levels are changed. 
+To make an initial rough estimate of whether a deviation in maximum bending moments between air- and water-filled pipes is detectable at different pressure levels, @eq_18 should be considered. 
 
-(ΔM(p=150) - ΔM(p=50))/ΔM(p=50) = (57 - 59)/59 = -0.0338 ≈ -3.4% (10)
+$ (Delta M(p=150) - Delta M(p=50))/ (Delta M(p=50)) = \
+(57 - 59)/59 = -0.0338 approx -3.4% $<eq_18> 
 
-For the pressure sensitivity regarding the deviation of maximum curvature between air- and water-filled pipes, equation (11) is given. The equation in words: The deviation of maximum curvature between air- and water-filled pipes at 50 bar and 150 bar is reduced by about 60%. Consequently, it can be determined that, in contrast to the observation of bending moment, the pressure sensitivity regarding the deviation of maximum curvatures for air- and water-filled tanks is high.
+It can be noted that the deviation of maximum bending moments between air- and water-filled pipes is reduced by only about 3.4%. This initially suggests that the existing difference in maximum bearable bending moments between air- and water-filled pipes has low pressure sensitivity. Thus, a change in pressure would have little influence on the existing difference in maximum possible bending moment between air- and water-filled pipes.
+To clarify what the result means, it should be rephrased in different words. 
+It answers the question of whether the ratio of deviations in maximum bending moments and curvatures between air- and water-filled pipes remains constant when pressure values are changed. 
+It can be viewed as pressure sensitivity in relation to bending moment and curvature with different fill materials. A typical engineering question might be: Can it always be claimed that water-filled pipes, regardless of pressure level, always show 3 times more [Nm] or [$upright("m"^(-1))$] than air-filled pipes? The interpreation of the value of 3.4%, is that for a selected fill medium, it can be assumed that the approximate maximum bending moment of one fill medium can be inferred from the known maximum bending moment of the other fill medium.
 
-(Δκ(p=150) - Δκ(p=50))/Δκ(p=50) = (0.5 - 1.25)/1.25 = -0.6 ≈ -60% (11)
 
-With the aim of relating the findings through the use of different fill materials to the K2H2 project, the following can be worked out. First, the pipes used in @Liu2019 are made of steel and have a diameter of 25 mm and a length of 750 mm. The pipes used in K2H2 are Type IV tanks, which are composite constructions. Moreover, diameter and lengths differ significantly from @Liu2019. Additionally, K2H2 requires higher pressure levels. Nevertheless, there is an obvious motivation to conduct similar tests with adjusted settings using Type IV tanks. If the same or similar effects as described above are observed, the selection of the fill medium for the certification process could be decisive. Standards such as ISO 11119-3:2020 are globally recognized. Section 8.5.1.1 of ISO 11119-3:2020 explains the procedure for pressure testing verification. It explicitly states that water can be used as a fill medium. Depending on the result of the proposed test, the International Organization for Standardization should be informed about the results.
+For the pressure sensitivity regarding the deviation of maximum curvature between air- and water-filled pipes, @eq_19 is given. The equation in words: The deviation of maximum curvature between air- and water-filled pipes at $50 "bar"$ and $150 "bar"$ is reduced by about 60%. Consequently, it can be determined that, in contrast to the observation of bending moment, the pressure sensitivity regarding the deviation of maximum curvatures for air- and water-filled tanks is high.
 
-Another example: In [9], it is stated that helium and nitrogen are used as fill media in the European Union's high-pressure gas tank testing facility in the Netherlands (GasTeF). While both are gases, they do not have the same material properties as gaseous hydrogen. Using water or gases other than hydrogen as fill media for the certification and approval process, and the application of gaseous hydrogen in actual operation, could lead to extremely negative and unexpected phenomena. Because if water as a fill medium allows higher bending moments and curvatures without failure than the hydrogen used in operation, then the aircraft would be approved for inadmissibly high structural loads.
+$ (Delta kappa(p=150) - Delta kappa(p=50))/(Delta kappa(p=50)) = \
+(0.5 - 1.25)/1.25 = -0.6 ≈ -60% $<eq_19> 
+
+With the aim of relating the findings through the use of different fill materials to #glspl("swith"), the following can be worked out. 
+First, the pipes used in @Liu2019 are made of steel and have a diameter of $25 "mm"$ and a length of $750 "mm"$. The pipes assumed for #glspl("swith") are Type IV tanks, which are composite constructions. 
+Moreover, diameter and lengths differ significantly from @Liu2019. Additionally, #glspl("swith") require higher pressure levels. Nevertheless, there is an obvious motivation to conduct similar tests with adjusted settings using Type IV tanks. 
+If the same or similar effects as described above are observed, the selection of the fill medium for the certification process could be decisive. 
+
+Standards such as #gls("iso")11119-3:2020 @11119_3_ISO are globally recognized. Section 8.5.1.1 of ISO 11119-3:2020 explains the procedure for pressure testing verification. It explicitly states that water can be used as a fill medium. Depending on the result of the proposed test, the International Organization for Standardization should be informed about the results.
+
+Another example: In @Cebolla2019, it is stated that helium and nitrogen are used as fill media in the European Union's high-pressure gas tank testing facility in the Netherlands (GasTeF). While both are gases, they do not have the same material properties as gaseous hydrogen. Using water or gases other than hydrogen as fill media for the certification and approval process, and the application of gaseous hydrogen in actual operation, could lead to extremely negative and unexpected phenomena. Because if water as a fill medium allows higher bending moments and curvatures without failure than the hydrogen used in operation, then the aircraft would be approved for inadmissibly high structural loads.
 
 The reason why air-filled pipes can withstand lower maximum bending moments than water-filled pipes is not known to the author of this work. However, there is a conceptual model that could explain this phenomenon. Gas is modeled with particles that vibrate and move. They move without collision until the mean free path is exceeded. Due to this mean free path, there is a free space that is filled when a pressure load is applied. In other words: gases can be highly compressed, while liquids can barely be compressed. The following should be imagined: a pipe is filled until no space remains for the liquid to slosh. Now the water should be subjected to a pressure load. If the water has no space to escape, then the water could become part of the actual structure, according to this conceptual model.
 
 
 The internal pressure pushes the water against the entire inner surface of the tank. As a result, loads acting externally on the tank can be absorbed on the tank's surface by the pressurized water and transferred to other parts of the tank surface. The pressurized water would serve as a load transfer element. The higher the internal pressure, the closer the fluid particles are to each other. Consequently, it is assumed that load transfer should be more effective in compressed liquids than in uncompressed gases.
 
-The same model can also explain why gas as a fill material exhibits lower maximum bending moments. Gas provides particles more space to escape. Thus, higher pressures are required to bring the particles as close together as in liquids. Consequently, the effect of load transfer in gas is less than in liquids. Although further investigations could be considered important, K2H2 lacks financial resources, personnel, and planned time for conducting additional experimental investigations. However, further simulative results can be conducted within a reasonable timeframe. These will be discussed in the next section.
+The same model can also explain why gas as a fill material exhibits lower maximum bending moments. Gas provides particles more space to escape. Thus, higher pressures are required to bring the particles as close together as in liquids. Consequently, the effect of load transfer in gas is less than in liquids. Although further investigations could be considered important, this thesis lacks financial resources, personnel, and planned time for conducting additional experimental investigations. However, further simulative results can be conducted within a reasonable timeframe. These will be elaboroted in next @chap_3_0_2 section.
 
-In summary, it can be said that under static external loading, the internal pressure and the choice of medium can have an important, non-negligible influence on the maximum sustainable bending moment and curvature behavior.
+// --------------------------------- summary -------------------------------- //
+In summary, it can be said that under static external loading, the internal pressure and the choice of medium can have an important, non-negligible influence on the maximum bearable bending moment and curvature behavior.
 
