@@ -123,8 +123,19 @@ Within the scope of this thesis, experimental and simulative replication of all 
 // ----------------------- selected critical load case ---------------------- //
 According to @tab_29, vertical gust loading represents one of the most probable critical load cases, with a 100% probability of being dimensioning. Consequently, this thesis identifies vertical gust loading combined with internal pressure as the crucial load case for #glspl("swith"). 
 While gust loading is inherently a dynamic load case, for the experimental static strength verification only the maximum occurring loads are considered. Thus, the vertical gust load obtained through the V-n diagram can be treated as a static load case, where the peak load factor represents the governing design condition. This approach is consistent with standard aircraft structural testing practices, where static tests verify the structure's capability to withstand limit and ultimate loads.
-As elaborated in @chap_1_0_3, the internal pressure significantly influences the weight, costs, and safety characteristics of the pressure vessel.
 
+// ---------------------------- why statical test --------------------------- //
+The selection of a static load case is justified by several reasons. First, vertical gust loads can be obtained for all commercially available aircraft through the V-n diagram, thus promoting the generalizability of this work.
+To emphasize the relevance of this work, it is important to note that once a setup for conducting static experimental structural tests is established, the same or similar setup can be used for multiple static tests.
+Aircraft certification authorities require five static load cases for static strength substantiation @Rossow_2014. These are: preliminary static tests (calibration load cases), proof pressure tests, limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$). From these five tests, four can be conducted without requiring significant changes to the setup established for the major load case: preliminary static tests (calibration load cases), limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$).
+Once a suitable setup is established, which is covered in 
+// TODO - reference
+// refernce that goes to the optimiaztion, where it is clear which lenght, distance, amount and so on for collets it required
+// @chap_4_0, 
+the loads can be gradually increased from calibration to limit to ultimate to rupture test.
+
+While the static load testing sequence provides a framework for structural validation, for #glspl("swith") these tests must also account for internal pressure effects. 
+As elaborated in @chap_1_0_3, the internal pressure significantly influences the weight, costs, and safety characteristics of the pressure vessel.
 The implications of pressure selection can be analyzed from multiple perspectives. From an economic standpoint, higher pressure values enable increased hydrogen storage capacity. From a structural perspective, elevated pressure values intensify the loads on both the pressure vessel and the wing structure due to the structural integration. The safety implications, as elaborated in @chap_2_0_1 and @chap_2_0_2, indicate that higher pressure values increase the risk of self-ignition in case of leakage. From a practical testing perspective, as explained in @chap_1_0_6 with reference to @tab_14, experimental structural validation tests are constrained by maximum allowable pressure limits.
 Furthermore, @chap_2_0_2 established a systematic pathway for conducting structural validation tests with #glspl("swith"). Determining appropriate internal pressure values when using #gls("cgh2") as the filling agent presents significant challenges, with substantial implications for the safety of the #gls("swith"), the test environment, and human operators. 
 In @chap_3_0_1 it is laid out whether the filling agent can be replaced with another medium without changing the structural properties. These findings should be used to make a more sophisticated decision.
