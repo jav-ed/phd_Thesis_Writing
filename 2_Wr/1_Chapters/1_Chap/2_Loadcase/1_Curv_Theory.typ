@@ -11,12 +11,20 @@
 In the previous sections, the properties of hydrogen were first listed. These were then evaluated with regard to safe experimental feasibility. The results revealed significant safety concerns regarding the use of hydrogen in physical tests. Subsequently, the influence of dynamic external loads on pressurized cylinders was investigated. The evaluations were well received by the industry partner (IMA), and the question of the fill medium's influence on structural behavior under external static loading was deemed particularly important. The following section presents initial findings on this matter.
 
 // -------------------------------------------------------------------------- //
+// ---------------------------------- here ---------------------------------- //
 In @chap_2_0_3 first ivnestigatiosn regardinbg external loads on prssure cylinder were alredy conducated. 
-The reasons for cunducting such a study are amnong others, dynamical external load has as laid out in @chap_1_0_6 and @chap_3_0_0 have importance for pressure vessels, air crafts and conseuwqntly also for #glspl("swith"). Furthermore, possibilty to obtain potential imporotant facts that even have their relevance in dynamical testing but also statical testing.
+One rationale for conduction such a study on external dynamical loads on pressure vessels is given throguh the descriptions provided regardinf the selected essential stanrds in @chap_1_0_6.
+The rationale for dynamcal loads from the general aircraft side were given @chap_3_0_0. Due the the dynamical loads for for pressure vessels and aircrafts the correspodning improtance fpt for #glspl("swith"). 
+
+Furthermore, possibilty to obtain potential imporotant facts that even have their relevance in dynamical testing but also statical testing.
 The latter is backed by the observation that there is much more openly available literature on external dynamical loading of pressure vessels than static loading.
+
+
 Yet the fforts conducted in @chap_3_0_0 resuktied in chosing a vertical gutst load as the critical static test load for this thesis. 
 The reason for that were that the vertical gust load can be obtained for all commericaly availabel aircrafts through the V-n diagram, thus, it promotes the generability of this work.
+
 Furthermore, once a setup is obtained it can without slight or even without any modifcations for four demanded statical tests. Next, because #glspl("swith") are a pioneering project, it could be argued, statical tests should be prefered over dynamical load cases due to safety concerns during the pahse of highly limited knowledge about #glspl("swith") structural testing. 
+
 For finding some potenital releveant infromation about static external loading of for #glspl("swith"), static external loading on pressure vessels shall be considered.
 The reason why pressure vessels can be cosnidered was given in @chap_2_0_3.
 The rason why mentioning mentioning any research where #glspl("swith") are loaded externally was elaborated many times in thesis, as for example in @chap_0_7, where the limited availably of #gls("swith") research is hihglighted.
@@ -74,7 +82,6 @@ The maximum bending moment and maximum curvature of an air-filled pipe at a pres
 The comparisons show that at constant internal pressure, the maximum curvature and maximum bending moment are higher in the water-filled pipe than in the air-filled pipe. This leads to the conclusion that the fill medium of the pipe is an important factor influencing bending behavior. The deviation between the air- and water-filled pipe in terms of maximum bending moment and curvature at an internal pressure of $50 "bar"$ is given in @eq_14 and  @eq_15  respectively. The same is given for $150 "bar"$ in @eq_16 and @eq_17.
 
 
-// here equations
 $ Delta M(p=50) &= M("water",p=50) - M("air",p=50)  \ 
 & = (336 - 277) "Nm"   \
 & = 59 "Nm" $<eq_14>
