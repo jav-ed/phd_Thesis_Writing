@@ -85,6 +85,9 @@ This pattern indicates that the choice of fill medium significantly influences t
 
 // ---------------------------------- here ---------------------------------- //
 The impact of pressure in terms of qunaitifcale numbers is given in @eq_new1 @eq_new4
+For air-filled pipes, the maximum bending moment increases by 66 Nm (@eq_new1), while water-filled pipes show a similar increase of 64 Nm (@eq_new2). This comparable increase in moment capacity suggests that the pressure effect on maximum bending moment is relatively consistent across both media. However, the curvature behavior exhibits markedly different characteristics. Air-filled pipes demonstrate a substantial increase in maximum curvature of 1.05 m⁻¹ (@eq_new3), while water-filled pipes show a more modest increase of 0.3 m⁻¹ (@eq_new4). This significant difference in curvature response to pressure increase indicates that the structural behavior of pipes under bending loads is not only influenced by the choice of fill medium but also by the complex interaction between fill medium and pressure level.
+
+
 
 $ Delta M_"air"(150-50) &= M("air",p=150) - M("air",p=50)  \ 
 &= (343 - 277) "Nm"   \
