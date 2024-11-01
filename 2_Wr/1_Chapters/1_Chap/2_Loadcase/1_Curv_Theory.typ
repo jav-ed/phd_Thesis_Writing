@@ -47,7 +47,7 @@ Relevant insights for #glspl("swith") can be derived from a study conducted by @
 ) <fig_30>
 
 // --------------------------- pressure variation --------------------------- //
-For #glspl("swith") applications, the interrelation between fill medium, internal pressure, and external loads merits careful consideration. @fig_31 and @fig_32 present the internal pressure effects for water and air respectively across multiple pressure levels [0, 50, 100, 150] bar. 
+For #glspl("swith") applications, the interrelation between fill medium, internal pressure, and external loads merits careful consideration. @fig_31 and @fig_32 present the internal pressure effects for water and air, respectively across multiple pressure levels [0, 50, 100, 150] bar. 
 Each medium is examined in isolation and includes a crucial baseline condition without added internal pressure. 
 This baseline reference point, not present in @fig_33, enables quantification of the structural behavior changes induced by initial pressurization. 
 The progression from the unpressurized state through various pressure levels can be traced independently for each medium.
@@ -82,13 +82,13 @@ $336 "Nm"$ and maximum curvature of $2.9 space upright("m")^(-1)$.
 When the pressure is increased to 
 $150 "bar"$, the air-filled pipe achieves a maximum bending moment of 
 $343 "Nm"$ and maximum curvature of $2.7 space upright("m")^(-1)$, while the water-filled pipe reaches 
-$400 "Nm"$ and $3.2 space upright("m")^(-1)$ respectively.
+$400 "Nm"$ and $3.2 space upright("m")^(-1)$, respectively.
 These comparative results demonstrate that under constant internal pressure conditions, water-filled pipes consistently achieve higher maximum curvature and maximum bending moment values compared to their air-filled counterparts.
 This pattern indicates that the choice of fill medium significantly influences the pipe's bending behavior. 
 
 // ----------------------------- pressure impact ---------------------------- //
-The impact of pressure with respect to the maximal bearable bending moment is given in terms of qunaitifcale numbers is given in @eq_20 and @eq_21.
-For air-filled pipes, following @eq_20 the maximum bending moment increases from $50 "bar"$ to $150 "bar"$ by $66 "Nm"$, and according to @eq_21 water-filled pipes, show a similar increase of $64 "Nm"$. 
+The impact of pressure on the maximal bearable bending moment is expressed in quantifiable numbers in @eq_20 and @eq_21.
+For air-filled pipes, following @eq_20, the maximum bending moment increases from $50 "bar"$ to $150 "bar"$ by $66 "Nm"$, and according to @eq_21 water-filled pipes show a similar increase of $64 "Nm"$.
 
 $ Delta M_"air"(150-50) &= M("air",p=150) - M("air",p=50)  \ 
 &= (343 - 277) "Nm"   \
@@ -98,13 +98,15 @@ $ Delta M_"water"(150-50) &= M("water",p=150) - M("water",p=50)  \
 &= (400 - 336) "Nm"   \
 &= 64 "Nm" $<eq_21>
 
-This comparable increase in moment capacity as highlgihted in @eq_22 suggests that the pressure effect on maximum bending moment from $50 "bar"$ to $150 "bar"$ is relatively consistent across both media. 
+This comparable increase in moment capacity as highlighted in @eq_22 suggests that the pressure effect on maximum bending moment from $50 "bar"$ to $150 "bar"$ is relatively consistent across both media.
+
 
 $ Delta M_"air"(150-50) -  Delta M_"water"(150-50) &= (66 - 64) "Nm"   \
 &= 2 "Nm" $<eq_22>
 
-However, the curvature behavior forn increasing the internal pressure from $50 "bar"$ to $150 "bar"$ exhibits markedly different characteristics. 
-Air-filled pipes, following @eq_23, demonstrate a substantial increase in maximum curvature of $1.05 space upright("m")^(-1)$, while according to @eq_24, water-filled pipes show a more modest increase of $0.3  space upright("m")^(-1)$ 
+However, the curvature behavior for increasing the internal pressure from $50 "bar"$ to $150 "bar"$ exhibits markedly different characteristics. 
+Air-filled pipes, following @eq_23, demonstrate a substantial increase in maximum curvature of $1.05 space upright("m")^(-1)$, while according to @eq_24, water-filled pipes show a more modest increase of $0.3  space upright("m")^(-1)$.
+
 
 $ Delta kappa_"air"(150-50) &= kappa("air",p=150) - kappa("air",p=50) \ 
 &= (2.7 - 1.65) space upright("m")^(-1)\
@@ -114,7 +116,7 @@ $ Delta kappa_"water"(150-50) &= kappa("water",p=150) - kappa("water",p=50) \
 &= (3.2 - 2.9) space upright("m")^(-1)\
 &= 0.3 space upright("m")^(-1) $<eq_24>
 
-This significant difference in curvature response to pressure increase, as shown in @eq_25, indicates that the pressure effect on maximum curvate from $50 "bar"$ to $150 "bar"$ is not consistent across both media
+This significant difference in curvature response to pressure increase, as shown in @eq_25, indicates that the pressure effect on maximum curvature from $50 "bar"$ to $150 "bar"$ is not consistent across both media.
 
 $ Delta kappa_"air"(150-50) - Delta kappa_"water"(150-50) &= (1.05 - 0.3) space upright("m")^(-1)\
 &= 0.73 space upright("m")^(-1) $<eq_25>
@@ -144,18 +146,19 @@ $ Delta kappa(p=150) &= kappa("water",p=150) - kappa("air",p=150)\
 &= 0.5 space upright("m")^(-1) $<eq_17>
 
 
-
-It is essential to note that the proivded equations and their inrepreatiosn, while being correct, need to be viewed under the given constraint of limited data.
+// ---------------------------------- here ---------------------------------- //
+It is essential to note that the provided equations and their interpretations, while being correct, need to be viewed under the given constraint of limited data.
 In order to obtain more reliable results, more data is required. 
-This includes, conducitng the same tests multiple time, but also have a finer pressure change resultion, instead of just four pressure values ([0,50,100,150] bar).
-Next, for #glspl("swith") higher pressure values, bigger diamter, higher lenghts and Type IV tanks are required.
+This includes conducting the same tests multiple times, but also having a finer pressure change resolution, instead of just four pressure values ([0,50,100,150] bar).
+Next, for #glspl("swith") higher pressure values, bigger diameter, higher lengths and Type IV tanks are required.
 The pipes used in @Liu2019 are made of steel and have a diameter of $25 "mm"$ and a length of $750 "mm"$.
 Nevertheless, there is an obvious motivation to conduct similar tests with adjusted settings using Type IV tanks.
-If sufficent data would be available, statics could be used to provide valueable insights.
-One example is wheter it is possible to tell the maximal bending moment or maximal curvate of filling agent A when infromation about filloing agent B are available.
-This would be possible by first caluclating a vector of difference following @eq_18.
+If sufficient data were available, statistics could be used to provide valuable insights.
+One example is whether it is possible to tell the maximal bending moment or maximal curvature of filling agent A when information about filling agent B are available.
+This would be possible by first calculating a vector of difference following @eq_18.
 With it the mean difference across all pressure levels can be computed according to @eq_19.
-The variables are denoted as the number of maxmimal bending moment mesaurements $n$, pressure $p_i$, and the filling agents A and B.
+The variables are denoted as the number of maximal bending moment measurements $n$, pressure $p_i$, and the filling agents A and B.
+
 
 $ Delta M_i = M("A",p_i) - M("B",p_i) $<eq_18> 
 $ overline(Delta M) = 1/n sum_(i=1)^n Delta M_i $<eq_19> 
