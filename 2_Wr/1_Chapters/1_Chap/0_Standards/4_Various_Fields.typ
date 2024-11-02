@@ -86,7 +86,7 @@ Generally, for hydrogen-powered mobility domains in transport, a distinction can
       ) ,
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/3_Car.jpg", width: 100%) @img_Toyota],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/3_Car.jpeg", width: 100%) @img_Toyota],
     
     [
       - EC 79/2009 @EU_79_2009
@@ -158,7 +158,7 @@ Generally, for hydrogen-powered mobility domains in transport, a distinction can
       table.cell(colspan: 3, align:center)[*Transportable Tubes*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/5_Transport.jpg", width: 100%) @img_Transport],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/5_Transport.jpeg", width: 100%) @img_Transport],
     [
       
       - Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR) @adr_2023
@@ -195,7 +195,7 @@ Generally, for hydrogen-powered mobility domains in transport, a distinction can
       table.cell(colspan: 2, align:center)[*Ground and Stationary Storage*]),
     /* -------------- */
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/6_Ground.jpg", width: 100%) @img_Ground],
+    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/3_Various_Fields/6_Ground.jpeg", width: 100%) @img_Ground],
     [
       - Pressure Equipment Directive (PED) @eu_ped
       - American Society of Mechanical Engineers (ASME) @asme_hydro
