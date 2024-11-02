@@ -3,9 +3,8 @@
 /* -------------------------------------------------------------------------- */
 
 
-// TODO
 // Title was tested and is inshallah fine
-
+// word repetition task inshallah completed
 ===  Initial Background Studies on Fill Medium Impact<chap_3_0_1>
 
 The safety concerns regarding experimental structural testing with hydrogen, as identified in @chap_2_0_1 and @chap_2_0_2, necessitate investigation of alternative fill media for structural validation tests. While @chap_3_0_0 established the critical load cases and testing methodology, this subsection examines publicly available research on the implications of using different fill media in pressurized structures under static external loading conditions.
@@ -167,7 +166,7 @@ If the standard deviation is small relative to the mean difference, indicated by
 The implications of fill medium selection extend to current testing standards and certification procedures. Standards such as #gls("iso") 11119-3:2020 @11119_3_ISO, a globally recognized standard, specifically address pressure testing verification procedures in Section 8.5.1.1 and explicitly permits the use of water as a fill medium. The results of the proposed statistical analysis could provide valuable insights for these standardization procedures and could be communicated to the International Organization for Standardization.
 
 This concern is further exemplified by current testing practices at the European Union's high-pressure gas tank testing facility (GasTeF) in the Netherlands. According to @Cebolla2019, helium and nitrogen serve as fill media for testing purposes. Although these gases are used as substitutes for hydrogen, they possess different material properties. 
-The disparity between testing and operational conditions could lead to significant safety implications. 
+The disparity between testing and operational conditions could lead to crucial safety implications. 
 The certification tests using water or alternative gases might approve structures that can withstand higher bending moments and curvatures than they could when filled with hydrogen during actual operation.
 This discrepancy could lead to the certification of structures with inadequate safety margins for their intended operational use with hydrogen.
 
@@ -183,5 +182,5 @@ The same model can also explain the lower maximum bending moments observed in ga
 #summary_([
 In summary, the investigation of fill media effects on pressurized structures has revealed several significant findings. Under static external loading, both the internal pressure and the choice of medium demonstrate substantial influence on structural behavior. Water-filled pipes consistently exhibited superior performance compared to air-filled counterparts, achieving higher maximum bending moments and greater curvature tolerance across all tested pressure ranges. 
 The relationship between internal pressure and structural response showed distinct patterns: while both media demonstrated similar increases in maximum bending moment with pressure elevation, their curvature responses differed markedly. 
-A simplified conceptual model based on molecular behavior was proposed to explain these observations, suggesting that the incompressible nature of liquids enables more effective load transfer compared to gases. The investigation also highlighted important implications for current testing standards, particularly regarding the use of substitute fill media in certification procedures. Statistical methods were proposed for quantifying the relationships between different fill media, which could provide valuable insights for future testing protocols. These findings underscore the importance of considering fill medium effects in structural design and testing, particularly for applications involving pressurized vessels under external loading conditions as it is the case for #glspl("swith").
+A simplified conceptual model based on molecular behavior was proposed to explain these observations, suggesting that the incompressible nature of liquids enables more effective load transfer in contrast with to gases. The investigation also highlighted important implications for current testing standards, particularly regarding the use of substitute fill media in certification procedures. Statistical methods were proposed for quantifying the relationships between different fill media, which could provide valuable insights for future testing protocols. These findings underscore the importance of considering fill medium effects in structural design and testing, particularly for applications involving pressurized vessels under external loading conditions as it is the case for #glspl("swith").
 ])
