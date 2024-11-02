@@ -13,101 +13,139 @@ In this section, it will be explained how it was decided for #gls("swith", long:
 For this purpose, it will be explained why an approach using critical curvature can be pursued. Subsequently, it will be discussed how the curvature can be calculated, which methods are available for this, and why the final method was chosen. Finally, the results of the conducted curvature study will be shown.
 
 Previously, it was already explained that this thesis' plan does not provide for cost-intensive experimental investigations. Therefore, these cannot be conducted. However, an alternative method to still make qualitative statements for the desire of offering inital findings for conducating experimtnal statical strucutral validation tests.
-These can be found upon careful examination of the results from @Liu2019. @fig_33 shows that the bending moment curves, regardless of fill medium and pressure, have similar curvature values for a certain range. Through this, a critical curvature could be defined, up to which the bending moment is independent of fill medium and pressure. Figure 26 shows two possible critical values for curvature. Both 0.4 1/m and 0.5 1/m could be considered as permissible values. However, the author of this report chooses the safer variant and defines the critical curvature as 0.4 1/m. Through this, the deviation of the bending moment curves is just small enough to be considered negligible. For better overview, this definition should be given as formula (12):
+These can be found upon careful examination of the results from @Liu2019. @fig_33 shows that the bending moment curves, regardless of fill medium and pressure, have similar curvature values for a certain range. 
+Through this, a critical curvature could be defined, up to which the bending moment is independent of fill medium and pressure. @fig_34 shows two possible critical values for curvature. 
 
-Figure 26: Comparison of moment M and curvature κ for air and water as fill medium for different pressure levels @Liu2019 with possible critical curvature values
-
-κ(crit) ≤ 0.4 (12)
-
-// To check whether the curvature of the SIHT model exceeds the critical curvature, its curvature values must be calculated. The SIHT model is available as a Finite Element model. Here, the aerodynamic loads are first calculated separately through a frictionless panel method. The aerodynamic loads are applied to the structural mesh through coupling. The internal pressure of the four tanks is defined as a variable and can be adjusted accordingly. The solution of the Finite Element (FE) model provides, among other things, the displacements. Figure 27 shows an extract of the displacement values in the three spatial directions of all nodes of an element.
-
-// Figure 27: Example representation of displacement values in the 3 spatial directions at all nodes of an element
-
-
-// Besides the displacements, the element ID precisely indicates which element is located where and which nodes are assigned to this element. Through this, it is also known which elements are adjacent to each other, or their neighborhood relationships can be derived. To better understand what is meant, refer to Figure 28.
-
-// Figure 28: Neighborhood relationships of individual elements is known through the numbered and color-highlighted element IDs
-
-// For determining the curvature with known displacement values, formula (13) can be used. Here, u stands for displacement and u', u'' for the first and second derivatives of displacement with respect to the directional coordinate. In paper @Liu2019, a geometric relationship was found through which the curvature could be calculated directly analytically. However, according to the author's knowledge, no geometric relationship can be found for the general case, which is why formula (13) [29] should be used.
-
-// κ = u''/(1 + u')^(3/2) (13)
-
-// Since the displacements are known, the derivatives can be obtained through numerical differentiation. The Finite-Difference method and the less well-known Complex-Step are suitable for this. There are three common procedures used in the Finite-Difference method (FDM). All procedures are derived through Taylor series expansion and are subject to truncation error. Since calculations are performed numerically, rounding error is added to the truncation error. Common computers use double precision (2.2∙10^-16), which means that numerical values cannot be captured after a certain decimal place. Consequently, rounding errors are inevitable. Rounding errors are to be considered according to accuracy requirements and are of great importance when calculating with very small numbers. The three common FDMs are the Forward, Backward, and Central Difference methods. The Central Difference method is more accurate in calculating the derivative as it is a second-order method/accuracy. However, two support points are also needed to calculate the derivative of a point.
-
-// The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error (step size: h ~ 10^-6).
-
-// Through the mathematical derivation, which can be found in [30], the Complex-Step is a second-order method. The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. Point values and their distance, as with the known Finite Difference methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: h ~ 10^-30) [30]. However, the truncation error remains (second-order method). The mathematical definitions of the Finite Difference methods are given in formulas (14) - (16). The analog for the Complex-Step is found in formula (17). To understand what is meant by x₀, x₁, and x₂, Figure 29 should be considered. Furthermore, h stands for the step size or the distance between possible position values x₀, x₁, x₂.
-
-// [Mathematical formulas 14-17 follow with their respective equations]
-
-// // f'_forward(x_0) = (f(x_1) - f(x_0))/h                  (14)
-
-// // f'_backward(x_1) = (f(x_1) - f(x_0))/h                 (15)
-
-// // f'_central(x_1) = (f(x_2) - f(x_0))/(2h)               (16)
-
-// // f'(x) = Imag[f(x + ih)]/h                              (17)
-
-// Figure 29: Positions for understanding the Finite-Difference method
-
-// For the Complex-Step, the approach function for mapping the displacements could be determined. However, this would involve greater time expenditure. Moreover, machine precision is not required since the results are compared with the diagram from @Liu2019. Higher accuracies can be achieved with the Central Difference method than with the other difference methods. However, with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
-
-// The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward Finite Difference method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
-
-// Figure 30: Simplest case: Elements are ordered chronologically and by dimension
-// Figure 31: Real case: Element IDs are not chronologically arranged
+//TODO replace image, get the vertical lines shorted, such that they do not exceed the area of the actual image
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/0_Critical_Curv.png", 
+  width: 67%),
+  caption: [Comparison of moment M and curvature $kappa$ for air and water as fill medium for different pressure levels @Liu2019 with possible critical curvature values],
+) <fig_34>
 
 
-// Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula (13). At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using Figure 30. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
+Both $0.4 upright("m")^(-1)$ and $0.5 upright("m")^(-1)$ could be considered as permissible values. However, the author of this report chooses the safer variant and defines the critical curvature as $0.4 upright("m")^(-1)$. Through this, the deviation of the bending moment curves is just small enough to be considered negligible. For better overview, this definition should be given as formula @eq_27:
 
-// It would certainly be possible to calculate the curvature values for these as well. However, a single span-node row can be neglected. The second, much more important point is that the curvatures are significant in the area where the tanks are located under the wing skin. The wing tip is located on the outer wing, and the tanks already end in the inner wing. Therefore, the results can be used for evaluation without concerns.
+$ kappa_"crit" ≤ 0.4 $<eq_27>
 
-// Figure 32: Calculation of the first derivative on a finite element
-// Figure 33: Calculation of the second derivative on a finite element
+// --------------------------- curvature of swith --------------------------- //
+To check whether the curvature of a #gls("swith") model exceeds the critical curvature, its curvature values must be calculated.
 
-// As a brief overview of where we are and what we want. The overarching question is: Can the influence of the fill medium be neglected in an experimental investigation? To answer this, we need to check whether the critical curvature is exceeded. The method for calculating this has already been described. Now the results will be discussed. For this purpose, a study was conducted with:
-// - A pressure range of [15;110] MPa ≜ [150;1100] bar linearly distributed with 30 values
-// - Lift coefficients Ca = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]
-// - A load factor of 3.72
-
-// This corresponds to 180 variations of internal pressure and Ca values. For the small aircraft, a Ca value of ~1.0 is expected at this time. Values Ca ≥ 2 are highly unlikely for small aircraft and already enter the high-lift range. However, it is known about the tank tubes that they are designed to be very rigid. Therefore, the question naturally arises as to what limits the tank tubes have.
-
-// [Figure 34: Absolute curvatures (1/mm) for entire wing with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
-
-// Figure 34 shows the absolute curvatures for the entire wing including the tanks with Ca = 1.5 and the four pressure values of [15, 31.37, 60.86, 110] MPa ≜ [150, 313.7, 608.6, 1100] bar. The absolute value was calculated according to the usual Euclidean norm, as per formula (18), where the indices x, y, and z stand for the curvature component in the respective spatial direction.
-
-// κmag = √(κx² + κy² + κz²) (18)
-
-// Since particular emphasis is placed on the curvature behavior of the tubes, the latter is shown for the tubes in Figure 35.
-
-// [Figure 35: Absolute curvatures (1/mm) for tanks with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
-
-// For the final question regarding the influence of the fill medium, it is more purposeful to only display the elements which lie below the critical curvature κ < (κcrit = 0.4 1/m). Through this, it can be quickly determined visually whether, firstly, the critical curvature is exceeded. Secondly, in case of exceeding, further concrete investigations can be conducted. For this purpose, Figures 36 and 37, with the previously mentioned Ca and pressure values, only show the areas which fulfill the critical condition κ < (κcrit = 0.4 1/m). Initially, it can be determined that with increasing pressure, the curvatures at the inner and outer wing, as well as at the landing gear and engine connections, increase. In some places, the critical curvature is also exceeded.
+// ---------------------------- model explanation --------------------------- //
+For this work some design variations for #glspl("swith") are available as #gls("fem") model.
+While acknowldign that the desning of the #gls("swith") and its modeling in #gls("fem") is of pivotal importance, yet the thesis assumes the given availabily of the #gls("swith") as #gls("fem") model.
+This approach can be jhustified through the following. As of writing this thesis, there is no single commericaly cerrified #gls("swith") available.
+This signalties many things. Among them are, that #glspl("swith") are in their developement stage. Adding the consideration that no single standard is available which could grant the commerical applicaiton of #glspl("swith"), it can be said, that #glspl("swith") are not only in a developement phase, but in a quite early developement and reseach state.
+Moreover, because of the special properties of hydrogen as outlined in @chap_2_0_1 and @chap_2_0_2 it is understood that much works need to devoted to the pioneering project, to finally make #glspl("swith") under safe conditions for customers commericaly avaialble.
+The major takeaway is that #glspl("swith") are in a early developement and research phase.
+Consequently, there is much space for change. If the focus would be set on a specific #gls("swith") design with some pregiven constraints on which the specific #gls("fem") model would be built, the cahnces are high that the #glspl("swith") potenially available in future may differe significantly from what presented here.
+Thus, it is considered to be more reasonable to have the focus on general methods than on numerical models that have limited practical applicaiton scope.
+These general methods shall serve as a more universal contribution, that ideally could be applied to all kind of #gls("swith") simulation models.
+Therefore, importance will be devoted in explaining the process of how the solution are obtianed.
+With the provided explanations, potential given design changes for a #gls("swith") model should be adaptable by the interested reader to use the same method for his case.
 
 
+First, #glspl("swith") bear both, aerodynamic forces and inner pressure laods. 
+The aerodynamic loads can be obtained by many methods. Depedning on the accuracy demands, computational power and mdoeling should be linked. 
+For this theis the aerodynamic loads calculated separately from the structral model through APAME @Filkovic, a frictionless open-source 3d panel method implementation. 
+The aerodynamic loads are applied to the structural mesh through coupling. 
+For the number of tanks, four tanks were chosen inspired by @APUS_1. 
+The internal pressure of the four tanks for the sake of in depth study is defined as a variable and can be adjusted accordingly. 
+The solution of the #gls("fem") model provides, among other things, the displacements. 
 
-// To evaluate whether exceeding these curvatures can be counted as a final end result, a deeper analysis of the results should be conducted. It can be observed that particularly high curvatures occur on the skin of the inner wing. This is because a placeholder value for stiffness is used here. It is an area that extends into the fuselage. Therefore, skin stiffness is virtually reduced to a very small value. The fuselage area was not removed as this simplifies aerodynamic modeling and calculations.
+// --------------------------- explanation starts --------------------------- //
+// ---------------------------------- here ---------------------------------- //
+Figure 27 shows an extract of the displacement values in the three spatial directions of all nodes of an element.
 
-// At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffnesses are used. Due to the stiff circumferential rings, abrupt stiffness differences are to be expected in their vicinity, as can also be seen in the shown figures. The described behavior becomes particularly apparent when considering the first derivative of displacement. The first derivative of displacement in absolute value for the wing and tank for a pressure value of 15 MPa ≜ 150 bar, Ca = 1.5, and a scaling factor of 900 is given in Figure 38.
+[Figure 27: Example representation of displacement values in the 3 spatial directions at all nodes of an element]
 
-// [Figure 36: Only absolute curvatures (1/mm) visible for entire wing which satisfy κ < (κcrit = 0.4) with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+Besides the displacements, the element ID precisely indicates which element is located where and which nodes are assigned to this element. Through this, it is also known which elements are adjacent to each other, or their neighborhood relationships can be derived. This concept of neighborhood is depicted in Figure 28.
 
-// [Figure 37: Only absolute curvatures (1/mm) visible for tanks which satisfy κ < (κcrit = 0.4) with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+Figure 28: Neighborhood relationships of individual elements is known through the numbered and color-highlighted element IDs
+
+// ---------------------------- curvature formula --------------------------- //
+For determining the curvature with known displacement values, formula @eq_28 can be used. Here, u stands for displacement and u', u'' for the first and second derivatives of displacement with respect to the directional coordinate. 
+
+$ kappa = u ^''/ ( (1 + u') ^(3/2)) $<eq_28>
+
+In paper @Liu2019, a geometric relationship was found through which the curvature could be calculated directly analytically. However, according to the author's knowledge, no geometric relationship can be found for the general case, which is why formula @eq_28 @Gross2021 should be used.
+
+// ------------------------ numerical differentiation ----------------------- //
+Since the displacements are known, the derivatives can be obtained through numerical differentiation. The Finite-Difference method and the less well-known Complex-Step are suitable for this. There are three common procedures used in the Finite-Difference method (FDM). 
+All procedures are derived through Taylor series expansion and are subject to truncation error. Since calculations are performed numerically, rounding error is added to the truncation error. Common computers use double precision (2.2∙10^-16), which means that numerical values cannot be captured after a certain decimal place. Consequently, rounding errors are inevitable. Rounding errors are to be considered according to accuracy requirements and are of great importance when calculating with very small numbers. The three common FDMs are the Forward, Backward, and Central Difference methods. The Central Difference method is more accurate in calculating the derivative as it is a second-order method/accuracy. However, two support points are also needed to calculate the derivative of a point.
+
+// ------------------------- regular numerical diff ------------------------- //
+The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error (step size: h ~ 10^-6).
+
+// ------------------------------ complex step ------------------------------ //
+Through the mathematical derivation, which can be found in @mdobook, the Complex-Step is a second-order method. The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. Point values and their distance, as with the known Finite Difference methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: h ~ 10^-30) @mdobook. However, the truncation error remains (second-order method). The mathematical definitions of the Finite Difference methods are given in formulas @eq_29 - @eq_31. The analog for the Complex-Step is found in formula @eq_32. To understand what is meant by x₀, x₁, and x₂, Figure 29 should be considered. Furthermore, h stands for the step size or the distance between possible position values x₀, x₁, x₂.
+
+// ---------------------------- differential eqs ---------------------------- //
+$ f'_("forward")(x_0) = (f(x_1) - f(x_0))/h $<eq_29>
+$ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
+$ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
+$ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
+
+[Figure 29: Positions for understanding the Finite-Difference method]
+
+For the Complex-Step, the approach function for mapping the displacements could be determined. However, this would involve greater time expenditure. Moreover, machine precision is not required since the results are compared with the diagram from @Liu2019. Higher accuracies can be achieved with the Central Difference method than with the other difference methods. However, with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
+
+// TODO - fem mesh finess limits the choise of the step
+The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward Finite Difference method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
+
+[Figure 30: Simplest case: Elements are ordered chronologically and by dimension]
+[Figure 31: Real case: Element IDs are not chronologically arranged]
+
+// ----------------------------- steps with fem ----------------------------- //
+Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula @eq_28. At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using Figure 30. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
+
+It would certainly be possible to calculate the curvature values for these as well. However, a single span-node row can be neglected. The second, much more important point is that the curvatures are significant in the area where the tanks are located under the wing skin. The wing tip is located on the outer wing, and the tanks already end in the inner wing. Therefore, the results can be used for evaluation without concerns.
+
+[Figure 32: Calculation of the first derivative on a #gls("fem")]
+[Figure 33: Calculation of the second derivative on a #gls("fem")]
+
+As a brief overview of where we are and what we want. The overarching question is: Can the influence of the fill medium be neglected in an experimental investigation? To answer this, we need to check whether the critical curvature is exceeded. The method for calculating this has already been described. Now the results will be discussed. For this purpose, a study was conducted with:
+- A pressure range of [15;110] MPa ≜ [150;1100] bar linearly distributed with 30 values
+- Lift coefficients Ca = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]
+- A load factor of 3.72
+
+This corresponds to 180 variations of internal pressure and Ca values. For the small aircraft, a Ca value of ~1.0 is expected at this time. Values Ca ≥ 2 are highly unlikely for small aircraft and already enter the high-lift range. However, it is known about the tank tubes that they are designed to be very rigid. Therefore, the question naturally arises as to what limits the tank tubes have.
+
+[Figure 34: Absolute curvatures (1/mm) for entire wing with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+
+Figure 34 shows the absolute curvatures for the entire wing including the tanks with Ca = 1.5 and the four pressure values of [15, 31.37, 60.86, 110] MPa ≜ [150, 313.7, 608.6, 1100] bar. The absolute value was calculated according to the usual Euclidean norm, as per formula @eq_33, where the indices x, y, and z stand for the curvature component in the respective spatial direction.
+
+$ kappa_("mag") = sqrt(kappa_x^(2) + kappa_y^2 + kappa_z^2) $<eq_33>
+
+Since particular emphasis is placed on the curvature behavior of the tubes, the latter is shown for the tubes in Figure 35.
+
+[Figure 35: Absolute curvatures (1/mm) for tanks with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+
+For the final question regarding the influence of the fill medium, it is more purposeful to only display the elements which lie below the critical curvature $kappa < (kappa_"crit" = 0.4 1/m)$. Through this, it can be quickly determined visually whether, firstly, the critical curvature is exceeded. Secondly, in case of exceeding, further concrete investigations can be conducted. For this purpose, Figures 36 and 37, with the previously mentioned Ca and pressure values, only show the areas which fulfill the critical condition $kappa < (kappa_"crit" = 0.4 1/m)$. Initially, it can be determined that with increasing pressure, the curvatures at the inner and outer wing, as well as at the landing gear and engine connections, increase. In some places, the critical curvature is also exceeded.
+
+// ---------------------------- model specialitis --------------------------- //
+To evaluate whether exceeding these curvatures can be counted as a final end result, a deeper analysis of the results should be conducted. It can be observed that particularly high curvatures occur on the skin of the inner wing. This is because a placeholder value for stiffness is used here. It is an area that extends into the fuselage. Therefore, skin stiffness is virtually reduced to a very small value. The fuselage area was not removed as this simplifies aerodynamic modeling and calculations.
+
+At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffnesses are used. Due to the stiff circumferential rings, abrupt stiffness differences are to be expected in their vicinity, as can also be seen in the shown figures. The described behavior becomes particularly apparent when considering the first derivative of displacement. The first derivative of displacement in absolute value for the wing and tank for a pressure value of 15 MPa ≜ 150 bar, Ca = 1.5, and a scaling factor of 900 is given in Figure 38.
+
+[Figure 36: Only absolute curvatures (1/mm) visible for entire wing which satisfy $kappa < (kappa_"crit" = 0.4)$ with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+
+[Figure 37: Only absolute curvatures (1/mm) visible for tanks which satisfy $kappa < (kappa_"crit" = 0.4)$ with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
 
 
-// [Figure 38: First derivative of displacement in absolute value for wing and tank with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
+[Figure 38: First derivative of displacement in absolute value for wing and tank with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
 
-// Here, the effects of the stiffness placeholder near the wing root are particularly well visible. Further abrupt behavior in the first derivatives is shown in Figure 39.
+Here, the effects of the stiffness placeholder near the wing root are particularly well visible. Further abrupt behavior in the first derivatives is shown in Figure 39.
 
-// [Figure 39: First derivative of displacement in absolute value for important sections with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
+[Figure 39: First derivative of displacement in absolute value for important sections with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
 
-// If the first derivative shows jumps, this will also be reflected in the second derivative. Since the curvature is based on the first and second derivatives of displacement, peculiarities are also to be expected at these points. If it is assumed that the first derivative is much smaller than 1 (u' ≪ 1), then formula (19) shows the direct proportionality. We already know that the first derivative exhibits abrupt behavior. However, this does not necessarily contradict u' ≪ 1. It is possible that two values differ by several orders of magnitude, yet both values are still significantly smaller than 1.
+If the first derivative shows jumps, this will also be reflected in the second derivative. Since the curvature is based on the first and second derivatives of displacement, peculiarities are also to be expected at these points. If it is assumed that the first derivative is much smaller than 1 ($u' ≪ 1$), then formula @eq_34 shows the direct proportionality. We already know that the first derivative exhibits abrupt behavior. However, this does not necessarily contradict u' ≪ 1. It is possible that two values differ by several orders of magnitude, yet both values are still significantly smaller than 1.
 
-// κ ≈ u'' (19)
+$ kappa approx u'' $<eq_34>
 
-// Through the deeper analysis of the curvature results, it can be noted that local curvature elevations are to be expected for some areas. These must be consciously neglected when answering the question about the influence of the fill medium, as it would otherwise lead to misinterpretations. Furthermore, it can be stated that the curvature behavior of the outer wing cannot be part of the evaluation since the tanks are only located in the inner wing. If all discussed modeling measures and their consequences are considered, the following conclusion can be reached: In the undisturbed regions, it is clearly recognizable that the critical curvature is not exceeded. Therefore, it can be assumed that the fill medium has no significant influence on the maximum sustainable bending moment. Here, it is important to have clearly defined that the obtained results are only valid within the framework of the made assumptions. The calculations were solved linear-statically; gas compression effects and possible nonlinearities were not considered.
+Through the deeper analysis of the curvature results, it can be noted that local curvature elevations are to be expected for some areas. These must be consciously neglected when answering the question about the influence of the fill medium, as it would otherwise lead to misinterpretations. Furthermore, it can be stated that the curvature behavior of the outer wing cannot be part of the evaluation since the tanks are only located in the inner wing. If all discussed modeling measures and their consequences are considered, the following conclusion can be reached: In the undisturbed regions, it is clearly recognizable that the critical curvature is not exceeded. Therefore, it can be assumed that the fill medium has no significant influence on the maximum sustainable bending moment. Here, it is important to have clearly defined that the obtained results are only valid within the framework of the made assumptions. The calculations were solved linear-statically; gas compression effects and possible nonlinearities were not considered.
 
-// In summary, an extensive investigation was conducted to determine whether the filling medium has an influence on the maximum sustainable bending moment. Through subsequent comparison with a critical curvature, it was found that within the scope of K2H2, the influence of the filling medium can be neglected. Thus, filling the tanks with water instead of hydrogen would be permissible in the experimental investigation.
+In summary, an extensive investigation was conducted to determine whether the filling medium has an influence on the maximum sustainable bending moment. Through subsequent comparison with a critical curvature, it was found that within the scope of K2H2, the influence of the filling medium can be neglected. Thus, filling the tanks with water instead of hydrogen would be permissible in the experimental investigation.
 
 
 // // -------------------------------------------------------------------------- //
