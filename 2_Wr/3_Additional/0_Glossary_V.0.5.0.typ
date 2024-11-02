@@ -109,6 +109,13 @@
       long: "Finite Element Method",
       description:  [Eine numerische Methode um wichitge Kenngrößen einer Strömung herauszufinden. Die Methode kann angewandt werden um beispielsweise die Auftriebsverteilung oder Widerstand eines FLugobjektes zu erhalten],
     ),
+    (
+      key: "fd",
+      short: "FD",
+      long: "Finite-Difference",
+      description: [A numerical method used to approximate derivatives and solve differential equations by replacing continuous derivatives with discrete approximations @Langtangen2017. It works by calculating the rate of change between points separated by a finite distance rather than using the limit definition of derivatives. Common types include forward difference, backward difference, and central difference schemes @Baerwolff2020 @Meister2019 @Munz2019 @Richter2017. Widely used in computational physics, engineering, and numerical analysis for solving partial differential equations.
+      ],
+    ),
 
 
     // ------------------------------ keys end ------------------------------ //

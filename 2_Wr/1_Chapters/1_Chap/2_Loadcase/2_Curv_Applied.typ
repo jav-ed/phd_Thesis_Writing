@@ -53,45 +53,69 @@ For the number of tanks, four tanks were chosen inspired by @APUS_1.
 The internal pressure of the four tanks for the sake of in depth study is defined as a variable and can be adjusted accordingly. 
 The solution of the #gls("fem") model provides, among other things, the displacements. 
 
+
 // --------------------------- explanation starts --------------------------- //
 // ---------------------------------- here ---------------------------------- //
-Figure 27 shows an extract of the displacement values in the three spatial directions of all nodes of an element.
+@fig_35 shows an extract of the displacement values in the three spatial directions of all nodes of an element.
 
-[Figure 27: Example representation of displacement values in the 3 spatial directions at all nodes of an element]
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/1_FEM_Displacements.png", 
+  width: 77%),
+  caption: [Example representation of displacement values in the 3 spatial directions at all nodes of an element],
+) <fig_35>
 
-Besides the displacements, the element ID precisely indicates which element is located where and which nodes are assigned to this element. Through this, it is also known which elements are adjacent to each other, or their neighborhood relationships can be derived. This concept of neighborhood is depicted in Figure 28.
 
-Figure 28: Neighborhood relationships of individual elements is known through the numbered and color-highlighted element IDs
+Besides the displacements, the element ID precisely indicates which element is located where and which nodes are assigned to this element. Through this, it is also known which elements are adjacent to each other, or their neighborhood relationships can be derived. This concept of neighborhood is depicted in @fig_36.
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/2_Neigbourhood.png", 
+  width: 57%),
+  caption: [Neighborhood relationships of individual elements is known through the numbered and color-highlighted element IDs],
+) <fig_36>
+
 
 // ---------------------------- curvature formula --------------------------- //
-For determining the curvature with known displacement values, formula @eq_28 can be used. Here, u stands for displacement and u', u'' for the first and second derivatives of displacement with respect to the directional coordinate. 
+For determining the curvature with known displacement values, formula @eq_28 @Gross2021 @Gross2023 can be used. Here, u stands for displacement and u', u'' for the first and second derivatives of displacement with respect to the directional coordinate. 
 
-$ kappa = u ^''/ ( (1 + u') ^(3/2)) $<eq_28>
+$ kappa = u''/ ( (1 + u'^2) ^(3/2)) $<eq_28>
 
-In paper @Liu2019, a geometric relationship was found through which the curvature could be calculated directly analytically. However, according to the author's knowledge, no geometric relationship can be found for the general case, which is why formula @eq_28 @Gross2021 should be used.
+In paper @Liu2019, a geometric relationship was found through which the curvature could be calculated directly analytically. However, according to the author's knowledge, no geometric relationship can be found for the general case, which is why formula @eq_28 should be used.
 
 // ------------------------ numerical differentiation ----------------------- //
-Since the displacements are known, the derivatives can be obtained through numerical differentiation. The Finite-Difference method and the less well-known Complex-Step are suitable for this. There are three common procedures used in the Finite-Difference method (FDM). 
-All procedures are derived through Taylor series expansion and are subject to truncation error. Since calculations are performed numerically, rounding error is added to the truncation error. Common computers use double precision (2.2∙10^-16), which means that numerical values cannot be captured after a certain decimal place. Consequently, rounding errors are inevitable. Rounding errors are to be considered according to accuracy requirements and are of great importance when calculating with very small numbers. The three common FDMs are the Forward, Backward, and Central Difference methods. The Central Difference method is more accurate in calculating the derivative as it is a second-order method/accuracy. However, two support points are also needed to calculate the derivative of a point.
+Since the displacements are known, the derivatives can be obtained through numerical differentiation. Methods for obtaining the gradients numerically are the well known #gls("fd") methods 
+@Baerwolff2020 @Meister2019 @Munz2019 @Richter2017 @Langtangen2017
+and the less well-known Complex-Step @mdobook. Among the #gls("fd") methods there are three common procedures. 
+All procedures are derived through Taylor series expansion and are subject to truncation error @mdobook. Since calculations are performed numerically, rounding error a added to the truncation error @Baerwolff2020. 
+Common computers use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwolff2020), which means that numerical values cannot be captured after a certain decimal place. Consequently, rounding errors are inevitable. Rounding errors are to be considered according to accuracy requirements and are of great importance when calculating with very small numbers. The three common #gls("fd") methods are the Forward, Backward, and Central Difference methods. The Central Difference method is more accurate in calculating the derivative as it is a second-order method/accuracy. However, two support points are also needed to calculate the derivative of a point.
 
 // ------------------------- regular numerical diff ------------------------- //
-The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error (step size: h ~ 10^-6).
+The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error. According to @mdobook a stepsize of $h approx 10^(-6)$ often procudes high quality ouptut. However, in the case of a structre mesh, the step size $h$ is the distance between the nodes. Such a small distance between the nodes is unusual in stuctrual mechanics. For #gls("fem") the step size will be provided by the mesh size that can accurately solve the given mechanical description.
 
+// ---------------------------------- here ---------------------------------- //
 // ------------------------------ complex step ------------------------------ //
-Through the mathematical derivation, which can be found in @mdobook, the Complex-Step is a second-order method. The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. Point values and their distance, as with the known Finite Difference methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: h ~ 10^-30) @mdobook. However, the truncation error remains (second-order method). The mathematical definitions of the Finite Difference methods are given in formulas @eq_29 - @eq_31. The analog for the Complex-Step is found in formula @eq_32. To understand what is meant by x₀, x₁, and x₂, Figure 29 should be considered. Furthermore, h stands for the step size or the distance between possible position values x₀, x₁, x₂.
-
+The Complex-Step is a second-order method and can be mathematically be proven to be one as for instance done in @mdobook. 
+The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. 
+Point values and their distance, as with the known #gls("fd") methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. 
+However, the truncation error remains (second-order method). The mathematical definitions of the #gls("fd") methods are given in formulas @eq_29 - @eq_31.
+The variables are denotes as locations $x_i$ and step size $h$ or distance between two locations $x_i$ and $x_j$, where $i != j $. 
 // ---------------------------- differential eqs ---------------------------- //
 $ f'_("forward")(x_0) = (f(x_1) - f(x_0))/h $<eq_29>
 $ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
 $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
+
+To visually understand how the locations of $x_i$ are placed Figure 29 should be considered. Furthermore, h stands for the step size or the distance between possible position values x₀, x₁, x₂.
+
+
+The analog for the Complex-Step is found in formula @eq_32. 
 $ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
 
-[Figure 29: Positions for understanding the Finite-Difference method]
+// TODO get the figure as svg
+[Figure 29: Positions for understanding the #gls("fd") method]
 
 For the Complex-Step, the approach function for mapping the displacements could be determined. However, this would involve greater time expenditure. Moreover, machine precision is not required since the results are compared with the diagram from @Liu2019. Higher accuracies can be achieved with the Central Difference method than with the other difference methods. However, with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
 
 // TODO - fem mesh finess limits the choise of the step
-The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward Finite Difference method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
+The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward #gls("fd") method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
 
 [Figure 30: Simplest case: Elements are ordered chronologically and by dimension]
 [Figure 31: Real case: Element IDs are not chronologically arranged]
