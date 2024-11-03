@@ -167,16 +167,20 @@ In practice, however, it is usually the case that the element IDs do not increas
 While having acknowldiged the higher accuracy of the central #gls("fd") method, its drawbacks were mentioned as well. The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For a #gls("fem") application, the step size is inherently defined by the mesh discretization. 
 Considering both accuracy requirements and implementation complexity, the Forward #gls("fd") method was preferepreferred over the central #gls("fd") method for calculating the required derivatives for the curvature. 
 
-// ---------------------------------- here ---------------------------------- //
 // ------------------------------ not only fem ------------------------------ //
-For this thesis #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. While #gls("fem") directly provides strains (first derivatives of displacement with respect to local coordinates) as part of its solution, the calculation of derivatives from displacement data using #gls("fd") methods was deliberately explained. This choice was made to demonstrate a more universal approach that can be applied regardless of how displacement data is obtained.
-
-The presented method for calculating curvature could be equally applied to displacement data from various sources. These include alternative simulation approaches such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019, as well as experimental measurements where only displacement values and their corresponding coordinates are required. Indeed, the method could be applied with any analytical or numerical approach that provides displacement field data.
+For this thesis #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. Conducting #gls("fem") simulaitons, besides displaxments, the strains (first derivatives of displacement with respect to local coordinates) are obrained part of its solution.
+Yet, it is epxlained how to obtain the strains when displacment values are available.
+The rationale behind that is to strnegened the universal applicability of this work. The presented method for calculating curvature could be equally applied to displacement data from various sources. These include alternative simulation approaches such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019, as well as experimental measurements where only displacement values and their corresponding coordinates are required. Indeed, the method could be applied with any analytical or numerical approach that provides displacement field data.
 
 By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach remains broadly applicable. This generality increases the practical value of the presented methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is obtained.
 
+// ---------------------------------- here ---------------------------------- //
 // ----------------------------- steps with fem ----------------------------- //
 // TODO add here explanaitons about distored mesh and impact on actual stpe size
+// all fomrulas 
+having explained .. concrete example how to use the fwd to .. edge not required or backward fd
+
+
 Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula @eq_28. At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using @fig_39. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
 
 It would certainly be possible to calculate the curvature values for these as well. However, a single span-node row can be neglected. The second, much more important point is that the curvatures are significant in the area where the tanks are located under the wing skin. The wing tip is located on the outer wing, and the tanks already end in the inner wing. Therefore, the results can be used for evaluation without concerns.
