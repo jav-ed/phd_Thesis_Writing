@@ -6,6 +6,9 @@
 // TODO
 // Title Check
 === Application for Impact Filling Agent<chap_3_0_2>
+while fem can provide strains, in the event where only displacements and corresponding locations are known, more general method shall be given.
+explain which methods availabel to derive the gradeitns numerically. which chosen and why.
+give some inution behind the applicaiton of the FDM methods
 
 
 
@@ -88,7 +91,7 @@ All procedures are derived through Taylor series expansion and are subject to tr
 Common computers use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwolff2020), which means that numerical values cannot be captured after a certain decimal place. Consequently, rounding errors are inevitable. Rounding errors are to be considered according to accuracy requirements and are of great importance when calculating with very small numbers. The three common #gls("fd") methods are the Forward, Backward, and Central Difference methods. The Central Difference method is more accurate in calculating the derivative as it is a second-order method/accuracy. However, two support points are also needed to calculate the derivative of a point.
 
 // ------------------------- regular numerical diff ------------------------- //
-The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error. According to @mdobook a stepsize of $h approx 10^(-6)$ often procudes high quality ouptut. However, in the case of a structre mesh, the step size $h$ is the distance between the nodes. Such a small distance between the nodes is unusual in stuctrual mechanics. For #gls("fem") the step size will be provided by the mesh size that can accurately solve the given mechanical description.
+The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error. According to @mdobook a stepsize of $h approx 10^(-6)$ often procudes high quality ouptut. However, in the case of a structre mesh, the step size $h$ is the distance between the nodes of interest. Such a small distance between the nodes is unusual in stuctrual mechanics. For #gls("fem") the step size will be provided by the mesh size that can accurately solve the given mechanical description.
 
 // ---------------------------------- here ---------------------------------- //
 // ------------------------------ complex step ------------------------------ //
@@ -96,7 +99,7 @@ The Complex-Step is a second-order method and can be mathematically be proven to
 The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. 
 Point values and their distance, as with the known #gls("fd") methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. 
 However, the truncation error remains (second-order method). The mathematical definitions of the #gls("fd") methods are given in formulas @eq_29 - @eq_31.
-The variables are denotes as discretization points $x_i$ and step size $h$ or distance between two discretization points $x_i$ and $x_j$, where $i != j $. 
+The variables are denotes as derivative function $f'$, discretization points $x_i$ and step size $h$ or distance between two discretization points $x_i$ and $x_j$, where $i != j $. 
 // ---------------------------- differential eqs ---------------------------- //
 $ f'_("forward")(x_0) = (f(x_1) - f(x_0))/h $<eq_29>
 $ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
@@ -104,6 +107,7 @@ $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
 
 The order of placement of the discretization points $x_i$ is depicted in @fig_37. Besides providing neccesary background to levergage the #gls("fd") methods, a visual depiction of the discretization points $x_i$ often helps to understand the concept of #gls("fd") methods. 
 
+// ------------------------------- single fdm ------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/3_Simple_FDM.svg", 
   width: 47%),
@@ -117,23 +121,63 @@ $ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
 
 For the Complex-Step, the approximation function for the displacements could be determined. However, this would involve greater time expenditure. Moreover, very high precision is not required since the results are compared with the diagram from @Liu2019, depicted in @fig_34. 
 
+// --------------------------- selected fd methods -------------------------- //
 Thus, one of the #gls("fd") methods needs to be selected.
 Generally, the central differce method acheived higher accuracies than the first order emthods, forward and backward difference methods
+In order to comprehend the additional computaitonal and human effort resulting from the central #gls("fd") method, an concrete example shall be given.
+Considering @fig_38, it can be observed that the structral mesh is approximated with an element type that has eight nodes.
+The variables $x_i$, where $i in [0, 7]$ aim to represent the local placing of the nodes. 
 
-However, assuming of having eight nodes per one element as depichted in 
+// ------------------------------- 8 nodes fdm ------------------------------ //
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/4_FEM_Ele.svg", 
+  width: 47%),
+  caption: [Discretization points $x_i$ or nodes from #gls("fem") model for #gls("fd") methods],
+) <fig_38>
+
+In order to caluclate the derivative, besides the local node coordinate a function value is needed. Since the goal is to obtain the curvature according to @eq_28, the following shall be assumed.
+For each $x_i$ discretization point, its local coordinates and the corresponding displacement value $u$ are known.
+Thus applying one the #gls("fd") methods would compute the derivative of the displacement with respect to the location, that is, the strain. 
+With the information about the nodes of a single element as depcicted in @fig_38 only for the two nodes $x_4$ and $x_6$ of the total 8 nodes the strain values could be calculated according to @eq_35 and @eq_36, respectively. 
+
+$ f'_("central")(x_4) = (f(x_2) - f(x_3))/(h) $<eq_35>
+$ f'_("central")(x_6) = (f(x_1) - f(x_0))/(h) $<eq_36>
+
+Comparing @eq_35 and @eq_36 with @eq_31 two important observatiosn can be made. First, the indices in  @eq_35 and @eq_36 do not match the pattern  of indices shown in @eq_31. This is the reason why the #gls("fd") equations should be refered to the correspinding problems visual descirption @fig_37 and @fig_38. Second, instead of dividing with two times the step size $h$, according to @fig_38 the $h$ for @eq_35 and @eq_36 already provides the correct distance between the two nodees of interest for the central differential sceme.
+
+Having provided some intutition for the central #gls("fd") method, important drawbacks shall be mentioned. According to @fig_38, the information of one #gls("fem") element would only provide derivatives of two nodes instead of 8.
+For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. This introduces complexity, increased  programming effort and consequently risk of mistake incorporation. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in @fig_39. 
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/5_Chron_Order.svg", 
+  width: 47%),
+  caption: [Simplest case: Elements or nodes of interest are ordered strucutred and ids are given chronologically],
+) <fig_39>
 
 
+In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in @fig_40. In such cases, as could occur with complex 3d #gls("swith") simulation models, complexity is increaed to capture and properly leverage the element and node neighborhood relationships.
 
- with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/6_Complex_Ids.svg", 
+  width: 47%),
+  caption: [Real case Element Id ordering, are not chronologically arranged depicted simplied in 2D ],
+) <fig_40>
 
-// TODO - fem mesh finess limits the choise of the step
-The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward #gls("fd") method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
+// ----------------------------- forward method ----------------------------- //
+While having acknowldiged the higher accuracy of the central #gls("fd") method, its drawbacks were mentioned as well. The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For a #gls("fem") application, the step size is inherently defined by the mesh discretization. 
+Considering both accuracy requirements and implementation complexity, the Forward #gls("fd") method was preferepreferred over the central #gls("fd") method for calculating the required derivatives for the curvature. 
 
-[Figure 30: Simplest case: Elements are ordered chronologically and by dimension]
-[Figure 31: Real case: Element IDs are not chronologically arranged]
+// ---------------------------------- here ---------------------------------- //
+// ------------------------------ not only fem ------------------------------ //
+For this thesis #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. While #gls("fem") directly provides strains (first derivatives of displacement with respect to local coordinates) as part of its solution, the calculation of derivatives from displacement data using #gls("fd") methods was deliberately explained. This choice was made to demonstrate a more universal approach that can be applied regardless of how displacement data is obtained.
+
+The presented method for calculating curvature could be equally applied to displacement data from various sources. These include alternative simulation approaches such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019, as well as experimental measurements where only displacement values and their corresponding coordinates are required. Indeed, the method could be applied with any analytical or numerical approach that provides displacement field data.
+
+By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach remains broadly applicable. This generality increases the practical value of the presented methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is obtained.
 
 // ----------------------------- steps with fem ----------------------------- //
-Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula @eq_28. At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using Figure 30. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
+// TODO add here explanaitons about distored mesh and impact on actual stpe size
+Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula @eq_28. At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using @fig_39. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
 
 It would certainly be possible to calculate the curvature values for these as well. However, a single span-node row can be neglected. The second, much more important point is that the curvatures are significant in the area where the tanks are located under the wing skin. The wing tip is located on the outer wing, and the tanks already end in the inner wing. Therefore, the results can be used for evaluation without concerns.
 

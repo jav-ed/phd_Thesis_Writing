@@ -41,8 +41,7 @@
     set heading(numbering: none)
 
     [= Glossary]
-    
-    
+
     print-glossary(
         glos_entry_list,
 

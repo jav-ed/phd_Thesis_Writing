@@ -139,6 +139,11 @@
 // ----------------------------------- Bib ---------------------------------- //
 #pagebreak()
 
+// #set page(columns: 2)
+
+// // For spacing before level-1 entries
+// #set par(spacing: 0.5em)
+
 // see: https://typst.app/docs/reference/model/bibliography/#parameters-full
 // and: https://typst.app/project/pQH6zuFPPL_G4NlIOLx9K-
 #bibliography("1_Data/1_Bib/bib.bib",
