@@ -16,7 +16,6 @@ Previously, it was already explained that this thesis' plan does not provide for
 These can be found upon careful examination of the results from @Liu2019. @fig_33 shows that the bending moment curves, regardless of fill medium and pressure, have similar curvature values for a certain range. 
 Through this, a critical curvature could be defined, up to which the bending moment is independent of fill medium and pressure. @fig_34 shows two possible critical values for curvature. 
 
-//TODO replace image, get the vertical lines shorted, such that they do not exceed the area of the actual image
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/0_Critical_Curv.png", 
   width: 67%),
@@ -97,22 +96,35 @@ The Complex-Step is a second-order method and can be mathematically be proven to
 The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. 
 Point values and their distance, as with the known #gls("fd") methods, are not sufficient. Because function values at a very small distance from each other do not need to be subtracted, no rounding errors result and calculations can be performed with maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. 
 However, the truncation error remains (second-order method). The mathematical definitions of the #gls("fd") methods are given in formulas @eq_29 - @eq_31.
-The variables are denotes as locations $x_i$ and step size $h$ or distance between two locations $x_i$ and $x_j$, where $i != j $. 
+The variables are denotes as discretization points $x_i$ and step size $h$ or distance between two discretization points $x_i$ and $x_j$, where $i != j $. 
 // ---------------------------- differential eqs ---------------------------- //
 $ f'_("forward")(x_0) = (f(x_1) - f(x_0))/h $<eq_29>
 $ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
 $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
 
-To visually understand how the locations of $x_i$ are placed Figure 29 should be considered. Furthermore, h stands for the step size or the distance between possible position values x₀, x₁, x₂.
+The order of placement of the discretization points $x_i$ is depicted in @fig_37. Besides providing neccesary background to levergage the #gls("fd") methods, a visual depiction of the discretization points $x_i$ often helps to understand the concept of #gls("fd") methods. 
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/3_Simple_FDM.svg", 
+  width: 47%),
+  caption: [Nessary knowledge about the positions of the discretization points $x_i$ the #gls("fd") method],
+) <fig_37>
 
 
-The analog for the Complex-Step is found in formula @eq_32. 
+The mathematical description for the Complex-Step is found in @eq_32. 
+
 $ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
 
-// TODO get the figure as svg
-[Figure 29: Positions for understanding the #gls("fd") method]
+For the Complex-Step, the approximation function for the displacements could be determined. However, this would involve greater time expenditure. Moreover, very high precision is not required since the results are compared with the diagram from @Liu2019, depicted in @fig_34. 
 
-For the Complex-Step, the approach function for mapping the displacements could be determined. However, this would involve greater time expenditure. Moreover, machine precision is not required since the results are compared with the diagram from @Liu2019. Higher accuracies can be achieved with the Central Difference method than with the other difference methods. However, with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
+Thus, one of the #gls("fd") methods needs to be selected.
+Generally, the central differce method acheived higher accuracies than the first order emthods, forward and backward difference methods
+
+However, assuming of having eight nodes per one element as depichted in 
+
+
+
+ with the information about the nodes of a single element, only two of the eight required derivatives can be calculated. For the remaining six derivatives, correct assignment of neighboring elements and nodes is required. The latter involves higher programming effort. In the simplest case, the elements have a chronologically ascending element ID in all three dimensions. For the 1D case, this is shown in Figure 30. In practice, however, it is usually the case that the element IDs do not increase chronologically. A pictorial representation of this is given in Figure 31. In such cases, as with K2H2, increased programming effort is required to capture the neighborhood relationships.
 
 // TODO - fem mesh finess limits the choise of the step
 The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For K2H2, due to accuracy requirements and time expenditure, the Forward #gls("fd") method was chosen as the method for calculating the derivatives. The method/implementation was compared with solutions of analytical functions whose derivatives are known. An accuracy of order ~1e-[4; 7] was achieved. This would exceed the requirements for comparing the calculated curvatures with those from @fig_33.
