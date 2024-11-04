@@ -225,58 +225,84 @@ $ f'_("backward")(x_2) = 2 space (f(x_2) - f(x_6))/h $<eq_49>
 
 // ---------------------------- first 3d results ---------------------------- //
 At this point, displacements, first and second derivatives are known, such that the curvature can be calculated according to @eq_28.
-For this purpose, a study was conducted with:
-- A pressure range of [15;110] MPa ≜ [150;1100] bar linearly distributed with 30 values
-- Lift coefficients Ca = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]
-- A load factor of 3.72
+IN order to cover a braod specturm, them #gls("swith") model was computed with the variations of internal pressure between $15 "MPa"$ to $110 "MPa"$ or  $150 "bar"$ to $1100 "bar"$  with linearly spaced 30 values.
+While $150 "bar"$ can be assumed to be too small for it providing econolical use in avaition, it is a high value, that can be used within experiemtnal testing environments.
+Next, $1100 "bar"$ is above the maximal pressure that can be currently stored within a tank type IV as mentioned in @chap_1_0_3.
+However, in @chap_1_0_3 it was mentioned that the tank type V is supposed to provide a maximal pressure of $1000 "bar"$. 
+First, because it is assumed that technical advantages are likely in future, they value of $1100 "bar"$ is justified. 
+Second, in @chap_1_0_3 it was explained that the tank type IV was selected as the current best compromiss between safety and econolical demand. However, it was also mentioned that once the tank type V technology advances enough, it could be the preferred option.
+The lift coefficient $C_L$ variation $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ was selected.
+It is supposed to cover lift coefficients for small aircraft and big aircraft with potenital high-lift devices in appliaction @Wild2022.
+This corresponds to 180 totial variations. 
 
-This corresponds to 180 variations of internal pressure and Ca values. For the small aircraft, a Ca value of ~1.0 is expected at this time. Values Ca ≥ 2 are highly unlikely for small aircraft and already enter the high-lift range. However, it is known about the tank tubes that they are designed to be very rigid. Therefore, the question naturally arises as to what limits the tank tubes have.
+// a = np.linspace(15,110,30)
+// a[11] = 51.034
+An illustrative exmaple of the displacment on the top left, the strains (first order derivate) on the top right, the second order derivate on bottom left and resulting curvature on bttom right for a pressure of $ p approx 510 "bar"$ and a lift coefficient of $C_L ~ 0.6$ is depicted in @fig_42.
 
-[Figure 34: Absolute curvatures (1/mm) for entire wing with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+// -------------------------------- 3d plots -------------------------------- //
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/8_Skin_Ca_06_P_510.png", 
+  width: 100%),
+  caption: [Illustrative depcition of the displacments ([mm], top left), first order derivative ([-], top right), second order derivative ([$"mm"^(-1)$], bottom left) and the curvature ([$"mm"^(-1)$], bottom right) for a #gls("swith") model with $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$. ],
+) <fig_42>
 
-Figure 34 shows the absolute curvatures for the entire wing including the tanks with Ca = 1.5 and the four pressure values of [15, 31.37, 60.86, 110] MPa ≜ [150, 313.7, 608.6, 1100] bar. The absolute value was calculated according to the usual Euclidean norm, as per formula @eq_33, where the indices x, y, and z stand for the curvature component in the respective spatial direction.
+
+The magntiude value are calculated according to the usual Euclidean norm.
+For the curvature they are given per formula @eq_33, where the indices $kappa_x, kappa_y$, and $kappa_z$ stand for the curvature component in the respective spatial direction.
 
 $ kappa_("mag") = sqrt(kappa_x^(2) + kappa_y^2 + kappa_z^2) $<eq_33>
 
-Since particular emphasis is placed on the curvature behavior of the tubes, the latter is shown for the tubes in Figure 35.
+Since for #glspl("swith") the strucutral behaviour of the tanks is of utmost importance, the same information  is analogguglsy  depicted soley for the tanks in @fig_43.
 
-[Figure 35: Absolute curvatures (1/mm) for tanks with Ca = 1.5 and [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
 
-For the final question regarding the influence of the fill medium, it is more purposeful to only display the elements which lie below the critical curvature $kappa < (kappa_"crit" = 0.4 1/m)$. Through this, it can be quickly determined visually whether, firstly, the critical curvature is exceeded. Secondly, in case of exceeding, further concrete investigations can be conducted. For this purpose, Figures 36 and 37, with the previously mentioned Ca and pressure values, only show the areas which fulfill the critical condition $kappa < (kappa_"crit" = 0.4 1/m)$. Initially, it can be determined that with increasing pressure, the curvatures at the inner and outer wing, as well as at the landing gear and engine connections, increase. In some places, the critical curvature is also exceeded.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/9_Tubes_Ca_06_P_510.png", 
+  width: 100%),
+  caption: [Illustrative depcition of the displacments ([mm], top left), first order derivative ([-], top right), second order derivative ([$"mm"^(-1)$], bottom left) and the curvature ([$"mm"^(-1)$], bottom right) soley for the tubes of #gls("swith") model with $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
+) <fig_43>
+
 
 // ---------------------------- model specialitis --------------------------- //
-To evaluate whether exceeding these curvatures can be counted as a final end result, a deeper analysis of the results should be conducted. It can be observed that particularly high curvatures occur on the skin of the inner wing. This is because a placeholder value for stiffness is used here. It is an area that extends into the fuselage. Therefore, skin stiffness is virtually reduced to a very small value. The fuselage area was not removed as this simplifies aerodynamic modeling and calculations.
+In order to interpret the curvatrure results for real-world applicaiton, additional aspects needs to be incorporated through a deeper analysis. For that @fig_44 shall be viewed. 
+The visualization shows the first-order derivatives of displacement (strain), using a visual scaling factor to enhance the visibility of critical regions. This scaling is used to highlight areas of the wing that require special attention during real-world simulation result interpreation.
 
-At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffnesses are used. Due to the stiff circumferential rings, abrupt stiffness differences are to be expected in their vicinity, as can also be seen in the shown figures. The described behavior becomes particularly apparent when considering the first derivative of displacement. The first derivative of displacement in absolute value for the wing and tank for a pressure value of 15 MPa ≜ 150 bar, Ca = 1.5, and a scaling factor of 900 is given in Figure 38.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/10_Tubes_Ca_06_P_510.png", 
+  width: 100%),
+  caption: [Focused and scaled depiction of the first order derivates (strain) with $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.
+  Top left: startof inner wing, top right: fuselage, bottom left: ending of inner wing and tubes, bottom right, outer wing ending.],
+) <fig_44>
 
-[Figure 36: Only absolute curvatures (1/mm) visible for entire wing which satisfy $kappa < (kappa_"crit" = 0.4)$ with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
 
-[Figure 37: Only absolute curvatures (1/mm) visible for tanks which satisfy $kappa < (kappa_"crit" = 0.4)$ with Ca = 1.5, [pupper,left = 15, pupper,right = 31.37, plower,left = 60.86, plower,right = 110] MPa]
+With the top left side of @fig_44 it can be observed that particularly high strains occur on the skin of starting of the inner wing. This is because a dummy value for stiffness is used here. It is an area that extends into the fuselage. Therefore, skin stiffness is virtually reduced to a very small value. The fuselage area was not removed as this simplifies aerodynamic modeling and calculations.
+At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffnesses are used. Due to the stiff circumferential rings, abrupt stiffness differences are to be expected in their vicinity, as can also be seen in the top right for the landing gear and bottom left for the tube ending side of @fig_44.
+One another 
 
+If the first derivative shows jumps, this will also be reflected in the second derivative. Since the curvature is based on the first and second derivatives of displacement, peculiarities are also to be expected at these points. 
+If it is assumed that the first derivative is much smaller than 1 ($u' << 1$), then the curvature @eq_28 can be written as @eq_34 @Gross2021.
+Thus, the curvature $kappa$ shows the direct proportionality to the second order derivative $u$. 
 
-[Figure 38: First derivative of displacement in absolute value for wing and tank with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
-
-Here, the effects of the stiffness placeholder near the wing root are particularly well visible. Further abrupt behavior in the first derivatives is shown in Figure 39.
-
-[Figure 39: First derivative of displacement in absolute value for important sections with Ca = 1.5, p = 15 MPa and a scaling factor of 900]
-
-If the first derivative shows jumps, this will also be reflected in the second derivative. Since the curvature is based on the first and second derivatives of displacement, peculiarities are also to be expected at these points. If it is assumed that the first derivative is much smaller than 1 ($u' ≪ 1$), then formula @eq_34 shows the direct proportionality. We already know that the first derivative exhibits abrupt behavior. However, this does not necessarily contradict u' ≪ 1. It is possible that two values differ by several orders of magnitude, yet both values are still significantly smaller than 1.
 
 $ kappa approx u'' $<eq_34>
 
-Through the deeper analysis of the curvature results, it can be noted that local curvature elevations are to be expected for some areas. These must be consciously neglected when answering the question about the influence of the fill medium, as it would otherwise lead to misinterpretations. Furthermore, it can be stated that the curvature behavior of the outer wing cannot be part of the evaluation since the tanks are only located in the inner wing. If all discussed modeling measures and their consequences are considered, the following conclusion can be reached: In the undisturbed regions, it is clearly recognizable that the critical curvature is not exceeded. Therefore, it can be assumed that the fill medium has no significant influence on the maximum sustainable bending moment. Here, it is important to have clearly defined that the obtained results are only valid within the framework of the made assumptions. The calculations were solved linear-statically; gas compression effects and possible nonlinearities were not considered.
+It already know that the first derivative exhibits abrupt behavior. However, this does not necessarily contradict $u' << 1$. 
+It is possible that two values differ by several orders of magnitude, yet both considered sidplacement values are still significantly smaller than 1.
+Through the deeper analysis of the curvature results, it can be noted that the numiercal output of @eq_28 does not suffice to verrify wheter the critical curvature was exceeded.
+The output needs to be interperted with background knowedlge about the derivation of curvature and enginerring background to asses how to asses local curvature jumps.
+In order to aswer the answering the question about the influence of the fill medium, only the structral representative areas should be used to determine wheter the critical curvature $kappa_"krit"$ was exceeded or not. Otherwise it would otherwise lead to misinterpretations. 
 
-In summary, an extensive investigation was conducted to determine whether the filling medium has an influence on the maximum sustainable bending moment. Through subsequent comparison with a critical curvature, it was found that within the scope of K2H2, the influence of the filling medium can be neglected. Thus, filling the tanks with water instead of hydrogen would be permissible in the experimental investigation.
+In order to highlight the importance of proper engeering assesment one more aspect that needs to be considered for real world assement shall be given. 
+Since the impact of the filling agent only involves the tubes, the outer wing cannot be part of the evaluation. The ratioanle behind this is that that the tanks are only placed within the inner wing.
+With the the interpreation based on the realworld related simulation model of a #gls("swith") and the in depth interpreations, some fundamental approach for properlyx asseing the cricitcal curvature should have been provided.   
 
+// ---------------------------- transition to 2d ---------------------------- //
+The results up to here were shown in three dimensions. However, evaluating the results in 2D is significantly less prone to errors and simpler to interpret. Additionally, perfroaing additonaly investigations on 2d data is generally less complex and less ocmputaitonal demanding than wokring on 3d data. 
+For these reasons, the influence of the filling medium on the maximum sustainable bending moment should be investigated using averaged curvatures.
 
-// // -------------------------------------------------------------------------- //
-
-
-// == II.15 Influence of the filling medium through averaged curvature
-
-// In the previous section, it was derived how the question of the filling medium's influence on the maximum sustainable bending moment can be answered by calculating the curvature. The results were shown in three dimensions. However, evaluating the results in 2D is significantly less prone to errors and simpler to interpret. Additionally, this allows reliance on further corroborating investigation within an innovative project. For these reasons, the influence of the filling medium on the maximum sustainable bending moment should be investigated using averaged curvatures.
-
-// There are two possibilities for averaging the curvatures. In the first method, the displacements, derivatives, and curvatures are calculated for the entire structure. Once these are available, the curvatures can be averaged along the wing span. To make the concept easier to understand, see Figure 40. The vertical and depth curvature components are added up and averaged for each individual span value. The second method calculates the displacements and averages them directly along the span. The averaged displacements are used to calculate the corresponding averaged derivatives and curvatures. In the first method, averaging occurs only after obtaining the curvatures, whereas the second method begins directly with averaged displacements.
+There are two possibilities for averaging the curvatures. In the first method, the displacements, derivatives, and curvatures are calculated for the entire structure. 
+Once these are available, the curvatures can be averaged along the wing span. 
+To make the concept easier to understand, see Figure 40. 
+The vertical and depth curvature components are added up and averaged for each individual span value. The second method calculates the displacements and averages them directly along the span. The averaged displacements are used to calculate the corresponding averaged derivatives and curvatures. In the first method, averaging occurs only after obtaining the curvatures, whereas the second method begins directly with averaged displacements.
 
 // To answer the question of whether there is a difference between the two presented approaches, equations (20) and (21) should first be considered. 
 
@@ -346,3 +372,4 @@ In summary, an extensive investigation was conducted to determine whether the fi
 // [Figure 45: Excerpt from the results of averaged curvatures along the span for $C_L = 1.0$ and a pressure value of $p = 15$ MPa]
 
 // In summary, the investigation with averaged curvature has also shown that the influence of the filling medium should be negligibly small at expected $C_L$ values and pressures.
+

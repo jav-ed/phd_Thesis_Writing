@@ -43,7 +43,6 @@
 
   pagebreak(weak:true)
 
-
   // required for lists of figures/table 
   show outline: set par(leading: 1em) // For spacing between level-2+ entries
   show outline: set block(spacing: 1em) // For spacing before level-1 entries
@@ -58,7 +57,8 @@
   // show: bod => init_latex_figs(bod, [Figure])
 
   // the second attempt - should be more powerful
-  show: latex_figs
+  // TODO - adding heading creates iteration issues
+  // show: latex_figs
 
   heading("List of Figures", level:1, numbering:none)
   outline(
