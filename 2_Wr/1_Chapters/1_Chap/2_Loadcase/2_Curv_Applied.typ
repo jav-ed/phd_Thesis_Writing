@@ -11,7 +11,6 @@ explain which methods availabel to derive the gradeitns numerically. which chose
 give some inution behind the applicaiton of the FDM methods
 
 
-
 In this section, it will be explained how it was decided for #gls("swith", long:true) whether the fill medium had a noteworthy influence on structural behavior. 
 For this purpose, it will be explained why an approach using critical curvature can be pursued. Subsequently, it will be discussed how the curvature can be calculated, which methods are available for this, and why the final method was chosen. Finally, the results of the conducted curvature study will be shown.
 
@@ -57,7 +56,6 @@ The solution of the #gls("fem") model provides, among other things, the displace
 
 
 // --------------------------- explanation starts --------------------------- //
-// ---------------------------------- here ---------------------------------- //
 @fig_35 shows an extract of the displacement values in the three spatial directions of all nodes of an element.
 
 #figure(
@@ -93,7 +91,6 @@ Common computers use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwol
 // ------------------------- regular numerical diff ------------------------- //
 The Forward and Backward methods are first-order methods and are in most cases less accurate than the Central Difference method, but only need one support point for calculating the derivative. This makes them faster in execution and simpler in implementation. Forward and Backward methods differ in the quality of their derivative depending on the case. Usually, a step size study must be conducted to find a suitable value. The latter is defined via a convergence criterion, where the optimum represents a minimum of rounding error and truncation error. According to @mdobook a stepsize of $h approx 10^(-6)$ often procudes high quality ouptut. However, in the case of a structre mesh, the step size $h$ is the distance between the nodes of interest. Such a small distance between the nodes is unusual in stuctrual mechanics. For #gls("fem") the step size will be provided by the mesh size that can accurately solve the given mechanical description.
 
-// ---------------------------------- here ---------------------------------- //
 // ------------------------------ complex step ------------------------------ //
 The Complex-Step is a second-order method and can be mathematically be proven to be one as for instance done in @mdobook. 
 The amazing thing, however, is that only one support point is needed for this. For it to be applied, a mathematical function is needed. 
@@ -101,7 +98,7 @@ Point values and their distance, as with the known #gls("fd") methods, are not s
 However, the truncation error remains (second-order method). The mathematical definitions of the #gls("fd") methods are given in formulas @eq_29 - @eq_31.
 The variables are denotes as derivative function $f'$, discretization points $x_i$ and step size $h$ or distance between two discretization points $x_i$ and $x_j$, where $i != j $. 
 // ---------------------------- differential eqs ---------------------------- //
-$ f'_("forward")(x_0) = (f(x_1) - f(x_0))/h $<eq_29>
+$ f'_("forward")(x_1) = (f(x_2) - f(x_1))/h $<eq_29>
 $ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
 $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
 
@@ -174,21 +171,61 @@ The rationale behind that is to strnegened the universal applicability of this w
 
 By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach remains broadly applicable. This generality increases the practical value of the presented methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is obtained.
 
-// ---------------------------------- here ---------------------------------- //
 // ----------------------------- steps with fem ----------------------------- //
-// TODO add here explanaitons about distored mesh and impact on actual stpe size
-// all fomrulas 
-having explained .. concrete example how to use the fwd to .. edge not required or backward fd
+Having laid out the general nature of the presented approch, concrete steps with the #gls("fd") method for the curavture derivation shall be given.
+For the concrete example it is assumed that the stutrucre model is discretized through elements as depcited in @fig_38. 
+// TODO proper linking to the text above
+Again, while the concrete example is based on a #gls("fem") meshing approach, the apporach presented is general applicable to other methods as well.
+With having the local displacment values and the corresponding coordinates, five of the eight required derivates per element can be obtained without having to consider any neighborhood relationships.
+These are given in @eq_37 to @eq_41, where the function $f(x_i)$ is to return the displacment value of the discretization point $x_i$.
+
+$ f'_("forward")(x_0) = 2 space (f(x_4) - f(x_0))/(h) $<eq_37>
+$ f'_("forward")(x_4) = 2 space (f(x_1) - f(x_4))/(h) $<eq_38>
+$ f'_("forward")(x_7) = (f(x_5) - f(x_7))/(h) $<eq_39>
+$ f'_("forward")(x_3) = 2 space (f(x_6) - f(x_3))/(h) $<eq_40>
+$ f'_("forward")(x_6) = 2 space (f(x_2) - f(x_6))/(h) $<eq_41>
+
+In order to  obtain the obtain the derivates of the three remaining discretization points $x_1, x_5 "and" x_2$ a neighboring element is required. According to @fig_39 the ending nodes of the one element are the starting nodes of the next element.
+With this, @eq_37 to @eq_41 can be used again.
+In order to derive the second order gradient of the displacment the output of @eq_37 to @eq_41 can be used and inserted as input for @eq_42 to @eq_46.
+
+$ f''_("forward")(x_0) = 2 space (f'(x_4) - f'(x_0))/(h) $<eq_42>
+$ f''_("forward")(x_4) = 2 space (f'(x_1) - f'(x_4))/(h) $<eq_43>
+$ f''_("forward")(x_7) = (f'(x_5) - f'(x_7))/(h) $<eq_44>
+$ f''_("forward")(x_3) = 2 space (f'(x_6) - f'(x_3))/(h) $<eq_45>
+$ f''_("forward")(x_6) = 2 space (f'(x_2) - f'(x_6))/(h) $<eq_46>
 
 
-Concrete steps for calculating the first and second derivatives are given in Figures 32 and 33. Here, it should become apparent that the second derivative can only be calculated once the first derivative is available. When all derivatives are known, they can be inserted into the curvature formula @eq_28. At this point, displacements, first and second derivatives, as well as curvatures are known for all relevant nodes of the FE mesh. By relevant nodes, it is meant that the presented method does not calculate derivatives and curvatures for the nodes at the end of the wing span. The idea is that the required quantities are calculated for the left and middle areas of an element. This can be understood using Figure 32. Once the same quantities are to be calculated for the neighboring element, the left nodes of the new element are the right nodes of the old element. This latter statement can be verified using @fig_39. Thus, the curvatures are calculated for all nodes except the outer ones at the wing tip.
+In the presented procedure, a constant element size of $h$ was assumed.
+Furthermore, it was assumed that the centering nodes would be ideally in the middle.
+Thus, for the step size either $h$ or $h/2$ could be used, depending on the discretization points of interest.
+However, in practical applicaiton it is possible that the meshes are distored, different sized oder type of elements are used. 
+In these cases the element size cannot be taken as constant, thus, the geomtrical duistance between the diuscretization points of consideration $h$ needs to evaltued for potentially every calculation.  
+While @eq_37 to @eq_46 for the forward #gls("fd") method with neighboring relationships can be used to derive the first and second order derivates of the displacments, the derivates for the global right ending nodes need special consideration.
+The issue is visualized in @fig_41, where the global right ending discretization points are shown in red. 
 
-It would certainly be possible to calculate the curvature values for these as well. However, a single span-node row can be neglected. The second, much more important point is that the curvatures are significant in the area where the tanks are located under the wing skin. The wing tip is located on the outer wing, and the tanks already end in the inner wing. Therefore, the results can be used for evaluation without concerns.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/7_Ending.svg", 
+  width: 47%),
+  caption: [Limitation of purley using the forward #gls("fd") method for global red right ending discretization points.],
+) <fig_41>
 
-[Figure 32: Calculation of the first derivative on a #gls("fem")]
-[Figure 33: Calculation of the second derivative on a #gls("fem")]
+// ----------------------------- backward story ----------------------------- //
+In order to obtain the the gradients of the red points, as depcited in @fig_41, using the forward #gls("fd") method, additional discretization points to the right of them  would be needed.
+However, since the red points are the last points, only discretization points from the left can be used used.
+Therefore, for these points the backward #gls("fd") method could be leveraged.
+Nevertheless, it might not be required to implemment such a feature.
+This depends on the relevance of the most outer part. If the curvature values of the most right nodes are not of relevance, dummy values could be inserted.
+In the event of requing the most outer red nodes, the three missing discretization points $X_1, x_5 "and" x_2$ according to @fig_38, can be obtained with @eq_47 to @eq_49 using the backward #gls("fd") method.
 
-As a brief overview of where we are and what we want. The overarching question is: Can the influence of the fill medium be neglected in an experimental investigation? To answer this, we need to check whether the critical curvature is exceeded. The method for calculating this has already been described. Now the results will be discussed. For this purpose, a study was conducted with:
+$ f'_("backward")(x_1) = 2 space (f(x_1) - f(x_4))/h $<eq_47>
+$ f'_("backward")(x_5) = (f(x_5) - f(x_7))/h $<eq_48>
+$ f'_("backward")(x_2) = 2 space (f(x_2) - f(x_6))/h $<eq_49>
+
+
+// ---------------------------- first 3d results ---------------------------- //
+At this point, displacements, first and second derivatives are known, such that the curvature can be calculated according to @eq_28.
+For this purpose, a study was conducted with:
 - A pressure range of [15;110] MPa ≜ [150;1100] bar linearly distributed with 30 values
 - Lift coefficients Ca = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]
 - A load factor of 3.72
