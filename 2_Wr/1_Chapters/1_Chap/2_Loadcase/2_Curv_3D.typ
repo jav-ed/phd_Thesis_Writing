@@ -316,6 +316,6 @@ Since the explanations started from the displacements basis, the preented method
 These could be numeircla simualtion methods, but the displacment data could also be obtained from experimental investigations.
 With having provided some examples of how to perform the assesment of the critical curvature investigation, it should have become clear why for complex structres like aircraft it is not easy to directly comapre obtained curvatrure results with the critical curvatrure value.
 The final answer of interpreation was, that for an experimtnal investigation hydrogen could be replaced with another filling agent without it having an impact on the maximal bearbale bending moment.
-Finally the diffcultiy of assesing the critical curvature in 3d was acknlwoedged and the transtion to @chap_3_0_3 was introduced.
+Finally the diffcultiy of assesing the critical curvature in 3d was acknlwoedged and the transtion to next @chap_3_0_3 was introduced.
 
 ])

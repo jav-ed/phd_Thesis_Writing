@@ -9,14 +9,15 @@ THis is of vital improtance, when attempting to replace hydrogen in an experimtn
 The lack of current technical state of the art for deailing safe with hydrogen for long tubes and high pressures is explained in  @chap_2_0_1 and @chap_2_0_2.
 In @chap_3_0_2, it was explained how the curvature could be calculated when displaxment data and correspoinding coorindate ifnromation were available.
 While, the 3d curvature results are valid, interpreting curvature values for complex 3d geomtries like the #gls("swith", long:true) has, is a demanding and error prone task.
-Therefore in this section two concepts will be introduced, how the 3d curvature data can be transfered to 2d curvature results.
+Therefore in this section two concepts will be introduced, how the 3d curvature data can be transfered to 1d curvature results.
 This is supposed to allow the signitficatnly ease the curature interpreation.
 // too long, break into multiple sentces
-As a consequence, statements about the execcidiung critical curvuate and consequently deciding wheter the filling agent has an impact on the strucutral behaviour or not is not only made  easier but also less error-prone and thus more relaible. 
+As a consequence, statements about the execcidiung critical curvuate and consequently deciding wheter the filling agent has an impact on the strucutral behaviour or not is not only made  easier but also less error-prone and thus more reliable. 
 
 
-The results up to here were shown in three dimensions. However, evaluating the results in 2D is significantly less prone to errors and simpler to interpret. Additionally, perfroaing additonaly investigations on 2d data is generally less complex and less ocmputaitonal demanding than wokring on 3d data. 
-For these reasons, the influence of the filling medium on the maximum sustainable bending moment should be investigated using averaged curvatures.
+The curvatre cauclations and the critical crtuvature assment was in preiovus @chap_3_0_2 were made in three dimensions. However, evaluating the results in 1d is significantly less prone to errors and simpler to interpret. Additionally, performing additonaly investigations on 1d data is generally less complex and less ocmputaitonal demanding than wokring on 3d data. 
+For these reasons, the influence of the filling medium on the maximum sustainable bending moment is motivated to be conducted on 1d curvatures.
+In order to transfer 3d curvature values into one dimension, the curvature values can be averaged along the two other axis
 
 There are two possibilities for averaging the curvatures. In the first method, the displacements, derivatives, and curvatures are calculated for the entire structure. 
 Once these are available, the curvatures can be averaged along the wing span. 
