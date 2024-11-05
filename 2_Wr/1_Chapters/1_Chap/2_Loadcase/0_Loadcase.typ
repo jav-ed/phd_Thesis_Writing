@@ -14,8 +14,7 @@ The current technical capabilities for safely handling high-pressure hydrogen in
 
 The primary objective of this section is to determine whether hydrogen can be substituted with an alternative filling agent without substantially altering the structural properties that would invalidate test results. 
 
-// TODO include  chap_3_0_2
-To address this question, the most critical load cases will be examined in @chap_3_0_0. These findings will inform the central question addressed in @chap_3_0_1: Can hydrogen be replaced with an alternative medium in the tanks without significantly affecting the structural properties during experimental structural investigation?
+To address this question, the most critical load cases will be examined in @chap_3_0_0. These findings will inform the central question addressed in @chap_3_0_1 to @chap_3_0_3: Can hydrogen be replaced with an alternative medium in the tanks without significantly affecting the structural properties during experimental structural investigation?
 
 
 // Title was tested and is inshallah fine
@@ -138,7 +137,7 @@ While the static load testing sequence provides a framework for structural valid
 As elaborated in @chap_1_0_3, the internal pressure significantly influences the weight, costs, and safety characteristics of the pressure vessel.
 The implications of pressure selection can be analyzed from multiple perspectives. From an economic standpoint, higher pressure values enable increased hydrogen storage capacity. From a structural perspective, elevated pressure values intensify the loads on both the pressure vessel and the wing structure due to the structural integration. The safety implications, as elaborated in @chap_2_0_1 and @chap_2_0_2, indicate that higher pressure values increase the risk of self-ignition in case of leakage. From a practical testing perspective, as explained in @chap_1_0_6 with reference to @tab_14, experimental structural validation tests are constrained by maximum allowable pressure limits.
 Furthermore, @chap_2_0_2 established a systematic pathway for conducting structural validation tests with #glspl("swith"). Determining appropriate internal pressure values when using #gls("cgh2") as the filling agent presents significant challenges, with substantial implications for the safety of the #gls("swith"), the test environment, and human operators. 
-In @chap_3_0_1 it is laid out whether the filling agent can be replaced with another medium without changing the structural properties. These findings should be used to make a more sophisticated decision.
+In @chap_3_0_1 to @chap_3_0_3 it is laid out whether the filling agent can be replaced with another medium without changing the structural properties. These findings should be used to make a more sophisticated decision.
 
 // ------------------------------- v-n-diagram ------------------------------ //
 Having established the critical nature of vertical gust loading for #glspl("swith"), it is essential to understand how these loads are determined in aircraft design. Vertical gust loads can be systematically obtained and analyzed through V-n diagrams, also known as flight envelopes or V-g diagrams. 

@@ -6,15 +6,18 @@
 // TODO
 // Title Check
 === Application for Impact Filling Agent<chap_3_0_2>
-while fem can provide strains, in the event where only displacements and corresponding locations are known, more general method shall be given.
-explain which methods availabel to derive the gradeitns numerically. which chosen and why.
-give some inution behind the applicaiton of the FDM methods
+Critical loads were mentioned in @chap_3_0_0.
+The relationship between curvature and the question of filling agent having an an impact on the structral properties were provided in @chap_3_0_1.
+With these as basis the curvature of a #gls("swith", long:true) can be calculated.
+However, for the final decision wheter hydrogen can be replaced through antoher filling agent for an experimental strcutral validation test, additional vital insghts are provided.
+Among them are the concept of a critcal curvature and how use it for real world aaplications.
+The fact that it is not sufficient to simply use the obtained curvature and compare it with critical curvature espeically for real world applications is demonstrated through some examples.
+One highlight that the presented curvature calculation method is that it is not bound to one single method.
+Thus, the curvature can be calculated through the output of experimental results as well as through nuermical simualtions. 
+With this feature, the provided method can be assumed to be more generaly appliucabale.
 
 
-In this section, it will be explained how it was decided for #gls("swith", long:true) whether the fill medium had a noteworthy influence on structural behavior. 
-For this purpose, it will be explained why an approach using critical curvature can be pursued. Subsequently, it will be discussed how the curvature can be calculated, which methods are available for this, and why the final method was chosen. Finally, the results of the conducted curvature study will be shown.
-
-Previously, it was already explained that this thesis' plan does not provide for cost-intensive experimental investigations. Therefore, these cannot be conducted. However, an alternative method to still make qualitative statements for the desire of offering inital findings for conducating experimtnal statical strucutral validation tests.
+Within this work no cost-intensive experimental investigations can be conducated. Therefore, these cannot be conducted. However, an alternative method to still make qualitative statements for the desire of offering inital findings for conducating experimtnal statical strucutral validation tests.
 These can be found upon careful examination of the results from @Liu2019. @fig_33 shows that the bending moment curves, regardless of fill medium and pressure, have similar curvature values for a certain range. 
 Through this, a critical curvature could be defined, up to which the bending moment is independent of fill medium and pressure. @fig_34 shows two possible critical values for curvature. 
 
@@ -229,8 +232,10 @@ IN order to cover a braod specturm, them #gls("swith") model was computed with t
 While $150 "bar"$ can be assumed to be too small for it providing econolical use in avaition, it is a high value, that can be used within experiemtnal testing environments.
 Next, $1100 "bar"$ is above the maximal pressure that can be currently stored within a tank type IV as mentioned in @chap_1_0_3.
 However, in @chap_1_0_3 it was mentioned that the tank type V is supposed to provide a maximal pressure of $1000 "bar"$. 
-First, because it is assumed that technical advantages are likely in future, they value of $1100 "bar"$ is justified. 
-Second, in @chap_1_0_3 it was explained that the tank type IV was selected as the current best compromiss between safety and econolical demand. However, it was also mentioned that once the tank type V technology advances enough, it could be the preferred option.
+
+While in @chap_1_0_3 it was explained that the tank type IV was selected as the current best compromiss between safety and econolical demand. However, it was also mentioned that once the tank type V technology advances enough, it could be the preferred option.
+Furthermore, because it is assumed that technical advantages are likely in future, it is possible that tank type V can store more hydrogen under higher pressures than $1000 "bar"$ or even above $1100 "bar"$. 
+Moreover, having selected thus a high pressure values also hihglights the fact that increasing the pressure in a simualtion is muich easier than in a practical experimental test. 
 The lift coefficient $C_L$ variation $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ was selected.
 It is supposed to cover lift coefficients for small aircraft and big aircraft with potenital high-lift devices in appliaction @Wild2022.
 This corresponds to 180 totial variations. 
@@ -295,81 +300,22 @@ In order to highlight the importance of proper engeering assesment one more aspe
 Since the impact of the filling agent only involves the tubes, the outer wing cannot be part of the evaluation. The ratioanle behind this is that that the tanks are only placed within the inner wing.
 With the the interpreation based on the realworld related simulation model of a #gls("swith") and the in depth interpreations, some fundamental approach for properlyx asseing the cricitcal curvature should have been provided.   
 
-// ---------------------------- transition to 2d ---------------------------- //
-The results up to here were shown in three dimensions. However, evaluating the results in 2D is significantly less prone to errors and simpler to interpret. Additionally, perfroaing additonaly investigations on 2d data is generally less complex and less ocmputaitonal demanding than wokring on 3d data. 
-For these reasons, the influence of the filling medium on the maximum sustainable bending moment should be investigated using averaged curvatures.
 
-There are two possibilities for averaging the curvatures. In the first method, the displacements, derivatives, and curvatures are calculated for the entire structure. 
-Once these are available, the curvatures can be averaged along the wing span. 
-To make the concept easier to understand, see Figure 40. 
-The vertical and depth curvature components are added up and averaged for each individual span value. The second method calculates the displacements and averages them directly along the span. The averaged displacements are used to calculate the corresponding averaged derivatives and curvatures. In the first method, averaging occurs only after obtaining the curvatures, whereas the second method begins directly with averaged displacements.
+If all menetioned modeling measures and their consequences are considered, the following conclusion can be reached: In the undisturbed regions, it can be recognizable that the critical curvature is not exceeded. Therefore, based on utlized #gls("fem") simulation model of a potential real world #gls("swith") design, it can be assumed that the fill medium has no significant influence on the maximum sustainable bending moment. 
+Yet, it can be oberved that the intepreation of curvature calculations for a complex 3d model is tedious task to do.
+Thus, is is prone to errors when not careful investigations are made.
+Therefore in the upcoming @chap_3_0_3 the natrual progression was made to introduce to a method that shall help to obtain results easier to interpret and thus reduce the likelhood of making mistakes of the critical curvature assement.
 
-// To answer the question of whether there is a difference between the two presented approaches, equations (20) and (21) should first be considered. 
+// --------------------------------- summary -------------------------------- //
+#summary_([
 
-// Abbildung 40: Konzept der Mittelung der Krümmungen entlang der Flügelspannweite
+In summary, the calucaliton of the curvature and its interpreations was provided.
+For this a #gls("fem") simulaiton model for a #gls("swith") model was chosen.
+It was explained how the required derivatives could be required.
+Since the explanations started from the displacements basis, the preented method can be leveraged for different methods.
+These could be numeircla simualtion methods, but the displacment data could also be obtained from experimental investigations.
+With having provided some examples of how to perform the assesment of the critical curvature investigation, it should have become clear why for complex structres like aircraft it is not easy to directly comapre obtained curvatrure results with the critical curvatrure value.
+The final answer of interpreation was, that for an experimtnal investigation hydrogen could be replaced with another filling agent without it having an impact on the maximal bearbale bending moment.
+Finally the diffcultiy of assesing the critical curvature in 3d was acknlwoedged and the transtion to @chap_3_0_3 was introduced.
 
-
-// Equation (20) shows the case where all curvatures are first calculated and then averaged over these. In this case, only two curvature values are used for averaging for illustration. In equation (21), the derivatives are first averaged and then the mean curvature is calculated.
-
-// $ kappa_("mean",1) = (u_1 ^'' / ( (1 + u_1 ^') ^(3/2)) + u_2 ^'' / ( (1 + u_2 ^') ^(3/2)))  1/2 $ <20>
-
-// $ kappa_("mean",2) = ((u_1 ^'' + u_2 ^'')/2) / ([1 +
-//  (u_1 ^' + u_2 ^')/2] ^(3/2)) $ <21>
-
-// Since it is not directly apparent from this form of the equations whether there is a difference between the two variants, equations (22) and (23) should be inserted as examples. This leads to equations (24) and (25).
-
-// $ u_1 = cos(x) \
-//    u_2 = sin(x) $ <22>
-
-// $ u_1' = -sin(x) \
-//    u_2' = cos(x) \
-//    u_1'' = -cos(x) \
-//    u_2'' = -sin(x) $ <23>
-
-// $ kappa_("mean",1) = (-cos(x)/(1 - sin(x))^(3/2) + (-sin(x))/(1 + cos(x))^(3/2))(2) $ <24>
-
-// $ kappa_("mean",2) = (-cos(x) - sin(x))(2(1 + (-sin(x) + cos(x))/2)^(3/2)) $ <25>
-
-// For equation (25), the relationship in equation (26) was assumed, which can generally be assumed for differentiation:
-
-// $ (u_1'' + u_2'')/2 = (u_1 + u_2')/2 \
-//    (-cos(x) + (-sin(x)))/2 = (-sin(x) + cos(x))/2 \
-//    (f_1 + f_2)' = f_1' + f_2' \
-//    (f_1 dot f_2)' != f_1' dot f_2' $ <26>
-
-// Finally, an angle of $x = pi/2$ should be assumed for sine and cosine. This results in equations (27) and (28). Formula (29) shows as the final result that it makes a difference how the curvatures are averaged.
-
-// $ kappa_("mean",1)(x = pi/2) = 0 + (-1)(1 + 0)^(3/2) = -1 $ <27>
-
-// $ kappa_("mean",2)(x = pi/2) = (-1)(2(1 + (-1)/2)^(3/2)) approx (-1)(2 dot 0.353) $ <28>
-
-// $ (kappa_("mean",1) = -1) != (kappa_("mean",2) approx (-1)(2 dot 0.353)) $ <29>
-
-// Another important aspect that must be considered when calculating curvature averaging is the neighboring elements and nodes. Node overlaps in the FE mesh create new nodes on the wing and tank mesh. The distance from existing nodes to the new nodes can be very small along the span. Detailed investigation shows that this is the case. When looking at Figure 41 left, it can be seen that entries 001-008 differ minimally in their span position.
-// The distances to the respective subsequent entries are shown on the right in the figure. The slightly varying nodes, which are all located in one element each, would not be counted as a single span point in a conventional averaging. This would distort the averaging at these points, as erroneous abrupt curvature deviations are to be expected at these positions. The following can be imagined: if there were 10 nodes, 5 of which had a positive curvature and the other 5 a negative curvature. The first 5 values would be "coincidentally" assigned to point $y_1$ and the other 5 values to point $y_2$. If this were plotted, a jump or discontinuity would become visible in a very small distance $(Delta y approx 10^(-9))$. Therefore, nodes that have a distance according to equation (30) were combined into one node for averaging.
-
-// [Figure 41: Left: Chronologically ordered span coordinates of individual nodes. Right: Distance to neighboring entries or span coordinates of individual nodes among each other]
-
-
-// $ "dist"(y_1, y_2) <= 0.9 $ <30>
-
-// For averaging, all line elements (girders, engine and landing gear connections, and stiffening elements) were deliberately neglected. The curvatures are calculated exclusively for the skin and tubes (eight-node shell elements). If the line elements were included in the calculation of curvature averaging of wing and tank, the result would be incorrect. For example, the curvatures of the engine nodes do not influence the curvature behavior of the wing and tanks.
-
-// For presenting the following results, first all curvatures of the individual nodes were calculated and then averaged as described. For safe and easy evaluation of the results, all averaged curvatures for all selected pressure values were saved as an interactive animation in an HTML file. This allows the curvature curves of individual pressure values to be displayed first with a click. Areas that are classified as particularly important can be zoomed into. To avoid having to approximately read the results from the scale labels, the actual values are displayed via popup when placing the mouse cursor over the desired location. The integrated screenshot function can be used for quick sending of results.
-
-// [Figure 42: Excerpt from the results of averaged curvatures along the span for $C_L = 1.5$ and a pressure value of $p = 70.69$ MPa]
-
-// This shows the averaged curvature profile over the entire wing span. It becomes clear that local effects occur in the undisturbed regions. These were already discussed previously and will therefore not be explained again. The undisturbed region is shown in Figure 43.
-
-// [Figure 43: Detailed view of the undisturbed region of averaged curvatures for $C_L = 1.5$ and $p = 70.69$ MPa]
-
-// The scale shows a maximum curvature value of $0.02$ 1/m, which is significantly below the critical curvature of $0.4$ 1/m.
-
-// It can be noted that the maximum curvature in the undisturbed region does not exceed the critical curvature, but remains significantly below it. Additionally, the influence of the $C_L$ value and pressure was investigated. If the $C_L$ value is increased, an increase in the maximum occurring curvature can be observed, which applies to both the undisturbed and disturbed regions. This is to be expected, as a larger $C_L$ value causes greater deflection and can be verified by comparing Figure 42 with Figure 44. The increase in pressure has hardly any visible influence, which can be verified by comparing Figure 44 with Figure 45.
-
-// [Figure 44: Excerpt from the results of averaged curvatures along the span for $C_L = 1.0$ and a pressure value of $p = 70.69$ MPa]
-
-// [Figure 45: Excerpt from the results of averaged curvatures along the span for $C_L = 1.0$ and a pressure value of $p = 15$ MPa]
-
-// In summary, the investigation with averaged curvature has also shown that the influence of the filling medium should be negligibly small at expected $C_L$ values and pressures.
-
+])
