@@ -5,7 +5,7 @@
 
 // TODO
 // Title Check
-=== Application for Impact Filling Agent<chap_3_0_2>
+=== Assessment of Impact Filling Agent in 3D<chap_3_0_2>
 Critical loads were mentioned in @chap_3_0_0.
 The relationship between curvature and the question of filling agent having an an impact on the structral properties were provided in @chap_3_0_1.
 With these as basis the curvature of a #gls("swith", long:true) can be calculated.
@@ -219,11 +219,15 @@ However, since the red points are the last points, only discretization points fr
 Therefore, for these points the backward #gls("fd") method could be leveraged.
 Nevertheless, it might not be required to implemment such a feature.
 This depends on the relevance of the most outer part. If the curvature values of the most right nodes are not of relevance, dummy values could be inserted.
-In the event of requing the most outer red nodes, the three missing discretization points $X_1, x_5 "and" x_2$ according to @fig_38, can be obtained with @eq_47 to @eq_49 using the backward #gls("fd") method.
+In the event of requing the most outer red nodes, the missing derivatives of the three remaining discretization points $X_1, x_5 "and" x_2$ according to @fig_38, can be obtained with @eq_47 to @eq_52 using the backward #gls("fd") method.
 
 $ f'_("backward")(x_1) = 2 space (f(x_1) - f(x_4))/h $<eq_47>
 $ f'_("backward")(x_5) = (f(x_5) - f(x_7))/h $<eq_48>
 $ f'_("backward")(x_2) = 2 space (f(x_2) - f(x_6))/h $<eq_49>
+
+$ f''_("backward")(x_1) = 2 space (f'(x_1) - f'(x_4))/h $<eq_50>
+$ f''_("backward")(x_5) = (f'(x_5) - f('x_7))/h $<eq_51>
+$ f''_("backward")(x_2) = 2 space (f'(x_2) - f'(x_6))/h $<eq_52>
 
 
 // ---------------------------- first 3d results ---------------------------- //
@@ -305,6 +309,7 @@ If all menetioned modeling measures and their consequences are considered, the f
 Yet, it can be oberved that the intepreation of curvature calculations for a complex 3d model is tedious task to do.
 Thus, is is prone to errors when not careful investigations are made.
 Therefore in the upcoming @chap_3_0_3 the natrual progression was made to introduce to a method that shall help to obtain results easier to interpret and thus reduce the likelhood of making mistakes of the critical curvature assement.
+Finally, it is important to have clearly defined that the obtained results are only valid within the framework of the made assumptions. The calculations were solved linear-statically; gas compression effects and possible nonlinearities were not considered
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
