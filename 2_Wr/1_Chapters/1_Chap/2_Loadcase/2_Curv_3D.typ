@@ -30,7 +30,7 @@ Through this, a critical curvature could be defined, up to which the bending mom
 
 Both $0.4 upright("m")^(-1)$ and $0.5 upright("m")^(-1)$ could be considered as permissible values. However, the author of this report chooses the safer variant and defines the critical curvature as $0.4 upright("m")^(-1)$. Through this, the deviation of the bending moment curves is just small enough to be considered negligible. For better overview, this definition should be given as formula @eq_27:
 
-$ kappa_"crit" ≤ 0.4 $<eq_27>
+$ kappa_"crit" >= 0.4 $<eq_27>
 
 // --------------------------- curvature of swith --------------------------- //
 To check whether the curvature of a #gls("swith") model exceeds the critical curvature, its curvature values must be calculated.

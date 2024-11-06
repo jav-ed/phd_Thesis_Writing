@@ -163,8 +163,7 @@ $ overline(kappa_3) = ((-cos(x) - sin(x)) / 2)  / [1 + ( (-sin(x) + cos(x)) / 2)
 // ------------------------------ inert 90 deg ------------------------------ //
 In order to see which methods end in giving the same results and which differ among each other, the input arugemnt or the angle will be chosen to be 90 degree or $pi/2$.
 Note that $sin(x = 90 degree = pi/2) = 1$ and $cos(x = 90 degree = pi/2) = 0$.
-Inserting this for the first method in @eq_60, the obtained result is given in @eq_67.
-// For method 2 the result is given in @eq_68 and for method 3 in @eq_69
+Inserting the defined varaibles in @eq_60, the results for the frist method are given in @eq_67.
 
 // ---------------------------------- kap_1 --------------------------------- //
 $ overline(kappa_(1)) &= 1/2  [ 
@@ -176,11 +175,15 @@ $ overline(kappa_(1)) &= 1/2  [
   
   $<eq_67>
 
+Inserting the defined varaibles in @eq_63, the results for the second method are given in @eq_68.
+
 // ---------------------------------- kap 2 --------------------------------- //
 $ overline(kappa_2) &= (( cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
 
 &= (-1/2) / [1 + (-1/2)^2] ^(3/2) = (-1/2) / [1 + 1/4] ^(3/2) = (-1) / (2 (5/4) ^(3/2))
    $ <eq_68>
+
+Inserting the defined varaibles in @eq_66, the results for the third method are given in @eq_69.
 
 // ---------------------------------- kap 3 --------------------------------- //
 $ overline(kappa_3) &= ((cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
@@ -193,22 +196,83 @@ However, it can be observed that the curvatre following the method 2 and 3 are t
 Thus, while having arugemnted for three approaches how the curature can be obtained as a $bold(kappa)^(n_y times 2)$ matrix, effectilvey only two are actually avaialble.
 
 // --------------------------------- results -------------------------------- //
+Having covered the theoretical fundamentals some results shall be displaxed.
+Note that the results shown for method 2 are the same for method 3.
 
-For presenting the following results, first all curvatures of the individual nodes were calculated and then averaged as described. For safe and easy evaluation of the results, all averaged curvatures for all selected pressure values were saved as an interactive animation in an HTML file. This allows the curvature curves of individual pressure values to be displayed first with a click. Areas that are classified as particularly important can be zoomed into. To avoid having to approximately read the results from the scale labels, the actual values are displayed via popup when placing the mouse cursor over the desired location. The integrated screenshot function can be used for quick sending of results.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_46>
 
-[Figure 42: Excerpt from the results of averaged curvatures along the span for $C_L = 1.5$ and a pressure value of $p = 70.69$ MPa]
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_47>
+
+// ---------------------------- method 1 pressure --------------------------- //
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/3_Ca_0.6_Pr_Variabel_Method_1.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_48>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_49>
+
+// ========================================================================== //
+// ================================ method 2 ================================ //
+// ========================================================================== //
+
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/5_510bar_Ca_Var_Method_2_Disp.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_50>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_51>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/7_510bar_Ca_Var_Method_2_Curv_Undis.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_52>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/8_Ca_0.6_Pr_Variabel_Method_2_Disp.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_53>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/9_Ca_0.6_Pr_Variabel_Method_2_Curv.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_54>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/10_Ca_0.6_Pr_Variabel_Method_2_Curv_undist.svg", 
+  width: 100%),
+  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+) <fig_55>
+
 
 This shows the averaged curvature profile over the entire wing span. It becomes clear that local effects occur in the undisturbed regions. These were already discussed previously and will therefore not be explained again. The undisturbed region is shown in Figure 43.
-
-[Figure 43: Detailed view of the undisturbed region of averaged curvatures for $C_L = 1.5$ and $p = 70.69$ MPa]
 
 The scale shows a maximum curvature value of $0.02$ 1/m, which is significantly below the critical curvature of $0.4$ 1/m.
 
 It can be noted that the maximum curvature in the undisturbed region does not exceed the critical curvature, but remains significantly below it. Additionally, the influence of the $C_L$ value and pressure was investigated. If the $C_L$ value is increased, an increase in the maximum occurring curvature can be observed, which applies to both the undisturbed and disturbed regions. This is to be expected, as a larger $C_L$ value causes greater deflection and can be verified by comparing Figure 42 with Figure 44. The increase in pressure has hardly any visible influence, which can be verified by comparing Figure 44 with Figure 45.
 
-[Figure 44: Excerpt from the results of averaged curvatures along the span for $C_L = 1.0$ and a pressure value of $p = 70.69$ MPa]
 
-[Figure 45: Excerpt from the results of averaged curvatures along the span for $C_L = 1.0$ and a pressure value of $p = 15$ MPa]
 
 In summary, the investigation with averaged curvature has also shown that the influence of the filling medium should be negligibly small at expected $C_L$ values and pressures.
 
