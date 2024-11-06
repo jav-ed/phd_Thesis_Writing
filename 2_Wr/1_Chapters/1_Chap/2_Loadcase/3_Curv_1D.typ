@@ -47,6 +47,7 @@ The arrows in @fig_45 are hinting in the direction of the axes that are averaged
 This process of the first method can be formualted mathemtically for each $y_i$ as @eq_53.
 The variables are denoted as, displacement $u$, first order derivate $u'$, second order derivative $u''$, curvatre $kappa$, total number of nodes $n_("y,const")$ for one span section at a numiercally constant $y_i$ and $j$ for the axis compoent.
 
+// -------------------------------- method 1 -------------------------------- //
 $ overline(kappa_(1, y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") ^'' / ( (1 + u_("i,j")^(2')) ^(3/2))  \
 &=  1/n_("y,const") sum_i ^(n_("y,const")) kappa_("i,j") $ <eq_53>
 
@@ -74,66 +75,124 @@ overline(u_(y_i,j))^(2')
 Simmilar to @eq_53 the combined output of the three spatial dimensions result into a 3d curvature vector.
 Again a norm can be used to obtain one single scalar averaged mean value for the curvate.
 // ------------------------------ third method ------------------------------ //
-In the third method all the curvature related varaibles are calculated as in the first method.
+In the third method all the curvature related varaibles are calculated as in the first method. However, the averaging does not occur after the curvarure values are caluclated, but for each required variable sepeately.
+In the third method the first order displacement $u'$ is averaged acroos the $x$ and $z$ axis and is inserted as the input for the mean curvature calcualtion.
+The same also happens for the second order gradient $u''$.
+They differ from method 2 in that, the gradients $u'$ and $u''$ were obtained based on the averaged dispalxments $u$.
+The the gradients $u'$ and $u''$ are not based on the mean of the displacment, but are obtained like in method 1.
+The mathematical descirption for method 3 is provided as @eq_55
 
-// ---------------------------------- here ---------------------------------- //
-However
+$
+overline(u_(y_i,j))' &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j")^' \
+overline(u_(y_i,j))'' &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j")^('') \
+overline(kappa_(3, y_i,j)) &= (overline(u_(y_i,j))^('') ) / (1+ 
+overline(u_(y_i,j))^(2')
+)^(3/2)
+$<eq_55>
 
+// ---------------------------- shape information --------------------------- //
+When averaging the curvature with the three apporahces presented in @eq_53 to @eq_55, the goal is to get the 3d curvature representation to a 1d curvature representation.
+More precisely it can be said that the curvature matrix is tranformed from a dimension of $bold(kappa)^(n times 6)$ to a dimension of $bold(kappa)^(n_y times 4)$ or $bold(kappa)^(n_y times 2)$.
+The variable $n_y$ is denoted as the total number of discretization points along the span direction or y axis.
+The original dimension of $bold(kappa)^(n times 6)$ has its first three filled with the local cooridnate infromation, that is, coordinate information for each spatial axis ($x,y,z$).
+The remaining three columns provice infromation about the curvature compoents in the correpsonding directions.
+The shape $bold(kappa)^(n_y times 4)$ is obtained when the curavture compoents for a numericla constant span section $y_i$ are averaged across the chrod (x) and vertical axis (z). 
+Thus the first column only has the position along the span and the three remaining columns provide the curvature compoents in the three spatial directions.
+If the three curvature compoents are used to calculate the magnitude, the result is a scalar valued curvature magnitude. With this $bold(kappa)^(n_y times 2)$ is obtained.
+In this version the first column gives infromaiton about the span wise direction $y_i$ and the second column the corresponding scalar valued mean curvature.
+The shape $bold(kappa)^(n_y times 2)$ is the desired final outcome since, it the inrepreation through a simple 2d plot and further greants the adanvatges mentioned at the beginning of this subsection.
 
+// ----------------------------- examples calcs ----------------------------- //
+While three seeimlgy distanict approaches for averaging the curvatures, through making using of simple analytical analysis it can be observed that there are only two distanict different methods.
+In order to conduct this analytical analysis, trigonemtrical terms are inserted in @eq_53 to @eq_55.
+For sake of understandbaility, this is demonstraed for one single spanwise section $y_i$, with one dimension and for the sum in mean curvature equations two term shall be used.
+The terms are given in @eq_56. Their first derivatives are given in @eq_57 and the second order derivatives in @eq_58
 
+$ u_1 &= cos(x) \
+u_2 &= sin(x) $ <eq_56>
 
+$ u_1^' &= -sin(x) \
+u_2^' &= cos(x) $ <eq_57>
 
+$ u_1^('') &= -cos(x) \
+u_2^('') &= -sin(x) $ <eq_58>
 
-To answer the question of whether there is a difference between the two presented approaches, equations (20) and (21) should first be considered. 
+// ----------------------------- example meth 1 ----------------------------- //
+Inserting @eq_56 to @eq_58 into the method 1 according to @eq_53, the result can be desribed as @eq_59 and @eq_60
 
-
-
-
-Equation (20) shows the case where all curvatures are first calculated and then averaged over these. In this case, only two curvature values are used for averaging for illustration. In equation (21), the derivatives are first averaged and then the mean curvature is calculated.
-
-$ kappa_("mean",1) = (u_1 ^'' / ( (1 + u_1 ^') ^(3/2)) + u_2 ^'' / ( (1 + u_2 ^') ^(3/2)))  1/2 $ <20>
-
-$ kappa_("mean",2) = ((u_1 ^'' + u_2 ^'')/2) / ([1 +
- (u_1 ^' + u_2 ^')/2] ^(3/2)) $ <21>
-
-Since it is not directly apparent from this form of the equations whether there is a difference between the two variants, equations (22) and (23) should be inserted as examples. This leads to equations (24) and (25).
-
-$ u_1 = cos(x) \
-   u_2 = sin(x) $ <22>
-
-$ u_1' = -sin(x) \
-   u_2' = cos(x) \
-   u_1'' = -cos(x) \
-   u_2'' = -sin(x) $ <23>
-
-$ kappa_("mean",1) = (-cos(x)/(1 - sin(x))^(3/2) + (-sin(x))/(1 + cos(x))^(3/2))(2) $ <24>
-
-$ kappa_("mean",2) = (-cos(x) - sin(x))(2(1 + (-sin(x) + cos(x))/2)^(3/2)) $ <25>
-
-For equation (25), the relationship in equation (26) was assumed, which can generally be assumed for differentiation:
-
-$ (u_1'' + u_2'')/2 = (u_1 + u_2')/2 \
-   (-cos(x) + (-sin(x)))/2 = (-sin(x) + cos(x))/2 \
-   (f_1 + f_2)' = f_1' + f_2' \
-   (f_1 dot f_2)' != f_1' dot f_2' $ <26>
-
-Finally, an angle of $x = pi/2$ should be assumed for sine and cosine. This results in equations (27) and (28). Formula (29) shows as the final result that it makes a difference how the curvatures are averaged.
-
-$ kappa_("mean",1)(x = pi/2) = 0 + (-1)(1 + 0)^(3/2) = -1 $ <27>
-
-$ kappa_("mean",2)(x = pi/2) = (-1)(2(1 + (-1)/2)^(3/2)) approx (-1)(2 dot 0.353) $ <28>
-
-$ (kappa_("mean",1) = -1) != (kappa_("mean",2) approx (-1)(2 dot 0.353)) $ <29>
-
-Another important aspect that must be considered when calculating curvature averaging is the neighboring elements and nodes. Node overlaps in the FE mesh create new nodes on the wing and tank mesh. The distance from existing nodes to the new nodes can be very small along the span. Detailed investigation shows that this is the case. When looking at Figure 41 left, it can be seen that entries 001-008 differ minimally in their span position.
-The distances to the respective subsequent entries are shown on the right in the figure. The slightly varying nodes, which are all located in one element each, would not be counted as a single span point in a conventional averaging. This would distort the averaging at these points, as erroneous abrupt curvature deviations are to be expected at these positions. The following can be imagined: if there were 10 nodes, 5 of which had a positive curvature and the other 5 a negative curvature. The first 5 values would be "coincidentally" assigned to point $y_1$ and the other 5 values to point $y_2$. If this were plotted, a jump or discontinuity would become visible in a very small distance $(Delta y approx 10^(-9))$. Therefore, nodes that have a distance according to equation (30) were combined into one node for averaging.
-
-[Figure 41: Left: Chronologically ordered span coordinates of individual nodes. Right: Distance to neighboring entries or span coordinates of individual nodes among each other]
+$ overline(kappa_(1)) &= 1/2  [ 
+   u_1^('') /(1 + u_1^(2'))^(3/2) +
+   u_2^('') /(1 + u_2^(2'))^(3/2)
+  ]  $ <eq_59>
 
 
-$ "dist"(y_1, y_2) <= 0.9 $ <30>
+$ overline(kappa_(1)) &= 1/2  [ 
+   -cos(x) /(1 + (-sin(x))^2)^(3/2) 
+   -sin(x) /(1 + cos(x)^2)^(3/2)
+  ]  $ <eq_60>
 
-For averaging, all line elements (girders, engine and landing gear connections, and stiffening elements) were deliberately neglected. The curvatures are calculated exclusively for the skin and tubes (eight-node shell elements). If the line elements were included in the calculation of curvature averaging of wing and tank, the result would be incorrect. For example, the curvatures of the engine nodes do not influence the curvature behavior of the wing and tanks.
+
+// ----------------------------- exmaple meth 2 ----------------------------- //
+The analoug for method 2 according to @eq_54 is provided in @eq_61 to  @eq_63.
+
+
+$ 
+overline(u) &= (cos(x) + sin(x)) / 2  \
+overline(u)' &= ( -sin(x) + cos(x)) / 2 \
+overline(u)'' &= (-cos(x) - sin(x)) / 2 
+   $ <eq_61>
+
+$ overline(kappa_2) = overline(u)'' / (1 + overline(u)^(2'))^(3/2) $ <eq_62>
+
+$ overline(kappa_2) = ((-cos(x) - sin(x)) / 2)  / [1 + ( (-sin(x) + cos(x)) / 2)^(2)]^(3/2)
+   $ <eq_63>
+
+// ----------------------------- exmaple meth 3 ----------------------------- //
+The analoug for method 2 according to @eq_55 is provided in @eq_64 to  @eq_66.
+
+$ 
+overline(u)' &= ( -sin(x) + cos(x)) / 2 \
+overline(u)'' &= (-cos(x) - sin(x)) / 2 
+   $ <eq_64>
+
+
+$ overline(kappa_3) = overline(u)'' / (1 + overline(u)^(2'))^(3/2) $ <eq_65>
+$ overline(kappa_3) = ((-cos(x) - sin(x)) / 2)  / [1 + ( (-sin(x) + cos(x)) / 2)^(2)]^(3/2)
+   $ <eq_66>
+
+// ------------------------------ inert 90 deg ------------------------------ //
+In order to see which methods end in giving the same results and which differ among each other, the input arugemnt or the angle will be chosen to be 90 degree or $pi/2$.
+Note that $sin(x = 90 degree = pi/2) = 1$ and $cos(x = 90 degree = pi/2) = 0$.
+Inserting this for the first method in @eq_60, the obtained result is given in @eq_67.
+// For method 2 the result is given in @eq_68 and for method 3 in @eq_69
+
+// ---------------------------------- kap_1 --------------------------------- //
+$ overline(kappa_(1)) &= 1/2  [ 
+   cancel(-cos(x=pi/2) /(1 + (-sin(x=pi/2))^2)^(3/2) ) 
+   -sin(x = pi/2) /(1 + cancel( cos(x=pi/2)^2) )^(3/2)
+  ]  \ 
+
+  &= 1/2 [ 0 -  1/ (1 + 0)^(3/2)] = -1/2
+  
+  $<eq_67>
+
+// ---------------------------------- kap 2 --------------------------------- //
+$ overline(kappa_2) &= (( cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
+
+&= (-1/2) / [1 + (-1/2)^2] ^(3/2) = (-1/2) / [1 + 1/4] ^(3/2) = (-1) / (2 (5/4) ^(3/2))
+   $ <eq_68>
+
+// ---------------------------------- kap 3 --------------------------------- //
+$ overline(kappa_3) &= ((cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
+
+&= -1/2 / [1 + (-1/2)^2] ^(3/2) = -1/2 / [1+ 1/4]^(3/2) = -1/ (2 (5/4)^(3/2))
+   $ <eq_69>
+
+Thus it can be oberved that the output of method 1 is $overline(kappa_(1)) = -1/2$ which is neither equal to the output of method 2 $overline(kappa_2) = (-1) / (2 (5/4) ^(3/2)) $  nor to the method 3 $overline(kappa_3) = -1/ (2 (5/4)^(3/2))$ ($overline(kappa_(1)) != overline(kappa_(2)) "and" overline(kappa_(1)) != overline(kappa_(3))$).
+However, it can be observed that the curvatre following the method 2 and 3 are the same $overline(kappa_2) = overline(kappa_3) =  (-1) / (2 (5/4) ^(3/2))$.
+Thus, while having arugemnted for three approaches how the curature can be obtained as a $bold(kappa)^(n_y times 2)$ matrix, effectilvey only two are actually avaialble.
+
+// --------------------------------- results -------------------------------- //
 
 For presenting the following results, first all curvatures of the individual nodes were calculated and then averaged as described. For safe and easy evaluation of the results, all averaged curvatures for all selected pressure values were saved as an interactive animation in an HTML file. This allows the curvature curves of individual pressure values to be displayed first with a click. Areas that are classified as particularly important can be zoomed into. To avoid having to approximately read the results from the scale labels, the actual values are displayed via popup when placing the mouse cursor over the desired location. The integrated screenshot function can be used for quick sending of results.
 
