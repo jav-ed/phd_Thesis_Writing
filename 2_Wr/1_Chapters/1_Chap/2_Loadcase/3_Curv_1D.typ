@@ -269,13 +269,14 @@ Thus, the maximal stress is to be expected at the support posistion and the high
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
   width: 100%),
-  caption: [magnitude of the averaged curvature $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
+  caption: [magnitude of the averaged curvature for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_51>
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/7_510bar_Ca_Var_Method_2_Curv_Undis.svg", 
   width: 100%),
-  caption: [7],
+  caption: [magnitude of the averaged curvature for the normalized span position for one portion of the undistributed area using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_52>
 
 #figure(
