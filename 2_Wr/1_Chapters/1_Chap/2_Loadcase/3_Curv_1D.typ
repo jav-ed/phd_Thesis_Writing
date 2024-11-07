@@ -200,48 +200,76 @@ Having covered the theoretical fundamentals some results shall be displaxed.
 Note that the results shown for method 2 are the equaivalent for method 3.
 The results for method 1 are depcited in @fig_46 to @fig_49.
 @fig_46 the magntiude of the curvated that are averaged aclong the chord (x) and the vertical (z) axis along the normalized span posistion.
-The averaged curvatures are shown for six different lift coeeficents, $C_L = [0.5, 0.6, ]$
+The averaged curvatures are shown for six different lift coeeficents, $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and with a constant pressure of $51.03 "MPa"$. 
+It can be observed that generally with increasing the lift coefficient the curvature is increased as well.
+Consequently, the highest curvature values are obtained with a lift coeeficents value of $C_L = 2.5$.
+The critical curvature $kappa_"crit"$ is drawn as a horizontal red line.
+If this line is exeeded, the impact of the filling agent can not be neglected.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
   width: 100%),
-  caption: [1],
+  caption: [magnitude of the averaged curvature for the normalized span position using method 1 accroding to @eq_53 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_46>
+
+Considering the arugemnts provided in this text, a undistributed area can be found. @fig_47 displays the curvature for the normalized span position for one portion of the undistributed area. The other parameters remain the same as for @fig_46.
+It can be osberved that even the highest lift coeeficents value $C_L = 2.5$ does not show any curvate that is close the the critical curvature.
+While the critical curvater was set to $kappa_"crit" = 0.4$, the found curvatures are much smaller than $0.4 space upright("m")^(-1)$.
+Not only that they do not come close to $0.4 space upright("m")^(-1)$, but the curvature values are signitifcantly smaller than $0.1 space upright("m")^(-1)$.
+Thus in order to see proper identify the impact of the the lift coefficient values, a scale needs be shown, where the critical cruvature far away from or not visible anymore.
+The main result from @fig_47 is that for a pressure of $51.03 "MPa"$ and lift coefficents up to $C_L = 2.5$ the impact of the filling agent on the maximal bearable bedning moment for a experimental structral validation test can be neglected. Thus, the replacement of hydrhogen through water would be allowed for it.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
   width: 100%),
-  caption: [2],
+  caption: [magnitude of the averaged curvature for the normalized span position for one portion of the undistributed area using method 1 accroding to @eq_53 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_47>
 
+The results displayed @fig_46 and @fig_47 were investigating the impact of the lift coeeficent $C_L$ for a constant selected pressure of $51.03 "MPa"$.
+Following method 1, the impact of pressure for a constant lit coeffiecent value of $C_L approx 0.6$ is given in  @fig_48 and @fig_49.
+@fig_48 iluustrates that the selected pressure has an impact on the resulting curvature.
+However, from a very high varrying range of $15 "MPa"$ to $110 "MPa"$ the impact is very small.
 // ---------------------------- method 1 pressure --------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/3_Ca_0.6_Pr_Variabel_Method_1.svg", 
   width: 100%),
-  caption: [3],
+  caption: [magnitude of the averaged curvature for the normalized span position using method 1 accroding to @eq_53 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_48>
+
+Simmilar to @fig_47, @fig_49 depcits a focused view on the undisturbed area. Simmilar to the case of @fig_47 it can be seen that the obtained curvature are far under the critical curvature.
+The distance is soo high that in order to proerly investigate the impact on the pressure, the newly selected figure portraying scale would not display the critical curvatre anymore.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
   width: 100%),
-  caption: [4],
+  caption: [magnitude of the averaged curvature for the normalized span position one portion of the undistributed area using method 1 accroding to @eq_53 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_49>
 
 // ========================================================================== //
 // ================================ method 2 ================================ //
 // ========================================================================== //
 
+The results using method 1, are clear in that they would allow the replacement of hydrogen through for exampel with water without modiying the maximal bearbale bending moment.
+In order to compare it with the output of method 2 that follows @eq_54, @fig_50 to @fig_55 shall be viewed. 
+@fig_50 shows the magnitude of the averaged displaxment $overline(u)$ for the normalized span position for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.
+The imapact of the lift coefficent is clearly visible.
+The higher the lift coefficent the higher the observed displaxment.
+Consequently the highest displaxment is found with $C_L = 2.5$ and at the tip of the wing.
+The latter is expected since there is no support at the the tip of the wing.
+Thus, the maximal stress is to be expected at the support posistion and the highest deflection at the tip of the wing, where the lever arm has its peak.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/5_510bar_Ca_Var_Method_2_Disp.svg", 
   width: 100%),
-  caption: [5],
+  caption: [magnitude of the averaged displaxment $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_50>
+
+// ---------------------------------- here ---------------------------------- //
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
   width: 100%),
-  caption: [6],
+  caption: [magnitude of the averaged curvature $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_51>
 
 #figure(
