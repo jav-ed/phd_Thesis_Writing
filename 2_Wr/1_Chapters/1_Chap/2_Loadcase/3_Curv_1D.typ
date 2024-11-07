@@ -197,31 +197,34 @@ Thus, while having arugemnted for three approaches how the curature can be obtai
 
 // --------------------------------- results -------------------------------- //
 Having covered the theoretical fundamentals some results shall be displaxed.
-Note that the results shown for method 2 are the same for method 3.
+Note that the results shown for method 2 are the equaivalent for method 3.
+The results for method 1 are depcited in @fig_46 to @fig_49.
+@fig_46 the magntiude of the curvated that are averaged aclong the chord (x) and the vertical (z) axis along the normalized span posistion.
+The averaged curvatures are shown for six different lift coeeficents, $C_L = [0.5, 0.6, ]$
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [1],
 ) <fig_46>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [2],
 ) <fig_47>
 
 // ---------------------------- method 1 pressure --------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/3_Ca_0.6_Pr_Variabel_Method_1.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [3],
 ) <fig_48>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [4],
 ) <fig_49>
 
 // ========================================================================== //
@@ -232,37 +235,37 @@ Note that the results shown for method 2 are the same for method 3.
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/5_510bar_Ca_Var_Method_2_Disp.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [5],
 ) <fig_50>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [6],
 ) <fig_51>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/7_510bar_Ca_Var_Method_2_Curv_Undis.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [7],
 ) <fig_52>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/8_Ca_0.6_Pr_Variabel_Method_2_Disp.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [8],
 ) <fig_53>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/9_Ca_0.6_Pr_Variabel_Method_2_Curv.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [9],
 ) <fig_54>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/10_Ca_0.6_Pr_Variabel_Method_2_Curv_undist.svg", 
   width: 100%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [10],
 ) <fig_55>
 
 
