@@ -105,29 +105,11 @@
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/0_Loadcase.typ"
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/1_Curv_Theory.typ"
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/2_Curv_3D.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/3_Curv_1D.typ"
+#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/3_Curv_2D.typ"
 
 
-// ------------------------------- introducion ------------------------------ //
-// #include "2_Wr/0_Chap/0_File.typ"
-// #include "2_Wr/0_Chap/1_File.typ"
-// #include "2_Wr/0_Chap/2_File.typ"
-// #include "2_Wr/0_Chap/3_File.typ"
-
-// -------------------------------- chapter 1 ------------------------------- //
-// #include "2_Wr/1_Chap/0_File.typ"
-// #include "2_Wr/1_Chap/1_File.typ"
-// #include "2_Wr/1_Chap/2_File.typ"
-// #include "2_Wr/1_Chap/3_File.typ"
-// #include "2_Wr/1_Chap/4_File.typ"
-// #include "2_Wr/1_Chap/10_File.typ"
-
-
-// -------------------------------- chapter 2 ------------------------------- //
-// #include "2_Wr/2_Chap/0_Variables.typ"
-// #include "2_Wr/2_Chap/1_Overwrite_Vars.typ"
-// #include "2_Wr/2_Chap/2_Commenting.typ"
-// #include "2_Wr/2_Chap/3_Com_Question.typ"
+// results
+// discussion
 
 
 // -------------------------------- Appendix -------------------------------- //
