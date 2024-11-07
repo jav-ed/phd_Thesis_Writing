@@ -2,21 +2,21 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-=== Assessment of Impact Filling Agent in 1D<chap_3_0_3>
+=== Assessment of Impact Filling Agent in 2D<chap_3_0_3>
 This subsection stems from the need to reduce the likelhood of making mistakes during the interperation of the curvature results.
 In @chap_3_0_1 it was introduced how the curvature could be used in orde to answer the question wheter the filling agent has an impact on the structral behaviour.
 THis is of vital improtance, when attempting to replace hydrogen in an experimtnal structral validation test with another filling agent.
 The lack of current technical state of the art for deailing safe with hydrogen for long tubes and high pressures is explained in  @chap_2_0_1 and @chap_2_0_2.
 In @chap_3_0_2, it was explained how the curvature could be calculated when displaxment data and correspoinding coorindate ifnromation were available.
 While, the 3d curvature results are valid, interpreting curvature values for complex 3d geomtries like the #gls("swith", long:true) has, is a demanding and error prone task.
-Therefore in this section two concepts will be introduced, how the 3d curvature data can be transfered to 1d curvature results.
+Therefore in this section two concepts will be introduced, how the 3d curvature data can be transfered to 1d curvature results or to a 2d span curvature representation.
 This is supposed to allow the signitficatnly ease the curature interpreation.
 // too long, break into multiple sentces
 As a consequence, statements about the execcidiung critical curvuate and consequently deciding wheter the filling agent has an impact on the strucutral behaviour or not is not only made  easier but also less error-prone and thus more reliable. 
 
 
-The curvatre cauclations and the critical crtuvature assment was in preiovus @chap_3_0_2 were made in three dimensions. However, evaluating the results in 1d is significantly less prone to errors and simpler to interpret. Additionally, performing additonaly investigations on 1d data is generally less complex and less ocmputaitonal demanding than wokring on 3d data. 
-For these reasons, the influence of the filling medium on the maximum sustainable bending moment is motivated to be conducted on 1d curvatures.
+The curvatre cauclations and the critical crtuvature assment was in preiovus @chap_3_0_2 were made in three dimensions. However, evaluating the results in 2d is significantly less prone to errors and simpler to interpret. Additionally, performing additonaly investigations on 2d data is generally less complex and less ocmputaitonal demanding than wokring on higher dimensional data. 
+For these reasons, the influence of the filling medium on the maximum sustainable bending moment is motivated to be conducted in 2d.
 In order to transfer 3d curvature values into one dimension, the curvature values can be averaged along the two other axis
 Three methods could be identified as possible approaches for averaging the curvatures.
 However, before going to the deails about these methods, some fundamentals shall be convered to ensure readers can follow.
@@ -26,7 +26,7 @@ For each of the mentioned output, the components in the three axis are available
 Moreover, the output of these discrete quantities is linked to corresponding nodes of the #gls("fem") mesh. 
 Thus, in order to represent one single entry for these variables a 6d vector is required.
 This, vector contains the three coorindate directions for the node and the three compoents of the considered variable.
-Due to the fact that the #gls("fem") mesh consists of a high number of nodes matrices of the shape $bold(A)^(n times 6)$ are required, $bold(A)$ is a placeholder for an matrix and n represents the total number of nodes.
+Due to the fact that the #gls("fem") mesh consists of a high number of nodes matrices of the shape $bold(A)^(n times 6)$ are required, where $bold(A)$ is a placeholder for an matrix and n represents the total number of nodes.
 Following that, there in 3d each of the variable, that is, displacement, first and second order derivative and curvature, can be throught of a own matrix, $bold(U), bold(U'), bold(U''), bold(kappa)$, respectively.
 
 Having mentioned some basics about the dimensions about the curvuate related variables, the frist averaging method shall be looked upon.
@@ -212,7 +212,7 @@ If this line is exeeded, the impact of the filling agent can not be neglected.
   caption: [magnitude of the averaged curvature for the normalized span position using method 1 accroding to @eq_53 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_46>
 
-Considering the arugemnts provided in this text, a undistributed area can be found. @fig_47 displays the curvature for the normalized span position for one portion of the undistributed area. The other parameters remain the same as for @fig_46.
+Considering the arugemnts provided in this text, a undistributed area can be found. @fig_47 displays the averaged curvature for the normalized span position for one portion of the undistributed area. The other parameters remain the same as for @fig_46.
 It can be osberved that even the highest lift coeeficents value $C_L = 2.5$ does not show any curvate that is close the the critical curvature.
 While the critical curvater was set to $kappa_"crit" = 0.4$, the found curvatures are much smaller than $0.4 space upright("m")^(-1)$.
 Not only that they do not come close to $0.4 space upright("m")^(-1)$, but the curvature values are signitifcantly smaller than $0.1 space upright("m")^(-1)$.
@@ -242,7 +242,7 @@ The distance is soo high that in order to proerly investigate the impact on the 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
   width: 100%),
-  caption: [magnitude of the averaged curvature for the normalized span position one portion of the undistributed area using method 1 accroding to @eq_53 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
+  caption: [magnitude of the averaged curvature for the normalized span position for one portion of the undistributed area using method 1 accroding to @eq_53 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_49>
 
 // ========================================================================== //
@@ -264,7 +264,12 @@ Thus, the maximal stress is to be expected at the support posistion and the high
   caption: [magnitude of the averaged displaxment $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_50>
 
-// ---------------------------------- here ---------------------------------- //
+The magnitude of the averaged curvature for the normalized span position using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$ is displayed in @fig_51.
+The inrepreations that were provided for method 1 for @fig_46 can be used to describe the output for method 2 in @fig_51.
+The influence of the lift coefficeint is clealry visible, yet, it is rather small.
+Taking into consideration that local distrbutatiosn need to be filtered out for the final assment the undistributed area is shown depicted in @fig_52.
+This allows to asses wheter the filling agent has an impact of the structral behaviour or not.
+The found behavior is simmilar to the one presented in @fig_47 based on method 1.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
@@ -279,32 +284,54 @@ Thus, the maximal stress is to be expected at the support posistion and the high
   caption: [magnitude of the averaged curvature for the normalized span position for one portion of the undistributed area using method 2 accroding to @eq_54 for six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5 ]$ and a constant pressure of  $51.03 "MPa"$.],
 ) <fig_52>
 
+
+The impact of the pressure on the agnitude of the averaged displacment $overline(u)$ is given in @fig_53. It depcits the magnitude of the averaged displacment $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.
+The impact on the pressure is not linear. Depending on the local span position, a higher pressure can result in a higer defelction or in a lower.
+For example the pressure of $110 "MPa"$ exhibits higher displacments from wing root to more than %80 of the upcoming span length. Close to the span tip, the effect is revered and higher pressure values result in lower dispalcments than lower pressure value. 
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/8_Ca_0.6_Pr_Variabel_Method_2_Disp.svg", 
   width: 100%),
-  caption: [8],
+  caption: [magnitude of the averaged displacment $overline(u)$ for the normalized span position using method 2 accroding to @eq_54 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_53>
+
+The impact on the magnitude of the averaged curvature is depicted in @fig_54. It shows the magnitude of the averaged curvature for the normalized span position using method 2 accroding to @eq_54 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.
+Simmilar to the case with method 1 depicted in @fig_48, the impact of the pressure is there, but is very small.
+The undistributed version of the same configuration is presented in @fig_55.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/9_Ca_0.6_Pr_Variabel_Method_2_Curv.svg", 
   width: 100%),
-  caption: [9],
+  caption: [magnitude of the averaged curvature for the normalized span position using method 2 accroding to @eq_54 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_54>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/10_Ca_0.6_Pr_Variabel_Method_2_Curv_undist.svg", 
   width: 100%),
-  caption: [10],
+  caption: [magnitude of the averaged curvature for the normalized span position for one portion of the undistributed area using method 2 accroding to @eq_54 for different pressure values ranging from $15 "MPa"$ to $110 "MPa"$ and a constant lift coefficent of  $C_L approx 0.6$.],
 ) <fig_55>
 
 
-This shows the averaged curvature profile over the entire wing span. It becomes clear that local effects occur in the undisturbed regions. These were already discussed previously and will therefore not be explained again. The undisturbed region is shown in Figure 43.
+The presented results with methodf 1 according to @eq_53 and method 2 according to @eq_54 across different lift coefficeint $C_L$ and pressure values show much simmiarites.
+THe most important infromation that they have in common is that, when the undistributed region is viewed, the obtained curvatures are much smaller than the critical curvature.
+Thus, if an experimental investigation were to be conducted with a physical model based on the simulation model the following could be noted.
+For the experiemntal structral validation test, the hydorgen could be replaced through another filling agent, without chaning the maxmimal bending moment.
+Because the critical curvatre in the undistributed region was far from being reached the differences between the two methods to not need deeper investigation.
+However, in the event of curvatre coming close to the critical curvature, the differences between the two presented methods needs to be investigated in order to obtain a deeper understaning between their differences and application fields.
 
-The scale shows a maximum curvature value of $0.02$ 1/m, which is significantly below the critical curvature of $0.4$ 1/m.
-
-It can be noted that the maximum curvature in the undisturbed region does not exceed the critical curvature, but remains significantly below it. Additionally, the influence of the $C_L$ value and pressure was investigated. If the $C_L$ value is increased, an increase in the maximum occurring curvature can be observed, which applies to both the undisturbed and disturbed regions. This is to be expected, as a larger $C_L$ value causes greater deflection and can be verified by comparing Figure 42 with Figure 44. The increase in pressure has hardly any visible influence, which can be verified by comparing Figure 44 with Figure 45.
 
 
+// --------------------------------- summary -------------------------------- //
+#summary_([
 
-In summary, the investigation with averaged curvature has also shown that the influence of the filling medium should be negligibly small at expected $C_L$ values and pressures.
+In summary it can be said that fundeamnetla infromation were provided about the shapes of the curvature and its related variables matrices.
+This was required to comprehendin seemly 3d data as actual 6d data.
+Having mentioned that the tree methods for transfering the $bold(A)^(n times 6)$ matrices to $bold(A)^(n times 2)$ were introduced.
+Through providing not descirptions through, words, mathematical formuala but also concrete examples the actual application of these approaches was demonsted.
+Furthermore it was explained why only two effectively different methods were found, while having initally mentioned three. 
+Having provided the background for these three methods, results for the obtained curvature was dispaled.
+The latter for six different lift coeffcient values pressure values from a range between $15 "MPa"$ to $110 "MPa"$.
+With it the impact of the lift coeeficent as well as of the internal pressure were elaborated.
+Finally, the results were used to make deicsions on wheter for an experimental structral validation test hydrogen could be replaced through another filling agent, without having a stiffer or  more compliant material behaviour.
 
+])
