@@ -42,7 +42,6 @@ The three overarching categories that can be assumed to facilitate a rapid initi
 )<tab_9>
 
 
-// ---------------------------------- here ---------------------------------- //
 The classification of #glspl("swith") based on @tab_9 is mobile, Type IV, and air.  
 The term #emp_[air] in this context is self-evident, referring to the operational environment of aircraft. However, the distinction between #emp_[mobile] and #emp_[static] pressure vessels requires further elucidation. Mobile pressure vessels are characterized by their exposure to forces resulting from acceleration, encompassing both linear and angular acceleration. These vessels experience dynamic loading conditions due to the motion of the vehicle in which they are installed, such as an aircraft in flight or an automobile in motion. 
 Conversely, static pressure vessels are subject solely to the force exerted by their own mass under the influence of gravity. In static applications, the pressure vessel does not undergo additional accelerations beyond those imposed by Earth's gravitational field. 

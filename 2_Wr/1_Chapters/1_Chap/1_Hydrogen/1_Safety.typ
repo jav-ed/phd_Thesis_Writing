@@ -140,7 +140,6 @@ A vital consideration in experimental investigations involving hydrogen is its p
   caption: [Essential conditions for hydrogen to become ignitable to detonable.],
 ) <tab_23>
 
-// ---------------------------------- here ---------------------------------- //
   
 The minimum ignition energy for hydrogen is highly dependent on the air content in the gas mixture. In principle, a small spark or static discharge is sufficient to ignite hydrogen when the gas mixture is within the flammable range. For instance, a static discharge resulting from walking on a carpet and subsequently touching a doorknob, which typically generates $20 "to" 30 "mJ"$ of energy, is capable of igniting a flammable hydrogen-air mixture @Klell2018. 
 The minimum ignition energies for hydrogen, methane, and propane across various air content levels in the gas mixture, illustrated in @fig_19, provide a comparative perspective on the ignition sensitivity of these gases.

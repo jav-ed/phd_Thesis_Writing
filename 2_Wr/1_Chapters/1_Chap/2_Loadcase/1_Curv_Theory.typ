@@ -147,7 +147,6 @@ $ Delta kappa(p=150) &= kappa("water",p=150) - kappa("air",p=150)\
 &= 0.5 space upright("m")^(-1) $<eq_17>
 
 
-// ---------------------------------- here ---------------------------------- //
 The interpretations derived from the presented equations need be considered within the context of limited data availability. To establish more robust conclusions, additional experimental data is necessary across multiple dimensions. First, the current pressure resolution, consisting of only four discrete values [0, 50, 100, 150] bar, provides insufficient granularity for comprehensive analysis. A finer pressure resolution would enable more detailed characterization of the relationship between internal pressure and structural response.
 
 Furthermore, the experimental parameters in @Liu2019, utilizing steel pipes with dimensions of $25 "mm"$ diameter and $750 "mm"$ length, differ significantly from #glspl("swith") requirements. Application to #glspl("swith") necessitates investigation of specimens with larger diameters, extended lengths, higher pressure ratings, and Type IV tanks. 
@@ -170,7 +169,6 @@ The disparity between testing and operational conditions could lead to crucial s
 The certification tests using water or alternative gases might approve structures that can withstand higher bending moments and curvatures than they could when filled with hydrogen during actual operation.
 This discrepancy could lead to the certification of structures with inadequate safety margins for their intended operational use with hydrogen.
 
-// this might not be the best place ot mention it, or need proper intro this 
 Having presented and analyzed the experimental findings regarding the impact of filling agents on structural behavior, a simplified conceptual model is proposed to explain the underlying physical mechanisms. While the exact mechanism behind the superior bending moment capacity of water-filled pipes compared to air-filled pipes remains uncertain, examination of fundamental differences between gases and liquids at the particle level may provide valuable insights into this phenomenon.
 
 The model considers the distinct molecular characteristics of gases and liquids under confined conditions. Gas particles exhibit significant movement and maintain considerable spacing, defined by their mean free path, until collision occurs. This characteristic allows gases to be highly compressible, as the free space between particles can be reduced under pressure loads. In contrast, liquids demonstrate minimal compressibility, with particles maintaining relatively fixed positions when confined within a closed volume.

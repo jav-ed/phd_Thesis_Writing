@@ -3,39 +3,22 @@
 /* -------------------------------------------------------------------------- */
 
 === Assessment of Impact Filling Agent in 2D<chap_3_0_3>
-This subsection stems from the need to reduce the likelhood of making mistakes during the interperation of the curvature results.
-In @chap_3_0_1 it was introduced how the curvature could be used in orde to answer the question wheter the filling agent has an impact on the structral behaviour.
-THis is of vital improtance, when attempting to replace hydrogen in an experimtnal structral validation test with another filling agent.
-The lack of current technical state of the art for deailing safe with hydrogen for long tubes and high pressures is explained in  @chap_2_0_1 and @chap_2_0_2.
-In @chap_3_0_2, it was explained how the curvature could be calculated when displaxment data and correspoinding coorindate ifnromation were available.
-While, the 3d curvature results are valid, interpreting curvature values for complex 3d geomtries like the #gls("swith", long:true) has, is a demanding and error prone task.
-Therefore in this section two concepts will be introduced, how the 3d curvature data can be transfered to 1d curvature results or to a 2d span curvature representation.
-This is supposed to allow the signitficatnly ease the curature interpreation.
-// too long, break into multiple sentces
-As a consequence, statements about the execcidiung critical curvuate and consequently deciding wheter the filling agent has an impact on the strucutral behaviour or not is not only made  easier but also less error-prone and thus more reliable. 
+This subsection addresses the need to minimize potential errors in the interpretation of curvature results. In @chap_3_0_1, the application of curvature analysis was introduced as a method to evaluate the impact of filling agents on structural behavior. This evaluation becomes particularly critical when considering the replacement of hydrogen with alternative filling agents in experimental structural validation tests. The current limitations in safely handling hydrogen in long tubes at high pressures, as detailed in @chap_2_0_1 and @chap_2_0_2, necessitate this investigation.
 
+@chap_3_0_2 established the methodology for calculating curvature based on displacement data and corresponding coordinate information. While the three-dimensional curvature results maintain their validity, the interpretation of these values for complex three-dimensional geometries, such as the #gls("swith", long:true), presents a challenging and potentially  error-prone task. To address this challenge, this subsection introduces two methodological approaches for transforming three-dimensional curvature data into either two-dimensional span curvature representations.
+This transformation streamlines the interpretation of curvature data. The resulting representation enables more robust assessment of critical curvature thresholds, thereby facilitating more accurate determinations of filling agent impacts on structural behavior.
 
-The curvatre cauclations and the critical crtuvature assment was in preiovus @chap_3_0_2 were made in three dimensions. However, evaluating the results in 2d is significantly less prone to errors and simpler to interpret. Additionally, performing additonaly investigations on 2d data is generally less complex and less ocmputaitonal demanding than wokring on higher dimensional data. 
-For these reasons, the influence of the filling medium on the maximum sustainable bending moment is motivated to be conducted in 2d.
-In order to transfer 3d curvature values into one dimension, the curvature values can be averaged along the two other axis
-Three methods could be identified as possible approaches for averaging the curvatures.
-However, before going to the deails about these methods, some fundamentals shall be convered to ensure readers can follow.
+// -------------------------------------------------------------------------- //
+The curvature calculations and critical curvature assessment presented in @chap_3_0_2 were conducted in three dimensions. However, evaluating results in two dimensions offers several advantages: it reduces the likelihood of interpretation errors and provides clearer insights. Furthermore, analyzing two-dimensional data requires less computational resources compared to processing higher-dimensional data.
+Based on these advantages, this investigation of filling medium influence on maximum sustainable bending moment is conducted in two dimensions. The transformation from three-dimensional curvature values to lower dimensions is achieved by averaging along the remaining axes. Three averaging approaches have been identified for this transformation. Before detailing these methods, it is essential to establish some fundamentals.
+When analyzing results from a three-dimensional gls("fem") model of a #gls("swith"), several quantities need be be considered: displacement, first-order derivatives, second-order derivatives, and the resulting curvature. Each of these quantities is inherently three-dimensional. For each quantity, components along all three axes are available, and their magnitude can be calculated using methods such as the Euclidean norm, as given in @eq_33.
 
-When viewing results of a 3d #gls("fem") model of #gls("swith"), the displacment, the first order, second order and the resulting curvature are all three-dimensional as well.
-For each of the mentioned output, the components in the three axis are available and the magnitude as a scalar can be obtained for instance through the Euclidean norm shown in @eq_33.
-Moreover, the output of these discrete quantities is linked to corresponding nodes of the #gls("fem") mesh. 
-Thus, in order to represent one single entry for these variables a 6d vector is required.
-This, vector contains the three coorindate directions for the node and the three compoents of the considered variable.
-Due to the fact that the #gls("fem") mesh consists of a high number of nodes matrices of the shape $bold(A)^(n times 6)$ are required, where $bold(A)$ is a placeholder for an matrix and n represents the total number of nodes.
-Following that, there in 3d each of the variable, that is, displacement, first and second order derivative and curvature, can be throught of a own matrix, $bold(U), bold(U'), bold(U''), bold(kappa)$, respectively.
+These discrete quantities correspond to specific nodes within the #gls("fem") mesh. A six-dimensional vector is required to fully represent each nodal entry, comprising three coordinate directions and three components of the considered variable. Given the high node count in the #gls("fem") mesh, matrices of dimension $bold(A)^(n times 6)$ are necessary, where $bold(A)$ represents a generic matrix and $n$ denotes the total number of nodes. Consequently, in three dimensions, each variable can be represented by its own matrix: displacement $bold(U)$, first-order derivative $bold(U)'$, second-order derivative $bold(U)''$, and curvature $bold(kappa)$.
 
-Having mentioned some basics about the dimensions about the curvuate related variables, the frist averaging method shall be looked upon.
-In the first method, the displacements and required derivatives are calculated to get the curvature for the entire structure in 3d.
-Once all curvature values are available, the curvature values for a constant spanwise position $y_i$ can be averaged across the two remaining axes: the chordwise (x) and vertical (z) directions.
-More precisely, for each constant spanwise position $y_i$, the corresponding nodal distribution is defined by their $(x,z)$ coordinates in the plane perpendicular to the spanwise direction. 
-This collection of nodes at constant $y_i$ forms a planar slice through the structural geometry.
-Moreover, since the computations are conducted numerically, small deviations from the exact $y_i$ position are permitted when identifying nodes belonging to the same planar slice.
-The concept of averaging along the remaining axis chordwise (x) and vertical (z) directions for one given $y_i$ value is depcicted in @fig_45.
+// -------------------------------------------------------------------------- //
+Having established the fundamental concepts regarding curvature-related variables and their dimensions, the first averaging method can now be examined. This method begins by calculating the displacements and required derivatives to obtain the curvature for the entire structure in three dimensions.
+Subsequently, for a constant spanwise position $y_i$, the curvature values are averaged across the two remaining axes: the chordwise (x) and vertical (z) directions. Specifically, at each constant spanwise position $y_i$, the corresponding nodal distribution is defined by its $(x,z)$ coordinates in the plane perpendicular to the spanwise direction. This collection of nodes at constant $y_i$ forms a planar slice through the structural geometry. Due to the numerical nature of the computations, small deviations from the exact $y_i$ position are acceptable when identifying nodes belonging to the same planar slice.
+The process of averaging along the chordwise (x) and vertical (z) directions for a given $y_i$ value is depicted in @fig_45.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/0_Spanwise.svg", 
@@ -43,24 +26,17 @@ The concept of averaging along the remaining axis chordwise (x) and vertical (z)
   caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
 ) <fig_45>
 
-The arrows in @fig_45 are hinting in the direction of the axes that are averaged along.
-This process of the first method can be formualted mathemtically for each $y_i$ as @eq_53.
-The variables are denoted as, displacement $u$, first order derivate $u'$, second order derivative $u''$, curvatre $kappa$, total number of nodes $n_("y,const")$ for one span section at a numiercally constant $y_i$ and $j$ for the axis compoent.
+The arrows in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_("y,const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
 
 // -------------------------------- method 1 -------------------------------- //
 $ overline(kappa_(1, y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") ^'' / ( (1 + u_("i,j")^(2')) ^(3/2))  \
 &=  1/n_("y,const") sum_i ^(n_("y,const")) kappa_("i,j") $ <eq_53>
 
 
-For a selected span section $y_i$ and a axis $j$ the output of @eq_53 is a scalar valued averaged compoent of the curvature $overline(kappa_(1, y_i,j))$.
-However, since the output of three axis is required, the combined output becomes a 3d curvature vector.
-In order to get one single scalar averaged mean value for the curvate the Euclidean norm can be used following @eq_33.
+For a selected span section $y_i$ and axis $j$, the output of @eq_53 is a scalar-valued averaged component of the curvature $overline(kappa_(1, y_i,j))$. Since the output along all three axes is required, the combined result forms a three-dimensional curvature vector. To obtain a single scalar averaged mean value for the curvature, the Euclidean norm can be applied following @eq_33.
 
 // ------------------------------ second method ----------------------------- //
-The second method calculates takes the displacements as input and averages them across the chordwise (x) and vertical (z) axes for one numerical constant span section $y_i$.
-In this method the missing required gradients $u'$ and $u''$ are caluclated as well as the resulting mean curvature $overline(kappa_2)$ based on the averaged displacements $overline(u)$.
-Therefore the gradients are referred to as mean gradients $overline(u_(y_i,j))^(')$, $overline(u_(y_i,j))$ for a slected a span section $y_i$ and a dimension axis $j$.
-The mathematical description of the second averaging apporach is given in @eq_54.
+The second method employs a different approach by using displacements as its primary input. These displacements are averaged across the chordwise (x) and vertical (z) axes for a numerically constant span section $y_i$. Based on these averaged displacements $overline(u)$, the method calculates the required gradients $u'$ and $u''$, which then yield the mean curvature $overline(kappa_2)$. For a selected span section $y_i$ and dimension axis $j$, these quantities are formally expressed as mean gradients $overline(u_(y_i,j))^(')$ and $overline(u_(y_i,j))^('')$. The mathematical formulation of this averaging approach is given in @eq_54.
 
 $ 
 overline(u_(y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") \
@@ -72,6 +48,7 @@ overline(u_(y_i,j))^(2')
 
  $ <eq_54>
 
+// ---------------------------------- here ---------------------------------- //
 Simmilar to @eq_53 the combined output of the three spatial dimensions result into a 3d curvature vector.
 Again a norm can be used to obtain one single scalar averaged mean value for the curvate.
 // ------------------------------ third method ------------------------------ //
