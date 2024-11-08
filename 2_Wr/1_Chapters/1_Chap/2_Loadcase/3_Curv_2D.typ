@@ -23,10 +23,11 @@ The process of averaging along the chordwise (x) and vertical (z) directions for
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/0_Spanwise.svg", 
   width: 87%),
-  caption: [Curvature averaging scheme along the orthogonal axes (x,z) to the span direction.],
+  caption: [Visualization of the curvature averaging methodology showing the averaging directions along the chordwise (x) and vertical (z) axes at a constant spanwise position $y_i$ for dimensional reduction of three-dimensional curvature data.],
+  
 ) <fig_45>
 
-The arrows in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_("y,const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
+The ellipses in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_("y,const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
 
 // -------------------------------- method 1 -------------------------------- //
 $ overline(kappa_(1, y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") ^'' / ( (1 + u_("i,j")^(2')) ^(3/2))  \
@@ -49,13 +50,14 @@ overline(u_(y_i,j))^(2')
  $ <eq_54>
 
 // ---------------------------------- here ---------------------------------- //
-Simmilar to @eq_53 the combined output of the three spatial dimensions result into a 3d curvature vector.
-Again a norm can be used to obtain one single scalar averaged mean value for the curvate.
+// TODO scalar
+Similar to @eq_53, the combined output of the three spatial scalar results in a three-dimensional curvature vector. The mentioned Euclidean norm, according to @eq_33, can then be used to obtain a single scalar averaged mean value for the curvature.
+
 // ------------------------------ third method ------------------------------ //
 In the third method all the curvature related varaibles are calculated as in the first method. However, the averaging does not occur after the curvarure values are caluclated, but for each required variable sepeately.
 In the third method the first order displacement $u'$ is averaged acroos the $x$ and $z$ axis and is inserted as the input for the mean curvature calcualtion.
 The same also happens for the second order gradient $u''$.
-They differ from method 2 in that, the gradients $u'$ and $u''$ were obtained based on the averaged dispalxments $u$.
+They differ from method 2 in that, the gradients $u'$ and $u''$ were obtained based on the averaged dispalxments $overline(u)$.
 The the gradients $u'$ and $u''$ are not based on the mean of the displacment, but are obtained like in method 1.
 The mathematical descirption for method 3 is provided as @eq_55
 

@@ -106,6 +106,7 @@
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/1_Curv_Theory.typ"
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/2_Curv_3D.typ"
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/3_Curv_2D.typ"
+#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/4_Physical_Load.typ"
 
 
 // results
