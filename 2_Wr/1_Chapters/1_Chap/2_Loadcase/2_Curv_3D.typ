@@ -3,15 +3,15 @@
 /* -------------------------------------------------------------------------- */
 
 
-// TODO
-// Title Check
-=== Assessment of Impact Filling Agent in 3D<chap_3_0_2>
+// TODO Word rep
+// Title was tested and is inshallah fine
+=== Assessment of Filling Agent Impact in 3D<chap_3_0_2>
 The fundamental concept of critical loads was established in @chap_3_0_0, followed by an analysis of the relationship between curvature and filling agent impact on structural properties in @chap_3_0_1. Building upon these foundations, this subsection presents a methodology for assessing the curvature of a #gls("swith", long:true) and its implications for experimental validation tests.
 While the theoretical basis for curvature calculation provides essential insights, determining whether hydrogen can be substituted with an alternative filling agent for experimental structural validation testing requires additional considerations. This subsection introduces the concept of critical curvature and develops a systematic approach for its practical application. Through an analysis of a #gls("fem") model, it is demonstrated that direct comparison between calculated and critical curvature values presents significant challenges in real-world applications, particularly for complex three-dimensional structures.
 The presented methodology distinguishes itself through its broad applicability, as it requires only displacement field data as input. This approach enables curvature assessment from various sources, including experimental measurements, beam models, or numerical simulations, thereby extending its utility beyond specific analysis methods. However, the complexity of three-dimensional structures necessitates careful interpretation of results, particularly in regions with abrupt stiffness changes or geometric discontinuities. These practical challenges and their implications for experimental testing are examined, providing essential guidance for future structural validation efforts.
 
 
-Due to resource constraints, cost-intensive experimental investigations cannot be conducted within this work. However, an alternative method has been developed to make qualitative assessments for initial findings regarding experimental static structural validation tests.
+Due to resource constraints, cost-intensive experimental investigations cannot be conducted within this work. However, an alternative method was developed to make qualitative assessments for initial findings regarding experimental static structural validation tests.
 The foundation for this approach is derived from a careful examination of results presented in @Liu2019. @fig_33 demonstrates that bending moment curves exhibit similar curvature values within a specific range, independent of fill medium and pressure. This observation enables the definition of a critical curvature value, below which the bending moment remains independent of both filling agent and pressure, as illustrated in @fig_34.
 
 #figure(
@@ -60,7 +60,7 @@ $ kappa = u''/ ( (1 + u'^2) ^(3/2)) $<eq_28>
 
 While @Liu2019 established a geometric relationship for direct analytical curvature calculation in their specific case, no such relationship exists for the general case. Therefore, @eq_28 is adopted for this analysis.
 
-With known displacements, derivatives can be obtained through numerical differentiation. Two main approaches are available: the well-established #gls("fd") methods @Baerwolff2020 @Meister2019 @Munz2019 @Richter2017 @Langtangen2017 and the less conventional Complex-Step method @mdobook. Within the #gls("fd") methods, three common procedures exist.
+With known displacements, derivatives can be obtained through numerical differentiation. Two main approaches are available: the well-established #gls("fd") methods @Baerwolff2020 @Meister2019 @Munz2019 @Richter2017 @Langtangen2017 and the less conventional Complex-Step @mdobook. Within the #gls("fd") methods, three common procedures exist.
 These procedures, derived from Taylor series expansion, are subject to truncation error @mdobook. Additional rounding errors arise from numerical calculations @Baerwolff2020. Modern computers typically use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwolff2020), limiting the precision of numerical values beyond a certain decimal place. These rounding errors, while inevitable, require particular attention when working with very small numbers and must be considered in relation to accuracy requirements.
 The three common #gls("fd") methods are Forward, Backward, and Central Difference. The Central Difference method achieves higher accuracy as a second-order method but requires two support points for derivative calculation at each point. In contrast, Forward and Backward methods are first-order methods that typically provide lower accuracy but require only one support point for derivative calculation. This characteristic makes them computationally more efficient and simpler to implement.
 The choice between Forward and Backward methods depends on the specific case, as their derivative quality varies by application. Determining an appropriate step size typically requires a convergence study, seeking an optimum that minimizes both rounding and truncation errors. 
@@ -68,7 +68,7 @@ While @mdobook suggests that a step size of $h approx 10^(-6)$ often yields high
 
 
 // ------------------------------ complex step ------------------------------ //
-The Complex-Step method is mathematically proven to be a second-order method, as demonstrated in @mdobook. A notable characteristic of this method is that it requires only one support point. However, unlike the #gls("fd") methods which operate on discrete point values and their distances, the Complex-Step method requires a mathematical function. Since the method eliminates the need to subtract function values at very small distances from each other, it avoids rounding errors and can operate at maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. Nevertheless, the truncation error inherent to second-order methods remains.
+The Complex-Step is mathematically proven to be a second-order method, as demonstrated in @mdobook. A notable characteristic of this method is that it requires only one support point. However, unlike the #gls("fd") methods which operate on discrete point values and their distances, the Complex-Step requires a mathematical function. Since the method eliminates the need to subtract function values at very small distances from each other, it avoids rounding errors and can operate at maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. Nevertheless, the truncation error inherent to second-order methods remains.
 
 The mathematical definitions of the #gls("fd") methods are expressed in @eq_29 - @eq_31, where $f'$ denotes the derivative function, $x_i$ represents discretization points, and $h$ indicates the step size or distance between two discretization points $x_i$ and $x_j$ ($i != j$).
 // ---------------------------- differential eqs ---------------------------- //
@@ -85,11 +85,11 @@ $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
   caption: [Spatial arrangement of discretization points $x_i$ for the #gls("fd") method.],
 ) <fig_37>
 
-The mathematical formulation for the Complex-Step method is expressed in @eq_32:
+The mathematical formulation for the Complex-Step is expressed in @eq_32:
 
 $ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
 
-While it is possible to determine the approximation function for displacements using the Complex-Step method, this would involve greater time expenditure. Given that the results are primarily compared with the diagram from @Liu2019 shown in @fig_34, such high precision is not warranted for this application.
+While it is possible to determine the approximation function for displacements using the Complex-Step, this would involve greater time expenditure. Given that the results are primarily compared with the diagram from @Liu2019 shown in @fig_34, such high precision is not warranted for this application.
 
 // --------------------------- selected fd methods -------------------------- //
 Consequently, a #gls("fd") method should be selected. The central difference method generally achieves higher accuracy than the first-order methods (forward and backward difference). However, to understand the additional computational and implementation complexity associated with the central #gls("fd") method, it is instructive to examine a concrete example.
@@ -199,7 +199,7 @@ The magnitude values are calculated according to the Euclidean norm. For curvatu
 
 $ kappa_("mag") = sqrt(kappa_x^(2) + kappa_y^2 + kappa_z^2) $<eq_33>
 
-Given the critical importance of tank structural behavior in #glspl("swith"), the corresponding information is presented separately for the tanks in @fig_43.
+Given the pivotal importance of tank structural behavior in #glspl("swith"), the corresponding information is presented separately for the tanks in @fig_43.
 
 
 #figure(
@@ -245,6 +245,6 @@ It is essential to acknowledge the limitations of these findings within the fram
 
 In summary, a methodology for calculating curvature and its interpretation was provided. For this analysis, a #gls("fem") simulation model of a #gls("swith") configuration was utilized. The procedure for obtaining required derivatives was explained in detail. Since the methodology was developed from a displacement-based foundation, it can be applied to both analytical and numerical simulation approaches.
 The method's applicability extends beyond simulation, as displacement data could alternatively be obtained from experimental investigations. Through important examples demonstrating critical curvature assessment, the challenges of directly comparing obtained curvature results with critical curvature values for complex structures like aircraft became evident.
-The interpretation of results indicated that for experimental investigations, hydrogen could be replaced with an alternative filling agent without significantly impacting the maximum bearable bending moment. Finally, the complexity of assessing critical curvature in three-dimensional space was acknowledged, leading to the introduction of an enhanced methodology in @chap_3_0_3.
+The interpretation of results indicated that for experimental investigations, hydrogen could be replaced with an alternative filling agent without significantly impacting the maximum bearable bending moment. Finally, the complexity of assessing critical curvature in three-dimensional space was acknowledged, leading to the introduction of an enhanced approach in @chap_3_0_3.
 
 ])

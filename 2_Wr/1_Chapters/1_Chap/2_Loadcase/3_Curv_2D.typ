@@ -2,7 +2,9 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-=== Assessment of Impact Filling Agent in 2D<chap_3_0_3>
+// TODO Word rep
+// Title was tested and is inshallah fine
+=== Assessment of Filling Agent Impact in 2D<chap_3_0_3>
 This subsection addresses the need to minimize potential errors in the interpretation of curvature results. In @chap_3_0_1, the application of curvature analysis was introduced as a method to evaluate the impact of filling agents on structural behavior. This evaluation becomes particularly critical when considering the replacement of hydrogen with alternative filling agents in experimental structural validation tests. The current limitations in safely handling hydrogen in long tubes at high pressures, as detailed in @chap_2_0_1 and @chap_2_0_2, necessitate this investigation.
 
 @chap_3_0_2 established the methodology for calculating curvature based on displacement data and corresponding coordinate information. While the three-dimensional curvature results maintain their validity, the interpretation of these values for complex three-dimensional geometries, such as the #gls("swith", long:true), presents a challenging and potentially  error-prone task. To address this challenge, this subsection introduces two methodological approaches for transforming three-dimensional curvature data into either two-dimensional span curvature representations.

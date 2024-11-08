@@ -6,4 +6,6 @@
 5. exhibit
 6. provide
 7. obtain
+8. present
+9. method
    
