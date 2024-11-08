@@ -212,7 +212,7 @@ Additionally, it will show the argumentation behind how the individual points we
 
 #figure(
   table(
-    columns: (auto),
+    columns: (auto, auto),
     align: left + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (

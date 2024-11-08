@@ -156,7 +156,7 @@ However, when high-dimensional information (high amount of information) is trans
   table(
     columns: (auto,auto,auto,auto,auto,auto),
     // align: left + horizon,
-    align: (left, center, center, center, center),
+    align: (left, center, center, center, center, center),
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
@@ -207,7 +207,7 @@ Therefore, all innovation entries from @tab_32 would be understood as inverted, 
   table(
     columns: (auto,auto,auto,auto,auto,auto),
     // align: left + horizon,
-    align: (left, center, center, center, center),
+    align: (left, center, center, center, center, center),
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
