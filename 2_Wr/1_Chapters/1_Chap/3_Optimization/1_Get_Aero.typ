@@ -8,19 +8,19 @@
 // all eqs
 
 = Obtaining Aerodynamic Loads<chap_3>
-In @chap_1, we examined the physical #gl_("lee") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gl_("ld") is necessary. 
-In the subsequent @chap_2, we explored various possibilities for implementing #gl_("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
-However, before #gl_("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
+In @chap_1, we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
+In the subsequent @chap_2, we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
+However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
 This section will therefore demonstrate what steps were taken to obtain the aerodynamic loads.
 
 From previous projects conducted at TU Dresden, valuable work is available.
-Among others, there exists a simulation code that can model structural behavior with additional aerodynamic loads using #gl_("fem").
+Among others, there exists a simulation code that can model structural behavior with additional aerodynamic loads using #gls("fem").
 This simulation code internally uses APAME @Filkovic to calculate aerodynamic loads.
 APAME is a three-dimensional frictionless panel method. 
 While the calculation is not designed for high-precision requirements, it reproduces the lift distribution with sufficient accuracy and in minimal computation time.
 APAME receives inputs including flight velocity, density, Mach number, and geometric properties, and produces the lift distribution along the wing span as output.
 This load distribution can then be mapped from the aerodynamic mesh to the structural mesh through fluid-structure coupling.
-Thus, the #gl_("fem") model also integrates the aerodynamic loads. 
+Thus, the #gls("fem") model also integrates the aerodynamic loads. 
 An exemplary result provided by APAME is shown in @fig_16. 
 The figure shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
 
@@ -121,7 +121,7 @@ Thus, not only the position of the points but also their number is of great impo
 If we have particularly many but small forces in one location, we simulate higher importance. Consequently, the position of the centroid would shift towards this point-rich area.
 The varying number of force points is a direct consequence of the variable element length.
 The latter statement can be verified by careful examination of @fig_16.
-Where the centroids or #gl_("lee") should be placed is not known to us at this time. It is the task of kmeans++ to answer exactly this.
+Where the centroids or #gls("lie") should be placed is not known to us at this time. It is the task of kmeans++ to answer exactly this.
 If a preferred direction were unknowingly provided through an incorrect data format, the kmeans++ output would be partially or completely unusable.
 
 To adjust the kmeans++ input data format, it must be defined how many individual forces are to be found over a reference length. 
@@ -148,8 +148,8 @@ This is necessary to understand why the three-dimensional coordinate vector shou
 
 Further information about both the beam model and optimization will be discussed in the following @chap_4.
 Here, only a brief description from a highly superordinate view should be given.
-Instead of performing the optimization with a more computationally intensive #gl_("fem") model, a one-dimensional beam model can be used as a substitute model.
-The beam model has a significant disadvantage compared to the #gl_("fem") calculation: accuracy. 
+Instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
+The beam model has a significant disadvantage compared to the #gls("fem") calculation: accuracy. 
 However, it has various advantages, including that it can be used on a conventional computer within an optimization procedure.
 Because the beam model represents a one-dimensional model and only sees a force distribution along the span direction, the three-dimensional coordinate vector from the X-Matrix should be converted to a one-dimensional position vector.
 

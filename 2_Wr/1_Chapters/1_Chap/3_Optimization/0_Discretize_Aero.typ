@@ -10,8 +10,8 @@
 // all eqs
 
 = Discretization of Aerodynamic Loads <chap_2>
-In the previous @chap_1, #gl_("lee") was introduced. 
-Through further examination of the physical load application, it was revealed that the choice of #gl_("lee") depends significantly on how many #gl_("lee") should be used, what dimensions they should have, and what load magnitudes can be expected.
+In the previous @chap_1, #gls("lie") was introduced. 
+Through further examination of the physical load application, it was revealed that the choice of #gls("lie") depends significantly on how many #gls("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
 This chapter will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary, and how this answers our previously posed questions.
 Furthermore, we will explore which methods were investigated to perform the discretization.
 
@@ -20,37 +20,37 @@ Thus, this load is considered continuous. In other words, if the load starts at 
 Unless explicitly stated otherwise, the load always refers to the aerodynamic load.
 In the previous @chap_1, we discussed which methods are available to us for replicating these aerodynamic loads in an experimental setup. 
 It was also explained why the K2H2 project opted for a ground-based experimental setup without a wind tunnel.
-Consequently, #gl_("lee") are now needed, which must be locally attached to the wing skin.
-The #gl_("lee") serve as physical objects through which loads can be applied.
-The goal is to apply and load the #gl_("lee") in such a way that the resulting load distribution closely matches the original aerodynamic loading.
-A concrete definition for #gl_("ld") could be: Approximating a continuous force distribution through individual point and area loads.
+Consequently, #gls("lie") are now needed, which must be locally attached to the wing skin.
+The #gls("lie") serve as physical objects through which loads can be applied.
+The goal is to apply and load the #gls("lie") in such a way that the resulting load distribution closely matches the original aerodynamic loading.
+A concrete definition for #gls("ld") could be: Approximating a continuous force distribution through individual point and area loads.
 
-The requirement to apply #gl_("lee") in a way that can reproduce the continuous aerodynamic loading can be defined as an optimization problem.
+The requirement to apply #gls("lie") in a way that can reproduce the continuous aerodynamic loading can be defined as an optimization problem.
 Specifically, the engineer faces the following questions:
 
-1. How many #gl_("lee") should be used?
-2. At which locations should the #gl_("lee") be attached?
-3. What dimensions should the #gl_("lee") have?
-4. What load magnitudes must the #gl_("lee") have?
-5. What minimum and maximum spacing between #gl_("lee") should be maintained?
+1. How many #gls("lie") should be used?
+2. At which locations should the #gls("lie") be attached?
+3. What dimensions should the #gls("lie") have?
+4. What load magnitudes must the #gls("lie") have?
+5. What minimum and maximum spacing between #gls("lie") should be maintained?
 
 The listed questions could all be answered through optimization.
 Beyond providing important answers, optimization also supports economic and environmental consciousness. 
-As a supporting example: for an imagined $60 #unit("m")$ long wing, we should try to use the minimum number of #gl_("lee") possible. 
+As a supporting example: for an imagined $60 #unit("m")$ long wing, we should try to use the minimum number of #gls("lie") possible. 
 To expand on this example, let's consider electrically driven cylinders.
 If, say, through optimization 23 cylinders show a similar acceptable accuracy as 46 cylinders in the non-optimized state, significant costs can be saved in terms of electricity, personnel, procurement costs, and delivery routes.
-Through proper #gl_("ld") paired with subsequent optimization, the number of required #gl_("lee") can likely be reduced considerably.
+Through proper #gls("ld") paired with subsequent optimization, the number of required #gls("lie") can likely be reduced considerably.
 The latter would have a positive effect on aspects such as costs, safety concept, and control effort.
-Additionally, optimization would ensure that an appropriate accuracy of the #gl_("ld") is achieved.
-In summary, a reasonable #gl_("ld") combined with optimization is motivated by the fact that it can achieve sufficient quality of #gl_("ld") with a lower number of #gl_("lee").
+Additionally, optimization would ensure that an appropriate accuracy of the #gls("ld") is achieved.
+In summary, a reasonable #gls("ld") combined with optimization is motivated by the fact that it can achieve sufficient quality of #gls("ld") with a lower number of #gls("lie").
 
 Up to this point, we have explained what discretization is and what advantage optimization would bring.
 Next, we will focus on discretization methods. 
-For #gl_("ld"), the goal is to achieve the closest match to the original aerodynamic load distribution with as few #gl_("lee") as possible. 
+For #gls("ld"), the goal is to achieve the closest match to the original aerodynamic load distribution with as few #gls("lie") as possible. 
 Pure discretization is known as curve-fitting or regression 
 @Kaptanoglu2022 @Silva2020 @Tibshirani1996 @Brunton2016 @Frochte2020 @Brunton2022 @Bishop2006 @Arlinghaus2023 @Zielesny2016 @James2023 @Richter2019 @prince2023understanding @Zheng2018.
 Here, function values are assigned at discrete support points. 
-Translated to loads, discrete support points mean #gl_("lee") and the function values are force magnitudes.
+Translated to loads, discrete support points mean #gls("lie") and the function values are force magnitudes.
 There are various methods through which regression can be performed.
 The simplest would be linear regression. 
 However, non-linearities can also be used to reproduce prescribed behavior.
@@ -120,19 +120,19 @@ However, this flexibility might exceed the behavior that should be extracted fro
 Besides accuracy, computation time also plays a major role. 
 Whether a model has $2$ or $100$ parameters would lead to very large differences in accuracy in extrapolation.
 However, for computation time, such parameter numbers would not play a role with today's available hardware.
-Today, large models are no longer calculated on the #gl_("cpu"), but on the #gl_("gpu").
-This has many reasons, but the main one is the parallelizability of the #gl_("gpu").
+Today, large models are no longer calculated on the #gls("cpu"), but on the #gls("gpu").
+This has many reasons, but the main one is the parallelizability of the #gls("gpu").
 According to current standards, models with $#num("7e9")$ 
 @Li2023 @Jiang2023 @Touvron2023a @Touvron2023
-parameters are quite common and are seen in certain circles in the field of #gl_("llm") as entry-level model size.
+parameters are quite common and are seen in certain circles in the field of #gls("llm") as entry-level model size.
 Larger models can easily have $#num("7e10")$ 
 @Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7
 model parameters.
-Since there is a lot of rapid progress in the world of #gl_("llm"), there exists more than just one overview paper.
+Since there is a lot of rapid progress in the world of #gls("llm"), there exists more than just one overview paper.
 A fairly current overview paper on the number of model parameters can be found in @Minaee2024. 
 For interested readers, so-called tiny language models have a model count of about $#num("1e9")$ @Zhang2024
 
-The reference to #gl_("llm") should show that the number of model parameters can be neglected for our approximation.
+The reference to #gls("llm") should show that the number of model parameters can be neglected for our approximation.
 Therefore, only the accuracy requirement is significant.
 We further note that the L2-norm is favorable for flexible models for extrapolation.
 The L1-norm ensures within the optimization that superfluous model parameters are switched off (set to $0$), making it more suitable for extrapolation.
@@ -147,8 +147,8 @@ The optimizer can usually reach a solution faster with the L2-norm than with an 
 
 So far, we have explained the relationship between Machine Learning techniques and regression models.
 Subsequently, important basic knowledge about model size and model accuracy influencing factors was provided.
-Next, this knowledge should be applied to the problem of #gl_("ld").
-As mentioned before, #gl_("ld") is mathematically nothing other than a regression or interpolation task.
+Next, this knowledge should be applied to the problem of #gls("ld").
+As mentioned before, #gls("ld") is mathematically nothing other than a regression or interpolation task.
 The difference between regression and interpolation is that in interpolation, each individual support point must be hit, whereas this is optional in regression.
 This can be imagined as follows: in interpolation models, it is particularly important that the support points, which represent the data points from the training dataset, reproduce the known output as accurately as possible. 
 In other words, the known output must be hit exactly.
@@ -156,7 +156,7 @@ In regression, this is not necessarily the case.
 Here, other factors might have greater importance.
 A possible example would be that the course between two data points can be represented as a continuous curve with tangent continuity.
 The aerodynamic distribution load provides both local spatial coordinates and the magnitude of the force acting there.
-For the #gl_("ld"), specific support points are sought at which the #gl_("lee") are applied with a force magnitude. 
+For the #gls("ld"), specific support points are sought at which the #gls("lie") are applied with a force magnitude. 
 Due to the previously made justifications, the first method with which one would usually start would be the linear surrogate model.
 However, it is already known that the aerodynamic distribution load is not linear.
 Therefore, it would be possible to go higher with the order of the method.
@@ -190,8 +190,8 @@ Through the latter, the focus would be on adding new points.
 Therefore, the method according to Chaikin is eliminated for our purposes.
 
 Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
-These support points could be seen as position specifications for the #gl_("lee").
-The magnitudes of the forces and the dimensions of the #gl_("lee") could be obtained through subsequent optimization.
+These support points could be seen as position specifications for the #gls("lie").
+The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization.
 An alternative to curve fitting or regression models is provided by unsupervised methods alongside supervised methods
 @Fukami2023 
 // supervised
@@ -318,7 +318,7 @@ Up to this point, we have explained the difference between regression and unsupe
 We have named concrete methods for both previously mentioned machine learning techniques. 
 For unsupervised learning, kmeans++ was discussed in detail.
 For further proceedings, specific areas should be named in which kmeans++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
-Subsequently, it should be explained in detail how kmeans++ could be used for #gl_("ld").
+Subsequently, it should be explained in detail how kmeans++ could be used for #gls("ld").
 Kmeans is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
 A list of methods similar to kmeans with calculated results can be found in @fig_15.
 A detailed description of the shown methods is outside the scope of this work.
@@ -331,7 +331,7 @@ In @Ikotun2023, further developments of kmeans and additional areas in which kme
   caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
 )<fig_15>
 
-After showing that kmeans++ is a method that finds application in various areas in industry and science, we should focus on the #gl_("ld"). 
+After showing that kmeans++ is a method that finds application in various areas in industry and science, we should focus on the #gls("ld"). 
 The input for kmeans++ would be the numerically calculated aerodynamic load distribution. 
 This is two-dimensional and includes on one hand the local position where the force acts and on the other hand the magnitude of the force. 
 However, the aerodynamic load distribution can also contain six dimensions if the load distribution is to be considered as a 3D force distribution.
@@ -343,23 +343,23 @@ The limitation would arise through available computing power.
 Here, both the number of points and the number of dimensions play a role.
 However, from experience, the author of this report can say that even with very high data points and dimensions, the procedure is remarkably fast.
 
-When kmeans++ is applied to #gl_("ld"), the input would be a load distribution. 
+When kmeans++ is applied to #gls("ld"), the input would be a load distribution. 
 The output would be the centroids, which have a physically relevant meaning.
 First, it should be noted that the number of input dimensions determines the number of dimensions of the output.
 It is a direct 1:1 relationship. If the input is two-dimensional, then the output is also two-dimensional.
 In a two-dimensional input, as mentioned before, the first dimension would be the locality of the load and the other would represent the magnitude of the force.
-The first dimension of the two-dimensional centroid matrix would give the respective position of the #gl_("lee"). 
+The first dimension of the two-dimensional centroid matrix would give the respective position of the #gls("lie"). 
 The second entry in the centroid matrix would give a representative force magnitude.
 Before the physical evaluation is discussed further, a brief explanation should be given as to why the term centroid matrix was used.
 If the input (load distribution) is two-dimensional, then the number of columns in the centroid matrix is $2$. 
 The number of rows results from the number of allowed centroids.
 
-We had said that the second entry would each indicate a representative force magnitude that should act on the corresponding #gl_("lee").
+We had said that the second entry would each indicate a representative force magnitude that should act on the corresponding #gls("lie").
 However, this interpretation is not complete, which should be explained in the following.
-The centroids are obtained through geometric averaging. While the averaging can be used to represent a group, these values cannot be used as loads for the #gl_("lee").
+The centroids are obtained through geometric averaging. While the averaging can be used to represent a group, these values cannot be used as loads for the #gls("lie").
 If an averaged force were to be applied, partial loads would be ignored.
 The goal is for all partial loads to be combined and added up to a resulting force.
-This means instead of using the value that kmeans++ would indicate in the second dimension of the matrix as a load value for the #gl_("lee"), all partial forces within a cluster should be added up to a resulting force.
+This means instead of using the value that kmeans++ would indicate in the second dimension of the matrix as a load value for the #gls("lie"), all partial forces within a cluster should be added up to a resulting force.
 The partial forces would be all group members of a group or cluster.
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
@@ -368,18 +368,18 @@ Additionally, the library is easily accessible, installable, and easy to use.
 Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force can be achieved without much effort.
 
 Another possibility for physically motivated interpretation is offered by the clusters themselves. 
-The area of the clusters could be viewed as the dimension of individual #gl_("lee").
+The area of the clusters could be viewed as the dimension of individual #gls("lie").
 However, this would be counterproductive since the clusters extend over all individual data points.
-Applied to the #gl_("ld"), it would mean that the entire wing skin would be covered because one cluster directly joins the next.
-If the clusters are so close together, the #gl_("lee") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
+Applied to the #gls("ld"), it would mean that the entire wing skin would be covered because one cluster directly joins the next.
+If the clusters are so close together, the #gls("lie") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
 After both the procedure via regression and kmeans++ have been explained and interpreted, a decision should be made between the two possible paths.
-Since kmeans++ can provide a good starting value for two important quantities in addition to specifying the positions for the #gl_("lee") through summation of the partial forces, kmeans++ is preferred over the regression path.
+Since kmeans++ can provide a good starting value for two important quantities in addition to specifying the positions for the #gls("lie") through summation of the partial forces, kmeans++ is preferred over the regression path.
 
 At this point, the following should be clearly stated. While kmeans++ has various advantages and allows physical interpretations, it does not answer all questions that would be required for the experimental execution of the structural test. 
-Through kmeans++ a good starting value for the positions of the #gl_("lee") and the resulting force magnitudes that should act on the respective #gl_("lee") can be obtained. 
-However, this can only limitedly indicate what the dimensions of the individual #gl_("lee") should look like.
+Through kmeans++ a good starting value for the positions of the #gls("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
+However, this can only limitedly indicate what the dimensions of the individual #gls("lie") should look like.
 The latter is of particular importance when there is a requirement for free viewing area. 
-While it would be possible to cover the entire wing with #gl_("lee"), this is not common practice.
+While it would be possible to cover the entire wing with #gls("lie"), this is not common practice.
 Furthermore, blocking the view would have other undesired disadvantages.
 Besides the impossibility of optical measurement technology, it would no longer be possible for engineers to apply loads with visual judgment.
 A concrete example could be that the internal pressure should be increased from $10 #unit("MPa")$ to $60 #unit("MPa")$.
@@ -387,8 +387,8 @@ While the pressure is being increased, damage could occur that would be visually
 If the view were blocked, this would only be limitedly possible or not possible at all.
 Therefore, the output of kmeans++ can be used as a starting value for further optimization.
 
-In this section, it was first explained what is meant by #gl_("ld"), why it is required, and which two major paths would be possible to discretize the load.
+In this section, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
 Furthermore, important fundamentals of Machine Learning were provided and concrete regression methods were listed. 
 Subsequently, the alternative path via kmeans++ was shown, compared with the regression path, and justified in settling on the favorite kmeans++.
-The essential progress achieved in this section was finding, evaluating, and deciding on a method that enables #gl_("ld").
+The essential progress achieved in this section was finding, evaluating, and deciding on a method that enables #gls("ld").
 Finally, it was explained which questions are still open and that subsequent optimization would be recommended.
