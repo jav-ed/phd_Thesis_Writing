@@ -7,6 +7,7 @@ Collets are custom-made components specifically developed for load introduction 
 The costs for these custom-made items heavily depend on the variability of the profile geometry along the wing's span.
 The higher the variation, the more specific collets are required, which can significantly increase costs.
 
+// TODO recheck actual 7m?
 In the specific case of a wing with a span of approximately $gt.tilde 7 unit("meter")$, where uniform load distribution is required over the entire length, an additional challenge arises.
 The inner wing, which makes up the majority of the span ($gt.tilde 7 unit("meter")$) and contains the tanks, has a uniform cross-section in the absence of manufacturing inaccuracies.
 If an outer wing area were assumed as with APUS #cite(<APUS_1>), then the length would increase. 
@@ -56,18 +57,17 @@ Regarding the control system effort, it should be noted that after attaching the
 Specially trained personnel is still required, particularly someone who monitors the correct positioning and proper attachment of the collets, as well as personnel familiar with crane operation.
 These requirements ensure that load distribution is carried out accurately and safely while minimizing risks to operating personnel and the test structure.
 
-The reproducibility of tests using collets as #gls("lie") on identical wings is rated positively due to the precision with which collets can be attached (small deviations in the millimeter range) and the electrical operation of the crane, which enables very good repeatability.
-These characteristics contribute to high reliability and consistency of test results.
-Although the use of collets is a known method and thus does not represent a high innovation factor, its application outside large aircraft construction represents an expansion of the field of application.
-The possibility of constraint forces strongly depends on how the pads are connected to the wing.
-An elastic intermediate layer between pad and wing can minimize constraint forces, while direct bonding can lead to local constraint forces.
+// -------------------------------------------------------------------------- //
+The reproducibility of tests using collets as #gls("lie")  on identical wings is rated positively due to the precision with which collets can be attached (small deviations in the millimeter range), as well as the electrical operation of the crane, which enables very good repeatability. 
+These characteristics contribute to high reliability and consistency of test results. 
+Although the use of collets is a known method and thus does not represent an innovation factor, it still poses challenges regarding the resulting constraint forces. 
+These constraint forces and their potential effects on the structural behavior of the wing, such as displacements, stresses, and failure modes compared to a freely flying wing, must be carefully investigated to avoid distortions.
 
-The ability to introduce tension loads depends on the cohesive and adhesive strength of the adhesive used and sufficient stiffness of the pads.
-This requires careful selection of materials and adhesives to achieve the desired test conditions and ensure the integrity of structural tests.
+// -------------------------------------------------------------------------- //
 
-The modeling effort for the procedure with pads and cylinders should not be underestimated, as both the stiffness of the pads and the nature of their connection to the wing must be included in the calculations.
-This step is crucial to correctly simulate the system's behavior under load conditions and understand how loads are actually transferred to the structure.
-Careful consideration of these factors in the modeling process is essential for the accuracy of simulated results and their transferability to real conditions.
+egarding the possibility of introducing tension loads, collets in combination with a crane or cylinder offer different options. While using a crane alone may have certain limitations, the combination with a cylinder enables more flexible load application. The modeling effort for representing the interaction between collet and wing profile in #gls("fem") models is increased due to the necessity to precisely model the contact conditions between the two meshes (collet and profile). This is particularly the case when the collet encloses the profile and pushes the underside of the profile upward during lifting, while the upper side is not fixed and thus remains free.
+
+In summary, the costs for using collets cannot be conclusively evaluated until the requirements for load discretization and accuracy are defined in detail. Nevertheless, it is clear that using a crane and additional load harness significantly increases costs compared to using sandbags. The possible load introduction accuracy and the effects of constraint forces on structural behavior are decisive factors that require detailed evaluation to determine the suitability of collets for specific test requirements.
 
 #hor_Line("Assessment: Air Cushions")
 Air cushions represent a relatively new method in load introduction technology, particularly notable for its innovative approach to load distribution.
@@ -93,7 +93,6 @@ Furthermore, adjusting the internal pressure of the air cushions should be remot
 
 The air cushions must be both applied and pressurized. 
 Additionally, they must be connected to cylinders. Because of this, the control system effort for the air cushion system is considered similar to the cylinder system.
-
 The challenge lies in ensuring precise control of pressure within the air cushions to guarantee uniform load distribution.
 Specially trained personnel is required for effective use of the air cushion system.
 This personnel must not only monitor the correct application and proper connection of the air cushions and cylinders but also ensure their functionality during test execution.
@@ -105,14 +104,14 @@ The novel approach to load introduction offers the potential to improve or even 
 Since the load is applied from below through pressure force, no constraint forces are expected, enabling uniformly distributed and precise load application.
 However, to effectively introduce tension loads, a sufficiently strong adhesive connection between the air cushions and the wing is required.
 Additionally, both the air cushion and the adhesive ends must have sufficient stiffness properties to correctly transfer the loads.
-
 The modeling effort within the framework of #gls("fem") is simplified by using air cushions.
-The uniformly distributed surface load generated by the air cushions can be represented in the FE model without great difficulties, increasing the efficiency and accuracy of simulation-supported analyses.
+The uniformly distributed surface load generated by the air cushions can be represented in the #gls("fem") model without great difficulties, increasing the efficiency and accuracy of simulation-supported analyses.
 
 In summary, while the costs for implementing the air cushion system are not yet fully known at this time, they are estimated to be comparable to the costs for collets and pads with cylinders. 
 The reason for this is that even if the air cushions can be obtained inexpensively, cylinders are still needed to apply pressure force.
 This, together with the described advantages regarding reusability, safety, reproducibility, and the innovative approach to load introduction, makes air cushions a promising option for future applications in load distribution.
 
+// ---------------------------- cylinder and pad ---------------------------- //
 #hor_Line("Assessment: Cylinder with Pad")
 The procedure with pads and cylinders represents an established method for load introduction that differs little from the use of air cushions with cylinders in terms of handling and achieved results.
 Achieving high load distribution quality also requires a correspondingly large number of #gls("lie") here, which can increase costs.
@@ -185,7 +184,7 @@ However, when high-dimensional information (high amount of information) is trans
   [7], [Control system effort], [#col_X()], [#col_Mid()], [#col_X()], [#col_X()],
   [8], [Specially trained personnel], [#col_Gre()], [#col_Mid()], [#col_Mid()], [#col_Mid()],
   [9], [Reproducibility], [#col_X()], [#col_Gre()], [#col_Gre()], [#col_Gre()],
-  [10], [Innovation], [#col_Gre()], [#col_Gre()], [#col_Mid()], [#col_X()],
+  [10], [Innovation], [#col_X()], [#col_X()], [#col_Mid()], [#col_X()],
   [11], [Constraint forces], [#col_Gre()], [#col_Mid()], [#col_Gre()], [#col_Gre()],
   [12], [Possibility for introducing tension loads], [#col_X()], [#col_Gre()], [#col_X()], [#col_X()],
   [13], [Modeling effort], [#col_Gre()], [#col_X()], [#col_X()], [#col_Gre()]
@@ -254,10 +253,16 @@ Many of these can be determined through load approximation.
 How many #gls("lie") are needed, what dimensions should they have, where should they be attached, what minimum distance between them is required, and what magnitude should be pulled or pushed.
 
 Therefore, @tab_32 and @tab_33 can be considered as an important first step, providing indications for concrete further action.
+
+// TODO proper transition into next chapter - also make sure to hihglight that the provided inofrmaiton from the enxt chapter are helpful, but the optmizaiton is still just one of the next steps that needs to be taken. With it informaiton especially related to the desired test condiations can be obtianed. While the optimiaztion results can be reagrded as hihgly helpful, potentially additional considerations need to be make depending on the scale of the considered project
 To identify a favorite, load approximation should be carried out next.
 
+// TODO proper summary
+#summary_([
 In this section, it was explained what is meant by physical load introduction.
 Then, several options were enumerated and explained, which should have highlighted the difference between simulative and physical or experimental load application.
 An evaluation table was presented and applied to each #gls("lie").
 The derivation of results was discussed in detail in written form on one hand, and on the other hand, a tabular presentation was given for clarity.
 This section brings to our attention that the next sub-point should address the load discretization of continuous aerodynamics.
+
+])

@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // TODO
+// Proper intro
 === Physical Load Application<chap_3_0_4>
 
 Critical load case found identified, proper infromaiton about hydrogen properties. focused on the hazard properties of hydrogen.
@@ -59,7 +60,7 @@ These physical objects, which shall be referred to as #gls("lie"), can then be e
 The pulling or pushing should approximate the aerodynamic force.
 This method raises several questions:
 
-1. What possible #gls("lie") exist
+1. What possible #gls("lie", long:true) exist
 2. What criteria should be used to determine a favorite
 3. Where exactly should the #gls("lie") be attached
 4. What length should the #gls("lie") have
@@ -115,6 +116,7 @@ Based on the stated considerations, the third option for experimental testing on
 Now that this initial question has been clearly answered, methods should be presented for how a load can be physically applied to the aircraft through #gls("lie").
 A list of methods that were considered is given in @tab_30.
 
+// TODO either singular or plural - get it properly
 #figure(
   table(
     columns: (auto),
@@ -144,7 +146,6 @@ A list of methods that were considered is given in @tab_30.
 
 Load introduction represents an important investigation since not every method can be used for arbitrary structures.
 Essential points that must always be considered are the geometry of the object to be loaded (test specimen), the type of loading (static, dynamic), the magnitude of the force to be applied, and the direction of the force vector.
-
 Depending on requirements, load application accuracy may also be a significant factor.
 The load might need to be achieved precisely to the Newton or Newton-meter (bending load) at the position with given coordinates.
 It could also be that the structure being loaded must undergo the same test multiple times after the experimental structural test or be subjected to other tests afterward.
@@ -161,7 +162,6 @@ Failure of the #gls("lie") can lead to undesired effects up to the failure of th
 A significant difference that arises when testing standardized structures versus complex structures is the existence of existing test facilities.
 For example, there are typical geometries used in tensile testing.
 For complex geometries, #gls("lie") usually need to be newly manufactured.
-
 The following will discuss the individual #gls("lie") from @tab_30 in detail.
 // --------------------------------- sandbag -------------------------------- //
 One of the oldest, most cost-effective, and simplest methods for introducing physical loads onto a wing is through heavy objects. 
@@ -174,12 +174,12 @@ For an example of a collet, refer to @fig_57.
 Collets are used together with a load harness and typically with a crane.
 Collets are usually made of wood, have an upper and lower side, which are compressed or held together with metal screws.
 To prevent damage to the wing skin at the contact point between collet and wing, a soft material can be placed between them as protection.
-
+//
 // -------------------------------- air bags -------------------------------- //
 The next #gls("lie") mentioned in @tab_30 are air cushions.
 This is a method where a balloon-like cushion is filled with gas.
 It can then be adhered at the point where the load is to be introduced and, for example, pressed by a cylinder.
-
+//
 // -------------------------------- cylinder -------------------------------- //
 Another possibility for introducing loads into physical objects is cylinders.
 These are movable and can either be pressed directly onto a local area of the test specimen with adhesive pads or connected to other #gls("lie").
@@ -210,6 +210,7 @@ Relevant evaluation criteria are needed to systematically identify a favorite. T
 The following will describe both the individual chosen criteria in more detail.
 Additionally, it will show the argumentation behind how the individual points were awarded.
 
+// TODO get it into two columns
 #figure(
   table(
     columns: (auto, auto),
