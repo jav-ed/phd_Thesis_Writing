@@ -3,20 +3,21 @@
 /* -------------------------------------------------------------------------- */
 
 // TODO
+// Title
+// word repetition
 // Proper intro
 === Physical Load Application<chap_3_0_4>
+In @chap_3_0_0 critical load case for #gls("swith") were established. Hydrogen's properties were exmained in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
+Based on the current lack of technical progress regarding safely handling hydrogen within high pressure and long dimensional tube experiments, an filling agent study was conducted in @chap_3_0_1 to @chap_3_0_3. The analysis determined that alternative filling agents could potentially replace hydrogen for structural validation testing without significantly altering the structural behavior.
 
-Critical load case found identified, proper infromaiton about hydrogen properties. focused on the hazard properties of hydrogen.
-Decided wehter based on the given technical advantages it is feasible to conduct a experimental structral validation test with hydrogen
-Found a method how to assess whter hydrogen could be replaced througha nother filling agent without chaning important structral properties.
+While numerical simulations offer considerable advantages in analyzing structural behavior, as demonstrated in @chap_3_0_3 and @chap_3_0_4, experimental validation remains essential. 
+Numerical methods allow straightforward modification of parameters such as internal pressure and benefit from well-established theoretical frameworks for load application. 
+This differs signitficalty from expermeintal investigations.
+While Applying pyhsical forces for experimental tests on aircraft is already a complex and demanding task, its complexity is increased when having tubes that are set under high pressue, in the case of #gls("swith")
 
-There are many advatages of numeircal simualtion over experiemntal investigatosn. One could be noted for fem simulations in @chap_3_0_3 and @chap_3_0_4. Chaning simulation parameter like the internal pressure do not require much effort. Addtionaly applying loads into the simulaiton model already has its theoretical background covered. However, for experimental investigations, mehtod to securely and accurately apply loads into the wings through physical objects is required.
-Thus, this section has the focus on first generally presenting methods tht can be utilized to apply physical into a #gls("swith", long:true). 
-The found options shall be explained briefly, mentioning advantage and disadvantge.
-for clear reading table presentatoion shall be given.
-The output of this section is important for the upcoming optimization
+This subsection addresses experimental challenges by first identifying the required forces for structural testing. A comprehensive examination of various methods for physical load introduction on the wings of aircraft.  Is is accompanied by detailed analysis of each method's advantages and disadvantages. Through systematic comparison criteria, these methods are evaluated to determine the most suitable approach for structural testing. 
 
-one side opned: zwangskräfte verringern
+The findings from this analysis hold particular significance as they inform the optimization process detailed in subsequent chapters. Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
 
 
 // -------------------------------------------------------------------------- //
@@ -30,6 +31,21 @@ Now that we have established that we could fill the tanks with water for experim
 This section will first explain which forces need to be introduced, where, and why.
 Then, possible methods for physically applying loads to the aircraft will be presented,
 followed by investigations conducted to determine the most suitable method.
+
+// ---------------------------- not checkec above --------------------------- //
+
+Besides the internal pressure elaborated previously within this thesis, aerodynamic forces constitute the other crucial loads experienced by this aircraft configuration during flight operations. 
+To achieve representative test conditions that accurately reflect the in-flight structural behavior, it is essential to simultaneously apply both internal pressure and aerodynamic loads during experimental investigations.
+Three fundamental approaches can be considered for applying aerodynamic forces to the wing and fuselage skin structure. The first approach involves conducting experimental tests during actual flight conditions. However, this option presents significant challenges for the current aircraft concept, including numerous technical uncertainties and potentially catastrophic safety risks. 
+Additionally, the financial requirements for flight testing would substantially exceed the project's current budgetary constraints, rendering this approach unfeasible.
+
+The second approach involves wind tunnel testing @Goizueta2022 @Zhao2022 @He2022, which offers relatively accurate representation of external aerodynamic forces. This method benefits from extensive implementation in both research institutions and industry, providing access to established expertise and validated procedures. Although wind tunnel operational costs are considerable, they remain within potentially manageable ranges for a pioneering's project scope. 
+However, significant challenges arise regarding environmental control and safety considerations. The generation of high-velocity flows within enclosed spaces necessitates extensive safety protocols and specialized containment measures. 
+
+// ---------------------------------- here ---------------------------------- //
+Environmental conditions within the test chamber present particular concerns, as...
+
+// -------------------------------------------------------------------------- //
 
 Besides the internal pressure, which has been discussed several times in this report, aerodynamic forces are the primary forces experienced by this type of aircraft during flight.
 To make the experimental investigation as close as possible to real flight conditions, both internal pressure and aerodynamic forces must be applied.
