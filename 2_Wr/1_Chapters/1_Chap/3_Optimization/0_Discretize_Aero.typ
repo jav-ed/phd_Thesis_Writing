@@ -68,7 +68,7 @@ For this, a concrete example should be presented.
 Let's assume we have 100 data points in a two-dimensional space. One dimension could represent shoe size and the other dimension could represent height.
 These 100 shoe sizes and heights span a known space. 
 If a new shoe size is given that falls within the known space, the corresponding height can be determined through interpolation.
-For a simplified understanding of extrapolation, let's further assume that the minimum shoe size was 36 and the maximum shoe size was $46$ in our dataset.
+For a simplified understanding of extrapolation, let's further assume that the minimum shoe size was 36 and the maximum shoe size was 46 in our dataset.
 If now a shoe size of 47 is given to determine a height based on it, this is called extrapolation.
 Extrapolation is the calculation of outputs where the input lies outside the training dataset.
 
@@ -103,8 +103,8 @@ $ E_1(f) = 1/n sum_(k=1) ^n |x_k - f(x_k)| $<eq_7>
 // ---------------------------------- step ---------------------------------- //
 
 The consequence is that the L1-norm favors sparse weight matrices.
-Sparse means that in the matrix containing the individual coefficients or weights for a regression model, the majority of entries are assigned a $0$.
-A $0$ in the weight matrix means that the coefficients are not used.
+Sparse means that in the matrix containing the individual coefficients or weights for a regression model, the majority of entries are assigned a 0.
+A 0 in the weight matrix means that the coefficients are not used.
 The result is an attempt to learn the underlying system behavior, which should be recognized from the training behavior, with as few parameters as possible.
 
 Applying what has been discussed so far to the linear and non-linear model of fourth order, the following can be noted.
@@ -118,7 +118,7 @@ The example presented should show that more complex models do not always provide
 More complex models allow more flexibility in learning. 
 However, this flexibility might exceed the behavior that should be extracted from the training data.
 Besides accuracy, computation time also plays a major role. 
-Whether a model has $2$ or $100$ parameters would lead to very large differences in accuracy in extrapolation.
+Whether a model has 2 or 100 parameters would lead to very large differences in accuracy in extrapolation.
 However, for computation time, such parameter numbers would not play a role with today's available hardware.
 Today, large models are no longer calculated on the #gls("cpu"), but on the #gls("gpu").
 This has many reasons, but the main one is the parallelizability of the #gls("gpu").
@@ -135,7 +135,7 @@ For interested readers, so-called tiny language models have a model count of abo
 The reference to #gls("llm") should show that the number of model parameters can be neglected for our approximation.
 Therefore, only the accuracy requirement is significant.
 We further note that the L2-norm is favorable for flexible models for extrapolation.
-The L1-norm ensures within the optimization that superfluous model parameters are switched off (set to $0$), making it more suitable for extrapolation.
+The L1-norm ensures within the optimization that superfluous model parameters are switched off (set to 0), making it more suitable for extrapolation.
 If a model is to reproduce reality, it must be able to both interpolate and extrapolate.
 As a reminder, parsimonious states, as simple or uncomplicated as possible and as complex as necessary.
 Translated to regression models, this means as few model parameters as possible and only as many as necessary.  
@@ -213,7 +213,7 @@ The centroids are characteristic quantities that the procedure has found in the 
 Visually, the centroids can also be represented by three-dimensional points, as shown in Figure @fig_13_1.
 In the latter, it can be observed that the procedure was allowed to determine 10 characteristic quantities.
 Figure @fig_13_2 shows which region each centroid covers. 
-As an example, Centroid $3$ describes the entire green region in Figure @fig_13_2.
+As an example, Centroid 3 describes the entire green region in Figure @fig_13_2.
 
 #figure(
     grid(rows: (30%, 30%, 30%),
@@ -267,8 +267,8 @@ The idea behind kmeans++ is to create groups based on local similarities.
 It attempts to find coordinates for the centroids so that the distance of the centroids within their group members is reduced.
 The group members are all the entries that belong to a centroid. 
 In Figure @fig_13_2, the crosses show the respective centroid. 
-Let's again consider centroid $3$ and its corresponding green area.
-All coordinates that lie within this green area are group members of centroid $3$.
+Let's again consider centroid 3 and its corresponding green area.
+All coordinates that lie within this green area are group members of centroid 3.
 The colored area or active effective area and the position of the respective centroid are interdependent.
 The goal is to place the centroid within an effective area so that the distance to all group members is reduced.
 An example that can illustrate the grouping of kmeans++ would be the following.
@@ -351,7 +351,7 @@ In a two-dimensional input, as mentioned before, the first dimension would be th
 The first dimension of the two-dimensional centroid matrix would give the respective position of the #gls("lie"). 
 The second entry in the centroid matrix would give a representative force magnitude.
 Before the physical evaluation is discussed further, a brief explanation should be given as to why the term centroid matrix was used.
-If the input (load distribution) is two-dimensional, then the number of columns in the centroid matrix is $2$. 
+If the input (load distribution) is two-dimensional, then the number of columns in the centroid matrix is 2. 
 The number of rows results from the number of allowed centroids.
 
 We had said that the second entry would each indicate a representative force magnitude that should act on the corresponding #gls("lie").

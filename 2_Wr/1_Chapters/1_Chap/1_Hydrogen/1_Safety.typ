@@ -233,11 +233,11 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
     /* --- header --- */
     table.cell(colspan:2, [*Hydrogen-Air Mixture Properties*]),
     /* -------------- */
-    [Lower explosion limit (ignition limit)], [$4$ Vol% H#sub[2]],
-    [Lower detonation limit], [$18$ Vol% H#sub[2]],
-    [Stoichiometric mixture], [$29.6$ Vol% H#sub[2]],
-    [Upper detonation limit], [$58.9$ Vol% H#sub[2]],
-    [Upper explosion limit (ignition limit)], [$75.6$ Vol% H#sub[2]],
+    [Lower explosion limit (ignition limit)], [4 Vol% H#sub[2]],
+    [Lower detonation limit], [18 Vol% H#sub[2]],
+    [Stoichiometric mixture], [29.6 Vol% H#sub[2]],
+    [Upper detonation limit], [58.9 Vol% H#sub[2]],
+    [Upper explosion limit (ignition limit)], [75.6 Vol% H#sub[2]],
     [Ignition temperature], [$585 " " degree.c  =^hat 858 "K "$],
     [Minimum ignition energy], [$0.017 "mJ"$],
     [Maximum laminar flame velocity], [$approx 3 "m/s"$],

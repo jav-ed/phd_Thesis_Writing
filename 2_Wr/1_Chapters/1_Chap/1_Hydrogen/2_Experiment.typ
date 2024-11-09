@@ -54,29 +54,29 @@ For instance, a Mach number of 5 indicates that the local velocity is five times
     stroke: none,
       
     [*Medium*], [*Speed of sound [m/s]*],[],[*Medium*], [*Speed of sound [m/s]*],
-    [Steel], [$5170$],[],
-    [Cast Iron], [$3210$], 
+    [Steel], [5170],[],
+    [Cast Iron], [3210], 
 
-    [Concrete], [$3730$],[],
-    [Polymer: PVC], [$1462$],
+    [Concrete], [3730],[],
+    [Polymer: PVC], [1462],
 
-    [Polymer: PE], [$973$], [],
-    [Wood], [$4500$],
+    [Polymer: PE], [973], [],
+    [Wood], [4500],
 
-    [Glass], [$5300$],[],
-    [Water], [$1437$],
+    [Glass], [5300],[],
+    [Water], [1437],
 
-    [Diesel], [$1206$],[],
-    [Gasoline], [$1062$],
+    [Diesel], [1206],[],
+    [Gasoline], [1062],
 
-    [Air (dry)], [$343$],[],
-    [Helium], [$1005$],
+    [Air (dry)], [343],[],
+    [Helium], [1005],
 
-    [Hydrogen], [$1300$],[],
-    [Argon], [$318$],
+    [Hydrogen], [1300],[],
+    [Argon], [318],
 
-    [Nitrogen], [$349$],[],
-    [Methane], [$446$],
+    [Nitrogen], [349],[],
+    [Methane], [446],
   ),
   kind: table,
   caption: [Speed of sound in various substances. Gases are measured at $20 " " degree.c$ and $1 "bar"$ @Sigloch2022.],
