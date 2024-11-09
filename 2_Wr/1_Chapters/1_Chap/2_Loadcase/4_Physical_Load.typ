@@ -36,26 +36,25 @@ followed by investigations conducted to determine the most suitable method.
 
 Besides the internal pressure elaborated previously within this thesis, aerodynamic forces constitute the other crucial loads experienced by this aircraft configuration during flight operations. 
 To achieve representative test conditions that accurately reflect the in-flight structural behavior, it is essential to simultaneously apply both internal pressure and aerodynamic loads during experimental investigations.
-Three fundamental approaches can be considered for applying aerodynamic forces to the wing and fuselage skin structure. The first approach involves conducting experimental tests during actual flight conditions. However, this option presents significant challenges for the current aircraft concept, including numerous technical uncertainties and potentially catastrophic safety risks. 
-Additionally, the financial requirements for flight testing would substantially exceed the project's current budgetary constraints, rendering this approach unfeasible.
+Three fundamental approaches can be considered for applying aerodynamic forces to the wing and fuselage skin structure. 
+The first approach involves conducting experimental tests during actual flight conditions. However, this option presents significant challenges for the current aircraft concept, including numerous technical uncertainties and potentially catastrophic safety risks. 
+Additionally, the financial requirements for flight testing would substantially exceed the project's current budgetary constraints, rendering this approach infeasible.
 
-The second approach involves wind tunnel testing @Goizueta2022 @Zhao2022 @He2022, which offers relatively accurate representation of external aerodynamic forces. This method benefits from extensive implementation in both research institutions and industry, providing access to established expertise and validated procedures. Although wind tunnel operational costs are considerable, they remain within potentially manageable ranges for a pioneering's project scope. 
-However, significant challenges arise regarding environmental control and safety considerations. The generation of high-velocity flows within enclosed spaces necessitates extensive safety protocols and specialized containment measures. 
+The second approach involves wind tunnel testing @Goizueta2022 @Zhao2022 @He2022, which offers relatively accurate representation of external aerodynamic forces. This method benefits from extensive implementation in both research institutions and industry, providing access to established expertise and validated procedures. Although wind tunnel operational costs are considerable, they remain within potentially manageable ranges for a pioneering project's scope. 
+However, significant challenges arise regarding environmental control and safety considerations. The generation of high-velocity flows within enclosed spaces necessitates extensive safety protocols and specialized containment measures.
 
 // ---------------------------------- here ---------------------------------- //
-Environmental conditions within the test chamber present particular concerns, as...
+A critical consideration in wind tunnel testing relates to the management of environmental conditions within the test facility. The generation of flight-representative velocities within an enclosed space necessitates comprehensive safety protocols and specialized containment measures.
 
+Primary safety considerations include the secure anchoring of all test equipment and auxiliary components to prevent displacement under high-velocity conditions. Furthermore, strict operational protocols must be established to ensure personnel safety, particularly regarding maximum permissible wind speed exposure levels during test operations.
+
+Even with the implementation of robust safety measures and successful pressurization protocols for the tanks, significant technical challenges persist regarding instrumentation. The high-velocity environment poses two critical concerns for measurement systems: potential degradation of measurement accuracy and the physical security of instrument mounting systems under aerodynamic loading.
+
+Given that the #gls("swith") represents pioneering technology, comprehensive experimental data acquisition is essential for validating its structural behavior. This necessitates extensive instrumentation to capture multiple physical parameters simultaneously without interference. The inherent limitations imposed by wind tunnel testing on measurement system implementation and deployment represent a significant technical constraint.
+
+These instrumentation restrictions, combined with the aforementioned safety considerations, render wind tunnel testing unsuitable for the structural validation of the current aircraft configuration.
 // -------------------------------------------------------------------------- //
 
-Besides the internal pressure, which has been discussed several times in this report, aerodynamic forces are the primary forces experienced by this type of aircraft during flight.
-To make the experimental investigation as close as possible to real flight conditions, both internal pressure and aerodynamic forces must be applied.
-There are principally three different methods for applying aerodynamic forces that act on the wing and fuselage skin.
-The first option would be to conduct the experimental test during flight.
-However, there are too many unknowns for the present aircraft concept. Additionally, such a test carries potentially lethal risks.
-Furthermore, the costs would far exceed the project's current technical standards and budget. Therefore, the option of experimental testing during flight is ruled out.
-The second option would be to conduct the experimental test in a wind tunnel. This would allow for relatively accurate representation of external aerodynamic forces. 
-Wind tunnel testing is well-established in research and industry, allowing existing expertise to be utilized.
-While wind tunnel operation costs are not insignificant, they are presumably manageable.
 However, the key problem identified relates to environmental conditions.
 When high velocities or flight speeds are generated in an enclosed space, special safety measures must be taken.
 
