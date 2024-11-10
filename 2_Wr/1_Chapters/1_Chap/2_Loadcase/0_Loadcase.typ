@@ -196,7 +196,9 @@ $ C_L = L / ( rho/2 u^2 S)  =  (W space.thin n) / ( rho/2 u^2 S) =  (m space.thi
 
 This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem") models.
 
-Having established the theoretical foundation for critical load cases and V-n diagram analysis, industry consultation provided empirical validation. Meetings were conducted with two German companies: a pioneering aircraft manufacturer and one of Europe's leading aerospace testing facilities #footnote[Company names withheld due to confidential knowledge], the latter being particularly experienced in structural validation testing of large commercial aircraft.
+Having established the theoretical foundation for critical load cases and V-n diagram analysis, industry consultation provided empirical validation. Meetings were conducted with two German companies: a pioneering aircraft manufacturer and one of Europe's leading aerospace testing facilities 
+// TODO
+#footnote[Company names withheld due to confidential knowledge], the latter being particularly experienced in structural validation testing of large commercial aircraft.
 
 Both organizations demonstrated substantial interest in the structural testing, development, and commercial certification of #glspl("swith"). One of these companies conducted independent investigations of critical load cases and shared their findings with this research. While specific details remain confidential, it is substantial that both organizations corroborated the identification of multiple load cases from the V-n diagram as critical. This industry validation supports the adoption of V-n diagram analysis as a valuable methodology for the structural validation testing of #glspl("swith").
 

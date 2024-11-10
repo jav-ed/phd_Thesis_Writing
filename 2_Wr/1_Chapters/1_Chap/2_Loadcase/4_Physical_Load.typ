@@ -7,7 +7,7 @@
 // word repetition
 // Proper intro
 === Physical Load Application<chap_3_0_4>
-In @chap_3_0_0 critical load case for #gls("swith") were established. Hydrogen's properties were exmained in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
+In @chap_3_0_0 critical load case for #gls("swith", long:true) were established. Hydrogen's properties were exmained in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
 Based on the current lack of technical progress regarding safely handling hydrogen within high pressure and long dimensional tube experiments, an filling agent study was conducted in @chap_3_0_1 to @chap_3_0_3. The analysis determined that alternative filling agents could potentially replace hydrogen for structural validation testing without significantly altering the structural behavior.
 
 While numerical simulations offer considerable advantages in analyzing structural behavior, as demonstrated in @chap_3_0_3 and @chap_3_0_4, experimental validation remains essential. 
@@ -43,98 +43,51 @@ Additionally, the financial requirements for flight testing would substantially 
 The second approach involves wind tunnel testing @Goizueta2022 @Zhao2022 @He2022, which offers relatively accurate representation of external aerodynamic forces. This method benefits from extensive implementation in both research institutions and industry, providing access to established expertise and validated procedures. Although wind tunnel operational costs are considerable, they remain within potentially manageable ranges for a pioneering project's scope. 
 However, significant challenges arise regarding environmental control and safety considerations. The generation of high-velocity flows within enclosed spaces necessitates extensive safety protocols and specialized containment measures.
 
-// ---------------------------------- here ---------------------------------- //
 A critical consideration in wind tunnel testing relates to the management of environmental conditions within the test facility. The generation of flight-representative velocities within an enclosed space necessitates comprehensive safety protocols and specialized containment measures.
-
 Primary safety considerations include the secure anchoring of all test equipment and auxiliary components to prevent displacement under high-velocity conditions. Furthermore, strict operational protocols must be established to ensure personnel safety, particularly regarding maximum permissible wind speed exposure levels during test operations.
-
-Even with the implementation of robust safety measures and successful pressurization protocols for the tanks, significant technical challenges persist regarding instrumentation. The high-velocity environment poses two critical concerns for measurement systems: potential degradation of measurement accuracy and the physical security of instrument mounting systems under aerodynamic loading.
-
-Given that the #gls("swith") represents pioneering technology, comprehensive experimental data acquisition is essential for validating its structural behavior. This necessitates extensive instrumentation to capture multiple physical parameters simultaneously without interference. The inherent limitations imposed by wind tunnel testing on measurement system implementation and deployment represent a significant technical constraint.
-
+Even with the implementation of robust safety measures and successful pressurization protocols for the tanks, significant technical challenges persist regarding instrumentation. The high-velocity environment poses two critical concerns: potential degradation of measurement accuracy and the risk of instrument detachment under aerodynamic loading.
+Given that the #gls("swith") represents a pioneering aircraft project, it can be assumed that comprehensive experimental data acquisition is essential for monitoring as many aspects as possible. This necessitates extensive instrumentation to measure multiple physical parameters simultaneously without interference. The potential adverse effects of high-velocity airflow, exerted not only on the aircraft but also on the attached measurement devices, could represent a significant technical constraint.
 These instrumentation restrictions, combined with the aforementioned safety considerations, render wind tunnel testing unsuitable for the structural validation of the current aircraft configuration.
-// -------------------------------------------------------------------------- //
-
-However, the key problem identified relates to environmental conditions.
-When high velocities or flight speeds are generated in an enclosed space, special safety measures must be taken.
-
-First, all objects would need to be secured to the floor or other fixed locations. Additionally, it would need to be determined what wind speeds humans can safely be exposed to in the wind tunnel airflow.
-Even if all safety aspects were properly addressed and safe pressurization of the tanks was possible, there would still be a crucial issue to resolve.
-What impact would the high velocities have on each installed measuring instrument?
-Beyond the pure influence on measurement accuracy, there's also the question of whether the attached measuring instruments risk becoming detached or sliding off.
-The K2H2 project is working on pioneering technology. 
-Therefore, it can be assumed that particularly extensive measurement technology is required to cover as many aspects as possible without interference.
-Restricting allowable measurement methods can be considered a significant obstacle.
-Based partly on this last argument, the option of conducting experimental tests in a wind tunnel is also ruled out.
 
 // ------------------------------ third option ----------------------------- //
-The final option is to test the aircraft neither in the air nor in a wind tunnel.
-The aerodynamic loads should be applied in a secure hall.
-This requires physical objects that conform to the wing's contour.
-These physical objects, which shall be referred to as #gls("lie"), can then be either pulled or pushed.
-The pulling or pushing should approximate the aerodynamic force.
-This method raises several questions:
+The third approach involves conducting structural tests in a controlled facility environment, rather than in flight or wind tunnel conditions. This method requires the application of aerodynamic loads through physical devices within a secure testing hall. The approach utilizes #glspl("lie") that can be actuated through either tension or compression to approximate aerodynamic forces.
+This methodology raises several fundamental questions regarding implementation:
 
-1. What possible #gls("lie", long:true) exist
-2. What criteria should be used to determine a favorite
-3. Where exactly should the #gls("lie") be attached
-4. What length should the #gls("lie") have
-5. What spacing should be maintained between #gls("lie")
-6. What forces should be applied to pull or push the #gls("lie")
+1. Which possible #gls("lie", long:true) configurations are viable
+2. How should the selection criteria be established
+3. How many #glspl("lie") should be utilized
+4. Where should the #glspl("lie") be optimally positioned
+5. How should the #glspl("lie") be dimensioned
+6. How should spacing between adjacent #glspl("lie") be determined
+7. Which force magnitudes and directions should be applied
 
-The first two questions will be answered in this chapter. 
-The remaining ones will be addressed throughout the report.
-However, before discussing the initial answers, a brief explanation should be given as to why this option was selected as the best option from the previous ones.
-
-Our industry partner, IMA, has experience conducting experimental structural tests on aircraft.
-This includes both small aircraft and large aircraft.
-The tests that IMA conducts are usually performed on the ground using #gls("lie"). 
-Thus, the first point is that the existing expertise of the industrial partner could be utilized most efficiently.
-Furthermore, precisely because this type of testing has proven to be an economical and efficient possibility, IMA has been using it for years.
-The next point is cost. These are estimated to be lower than the two other mentioned options due to existing personnel, methods, and experience through IMA.
-Another essential point is the measurement technology.
-Since there would be no high wind velocities near the wing, the measurement technology could be applied and used as safely as possible.
-One disadvantage that could arise from this option would be the accuracy of aerodynamic approximation.
-Flight testing would come closest to the actual aerodynamic loading. 
-However, even this would not provide purely undisturbed aerodynamic loading. 
-This is because even the smallest geometric change on the wing affects the flow behavior.
-Air flows are understood as chaotic systems 
-@Roessler1976 @Lu2002 @Rickles2007 @SPROTT2020 @Boeing2016 @Chen1999 @dryer2007spontaneous @Argyris2017 @Strogatz2019 @Datseris2022
+The first two questions are addressed within this subsection, while the remaining aspects are examined throughout 
+// TODO
+// @chap_4_0 
 .
-For chaotic systems, even the smallest change invisible to the naked eye leads to exponential differences over time.
-This phenomenon is known as *Sensitive Dependence on Initial Conditions* @Datseris2022 @Strogatz2019. 
-According to current physical understanding, the Navier-Stokes equations best model fluids (liquids and gases).
-The Navier-Stokes equations are non-linear coupled differential equations that are chaotic in nature.
+Before proceeding with the detailed analysis, it is pertinent to elaborate on the rationale behind selecting this approach over the previously mentioned alternatives.
+As mentioned in @chap_0_6, this research was conducted within the framework of the K#sub[2]H#sub[2] project. Through collaboration with the industrial partner IMA Materialforschung und Anwendungstechnik GmbH Dresden (IMA Dresden), valuable practical insights were obtained for this thesis.
+IMA's expertise encompasses extensive experience in experimental structural testing of aircraft across various size categories, including the Airbus A380 @link_Lufthansa_Airbus_380.
+Their established methodology primarily employs #glspl("lie") in ground-based testing configurations. This existing expertise offers significant advantages regarding implementation efficiency. The sustained application of this testing methodology by IMA demonstrates both its economic viability and technical reliability. Moreover, cost projections for this approach are considerably lower than the alternative methods, primarily due to existing infrastructure, established procedures, and personnel expertise.
 
-We can conclude that experimental flight testing would not necessarily lead to identical undisturbed aerodynamic forces.
-The previously mentioned reasoning can also be applied to wind tunnel testing.
-Depending on how well the continuous aerodynamic loading seen in flight can be converted into discrete aerodynamic loading, the third option could potentially compete with the other two options.
-In the case of unfavorable approximation quality, it would need to be examined what influence the external aerodynamic load has on the overall structural behavior.
-It could be that above a certain high pressure, the much smaller aerodynamic loads can be considered negligibly small.
+A significant advantage of this approach relates to instrumentation implementation. The absence of high-velocity airflow around the wing structure enables optimal placement and utilization of measurement systems with minimal environmental interference. However, it is important to acknowledge that this method presents certain limitations regarding aerodynamic load approximation accuracy.
+While flight testing would theoretically provide the most representative aerodynamic loading conditions, it is noteworthy that even this approach cannot guarantee purely undisturbed aerodynamic loading. The installation of measurement devices on the wing surface inevitably alters its geometry. This geometric modification, however minimal, significantly influences the flow behavior due to the fundamental characteristics of fluid dynamics. Turbulent fluid flows are recognized as chaotic systems @Roessler1976 @Lu2002 @Rickles2007 @SPROTT2020 @Boeing2016 @Chen1999 @dryer2007spontaneous @Argyris2017 @Strogatz2019 @Datseris2022, characterized by their extreme sensitivity to initial conditions. This phenomenon, formally known as *Sensitive Dependence on Initial Conditions* @Datseris2022 @Strogatz2019, results in exponential divergence of system behavior over time, even from imperceptible variations. Current physical understanding employs the Navier-Stokes equations @Blazek2015 as the most comprehensive model for fluid behavior, these being non-linear coupled differential equations that inherently exhibit chaotic characteristics.
+
+
+These considerations suggest that experimental flight testing would not necessarily provide purely undisturbed aerodynamic forces. The same limitations regarding flow disturbance apply to wind tunnel testing. The viability of the ground-based testing approach depends primarily on the fidelity with which continuous aerodynamic loading experienced during flight can be approximated through discrete load application.
+For scenarios where the approximation quality proves suboptimal, further investigation would be required to quantify the influence of external aerodynamic loads on the overall structural response. It is conceivable that beyond certain internal pressure thresholds, the relatively smaller aerodynamic loads might become negligible in terms of their structural impact.
 
 // ---------------------------- burst example ---------------------------- //
-Another important factor supporting the third option is that a burst test could also be conducted here.
-On one hand, the internal pressure could be increased, but on the other hand, the external bending load could be adjusted as desired.
-This would prove extremely difficult and cost-intensive during flight and in the wind tunnel.
-If this were to be conducted during flight, both the internal pressure and external aerodynamic loading would need to be adjusted from a safe distance.
-Additional equipment would be required to increase internal pressure, which would very likely not be present in real undisturbed flight.
-This might potentially distort the results.
-To increase aerodynamic loads, flight speed or angle of attack could be increased, for example. 
-However, these might not be considered representative of undisturbed flight.
-If we assume these modifications are permissible, a safe location would need to be found where the aircraft could burst and then fall to the ground.
-In the case of the wind tunnel, an explosion-proof enclosure would be mandatory.
-On the other hand, the wind tunnel could sustain significant damage.
-To store all the measurement technology along with the pressure increase concept in one room, particularly large space is required.
-This raises the question of whether the enclosure and other essential components required for experimental testing in a wind tunnel would all fit in a rentable wind tunnel, or whether a new dedicated wind tunnel would need to be built.
+The controlled environment of ground-based testing offers an additional significant advantage through its capability to conduct burst testing procedures. This testing methodology enables precise control over both internal pressure magnitudes and external bending loads - a capability that proves particularly valuable for structural validation. The controlled manipulation of these parameters would present substantial technical challenges in both flight and wind tunnel configurations.
+Implementation of burst testing during flight operations would require remote adjustment of both internal pressure and aerodynamic loading parameters. This necessitates supplementary pressurization equipment that would not be present during normal flight operations, potentially compromising the representativeness of the test conditions. While aerodynamic loads could be modified through adjustments in flight velocity or angle of attack, such modifications might deviate from representative flight conditions. Additionally, burst testing during flight operations would require identification of suitable testing zones that accommodate potential structural failure scenarios, introducing significant logistical and safety complexities.
+Wind tunnel implementation presents distinct technical challenges. 
+The requirement for explosion-proof containment systems introduces substantial complexity to facility design. Furthermore, structural failure events could result in significant facility damage under high-pressure conditions. The spatial requirements for comprehensive instrumentation systems, pressure regulation equipment, and containment structures exceed typical wind tunnel facility capabilities. These dimensional constraints suggest that existing facilities might prove inadequate, potentially necessitating development of purpose-built testing infrastructure.
+Through systematic evaluation of these considerations, ground-based testing in a secure facility emerges as the most viable approach for structural validation. 
+This methodology enables implementation of comprehensive safety protocols while maintaining precise control over experimental parameters. Having established this foundational testing approach, @tab_30 lists conventional physical #glspl("lie").
 
-Based on the stated considerations, the third option for experimental testing on the ground in a secure hall has been chosen.
-Now that this initial question has been clearly answered, methods should be presented for how a load can be physically applied to the aircraft through #gls("lie").
-A list of methods that were considered is given in @tab_30.
-
-// TODO either singular or plural - get it properly
 #figure(
   table(
-    columns: (auto),
+    columns: (1fr),
     align: left + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
@@ -147,17 +100,18 @@ A list of methods that were considered is given in @tab_30.
     table.header([*Load Introduction Method*]),
     /* -------------- */
 
-  [Sandbags or similar loading objects],
-  [Collet],
-  [Air cushions or other gases],
-  [Cylinders with pads],
-  [Various combinations of the above possibilities],
-
-),
+    [Discrete mass elements (sandbags)],
+    [Profile-conforming collets],
+    [Air cushions or other gases],
+    [Hydraulic cylinder with pads],
+    [Various combinations of the methods mentioned above],
+  ),
 
   kind: table,
-  caption: [List of possible methods for physically introducing forces into the wing],
-)<tab_30>
+  caption: [Established methods for physically introducing forces into the wing structure.],
+  )<tab_30>
+
+// ---------------------------------- here ---------------------------------- //
 
 Load introduction represents an important investigation since not every method can be used for arbitrary structures.
 Essential points that must always be considered are the geometry of the object to be loaded (test specimen), the type of loading (static, dynamic), the magnitude of the force to be applied, and the direction of the force vector.

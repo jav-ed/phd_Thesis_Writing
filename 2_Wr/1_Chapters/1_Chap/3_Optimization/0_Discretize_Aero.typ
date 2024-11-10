@@ -9,7 +9,7 @@
 // all figs - the image data was not copied
 // all eqs
 
-= Discretization of Aerodynamic Loads <chap_2>
+= Discretization of Aerodynamic Loads <chap_4_0>
 In the previous @chap_1, #gls("lie") was introduced. 
 Through further examination of the physical load application, it was revealed that the choice of #gls("lie") depends significantly on how many #gls("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
 This chapter will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary, and how this answers our previously posed questions.

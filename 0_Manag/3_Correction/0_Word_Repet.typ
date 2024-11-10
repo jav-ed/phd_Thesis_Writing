@@ -8,4 +8,5 @@
 7. obtain
 8. present
 9. method
-   
+10. mention
+11. consider
