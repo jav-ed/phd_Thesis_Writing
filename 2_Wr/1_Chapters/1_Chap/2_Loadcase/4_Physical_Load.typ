@@ -14,9 +14,7 @@ While numerical simulations offer considerable advantages in analyzing structura
 Numerical methods allow straightforward modification of parameters such as internal pressure and benefit from well-established theoretical frameworks for load application. 
 This differs signitficalty from expermeintal investigations.
 While Applying pyhsical forces for experimental tests on aircraft is already a complex and demanding task, its complexity is increased when having tubes that are set under high pressue, in the case of #gls("swith")
-
 This subsection addresses experimental challenges by first identifying the required forces for structural testing. A comprehensive examination of various methods for physical load introduction on the wings of aircraft.  Is is accompanied by detailed analysis of each method's advantages and disadvantages. Through systematic comparison criteria, these methods are evaluated to determine the most suitable approach for structural testing. 
-
 The findings from this analysis hold particular significance as they inform the optimization process detailed in subsequent chapters. Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
 
 
@@ -26,7 +24,6 @@ The findings from this analysis hold particular significance as they inform the 
 In the previous chapter @chap_0, we revisited the topic of structurally integrated #gls("cfrp") hydrogen tanks located in the aircraft wing. 
 We then explained why understanding the influence of the filling medium on structural behavior is particularly significant for experimental testing.
 The previous chapter @chap_0 concluded by answering this question and conducting several physical plausibility studies.
-
 Now that we have established that we could fill the tanks with water for experimental testing, the next major consideration is the introduction of aerodynamic loads. 
 This section will first explain which forces need to be introduced, where, and why.
 Then, possible methods for physically applying loads to the aircraft will be presented,
@@ -39,7 +36,6 @@ To achieve representative test conditions that accurately reflect the in-flight 
 Three fundamental approaches can be considered for applying aerodynamic forces to the wing and fuselage skin structure. 
 The first approach involves conducting experimental tests during actual flight conditions. However, this option presents significant challenges for the current aircraft concept, including numerous technical uncertainties and potentially catastrophic safety risks. 
 Additionally, the financial requirements for flight testing would substantially exceed the project's current budgetary constraints, rendering this approach infeasible.
-
 The second approach involves wind tunnel testing @Goizueta2022 @Zhao2022 @He2022, which offers relatively accurate representation of external aerodynamic forces. This method benefits from extensive implementation in both research institutions and industry, providing access to established expertise and validated procedures. Although wind tunnel operational costs are considerable, they remain within potentially manageable ranges for a pioneering project's scope. 
 However, significant challenges arise regarding environmental control and safety considerations. The generation of high-velocity flows within enclosed spaces necessitates extensive safety protocols and specialized containment measures.
 
@@ -71,7 +67,7 @@ IMA's expertise encompasses extensive experience in experimental structural test
 Their established methodology primarily employs #glspl("lie") in ground-based testing configurations. This existing expertise offers significant advantages regarding implementation efficiency. The sustained application of this testing methodology by IMA demonstrates both its economic viability and technical reliability. Moreover, cost projections for this approach are considerably lower than the alternative methods, primarily due to existing infrastructure, established procedures, and personnel expertise.
 
 A significant advantage of this approach relates to instrumentation implementation. The absence of high-velocity airflow around the wing structure enables optimal placement and utilization of measurement systems with minimal environmental interference. However, it is important to acknowledge that this method presents certain limitations regarding aerodynamic load approximation accuracy.
-While flight testing would theoretically provide the most representative aerodynamic loading conditions, it is noteworthy that even this approach cannot guarantee purely undisturbed aerodynamic loading. The installation of measurement devices on the wing surface inevitably alters its geometry. This geometric modification, however minimal, significantly influences the flow behavior due to the fundamental characteristics of fluid dynamics. Turbulent fluid flows are recognized as chaotic systems @Roessler1976 @Lu2002 @Rickles2007 @SPROTT2020 @Boeing2016 @Chen1999 @dryer2007spontaneous @Argyris2017 @Strogatz2019 @Datseris2022, characterized by their extreme sensitivity to initial conditions. This phenomenon, formally known as *Sensitive Dependence on Initial Conditions* @Datseris2022 @Strogatz2019, results in exponential divergence of system behavior over time, even from imperceptible variations. Current physical understanding employs the Navier-Stokes equations @Blazek2015 as the most comprehensive model for fluid behavior, these being non-linear coupled differential equations that inherently exhibit chaotic characteristics.
+While flight testing would theoretically provide the most representative aerodynamic loading conditions, it is noteworthy that even this approach cannot guarantee purely undisturbed aerodynamic loading. The installation of measurement devices on the wing surface inevitably alters its geometry. This geometric modification, however minimal, significantly influences the flow behavior due to the fundamental characteristics of fluid dynamics. Turbulent fluid flows are recognized as chaotic systems @Roessler1976 @Lu2002 @Rickles2007 @SPROTT2020 @Boeing2016 @Chen1999 @dryer2007spontaneous @Argyris2017 @Strogatz2019 @Datseris2022, characterized by their extreme sensitivity to initial conditions. This phenomenon, formally known as #emp_[Sensitive Dependence on Initial Conditions] @Datseris2022 @Strogatz2019, results in exponential divergence of system behavior over time, even from imperceptible variations. Current physical understanding employs the Navier-Stokes equations @Blazek2015 as the most comprehensive model for fluid behavior, these being non-linear coupled differential equations that inherently exhibit chaotic characteristics.
 
 
 These considerations suggest that experimental flight testing would not necessarily provide purely undisturbed aerodynamic forces. The same limitations regarding flow disturbance apply to wind tunnel testing. The viability of the ground-based testing approach depends primarily on the fidelity with which continuous aerodynamic loading experienced during flight can be approximated through discrete load application.
@@ -111,78 +107,60 @@ This methodology enables implementation of comprehensive safety protocols while 
   caption: [Established methods for physically introducing forces into the wing structure.],
   )<tab_30>
 
-// ---------------------------------- here ---------------------------------- //
-
-Load introduction represents an important investigation since not every method can be used for arbitrary structures.
-Essential points that must always be considered are the geometry of the object to be loaded (test specimen), the type of loading (static, dynamic), the magnitude of the force to be applied, and the direction of the force vector.
+Load introduction methodology requires thorough investigation since not every method can be used for arbitrary structures.
+Essential points that need to be considered are the geometry of the object to be loaded (test specimen), the type of loading (static, dynamic), the magnitude of the force to be applied, and the direction of the force vector.
 Depending on requirements, load application accuracy may also be a significant factor.
-The load might need to be achieved precisely to the Newton or Newton-meter (bending load) at the position with given coordinates.
-It could also be that the structure being loaded must undergo the same test multiple times after the experimental structural test or be subjected to other tests afterward.
-In pioneering projects, manufacturing structures is usually associated with high costs.
-In this case, it can be assumed that only a limited number of test specimens is available.
-Therefore, a reasonable requirement could be that the test specimen survives the structural test undamaged and remains available for practical use.
-In the latter case, drilling holes or similar material removal would not be permitted.
-Furthermore, it would not be allowed to work with adhesives that do not permit removal.
-Beyond these major damage cases, it might also be required that the test specimen must not sustain any paint damage (removal of paint).
+The load might need to be achieved precisely down to individual Newtons or Newton-meters (for bending loads) at specific coordinates.
+It could also be that the structure being loaded has to undergo the same test multiple times after an experimental structural test or be subjected to other tests afterward.
 
-Once the conditions under which the test specimen may be tested are clearly defined, the following must always be considered when choosing the load introduction method.
-The load introduction elements must have significantly higher strength than the test specimens being loaded.
-Failure of the #gls("lie") can lead to undesired effects up to the failure of the test specimen and thus render the results unusable @Rossow_2014.
-A significant difference that arises when testing standardized structures versus complex structures is the existence of existing test facilities.
-For example, there are typical geometries used in tensile testing.
-For complex geometries, #gls("lie") usually need to be newly manufactured.
-The following will discuss the individual #gls("lie") from @tab_30 in detail.
+Testing requirements for prototype structures present additional complexities, particularly given the typically limited availability of test specimens due to high manufacturing costs. 
+These constraints often necessitate non-destructive testing protocols to preserve specimen integrity for subsequent analyses or practical implementation. Such preservation requirements preclude certain invasive methods, such as drilling mounting holes or applying permanent adhesives. Furthermore, surface integrity considerations may extend to protective coatings, where paint degradation needs to be prevented.
+Beyond these foundational requirements, the load introduction elements must demonstrate a higher strength characteristics than the test specimens to prevent unintended failure modes that could compromise experimental validity @Rossow_2014. 
+A notable distinction exists between testing standardized versus complex structures. 
+While standardized geometries often benefit from existing test facilities and established protocols, complex geometries typically require custom-manufactured #glspl("lie"). The subsequent sections examine in detail the individual load introduction methods presented in @tab_30.
+
 // --------------------------------- sandbag -------------------------------- //
-One of the oldest, most cost-effective, and simplest methods for introducing physical loads onto a wing is through heavy objects. 
-Sandbags are frequently used for small aircraft.
-For an example, refer to @fig_56.
-
-// --------------------------------- collets -------------------------------- //
-Collets represent a structure that encases the wing's profile contour and to which the load is applied.
-For an example of a collet, refer to @fig_57.
-Collets are used together with a load harness and typically with a crane.
-Collets are usually made of wood, have an upper and lower side, which are compressed or held together with metal screws.
-To prevent damage to the wing skin at the contact point between collet and wing, a soft material can be placed between them as protection.
-//
-// -------------------------------- air bags -------------------------------- //
-The next #gls("lie") mentioned in @tab_30 are air cushions.
-This is a method where a balloon-like cushion is filled with gas.
-It can then be adhered at the point where the load is to be introduced and, for example, pressed by a cylinder.
-//
-// -------------------------------- cylinder -------------------------------- //
-Another possibility for introducing loads into physical objects is cylinders.
-These are movable and can either be pressed directly onto a local area of the test specimen with adhesive pads or connected to other #gls("lie").
-Pads are plastics used to distribute the load area-wise on one hand and to protect the test specimen as much as possible on the other.
-@fig_58 shows an example of how movable cylinders could be connected to collets to structurally test a fighter aircraft @leski2016full.
-
+Sandbags represent one of the most traditional and economically viable approaches to wing load application. Their implementation on small aircraft structures is particularly common, as illustrated in @fig_56.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/0_Sandbags.png", 
   width: 100%),
-  caption: [Exemplary illustration of sandbags in use when loading a wing of a small aircraft, taken from @ho2022development],
+  caption: [Illustrative demonstration of sandbags being applied for loading the wing of a small aircraft @ho2022development.],
 )<fig_56>
+
+
+// --------------------------------- collets -------------------------------- //
+Profile-conforming collets encase the wing's cross-sectional contour and serve as load transfer interfaces, as depicted in @fig_57. These devices typically operate in conjunction with load harnesses and crane systems. Wooden construction is prevalent for collets, comprising upper and lower sections secured through metal fasteners. Interface protection between the collet and wing surface can be achieved through intermediate cushioning materials.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/1_Collet.png", 
   width: 100%),
-  caption: [Exemplary illustration of collets in use, taken from @yeniceli2014design],
+  caption: [Illustrative demonstration of profile-conforming collets applied for wing loading @yeniceli2014design.],
 )<fig_57>
+
+//
+// -------------------------------- air bags -------------------------------- //
+The next #gls("lie") mentioned in @tab_30 are air cushions.
+This is a method where a balloon-like cushion is filled with gas.
+These elements can be positioned at specific load introduction points and actuated through cylinder compression.
+
+//
+// -------------------------------- cylinder -------------------------------- //
+Hydraulic cylinders offer another load introduction methodology. These actuators can either connect directly with the test specimen through adhesive pads or integrate with auxiliary #glspl("lie"). The pads, constructed from polymeric materials, serve dual functions: distributing loads across specified surface areas and providing protective contact surfaces. @fig_58 demonstrates an implementation where movable cylinders connect to collets for structural testing of a fighter aircraft @leski2016full.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/2_Cylinder.png", 
   width: 100%),
-  caption: [Exemplary illustration of cylinders connected to collets to test a fighter aircraft, taken from @leski2016full],
+  caption: [Illustrative demonstration of hydraulic cylinders connected to collets for structural testing of a fighter aircraft @leski2016full.],
 )<fig_58>
 
-After the individual #gls("lie") have been named and briefly explained, a detailed investigation should be conducted to find a favorite.
-Relevant evaluation criteria are needed to systematically identify a favorite. These are shown in @tab_31.
-The following will describe both the individual chosen criteria in more detail.
-Additionally, it will show the argumentation behind how the individual points were awarded.
+// ---------------------------------- here ---------------------------------- //
+Following the introduction of individual #gls("lie") configurations, a systematic evaluation framework is required to identify the optimal solution. The assessment criteria, presented in @tab_31, form the basis for this systematic evaluation. The subsequent passages examine these criteria by analyzing each load introduction method, beginning with the sandbag approach.
 
 // TODO get it into two columns
 #figure(
   table(
-    columns: (auto, auto),
+    columns: (0.3fr, 1fr, 1em, 0.3fr, 1fr),
     align: left + horizon,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
@@ -192,77 +170,44 @@ Additionally, it will show the argumentation behind how the individual points we
     stroke: none,
     
     /* --- header --- */
-    table.header([*Number*],[*Criterion*]),
+    table.header([*Number*],[*Criterion*],[], [*Number*], [*Criterion*]),
     /* -------------- */
-  [1],    [Cost],
-  [2],    [Load introduction accuracy],
-  [3],    [Number of required #gls("lie")],
-  [4],    [Availability of #gls("lie")],
-  [5],    [Reusability of #gls("lie")],
-  [6],    [Safety],
-  [7],    [Control system effort],
-  [8],    [Specially trained personnel],
-  [9],    [Reproducibility],
-  [10],   [Innovation factor],
-  [11],   [Constraint forces],
-  [12],   [Possibility for introducing tension loads],
-  [13],   [Modeling effort],
+  [1],  [Cost], [],
+  [2],  [Load introduction accuracy], 
+  [3],  [Number of required #gls("lie")], [],
+  [4],  [Availability of #gls("lie")], 
+  [5],  [Reusability of #gls("lie")], [],
+  [6],  [Safety],
+  [7],  [Control system effort], [],
+  [8],  [Specially trained personnel], 
+  [9],  [Reproducibility], [],
+  [10], [Innovation factor], 
+  [11], [Constraint forces], [],
+  [12], [Possibility for introducing tension loads],
+  [13], [Modeling effort], [],
 ),
 
   kind: table,
-  caption: [Evaluation criteria for systematically identifying a suitable #gls("lie")],
+  caption: [Evaluation criteria for systematic selection of appropriate #gls("lie") configurations.],
 ) <tab_31>
 
 // ========================================================================== //
 // =========================== Assessment sandbag =========================== //
 // ========================================================================== //
 #hor_Line("Assessment: Sandbag")
-Starting with sandbags, it can be said about the costs that they are comparatively very inexpensive per sandbag.
-Even if a high number of sandbags should be needed, it is assumed that this would be by far the cheapest method.
-Additionally, no further energy costs are incurred. 
-Energy costs could be caused, for example, by a stage lift or for moving a crane and cylinder.
-The accuracy with which loads can be introduced is significantly lower when using sandbags compared to other methods, even when considering potential modifications. 
-When using sandbags, it is only possible to apply loads vertically. 
-Load application in other directions is only possible through imprecise placement of the sandbags, whereby only very small force components can be generated in the two other axes. 
-Regarding the number of required #gls("lie"), it shows that when using sandbags, a comparatively high number is required. 
-A single electrically operated cylinder could, for example, replace a large quantity of sandbags, which demonstrates the efficiency of other methods. 
-Despite these limitations, sandbags offer the advantage that they are not special orders and thus have high availability and are easy to procure. Furthermore, the sandbags can be reused for any purpose, which underlines their practicality in various applications.
+From a cost perspective, sandbags represent the most economical #gls("lie") option, with minimal procurement costs per unit. Even implementations requiring numerous units maintain significant cost advantages over alternative methods. The absence of operational energy requirements further enhances their economic efficiency compared to powered alternatives such as stage lifts or crane-cylinder systems.
+However, sandbags demonstrate substantial limitations in load introduction precision relative to other #glspl("lie"). Their loading capability is fundamentally constrained by gravitational forces acting vertically downward. While angled force components could theoretically be achieved through strategic sandbag placement on inclined surfaces, such arrangements would introduce additional complexities and reduce load application precision. Implementation requires a comparatively high quantity of individual #gls("lie") units, contrasting with the efficiency of electromechanical systems where a single cylinder could replace multiple sandbag units. Despite these limitations, sandbags offer advantages in procurement accessibility and versatile reusability across various applications.
+Safety considerations vary significantly between standard wing tests and pressurized tank configurations. While conventional unpressurized testing presents minimal risks, the integration of pressurized water tanks constructed from #gls("cfrp") introduces substantial safety concerns. Structural failure scenarios could result in the release of fine, sharp #gls("cfrp") particles, presenting risks of cutaneous injuries. Additional investigation is required regarding potential damage to measurement instrumentation and associated systems from particle dispersion. The respiratory hazard from airborne #gls("cfrp") particles presents a significant occupational safety consideration requiring thorough risk assessment.
+// -------------------------------------------------------------------------- //
 
-When using sandbags as #gls("lie") in regular wing tests conducted without internal pressure, there are generally no safety concerns. 
-However, significant limitations arise in special scenarios, such as our case, where an internal tank is filled with water and under high pressure. 
-Additionally, #gls("cfrp") is used as the material for the tank and wings. 
-Should the tanks burst, the released fine and sharp #gls("cfrp") particles could easily cause skin cuts. 
-The question of whether these #gls("cfrp") particles could damage measuring instruments and connected lines and what consequences this would have requires detailed investigation. Moreover, there is a risk that the particles could enter the human body through the respiratory tract.
+In the event of tank failure, sandbags provide limited safety mitigation, restricting #gls("cfrp") particle dispersion only in the vertical direction. While sandbag placement typically allows flexible load distribution adjustment during structural verification of small aircraft, this flexibility becomes a critical safety concern with pressurized tanks. Post-pressurization modification of sandbag positioning presents potentially life-threatening risks, effectively precluding load distribution adjustments under pressurized conditions using current methodologies.
+Testing multiple load cases necessitates complete system depressurization and likely requires draining and refilling of the test medium between investigations. Additionally, automotive industry regulations for high-pressure vessels mandate dynamic testing protocols alongside static evaluations. The inherent limitations of sandbag-based loading render dynamic structural verification, particularly cyclic loading scenarios, infeasible.
+Control system requirements demonstrate significant variation based on load distribution precision demands. While achieving high-quality load distribution requires substantial effort and monitoring, basic load application demands minimal control infrastructure. The potential for unintended loading during sandbag placement necessitates careful sequence analysis. 
 
-If the tanks burst, the sandbags would only prevent the spread of #gls("cfrp") particles vertically upward, thus only partially mitigating the safety risks. 
-Typically, adjusting the number and placement of sandbags on a small aircraft wing during structural verification allows for flexible design of the load distribution. 
-In our specific case, however, once the tank has been pressurized, any modification of the number and placement of sandbags could be life-threatening. 
-This means that adjusting the load distribution after pressurizing the tank is not readily possible with current knowledge and available means.
+Given the novelty of combined internal pressure and external loading in #gls("swith"), precise load distribution becomes particularly critical for validating simulation models and understanding the structural behavior under these multi-load conditions.
+Personnel requirements remain minimal, with basic material handling competencies sufficing for implementation. Standard equipment operation (hand trucks, forklifts) combined with supervised placement verification adequately supports testing procedures. However, test reproducibility suffers from inherent limitations in load distribution precision, resulting in poor repeatability characteristics.
+While sandbags represent established methodology without significant innovation potential, they offer advantages regarding constraint forces. The axial loading nature and absence of profile enclosure requirements minimize unwanted force introduction into the test structure.
+Tension load introduction remains infeasible through sandbag application due to their inherent gravitational operation. However, the modeling aspects demonstrate favorable characteristics, as sandbag loading can be approximated as constant surface pressure. This simplification facilitates straightforward integration into simulation frameworks with minimal computational overhead.
 
-If different load cases with varying load distributions are desired, the pressure in the tank would first need to be reduced.
-It is also likely that the filling media would need to be emptied and exchanged for each additional investigation.
-Furthermore, regulations from the automotive industry for high-pressure vessels require dynamic investigations in addition to static ones, for which the load distribution cannot be adjusted with sandbags.
-Thus, dynamic structural verifications, such as running through load cycles, are not possible with sandbags as a load introduction method.
-
-The control system effort varies greatly depending on the requirements for load distribution quality.
-To achieve high quality in load distribution, the effort is considerable.
-However, the effort is minimal if only a rough load distribution at a specific target load is required.
-During the placement of sandbags, unwanted load cases can occur, necessitating a precise investigation of the placement sequence.
-In our specific case, where a new procedure is being tested that should also be validated through simulations, high load distribution quality is particularly desirable.
-
-Regarding the need for specially trained personnel, it is evident that no special training is necessary for handling sandbags.
-Operating a hand truck or forklift and carefully placing sandbags should generally suffice.
-It is only important that someone monitors that the sandbags are correctly placed to achieve the desired load distribution.
-
-The reproducibility of a structural verification suffers from the low load distribution quality that results from using sandbags, leading to poor repeatability.
-Regarding the innovation factor, the use of sandbags offers no innovation as it is a known method.
-However, when using sandbags, no constraint forces are expected since axial loading occurs and local profile sections do not need to be enclosed.
-
-The possibility of introducing tension loads is limited through the sole use of sandbags, as no tensile forces can be achieved on the wing.
-The modeling effort, however, is rated positively as the load from a sandbag can be assumed to be an approximately constant surface load.
-This assumption allows for simple integration of the load into the simulation model without much additional effort.
-
-To briefly summarize the sandbag section: As #gls("lie"), they represent a cost-effective and easily accessible option that requires no specially trained personnel.
-However, significant limitations must be expected regarding the accuracy of load distribution.
-Once an object has been loaded, further adjustment of the load distribution through human intervention is no longer permissible due to safety concerns; instead, automated solutions such as drones or robotic arms might be needed to make subsequent adjustments.
-Overall, loading through sandbags is rated as suboptimal compared to other methods, highlighting the importance of carefully reviewing the requirements for each individual project to determine the most suitable load introduction method.
+Summarizing the sandbag assessment: While offering economic advantages and accessibility with minimal personnel training requirements, sandbags present significant limitations in load distribution precision. Safety considerations with pressurized #gls("swith") preclude manual load adjustments post-pressurization, though automated systems could potentially address this constraint. However, this would introduce additional complexity and cost, negating the primary advantages of sandbag application. 
+The method's suboptimal characteristics for combined loading scenarios emphasize the necessity for thorough requirement analysis in #gls("lie") selection, particularly for novel structural configurations involving internal pressure and external loads.
