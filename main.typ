@@ -1,4 +1,4 @@
-
+// some infos at 0_Manag/4_Compilation
 
 #import "3_Code/1_Fcns/0_Fcn_Main.typ": *
 #import "3_Code/5_Layout/0_Layout_Main.typ":*

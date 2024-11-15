@@ -1,0 +1,1 @@
+It inshallah works fine with typst version 12.0
