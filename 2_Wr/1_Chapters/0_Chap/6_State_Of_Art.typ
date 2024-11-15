@@ -63,7 +63,9 @@ At the time of this thesis's composition, only one publicly available scientific
 
 
 The scarcity of openly available scientific work on #glspl("swith"), coupled with the limited number of aircraft manufacturers capable of demonstrating a functional #gls("swith"), suggests that the manufacturing industry could face significant challenges in the production process. A primary obstacle could be the complexity of producing a single component that integrates both the wing and the tubes.
-According to publicly available information from APUS @APUS_1, the full wingspan is 13.2 meters. From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises approximately half of this length, suggesting a tube length of around 7 meters. Generally, with a given pressure, longer tubes allow for increased hydrogen storage capacity. 
+According to publicly available information from APUS @APUS_1, the full wingspan is 13.2 meters. 
+From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises approximately more than half of this length, suggesting a tube length of around 7 meters. 
+Generally, with a given pressure, longer tubes allow for increased hydrogen storage capacity. 
 Consequently, for extended flight ranges and assuming the highest allowable pressure has already been selected, even longer tubes may be required.
 Based on the 7-meter assumption, it is plausible that manufacturers could need to either develop novel methods or significantly improve existing techniques to craft such large-scale and complex structures. This process must adhere to the required material specifications and manufacturing accuracy demands, potentially presenting a considerable engineering challenge.
   

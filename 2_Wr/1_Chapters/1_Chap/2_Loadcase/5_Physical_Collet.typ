@@ -69,6 +69,7 @@ egarding the possibility of introducing tension loads, collets in combination wi
 
 In summary, the costs for using collets cannot be conclusively evaluated until the requirements for load discretization and accuracy are defined in detail. Nevertheless, it is clear that using a crane and additional load harness significantly increases costs compared to using sandbags. The possible load introduction accuracy and the effects of constraint forces on structural behavior are decisive factors that require detailed evaluation to determine the suitability of collets for specific test requirements.
 
+// ------------------------------ air Cushions ------------------------------ //
 #hor_Line("Assessment: Air Cushions")
 Air cushions represent a relatively new method in load introduction technology, particularly notable for its innovative approach to load distribution.
 Given that it is a specialized procedure, procurement costs could initially be assumed to be relatively high, as only niche manufacturers offer this technology.
