@@ -75,49 +75,45 @@ In summary, while current cost estimates for the air cushion system remain incom
 
 // ---------------------------- cylinder and pad ---------------------------- //
 #hor_Line("Assessment: Cylinder with Pad")
-The procedure with pads and cylinders represents an established method for load introduction that differs little from the use of air cushions with cylinders in terms of handling and achieved results.
-Achieving high load distribution quality also requires a correspondingly large number of #gls("lie") here, which can increase costs.
-However, the accuracy of load introduction is a strong advantage of this system, as constraint forces can be minimized and the load is evenly distributed over small areas.
 
-The availability of components, both hydraulic cylinders and pads, is good for large aircraft structural tests, which facilitates the implementation of the procedure.
-The reusability of pads and cylinders is another plus point, particularly when attaching and removing the pads is possible without great effort.
-Regarding safety, similar precautions must be taken as with air cushions, including maintaining distance from the wing and the ability to adjust the load through control technology from a distance.
-The control system effort depends on the required load distribution quality and may be higher than with air cushions due to the use of small-area pads.
+The hydraulic cylinder and pad configuration represents an established gls("lie") that demonstrates operational characteristics comparable to air cushion systems in terms of load application and resultant structural response. 
+Implementation of this approach necessitates careful consideration of load distribution requirements, as achieving high-fidelity load representation typically requires deployment of multiple #gls("lie") units, directly impacting system costs. 
+Despite this consideration, the method's primary advantage lies in its precise load introduction capabilities, characterized by minimal constraint forces and uniform distribution across discrete contact surfaces.
+Component availability presents a significant operational advantage, particularly for large-scale aircraft structural testing applications. Both hydraulic cylinders and load distribution pads maintain robust market presence, facilitating system implementation and maintenance. 
+This #gls("lie") demonstrates favorable reusability characteristics, enhanced by efficient pad attachment and removal mechanisms that minimize operational complexity. This attribute contributes to long-term economic viability through reduced replacement requirements and streamlined testing procedures.
+Safety protocols parallel those established for air cushion implementations, necessitating prescribed clearance zones around the test article and remote load adjustment capabilities through automated control systems. 
+The complexity of control system requirements exhibits correlation with desired load distribution precision. 
 
-Specially trained personnel is required to monitor the proper attachment and connection of pads and cylinders, contributing to ensuring precise and reliable load introduction.
-Test reproducibility is facilitated by reattaching the pads at the same locations and electrically controlling the cylinders, enabling high repeatability of test results.
-Although the procedure is known and thus does not possess a high innovation factor, its application outside large aircraft construction represents an expansion of the field of application.
-The possibility of constraint forces strongly depends on how the pads are connected to the wing.
-An elastic intermediate layer between pad and wing can minimize constraint forces, while direct bonding can lead to local constraint forces.
-The ability to introduce tension loads depends on the cohesive and adhesive strength of the adhesive used and sufficient stiffness of the pads.
-This requires careful selection of materials and adhesives to achieve the desired test conditions and ensure the integrity of structural tests.
+As elaborated in the air cushion assessment, air cushion systems require more sophisticated control architectures than cylinder-pad configurations. However, in scenarios demanding high-fidelity load distribution, necessitating numerous discrete pad-cylinder units, the overall control system complexity may become comparable. This potential convergence in control requirements primarily stems from the increased coordination demands of managing multiple small-area contact interfaces, each requiring precise force regulation to maintain desired load distribution profiles.
 
-The modeling effort for the procedure with pads and cylinders should not be underestimated, as both the stiffness of the pads and the nature of their connection to the wing must be included in the calculations.
-This step is crucial to correctly simulate the system's behavior under load conditions and understand how loads are actually transferred to the structure.
-Careful consideration of these factors in the modeling process is essential for the accuracy of simulated results and their transferability to real conditions.
 
-In summary, the costs for applying the pad and cylinder procedure significantly depend on the number of required #gls("lie").
-The necessity to use a high number of pads and cylinders to achieve a finely tuned and precise load distribution can significantly influence costs.
-In addition to direct procurement costs for pads and cylinders, operating costs, including electricity costs for control technology, must also be considered.
-These operation costs can be substantial, depending on the complexity and duration of tests.
+// -------------------------------------------------------------------------- //
 
-Despite potentially high costs, the procedure with pads and cylinders offers excellent load distribution quality, especially with a high number of #gls("lie").
-This method enables precise control over load application, resulting in high-quality and meaningful results in structural tests.
-The ability to distribute loads evenly and accurately while minimizing constraint forces represents a significant advantage and makes the procedure attractive for a variety of applications in structural testing.
-The decision for or against this method ultimately depends on balancing required accuracy, costs, and specific requirements of the respective test project.
+Implementation of cylinder-pad configurations requires specialized personnel to oversee installation procedures, including proper pad attachment and cylinder connectivity, ensuring precise and reliable load introduction. The system demonstrates favorable reproducibility characteristics through consistent pad positioning and electronically controlled cylinder actuation, facilitating high test result repeatability. 
+While this methodology represents established practice, its adaptation beyond large-scale aircraft testing constitutes an extension of conventional applications.
 
+The magnitude of constraint forces exhibits strong dependence on pad-wing interface conditions. Implementation of elastomeric intermediate layers can effectively minimize constraint forces, whereas direct bonding may introduce localized force concentrations. The capacity for tension load introduction is governed by both the cohesive and adhesive properties of the bonding agent, coupled with sufficient pad stiffness characteristics. These considerations necessitate meticulous material selection to achieve specified test parameters while maintaining structural integrity.
+
+Numerical representation of cylinder-pad systems demands comprehensive consideration of multiple mechanical factors. The modeling framework must incorporate both pad stiffness characteristics and interface behavior between pad and wing structure. This requirement extends beyond simple force application, necessitating detailed representation of load transfer mechanisms through the pad-wing interface. 
+Accurate simulation of these interactions proves essential for establishing correlation between numerical predictions and experimental observations, ultimately determining the validity of structural analysis results.
+
+In summary, the economic implications of cylinder-pad implementation demonstrate strong correlation with the quantity of required #glspl("lie"). Achievement of high-fidelity load distribution necessitates deployment of numerous pad-cylinder units, substantially impacting overall system costs. The comprehensive cost assessment must encompass both initial procurement expenses and operational expenditures, including energy consumption for control systems and extended testing operations. These operational costs can represent a significant proportion of total expenditure, particularly for complex, long-duration test campaigns.
+Despite these economic considerations, cylinder-pad methodology demonstrates superior load distribution characteristics, particularly in configurations employing multiple #glspl("lie"). The system enables precise load application control, yielding high-quality experimental data suitable for rigorous structural analysis. 
+The capacity for uniform load distribution while maintaining minimal constraint forces represents a significant technical advantage, enhancing the methodology's applicability across diverse structural testing scenarios. 
+Selection of this approach ultimately requires systematic evaluation of three primary factors: required accuracy specifications, economic constraints, and specific test program requirements.
+
+// ---------------------------------- here ---------------------------------- //
 #hor_Line("Assessment: Overview")
 Many individual points were presented about the various methods. 
 To present these in a clear manner and to see each individual evaluation criterion compared across the four essential #gls("lie"), reference should be made to @tab_32.
 At this point, it should be noted that the goal for @tab_32 was to transfer the collected observations into a clear form.
 However, when high-dimensional information (high amount of information) is transferred into a low dimension (three possibilities for evaluation), a certain subjectivity or susceptibility to errors cannot be excluded.
 
-// TODO recheck that - copy pasted table 33
 #figure(
   table(
     columns: (auto,auto,auto,auto,auto,auto),
     // align: left + horizon,
-    align: (left, center, center, center, center, center),
+    align: center,
     fill: (col, row) => if row == 0 {table_cl_header} else {(table_cl_1, table_cl_0).at(calc.rem(row, 2))},
     inset: (
       x: 1em,
