@@ -33,79 +33,45 @@ This becomes particularly critical near the wing tip, where displacement magnitu
 Significant force differentials between adjacent collets in this region can generate pronounced local deformation gradients. Such load distributions, being unrealistic for typical aerodynamic loading conditions, can create unintended local stress concentrations and potentially lead to premature structural failure
 
 // -------------------------------------------------------------------------- //
-Determining the required number of #gls("lie") presupposes that clear requirements for load introduction accuracy and costs are established, as well as an understanding of how the discrete load distribution should look.
-Regarding the availability of collets, while they are not as easily accessible as sandbags, they offer decisive advantages for specific requirements.
-However, their reusability is limited.
-With any change in profile geometry, new collets must be manufactured, unless it's the same wing type without changes.
-These limitations make collets a costly option, especially when high adaptability to different wing profiles is required.
+The determination of required #gls("lie") quantity necessitates clear establishment of load introduction accuracy requirements, associated costs, and desired discrete load distribution characteristics. While collets present lower accessibility compared to sandbags, they offer distinct advantages for specific testing scenarios. Their reusability, however, remains constrained by geometric considerations. Any modification in profile geometry necessitates new collet manufacture, rendering them a cost-intensive option when high adaptability across varying wing profiles is required.
 
-Regarding safety aspects when using collets as #gls("lie"), similar precautions as with sandbags are required, including shielding or maintaining a large distance from the wing during structural testing.
-A significant advantage of collets over sandbags is that varying the load does not require immediate proximity to the wing.
-Adjustments can be made either directly in the crane cockpit or remotely, minimizing risk to operating personnel.
-In the event of wing bursting, the collets could dampen the spread of #gls("cfrp") particles at the points where they are attached.
-However, there is a possibility that #gls("cfrp") particles could penetrate the collet material.
-Nevertheless, the goal is to achieve a satisfactory approximation of load distribution with as few collets as possible.
+Safety considerations for collet-based #gls("lie") implementations parallel those of sandbag configurations, necessitating appropriate shielding and distance maintenance during structural testing. Collets present a significant operational advantage through their capacity for remote load adjustment, either from the crane cockpit or through remote control systems, thus minimizing personnel exposure to potential risks. In the event of structural failure, collets may provide localized containment of #gls("cfrp") particles at attachment points, though penetration of particles through collet material remains a consideration. The optimization objective of achieving satisfactory load distribution with minimal collet quantity must be balanced against these safety considerations.
 
-Since the wing would likely be mostly free of collets over its initially assumed total length of $gt.tilde 7 upright("m")$, it is unclear where bursting could occur, leading to a high risk that #gls("cfrp") particles could spread unhindered in all directions.
-Appropriate distancing or the use of protective measures is therefore essential.
-Regarding the control system effort, it should be noted that after attaching the collets and mounting the load harness on the crane, operating the crane is considered relatively simple.
-Specially trained personnel is still required, particularly someone who monitors the correct positioning and proper attachment of the collets, as well as personnel familiar with crane operation.
-These requirements ensure that load distribution is carried out accurately and safely while minimizing risks to operating personnel and the test structure.
+Given an anticipated wing span of approximately $gt.tilde 7 upright("m")$, the substantial unconstrained surface area between collet positions introduces uncertainty regarding potential failure locations. This geometric configuration presents elevated risk for omnidirectional #gls("cfrp") particle dispersion, necessitating comprehensive protective measures and appropriate safety distances. 
+The control system implementation, while relatively straightforward post-installation of collets and load harness, requires specialized personnel for multiple operational aspects. This includes oversight of collet positioning and attachment integrity, as well as qualified crane operation. These staffing requirements ensure precise load distribution while maintaining both operational safety and structural testing integrity.
 
 // -------------------------------------------------------------------------- //
-The reproducibility of tests using collets as #gls("lie")  on identical wings is rated positively due to the precision with which collets can be attached (small deviations in the millimeter range), as well as the electrical operation of the crane, which enables very good repeatability. 
-These characteristics contribute to high reliability and consistency of test results. 
-Although the use of collets is a known method and thus does not represent an innovation factor, it still poses challenges regarding the resulting constraint forces. 
-These constraint forces and their potential effects on the structural behavior of the wing, such as displacements, stresses, and failure modes compared to a freely flying wing, must be carefully investigated to avoid distortions.
+Test reproducibility utilizing collets as #gls("lie") demonstrates favorable characteristics attributable to their precise attachment capabilities, with positional deviations maintained within millimeter tolerances. The electrical crane operation further enhances repeatability through controlled load application. These factors collectively contribute to high reliability and consistency in experimental outcomes. Despite representing an established methodology without significant innovation potential, the implementation of collets introduces complex considerations regarding constraint forces that warrant thorough investigation.
+A potential mitigation strategy involves the utilization of single-sided collets that partially enclose either the upper or lower wing surface exclusively. This configuration allows unrestricted vertical expansion of the structure during loading. Correspondence with IMA Dresden has confirmed the practical feasibility of such an approach. 
+The application of tension loads through collet configurations presents varied implementation possibilities, particularly when combining crane and cylinder systems. While crane-only configurations exhibit certain operational limitations, the integration of hydraulic cylinders enables enhanced load application flexibility. However, the numerical representation of collet-wing interactions in #gls("fem") models introduces additional complexity due to the requisite precision in contact condition modeling. This complexity manifests particularly in scenarios where the collet encases the profile, introducing asymmetric loading conditions between the constrained lower surface and the unconstrained upper surface during lift operations.
 
-// -------------------------------------------------------------------------- //
-
-egarding the possibility of introducing tension loads, collets in combination with a crane or cylinder offer different options. While using a crane alone may have certain limitations, the combination with a cylinder enables more flexible load application. The modeling effort for representing the interaction between collet and wing profile in #gls("fem") models is increased due to the necessity to precisely model the contact conditions between the two meshes (collet and profile). This is particularly the case when the collet encloses the profile and pushes the underside of the profile upward during lifting, while the upper side is not fixed and thus remains free.
-
-In summary, the costs for using collets cannot be conclusively evaluated until the requirements for load discretization and accuracy are defined in detail. Nevertheless, it is clear that using a crane and additional load harness significantly increases costs compared to using sandbags. The possible load introduction accuracy and the effects of constraint forces on structural behavior are decisive factors that require detailed evaluation to determine the suitability of collets for specific test requirements.
+To conclude, cost assessment for collet implementation remains contingent upon detailed specification of load discretization requirements and accuracy parameters. 
+The integration of crane systems and associated load harnesses introduces significant cost implications relative to simpler methodologies such as sandbag implementation. 
+The determination of collet suitability for specific testing scenarios necessitates detailed evaluation of two critical factors: achievable load introduction accuracy and the influence of constraint forces on structural behavior. These considerations must be thoroughly analyzed within the context of specific test requirements to ensure appropriate selection of load introduction methodology.
 
 // ------------------------------ air Cushions ------------------------------ //
 #hor_Line("Assessment: Air Cushions")
-Air cushions represent a relatively new method in load introduction technology, particularly notable for its innovative approach to load distribution.
-Given that it is a specialized procedure, procurement costs could initially be assumed to be relatively high, as only niche manufacturers offer this technology.
-On the other hand, the basic technology, which uses a pressurized cushion attached to the wing via a plastic surface, suggests a relatively simple and potentially cost-effective production method.
-Through contact with our industry partner IMA, we were informed that there is high availability of these air cushions.
-Due to the high availability, it can be assumed that the costs for merely procuring the cushions would be low.
-The efficiency of load distribution through air cushions could be reflected in a lower number of required units compared to other methods, which would further put the costs into perspective.
-Operating costs, particularly electricity costs for the cylinders that pressurize the air cushion, depend directly on the number of cylinders used and should be considered in the total cost calculation.
-The latter puts the costs on par with collets and cylinders.
-A decisive advantage of the air cushion method is the precise and uniform load distribution over the surface that it enables.
-Unlike traditional methods where constraint forces or uneven loads can occur, the surface distribution of load through air cushions offers outstanding accuracy and quality in load introduction accuracy.
-This characteristic makes them particularly attractive for applications where uniform load application is crucial.
+Air cushions represent an emerging methodology in #gls("lie") deployment, distinguished by their innovative approach to load distribution.
+Initial assumptions suggested high procurement costs due to specialized manufacturing requirements. However, the fundamental technology, which utilizes pressurized cushions with plastic surface attachments, indicates potential cost-effectiveness in production.
+Collaboration with IMA Dresden has revealed high market availability of these systems, indicating favorable procurement conditions. 
+The efficient load distribution characteristics of air cushions potentially reduce the required number of units compared to alternative methods, though operational costs, particularly related to cylinder pressurization systems, remain comparable to collet and cylinder configurations.
+A critical advantage of air cushion implementation lies in its capacity for precise and uniform load distribution across surfaces. This approach significantly reduces the occurrence of constraint forces and load irregularities common to traditional methods, offering superior accuracy in load introduction. 
 
-Determining the optimal number of air cushions needed for a specific project depends on the exact approximation of the load to be distributed.
-This number can only be determined after detailed calculations and analyses have been carried out.
-Regarding the availability of these specialized #gls("lie"), it was already mentioned in the cost consideration that they can be easily obtained.
-Through the possibility of simply gluing them on and removing them using replaceable plastic end surfaces, the air cushions can be reused for different wings without major problems.
-This aspect not only supports sustainable use of resources but also helps minimize the long-term costs of the system.
-In terms of safety, basic measures must be considered.
-An appropriate distance from the wing during operation is essential to minimize risks to operating personnel.
-Furthermore, adjusting the internal pressure of the air cushions should be remotely controllable, enabling flexible and safe handling during tests.
+The determination of optimal air cushion quantity depends fundamentally on load distribution approximation requirements. This quantification requires comprehensive calculations and analyses. While these specialized #gls("lie") demonstrate high market availability, their implementation offers significant advantages through simple attachment and removal processes utilizing replaceable plastic end surfaces. This design feature enables efficient reuse across different wing configurations, promoting both resource sustainability and long-term cost efficiency.
+Safety protocols necessitate careful consideration during operation. Personnel protection requires maintaining appropriate distances from the test structure during load application. The system's remote pressure control capabilities facilitate safe test execution while enabling flexible load adjustment without direct operator proximity to the test article.
 
-The air cushions must be both applied and pressurized. 
-Additionally, they must be connected to cylinders. Because of this, the control system effort for the air cushion system is considered similar to the cylinder system.
-The challenge lies in ensuring precise control of pressure within the air cushions to guarantee uniform load distribution.
-Specially trained personnel is required for effective use of the air cushion system.
-This personnel must not only monitor the correct application and proper connection of the air cushions and cylinders but also ensure their functionality during test execution.
-The reproducibility of test results using air cushions is considered high due to precise placement possibilities and electrical control of the cylinders.
-These characteristics enable consistent application of loads across repeated test cycles.
+// -------------------------------------------------------------------------- //
+The operational requirements of air cushions encompass both their application and pressurization. 
+The operational requirements of air cushions encompass both their application and pressurization. The integration with cylinders results in increased control system requirements compared to cylinder-based systems, as both cylinder operation and pressure regulation must be managed. The critical technical challenge resides in achieving precise pressure control within the air cushions to ensure uniform load distribution.
+The implementation requires specialized personnel for load operations. These operators must monitor both the initial system configuration, including proper air cushion application and cylinder connections, and maintain operational oversight throughout test execution.
+The system demonstrates high test result reproducibility due to the precise positioning capabilities and electrical cylinder control. These characteristics facilitate consistent load application throughout repeated test cycles.
 
-The innovation factor of the air cushion system is remarkable, particularly as this method currently has limited widespread use.
-The novel approach to load introduction offers the potential to improve or even replace existing procedures.
-Since the load is applied from below through pressure force, no constraint forces are expected, enabling uniformly distributed and precise load application.
-However, to effectively introduce tension loads, a sufficiently strong adhesive connection between the air cushions and the wing is required.
-Additionally, both the air cushion and the adhesive ends must have sufficient stiffness properties to correctly transfer the loads.
-The modeling effort within the framework of #gls("fem") is simplified by using air cushions.
-The uniformly distributed surface load generated by the air cushions can be represented in the #gls("fem") model without great difficulties, increasing the efficiency and accuracy of simulation-supported analyses.
+The air cushion system exhibits significant innovation potential, given its current limited application in structural testing. This novel load introduction approach presents opportunities for enhancement or replacement of conventional methodologies. 
+The application of pressure forces from below eliminates constraint forces, facilitating uniform load distribution and precise force application.
+Tension load introduction, however, requires adequate adhesive bonding between the air cushions and wing structure. Both the air cushion material and adhesive interfaces must possess sufficient stiffness characteristics to ensure proper load transfer. 
+The implementation of air cushions simplifies the #gls("fem") modeling process. The uniform surface load distribution generated by the air cushions permits straightforward numerical representation within the #gls("fem") framework, enhancing both computational efficiency and simulation accuracy.
 
-In summary, while the costs for implementing the air cushion system are not yet fully known at this time, they are estimated to be comparable to the costs for collets and pads with cylinders. 
-The reason for this is that even if the air cushions can be obtained inexpensively, cylinders are still needed to apply pressure force.
-This, together with the described advantages regarding reusability, safety, reproducibility, and the innovative approach to load introduction, makes air cushions a promising option for future applications in load distribution.
+In summary, while current cost estimates for the air cushion system remain incomplete, preliminary analysis indicates higher expenditure compared to collet and cylinder-pad configurations. This increased cost is primarily attributed to complex control system requirements. The implementation costs comprise both the air cushion procurement and the essential cylinder systems for pressure force application. Despite these cost considerations, the system demonstrates significant advantages in reusability, safety, reproducibility, and innovative load introduction methodology, positioning it as a viable solution for future load distribution applications.
 
 // ---------------------------- cylinder and pad ---------------------------- //
 #hor_Line("Assessment: Cylinder with Pad")
