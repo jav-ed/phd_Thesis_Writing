@@ -1,43 +1,38 @@
 /* -------------------------------------------------------------------------- */
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
+
+// TODO remove the fast access === below
+=== Collet
+
 #hor_Line("Assessment: Collet")
-Regarding the use of collets as #gls("lie") in aircraft construction, several factors must be considered that significantly affect overall efficiency and costs.
-Collets are custom-made components specifically developed for load introduction and for a particular profile geometry.
-The costs for these custom-made items heavily depend on the variability of the profile geometry along the wing's span.
-The higher the variation, the more specific collets are required, which can significantly increase costs.
 
-// TODO recheck actual 7m?
-In the specific case of a wing with a span of approximately $gt.tilde 7 unit("meter")$, where uniform load distribution is required over the entire length, an additional challenge arises.
-The inner wing, which makes up the majority of the span ($gt.tilde 7 unit("meter")$) and contains the tanks, has a uniform cross-section in the absence of manufacturing inaccuracies.
-If an outer wing area were assumed as with APUS #cite(<APUS_1>), then the length would increase. 
-The remaining $tilde [2 - 4] #unit("meter")$ of the outer wing exhibits varying profile depth over its entire length.
-These differences in profile geometry require adaptation of the collets, causing additional costs.
-Additionally, there are costs for crane procurement and operating costs, such as electricity and personnel.
+The deployment of collets as #gls("lie") for aircraft experimental structural testing necessitates careful consideration of multiple factors that influence operational efficiency and economic viability.
+These custom-manufactured components, specifically designed for load introduction at particular profile geometries, present cost implications that correlate directly with wing profile variability along the span. Greater geometric variation necessitates additional specialized collets, potentially resulting in substantial cost escalation.
 
-The accuracy of load introduction strongly depends on the number of collets used.
-This accuracy can vary from very high to insufficient, depending on how high the load should be. 
-A high load would cause significant wing bending.
-At the point where a collet encloses the profile, local differences in displacements could result.
-This phenomenon could be noticeable at the wing tip.
-The longer the wing and the further away the collet is from the mounting point, the higher the expected deflection.
-At the wing tip, the local displacement differences in the span direction are thus greater than near the mounting point.
-The collet should be stiffer than the wing, making it understandable that outward displacements would only be possible if the collet opened or was penetrated.
-In case outward displacements of the wing were prevented by the collet, constraint forces would be induced into the wing.
-On one hand, these constraint forces could arise from external bending loads. 
-However, it is also conceivable that the tubes would want to expand when the pressure is raised.
+To establish practical relevance, it is pertinent to consider the current state-of-the-art #gls("swith") outlined in @chap_0_7. 
+The APUS i2 @APUS_0, characterized as a small aircraft with a 13.2-meter wingspan, is assumed to incorporate tubes of approximately $gt.tilde 7 upright("m")$ length positioned within the inner wings. Based on initial assessments, it can be hypothesized that the aircraft's design utilizes constant airfoil profiles in the inner wing sections, transitioning to non-uniform cross-sections in the outer wings
+This geometric variation necessitates corresponding collet adaptations, introducing additional manufacturing costs. Furthermore, the deployment requires consideration of crane procurement, operational expenses including electricity consumption, and personnel costs.
+// -------------------------------------------------------------------------- //
 
-Since the tubes are connected to the skin, the radial outward expansion would be transmitted to the wing skin.
-Now it could be that the wing skin is stiff enough to prevent this expansion.
-However, at appropriately high pressure, it could also occur that the wing skin would expand outward in the undisturbed state (no collet).
-However, if a collet were present around the wing skin, this outward expansion would be expected to be prevented.
-This prevention can be physically imagined as artificial stiffening of the wing structure.
-The latter would again cause constraint forces in the outer skin and in the tubes, thus influencing the structural properties of the wing.
-The other case would be inward displacements. These would ensure that the collet no longer encloses the profile.
-Enclosing means the collet should ideally touch the wing's outer skin at every point. 
-The local contact between the collet's inner surface and wing skin would no longer exist in the case of inward-directed displacements of the wing.
-Thus, the collet would only transfer the seen loads at individual points where contact between collet and wing skin still exists.
+The accuracy of load transfer through collets demonstrates a strong dependence on both their quantity and spatial distribution. While precise load introduction can be achieved under optimal conditions, the efficacy varies significantly based on the complexity of the desired load distribution profile.
+The fundamental mechanical principle underlying collet operation requires the collet structure to possess greater stiffness than the wing-tube assembly. 
+This design constraint impacts the wing's deformation behavior in multiple directions. 
+When the collet fully encloses the wing profile, it inherently constrains expansion in both vertical and profile-normal directions. Additionally, the collet's enclosure affects spanwise deformation through frictional forces at the contact interface, with the magnitude of this effect correlating with the contact force.
 
+Further information regarding the general underlying friction mechanics can be found in @chap_1_0_4
+The geometric constraints imposed by the collet-wing interface generate constraint forces within the wing structure. These forces primarily arise from two sources: bending loads transmitted through the collet interface and the prevention of pressure-induced expansion in the internal tubes.
+The latter effect merits particular attention in pressurized systems, as the tubes' radial expansion tendencies transmit forces to the wing skin. 
+While the wing skin may possess sufficient stiffness to resist this expansion under certain conditions, high internal pressures could induce outward deformation in an unconstrained state. 
+The presence of a collet in such scenarios effectively introduces artificial stiffening of the wing structure, generating additional constraint forces throughout both the skin and internal tubes. These constraint forces potentially alter the structure's mechanical properties.
+Conversely, inward displacements present a distinct mechanical scenario where the collet no longer maintains complete surface contact with the wing profile. 
+This partial contact condition results in localized load transfer at discrete points where contact persists, potentially creating stress concentrations and deviating from the intended load distribution.
+
+The capability of collets to apply complex load distributions, while advantageous in principle, requires careful consideration to avoid undesired structural responses. 
+This becomes particularly critical near the wing tip, where displacement magnitudes are inherently larger due to increased distance from the mounting point. 
+Significant force differentials between adjacent collets in this region can generate pronounced local deformation gradients. Such load distributions, being unrealistic for typical aerodynamic loading conditions, can create unintended local stress concentrations and potentially lead to premature structural failure
+
+// -------------------------------------------------------------------------- //
 Determining the required number of #gls("lie") presupposes that clear requirements for load introduction accuracy and costs are established, as well as an understanding of how the discrete load distribution should look.
 Regarding the availability of collets, while they are not as easily accessible as sandbags, they offer decisive advantages for specific requirements.
 However, their reusability is limited.
@@ -51,7 +46,7 @@ In the event of wing bursting, the collets could dampen the spread of #gls("cfrp
 However, there is a possibility that #gls("cfrp") particles could penetrate the collet material.
 Nevertheless, the goal is to achieve a satisfactory approximation of load distribution with as few collets as possible.
 
-Since the wing would likely be mostly free of collets over its initially assumed total length of $gt.tilde 7 unit("meter")$, it is unclear where bursting could occur, leading to a high risk that #gls("cfrp") particles could spread unhindered in all directions.
+Since the wing would likely be mostly free of collets over its initially assumed total length of $gt.tilde 7 upright("m")$, it is unclear where bursting could occur, leading to a high risk that #gls("cfrp") particles could spread unhindered in all directions.
 Appropriate distancing or the use of protective measures is therefore essential.
 Regarding the control system effort, it should be noted that after attaching the collets and mounting the load harness on the crane, operating the crane is considered relatively simple.
 Specially trained personnel is still required, particularly someone who monitors the correct positioning and proper attachment of the collets, as well as personnel familiar with crane operation.
