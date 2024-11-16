@@ -9,7 +9,7 @@
 // all figs - the image data was not copied
 // all eqs
 
-= Discretization of Aerodynamic Loads <chap_4_0>
+== Discretization of Aerodynamic Loads <chap_4_0>
 In the previous @chap_1, #gls("lie") was introduced. 
 Through further examination of the physical load application, it was revealed that the choice of #gls("lie") depends significantly on how many #gls("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
 This chapter will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary, and how this answers our previously posed questions.
@@ -87,18 +87,18 @@ The non-linear model of fourth degree can not only reproduce the linear model bu
 Thus, the non-linear model can do everything the linear model can plus more.
 Consequently, one might assume that the non-linear model is always superior to the linear model.
 Whether this is actually the case can be answered, among other things, by considering interpolation and extrapolation.
-Very often, the Euclidean or L2-norm @Brunton2022 according to @eq_6 is used in optimization.
+Very often, the Euclidean or L2-norm @Brunton2022 according to @eq_70 is used in optimization.
 Here, $f(x_k)$ represents the data value from the training dataset or the output of a function value, and $x_k$ is the estimate that the regression model reproduces.
 
-$ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_6>
+$ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_70>
 
 The L2-norm tends to assign non-zero values to all available model parameters. 
 This means it tries to attribute a certain importance to all parameters.
 However, for this, the importance or magnitude of the model parameters must be reduced.
 In summary, this means that the L2-norm tries to use as many available parameters as possible to learn an underlying system.
-The L1-norm according to @eq_7 @Brunton2022 gives less weight to outliers, contrary to the behavior of the L2-norm.
+The L1-norm according to @eq_71 @Brunton2022 gives less weight to outliers, contrary to the behavior of the L2-norm.
 
-$ E_1(f) = 1/n sum_(k=1) ^n |x_k - f(x_k)| $<eq_7>
+$ E_1(f) = 1/n sum_(k=1) ^n |x_k - f(x_k)| $<eq_71>
 
 // ---------------------------------- step ---------------------------------- //
 
@@ -297,10 +297,10 @@ What is meant by clusters can be found better should be explained in the followi
 // ---------------------------------- step ---------------------------------- //
 The problem that kmeans++ tries to solve can be formulated as an optimization problem and is solved accordingly.
 With optimizations, it is known that there are multiple possible solutions, so-called local optima.
-Through initialization, kmeans++ usually manages to converge the objective function according to @eq_8 towards a smaller function value.
-The notation in @eq_8 is taken from @Frochte2020 and states that $d, x_j$ and $mu_i$ stand for a distance function, the current data point, and the centroid.
+Through initialization, kmeans++ usually manages to converge the objective function according to @eq_72 towards a smaller function value.
+The notation in @eq_72 is taken from @Frochte2020 and states that $d, x_j$ and $mu_i$ stand for a distance function, the current data point, and the centroid.
 In this case, $k$ centroids would be available.
-$ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_8>
+$ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_72>
 
 Furthermore, $x_j in C_i$ specifically means a data point $x_j$ from the cluster or group $C_i$. 
 The latter indicates the following. 

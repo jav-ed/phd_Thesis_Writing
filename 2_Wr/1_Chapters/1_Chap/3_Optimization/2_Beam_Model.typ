@@ -14,6 +14,7 @@ However, these topics were only covered superficially without in-depth informati
 Therefore, this chapter aims to provide a detailed description of the beam model and optimization process.
 Key questions to be addressed include: what a beam model is, how it is used, its advantages and disadvantages, what numerical optimization means, its objectives, what theoretical possibilities exist, and how the process was specifically implemented.
 
+// TODO wrong heading level and ref
 == Beam Model Fundamentals <chap_4_0>
 In many engineering programs, working with beam models is taught under the course name technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
 This represents a simple method that combines physics and mathematics.
