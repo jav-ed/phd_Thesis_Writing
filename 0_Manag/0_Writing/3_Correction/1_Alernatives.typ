@@ -53,3 +53,17 @@
 9. materially
 10. distinctly
 11. notably
+
+
+// -------------------------------- requires -------------------------------- //
+1. necessitates
+2. demands
+3. entails
+4. warrants
+5. mandates
+6. stipulates
+7. involves
+8. presupposes
+9. compels
+10. obliges
+11. needs

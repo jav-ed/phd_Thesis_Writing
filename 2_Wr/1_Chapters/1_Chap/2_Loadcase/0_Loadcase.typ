@@ -3,9 +3,9 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
-// TODO Title
-// new subsection added - theoretical background for curvature study and applying the knowledge gained. Thus, update the intro for this section 
-== Load Case Study and Impact of Filling Agent <chap_3_0>
+// Title was tested and is inshallah fine
+
+== Load Case Assessment and Filling Media Influence<chap_3_0>
 In @chap_1_0, the primary objective was to identify specific requirements for experimental structural certification tests of #gls("swith", long:true). The analysis revealed that no single standard currently exists dedicated to the certification of #glspl("swith"). Consequently, existing state-of-the-art standards were evaluated and filtered to establish essential certification requirements. These identified standards not only serve certification purposes but could also be leveraged to inform design decisions.
 
 The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
@@ -13,8 +13,9 @@ To safely conduct experimental investigations, a long-term strategy was proposed
 The current technical capabilities for safely handling high-pressure hydrogen in long tubes cannot adequately protect human operators, testing equipment, and the #gls("swith") itself from potential hydrogen-related incidents during experiments. Due to these safety limitations, alternative methods for conducting the certification tests must be explored.
 
 The primary objective of this section is to determine whether hydrogen can be substituted with an alternative filling agent without substantially altering the structural properties that would invalidate test results. 
-
 To address this question, the most critical load cases will be examined in @chap_3_0_0. These findings will inform the central question addressed in @chap_3_0_1 to @chap_3_0_3: Can hydrogen be replaced with an alternative medium in the tanks without significantly affecting the structural properties during experimental structural investigation?
+Finally, in @chap_3_0_4, practical methods for introducing physical loads during experimental tests are evaluated against selected criteria. The insights gained from this evaluation establish the foundation for the aerodynamic load discretization and optimization methodology developed in @chap_4_0.
+
 
 
 // Title was tested and is inshallah fine
@@ -51,7 +52,7 @@ The efficiency gains extended beyond raw execution speed. The machine learning a
 Comparable efficiency improvements have been documented in fluid dynamics, with speedup factors between 40 and 80 reported for #gls("cfd") applications @Kochkov2021.
 
 
-Having mentioned some advantages of machine learning models as surrogates, two important factors require emphasis. First, the cited speedup in calculations refers specifically to the inference phase, not the training phase. Second, developing machine learning models requires substantial input data. For high-fidelity simulations, this means conducting computationally expensive simulations to generate training data. Therefore, if pre-trained models are not available, the initial high-fidelity numerical simulations remain necessary. Consequently, all challenges associated with high-fidelity simulations persist during the data generation stage for machine learning models.
+Having mentioned some advantages of machine learning models as surrogates, two important factors require emphasis. First, the cited speedup in calculations refers specifically to the inference phase, not the training phase. Second, developing machine learning models demands substantial input data. For high-fidelity simulations, this means conducting computationally expensive simulations to generate training data. Therefore, if pre-trained models are not available, the initial high-fidelity numerical simulations remain necessary. Consequently, all challenges associated with high-fidelity simulations persist during the data generation stage for machine learning models.
 
 Given these limitations in both traditional simulation approaches and machine learning alternatives, establishing comprehensive simulation capabilities presents considerable resource difficulties beyond just computational power. Even with advanced computing methods, successful analysis requires expertise in several technical domains. These include #gls("cfd") for accurate aerodynamic load prediction, structural mechanics for understanding load distribution and material behavior, and multi-disciplinary approaches @Wang2021 @Meng2022 @Mader2020 @Meng2021 @Li2019a. The complexity is further increased by the potential need for multi-objective optimization techniques @Tian2021 @Li2023d @Ridha2021 to manage the vast solution space.
 
