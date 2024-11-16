@@ -239,7 +239,7 @@ The pursuit of developing a #gls("swith") is a pioneering project. Combining it 
 Consequently, as of writing this thesis, #glspl("swith") should be operated with Type IV tanks. However, once enough progress is made with Type V tanks, safe utilization of the potential benefits can be expected, and Type IV can be switched to Type V for #glspl("swith").
 //
 // ------------------------------ to sum table ------------------------------ //
-Finally, @tab_0 provides a comprehensive overview of the tank types, including material information and maximum bearable pressure. Similar, though less detailed, information on maximum bearable pressure values for the tank types can be found in other sources, including @Wang2021b, @Jella2024, @Rivard2019, and @khzouz2020hydrogen
+Finally, @tab_0 provides a concise overview of the tank types, including material information and maximum bearable pressure. Similar, though less detailed, information on maximum bearable pressure values for the tank types can be found in other sources, including @Wang2021b, @Jella2024, @Rivard2019, and @khzouz2020hydrogen
 /* -------------------------------------------------------------------------- */
 
 

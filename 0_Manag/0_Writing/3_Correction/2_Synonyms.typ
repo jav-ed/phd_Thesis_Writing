@@ -629,3 +629,56 @@ Example: The instructor walked through each step of the procedure.
 
 Brief
 Example: The manager briefed the team on the project requirements.
+
+
+
+// ------------------------------ Comprehensive ----------------------------- //
+== Alternatives for "Comprehensive"
+
+Thorough
+Example: The detective conducted a thorough investigation of the crime scene.
+
+Exhaustive
+Example: The researchers performed an exhaustive analysis of the collected data.
+
+Complete
+Example: The manual provides complete instructions for assembling the furniture.
+
+All-encompassing
+Example: The insurance policy offers all-encompassing coverage for natural disasters.
+
+In-depth
+Example: The journalist wrote an in-depth report on climate change.
+
+Extensive
+Example: The library maintains an extensive collection of rare books.
+
+Far-reaching
+Example: The new legislation will have far-reaching implications for small businesses.
+
+All-inclusive
+Example: The resort offers an all-inclusive package with meals and activities.
+
+Detailed
+Example: The architect presented a detailed plan for the building renovation.
+
+Full-scale
+Example: The military conducted a full-scale review of its operations.
+
+Sweeping
+Example: The company implemented sweeping changes to its organizational structure.
+
+Wide-ranging
+Example: The survey covered wide-ranging topics about consumer behavior.
+
+Encyclopedic
+Example: The professor has encyclopedic knowledge of ancient civilizations.
+
+Broad-based
+Example: The committee took a broad-based approach to solving community issues.
+
+Holistic
+Example: The doctor takes a holistic approach to treating patients.
+
+All-embracing
+Example: The new policy framework is all-embracing in its scope and application.
