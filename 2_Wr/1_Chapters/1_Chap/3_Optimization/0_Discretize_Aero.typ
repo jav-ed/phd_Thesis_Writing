@@ -4,11 +4,11 @@
 #pagebreak(weak:true)
 
 
-// TODO proper intro for section
-// required own specific subsection
+// TODO section required
+// subsection required 
+// proper intro for section and subseciton required
 
 // INFO
-
 // all refs
 // all figs - the image data was copied
 // all eqs
@@ -42,7 +42,7 @@ The listed questions could all be answered through optimization.
 Beyond providing important answers, optimization also supports economic and environmental consciousness. 
 As a supporting example: for an imagined $60 #unit("m")$ long wing, we should try to use the minimum number of #gls("lie") possible. 
 To expand on this example, let's consider electrically driven cylinders.
-If, say, through optimization 23 cylinders show a similar acceptable accuracy as 46 cylinders in the non-optimized state, significant costs can be saved in terms of electricity, personnel, procurement costs, and delivery routes.
+If, say, through optimization 23 cylinders show a similar acceptable accuracy as 46 cylinders in the non-optimized state, significant costs can be saved in terms of electricity, personnel, procurement costs, other operating costs and delivery routes.
 Through proper #gls("ld") paired with subsequent optimization, the number of required #gls("lie") can likely be reduced considerably.
 The latter would have a positive effect on aspects such as costs, safety concept, and control effort.
 Additionally, optimization would ensure that an appropriate accuracy of the #gls("ld") is achieved.
