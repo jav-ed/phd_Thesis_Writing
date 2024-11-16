@@ -50,7 +50,7 @@ The integration of crane systems and associated load harnesses introduces signif
 The determination of collet suitability for specific testing scenarios necessitates detailed evaluation of two critical factors: achievable load introduction accuracy and the influence of constraint forces on structural behavior. These considerations must be thoroughly analyzed within the context of specific test requirements to ensure appropriate selection of load introduction methodology.
 
 // ------------------------------ air Cushions ------------------------------ //
-#hor_Line("Assessment: Air Cushions")
+#hor_Line("Assessment: Air Cushion")
 Air cushions represent an emerging methodology in #gls("lie") deployment, distinguished by their innovative approach to load distribution.
 Initial assumptions suggested high procurement costs due to specialized manufacturing requirements. However, the fundamental technology, which utilizes pressurized cushions with plastic surface attachments, indicates potential cost-effectiveness in production.
 Collaboration with IMA Dresden has revealed high market availability of these systems, indicating favorable procurement conditions. 
@@ -102,13 +102,13 @@ Despite these economic considerations, cylinder-pad methodology demonstrates sup
 The capacity for uniform load distribution while maintaining minimal constraint forces represents a significant technical advantage, enhancing the methodology's applicability across diverse structural testing scenarios. 
 Selection of this approach ultimately requires systematic evaluation of three primary factors: required accuracy specifications, economic constraints, and specific test program requirements.
 
-// ---------------------------------- here ---------------------------------- //
+// ----------------------------- tables overview ---------------------------- //
 #hor_Line("Assessment: Overview")
-Many individual points were presented about the various methods. 
-To present these in a clear manner and to see each individual evaluation criterion compared across the four essential #gls("lie"), reference should be made to @tab_32.
-At this point, it should be noted that the goal for @tab_32 was to transfer the collected observations into a clear form.
-However, when high-dimensional information (high amount of information) is transferred into a low dimension (three possibilities for evaluation), a certain subjectivity or susceptibility to errors cannot be excluded.
+The preceding analysis presented numerous evaluative aspects for each load introduction method. To facilitate systematic comparison of these methods, @tab_32 provides a concise evaluation matrix comparing the four essential #gls("lie") across all defined criteria. 
+This tabular representation aims to distill the detailed qualitative analysis into a structured comparative framework.
+It is important to acknowledge the inherent limitations of this evaluation approach. The transformation of complex, multidimensional information into a three-level assessment scale necessarily involves some degree of simplification. This reduction in dimensionality introduces potential subjectivity and may not capture nuanced distinctions between methods. Such limitations are inherent to any categorical assessment of complex technical characteristics.
 
+// TODO check it
 #figure(
   table(
     columns: (auto,auto,auto,auto,auto,auto),
@@ -156,10 +156,13 @@ However, when high-dimensional information (high amount of information) is trans
 
 
 // ------------------------------- innovation ------------------------------- //
-Through exchanges within the team and with the industrial partner (IMA), it was discovered that innovation is of great importance for science and the general public, making innovation viewed as something positive.
-However, in a project where a pioneering aircraft is to be structurally tested for the first time, it would certainly be advantageous to rely on known and proven methods.
-Therefore, all innovation entries from @tab_32 would be understood as inverted, resulting in the final evaluation matrix given in @tab_33.
+Meetings held with IMA Dresden highlighted an important consideration regarding the innovation criterion. 
+While innovation generally represents a positive attribute in scientific and technological advancement, the context of structural testing for a pioneering aircraft configuration introduces specific constraints. 
+For initial validation of novel structural concepts, established methodologies with documented reliability may offer significant advantages over innovative but less-proven approaches. 
+This consideration led to a reevaluation of the innovation criterion, effectively inverting its interpretation in the assessment matrix.
+The revised evaluation framework, presented in @tab_33, reflects this adjusted perspective on innovation while maintaining consistent assessment of all other criteria. This modification aligns the evaluation matrix more closely with the primary objective of ensuring reliable structural validation for the novel aircraft configuration.
 
+// TODO check it
 #figure(
   table(
     columns: (auto,auto,auto,auto,auto,auto),
@@ -205,22 +208,35 @@ Therefore, all innovation entries from @tab_32 would be understood as inverted, 
   Furthermore, innovation was viewed as negative here for a pioneering project.],
 ) <tab_33>
 
-#hor_Line("Current Favorite")
-To identify a final favorite, several open questions still need to be answered.
-Many of these can be determined through load approximation.
-How many #gls("lie") are needed, what dimensions should they have, where should they be attached, what minimum distance between them is required, and what magnitude should be pulled or pushed.
 
-Therefore, @tab_32 and @tab_33 can be considered as an important first step, providing indications for concrete further action.
+// -------------------------------- favorite -------------------------------- //
+#hor_Line("Assessment: Current Favorite")
+The systematic evaluation of load introduction elements revealed varying degrees of certainty in assessment outcomes across different criteria. While some characteristics could be definitively evaluated, others demonstrated strong dependence on specific project parameters and implementation details. This variance in assessment confidence highlights the context-dependent nature of #gls("lie") selection, suggesting that optimal solutions must be determined within the framework of specific project requirements rather than through universal generalizations.
+The presented evaluation framework, while not exhaustive, establishes a valuable foundation for structured decision-making in #gls("lie") selection. This contribution is particularly significant given that load introduction methodology often represents specialized industrial knowledge, typically confined within commercial enterprises and specialized testing facilities. The systematic reasoning approach demonstrated here can be adapted and extended to accommodate project-specific requirements, providing a methodological template for future evaluations.
 
-// TODO proper transition into next chapter - also make sure to hihglight that the provided inofrmaiton from the enxt chapter are helpful, but the optmizaiton is still just one of the next steps that needs to be taken. With it informaiton especially related to the desired test condiations can be obtianed. While the optimiaztion results can be reagrded as hihgly helpful, potentially additional considerations need to be make depending on the scale of the considered project
-To identify a favorite, load approximation should be carried out next.
+Load discretization analysis yields critical methods for finding other key variables that guide the final #gls("lie") selection. These include:
 
-// TODO proper summary
++ Required quantity of #glspl("lie")
++ Dimensional specifications
++ Optimal positioning coordinates
++ Minimum and maximum spacing requirements
++ Force magnitude and directional parameters
+
+// TODO enable it
+// @chap_4_0 
+presents a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
+The required quantity of #glspl("lie") directly impacts cost considerations. Additionally, spacing requirements influence both the feasibility of attachment methods and the availability of unobstructed areas. These clear areas are potentially beneficial for visual strain measurements and structural monitoring.
+This quantitative foundation, coupled with the qualitative evaluation criteria, provides a comprehensive basis for informed #gls("lie") selection tailored to specific project requirements.
+
+
 #summary_([
-In this section, it was explained what is meant by physical load introduction.
-Then, several options were enumerated and explained, which should have highlighted the difference between simulative and physical or experimental load application.
-An evaluation table was presented and applied to each #gls("lie").
-The derivation of results was discussed in detail in written form on one hand, and on the other hand, a tabular presentation was given for clarity.
-This section brings to our attention that the next sub-point should address the load discretization of continuous aerodynamics.
+This subsection established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous chapters, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
+A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
+
+The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
+This illustrates both the systematic approach and inherent complexity of the assessment process.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and identified critical parameters requiring quantitative determination through load approximation analysis. This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in 
+// TODO enable it
+// @chap_4_0.
 
 ])
