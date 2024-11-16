@@ -24,6 +24,7 @@ Thus, the #gls("fem") model also integrates the aerodynamic loads.
 An exemplary result provided by APAME is shown in @fig_16. 
 The figure shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
 
+// TODO the legend of the map potentially is white, thus the image cannot be used on white background paper
 #figure(
   image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/5.png", 
   width: 100%),

@@ -16,9 +16,7 @@ However, experimental investigations present distinct challenges. The applicatio
 
 This subsection addresses some of these experimental challenges by examining physical #glspl("lie", long:true) for aircraft wings. 
 An analysis of each #gls("lie")'s characteristics is presented, followed by systematic evaluation using relevant assessment criteria to determine suitable approaches for structural testing.
-These findings provide the motivation for the upcoming aerodynamical load discretization and optimization detailed in 
-// TODO enable it
-// @chap_4_0. 
+These findings provide the motivation for the upcoming aerodynamical load discretization and optimization detailed in @chap_4_0. 
 Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
 
 // -------------------------------------------------------------------------- //
@@ -48,10 +46,7 @@ This methodology raises several fundamental questions regarding implementation:
 6. How should spacing between adjacent #glspl("lie") be determined
 7. Which force magnitudes and directions should be applied
 
-The first two questions are addressed within this subsection, while the remaining aspects are examined throughout 
-// TODO
-// @chap_4_0 
-.
+The first two questions are addressed within this subsection, while the remaining aspects are examined throughout @chap_4_0.
 Before proceeding with the detailed analysis, it is pertinent to elaborate on the rationale behind selecting this approach over the previously mentioned alternatives.
 As mentioned in @chap_0_6, this research was conducted within the framework of the K#sub[2]H#sub[2] project. Through collaboration with the industrial partner IMA Materialforschung und Anwendungstechnik GmbH Dresden (IMA Dresden), valuable practical insights were obtained for this thesis.
 IMA's expertise encompasses extensive experience in experimental structural testing of aircraft across various size categories, including the Airbus A380 @link_Lufthansa_Airbus_380.
@@ -148,7 +143,6 @@ Hydraulic cylinders offer another load introduction methodology. These actuators
 // ---------------------------------- here ---------------------------------- //
 Following the introduction of individual #gls("lie") configurations, a systematic evaluation framework is required to identify the optimal solution. The assessment criteria, presented in @tab_31, form the basis for this systematic evaluation. The subsequent passages examine these criteria by analyzing each load introduction method, beginning with the sandbag approach.
 
-// TODO get it into two columns
 #figure(
   table(
     columns: (0.3fr, 1fr, 1em, 0.3fr, 1fr),

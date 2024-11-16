@@ -105,7 +105,6 @@ The preceding analysis presented numerous evaluative aspects for each load intro
 This tabular representation aims to distill the detailed qualitative analysis into a structured comparative framework.
 It is important to acknowledge the inherent limitations of this evaluation approach. The transformation of complex, multidimensional information into a three-level assessment scale necessarily involves some degree of simplification. This reduction in dimensionality introduces potential subjectivity and may not capture nuanced distinctions between methods. Such limitations are inherent to any categorical assessment of complex technical characteristics.
 
-// TODO check it
 #figure(
   table(
     columns: (auto,auto,auto,auto,auto,auto),
@@ -214,9 +213,7 @@ Load discretization analysis yields critical methods for finding other key varia
 + Minimum and maximum spacing requirements
 + Force magnitude and directional parameters
 
-// TODO enable it
-// @chap_4_0 
-presents a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
+@chap_4_0 presents a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
 The required quantity of #glspl("lie") directly impacts cost considerations. Additionally, spacing requirements influence both the feasibility of attachment methods and the availability of unobstructed areas. These clear areas are potentially beneficial for visual strain measurements and structural monitoring.
 This quantitative foundation, coupled with the qualitative evaluation criteria, provides a comprehensive basis for informed #gls("lie") selection tailored to specific project requirements.
 
@@ -227,8 +224,6 @@ A systematic evaluation framework comprising thirteen criteria was developed and
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This illustrates both the systematic approach and inherent complexity of the assessment process.
-The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and identified critical parameters requiring quantitative determination through load approximation analysis. This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in 
-// TODO enable it
-// @chap_4_0.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and identified critical parameters requiring quantitative determination through load approximation analysis. This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4_0.
 
 ])

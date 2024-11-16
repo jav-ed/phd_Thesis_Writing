@@ -3,10 +3,14 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
+
+// TODO proper intro for section
+// required own specific subsection
+
 // INFO
 
 // all refs
-// all figs - the image data was not copied
+// all figs - the image data was copied
 // all eqs
 
 == Discretization of Aerodynamic Loads <chap_4_0>
@@ -200,73 +204,50 @@ An alternative to curve fitting or regression models is provided by unsupervised
 @Luong2020 @Zhang2022a @Naeem2023 @Eckhardt2022.
 In unsupervised learning, no comparison data is provided against which the input could compare the output.  
 Only inputs are given, and the corresponding outputs or patterns must be determined independently by the model.
-To illustrate this, a concrete example should be discussed using @fig_13_Main.
+To illustrate this, a concrete example should be discussed using @fig_59 to @fig_61.
 
-In Figure @fig_13_0, the solution of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022 is visible.
+In Figure @fig_59, the solution of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022 is visible.
 For understanding the presented unsupervised method, it is sufficient to understand that a chaotic system is described by differential equations.
-The solution of the differential equation is given in Figure @fig_13_0. 
+The solution of the differential equation is given in Figure @fig_59. 
 This is the trajectory of the well-known Lorenz Attractor @Lorenz1963.
 The trajectory provides x-, y-, and z-coordinates in a three-dimensional space over a temporal course.
-For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in Figure @fig_13_0.
+For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in Figure @fig_59.
 When the three-dimensional trajectory is subjected to an unsupervised procedure (kmeans++, to be discussed in detail later), so-called centroids are obtained.
 The centroids are characteristic quantities that the procedure has found in the dataset consisting of the trajectory.
-Visually, the centroids can also be represented by three-dimensional points, as shown in Figure @fig_13_1.
+Visually, the centroids can also be represented by three-dimensional points, as shown in Figure @fig_60.
 In the latter, it can be observed that the procedure was allowed to determine 10 characteristic quantities.
-Figure @fig_13_2 shows which region each centroid covers. 
-As an example, Centroid 3 describes the entire green region in Figure @fig_13_2.
+Figure @fig_61 shows which region each centroid covers. 
+As an example, Centroid 3 describes the entire green region in Figure @fig_61.
+
+
+// -------------------------------------------------------------------------- //
 
 #figure(
-    grid(rows: (30%, 30%, 30%),
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0.svg", 
+  width: 100%),
+  caption: [Trajektorie, x-, y- und z-Koordinaten über einen zeitlichen Verlauf]
+) <fig_59>
 
-    row-gutter: 10pt,
-      block(
-        // inset: (top: -0.3em),
-        // clip:true,
 
-        subfigure(pos: bottom+left, lbl: <fig_13_0>, 
-         // dy: +10%,
-        image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/0.svg",),
-        supplement: smallcaps(""), 
-        caption: "Trajektorie, x-, y- und z-Koordinaten über einen zeitlichen Verlauf"
-        ),
-      ),
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1.svg", 
+  width: 100%),
+  caption: [Centroids, Zentrum der gefundenen characktersitischen Größen]
+) <fig_60>
 
-      block(
-        // inset: (top: -0.3em),
-        // clip:true,
-
-        subfigure(pos: bottom+left, lbl: <fig_13_1>, 
-         // dy: +10%,
-        image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/1.svg",),
-        supplement: smallcaps(""),
-        caption: "Centroids, Zentrum der gefundenen characktersitischen Größen"
-        ),
-      ),
-
-      block(
-        // inset: (top: -0.3em),
-        // clip:true,
-
-        subfigure(pos: bottom+left, lbl: <fig_13_2>, 
-        // dy: +10%,
-        image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/2.svg",),
-        supplement: smallcaps(""),
-        caption: "Wirkfläche der einzelnen centroids"
-        ),
-
-      )
-
-    ),
-  caption: [Die Abbildungen @fig_13_0, @fig_13_1, @fig_13_2 zeigen einzelne Schritte auf um ein unsupervised Verfahren bildlich zu verstehen.],
-)<fig_13_Main>
-
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2.svg", 
+  width: 100%),
+  caption: [Wirkfläche der einzelnen centroids]
+) <fig_61>
+// -------------------------------------------------------------------------- //
 
 Depending on how high the number of characteristic quantities, the centroids, is chosen, finer details can be allowed.
 In the case of kmeans++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model or to view kmeans++ as reduced order modeling.
 The idea behind kmeans++ is to create groups based on local similarities.
 It attempts to find coordinates for the centroids so that the distance of the centroids within their group members is reduced.
 The group members are all the entries that belong to a centroid. 
-In Figure @fig_13_2, the crosses show the respective centroid. 
+In Figure @fig_61, the crosses show the respective centroid. 
 Let's again consider centroid 3 and its corresponding green area.
 All coordinates that lie within this green area are group members of centroid 3.
 The colored area or active effective area and the position of the respective centroid are interdependent.
@@ -306,13 +287,13 @@ Furthermore, $x_j in C_i$ specifically means a data point $x_j$ from the cluster
 The latter indicates the following. 
 After positions for all centroids have been found and thus it is clear which entries belong to which cluster or group, the geometric center of gravity can be determined.
 The centers of gravity are the new starting positions for the respective centroids, so that the group membership of each individual data point can be determined again.
-This process is an iterative process and can be visually understood with @fig_14.
+This process is an iterative process and can be visually understood with @fig_62.
 
 #figure(
-  image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/3.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3.png", 
   width: 100%),
   caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006 taken from @link_Kmeans_Img_Proc],
-)<fig_14>
+)<fig_62>
 
 Up to this point, we have explained the difference between regression and unsupervised learning. 
 We have named concrete methods for both previously mentioned machine learning techniques. 
@@ -320,16 +301,16 @@ For unsupervised learning, kmeans++ was discussed in detail.
 For further proceedings, specific areas should be named in which kmeans++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
 Subsequently, it should be explained in detail how kmeans++ could be used for #gls("ld").
 Kmeans is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
-A list of methods similar to kmeans with calculated results can be found in @fig_15.
+A list of methods similar to kmeans with calculated results can be found in @fig_63.
 A detailed description of the shown methods is outside the scope of this work.
 Interested readers are encouraged to either follow the given link @link_Cluster_Meth and/or read @Ikotun2023 among others.
 In @Ikotun2023, further developments of kmeans and additional areas in which kmeans finds application are mentioned.
 
 #figure(
-  image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/4.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4.png", 
   width: 100%),
   caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
-)<fig_15>
+)<fig_63>
 
 After showing that kmeans++ is a method that finds application in various areas in industry and science, we should focus on the #gls("ld"). 
 The input for kmeans++ would be the numerically calculated aerodynamic load distribution. 

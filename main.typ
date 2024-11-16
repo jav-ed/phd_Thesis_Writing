@@ -110,7 +110,7 @@
 #include "2_Wr/1_Chapters/1_Chap/2_Loadcase/5_Physical_Collet.typ"
 
 // ------------------------------ optimization ------------------------------ //
-// #include "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ"
+#include "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ"
 
 
 // --------------------------------- results -------------------------------- //
