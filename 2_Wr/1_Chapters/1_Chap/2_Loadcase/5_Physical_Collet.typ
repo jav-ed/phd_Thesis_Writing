@@ -4,16 +4,16 @@
 
 #hor_Line("Assessment: Collet")
 
-The deployment of collets as #gls("lie") for aircraft experimental structural testing necessitates careful consideration of multiple factors that influence operational efficiency and economic viability.
-These custom-manufactured components, specifically designed for load introduction at particular profile geometries, present cost implications that correlate directly with wing profile variability along the span. Greater geometric variation necessitates additional specialized collets, potentially resulting in substantial cost escalation.
+The deployment of collets as #gls("lie") for aircraft experimental structural testing necessitates careful analysis of multiple factors that influence operational efficiency and economic viability.
+These custom-manufactured components, specifically designed for load introduction at particular profile geometries, present cost implications that correlate directly with wing profile variability along the span. Greater geometric variation demands additional specialized collets, potentially resulting in substantial cost escalation.
 
 To establish practical relevance, it is pertinent to consider the current state-of-the-art #gls("swith") outlined in @chap_0_7. 
 The APUS i2 @APUS_0, characterized as a small aircraft with a 13.2-meter wingspan, is assumed to incorporate tubes of approximately $gt.tilde 7 upright("m")$ length positioned within the inner wings. Based on initial assessments, it can be hypothesized that the aircraft's design utilizes constant airfoil profiles in the inner wing sections, transitioning to non-uniform cross-sections in the outer wings
-This geometric variation necessitates corresponding collet adaptations, introducing additional manufacturing costs. Furthermore, the deployment requires consideration of crane procurement, operational expenses including electricity consumption, and personnel costs.
+This geometric variation requires corresponding collet adaptations, introducing additional manufacturing costs. Furthermore, the deployment calls for evaluation of crane procurement, operational expenses including electricity consumption, and personnel costs.
 // -------------------------------------------------------------------------- //
 
 The accuracy of load transfer through collets demonstrates a strong dependence on both their quantity and spatial distribution. While precise load introduction can be achieved under optimal conditions, the efficacy varies significantly based on the complexity of the desired load distribution profile.
-The fundamental mechanical principle underlying collet operation requires the collet structure to possess greater stiffness than the wing-tube assembly. 
+The fundamental mechanical principle underlying collet operation mandates that the collet structure possess greater stiffness than the wing-tube assembly.
 This design constraint impacts the wing's deformation behavior in multiple directions. 
 When the collet fully encloses the wing profile, it inherently constrains expansion in both vertical and profile-normal directions. Additionally, the collet's enclosure affects spanwise deformation through frictional forces at the contact interface, with the magnitude of this effect correlating with the contact force.
 
@@ -30,7 +30,7 @@ This becomes particularly critical near the wing tip, where displacement magnitu
 Significant force differentials between adjacent collets in this region can generate pronounced local deformation gradients. Such load distributions, being unrealistic for typical aerodynamic loading conditions, can create unintended local stress concentrations and potentially lead to premature structural failure
 
 // -------------------------------------------------------------------------- //
-The determination of required #gls("lie") quantity necessitates clear establishment of load introduction accuracy requirements, associated costs, and desired discrete load distribution characteristics. While collets present lower accessibility compared to sandbags, they offer distinct advantages for specific testing scenarios. Their reusability, however, remains constrained by geometric considerations. Any modification in profile geometry necessitates new collet manufacture, rendering them a cost-intensive option when high adaptability across varying wing profiles is required.
+The determination of required #gls("lie") quantity necessitates clear establishment of load introduction accuracy requirements, associated costs, and desired discrete load distribution characteristics. While collets present lower accessibility compared to sandbags, they offer distinct advantages for specific testing scenarios. Their reusability, however, remains constrained by geometric considerations. Any modification in profile geometry demands new collet manufacture, rendering them a cost-intensive option when high adaptability across varying wing profiles is required.
 
 Safety considerations for collet-based #gls("lie") implementations parallel those of sandbag configurations, necessitating appropriate shielding and distance maintenance during structural testing. Collets present a significant operational advantage through their capacity for remote load adjustment, either from the crane cockpit or through remote control systems, thus minimizing personnel exposure to potential risks. In the event of structural failure, collets may provide localized containment of #gls("cfrp") particles at attachment points, though penetration of particles through collet material remains a consideration. The optimization objective of achieving satisfactory load distribution with minimal collet quantity must be balanced against these safety considerations.
 
@@ -44,23 +44,26 @@ The application of tension loads through collet configurations presents varied i
 
 To conclude, cost assessment for collet implementation remains contingent upon detailed specification of load discretization requirements and accuracy parameters. 
 The integration of crane systems and associated load harnesses introduces significant cost implications relative to simpler methodologies such as sandbag implementation. 
-The determination of collet suitability for specific testing scenarios necessitates detailed evaluation of two critical factors: achievable load introduction accuracy and the influence of constraint forces on structural behavior. These considerations must be thoroughly analyzed within the context of specific test requirements to ensure appropriate selection of load introduction methodology.
+The determination of collet suitability for specific testing scenarios necessitates detailed evaluation of two critical factors: achievable load introduction accuracy and the influence of constraint forces on structural behavior. 
+These aspects must be thoroughly analyzed within the context of specific test requirements to ensure appropriate selection of load introduction methodology.
 
 // ------------------------------ air Cushions ------------------------------ //
 #hor_Line("Assessment: Air Cushion")
 Air cushions represent an emerging methodology in #gls("lie") deployment, distinguished by their innovative approach to load distribution.
 Initial assumptions suggested high procurement costs due to specialized manufacturing requirements. However, the fundamental technology, which utilizes pressurized cushions with plastic surface attachments, indicates potential cost-effectiveness in production.
 Collaboration with IMA Dresden has revealed high market availability of these systems, indicating favorable procurement conditions. 
-The efficient load distribution characteristics of air cushions potentially reduce the required number of units compared to alternative methods, though operational costs, particularly related to cylinder pressurization systems, remain comparable to collet and cylinder configurations.
+Air cushions provide efficient load distribution, potentially reducing the required number of units compared to alternative methods.
+However, operational costs, particularly for cylinder pressurization systems, appear comparable to collet and cylinder configurations in isolated subsystem analysis. Yet, the total operational expenditure, including control system complexity and integration requirements, could lead to higher costs as will be explained later.
 A critical advantage of air cushion implementation lies in its capacity for precise and uniform load distribution across surfaces. This approach significantly reduces the occurrence of constraint forces and load irregularities common to traditional methods, offering superior accuracy in load introduction. 
 
 The determination of optimal air cushion quantity depends fundamentally on load distribution approximation requirements. This quantification requires comprehensive calculations and analyses. While these specialized #gls("lie") demonstrate high market availability, their implementation offers significant advantages through simple attachment and removal processes utilizing replaceable plastic end surfaces. This design feature enables efficient reuse across different wing configurations, promoting both resource sustainability and long-term cost efficiency.
-Safety protocols necessitate careful consideration during operation. Personnel protection requires maintaining appropriate distances from the test structure during load application. The system's remote pressure control capabilities facilitate safe test execution while enabling flexible load adjustment without direct operator proximity to the test article.
+Safety protocols necessitate thorough assessment during operation
+Personnel protection entails maintaining appropriate distances from the test structure during load application. 
+The system's remote pressure control capabilities facilitate safe test execution while enabling flexible load adjustment without direct operator proximity to the test article.
 
 // -------------------------------------------------------------------------- //
-The operational requirements of air cushions encompass both their application and pressurization. 
 The operational requirements of air cushions encompass both their application and pressurization. The integration with cylinders results in increased control system requirements compared to cylinder-based systems, as both cylinder operation and pressure regulation must be managed. The critical technical challenge resides in achieving precise pressure control within the air cushions to ensure uniform load distribution.
-The implementation requires specialized personnel for load operations. These operators must monitor both the initial system configuration, including proper air cushion application and cylinder connections, and maintain operational oversight throughout test execution.
+The implementation warrants specialized personnel for load operations. These operators must monitor both the initial system configuration, including proper air cushion application and cylinder connections, and maintain operational oversight throughout test execution.
 The system demonstrates high test result reproducibility due to the precise positioning capabilities and electrical cylinder control. These characteristics facilitate consistent load application throughout repeated test cycles.
 
 The air cushion system exhibits significant innovation potential, given its current limited application in structural testing. This novel load introduction approach presents opportunities for enhancement or replacement of conventional methodologies. 
@@ -68,13 +71,13 @@ The application of pressure forces from below eliminates constraint forces, faci
 Tension load introduction, however, requires adequate adhesive bonding between the air cushions and wing structure. Both the air cushion material and adhesive interfaces must possess sufficient stiffness characteristics to ensure proper load transfer. 
 The implementation of air cushions simplifies the #gls("fem") modeling process. The uniform surface load distribution generated by the air cushions permits straightforward numerical representation within the #gls("fem") framework, enhancing both computational efficiency and simulation accuracy.
 
-In summary, while current cost estimates for the air cushion system remain incomplete, preliminary analysis indicates higher expenditure compared to collet and cylinder-pad configurations. This increased cost is primarily attributed to complex control system requirements. The implementation costs comprise both the air cushion procurement and the essential cylinder systems for pressure force application. Despite these cost considerations, the system demonstrates significant advantages in reusability, safety, reproducibility, and innovative load introduction methodology, positioning it as a viable solution for future load distribution applications.
+In summary, while current cost estimates for the air cushion system remain incomplete, preliminary analysis indicates higher expenditure compared to collet and cylinder-pad configurations. This increased cost is primarily attributed to complex control system requirements. The implementation costs comprise both the air cushion procurement and the essential cylinder systems for pressure force application. Despite these cost implications, the system demonstrates significant advantages in reusability, safety, reproducibility, and innovative load introduction methodology, positioning it as a viable solution for future load distribution applications.
 
 // ---------------------------- cylinder and pad ---------------------------- //
 #hor_Line("Assessment: Cylinder with Pad")
 
 The hydraulic cylinder and pad configuration represents an established gls("lie") that demonstrates operational characteristics comparable to air cushion systems in terms of load application and resultant structural response. 
-Implementation of this approach necessitates careful consideration of load distribution requirements, as achieving high-fidelity load representation typically requires deployment of multiple #gls("lie") units, directly impacting system costs. 
+Implementation of this approach necessitates careful consideration of load distribution requirements, as achieving high-fidelity load representation typically demands deployment of multiple #gls("lie") units, directly impacting system costs. 
 Despite this consideration, the method's primary advantage lies in its precise load introduction capabilities, characterized by minimal constraint forces and uniform distribution across discrete contact surfaces.
 Component availability presents a significant operational advantage, particularly for large-scale aircraft structural testing applications. Both hydraulic cylinders and load distribution pads maintain robust market presence, facilitating system implementation and maintenance. 
 This #gls("lie") demonstrates favorable reusability characteristics, enhanced by efficient pad attachment and removal mechanisms that minimize operational complexity. This attribute contributes to long-term economic viability through reduced replacement requirements and streamlined testing procedures.
@@ -86,16 +89,15 @@ As elaborated in the air cushion assessment, air cushion systems require more so
 
 // -------------------------------------------------------------------------- //
 
-Implementation of cylinder-pad configurations requires specialized personnel to oversee installation procedures, including proper pad attachment and cylinder connectivity, ensuring precise and reliable load introduction. The system demonstrates favorable reproducibility characteristics through consistent pad positioning and electronically controlled cylinder actuation, facilitating high test result repeatability. 
+Implementation of cylinder-pad configurations requires specialized personnel to oversee installation procedures, including proper pad attachment and cylinder connectivity, ensuring precise and reliable load introduction. The system demonstrates favorable reproducibility properties through consistent pad positioning and electronically controlled cylinder actuation, facilitating high test result repeatability. 
 While this methodology represents established practice, its adaptation beyond large-scale aircraft testing constitutes an extension of conventional applications.
 
-The magnitude of constraint forces exhibits strong dependence on pad-wing interface conditions. Implementation of elastomeric intermediate layers can effectively minimize constraint forces, whereas direct bonding may introduce localized force concentrations. The capacity for tension load introduction is governed by both the cohesive and adhesive properties of the bonding agent, coupled with sufficient pad stiffness characteristics. These considerations necessitate meticulous material selection to achieve specified test parameters while maintaining structural integrity.
-
+The magnitude of constraint forces exhibits strong dependence on pad-wing interface conditions. Implementation of elastomeric intermediate layers can effectively minimize constraint forces, whereas direct bonding may introduce localized force concentrations. The capacity for tension load introduction is governed by both the cohesive and adhesive properties of the bonding agent, coupled with sufficient pad stiffness attributes. These considerations necessitate meticulous material selection to achieve specified test parameters while maintaining structural integrity.
 Numerical representation of cylinder-pad systems demands comprehensive consideration of multiple mechanical factors. The modeling framework must incorporate both pad stiffness characteristics and interface behavior between pad and wing structure. This requirement extends beyond simple force application, necessitating detailed representation of load transfer mechanisms through the pad-wing interface. 
 Accurate simulation of these interactions proves essential for establishing correlation between numerical predictions and experimental observations, ultimately determining the validity of structural analysis results.
 
 In summary, the economic implications of cylinder-pad implementation demonstrate strong correlation with the quantity of required #glspl("lie"). Achievement of high-fidelity load distribution necessitates deployment of numerous pad-cylinder units, substantially impacting overall system costs. The comprehensive cost assessment must encompass both initial procurement expenses and operational expenditures, including energy consumption for control systems and extended testing operations. These operational costs can represent a significant proportion of total expenditure, particularly for complex, long-duration test campaigns.
-Despite these economic considerations, cylinder-pad methodology demonstrates superior load distribution characteristics, particularly in configurations employing multiple #glspl("lie"). The system enables precise load application control, yielding high-quality experimental data suitable for rigorous structural analysis. 
+Despite these economic considerations, cylinder-pad methodology demonstrates superior load distribution properties, particularly in configurations employing multiple #glspl("lie"). The system enables precise load application control, yielding high-quality experimental data suitable for rigorous structural analysis. 
 The capacity for uniform load distribution while maintaining minimal constraint forces represents a significant technical advantage, enhancing the methodology's applicability across diverse structural testing scenarios. 
 Selection of this approach ultimately requires systematic evaluation of three primary factors: required accuracy specifications, economic constraints, and specific test program requirements.
 
@@ -103,7 +105,8 @@ Selection of this approach ultimately requires systematic evaluation of three pr
 #hor_Line("Assessment: Overview")
 The preceding analysis presented numerous evaluative aspects for each load introduction method. To facilitate systematic comparison of these methods, @tab_32 provides a concise evaluation matrix comparing the four essential #gls("lie") across all defined criteria. 
 This tabular representation aims to distill the detailed qualitative analysis into a structured comparative framework.
-It is important to acknowledge the inherent limitations of this evaluation approach. The transformation of complex, multidimensional information into a three-level assessment scale necessarily involves some degree of simplification. This reduction in dimensionality introduces potential subjectivity and may not capture nuanced distinctions between methods. Such limitations are inherent to any categorical assessment of complex technical characteristics.
+It is important to acknowledge the inherent limitations of this evaluation approach. The transformation of complex, multidimensional information into a three-level assessment scale necessarily involves some degree of simplification. This reduction in dimensionality introduces potential subjectivity and may not capture nuanced distinctions between methods. 
+Such limitations are inherent to any categorical assessment of complex engineering aspects.
 
 #figure(
   table(
@@ -153,7 +156,7 @@ It is important to acknowledge the inherent limitations of this evaluation appro
 Meetings held with IMA Dresden highlighted an important consideration regarding the innovation criterion. 
 While innovation generally represents a positive attribute in scientific and technological advancement, the context of structural testing for a pioneering aircraft configuration introduces specific constraints. 
 For initial validation of novel structural concepts, established methodologies with documented reliability may offer significant advantages over innovative but less-proven approaches. 
-This consideration led to a reevaluation of the innovation criterion, effectively inverting its interpretation in the assessment matrix.
+This insight led to a reevaluation of the innovation criterion, effectively inverting its interpretation in the assessment matrix.
 The revised evaluation framework, presented in @tab_33, reflects this adjusted perspective on innovation while maintaining consistent assessment of all other criteria. This modification aligns the evaluation matrix more closely with the primary objective of ensuring reliable structural validation for the novel aircraft configuration.
 
 #figure(
@@ -220,7 +223,8 @@ This quantitative foundation, coupled with the qualitative evaluation criteria, 
 
 #summary_([
 This subsection established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous chapters, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
-A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
+A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
+The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This illustrates both the systematic approach and inherent complexity of the assessment process.

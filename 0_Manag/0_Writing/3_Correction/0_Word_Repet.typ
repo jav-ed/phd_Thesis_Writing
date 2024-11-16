@@ -12,4 +12,19 @@
 11. consider
 12. comprehensive
     1.  maybe use concise when this would be the actual meaning
-13. 
+13. limitations
+14. configuration
+15. approach
+16. notable
+17. exhaustive
+18. necessitates
+19. requires
+
+
+
+
+
+
+note the following words are fine, even when repeated
+1. requirement
+2. 
