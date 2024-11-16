@@ -2,35 +2,26 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Title was tested and is inshallah fine
+
 // TODO
-// Title
 // word repetition
-// Proper intro
-=== Physical Load Application<chap_3_0_4>
-In @chap_3_0_0 critical load case for #gls("swith", long:true) were established. Hydrogen's properties were exmained in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
-Based on the current lack of technical progress regarding safely handling hydrogen within high pressure and long dimensional tube experiments, an filling agent study was conducted in @chap_3_0_1 to @chap_3_0_3. The analysis determined that alternative filling agents could potentially replace hydrogen for structural validation testing without significantly altering the structural behavior.
-
+=== Physical Load Introduction Elements for Experimental Structural Validation<chap_3_0_4>
+In @chap_3_0_0, critical load cases for #gls("swith", long:true) were established. Hydrogen's properties were examined in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
+Due to several technical limitations in safely handling hydrogen within high-pressure, long-dimensional tube experiments, among others, a filling agent study was conducted in @chap_3_0_1 to @chap_3_0_3. 
+This analysis determined that alternative filling agents could potentially replace hydrogen for structural validation testing without significantly altering the structural behavior.
 While numerical simulations offer considerable advantages in analyzing structural behavior, as demonstrated in @chap_3_0_3 and @chap_3_0_4, experimental validation remains essential. 
-Numerical methods allow straightforward modification of parameters such as internal pressure and benefit from well-established theoretical frameworks for load application. 
-This differs signitficalty from expermeintal investigations.
-While Applying pyhsical forces for experimental tests on aircraft is already a complex and demanding task, its complexity is increased when having tubes that are set under high pressue, in the case of #gls("swith")
-This subsection addresses experimental challenges by first identifying the required forces for structural testing. A comprehensive examination of various methods for physical load introduction on the wings of aircraft.  Is is accompanied by detailed analysis of each method's advantages and disadvantages. Through systematic comparison criteria, these methods are evaluated to determine the most suitable approach for structural testing. 
-The findings from this analysis hold particular significance as they inform the optimization process detailed in subsequent chapters. Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
+Among various advantages, numerical methods allow straightforward modification of parameters such as internal pressure and benefit from well-established theoretical frameworks for load application. 
+However, experimental investigations present distinct challenges. The application of physical forces for aircraft testing is inherently demanding, and these requirements increase substantially when dealing with pressurized tubes in #gls("swith") configurations.
 
+This subsection addresses some of these experimental challenges by examining physical #glspl("lie", long:true) for aircraft wings. 
+An analysis of each #gls("lie")'s characteristics is presented, followed by systematic evaluation using relevant assessment criteria to determine suitable approaches for structural testing.
+These findings provide the motivation for the upcoming aerodynamical load discretization and optimization detailed in 
+// TODO enable it
+// @chap_4_0. 
+Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
 
 // -------------------------------------------------------------------------- //
-
-// = Load Introduction <chap_1_>
-In the previous chapter @chap_0, we revisited the topic of structurally integrated #gls("cfrp") hydrogen tanks located in the aircraft wing. 
-We then explained why understanding the influence of the filling medium on structural behavior is particularly significant for experimental testing.
-The previous chapter @chap_0 concluded by answering this question and conducting several physical plausibility studies.
-Now that we have established that we could fill the tanks with water for experimental testing, the next major consideration is the introduction of aerodynamic loads. 
-This section will first explain which forces need to be introduced, where, and why.
-Then, possible methods for physically applying loads to the aircraft will be presented,
-followed by investigations conducted to determine the most suitable method.
-
-// ---------------------------- not checkec above --------------------------- //
-
 Besides the internal pressure elaborated previously within this thesis, aerodynamic forces constitute the other crucial loads experienced by this aircraft configuration during flight operations. 
 To achieve representative test conditions that accurately reflect the in-flight structural behavior, it is essential to simultaneously apply both internal pressure and aerodynamic loads during experimental investigations.
 Three fundamental approaches can be considered for applying aerodynamic forces to the wing and fuselage skin structure. 

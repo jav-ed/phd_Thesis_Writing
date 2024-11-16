@@ -149,9 +149,7 @@ It is important to acknowledge the inherent limitations of this evaluation appro
 ),
 
   kind: table,
-  caption: [Evaluation criteria for various #gls("lie") broken down into a three-dimensional space according to the made explanations. 
-  Here #col_X() stands for negative, #col_Mid() for medium, #col_Gre() for positive.
-  Furthermore, innovation was viewed as negative here for a pioneering project.],
+  caption: [Comparative evaluation of #glspl("lie") using established assessment criteria. #col_X(): unfavorable, #col_Mid(): moderate, #col_Gre(): favorable.],
 ) <tab_32>
 
 
@@ -162,7 +160,6 @@ For initial validation of novel structural concepts, established methodologies w
 This consideration led to a reevaluation of the innovation criterion, effectively inverting its interpretation in the assessment matrix.
 The revised evaluation framework, presented in @tab_33, reflects this adjusted perspective on innovation while maintaining consistent assessment of all other criteria. This modification aligns the evaluation matrix more closely with the primary objective of ensuring reliable structural validation for the novel aircraft configuration.
 
-// TODO check it
 #figure(
   table(
     columns: (auto,auto,auto,auto,auto,auto),
@@ -203,9 +200,7 @@ The revised evaluation framework, presented in @tab_33, reflects this adjusted p
 ),
 
   kind: table,
-  caption: [Evaluation criteria for various #gls("lie") broken down into a three-dimensional space according to the made explanations. 
-  Here #col_X() stands for negative, #col_Mid() for medium, #col_Gre() for positive.
-  Furthermore, innovation was viewed as negative here for a pioneering project.],
+  caption: [Revised evaluation matrix of #glspl("lie") with innovation criterion considered as reliability indicator. #col_X(): unfavorable, #col_Mid(): moderate, #col_Gre(): favorable. Lower innovation scores reflect higher reliability for pioneering applications.],
 ) <tab_33>
 
 
