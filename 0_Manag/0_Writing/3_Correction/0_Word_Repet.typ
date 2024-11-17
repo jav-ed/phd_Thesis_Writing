@@ -19,6 +19,7 @@
 17. exhaustive
 18. necessitates
 19. requires
+20. demonstrate
 
 
 

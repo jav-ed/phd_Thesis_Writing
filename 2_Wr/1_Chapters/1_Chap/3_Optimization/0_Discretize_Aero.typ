@@ -13,16 +13,33 @@
 // all figs - the image data was copied
 // all eqs
 
-== Discretization of Aerodynamic Loads <chap_4_0>
-In the previous @chap_1, #gls("lie") was introduced. 
-Through further examination of the physical load application, it was revealed that the choice of #gls("lie") depends significantly on how many #gls("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
-This chapter will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary, and how this answers our previously posed questions.
-Furthermore, we will explore which methods were investigated to perform the discretization.
+// TODO Title
+== Fundamentals for Optimization <chap_4_0>
 
+// needs to be filled 
+
+
+
+// TODO Title
+=== Discretization of Aerodynamic Loads <chap_4_0_0>
+// get proper pre intro for this subsection based on the text that follows inshallah
+In the previous @chap_3_0_4, #gls("lie", long:true) was introduced. 
+Through further examination of the physical load application, it was revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. Among these critical parameters are  how many #gls("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
+These critical parameters require systematic determination through load approximation analysis.
+This subsection will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary for an ideal outcome, and how this answers the questions of the critcal praemters previously mentioend.
+Furthermore, we will explore multiple methods that could potentially be used for #gls("ld", long:true) and 
+// a word that is used to describe that the decision was made based on rationale arugments
+vindicate to one favorite approach.
+// depending on the content comig, this preintro maybe was not complete and needs some adjustments
+
+// -------------------------------------------------------------------------- //
 According to current physical understanding, an aircraft in flight experiences load at every infinitesimally small point. 
 Thus, this load is considered continuous. In other words, if the load starts at point A and ends at point B, it should be impossible to find an infinitesimally small point between A and B where no force acts.
 Unless explicitly stated otherwise, the load always refers to the aerodynamic load.
-In the previous @chap_1, we discussed which methods are available to us for replicating these aerodynamic loads in an experimental setup. 
+In the previous @chap_3_0_4,
+// do not use the we form and never use the word discuss
+we discussed which methods are available to us for replicating these aerodynamic loads in an experimental setup. 
+// k2h2 can be replaced with swith
 It was also explained why the K2H2 project opted for a ground-based experimental setup without a wind tunnel.
 Consequently, #gls("lie") are now needed, which must be locally attached to the wing skin.
 The #gls("lie") serve as physical objects through which loads can be applied.
@@ -30,6 +47,8 @@ The goal is to apply and load the #gls("lie") in such a way that the resulting l
 A concrete definition for #gls("ld") could be: Approximating a continuous force distribution through individual point and area loads.
 
 The requirement to apply #gls("lie") in a way that can reproduce the continuous aerodynamic loading can be defined as an optimization problem.
+
+// these questions were already mentioned in @chap_3_0_4 - thus its mentioning needs to be integrated proplery
 Specifically, the engineer faces the following questions:
 
 1. How many #gls("lie") should be used?
@@ -42,18 +61,23 @@ The listed questions could all be answered through optimization.
 Beyond providing important answers, optimization also supports economic and environmental consciousness. 
 As a supporting example: for an imagined $60 #unit("m")$ long wing, we should try to use the minimum number of #gls("lie") possible. 
 To expand on this example, let's consider electrically driven cylinders.
+// it should be clear that this is just a made up example for demonstraiton pruposes
 If, say, through optimization 23 cylinders show a similar acceptable accuracy as 46 cylinders in the non-optimized state, significant costs can be saved in terms of electricity, personnel, procurement costs, other operating costs and delivery routes.
 Through proper #gls("ld") paired with subsequent optimization, the number of required #gls("lie") can likely be reduced considerably.
 The latter would have a positive effect on aspects such as costs, safety concept, and control effort.
 Additionally, optimization would ensure that an appropriate accuracy of the #gls("ld") is achieved.
-In summary, a reasonable #gls("ld") combined with optimization is motivated by the fact that it can achieve sufficient quality of #gls("ld") with a lower number of #gls("lie").
+In summary, a reasonable #gls("ld") combined with optimization is motivated by the fact that it can 
+// maybe include cost effective, systematic approach, engineering approach based on math and established methods
+achieve sufficient quality of #gls("ld") with a lower number of #gls("lie").
 
-Up to this point, we have explained what discretization is and what advantage optimization would bring.
-Next, we will focus on discretization methods. 
+Up to this point, we have explained what discretization is and mentioned some advantage optimization would bring.
+Next, we will focus on concrete discretization methods. 
 For #gls("ld"), the goal is to achieve the closest match to the original aerodynamic load distribution with as few #gls("lie") as possible. 
 Pure discretization is known as curve-fitting or regression 
 @Kaptanoglu2022 @Silva2020 @Tibshirani1996 @Brunton2016 @Frochte2020 @Brunton2022 @Bishop2006 @Arlinghaus2023 @Zielesny2016 @James2023 @Richter2019 @prince2023understanding @Zheng2018.
 Here, function values are assigned at discrete support points. 
+
+// maybe there is a better way to epxress that we are getting the pure theoretically defintition to more engineering based and real world perspective - which we need now 
 Translated to loads, discrete support points mean #gls("lie") and the function values are force magnitudes.
 There are various methods through which regression can be performed.
 The simplest would be linear regression. 
@@ -67,7 +91,9 @@ Thus, the technique of regression is a subset of Machine Learning, which is why 
 
 According to Professor Steve Brunton, who works at the University of Washington and specializes in physics-based simulations and Machine Learning, systems that represent reality are parsimonious.
 In the context of modeling surrogate models, parsimonious means that the number of free parameters should be chosen as low as possible and as high as necessary.
-To understand this, we should first discuss the difference between interpolation and extrapolation.
+To understand this, we should first 
+// the word discuss is disliked
+discuss the difference between interpolation and extrapolation.
 For this, a concrete example should be presented. 
 Let's assume we have 100 data points in a two-dimensional space. One dimension could represent shoe size and the other dimension could represent height.
 These 100 shoe sizes and heights span a known space. 
@@ -86,7 +112,6 @@ The linear model is less complex than the non-linear model of fourth degree.
 This also means that the linear model shows lower performance in learning complex or fluctuating behavior.
 It can only capture a single trend, either an increase with a certain gradient or a decrease with a certain gradient. 
 Further differences could not be captured with a linear model.
-
 The non-linear model of fourth degree can not only reproduce the linear model but can also learn certain fluctuations (locally changing gradients). 
 Thus, the non-linear model can do everything the linear model can plus more.
 Consequently, one might assume that the non-linear model is always superior to the linear model.
@@ -97,23 +122,22 @@ Here, $f(x_k)$ represents the data value from the training dataset or the output
 $ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_70>
 
 The L2-norm tends to assign non-zero values to all available model parameters. 
-This means it tries to attribute a certain importance to all parameters.
-However, for this, the importance or magnitude of the model parameters must be reduced.
+This means it tries to attribute a certain importance to all available parameters.
+However, for this, the importance or magnitude of all the model parameters must be reduced accordingly.
 In summary, this means that the L2-norm tries to use as many available parameters as possible to learn an underlying system.
+
 The L1-norm according to @eq_71 @Brunton2022 gives less weight to outliers, contrary to the behavior of the L2-norm.
 
 $ E_1(f) = 1/n sum_(k=1) ^n |x_k - f(x_k)| $<eq_71>
 
-// ---------------------------------- step ---------------------------------- //
-
+// --------------------------------- l1 norm -------------------------------- //
 The consequence is that the L1-norm favors sparse weight matrices.
 Sparse means that in the matrix containing the individual coefficients or weights for a regression model, the majority of entries are assigned a 0.
 A 0 in the weight matrix means that the coefficients are not used.
 The result is an attempt to learn the underlying system behavior, which should be recognized from the training behavior, with as few parameters as possible.
-
 Applying what has been discussed so far to the linear and non-linear model of fourth order, the following can be noted.
 By optimizing the non-linear model of fourth degree with the L2-norm, all five available parameters are assigned some importance. 
-In interpolation, this should not pose a problem since the optimization has minimized the error specifically for this.
+In interpolation, this should not pose a problem since the optimization has minimized the error specifically for this single task.
 However, highly unreliable output values are to be expected in extrapolation.
 The linear regression model should also be trained with the L2-norm. 
 Since the underlying system is a linear function, in this case both interpolation and extrapolation would be correct.

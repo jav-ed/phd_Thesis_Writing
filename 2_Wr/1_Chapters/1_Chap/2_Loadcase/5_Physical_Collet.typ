@@ -228,6 +228,7 @@ The assessment results were presented through detailed analytical considerations
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This illustrates both the systematic approach and inherent complexity of the assessment process.
-The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and identified critical parameters requiring quantitative determination through load approximation analysis. This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4_0.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. These critical parameters require systematic determination through load approximation analysis.
+This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4_0.
 
 ])
