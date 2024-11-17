@@ -12,6 +12,8 @@
 // all refs
 // all figs - the image data was copied
 // all eqs
+// compared with true german text
+
 
 // TODO Title
 == Fundamentals for Optimization <chap_4_0>
@@ -87,8 +89,7 @@ Machine Learning is, simply put, a method to generate a surrogate model using ex
 This surrogate model is in many cases a regression model.
 Thus, the technique of regression is a subset of Machine Learning, which is why there is much literature available on this topic.
 
-// ---------------------------------- step ---------------------------------- //
-
+// --------------------------------- brunton -------------------------------- //
 According to Professor Steve Brunton, who works at the University of Washington and specializes in physics-based simulations and Machine Learning, systems that represent reality are parsimonious.
 In the context of modeling surrogate models, parsimonious means that the number of free parameters should be chosen as low as possible and as high as necessary.
 To understand this, we should first 
@@ -117,6 +118,7 @@ Thus, the non-linear model can do everything the linear model can plus more.
 Consequently, one might assume that the non-linear model is always superior to the linear model.
 Whether this is actually the case can be answered, among other things, by considering interpolation and extrapolation.
 Very often, the Euclidean or L2-norm @Brunton2022 according to @eq_70 is used in optimization.
+// need to add n, number of data points
 Here, $f(x_k)$ represents the data value from the training dataset or the output of a function value, and $x_k$ is the estimate that the regression model reproduces.
 
 $ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_70>
@@ -150,17 +152,18 @@ Whether a model has 2 or 100 parameters would lead to very large differences in 
 However, for computation time, such parameter numbers would not play a role with today's available hardware.
 Today, large models are no longer calculated on the #gls("cpu"), but on the #gls("gpu").
 This has many reasons, but the main one is the parallelizability of the #gls("gpu").
-According to current standards, models with $#num("7e9")$ 
+According to current standards, models with $7 times 10^9$ 
 @Li2023 @Jiang2023 @Touvron2023a @Touvron2023
-parameters are quite common and are seen in certain circles in the field of #gls("llm") as entry-level model size.
-Larger models can easily have $#num("7e10")$ 
+parameters are quite common and are seen in certain circles in the field of #gls("llm", long:true) as entry-level model size.
+Larger models can easily have $7 times 10^10$ 
 @Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7
 model parameters.
 Since there is a lot of rapid progress in the world of #gls("llm"), there exists more than just one overview paper.
 A fairly current overview paper on the number of model parameters can be found in @Minaee2024. 
-For interested readers, so-called tiny language models have a model count of about $#num("1e9")$ @Zhang2024
+For interested readers, so-called tiny language models have a model count of about $1 times 10^9$ @Zhang2024
 
-The reference to #gls("llm") should show that the number of model parameters can be neglected for our approximation.
+The reference to #gls("llm") should show that the number of model parameters can be neglected for our approximation. The first reason for that is that load approximation does not require flexibility of $1 times 10^9$ model parameter, in fact it is even much less than $1 times 10^3$ parameters. 
+Secondly the concrete numbers provided for the #gls("llm") should have made it clear which computational power exists as of writing this thesis.
 Therefore, only the accuracy requirement is significant.
 We further note that the L2-norm is favorable for flexible models for extrapolation.
 The L1-norm ensures within the optimization that superfluous model parameters are switched off (set to 0), making it more suitable for extrapolation.
@@ -182,29 +185,29 @@ This can be imagined as follows: in interpolation models, it is particularly imp
 In other words, the known output must be hit exactly.
 In regression, this is not necessarily the case. 
 Here, other factors might have greater importance.
-A possible example would be that the course between two data points can be represented as a continuous curve with tangent continuity.
-The aerodynamic distribution load provides both local spatial coordinates and the magnitude of the force acting there.
+A possible example for the latter would be that the course between two data points can be represented as a continuous curve with tangent continuity.
+The aerodynamic load distribution provides both local spatial coordinates and the magnitude of the force acting there.
 For the #gls("ld"), specific support points are sought at which the #gls("lie") are applied with a force magnitude. 
 Due to the previously made justifications, the first method with which one would usually start would be the linear surrogate model.
 However, it is already known that the aerodynamic distribution load is not linear.
 Therefore, it would be possible to go higher with the order of the method.
 
-A potential method by which the search for the right order could be accelerated through regression and optimization would be PySINDY @Kaptanoglu2022 @Silva2020 @Brunton2016.
-It is a Python @VanRossum2009 code that takes desired terms as input and generates a sparse output through optimization.
+A potential method by which the search for the right order could be accelerated that is baed on regression and optimization is PySINDY @Kaptanoglu2022 @Silva2020 @Brunton2016.
+It is a Python @VanRossum2009 code that takes desired mathematical terms as input and generates a sparse output through optimization.
 This means the user would specify a list of candidates. 
-The candidates would be, for example, linear, quadratic, cubic, cos, sin, log, exp, and whatever terms the user considers relevant.
+The candidates would be, for example, linear, quadratic, cubic, cos, sin, log, exp, and whatever terms the user considers relevant to descirbe the load distribution or regression task.
 The optimization would try to keep only the relevant candidates and remove all others.
 The output is either the list of sparse candidates or the analytically applicable equation from the candidates.
 Since an analytical equation would be available that describes the course of the continuous aerodynamics, further analytical work could be done.
-The difference between numerical and analytical approaches is that even when we speak of continuous aerodynamics, this distribution is not numerically continuous.
-In numerics or on the computer, lists of entries are taken. 
+The difference between numerical and analytical approaches is that even when we speak of continuous aerodynamics, numerically this distribution cannot be represented truely continuous.
+In numerics or on the computer, lists of discrete entries are taken. 
 Therefore, the calculated aerodynamic force is not a continuous force, but since it was obtained numerically, it is strictly speaking a discrete representation of the continuous aerodynamic force distribution in reality. 
 The reader should not be confused here, the aerodynamic force distribution that comes from an aerosolver is usually resolved so finely that we can call it continuous with acceptable deviation.
 However, if the analytical replacement function is calculated with PySINDY, an analytical function is present, as known from school mathematics.
 This function can be analytically derived, integrated, or otherwise used.
 
-// ---------------------------------- step ---------------------------------- //
-If an analytical function is available that actually generates an output at any desired location and is thus mathematically continuous, a curve simplification method could be applied.
+// ---------------------------------- anly ---------------------------------- //
+If an analytical function is available that actually generates an output at any desired location within a meaningful input range a curve simplification method could be applied.
 Curve simplification methods are techniques used to reduce the number of points or support points in a curve without significantly changing the essential form or characteristic properties of the curve @Kerkhof2018 @Shen2018a @Ai2016 @Ratschek2001. 
 These methods are particularly useful in areas such as cartography, computer graphics, signal processing, and data compression, where data simplification is necessary to save storage space, reduce computation time, or improve visual clarity @CHUON2011 @Shen2018a @wu2003non @Barkowsky2000 @Boucheham2005 @Boucheham2006. 
 There are various procedures for this, a few are mentioned in the following:
@@ -218,8 +221,8 @@ Through the latter, the focus would be on adding new points.
 Therefore, the method according to Chaikin is eliminated for our purposes.
 
 Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
-These support points could be seen as position specifications for the #gls("lie").
-The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization.
+These support points could be seen as position specifications on the wing for the #gls("lie").
+The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization as mentioned in @chap_4_3.
 An alternative to curve fitting or regression models is provided by unsupervised methods alongside supervised methods
 @Fukami2023 
 // supervised
@@ -283,7 +286,7 @@ Each group would contain 10 points.
 These groups are called clusters, and the geometric center of each cluster is referred to as the centroid.
 
 
-// ---------------------------------- step ---------------------------------- //
+// --------------------------------- kmeans --------------------------------- //
 
 After explaining the basic idea behind kmeans++, more details about the procedure should be given.
 In @kmeans_Visual_Explanation @kmeans_Init_Points, the author of kmeans++ provides a visual explanation of how the initial positions for the centroids are first chosen.
@@ -392,6 +395,7 @@ While the pressure is being increased, damage could occur that would be visually
 If the view were blocked, this would only be limitedly possible or not possible at all.
 Therefore, the output of kmeans++ can be used as a starting value for further optimization.
 
+// --------------------------------- summary -------------------------------- //
 In this section, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
 Furthermore, important fundamentals of Machine Learning were provided and concrete regression methods were listed. 
 Subsequently, the alternative path via kmeans++ was shown, compared with the regression path, and justified in settling on the favorite kmeans++.

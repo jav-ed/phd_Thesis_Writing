@@ -6,8 +6,9 @@
 // all refs
 // all figs - the image data was not copied
 // all eqs
+// compared with true german text
 
-= Obtaining Aerodynamic Loads<chap_3>
+=== Obtaining Aerodynamic Loads<chap_4_0_1>
 In @chap_1, we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
 In the subsequent @chap_2, we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
 However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
@@ -46,6 +47,8 @@ However, this is physically quite rare; in most cases, forces act along a length
 Point loads can be used in numerical mathematics as a resultant single load.
 A resultant force typically serves to reduce a force vector that extends over a length or area to a single resultant force.
 The resultant force can thus be considered as a representative load that helps represent an entire distribution as a scalar value.
+
+// ------------------------------- simple case ------------------------------ //
 In simple cases, converting a resultant load distribution to a single load is possible without introducing concerning inaccuracies.
 Simple cases can be imagined as geometries that contain very little or no local gradient.
 To illustrate this, imagine we want to describe a geometry using x,y,z coordinates.
@@ -55,9 +58,14 @@ In this case, we would have a horizontal flat surface, which should be termed a 
 
 For the transformation of the distributed load to a point load to continue without major restrictions, a force should be applied on the flat surface at equal distances with equal magnitude and in the same direction.
 In such a state, the distributed load can be converted to a single point load for a certain length or area.
+
+// TODO here were have some deviations from the original german text
 Generally, the larger the length or area for which the distributed load is to be converted to a single load, the greater the risks for local phenomena.
+// TODO the example is not mentioned in the original german version
 Here's a concrete example: if we have a large length over which a uniformly distributed load acts and this is to be represented by a single point load, the following could occur.
+// TODO the transtion does not add up
 Mathematically, everything might be correct, but a high local point load could cause material failure at that location or other unexpected events could be observed.
+
 Therefore, it is desirable to represent distributed loads through point loads over small lengths and areas, in addition to having uniform geometry and force distribution.
 When working with complex geometries, the effective length and area over which the distributed load can be covered by a resultant point load decreases. 
 Consequently, the number of individual forces increases accordingly.
@@ -111,6 +119,7 @@ Here, the indices $[x,y,z]_(i,r)$, $[x,y,z]_(i,l)$ stand for the coordinate in d
 
 $ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_12>
 
+// ------------------------------- point load ------------------------------- //
 Thus, with @eq_11 and @eq_12, a line load can be converted to a point load.
 This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
 However, @fig_18 shows, with the sub-figure in the lower left corner, that this is not desired.
@@ -125,6 +134,7 @@ The latter statement can be verified by careful examination of @fig_16.
 Where the centroids or #gls("lie") should be placed is not known to us at this time. It is the task of kmeans++ to answer exactly this.
 If a preferred direction were unknowingly provided through an incorrect data format, the kmeans++ output would be partially or completely unusable.
 
+// --------------------------------- adjust --------------------------------- //
 To adjust the kmeans++ input data format, it must be defined how many individual forces are to be found over a reference length. 
 Thus, for each element, depending on its element length, it is defined into how many uniformly distributed partial point forces the distributed load is approximated.
 According to @eq_13, at a length of $100 #unit("mm")$, a distributed load [N/mm] is approximated by 20 partial point loads [N].
@@ -140,20 +150,18 @@ Since the partial point loads are obtained by dividing a scalar value from the r
 that $i = op("const")$ and with $j in {0,1, ... n_F}$ then follows $F_(i= op("const"), j = op("variabel")) => F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
 Expressed in words, this means that the partial point loads within an element are equal to each other.
 While the partial point loads within an element are equal in magnitude, this does not mean that this equality can be extended to other elements.
-
 The X-Matrix, as it is called in Scikit-learn @Pedregosa2011, is our data matrix and looks as follows: $X = [op("Position [mm]"); op("Partial point loads") = F_(a,i,j)] $.
 For each partial point load, a corresponding three-dimensional position vector is specified.
 The clustering method kmeans++ can work with even higher dimensions without hitting hardware limitations or needing to change the implementation.
+
 At this point, something must be anticipated and something must be said about the upcoming beam model and optimization.
 This is necessary to understand why the three-dimensional coordinate vector should be converted to a one-dimensional position vector.
-
 Further information about both the beam model and optimization will be discussed in the following @chap_4.
 Here, only a brief description from a highly superordinate view should be given.
 Instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
 The beam model has a significant disadvantage compared to the #gls("fem") calculation: accuracy. 
 However, it has various advantages, including that it can be used on a conventional computer within an optimization procedure.
 Because the beam model represents a one-dimensional model and only sees a force distribution along the span direction, the three-dimensional coordinate vector from the X-Matrix should be converted to a one-dimensional position vector.
-
 APAME provides, among other outputs, lift coefficients that are valid for strips. 
 These strips are drawn along the span direction. 
 Within a strip, the actual lift coefficient is integrated over the chord.
@@ -170,6 +178,7 @@ A coordinate change in the two other remaining directions does not occur.
 Thus, the two other spatial directions can already be neglected without problems with the obtained order.
 In other words, further processing of the three-dimensional coordinate vector is not necessary, and removing the vertical and depth coordinates can be applied without concerns.
 
+// --------------------------------- summary -------------------------------- //
 In this section, we explained how we first obtain a three-dimensional aerodynamic load and how it interacts with the structural model.
 Then, we explained what data format is required for the kmeans++ method and what is obtained as output from APAME. 
 Furthermore, the steps required to perform the needed data transformations were named. 
