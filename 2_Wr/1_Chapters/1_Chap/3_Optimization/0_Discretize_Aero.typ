@@ -222,7 +222,7 @@ Therefore, the method according to Chaikin is eliminated for our purposes.
 
 Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
 These support points could be seen as position specifications on the wing for the #gls("lie").
-The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization as mentioned in @chap_4_3.
+The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization. 
 An alternative to curve fitting or regression models is provided by unsupervised methods alongside supervised methods
 @Fukami2023 
 // supervised

@@ -9,8 +9,14 @@
 // compared with true german text
 
 === Obtaining Aerodynamic Loads<chap_4_0_1>
-In @chap_1, we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
-In the subsequent @chap_2, we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
+In 
+// TODO 
+// @chap_1, 
+we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
+In the subsequent 
+// TODO
+// @chap_2, 
+we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
 However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
 This section will therefore demonstrate what steps were taken to obtain the aerodynamic loads.
 
@@ -27,7 +33,7 @@ The figure shows the distribution of lift coefficients multiplied by the local c
 
 // TODO the legend of the map potentially is white, thus the image cannot be used on white background paper
 #figure(
-  image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/5.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/5.png", 
   width: 100%),
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
 )<fig_64>
@@ -80,7 +86,7 @@ However, to work with kmeans++ @Arthur2006, discrete point data is needed.
 Therefore, as shown in @fig_65, it is necessary to move from the representation of @eq_74 to the representation of @eq_73.
 
 #figure(
-  image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/6.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/6.svg", 
   width: 100%),
   caption: [Representation of the basic initial concept: Reading out the aerodynamic line load and conversion to individual point loads],
 )<fig_65>
@@ -93,7 +99,7 @@ $ forall i, j in {0, .... , n} , i != j => q_(a,i) != q_(a,j)$.
 Consequently, this also applies to the derived resultant point loads $ forall i, j in {0, .... , n} , i != j => F_(a,i) != F_(a,j)$.
 
 #figure(
-  image("../../1_Data/2_Figures/1_Ch_Figs/1_Ch/7.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/7.svg", 
   width: 100%),
   caption: [Representation of the process of deriving point loads from line loads with the goal of using the point loads for kmeans++],
 )<fig_66>
@@ -114,13 +120,13 @@ Whether this should be done through meshio or through our own tool, the goal rem
 The element length in span direction must be obtained for each individual element.
 This is done through simple subtraction; the coordinates of the right node must be subtracted from the coordinates of the left node of the same element.
 Since the coordinates are given in 3D, the magnitude or length of the vector can be obtained through the Pythagorean theorem.
-Mathematically, this can also be expressed as the L2-norm as shown in @eq_75.
+Mathematically, this can also be expressed as the L2-norm as shown in @eq_76.
 Here, the indices $[x,y,z]_(i,r)$, $[x,y,z]_(i,l)$ stand for the coordinate in direction $x,y,z$, of element $i$ and the right $r$ and left $l$ node respectively.
 
-$ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_75>
+$ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_76>
 
 // ------------------------------- point load ------------------------------- //
-Thus, with @eq_75 and @eq_75, a line load can be converted to a point load.
+Thus, with @eq_75 and @eq_76, a line load can be converted to a point load.
 This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
 However, @fig_66 shows, with the sub-figure in the lower left corner, that this is not desired.
 To understand why this approach is not entirely correct, another point about the nature of kmeans++ @Arthur2006 must be added.
@@ -137,14 +143,14 @@ If a preferred direction were unknowingly provided through an incorrect data for
 // --------------------------------- adjust --------------------------------- //
 To adjust the kmeans++ input data format, it must be defined how many individual forces are to be found over a reference length. 
 Thus, for each element, depending on its element length, it is defined into how many uniformly distributed partial point forces the distributed load is approximated.
-According to @eq_76, at a length of $100 #unit("mm")$, a distributed load [N/mm] is approximated by 20 partial point loads [N].
-Therefore, @eq_76 gives the number of partial forces into which a resultant point load should be subdivided.
-The individual partial point loads can be calculated with @eq_77. 
+According to @eq_77, at a length of $100 #unit("mm")$, a distributed load [N/mm] is approximated by 20 partial point loads [N].
+Therefore, @eq_77 gives the number of partial forces into which a resultant point load should be subdivided.
+The individual partial point loads can be calculated with @eq_78. 
 Here, within an element $i$, $i = op("const")$ remains constant and the variable $j$ in this context stands for the partial point load within an element.
 
-$ n_F = l_i 20/100  $ <eq_76>
+$ n_F = l_i 20/100  $ <eq_77>
 
-$ F_(a,i,j) = (q_(a,i) dot l_i )/n_F  $ <eq_77>
+$ F_(a,i,j) = (q_(a,i) dot l_i )/n_F  $ <eq_78>
 
 Since the partial point loads are obtained by dividing a scalar value from the resultant single point load, within an element $i$:
 that $i = op("const")$ and with $j in {0,1, ... n_F}$ then follows $F_(i= op("const"), j = op("variabel")) => F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
@@ -156,7 +162,10 @@ The clustering method kmeans++ can work with even higher dimensions without hitt
 
 At this point, something must be anticipated and something must be said about the upcoming beam model and optimization.
 This is necessary to understand why the three-dimensional coordinate vector should be converted to a one-dimensional position vector.
-Further information about both the beam model and optimization will be discussed in the following @chap_4.
+Further information about both the beam model and optimization will be discussed in the following 
+// TODO
+// @chap_4
+.
 Here, only a brief description from a highly superordinate view should be given.
 Instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
 The beam model has a significant disadvantage compared to the #gls("fem") calculation: accuracy. 
@@ -165,10 +174,10 @@ Because the beam model represents a one-dimensional model and only sees a force 
 APAME provides, among other outputs, lift coefficients that are valid for strips. 
 These strips are drawn along the span direction. 
 Within a strip, the actual lift coefficient is integrated over the chord.
-This behavior is shown in @eq_78, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_l$ over the boundaries le and te.
+This behavior is shown in @eq_79, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_l$ over the boundaries le and te.
 Here, le stands for leading edge, which appears at the beginning of the chord, and te for trailing edge, which is found at the end of the chord.
 
-$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_l $ <eq_78>
+$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_l $ <eq_79>
 
 If $C_(op("lc"),i)$ is multiplied by the remaining length of the strip in the span direction, a resultant lift coefficient is obtained, which is valid for the entire strip.
 To obtain the force from this said resultant lift coefficient, @eq_73 can be used.
@@ -183,5 +192,8 @@ In this section, we explained how we first obtain a three-dimensional aerodynami
 Then, we explained what data format is required for the kmeans++ method and what is obtained as output from APAME. 
 Furthermore, the steps required to perform the needed data transformations were named. 
 These were supported with visual illustrations and equations in addition to textual descriptions.
-Finally, an introduction to the following @chap_4 was made. 
+Finally, an introduction to the following 
+// TODO
+// @chap_4 
+was made. 
 The latter through the mention of the beam model and optimization.

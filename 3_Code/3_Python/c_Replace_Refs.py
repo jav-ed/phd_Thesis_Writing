@@ -29,20 +29,20 @@ def print_changes(original: str, new: str, pattern: str) -> None:
             print(f"{prefix}{old} → {prefix}{new}")
 
 # Configuration
-file_path = Path('2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ')  # Modify this to your file path
+file_path = Path("2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ")  # Modify this to your file path
 
 # Read the file
 content = file_path.read_text()
 original_content = content
 
 # ------------------------------------ eqs ----------------------------------- #
-# content = replace_equation_numbers(content, increment=63)
-# print_changes(original_content, content, r'eq_(\d+)')
+content = replace_equation_numbers(content, increment=1)
+print_changes(original_content, content, r'eq_(\d+)')
 
 # ----------------------------------- figs ----------------------------------- #
 # For figures (modify the increment number as needed):
-content = replace_figure_numbers(content, increment=48)
-print_changes(original_content, content, r'fig_(\d+)')
+# content = replace_figure_numbers(content, increment=48)
+# print_changes(original_content, content, r'fig_(\d+)')
 
 # Write the changes back to the file
 file_path.write_text(content)
