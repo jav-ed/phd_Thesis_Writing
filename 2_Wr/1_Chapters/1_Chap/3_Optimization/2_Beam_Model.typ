@@ -10,7 +10,7 @@
 
 
 === Beam Model Fundamentals<chap_4_0_2>
-In the previous @chap_3, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into the desired input format. 
+In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into the desired input format. 
 The beam model and optimization were also briefly mentioned there.
 However, these topics were only covered superficially without in-depth information. 
 Therefore, this chapter aims to provide a detailed description of the beam model and optimization process.
