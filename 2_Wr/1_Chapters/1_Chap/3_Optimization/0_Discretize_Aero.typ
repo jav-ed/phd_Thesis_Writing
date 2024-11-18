@@ -345,7 +345,8 @@ This process is an iterative process and can be visually understood with @fig_64
 
 Up to this point, we have explained the difference between regression and unsupervised learning. 
 We have named concrete methods for both previously mentioned machine learning techniques. 
-For unsupervised learning, kmeans++ was discussed in detail.
+For unsupervised learning, kmeans++ was elaborated in detail.
+// ---------------------------------- here ---------------------------------- //
 For further proceedings, specific areas should be named in which kmeans++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
 Subsequently, it should be explained in detail how kmeans++ could be used for #gls("ld").
 Kmeans is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
