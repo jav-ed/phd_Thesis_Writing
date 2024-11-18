@@ -12,6 +12,9 @@ Missing Titles:
 // ========================================================================== //
 // ================================= solved ================================= //
 // ========================================================================== //
+
+note in Chen2024 from report 2023 is now Chen2024a in the thesis
+
 Citation key: Chen2024
 Reference title: Towards a general-purpose foundation model for computational pathology
 Main bib title: Buckling failure analysis of storage tanks under the synergistic effects of fire and wind loads
