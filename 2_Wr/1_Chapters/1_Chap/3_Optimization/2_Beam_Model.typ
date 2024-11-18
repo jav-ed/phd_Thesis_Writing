@@ -81,8 +81,8 @@ It can also be confirmed that once the method of internal forces is learned, it 
 // found again in orig german version
 For this very reason, this process can be automated and accelerated through programming support.
 However, before moving on to this application, an exemplary example of a beam model and the resulting section force distributions should first be given.
-In @fig_67, the upper subplot shows the support, the distribution, direction, and position of the applied loads. The lower subplot shows the resulting support reaction forces.
-@fig_68 shows the resulting internal force distributions visually.
+In @fig_69, the upper subplot shows the support, the distribution, direction, and position of the applied loads. The lower subplot shows the resulting support reaction forces.
+@fig_70 shows the resulting internal force distributions visually.
 
 // --------------------------------- figures -------------------------------- //
 #figure(
@@ -91,15 +91,15 @@ In @fig_67, the upper subplot shows the support, the distribution, direction, an
   width: 100%),
   caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
 
-)<fig_67>
+)<fig_69>
 
 #figure(
 
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization//9.svg", 
   width: 100%),
-  caption: [Exemplary representation of the internal force distributions from @fig_67],
+  caption: [Exemplary representation of the internal force distributions from @fig_69],
 
-)<fig_68>
+)<fig_70>
 
 Let's summarize our knowledge about the beam model. They help obtain internal force distributions of important parameters such as normal forces, shear forces, and moment distribution.
 The internal force calculation is an established method that can be performed analytically even without computer support.

@@ -9,3 +9,7 @@ Some helpful comments could be
 // depending on the content comig, this preintro maybe was not complete and needs some adjustments
 
 // k2h2 can be replaced with swith
+
+// it should be clear that this is just a made up example for demonstraiton pruposes
+
+

@@ -22,7 +22,7 @@ While the calculation is not designed for high-precision requirements, it reprod
 APAME receives inputs including flight velocity, density, Mach number, and geometric properties, and produces the lift distribution along the wing span as output.
 This load distribution can then be mapped from the aerodynamic mesh to the structural mesh through fluid-structure coupling.
 Thus, the #gls("fem") model also integrates the aerodynamic loads. 
-An exemplary result provided by APAME is shown in @fig_64. 
+An exemplary result provided by APAME is shown in @fig_66. 
 The figure shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
 
 // TODO the legend of the map potentially is white, thus the image cannot be used on white background paper
@@ -30,7 +30,7 @@ The figure shows the distribution of lift coefficients multiplied by the local c
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/5.png", 
   width: 100%),
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
-)<fig_64>
+)<fig_66>
 
 To convert from a coefficient distribution to a force, let's examine @eq_73[Equations] and @eq_74[].
 In @eq_73, the variables represent $F_a$ for a point load, $rho$ for density, $u²$ for velocity squared, $C_l$ for lift coefficient, $c$ for chord length, and $l$ for length.
@@ -72,21 +72,21 @@ Consequently, the number of individual forces increases accordingly.
 The same effect occurs with a complex and highly non-linear load distribution that is to be approximated locally by individual point loads.
 
 // Images of Fi qa and discretization Slide 12
-A visual representation of the difference between the distributed load and point load is given in @fig_65 on the right side. 
-If the uniform line load is to be formed into a point load, it would act at the center as shown in @fig_65.
-Furthermore, @fig_65 shows that the example wing has a mesh consisting of individual elements. 
+A visual representation of the difference between the distributed load and point load is given in @fig_67 on the right side. 
+If the uniform line load is to be formed into a point load, it would act at the center as shown in @fig_67.
+Furthermore, @fig_67 shows that the example wing has a mesh consisting of individual elements. 
 The result that APAME provides is a line load that follows @eq_74.
 However, to work with kmeans++ @Arthur2006, discrete point data is needed.
-Therefore, as shown in @fig_65, it is necessary to move from the representation of @eq_74 to the representation of @eq_73.
+Therefore, as shown in @fig_67, it is necessary to move from the representation of @eq_74 to the representation of @eq_73.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/6.svg", 
   width: 100%),
   caption: [Representation of the basic initial concept: Reading out the aerodynamic line load and conversion to individual point loads],
-)<fig_65>
+)<fig_67>
 
-The following will show in detail using @fig_66 how a line load can be converted to a point load suitable for kmeans++.
-First, it is known that according to @fig_65, the mesh consists of many individual elements and each element has its own line load.
+The following will show in detail using @fig_68 how a line load can be converted to a point load suitable for kmeans++.
+First, it is known that according to @fig_67, the mesh consists of many individual elements and each element has its own line load.
 It is possible that the line loads are equal at some elements, but this would be more coincidence than a requirement.
 Generally, $q_(a,i) != op("const")$ applies, and thus the pairwise inequality
 $ forall i, j in {0, .... , n} , i != j => q_(a,i) != q_(a,j)$.
@@ -96,7 +96,7 @@ Consequently, this also applies to the derived resultant point loads $ forall i,
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/7.svg", 
   width: 100%),
   caption: [Representation of the process of deriving point loads from line loads with the goal of using the point loads for kmeans++],
-)<fig_66>
+)<fig_68>
 
 To convert from a uniform line load $q_a$ to a point load $F_a$, @eq_75 can be used.
 Here, $l$ is a side length. 
@@ -122,7 +122,7 @@ $ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²
 // ------------------------------- point load ------------------------------- //
 Thus, with @eq_75 and @eq_76, a line load can be converted to a point load.
 This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
-However, @fig_66 shows, with the sub-figure in the lower left corner, that this is not desired.
+However, @fig_68 shows, with the sub-figure in the lower left corner, that this is not desired.
 To understand why this approach is not entirely correct, another point about the nature of kmeans++ @Arthur2006 must be added.
 In normal use with kmeans++, each point initially has the same weighting as a standard option.
 This means that if particularly many data points or force points are found in one location, a new cluster is more likely to form there.
@@ -130,7 +130,7 @@ Thus, not only the position of the points but also their number is of great impo
 
 If we have particularly many but small forces in one location, we simulate higher importance. Consequently, the position of the centroid would shift towards this point-rich area.
 The varying number of force points is a direct consequence of the variable element length.
-The latter statement can be verified by careful examination of @fig_64.
+The latter statement can be verified by careful examination of @fig_66.
 Where the centroids or #gls("lie") should be placed is not known to us at this time. It is the task of kmeans++ to answer exactly this.
 If a preferred direction were unknowingly provided through an incorrect data format, the kmeans++ output would be partially or completely unusable.
 

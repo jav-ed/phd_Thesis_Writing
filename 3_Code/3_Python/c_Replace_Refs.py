@@ -41,12 +41,23 @@ def replace_equation_numbers(text: str, increment: int) -> str:
     
     return re.sub(r'eq_(\d+)', add_increment, text)
 
-def replace_figure_numbers(text: str, increment: int) -> str:
-    """Replace fig_X with fig_(X+increment) in the given text"""
+def replace_figure_numbers(text: str, increment: int, ignore: int = None) -> str:
+    """
+    Replace fig_X with fig_(X+increment) in the given text
+    
+    Args:
+        text: Input text containing figure references
+        increment: Number to add to figure references
+        ignore: Optional - Numbers <= this value will not be modified
+    """
     def add_increment(match):
         num = int(match.group(1))
-        return f'fig_{num + increment}'
+        if ignore is None or num > ignore:
+            return f'fig_{num + increment}'
+        return match.group(0)
     
+    # re.sub replaces all matches found in the text by default
+    # first find all occurces, save them, and when search and mach process finsihes the replacement starts
     return re.sub(r'fig_(\d+)', add_increment, text)
 
 def print_changes(original: str, new: str, pattern: str) -> None:
@@ -64,10 +75,10 @@ def print_changes(original: str, new: str, pattern: str) -> None:
 # ---------------------------------------------------------------------------- #
 file_paths= [
     "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
 ]
 
 for i_c, ct_file in enumerate(file_paths):
@@ -79,15 +90,20 @@ for i_c, ct_file in enumerate(file_paths):
     content = ct_file_path.read_text()
     original_content = content
 
+    print("# ------------------------------------------------------------------------ #")
+    print(f"current file: {ct_file_path}")
+    print("# ------------------------------------------------------------------------ #")
     # ------------------------------------ eqs ----------------------------------- #
     # content = replace_equation_numbers(content, increment=1)
     # print_changes(original_content, content, r'eq_(\d+)')
 
     # ----------------------------------- figs ----------------------------------- #
     # For figures (modify the increment number as needed):
-    content = replace_figure_numbers(content, increment=1)
+    # the number ignore will leave all the fig_ignore untouched, every fig_int that is bigger than fig_ignore will be modifed 
+    # ignore = None | int
+    content = replace_figure_numbers(content, increment=1, ignore= 59)
     print_changes(original_content, content, r'fig_(\d+)')
 
     # --------------------------------- activate --------------------------------- #
     # # Write the changes back to the file
-    ct_file_path.write_text(content)
+    # ct_file_path.write_text(content)

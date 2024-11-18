@@ -133,6 +133,8 @@ fig.update_layout(
         height=500,
 )
 
+fig.show()
+
 # Save the plot as SVG
 fig.write_image(output_fold/"1_H2_densities.svg")
 
