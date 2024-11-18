@@ -96,6 +96,7 @@ To understand this, we should first
 // the word discuss is disliked
 discuss the difference between interpolation and extrapolation.
 For this, a concrete example should be presented. 
+// it should be clear that this is just a made up example for explanation pruposes
 Let's assume we have 100 data points in a two-dimensional space. One dimension could represent shoe size and the other dimension could represent height.
 These 100 shoe sizes and heights span a known space. 
 If a new shoe size is given that falls within the known space, the corresponding height can be determined through interpolation.

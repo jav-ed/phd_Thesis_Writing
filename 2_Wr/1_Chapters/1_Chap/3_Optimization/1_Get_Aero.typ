@@ -9,14 +9,8 @@
 // compared with true german text
 
 === Obtaining Aerodynamic Loads<chap_4_0_1>
-In 
-// TODO 
-// @chap_1, 
-we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
-In the subsequent 
-// TODO
-// @chap_2, 
-we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
+In @chap_3_0_4, we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
+In the subsequent @chap_4_0_0 we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
 However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
 This section will therefore demonstrate what steps were taken to obtain the aerodynamic loads.
 
@@ -162,10 +156,7 @@ The clustering method kmeans++ can work with even higher dimensions without hitt
 
 At this point, something must be anticipated and something must be said about the upcoming beam model and optimization.
 This is necessary to understand why the three-dimensional coordinate vector should be converted to a one-dimensional position vector.
-Further information about both the beam model and optimization will be discussed in the following 
-// TODO
-// @chap_4
-.
+Further information about both the beam model and optimization will be discussed in the following @chap_4_0_2 to @chap_4_0_4.
 Here, only a brief description from a highly superordinate view should be given.
 Instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
 The beam model has a significant disadvantage compared to the #gls("fem") calculation: accuracy. 
@@ -192,8 +183,5 @@ In this section, we explained how we first obtain a three-dimensional aerodynami
 Then, we explained what data format is required for the kmeans++ method and what is obtained as output from APAME. 
 Furthermore, the steps required to perform the needed data transformations were named. 
 These were supported with visual illustrations and equations in addition to textual descriptions.
-Finally, an introduction to the following 
-// TODO
-// @chap_4 
-was made. 
+Finally, an introduction to the following @chap_4_0_2 was made. 
 The latter through the mention of the beam model and optimization.

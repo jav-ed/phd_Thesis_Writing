@@ -113,8 +113,8 @@
 #include "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ"
 #include "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ"
 #include "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ"
-// #include "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ"
-// #include "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ"
+#include "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ"
+#include "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ"
 
 
 // --------------------------------- results -------------------------------- //

@@ -60,22 +60,34 @@ def print_changes(original: str, new: str, pattern: str) -> None:
         for old, new in zip(original_numbers, new_numbers):
             print(f"{prefix}{old} → {prefix}{new}")
 
-# Configuration
-file_path = Path("2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ")  # Modify this to your file path
 
-# Read the file
-content = file_path.read_text()
-original_content = content
+# ---------------------------------------------------------------------------- #
+file_paths= [
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
+]
 
-# ------------------------------------ eqs ----------------------------------- #
-content = replace_equation_numbers(content, increment=1)
-print_changes(original_content, content, r'eq_(\d+)')
+for i_c, ct_file in enumerate(file_paths):
+        
+    # Configuration
+    ct_file_path = Path(ct_file)  
 
-# ----------------------------------- figs ----------------------------------- #
-# For figures (modify the increment number as needed):
-# content = replace_figure_numbers(content, increment=48)
-# print_changes(original_content, content, r'fig_(\d+)')
+    # Read the file
+    content = ct_file_path.read_text()
+    original_content = content
 
-# --------------------------------- activate --------------------------------- #
-# # Write the changes back to the file
-# file_path.write_text(content)
+    # ------------------------------------ eqs ----------------------------------- #
+    # content = replace_equation_numbers(content, increment=1)
+    # print_changes(original_content, content, r'eq_(\d+)')
+
+    # ----------------------------------- figs ----------------------------------- #
+    # For figures (modify the increment number as needed):
+    content = replace_figure_numbers(content, increment=1)
+    print_changes(original_content, content, r'fig_(\d+)')
+
+    # --------------------------------- activate --------------------------------- #
+    # # Write the changes back to the file
+    ct_file_path.write_text(content)

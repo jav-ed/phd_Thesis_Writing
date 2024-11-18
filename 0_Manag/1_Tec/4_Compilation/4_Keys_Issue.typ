@@ -7,6 +7,13 @@ Missing Titles:
 
 
 
+1. Title: Grundzüge der Globalen Optimierung
+   Key: Stein2018
+   Year: No Year
+
+2. Title: Grundzüge der Nichtlinearen Optimierung
+   Key: Stein2018a
+   Year: No Year
 
 
 // ========================================================================== //
@@ -19,7 +26,7 @@ Citation key: Chen2024
 Reference title: Towards a general-purpose foundation model for computational pathology
 Main bib title: Buckling failure analysis of storage tanks under the synergistic effects of fire and wind loads
 
-2. Title: SciPy 1.0: fundamental algorithms for scientific computing in Python
+1. Title: SciPy 1.0: fundamental algorithms for scientific computing in Python
    Key: Virtanen2020a
    Year: 2020
 
