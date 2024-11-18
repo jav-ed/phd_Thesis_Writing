@@ -371,7 +371,7 @@ This means instead of using the value that kmeans++ would indicate in the second
 The partial forces would be all group members of a group or cluster.
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
-Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024 @Wang2023 @Mehdi2024 @Yu2024.
+Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024.
 Additionally, the library is easily accessible, installable, and easy to use.
 Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force can be achieved without much effort.
 

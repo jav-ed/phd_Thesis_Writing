@@ -1,3 +1,30 @@
+"""
+BibTeX Duplicate Entry Finder
+----------------------------
+
+Duplication finder based on title
+
+A utility script for finding and displaying duplicate entries in BibTeX files.
+Handles custom entry types and performs case-insensitive title comparison to
+identify potential duplicates in bibliographic databases.
+
+Features:
+    - Supports custom BibTeX entry types
+    - Case-insensitive title comparison
+    - Detailed duplicate entry reporting
+    - UTF-8 encoding support
+
+Requirements:
+    - Python 3.6+
+    - bibtexparser library
+    - pathlib (standard library)
+    - collections (standard library)
+
+Usage:
+    Run the script directly to process 'bib.bib' in the '1_Data/1_Bib/' directory:
+    $ python bibtex_duplicate_finder.py
+"""
+
 import bibtexparser
 from collections import defaultdict
 from pathlib import Path
@@ -30,6 +57,11 @@ def find_duplicates(entries):
         if title:  # Only add entries with non-empty titles
             name_dict[title].append(entry)
     
+    # for name, entries in name_dict.items():
+    #     if len(entries)> 1:
+    #         print("stop")
+            
+    # name_dict[title] will output the found bib entries
     duplicates = {name: entries for name, entries in name_dict.items() if len(entries) > 1}
     return duplicates
 

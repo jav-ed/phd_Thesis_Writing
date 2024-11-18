@@ -1,3 +1,35 @@
+"""
+Reference Number Updating Script
+-------------------------------
+
+A utility script for automatically updating equation and figure reference numbers in text files.
+Particularly useful for academic or technical documents where reference numbers need to be
+adjusted after content changes.
+
+The script can:
+- Update equation references (e.g., eq_1 → eq_2)
+- Update figure references (e.g., fig_1 → fig_2)
+- Print a summary of changes
+- Process files while preserving their original structure
+
+Requirements:
+    - Python 3.6+
+    - pathlib (standard library)
+    - re (standard library)
+
+Usage:
+    1. Set the file_path variable to your target file
+    2. Adjust the increment values as needed
+    3. Run the script to update references
+
+Example:
+    file_path = Path("document.typ")
+    content = file_path.read_text()
+    content = replace_equation_numbers(content, increment=1)
+    file_path.write_text(content)
+"""
+
+
 from pathlib import Path
 import re
 
@@ -44,5 +76,6 @@ print_changes(original_content, content, r'eq_(\d+)')
 # content = replace_figure_numbers(content, increment=48)
 # print_changes(original_content, content, r'fig_(\d+)')
 
-# Write the changes back to the file
-file_path.write_text(content)
+# --------------------------------- activate --------------------------------- #
+# # Write the changes back to the file
+# file_path.write_text(content)
