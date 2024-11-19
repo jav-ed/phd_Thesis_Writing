@@ -45,6 +45,10 @@
 
   // show link: set text(fill: blue)
   
+  // the version with regular brakets () looks better 
+  // set math.mat(delim: "[")
+  set math.mat(column-gap: 0.7em)
+  set math.mat(row-gap: 0.6em)
 
   // #set enum(indent: 0.7em)
 

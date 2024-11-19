@@ -74,11 +74,11 @@ def print_changes(original: str, new: str, pattern: str) -> None:
 
 # ---------------------------------------------------------------------------- #
 file_paths= [
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
-    # "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
-    # "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
-    # "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
-    # "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
 ]
 
 for i_c, ct_file in enumerate(file_paths):
@@ -94,16 +94,16 @@ for i_c, ct_file in enumerate(file_paths):
     print(f"current file: {ct_file_path}")
     print("# ------------------------------------------------------------------------ #")
     # ------------------------------------ eqs ----------------------------------- #
-    # content = replace_equation_numbers(content, increment=1)
-    # print_changes(original_content, content, r'eq_(\d+)')
+    content = replace_equation_numbers(content, increment=1)
+    print_changes(original_content, content, r'eq_(\d+)')
 
     # ----------------------------------- figs ----------------------------------- #
     # For figures (modify the increment number as needed):
     # the number ignore will leave all the fig_ignore untouched, every fig_int that is bigger than fig_ignore will be modifed 
     # ignore = None | int
-    content = replace_figure_numbers(content, increment=1, ignore= 59)
-    print_changes(original_content, content, r'fig_(\d+)')
+    # content = replace_figure_numbers(content, increment=1, ignore= 59)
+    # print_changes(original_content, content, r'fig_(\d+)')
 
     # --------------------------------- activate --------------------------------- #
     # # Write the changes back to the file
-    # ct_file_path.write_text(content)
+    ct_file_path.write_text(content)
