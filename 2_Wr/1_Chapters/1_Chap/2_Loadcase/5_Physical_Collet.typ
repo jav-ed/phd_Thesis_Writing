@@ -4,7 +4,7 @@
 
 #hor_Line("Assessment: Collet")
 
-The deployment of collets as #gls("lie") for aircraft experimental structural testing necessitates careful analysis of multiple factors that influence operational efficiency and economic viability.
+The deployment of collets as #glspl("lie") for aircraft experimental structural testing necessitates careful analysis of multiple factors that influence operational efficiency and economic viability.
 These custom-manufactured components, specifically designed for load introduction at particular profile geometries, present cost implications that correlate directly with wing profile variability along the span. Greater geometric variation demands additional specialized collets, potentially resulting in substantial cost escalation.
 
 To establish practical relevance, it is pertinent to consider the current state-of-the-art #gls("swith") outlined in @chap_0_7. 
