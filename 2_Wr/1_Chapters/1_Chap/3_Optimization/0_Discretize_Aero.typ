@@ -210,7 +210,7 @@ In regression, this is not necessarily the case.
 Here, other factors might have greater importance.
 A possible example for the latter would be that the course between two data points can be represented as a continuous curve with tangent continuity.
 The aerodynamic load distribution provides both local spatial coordinates and the magnitude of the force acting there.
-For the #gls("ld"), specific support points are sought at which the #gls("lie") are applied with a force magnitude. 
+For the #gls("ld"), specific support points are sought at which the #glspl("lie") are applied with a force magnitude. 
 Due to the previously made justifications, the first method with which one would usually start would be the linear surrogate model.
 However, it is already known that the aerodynamic distribution load is not linear.
 Therefore, it would be possible to go higher with the order of the method.
@@ -244,8 +244,8 @@ Through the latter, the focus would be on adding new points.
 Therefore, the method according to Chaikin is eliminated for our purposes.
 
 Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
-These support points could be seen as position specifications on the wing for the #gls("lie").
-The magnitudes of the forces and the dimensions of the #gls("lie") could be obtained through subsequent optimization. 
+These support points could be seen as position specifications on the wing for the #glspl("lie").
+The magnitudes of the forces and the dimensions of the #glspl("lie") could be obtained through subsequent optimization. 
 An alternative to curve fitting or regression models is provided by unsupervised methods alongside supervised methods
 @Fukami2023 
 // supervised
@@ -417,7 +417,7 @@ In order to obtain the centroids, one step is to apply geometric averaging.
 While the averaging can be used to represent a group, these values cannot be used as representation for resulting loads for the #glspl("lie").
 If an averaged force were to be applied, partial loads would be ignored.
 The goal is for all partial loads to be combined and added up to a resulting force.
-This means instead of using the value that kmeans++ would indicate in the second dimension $bold(X[:,1])$ of the matrix as a load value for the #gls("lie"), all partial forces within each cluster should be added up to one resulting force.
+This means instead of using the value that kmeans++ would indicate in the second dimension $bold(X[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
 The partial forces would be all group members of a group or cluster.
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
@@ -426,18 +426,18 @@ Additionally, the library is easily accessible, installable, and easy to use.
 Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force can be achieved without much effort.
 
 Another possibility for physically motivated interpretation is offered by the clusters themselves. 
-The area of the clusters could be viewed as the dimension of individual #gls("lie").
+The area of the clusters could be viewed as the dimension of individual #glspl("lie").
 However, this would be counterproductive since the clusters extend over all individual data points.
 Applied to the #gls("ld"), it would mean that the entire wing skin would be covered because one cluster directly joins the next.
-If the clusters are so close together, the #gls("lie") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
+If the clusters are so close together, the #glspl("lie") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
 After both the procedure via regression and kmeans++ have been explained and interpreted, a decision should be made between the two possible paths.
-Since kmeans++ can provide a good starting value for two important quantities in addition to specifying the positions for the #gls("lie") through summation of the partial forces, kmeans++ is preferred over the regression path.
+Since kmeans++ can provide a good starting value for two important quantities in addition to specifying the positions for the #glspl("lie") through summation of the partial forces, kmeans++ is preferred over the regression path.
 
 At this point, the following should be clearly stated. While kmeans++ has various advantages and allows physical interpretations, it does not answer all questions that would be required for the experimental execution of the structural test. 
-Through kmeans++ a good starting value for the positions of the #gls("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
+Through kmeans++ a good starting value for the positions of the #glspl("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
 However, this can only limitedly indicate what the dimensions of the individual #gls("lie") should look like.
 The latter is of particular importance when there is a requirement for free viewing area. 
-While it would be possible to cover the entire wing with #gls("lie"), this is not common practice.
+While it would be possible to cover the entire wing with #glspl("lie"), this is not common practice.
 Furthermore, blocking the view would have other undesired disadvantages.
 Besides the impossibility of optical measurement technology, it would no longer be possible for engineers to apply loads with visual judgment.
 A concrete example could be that the internal pressure should be increased from $10 #unit("MPa")$ to $60 #unit("MPa")$.

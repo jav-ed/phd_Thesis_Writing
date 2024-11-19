@@ -160,9 +160,9 @@ Following the introduction of individual #gls("lie") configurations, a systemati
     /* -------------- */
   [1],  [Cost], [],
   [2],  [Load introduction accuracy], 
-  [3],  [Number of required #gls("lie")], [],
-  [4],  [Availability of #gls("lie")], 
-  [5],  [Reusability of #gls("lie")], [],
+  [3],  [Number of required #glspl("lie")], [],
+  [4],  [Availability of #glspl("lie")], 
+  [5],  [Reusability of #glspl("lie")], [],
   [6],  [Safety],
   [7],  [Control system effort], [],
   [8],  [Specially trained personnel], 

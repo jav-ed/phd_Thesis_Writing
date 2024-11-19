@@ -56,7 +56,7 @@ Air cushions provide efficient load distribution, potentially reducing the requi
 However, operational costs, particularly for cylinder pressurization systems, appear comparable to collet and cylinder configurations in isolated subsystem analysis. Yet, the total operational expenditure, including control system complexity and integration requirements, could lead to higher costs as will be explained later.
 A critical advantage of air cushion implementation lies in its capacity for precise and uniform load distribution across surfaces. This approach significantly reduces the occurrence of constraint forces and load irregularities common to traditional methods, offering superior accuracy in load introduction. 
 
-The determination of optimal air cushion quantity depends fundamentally on load distribution approximation requirements. This quantification requires comprehensive calculations and analyses. While these specialized #gls("lie") demonstrate high market availability, their implementation offers significant advantages through simple attachment and removal processes utilizing replaceable plastic end surfaces. This design feature enables efficient reuse across different wing configurations, promoting both resource sustainability and long-term cost efficiency.
+The determination of optimal air cushion quantity depends fundamentally on load distribution approximation requirements. This quantification requires comprehensive calculations and analyses. While this specialized #gls("lie") demonstrates high market availability, its implementation offers significant advantages through simple attachment and removal processes utilizing replaceable plastic end surfaces. This design feature enables efficient reuse across different wing configurations, promoting both resource sustainability and long-term cost efficiency.
 Safety protocols necessitate thorough assessment during operation
 Personnel protection entails maintaining appropriate distances from the test structure during load application. 
 The system's remote pressure control capabilities facilitate safe test execution while enabling flexible load adjustment without direct operator proximity to the test article.
@@ -103,7 +103,7 @@ Selection of this approach ultimately requires systematic evaluation of three pr
 
 // ----------------------------- tables overview ---------------------------- //
 #hor_Line("Assessment: Overview")
-The preceding analysis presented numerous evaluative aspects for each load introduction method. To facilitate systematic comparison of these methods, @tab_32 provides a concise evaluation matrix comparing the four essential #gls("lie") across all defined criteria. 
+The preceding analysis presented numerous evaluative aspects for each load introduction method. To facilitate systematic comparison of these methods, @tab_32 provides a concise evaluation matrix comparing the four essential #glspl("lie") across all defined criteria. 
 This tabular representation aims to distill the detailed qualitative analysis into a structured comparative framework.
 It is important to acknowledge the inherent limitations of this evaluation approach. The transformation of complex, multidimensional information into a three-level assessment scale necessarily involves some degree of simplification. This reduction in dimensionality introduces potential subjectivity and may not capture nuanced distinctions between methods. 
 Such limitations are inherent to any categorical assessment of complex engineering aspects.
@@ -134,9 +134,9 @@ Such limitations are inherent to any categorical assessment of complex engineeri
 
   [1], [Costs], [#col_Gre()], [#col_X()], [#col_X()], [#col_X()],
   [2], [Load introduction accuracy], [#col_X()], [#col_Mid()], [#col_Gre()], [#col_Gre()],
-  [3], [Number of #gls("lie")], [#col_X()], [#col_Mid()], [#col_X()], [#col_Mid()],
-  [4], [Availability of #gls("lie")], [#col_Gre()], [#col_Gre()], [#col_Gre()], [#col_Gre()],
-  [5], [Reusability of #gls("lie")], [#col_Gre()], [#col_X()], [#col_Gre()], [#col_Gre()],
+  [3], [Number of #glspl("lie")], [#col_X()], [#col_Mid()], [#col_X()], [#col_Mid()],
+  [4], [Availability of #glspl("lie")], [#col_Gre()], [#col_Gre()], [#col_Gre()], [#col_Gre()],
+  [5], [Reusability of #glspl("lie")], [#col_Gre()], [#col_X()], [#col_Gre()], [#col_Gre()],
   [6], [Safety], [#col_X()], [#col_Mid()], [#col_Mid()], [#col_Mid()],
   [7], [Control system effort], [#col_X()], [#col_Mid()], [#col_X()], [#col_X()],
   [8], [Specially trained personnel], [#col_Gre()], [#col_Mid()], [#col_Mid()], [#col_Mid()],
@@ -185,9 +185,9 @@ The revised evaluation framework, presented in @tab_33, reflects this adjusted p
 
   [1], [Costs], [#col_Gre()], [#col_X()], [#col_X()], [#col_X()],
   [2], [Load introduction accuracy], [#col_X()], [#col_Mid()], [#col_Gre()], [#col_Gre()],
-  [3], [Number of #gls("lie")], [#col_X()], [#col_Mid()], [#col_X()], [#col_Mid()],
-  [4], [Availability of #gls("lie")], [#col_Gre()], [#col_Gre()], [#col_Gre()], [#col_Gre()],
-  [5], [Reusability of #gls("lie")], [#col_Gre()], [#col_X()], [#col_Gre()], [#col_Gre()],
+  [3], [Number of #glspl("lie")], [#col_X()], [#col_Mid()], [#col_X()], [#col_Mid()],
+  [4], [Availability of #glspl("lie")], [#col_Gre()], [#col_Gre()], [#col_Gre()], [#col_Gre()],
+  [5], [Reusability of #glspl("lie")], [#col_Gre()], [#col_X()], [#col_Gre()], [#col_Gre()],
   [6], [Safety], [#col_X()], [#col_Mid()], [#col_Mid()], [#col_Mid()],
   [7], [Control system effort], [#col_X()], [#col_Mid()], [#col_X()], [#col_X()],
   [8], [Specially trained personnel], [#col_Gre()], [#col_Mid()], [#col_Mid()], [#col_Mid()],
