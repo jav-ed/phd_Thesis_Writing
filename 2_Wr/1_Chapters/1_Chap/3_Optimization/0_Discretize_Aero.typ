@@ -352,10 +352,10 @@ This iterative process and can be visually understood with @fig_64.
 )<fig_64>
 
 Inserting the squared L2-norm as the distance metric in @eq_75 and writing the objective of kmeans as an optimization problem, @eq_76 is obtained.
-The variable $"dist"(C_i)$ denotes the sum of the distances between the centroid of one cluster and all its cluster members.
+The variable $Phi(C_i)$ denotes the sum of the distances between the centroid of one cluster and all its cluster members.
 
 $ op("argmin",limits: #true)_(mu_i) 
-sum_(i=1)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, "dist"(C_i))  = sum_(i=1)^k "dist"(C_i) $ <eq_76>
+sum_(i=1)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, Phi(C_i))  = sum_(i=1)^k Phi(C_i) $ <eq_76>
 
 // ---------------------------------- here ---------------------------------- //
 Up to this point, we have explained the difference between regression and unsupervised learning. 
