@@ -426,7 +426,7 @@ However, when adding physical meaning to the feature vector in the 2d #gls("ld")
 Moreover, the defintion of @eq_78 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
 Consequently, in order to describe one centroid fully, all feature attributes needs to be known.
 
-
+// ---------------------------- resulting forces ---------------------------- //
 Focusing on the physical relevant interpretation of the centroid matix, it was said that the second column $bold(C[:,1])$ would indicate a representative force magnitude that should act on the corresponding #glspl("lie").
 However, this interpretation is not complete, which should be explained in the following.
 In order to obtain the centroids, one step is to apply geometric averaging. 
