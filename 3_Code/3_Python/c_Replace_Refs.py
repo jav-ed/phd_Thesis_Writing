@@ -33,12 +33,23 @@ Example:
 from pathlib import Path
 import re
 
-def replace_equation_numbers(text: str, increment: int) -> str:
-    """Replace eq_X with eq_(X+increment) in the given text"""
+def replace_equation_numbers(text: str, increment: int, ignore: int = None) -> str:
+    """
+    Replace eq_X with eq_(X+increment) in the given text
+    
+    Args:
+        text: Input text containing equation references
+        increment: Number to add to equation references
+        ignore: Optional - Numbers <= this value will not be modified
+    """
     def add_increment(match):
         num = int(match.group(1))
-        return f'eq_{num + increment}'
+        if ignore is None or num > ignore:
+            return f'eq_{num + increment}'
+        return match.group(0)
     
+    # re.sub replaces all matches found in the text by default
+    # first find all occurces, save them, and when search and mach process finsihes the replacement starts
     return re.sub(r'eq_(\d+)', add_increment, text)
 
 def replace_figure_numbers(text: str, increment: int, ignore: int = None) -> str:
@@ -74,7 +85,7 @@ def print_changes(original: str, new: str, pattern: str) -> None:
 
 # ---------------------------------------------------------------------------- #
 file_paths= [
-    # "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
+    "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
     "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
     "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
     "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
@@ -94,7 +105,9 @@ for i_c, ct_file in enumerate(file_paths):
     print(f"current file: {ct_file_path}")
     print("# ------------------------------------------------------------------------ #")
     # ------------------------------------ eqs ----------------------------------- #
-    content = replace_equation_numbers(content, increment=1)
+    # the number ignore will leave all the eq_ignore untouched, every eq_int that is bigger than eq_ignore will be modifed 
+    # ignore = None | int
+    content = replace_equation_numbers(content, increment=1,  ignore= 72)
     print_changes(original_content, content, r'eq_(\d+)')
 
     # ----------------------------------- figs ----------------------------------- #

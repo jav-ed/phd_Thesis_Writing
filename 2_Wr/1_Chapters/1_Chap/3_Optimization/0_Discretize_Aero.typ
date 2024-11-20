@@ -324,14 +324,13 @@ Due to the better initialization, kmeans++ shows several advantages.
 Among these are faster convergence, consistency of results, and in general, the clusters are found better.
 
 // ---------------------------------- step ---------------------------------- //
-The problem that kmeans++ tries to solve can be formulated as an mathematical optimization problem and is solved  accordingly.
-With optimizations, it is known that there are multiple possible solutions, so-called local optima.
-Through initialization, kmeans++ usually manages to converge the objective function according to @eq_72 towards a smaller function value.
-The notation in @eq_72 is taken from @Frochte2020 and states that $d, x_j$ and $mu_i$ stand for a distance function, the current data point, and the centroid.
+The problem that kmeans++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
+Since, the kmeans++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
+The optimization problem of the kmeans++ is given as @eq_72. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
 In this case, $k$ centroids would be available.
 $ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_72>
 
-Furthermore, $x_j in C_i$ specifically means a data point $x_j$ from the cluster or group $C_i$. 
+Furthermore, $x_j in C_i$ specifically means that only data points $x_j$ are considered that are assigned to one unique cluster or group $C_i$. 
 The latter indicates the following. 
 After positions for all centroids have been found and thus it is clear which entries belong to which cluster or group, the geometric center of gravity can be determined.
 The centers of gravity are the new starting positions for the respective centroids, so that the group membership of each individual data point can be determined again.
@@ -342,6 +341,15 @@ This process is an iterative process and can be visually understood with @fig_64
   width: 100%),
   caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006 taken from @link_Kmeans_Img_Proc],
 )<fig_64>
+
+Inserting the L2-norm as the distance function in @eq_72 and writing the objective of kmeans as an optimization problem, @eq_73 is obtained.
+
+$ op("argmin",limits: #true)_(mu_i) 
+sum_(i=1)^k sum_(x_j in C_i) norm(x_j - mu_i)^2 $ <eq_73>
+
+
+
+
 
 Up to this point, we have explained the difference between regression and unsupervised learning. 
 We have named concrete methods for both previously mentioned machine learning techniques. 
@@ -379,46 +387,59 @@ The output would be the centroids, which have a physically relevant meaning.
 First, it should be noted that the number of input dimensions determines the number of dimensions of the output.
 It is a direct 1:1 relationship. If the input is two-dimensional, then the output is also two-dimensional.
 In a two-dimensional input, as mentioned before, the first dimension would be the locality of the load and the other would represent the magnitude of the force.
-The first dimension of the two-dimensional centroid matrix $bold(X[:,0])$ would give the respective position of the #gls("lie"). 
-The second column in the centroid matrix $bold(X[:,1])$ would give a representative force magnitude.
-This explanation can be expressed mathematically through the matrix provided in @eq_73. 
+The first dimension of the two-dimensional centroid matrix $bold(C[:,0])$ would give the respective position of the #gls("lie"). 
+The second column in the centroid matrix $bold(C[:,1])$ would give a representative force magnitude.
+This explanation can be expressed mathematically through the matrix provided in @eq_74. 
 The variables $L_i$ denotes the coordinate infromation, $F_i$ the force magnitude, the index $i in {0, ... , n}$ and the number of centroids is given as n.
 
-$  bold(X) = mat(
+$  bold(C) = mat(
   L_0, F_0;
   L_1, F_1;
   L_2, F_2;
   dots.v, dots.v;
   L_n, F_n;
-) $ <eq_73>
+) $ <eq_74>
 
-For a more general and thus non 2d centroid matrix @eq_74 shall be considered. 
-First, for the general case the dimension of the centroid matrix $bold(X)$ can be given as $bold(X)^(n times m)$, where n denotes the number of centroids and m the number of the features.
-The latter is used as justification to call $bold(X)$ as centroid matrix. 
+For a more general and thus non 2d centroid matrix @eq_75 shall be considered. 
+First, for the general case the dimension of the centroid matrix $bold(C)$ can be given as $bold(C)^(n times m)$, where n denotes the number of centroids and m the number of the features.
+The latter is used as justification to call $bold(C)$ as centroid matrix. 
 Second, the feature vectors are given as $Y_(i,j)$, where $i in {0, ... , n}$ and $j in {0, ... , m}$.
 
-$  bold(X) = mat(
+$  bold(C) = mat(
   Y_(0,0), Y_(0,1), ... , Y_(0,m);
   Y_(1,0), Y_(1,1), ... , Y_(1,m);
   Y_(2,0), Y_(2,1), ... , Y_(2,m);
   dots.v, dots.v, dots.down, dots.v;
   Y_(n,0),  Y_(n,1), ..., Y_(n,m);
-) $ <eq_74>
+) $ <eq_75>
 
 The term feature vector comes from the machine leanring environment. Since kmeans++ is a machine learning technique, for general purposes explanations, it considered to be more apropriate to use the machine-learning specific term feature vector.
 In general the feature vector could contain any measurable data that can be represted through numericla numbers.
-However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_73 
+However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_74.
+Moreover, the defintion of @eq_75 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
+Consequently, in order to describe one centroid fully, all feature attributes needs to be known.
 
-// ---------------------------------- here ---------------------------------- //
-// TODO make use to have proplery used glspl when required
-Focusing on the physical relevant interpretation of the centroid matix, it was said that the second column $bold(X[:,1])$ would each indicate a representative force magnitude that should act on the corresponding #glspl("lie").
+
+Focusing on the physical relevant interpretation of the centroid matix, it was said that the second column $bold(C[:,1])$ would indicate a representative force magnitude that should act on the corresponding #glspl("lie").
 However, this interpretation is not complete, which should be explained in the following.
 In order to obtain the centroids, one step is to apply geometric averaging. 
-While the averaging can be used to represent a group, these values cannot be used as representation for resulting loads for the #glspl("lie").
-If an averaged force were to be applied, partial loads would be ignored.
-The goal is for all partial loads to be combined and added up to a resulting force.
-This means instead of using the value that kmeans++ would indicate in the second dimension $bold(X[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
-The partial forces would be all group members of a group or cluster.
+While this averaging can be used to obtain one representiative entity for an group, these averaged values cannot be used as representation for the resulting loads for the #glspl("ld").
+If an averaged force were to be applied, other partial loads that are part of the same cluster would be ignored.
+The goal is to combine all partial loads through addition to get a resulting force.
+This means instead of using the value that kmeans++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
+
+
+// equational explanation 
+$  bold(C[:,1]) = mat(
+   F_0;
+   F_1;
+   F_2;
+  dots.v;
+   F_n;
+) 
+$ <eq_76>
+
+
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
 Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024.
