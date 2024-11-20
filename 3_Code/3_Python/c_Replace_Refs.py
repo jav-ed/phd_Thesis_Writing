@@ -86,10 +86,10 @@ def print_changes(original: str, new: str, pattern: str) -> None:
 # ---------------------------------------------------------------------------- #
 file_paths= [
     "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
 ]
 
 for i_c, ct_file in enumerate(file_paths):
@@ -107,7 +107,8 @@ for i_c, ct_file in enumerate(file_paths):
     # ------------------------------------ eqs ----------------------------------- #
     # the number ignore will leave all the eq_ignore untouched, every eq_int that is bigger than eq_ignore will be modifed 
     # ignore = None | int
-    content = replace_equation_numbers(content, increment=1,  ignore= 72)
+    # if you need eq_70 to be free, choose: ignore=69
+    content = replace_equation_numbers(content, increment=2,  ignore= 70)
     print_changes(original_content, content, r'eq_(\d+)')
 
     # ----------------------------------- figs ----------------------------------- #

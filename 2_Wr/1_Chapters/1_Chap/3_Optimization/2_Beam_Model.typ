@@ -33,25 +33,25 @@ Static means that loads are at rest; they are applied once and remain constant i
 Dynamic loads are loads that change over time.
 In addition to the force equilibrium condition, there is another equilibrium condition in two dimensions for the moment balance.
 Here, all moments about a chosen point are calculated and then set to zero.
-This can be represented as @eq_84[Equations], @eq_85[] and @eq_86[] @Gross2021b.
+This can be represented as @eq_87[Equations], @eq_88[] and @eq_89[] @Gross2021b.
 Here, the index $i$ stands for the individual force, $x$ and $y$ for the force components in the respective direction, $M$ for the bending moment, the index $z$ for the imagined rotation axis pointing into the page plane, and $A$ is the local point about which the moment balance is formed.
 
-$ sum F_(i,x) = 0 $ <eq_84> 
-$ sum F_(i,y) = 0 $ <eq_85>
+$ sum F_(i,x) = 0 $ <eq_87> 
+$ sum F_(i,y) = 0 $ <eq_88>
 
 // rotation about z
-$ sum M_(i,z)^(A) = 0 $ <eq_86>
+$ sum M_(i,z)^(A) = 0 $ <eq_89>
 
 The mathematical description can be extended to any number of dimensions, though more than three dimensions rarely makes sense in most cases.
-For a calculation in three dimensions, @eq_87[Equations] - @eq_92[] can be used.
-Here, the force balance in the third dimension is added through @eq_89 and the moment balances in the two remaining rotation axes in @eq_90 and @eq_91.
+For a calculation in three dimensions, @eq_90[Equations] - @eq_95[] can be used.
+Here, the force balance in the third dimension is added through @eq_92 and the moment balances in the two remaining rotation axes in @eq_93 and @eq_94.
 
-$ sum F_(i,x) = 0 $     <eq_87> 
-$ sum F_(i,y) = 0 $     <eq_88>
-$ sum F_(i,z) = 0 $     <eq_89>
-$ sum M_(i,x)^(A) = 0 $  <eq_90>
-$ sum M_(i,y)^(A) = 0 $ <eq_91>
-$ sum M_(i,z)^(A) = 0 $ <eq_92>
+$ sum F_(i,x) = 0 $     <eq_90> 
+$ sum F_(i,y) = 0 $     <eq_91>
+$ sum F_(i,z) = 0 $     <eq_92>
+$ sum M_(i,x)^(A) = 0 $  <eq_93>
+$ sum M_(i,y)^(A) = 0 $ <eq_94>
+$ sum M_(i,z)^(A) = 0 $ <eq_95>
 
 The beam model can therefore be considered a simple physics-based method that can be applied analytically by students without numerical assistance.
 One partial goal of the beam model is to determine support forces.
@@ -59,22 +59,22 @@ These are the forces acting at the selected support points.
 Once the support forces are known, the internal forces can be calculated in the next step.
 The process of cutting beam models will not be explained here; for this, please refer to literature such as @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
 However, the output of these internal forces includes the distributions of normal force, shear force, and moment.
-Important relationships in calculating section force distributions are given by @eq_93[Equations], @eq_94[] and @eq_95[] @Gross2021b.
-Here, @eq_93 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
-@eq_94 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
-Furthermore, @eq_95 shows the relationship between @eq_93 and @eq_94.
+Important relationships in calculating section force distributions are given by @eq_96[Equations], @eq_97[] and @eq_98[] @Gross2021b.
+Here, @eq_96 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
+@eq_97 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
+Furthermore, @eq_98 shows the relationship between @eq_96 and @eq_97.
 
-$ (dif Q) / (dif x) = -q  $    <eq_93>
-$ (dif M )/ (dif x) = Q  $     <eq_94>
-$ (dif² M) / (dif² x) = -q  $   <eq_95>
+$ (dif Q) / (dif x) = -q  $    <eq_96>
+$ (dif M )/ (dif x) = Q  $     <eq_97>
+$ (dif² M) / (dif² x) = -q  $   <eq_98>
 
-When @eq_93[Equations] - @eq_95[] are inverted, equations @eq_96[], @eq_97[] and @eq_98[] are obtained.
+When @eq_96[Equations] - @eq_98[] are inverted, equations @eq_99[], @eq_100[] and @eq_101[] are obtained.
 
-$ Q = - integral q dif x   $    <eq_96>
-$ M = integral Q   dif x $     <eq_97>
-$ M   = - integral integral q dif x  $   <eq_98>
+$ Q = - integral q dif x   $    <eq_99>
+$ M = integral Q   dif x $     <eq_100>
+$ M   = - integral integral q dif x  $   <eq_101>
 
-All equations from @eq_84[] to @eq_98[] can be used to calculate and plot normal force and shear force distributions, as well as bending moment distributions, analytically and by hand.
+All equations from @eq_87[] to @eq_101[] can be used to calculate and plot normal force and shear force distributions, as well as bending moment distributions, analytically and by hand.
 // TODO not in the original german version - possible because the following is not suitable for a phd
 To the inexperienced reader, these equations may seem overwhelming, but from experience, the author of this report can say that by the first semester, these equations and their handling are very solidly embedded in students' minds.
 It can also be confirmed that once the method of internal forces is learned, it can largely be viewed as a recipe-following task.

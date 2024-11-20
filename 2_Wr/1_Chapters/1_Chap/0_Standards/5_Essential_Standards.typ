@@ -185,7 +185,7 @@ A comprehensive overview of these relationships is provided in @tab_14. The tabl
   caption: [Fiber material-dependent safety factors (denominator of fractions) and associated maximum allowable operating nominal pressure $p_"wnp"$, given a maximum allowable test pressure of $1050 "bar"$ @Cebolla2019.],
 )<tab_14>
 
-// TODON rephrase
+// TODO rephrase
 Despite its limitations, EC 406/2010 remains a viable choice in the selection of applicable standards for #glspl("swith"). In contrast, ISO 19881:2018 has been disqualified from consideration due to ambiguities in its testing instructions. While copyright restrictions prevent direct quotation of the original document, a description of the problematic aspects can be provided.
 The issue centers on Table 1 - Material tests of ISO 19881:2018. This table presents headers for material test, clause, material type, and four fields corresponding to the four possible tank or container types. For the material type category, multiple metal materials are listed, with each associated field for Type IV tanks marked as applicable. This presentation suggests that these tests are mandatory not only for metal tanks but also for #gls("cfrp") tanks. However, the test descriptions lack any explicit reference to #gls("cfrp") materials.
 Given the significant differences between metal and plastic liners, one would expect variations in testing protocols. The absence of a clear distinction or an explicit statement indicating uniform testing across all materials introduces ambiguity. This raises a critical question: should composite tanks undergo identical testing procedures as metallic tanks, or are these tests specifically designed for metallic tanks?

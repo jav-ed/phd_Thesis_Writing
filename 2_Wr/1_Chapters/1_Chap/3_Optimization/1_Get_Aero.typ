@@ -32,13 +32,13 @@ The figure shows the distribution of lift coefficients multiplied by the local c
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
 )<fig_66>
 
-To convert from a coefficient distribution to a force, let's examine @eq_77[Equations] and @eq_78[].
-In @eq_77, the variables represent $F_a$ for a point load, $rho$ for density, $u²$ for velocity squared, $C_l$ for lift coefficient, $c$ for chord length, and $l$ for length.
-Furthermore, $q_a$ from @eq_78 represents a force distributed over a length, or a line load.
+To convert from a coefficient distribution to a force, let's examine @eq_80[Equations] and @eq_81[].
+In @eq_80, the variables represent $F_a$ for a point load, $rho$ for density, $u²$ for velocity squared, $C_l$ for lift coefficient, $c$ for chord length, and $l$ for length.
+Furthermore, $q_a$ from @eq_81 represents a force distributed over a length, or a line load.
 
 // dot is used because it makes the distinction between the variables much easier -> easier than just adding some space.med
-$ F_a = rho/2 dot u² dot C_l  dot c dot l space.quad  [#unit("N")] $ <eq_77>
-$ q_a = rho/2 dot u² dot C_l  dot c  space.quad [#unit("N/mm")] $ <eq_78>
+$ F_a = rho/2 dot u² dot C_l  dot c dot l space.quad  [#unit("N")] $ <eq_80>
+$ q_a = rho/2 dot u² dot C_l  dot c  space.quad [#unit("N/mm")] $ <eq_81>
 
 It should be explicitly emphasized that a point load $F_a$ and a line load $q_a$ do not represent the same thing.
 This is indicated both by the two different equations and by the explicit mention of units.
@@ -75,9 +75,9 @@ The same effect occurs with a complex and highly non-linear load distribution th
 A visual representation of the difference between the distributed load and point load is given in @fig_67 on the right side. 
 If the uniform line load is to be formed into a point load, it would act at the center as shown in @fig_67.
 Furthermore, @fig_67 shows that the example wing has a mesh consisting of individual elements. 
-The result that APAME provides is a line load that follows @eq_78.
+The result that APAME provides is a line load that follows @eq_81.
 However, to work with kmeans++ @Arthur2006, discrete point data is needed.
-Therefore, as shown in @fig_67, it is necessary to move from the representation of @eq_78 to the representation of @eq_77.
+Therefore, as shown in @fig_67, it is necessary to move from the representation of @eq_81 to the representation of @eq_80.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/6.svg", 
@@ -98,12 +98,12 @@ Consequently, this also applies to the derived resultant point loads $ forall i,
   caption: [Representation of the process of deriving point loads from line loads with the goal of using the point loads for kmeans++],
 )<fig_68>
 
-To convert from a uniform line load $q_a$ to a point load $F_a$, @eq_79 can be used.
+To convert from a uniform line load $q_a$ to a point load $F_a$, @eq_82 can be used.
 Here, $l$ is a side length. 
-Since we obtained $q_a$ according to @eq_78, the length in chord direction has already been used. 
+Since we obtained $q_a$ according to @eq_81, the length in chord direction has already been used. 
 Therefore, the sought length $l$ remains as the length of the element in span direction.
 
-$ F_a = q_a dot l $ <eq_79>
+$ F_a = q_a dot l $ <eq_82>
 
 The information about the aerodynamic mesh is available to us in readable (non-binary) form and could therefore be processed without problems.
 However, for handling .vtk files @Gueunet2023 @Shen2023 @Bethel2012, quite capable open-source libraries already exist. 
@@ -114,13 +114,13 @@ Whether this should be done through meshio or through our own tool, the goal rem
 The element length in span direction must be obtained for each individual element.
 This is done through simple subtraction; the coordinates of the right node must be subtracted from the coordinates of the left node of the same element.
 Since the coordinates are given in 3D, the magnitude or length of the vector can be obtained through the Pythagorean theorem.
-Mathematically, this can also be expressed as the L2-norm as shown in @eq_80.
+Mathematically, this can also be expressed as the L2-norm as shown in @eq_83.
 Here, the indices $[x,y,z]_(i,r)$, $[x,y,z]_(i,l)$ stand for the coordinate in direction $x,y,z$, of element $i$ and the right $r$ and left $l$ node respectively.
 
-$ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_80>
+$ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_83>
 
 // ------------------------------- point load ------------------------------- //
-Thus, with @eq_79 and @eq_80, a line load can be converted to a point load.
+Thus, with @eq_82 and @eq_83, a line load can be converted to a point load.
 This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
 However, @fig_68 shows, with the sub-figure in the lower left corner, that this is not desired.
 To understand why this approach is not entirely correct, another point about the nature of kmeans++ @Arthur2006 must be added.
@@ -137,14 +137,14 @@ If a preferred direction were unknowingly provided through an incorrect data for
 // --------------------------------- adjust --------------------------------- //
 To adjust the kmeans++ input data format, it must be defined how many individual forces are to be found over a reference length. 
 Thus, for each element, depending on its element length, it is defined into how many uniformly distributed partial point forces the distributed load is approximated.
-According to @eq_81, at a length of $100 #unit("mm")$, a distributed load [N/mm] is approximated by 20 partial point loads [N].
-Therefore, @eq_81 gives the number of partial forces into which a resultant point load should be subdivided.
-The individual partial point loads can be calculated with @eq_82. 
+According to @eq_84, at a length of $100 #unit("mm")$, a distributed load [N/mm] is approximated by 20 partial point loads [N].
+Therefore, @eq_84 gives the number of partial forces into which a resultant point load should be subdivided.
+The individual partial point loads can be calculated with @eq_85. 
 Here, within an element $i$, $i = op("const")$ remains constant and the variable $j$ in this context stands for the partial point load within an element.
 
-$ n_F = l_i 20/100  $ <eq_81>
+$ n_F = l_i 20/100  $ <eq_84>
 
-$ F_(a,i,j) = (q_(a,i) dot l_i )/n_F  $ <eq_82>
+$ F_(a,i,j) = (q_(a,i) dot l_i )/n_F  $ <eq_85>
 
 Since the partial point loads are obtained by dividing a scalar value from the resultant single point load, within an element $i$:
 that $i = op("const")$ and with $j in {0,1, ... n_F}$ then follows $F_(i= op("const"), j = op("variabel")) => F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
@@ -165,13 +165,13 @@ Because the beam model represents a one-dimensional model and only sees a force 
 APAME provides, among other outputs, lift coefficients that are valid for strips. 
 These strips are drawn along the span direction. 
 Within a strip, the actual lift coefficient is integrated over the chord.
-This behavior is shown in @eq_83, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_l$ over the boundaries le and te.
+This behavior is shown in @eq_86, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_l$ over the boundaries le and te.
 Here, le stands for leading edge, which appears at the beginning of the chord, and te for trailing edge, which is found at the end of the chord.
 
-$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_l $ <eq_83>
+$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_l $ <eq_86>
 
 If $C_(op("lc"),i)$ is multiplied by the remaining length of the strip in the span direction, a resultant lift coefficient is obtained, which is valid for the entire strip.
-To obtain the force from this said resultant lift coefficient, @eq_77 can be used.
+To obtain the force from this said resultant lift coefficient, @eq_80 can be used.
 A resultant force acts at the geometric center of gravity, thus the resultant force can be assigned a unique position vector.
 The resulting partial forces are only distributed along the span. 
 A coordinate change in the two other remaining directions does not occur.

@@ -127,20 +127,30 @@ Thus, the non-linear model can do everything the linear model can plus more.
 Consequently, one might assume that the non-linear model is always superior to the linear model.
 Whether this is actually the case can be answered, among other things, by considering the difference between interpolation and extrpolation and how models are trained through optimization.
 
-Very often, the Euclidean or L2-norm @Brunton2022 according to @eq_70 is used in optimization.
+In order to determine the perforamnce of the fitting through optimization error metrics are used. 
+These error metrics are often based either on the L2 or L1 norm.
+While the L2-norm was previusly provided as @eq_33, yet it was specific to the task of calculating the magnitude of the curvature consisting of three components.
+The more general version of the L2-norm or Euclidean distance that is required for universial optimiaztion and for higher multidimeniosnality is given as @eq_70.
+The sqaured L2-norm or squared Euclidean distance in its general form is given as @eq_71 and  the L1-norm or Manhattan distance is given as @eq_72.
+
+$ norm(x)_2 = sqrt(sum_i^n x_i^2) $ <eq_70>
+$ norm(x)_2^2 = (sqrt(sum_i^n x_i^2))^2 = sum_i^n x_i^2 $ <eq_71>
+$ norm(x)_1 = sum_i^n space.thin abs(x_i) $ <eq_72>
+
+Note there are moe norms, however, their mention has no relevance for this work, thus if readers are interested to know wbaout these, they are refered to @Brunton2022.
+From the L2-norm the least-sqaured error metric @Brunton2022 as provided in @eq_73 can be obtained.
 // need to add n, number of data points
 Here, $f(x_k)$ represents the data value from the training dataset or the output of a function value, and $x_k$ is the estimate that the regression model reproduces.
 
-$ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_70>
+$ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_73>
 
 The L2-norm tends to assign non-zero values to all available model parameters. 
 This means it tries to attribute a certain importance to all available parameters.
 However, for this, the importance or magnitude of all the model parameters must be reduced accordingly.
 In summary, this means that the L2-norm tries to use as many available parameters as possible to learn an underlying system.
+The mean absolute error @Brunton2022 that can be obtained through the L1-norm is given as @eq_74. It gives less weight to outliers, contrary to the behavior of the L2-norm.
 
-The L1-norm according to @eq_71 @Brunton2022 gives less weight to outliers, contrary to the behavior of the L2-norm.
-
-$ E_1(f) = 1/n sum_(k=1) ^n |x_k - f(x_k)| $<eq_71>
+$ E_1(f) = 1/n sum_(k=1) ^n space.thin abs( x_k - f(x_k) ) $<eq_74>
 
 // --------------------------------- l1 norm -------------------------------- //
 The consequence is that the L1-norm favors sparse weight matrices.
@@ -171,7 +181,6 @@ Yet, on the right hand where extrpolation is demonstrated, it can be obsevered t
 Besides accuracy, computation time also plays a major role. 
 Whether a model has 2 or 100 parameters would lead to very large differences in accuracy in extrapolation.
 However, for computation time, such parameter numbers would not play a role with today's available hardware.
-// TODO you might some references here - search for GPU
 Today, large models are no longer calculated on the #gls("cpu"), but on the #gls("gpu").
 This has many reasons, but the main one is the parallelizability of the #gls("gpu") as mentioned in @chap_3_0.
 According to current standards, models with $7 times 10^9$ 
@@ -243,6 +252,7 @@ There are also procedures, such as the Chaikin algorithm @Chaikin1974 @Bityukov2
 Through the latter, the focus would be on adding new points.
 Therefore, the method according to Chaikin is eliminated for our purposes.
 
+// ------------------------ curve simplfication concl ----------------------- //
 Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
 These support points could be seen as position specifications on the wing for the #glspl("lie").
 The magnitudes of the forces and the dimensions of the #glspl("lie") could be obtained through subsequent optimization. 
@@ -277,80 +287,77 @@ To illustrate this, a concrete example should be discussed using @fig_61 to @fig
 ) <fig_63>
 // -------------------------------------------------------------------------- //
 
-In Figure @fig_61, the solution of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022 is visible.
+
+// ------------------------------ kmeans intro ------------------------------ //
+In @fig_61, the solution of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022 is visible.
 For understanding the presented unsupervised method, it is sufficient to understand that a chaotic system is described by differential equations.
-The solution of the differential equation is given in Figure @fig_61. 
+The solution of the differential equation is given in @fig_61. 
 This is the trajectory of the well-known Lorenz Attractor @Lorenz1963.
 The trajectory provides x-, y-, and z-coordinates in a three-dimensional space over a temporal course.
-For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in Figure @fig_61.
-When the three-dimensional trajectory is subjected to an unsupervised procedure, such as kmeans++ that will be covered later in detail, centroids are obtained.
+For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in @fig_61.
+When the three-dimensional trajectory is subjected to an unsupervised procedure, such as kmeans++ that is about to be covered in detail, centroids are obtained.
 The centroids are characteristic quantities that the procedure has found in the dataset consisting of the trajectory.
-Visually, the centroids can also be represented by three-dimensional points, as shown in Figure @fig_62.
+Visually, the centroids can also be represented by three-dimensional points, as shown in  @fig_62.
 In the latter, it can be observed that the procedure was allowed to determine 10 characteristic quantities.
-Figure @fig_63 shows which region each centroid covers. 
-As an example, Centroid 3 describes the entire corresponding green region in Figure @fig_63.
-
-
-Depending on how high the number of characteristic quantities, the centroids, is chosen, finer details can be allowed.
-In the case of kmeans++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model. Thus, with a low number of centroids kmeans++ can be viewed as reduced order modeling technique.
-The idea behind kmeans++ is to create groups based on local similarities.
-It attempts to find coordinates for the centroids so that the distance of the centroids within their group members is reduced.
+@fig_63 shows which region each centroid covers. 
+As an example, centroid 3 describes the entire corresponding green region in  @fig_63.
+Depending on how high the number of characteristic quantities, the centroids, is chosen, finer details can be captured.
+In the case of kmeans++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model. 
+Thus, with a low number of centroids kmeans++ can be viewed as reduced order modeling technique.
+The idea behind kmeans++ is to create groups based on local or mertric based similarities.
+It attempts to find coordinates for the centroids so that the sum of distances of the centroids and their group members is reduced.
 The group members are all the entries that belong to a centroid. 
 Visual depcitions of the centroids are given as crosses in  @fig_63. 
+// this part might be a duplicate. there might be a more efficent way to express that
+// see  centroid 3 describes the entire co..
 Let's again consider centroid 3 and its corresponding green area.
 All coordinates that lie within this green area are group members of centroid 3.
-The colored area or active effective area and the position of the respective centroid are interdependent.
+// the goal was already mentioned once above, maybe a better way to express that or link it, or highlgiht the difference between this sentce and the one before
 The goal is to place the centroid within an effective area so that the distance to all group members is reduced.
-An example that can illustrate the grouping of kmeans++ would be the following.
-A box with 30 points, of which 10 are on the left, 10 in the middle, and 10 on the right side of the box. 
-With such a constellation, it would make sense to form 3 groups, one for each overall position (left, middle, and right). 
-Each group would contain 10 points. 
-These groups are called clusters, and the geometric center of each cluster is referred to as the centroid.
 
-
-// --------------------------------- kmeans --------------------------------- //
-
+// -------------------------- kmeans init differece ------------------------- //
 After explaining the basic idea behind kmeans++, more in depth details about the procedure should be given.
+For that, it is important to understand how standard k-means initializes its centroids. The standard k-means algorithm selects k points uniformly at random from the dataset as initial centroids.
+This uniform random selection does not account for the spatial distribution of data points or the relative distances between centroids.
+As a consequence, it can result in suboptimal initial centroid configurations where multiple centroids are concentrated in proximate regions while leaving other regions of the feature space without representative centroids.
+Such configurations can lead to suboptimal local minima and slower convergence of the algorithm.
+K-means++ addresses these limitations through a more sophisticated initialization strategy.
 A visual explanation by the author of kmeans++ for the initial positions for the centroids can be found at @kmeans_Visual_Explanation.
-The position of the first centroid can be chosen randomly. 
-For each data point in the dataset, the distance to the nearest already chosen centroid is calculated. 
-This means that after selecting the first centroid, the distance to this centroid is calculated for every other data point. 
-The distance is typically measured as Euclidean or L2-norm distance.
-Another data point is selected as the next centroid, where the probability of a particular data point being chosen is proportional to the square of its distance to the nearest centroid. 
-Consequently, this means that data points that are further away from the already chosen centroids have a higher probability of being selected as the next centroids. 
-In simple words, the data point which has the largest distance to the already found centroids has the highest probability of being taken as the initial estimate for the position of the next centroid.
-kmeans++ differs from kmeans only in the described initialization.
-Due to the better initialization, kmeans++ shows several advantages. 
-Among these are faster convergence, consistency of results, and in general, the clusters are found better.
+The first centroid is selected uniformly at random from the dataset.
+For each subsequent initialization step, the algorithm computes the minimum distance from each data point to its nearest previously selected centroid.
+The distance metric employed is typically the Euclidean or L2-norm distance.
+The selection probability for each point is then defined as proportional to the squared distance to its nearest previously selected centroid.
+This probability distribution ensures that points further from existing centroids have a higher probability of selection as subsequent centroids.
+Specifically, this weighted probabilistic selection mechanism favors points in regions of the feature space that are currently underrepresented by existing centroids.
+K-means++ differs from standard k-means solely in this initialization procedure.
+The improved initialization leads to several theoretical and practical advantages: faster convergence to local optima, improved statistical consistency of results, and empirically superior cluster assignments with respect to the k-means objective function
 
-// ---------------------------------- step ---------------------------------- //
+// -------------------------- kmeans objective fcn -------------------------- //
 The problem that kmeans++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
 Since, the kmeans++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
-The optimization problem of the kmeans++ is given as @eq_72. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
+The optimization problem of the kmeans++ is given as @eq_75. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
 In this case, $k$ centroids would be available.
-$ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_72>
+$ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_75>
 
 Furthermore, $x_j in C_i$ specifically means that only data points $x_j$ are considered that are assigned to one unique cluster or group $C_i$. 
-The latter indicates the following. 
-After positions for all centroids have been found and thus it is clear which entries belong to which cluster or group, the geometric center of gravity can be determined.
-The centers of gravity are the new starting positions for the respective centroids, so that the group membership of each individual data point can be determined again.
-This process is an iterative process and can be visually understood with @fig_64.
+Note, when deploying computational numerics, in order to know which data points belong to which cluster, the difference between each available data point and each of the k clsuters needs to calculated.
+After its known which data points belongs to which cluster or group, the geometric center of gravity can be determined.
+The centers of gravity are the new starting positions for each of the centroids, so that the group membership of each individual data point thorugh distance calculation can be determined again.
+This iterative process and can be visually understood with @fig_64.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3.png", 
   width: 100%),
-  caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006 taken from @link_Kmeans_Img_Proc],
+  caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006  @link_Kmeans_Img_Proc],
 )<fig_64>
 
-Inserting the L2-norm as the distance function in @eq_72 and writing the objective of kmeans as an optimization problem, @eq_73 is obtained.
+Inserting the squared L2-norm as the distance metric in @eq_75 and writing the objective of kmeans as an optimization problem, @eq_76 is obtained.
+The variable $"dist"(C_i)$ denotes the sum of the distances between the centroid of one cluster and all its cluster members.
 
 $ op("argmin",limits: #true)_(mu_i) 
-sum_(i=1)^k sum_(x_j in C_i) norm(x_j - mu_i)^2 $ <eq_73>
+sum_(i=1)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, "dist"(C_i))  = sum_(i=1)^k "dist"(C_i) $ <eq_76>
 
-
-
-
-
+// ---------------------------------- here ---------------------------------- //
 Up to this point, we have explained the difference between regression and unsupervised learning. 
 We have named concrete methods for both previously mentioned machine learning techniques. 
 For unsupervised learning, kmeans++ was elaborated in detail.
@@ -389,7 +396,7 @@ It is a direct 1:1 relationship. If the input is two-dimensional, then the outpu
 In a two-dimensional input, as mentioned before, the first dimension would be the locality of the load and the other would represent the magnitude of the force.
 The first dimension of the two-dimensional centroid matrix $bold(C[:,0])$ would give the respective position of the #gls("lie"). 
 The second column in the centroid matrix $bold(C[:,1])$ would give a representative force magnitude.
-This explanation can be expressed mathematically through the matrix provided in @eq_74. 
+This explanation can be expressed mathematically through the matrix provided in @eq_77. 
 The variables $L_i$ denotes the coordinate infromation, $F_i$ the force magnitude, the index $i in {0, ... , n}$ and the number of centroids is given as n.
 
 $  bold(C) = mat(
@@ -398,9 +405,9 @@ $  bold(C) = mat(
   L_2, F_2;
   dots.v, dots.v;
   L_n, F_n;
-) $ <eq_74>
+) $ <eq_77>
 
-For a more general and thus non 2d centroid matrix @eq_75 shall be considered. 
+For a more general and thus non 2d centroid matrix @eq_78 shall be considered. 
 First, for the general case the dimension of the centroid matrix $bold(C)$ can be given as $bold(C)^(n times m)$, where n denotes the number of centroids and m the number of the features.
 The latter is used as justification to call $bold(C)$ as centroid matrix. 
 Second, the feature vectors are given as $Y_(i,j)$, where $i in {0, ... , n}$ and $j in {0, ... , m}$.
@@ -411,12 +418,12 @@ $  bold(C) = mat(
   Y_(2,0), Y_(2,1), ... , Y_(2,m);
   dots.v, dots.v, dots.down, dots.v;
   Y_(n,0),  Y_(n,1), ..., Y_(n,m);
-) $ <eq_75>
+) $ <eq_78>
 
 The term feature vector comes from the machine leanring environment. Since kmeans++ is a machine learning technique, for general purposes explanations, it considered to be more apropriate to use the machine-learning specific term feature vector.
 In general the feature vector could contain any measurable data that can be represted through numericla numbers.
-However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_74.
-Moreover, the defintion of @eq_75 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
+However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_77.
+Moreover, the defintion of @eq_78 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
 Consequently, in order to describe one centroid fully, all feature attributes needs to be known.
 
 
@@ -437,7 +444,7 @@ $  bold(C[:,1]) = mat(
   dots.v;
    F_n;
 ) 
-$ <eq_76>
+$ <eq_79>
 
 
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
