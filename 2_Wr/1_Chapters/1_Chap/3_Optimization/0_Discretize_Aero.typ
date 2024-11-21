@@ -440,7 +440,7 @@ This concept is explained visually through @fig_66.
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/7_Kmeans_Avg_Sum.svg", 
   width: 100%),
-  caption: []
+  caption: [Original Data with Clusters and Centroids, Average Forces from Centroids,  Summed Forces per Cluster ]
 )<fig_66>
 
 The upper figure shows a sinus like force distribution, which was selected for demonstration pruposes. The colored data points represent the membership to one of the five clusters. The colored background in 2d hihglights the area in which data points would become a member of the corresponding color coded cluster.
@@ -451,37 +451,44 @@ These mean values match with the lower left figure. Comparing them with the forc
 This becomes more evident the higher the number of members of each cluster becomes.
 
 
-
 // --------------------------------- sklearn -------------------------------- //
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
 Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024.
 Additionally, the library is easily accessible, installable, and easy to use.
-Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force can be achieved without much effort.
-
+Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force after performing kmeans++ can be achieved without much effort.
+Having explained how to interpret the solution of kmeans++ with physical background, 
 Another possibility for physically motivated interpretation is offered by the clusters themselves. 
-The area of the clusters could be viewed as the dimension of individual #glspl("lie").
+The area of the clusters as depicted as the color coded background in the upper @fig_66 could be viewed as the dimension of individual #glspl("lie").
 However, this would be counterproductive since the clusters extend over all individual data points.
 Applied to the #gls("ld"), it would mean that the entire wing skin would be covered because one cluster directly joins the next.
 If the clusters are so close together, the #glspl("lie") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
-After both the procedure via regression and kmeans++ have been explained and interpreted, a decision should be made between the two possible paths.
-Since kmeans++ can provide a good starting value for two important quantities in addition to specifying the positions for the #glspl("lie") through summation of the partial forces, kmeans++ is preferred over the regression path.
 
+// ------------------------------ reg vs kmeans ----------------------------- //
+After both the procedure via regression and kmeans++ have been explained and interpreted, a decision should be made between the two possible paths.
+Kmeans++ can provide a good starting value for two important quantities.
+These are the center posistion of the #glspl("lie"), directly obtained through the values of the centroids $bold(C[:,0])$.
+The other iportant quantity is the resulting force, which can be obtained explained above.
+Therefore kmeans++ is preferred over the regression path.
 At this point, the following should be clearly stated. While kmeans++ has various advantages and allows physical interpretations, it does not answer all questions that would be required for the experimental execution of the structural test. 
 Through kmeans++ a good starting value for the positions of the #glspl("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
 However, this can only limitedly indicate what the dimensions of the individual #gls("lie") should look like.
 The latter is of particular importance when there is a requirement for free viewing area. 
 While it would be possible to cover the entire wing with #glspl("lie"), this is not common practice.
 Furthermore, blocking the view would have other undesired disadvantages.
-Besides the impossibility of optical measurement technology, it would no longer be possible for engineers to apply loads with visual judgment.
+Besides the obstacle for optical measurement technology, it would no longer be possible for engineers to apply loads with visual judgment.
 A concrete example could be that the internal pressure should be increased from $10 #unit("MPa")$ to $60 #unit("MPa")$.
 While the pressure is being increased, damage could occur that would be visually perceptible. 
 If the view were blocked, this would only be limitedly possible or not possible at all.
 Therefore, the output of kmeans++ can be used as a starting value for further optimization.
 
 // --------------------------------- summary -------------------------------- //
-In this section, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
+#summary([
+
+// These are just some starting fractions. based on the provided text above, the summary could be expanded and refined
+In this subsection, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
 Furthermore, important fundamentals of Machine Learning were provided and concrete regression methods were listed. 
 Subsequently, the alternative path via kmeans++ was shown, compared with the regression path, and justified in settling on the favorite kmeans++.
-The essential progress achieved in this section was finding, evaluating, and deciding on a method that enables #gls("ld").
-Finally, it was explained which questions are still open and that subsequent optimization would be recommended.
+The essential progress achieved in this subsection was finding, evaluating, and deciding on a method that enables #gls("ld").
+Finally, it was explained which questions are still open and that subsequent optimization can be regarded as a potential solution for them.
+])
