@@ -12,28 +12,30 @@
 // firt explain some basics aout beam model, then about optimiaztion, then the reasoining provided why beam model can be used with optimization over FEm and optimiaztion are more clear to understand in 4_Beam_Opti
 
 === Beam Model Fundamentals<chap_4_0_2>
-In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into the desired input format. 
-The beam model and optimization were also briefly mentioned there.
-However, these topics were only covered superficially without in-depth information. 
-Therefore, this chapter aims to provide a detailed description of the beam model and optimization process.
-Key questions to be addressed include: what a beam model is, how it is used, its advantages and disadvantages, what numerical optimization means, its objectives, what theoretical possibilities exist, and how the process was specifically implemented.
+// use it form not we form
+In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into an desired input format for kmeans++ for the inital step of #gls("ld", long:true). 
+Furthermore, it was mentioned that the 1d form of the resulting partial forces $F_(a,i,j)$ allow the incorporation of 1d beam models within optimization frameworks. 
+This subsection aims to provide a detailed description of the beam model.
+Key questions to be addressed include: what a beam model is, how it is used, its
+
+// TODO is this actually true - or is it coveed in 4_Beam Opti part
+advantages and disadvantages, what numerical optimization means, its objectives, what theoretical possibilities exist, and how the process was specifically implemented.
 
 
 In many engineering programs, working with beam models is taught under the course name technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
-This represents a simple method that combines physics and mathematics.
-The geometry of a physical object is drawn, and then the forces acting at their respective positions are plotted.
+This represents a efficeint method that combines physics and mathematics.
+Simplified geometry of a physical object are used to put forces acting at their respective positions.
 Next, equilibrium conditions are established. 
-Initially, all forces are divided into horizontal and vertical force components.
-Horizontal and vertical components form a rectangular coordinate system in two dimensions.
+Generally, the used coordinate system conists of a horizontal and vertical axis. Following that all forces are divided into horizontal and vertical force components.
 It would be possible to rotate the coordinate system and divide the force components according to the rotated coordinate system, which can be helpful in some analyses.
-For the further explanation of equilibrium conditions, however, we will assume a conventional non-rotated (horizontal, vertical) coordinate system.
+For the further explanation of equilibrium conditions, a conventional non-rotated (horizontal, vertical) coordinate system is assumed.
 
 Once the force components in the two directions are known, they can be set equal to zero according to static analysis.
-However, if dynamic loading is considered, this cannot be set equal to zero
-@Gross2021a @Gross2023 @Gross2019a.
+However, if dynamic loading is considered, this cannot be set equal to zero and additional considerations are required @Gross2021a @Gross2023 @Gross2019a.
 Static means that loads are at rest; they are applied once and remain constant in their load.
 Dynamic loads are loads that change over time.
-In addition to the force equilibrium condition, there is another equilibrium condition in two dimensions for the moment balance.
+For the task of #gls("ld") only static forces with the beam model are elucidated.
+In two dimensions, in addition to the force equilibrium condition, the moment balance is required.
 Here, all moments about a chosen point are calculated and then set to zero.
 This can be represented as @eq_88[Equations], @eq_89[] and @eq_90[] @Gross2021b.
 Here, the index $i$ stands for the individual force, $x$ and $y$ for the force components in the respective direction, $M$ for the bending moment, the index $z$ for the imagined rotation axis pointing into the page plane, and $A$ is the local point about which the moment balance is formed.
@@ -44,8 +46,8 @@ $ sum F_(i,y) = 0 $ <eq_89>
 // rotation about z
 $ sum M_(i,z)^(A) = 0 $ <eq_90>
 
-The mathematical description can be extended to any number of dimensions, though more than three dimensions rarely makes sense in most cases.
-For a calculation in three dimensions, @eq_91[Equations] - @eq_96[] can be used.
+The mathematical description can be extended to any number of dimensions, though more than three dimensions rarely makes sense in most engineering cases.
+For a calculation in three dimensions, @eq_91 to @eq_96 can be used.
 Here, the force balance in the third dimension is added through @eq_93 and the moment balances in the two remaining rotation axes in @eq_94 and @eq_95.
 
 $ sum F_(i,x) = 0 $     <eq_91> 
@@ -55,7 +57,8 @@ $ sum M_(i,x)^(A) = 0 $  <eq_94>
 $ sum M_(i,y)^(A) = 0 $ <eq_95>
 $ sum M_(i,z)^(A) = 0 $ <eq_96>
 
-The beam model can therefore be considered a simple physics-based method that can be applied analytically by students without numerical assistance.
+The beam model can therefore be considered a simple physics-based method that can be applied analytically by engineers without numerical computational assistance.
+// ---------------------------------- here ---------------------------------- //
 One partial goal of the beam model is to determine support forces.
 These are the forces acting at the selected support points.
 Once the support forces are known, the internal forces can be calculated in the next step.
