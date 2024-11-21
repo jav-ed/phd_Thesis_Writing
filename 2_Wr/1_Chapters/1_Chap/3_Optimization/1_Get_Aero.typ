@@ -9,11 +9,15 @@
 // compared with true german text
 
 === Obtaining Aerodynamic Loads<chap_4_0_1>
-In @chap_3_0_4, we examined the physical #gls("lie") available for introducing loads in an experiment, evaluated them according to specific criteria, and explained why #gls("ld") is necessary. 
+// use it form
+In @chap_3_0_4, we examined some of the available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) for an experiment, 
+// potentially to long sentce
+evaluated them according to specific criteria, and explained why #gls("ld", long:true) is necessary. 
 In the subsequent @chap_4_0_0 we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
-However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load must be obtained.
-This section will therefore demonstrate what steps were taken to obtain the aerodynamic loads.
+However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load that acts on the wing of an aircraft must be obtained.
+This subsection will therefore demonstrate one method how aerodynamic loads can be obtained numerical simulations.
 
+// this needs to be adapted properly for a phd - its okay to acknowledge that work is based on somehting, but should be adapted
 From previous projects conducted at TU Dresden, valuable work is available.
 Among others, there exists a simulation code that can model structural behavior with additional aerodynamic loads using #gls("fem").
 This simulation code internally uses APAME @Filkovic to calculate aerodynamic loads.
@@ -21,24 +25,23 @@ APAME is a three-dimensional frictionless panel method.
 While the calculation is not designed for high-precision requirements, it reproduces the lift distribution with sufficient accuracy and in minimal computation time.
 APAME receives inputs including flight velocity, density, Mach number, and geometric properties, and produces the lift distribution along the wing span as output.
 This load distribution can then be mapped from the aerodynamic mesh to the structural mesh through fluid-structure coupling.
-Thus, the #gls("fem") model also integrates the aerodynamic loads. 
+Thus, the strucutral #gls("fem") model also integrates the aerodynamic loads. 
 An exemplary result provided by APAME is shown in @fig_67. 
-The figure shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
+It shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
 
-// TODO the legend of the map potentially is white, thus the image cannot be used on white background paper
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
   width: 100%),
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
 )<fig_67>
 
-To convert from a coefficient distribution to a force, let's examine @eq_79[Equations] and @eq_80[].
-In @eq_79, the variables represent $F_a$ for a point load, $rho$ for density, $u²$ for velocity squared, $C_l$ for lift coefficient, $c$ for chord length, and $l$ for length.
+To convert from a coefficient distribution to a force, let's examine @eq_79 and @eq_80.
+In @eq_79, the variables represent $F_a$ for a point load, $rho$ for density, $u²$ for velocity squared, $C_L$ for lift coefficient, $c$ for chord length, and $l$ for length.
 Furthermore, $q_a$ from @eq_80 represents a force distributed over a length, or a line load.
 
 // dot is used because it makes the distinction between the variables much easier -> easier than just adding some space.med
-$ F_a = rho/2 dot u² dot C_l  dot c dot l space.quad  [#unit("N")] $ <eq_79>
-$ q_a = rho/2 dot u² dot C_l  dot c  space.quad [#unit("N/mm")] $ <eq_80>
+$ F_a = rho/2 dot u² dot C_L  dot c dot l space.quad  [#unit("N")] $ <eq_79>
+$ q_a = rho/2 dot u² dot C_L  dot c  space.quad [#unit("N/mm")] $ <eq_80>
 
 It should be explicitly emphasized that a point load $F_a$ and a line load $q_a$ do not represent the same thing.
 This is indicated both by the two different equations and by the explicit mention of units.
@@ -165,10 +168,10 @@ Because the beam model represents a one-dimensional model and only sees a force 
 APAME provides, among other outputs, lift coefficients that are valid for strips. 
 These strips are drawn along the span direction. 
 Within a strip, the actual lift coefficient is integrated over the chord.
-This behavior is shown in @eq_85, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_l$ over the boundaries le and te.
+This behavior is shown in @eq_85, the lift coefficient which is valid for a strip $i$ is denoted as $C_(op("lc"),i$ and is obtained through the integration of the lift coefficient $C_L$ over the boundaries le and te.
 Here, le stands for leading edge, which appears at the beginning of the chord, and te for trailing edge, which is found at the end of the chord.
 
-$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_l $ <eq_85>
+$ C_(op("lc"),i) = integral_(op("le")) ^(op("te"))  C_L $ <eq_85>
 
 If $C_(op("lc"),i)$ is multiplied by the remaining length of the strip in the span direction, a resultant lift coefficient is obtained, which is valid for the entire strip.
 To obtain the force from this said resultant lift coefficient, @eq_79 can be used.

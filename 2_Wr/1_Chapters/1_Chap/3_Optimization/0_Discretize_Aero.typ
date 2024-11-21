@@ -483,7 +483,7 @@ If the view were blocked, this would only be limitedly possible or not possible 
 Therefore, the output of kmeans++ can be used as a starting value for further optimization.
 
 // --------------------------------- summary -------------------------------- //
-#summary([
+#summary_([
 
 // These are just some starting fractions. based on the provided text above, the summary could be expanded and refined
 In this subsection, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
