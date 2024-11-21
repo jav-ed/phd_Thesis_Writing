@@ -18,21 +18,21 @@ The global goal is to answer important questions for the experimental trial. Amo
 
 However, with a three-dimensional structural model of an aircraft, the summation of multiple function calls of a #gls("fem") calculation might be unacceptably high under certain circumstances. This is the first reason why an alternative to the #gls("fem") calculation in the optimization loop was sought. The other reason is that initially, no clear objective function was known for the present problem. This itself was found iteratively. If each individual optimization were associated with about a month of calculation time, undesirable limitations would occur. When comparing the beam model with the #gls("fem") calculation, the following is clear: The beam model has lower accuracy reproduction, but is faster in calculation than the high-quality #gls("fem") model.
 
-At this point, there are two possible ways to proceed with the optimization. The first option would be to find a suitable objective function through the flexible beam optimization model. This could then be recalculated in a higher-quality FEM optimization. The other option should be explained using  @fig_71 and @fig_72. From @fig_71, it becomes apparent that APAME was used to obtain the aerodynamic loads. These were, as already explained, converted into a one-dimensional distributed load. This load can now be sent to the beam model. The output is the shear force and bending moment distribution of the actual aerodynamic loading, as APAME would give in 1D. The task of the optimization is now to adjust the design variables so that the difference between the actual bending moment distribution and the discrete bending moment distribution is as small as possible. The discrete bending moment distribution is the output of the optimization.
+At this point, there are two possible ways to proceed with the optimization. The first option would be to find a suitable objective function through the flexible beam optimization model. This could then be recalculated in a higher-quality FEM optimization. The other option should be explained using  @fig_72 and @fig_73. From @fig_72, it becomes apparent that APAME was used to obtain the aerodynamic loads. These were, as already explained, converted into a one-dimensional distributed load. This load can now be sent to the beam model. The output is the shear force and bending moment distribution of the actual aerodynamic loading, as APAME would give in 1D. The task of the optimization is now to adjust the design variables so that the difference between the actual bending moment distribution and the discrete bending moment distribution is as small as possible. The discrete bending moment distribution is the output of the optimization.
 
 // TODO recheck these images
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4_Beam_Optim/0.svg", 
   width: 100%),
-  caption: [Exemplary illustration of the internal force distributions from @fig_69],
-)<fig_71>
+  caption: [Exemplary illustration of the internal force distributions from @fig_70],
+)<fig_72>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4_Beam_Optim/0.svg", 
   width: 100%),
-  caption: [Exemplary illustration of the internal force distributions from @fig_69],
-)<fig_72>
+  caption: [Exemplary illustration of the internal force distributions from @fig_70],
+)<fig_73>
 
-To verify whether the optimization output can be considered acceptable, @fig_72 should be considered. The discrete load obtained from the optimization is first converted back to a three-dimensional load. After that, this can be applied again to the FEM model. The results of this discrete FEM analysis should be recorded. On the other hand, the continuous aerodynamic load should be used to apply it to the FEM model. Once the results from both phases, discrete and continuous, are available, they can be compared with each other. The comparison should pay attention to characteristic structural behavior, such as locality of failure, stress peaks, and stress jumps. If the structural behavior is sufficiently similar, the results with the beam optimization model can be used.
+To verify whether the optimization output can be considered acceptable, @fig_73 should be considered. The discrete load obtained from the optimization is first converted back to a three-dimensional load. After that, this can be applied again to the FEM model. The results of this discrete FEM analysis should be recorded. On the other hand, the continuous aerodynamic load should be used to apply it to the FEM model. Once the results from both phases, discrete and continuous, are available, they can be compared with each other. The comparison should pay attention to characteristic structural behavior, such as locality of failure, stress peaks, and stress jumps. If the structural behavior is sufficiently similar, the results with the beam optimization model can be used.
 
 For the continuing work, the comparison procedure, which was previously described as the second option, was initially chosen. In the following section, initial optimization results with the described procedure will be shown.

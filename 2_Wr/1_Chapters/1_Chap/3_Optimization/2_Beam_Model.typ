@@ -33,25 +33,25 @@ Static means that loads are at rest; they are applied once and remain constant i
 Dynamic loads are loads that change over time.
 In addition to the force equilibrium condition, there is another equilibrium condition in two dimensions for the moment balance.
 Here, all moments about a chosen point are calculated and then set to zero.
-This can be represented as @eq_87[Equations], @eq_88[] and @eq_89[] @Gross2021b.
+This can be represented as @eq_86[Equations], @eq_87[] and @eq_88[] @Gross2021b.
 Here, the index $i$ stands for the individual force, $x$ and $y$ for the force components in the respective direction, $M$ for the bending moment, the index $z$ for the imagined rotation axis pointing into the page plane, and $A$ is the local point about which the moment balance is formed.
 
-$ sum F_(i,x) = 0 $ <eq_87> 
-$ sum F_(i,y) = 0 $ <eq_88>
+$ sum F_(i,x) = 0 $ <eq_86> 
+$ sum F_(i,y) = 0 $ <eq_87>
 
 // rotation about z
-$ sum M_(i,z)^(A) = 0 $ <eq_89>
+$ sum M_(i,z)^(A) = 0 $ <eq_88>
 
 The mathematical description can be extended to any number of dimensions, though more than three dimensions rarely makes sense in most cases.
-For a calculation in three dimensions, @eq_90[Equations] - @eq_95[] can be used.
-Here, the force balance in the third dimension is added through @eq_92 and the moment balances in the two remaining rotation axes in @eq_93 and @eq_94.
+For a calculation in three dimensions, @eq_89[Equations] - @eq_94[] can be used.
+Here, the force balance in the third dimension is added through @eq_91 and the moment balances in the two remaining rotation axes in @eq_92 and @eq_93.
 
-$ sum F_(i,x) = 0 $     <eq_90> 
-$ sum F_(i,y) = 0 $     <eq_91>
-$ sum F_(i,z) = 0 $     <eq_92>
-$ sum M_(i,x)^(A) = 0 $  <eq_93>
-$ sum M_(i,y)^(A) = 0 $ <eq_94>
-$ sum M_(i,z)^(A) = 0 $ <eq_95>
+$ sum F_(i,x) = 0 $     <eq_89> 
+$ sum F_(i,y) = 0 $     <eq_90>
+$ sum F_(i,z) = 0 $     <eq_91>
+$ sum M_(i,x)^(A) = 0 $  <eq_92>
+$ sum M_(i,y)^(A) = 0 $ <eq_93>
+$ sum M_(i,z)^(A) = 0 $ <eq_94>
 
 The beam model can therefore be considered a simple physics-based method that can be applied analytically by students without numerical assistance.
 One partial goal of the beam model is to determine support forces.
@@ -59,30 +59,30 @@ These are the forces acting at the selected support points.
 Once the support forces are known, the internal forces can be calculated in the next step.
 The process of cutting beam models will not be explained here; for this, please refer to literature such as @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
 However, the output of these internal forces includes the distributions of normal force, shear force, and moment.
-Important relationships in calculating section force distributions are given by @eq_96[Equations], @eq_97[] and @eq_98[] @Gross2021b.
-Here, @eq_96 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
-@eq_97 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
-Furthermore, @eq_98 shows the relationship between @eq_96 and @eq_97.
+Important relationships in calculating section force distributions are given by @eq_95[Equations], @eq_96[] and @eq_97[] @Gross2021b.
+Here, @eq_95 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
+@eq_96 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
+Furthermore, @eq_97 shows the relationship between @eq_95 and @eq_96.
 
-$ (dif Q) / (dif x) = -q  $    <eq_96>
-$ (dif M )/ (dif x) = Q  $     <eq_97>
-$ (dif² M) / (dif² x) = -q  $   <eq_98>
+$ (dif Q) / (dif x) = -q  $    <eq_95>
+$ (dif M )/ (dif x) = Q  $     <eq_96>
+$ (dif² M) / (dif² x) = -q  $   <eq_97>
 
-When @eq_96[Equations] - @eq_98[] are inverted, equations @eq_99[], @eq_100[] and @eq_101[] are obtained.
+When @eq_95[Equations] - @eq_97[] are inverted, equations @eq_98[], @eq_99[] and @eq_100[] are obtained.
 
-$ Q = - integral q dif x   $    <eq_99>
-$ M = integral Q   dif x $     <eq_100>
-$ M   = - integral integral q dif x  $   <eq_101>
+$ Q = - integral q dif x   $    <eq_98>
+$ M = integral Q   dif x $     <eq_99>
+$ M   = - integral integral q dif x  $   <eq_100>
 
-All equations from @eq_87[] to @eq_101[] can be used to calculate and plot normal force and shear force distributions, as well as bending moment distributions, analytically and by hand.
+All equations from @eq_86[] to @eq_100[] can be used to calculate and plot normal force and shear force distributions, as well as bending moment distributions, analytically and by hand.
 // TODO not in the original german version - possible because the following is not suitable for a phd
 To the inexperienced reader, these equations may seem overwhelming, but from experience, the author of this report can say that by the first semester, these equations and their handling are very solidly embedded in students' minds.
 It can also be confirmed that once the method of internal forces is learned, it can largely be viewed as a recipe-following task.
 // found again in orig german version
 For this very reason, this process can be automated and accelerated through programming support.
 However, before moving on to this application, an exemplary example of a beam model and the resulting section force distributions should first be given.
-In @fig_69, the upper subplot shows the support, the distribution, direction, and position of the applied loads. The lower subplot shows the resulting support reaction forces.
-@fig_70 shows the resulting internal force distributions visually.
+In @fig_70, the upper subplot shows the support, the distribution, direction, and position of the applied loads. The lower subplot shows the resulting support reaction forces.
+@fig_71 shows the resulting internal force distributions visually.
 
 // --------------------------------- figures -------------------------------- //
 #figure(
@@ -91,15 +91,15 @@ In @fig_69, the upper subplot shows the support, the distribution, direction, an
   width: 100%),
   caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
 
-)<fig_69>
+)<fig_70>
 
 #figure(
 
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1.svg", 
   width: 100%),
-  caption: [Exemplary representation of the internal force distributions from @fig_69],
+  caption: [Exemplary representation of the internal force distributions from @fig_70],
 
-)<fig_70>
+)<fig_71>
 
 Let's summarize our knowledge about the beam model. They help obtain internal force distributions of important parameters such as normal forces, shear forces, and moment distribution.
 The internal force calculation is an established method that can be performed analytically even without computer support.

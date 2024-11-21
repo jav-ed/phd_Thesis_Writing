@@ -186,7 +186,8 @@ def border_less(fig):
 
     fig.update_layout(
         paper_bgcolor='rgba(0,0,0,0)',
-        margin=dict(l=0, r=0, t=0, b=0),
+        # margin=dict(l=0, r=0, t=0, b=0),
+        margin=dict(l=0, r=0, t= 20, b=0),
         title=None,
         font=dict(size=chosen_text_size, family=chosen_font),
         legend=dict(

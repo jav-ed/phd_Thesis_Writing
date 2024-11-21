@@ -431,28 +431,26 @@ Focusing on the physical relevant interpretation of the centroid matix, it was s
 However, this interpretation is not complete, which should be explained in the following.
 In order to obtain the centroids, one step is to apply geometric averaging. 
 While this averaging can be used to obtain one representiative entity for an group, these averaged values cannot be used as representation for the resulting loads for the #glspl("ld").
-If an averaged force were to be applied, other partial loads that are part of the same cluster would be ignored.
+If an averaged force were to be applied, other partial loads that are part of the same cluster would not be accounted physically correct.
 The goal is to combine all partial loads through addition to get a resulting force.
 This means instead of using the value that kmeans++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
+This concept is explained visually through @fig_66.
 
-
+// number of memebers
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/7_Kmeans_Avg_Sum.svg", 
   width: 100%),
-  caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
-)
+  caption: []
+)<fig_66>
+
+The upper figure shows a sinus like force distribution, which was selected for demonstration pruposes. The colored data points represent the membership to one of the five clusters. The colored background in 2d hihglights the area in which data points would become a member of the corresponding color coded cluster.
+Since the length of the colored background is not constant, it can be concluded that some clusters have a broader area in which their cluster member can be placed than other clusters.
+While not speicifally visible in this viszulaiation, generally, the number of the members of clusters do not need to match as well. It could be that one cluster has the majority of available data points as its members while the oter remaining togehter have the minority.
+Moreover, the location of  the diamond shaped dots in the top @fig_66 give the 2d dimensional informaiton for the corresponding centroid. The number next to the diamond dot is the force value, which the centroid would provide. Kmeans++ utlizes the mean as part of of its update. With reaching a convergence the final centroid values are the mean values within each unique cluster. Thus, the numbers next to the diamond dots represent the mean force within the respective cluster.
+These mean values match with the lower left figure. Comparing them with the forces depicted in the lower right figure, it becomes obious that there is a big difference wheter the froces are avergaed or summed up.
+This becomes more evident the higher the number of members of each cluster becomes.
 
 
-
-// equational explanation 
-$  bold(C[:,1]) = mat(
-   F_0;
-   F_1;
-   F_2;
-  dots.v;
-   F_n;
-) 
-$ <eq_79>
 
 // --------------------------------- sklearn -------------------------------- //
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
