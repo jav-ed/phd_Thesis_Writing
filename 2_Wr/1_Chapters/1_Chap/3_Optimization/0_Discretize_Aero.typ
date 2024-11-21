@@ -436,6 +436,14 @@ The goal is to combine all partial loads through addition to get a resulting for
 This means instead of using the value that kmeans++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
 
 
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/7_Kmeans_Avg_Sum.svg", 
+  width: 100%),
+  caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
+)
+
+
+
 // equational explanation 
 $  bold(C[:,1]) = mat(
    F_0;
@@ -446,7 +454,7 @@ $  bold(C[:,1]) = mat(
 ) 
 $ <eq_79>
 
-
+// --------------------------------- sklearn -------------------------------- //
 The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
 Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024.

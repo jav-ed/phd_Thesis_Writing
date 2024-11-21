@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import plotly.express as px
 import random
-import Path from pathlib
+from pathlib import Path
 
 # Reset both numpy and random seeds
 np.random.seed(42)
@@ -46,7 +46,10 @@ fig = make_subplots(
            [{}, {}]],
     subplot_titles=('Original Data with Clusters and Centroids',
                    'Average Forces from Centroids', 
-                   'Summed Forces per Cluster'))
+                   'Summed Forces per Cluster'),
+    
+     vertical_spacing=0.15  # Add this line - you can adjust the value between 0 and 1
+    )
 
 # Get plotly default colors
 colors = px.colors.qualitative.Set1[:n_clusters]
@@ -57,6 +60,8 @@ txt_pos_centroids = ["bottom center",
                      "top center", 
                      "bottom center", 
                      "top center"]
+
+chosen_text_size = 15
 
 # Plot 1: Original data with colored backgrounds
 for i in range(n_clusters):
@@ -87,9 +92,11 @@ for i in range(n_clusters):
             mode='markers',
             name=f'Cluster {i}',
             marker=dict(size=8, color=colors[i], 
-                        line=dict(color='black', width=1)),
+                        # line=dict(color='black', width=1)
+                        ),
             legendgroup="clusters",
             legendgrouptitle_text="Input Data",
+            legendgrouptitle=dict(font=dict(size=chosen_text_size)),
         ),
         row=1, col=1
     )
@@ -104,14 +111,16 @@ for i in range(n_clusters):
             x=[sorted_centroids[i,0]],
             y=[sorted_centroids[i,1]],
             mode='markers+text',
-            marker=dict(size=15, symbol='diamond', 
+            marker=dict(size=12, symbol='diamond', 
                         color=colors[i],  
-                        line=dict(color='black', width=1)),
+                        line=dict(color='black', width=1)
+                        ),
             name=f"Centroid {i}",
             text=np.round(sorted_centroids[i,1], 2),
             textposition=txt_pos_centroids[i],
             legendgroup="centroids",
             legendgrouptitle_text="Centroids",
+            legendgrouptitle=dict(font=dict(size=chosen_text_size)),
         ),
         row=1, col=1
     )
@@ -154,9 +163,9 @@ fig.update_layout(
     showlegend=True,
     bargap=0.2,
     legend=dict(
-    groupclick="toggleitem",  # allows clicking group title to show/hide all items
-    tracegroupgap=30  # adds extra space between legend groups
-)
+        groupclick="toggleitem",  # allows clicking group title to show/hide all items
+        tracegroupgap=30  # adds extra space between legend groups
+    )
 )
 
 # Update axes labels
@@ -200,13 +209,18 @@ def border_less(fig):
 # get it borderless
 fig = border_less(fig)
 
+fig.update_layout(
+        width=900,
+        height=500,
+)
+
 cwd = Path.cwd()
 # output_fold = cwd / "1_Data/2_Figs/2_Code_Created"
 output_fold = cwd / "1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret"
 
 
 # Save the plot as SVG
-fig.write_image(output_fold/"12_Kmeans_Avg_Sum.svg")
+fig.write_image(output_fold/"7_Kmeans_Avg_Sum.svg")
 
 
-fig.show()
+# fig.show()
