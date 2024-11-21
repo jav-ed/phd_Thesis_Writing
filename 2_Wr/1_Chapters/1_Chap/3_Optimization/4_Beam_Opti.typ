@@ -20,14 +20,15 @@ However, with a three-dimensional structural model of an aircraft, the summation
 
 At this point, there are two possible ways to proceed with the optimization. The first option would be to find a suitable objective function through the flexible beam optimization model. This could then be recalculated in a higher-quality FEM optimization. The other option should be explained using  @fig_71 and @fig_72. From @fig_71, it becomes apparent that APAME was used to obtain the aerodynamic loads. These were, as already explained, converted into a one-dimensional distributed load. This load can now be sent to the beam model. The output is the shear force and bending moment distribution of the actual aerodynamic loading, as APAME would give in 1D. The task of the optimization is now to adjust the design variables so that the difference between the actual bending moment distribution and the discrete bending moment distribution is as small as possible. The discrete bending moment distribution is the output of the optimization.
 
+// TODO recheck these images
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/9.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4_Beam_Optim/0.svg", 
   width: 100%),
   caption: [Exemplary illustration of the internal force distributions from @fig_69],
 )<fig_71>
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/9.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4_Beam_Optim/0.svg", 
   width: 100%),
   caption: [Exemplary illustration of the internal force distributions from @fig_69],
 )<fig_72>

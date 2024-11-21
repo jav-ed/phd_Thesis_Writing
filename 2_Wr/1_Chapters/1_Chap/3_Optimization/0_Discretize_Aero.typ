@@ -105,7 +105,7 @@ If now a shoe size of 47 is given to determine a height based on it, this is cal
 Extrapolation is the calculation of outputs where the input lies outside the training dataset.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/10_Interpolation.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/5_Interpolation.svg", 
   width: 100%),
   caption: [Illustraitve depiction of Inteprolation and Extrapolation]
 ) <fig_59>
@@ -172,7 +172,7 @@ On the left it can be seen that the lienar model as well as the fourth order pol
 Yet, on the right hand where extrpolation is demonstrated, it can be obsevered that the fourth order model has too much flexibility, deviates highly from the linearly tending structre and thus performance worse than the linear model.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/11_Lin_Poly.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/6_Lin_Poly.svg", 
   width: 100%),
   caption: [On the left side a focused view on within the training range is depicted for the linear and the 4th order polynomnimal fcn. On the right side the extrpolation is hihglighted to see what happens when the funciton has too much of freedom.]
 ) <fig_60>
@@ -268,20 +268,20 @@ To illustrate this, a concrete example should be discussed using @fig_61 to @fig
 
 // -------------------------------------------------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/0.svg", 
   width: 89%),
   caption: [Trajektorie, x-, y- und z-Koordinaten über einen zeitlichen Verlauf @link_Javed_Master.]
 ) <fig_61>
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/1.svg", 
   width: 89%),
   caption: [Centroids, Zentrum der gefundenen characktersitischen Größen @link_Javed_Master.]
 ) <fig_62>
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/2.svg", 
   width: 89%),
   caption: [Wirkfläche der einzelnen centroids @link_Javed_Master.]
 ) <fig_63>
@@ -346,7 +346,7 @@ The centers of gravity are the new starting positions for each of the centroids,
 This iterative process and can be visually understood with @fig_64.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/3.png", 
   width: 100%),
   caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006  @link_Kmeans_Img_Proc],
 )<fig_64>
@@ -371,7 +371,7 @@ Interested readers are encouraged to either follow the given link @link_Cluster_
 In @Ikotun2023, further developments of kmeans and additional areas in which kmeans finds application are mentioned.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/4.png", 
   width: 100%),
   caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
 )<fig_65>

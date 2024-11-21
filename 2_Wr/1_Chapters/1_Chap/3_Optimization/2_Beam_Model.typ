@@ -87,7 +87,7 @@ In @fig_69, the upper subplot shows the support, the distribution, direction, an
 // --------------------------------- figures -------------------------------- //
 #figure(
 
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization//8.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0.svg", 
   width: 100%),
   caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
 
@@ -95,7 +95,7 @@ In @fig_69, the upper subplot shows the support, the distribution, direction, an
 
 #figure(
 
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization//9.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1.svg", 
   width: 100%),
   caption: [Exemplary representation of the internal force distributions from @fig_69],
 

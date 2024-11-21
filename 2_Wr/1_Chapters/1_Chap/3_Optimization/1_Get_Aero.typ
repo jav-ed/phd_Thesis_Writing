@@ -27,7 +27,7 @@ The figure shows the distribution of lift coefficients multiplied by the local c
 
 // TODO the legend of the map potentially is white, thus the image cannot be used on white background paper
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/5.png", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
   width: 100%),
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
 )<fig_66>
@@ -80,7 +80,7 @@ However, to work with kmeans++ @Arthur2006, discrete point data is needed.
 Therefore, as shown in @fig_67, it is necessary to move from the representation of @eq_81 to the representation of @eq_80.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/6.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/1.svg", 
   width: 100%),
   caption: [Representation of the basic initial concept: Reading out the aerodynamic line load and conversion to individual point loads],
 )<fig_67>
@@ -93,7 +93,7 @@ $ forall i, j in {0, .... , n} , i != j => q_(a,i) != q_(a,j)$.
 Consequently, this also applies to the derived resultant point loads $ forall i, j in {0, .... , n} , i != j => F_(a,i) != F_(a,j)$.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/7.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
   width: 100%),
   caption: [Representation of the process of deriving point loads from line loads with the goal of using the point loads for kmeans++],
 )<fig_68>

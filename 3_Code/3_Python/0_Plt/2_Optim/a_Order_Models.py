@@ -161,8 +161,8 @@ fig.update_layout(
 
 cwd = Path.cwd()
 # output_fold = cwd / "1_Data/2_Figs/2_Code_Created"
-output_fold = cwd / "1_Data/2_Figs/0_Content/1_Chap/3_Optimization/"
+output_fold = cwd / "1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret"
 
 
 # Save the plot as SVG
-fig.write_image(output_fold/"11_Lin_Poly.svg")
+fig.write_image(output_fold/"6_Lin_Poly.svg")
