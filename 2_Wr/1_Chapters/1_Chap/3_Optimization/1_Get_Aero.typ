@@ -31,7 +31,7 @@ It shows the distribution of lift coefficients multiplied by the local chord len
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
-  width: 100%),
+  width: 87%),
   caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
 )<fig_67>
 
@@ -43,36 +43,43 @@ Furthermore, $q_a$ from @eq_80 represents a force distributed over a length, or 
 $ F_a = rho/2 dot u² dot C_L  dot c dot l space.quad  [#unit("N")] $ <eq_79>
 $ q_a = rho/2 dot u² dot C_L  dot c  space.quad [#unit("N/mm")] $ <eq_80>
 
-It should be explicitly emphasized that a point load $F_a$ and a line load $q_a$ do not represent the same thing.
-This is indicated both by the two different equations and by the explicit mention of units.
+In order to explicitly emphasize the difference between the point load $F_a$ and a line load $q_a$ units for both equations are provided.
 In common parlance, it is often said that a force acts at a local point.
 However, this is physically quite rare; in most cases, forces act along a length (line load) or over an area (tension/pressure).
-Point loads can be used in numerical mathematics as a resultant single load.
-A resultant force typically serves to reduce a force vector that extends over a length or area to a single resultant force.
-The resultant force can thus be considered as a representative load that helps represent an entire distribution as a scalar value.
+However, in numerical mathematics Point loads can be used for special modeling pruposees or as single  resultant load.
+// provide better explanation for what a resultant force is
+A resultant force typically serves to reduce a force matrix  $bold(F)^(n times m)$ that extends over a length or area to a single resultant force.
+Here n denotes the number of force entries and m the dimension of a single force vector.
+The single resultant force can either be a single vector of the dimension m or be a single scalar value with its magnitude being calcualted.
+Thus, the resultant force can thus be considered as a representative load that helps representing an entire distribution as a single vector or scalar value.
+
 
 // ------------------------------- simple case ------------------------------ //
-In simple cases, converting a resultant load distribution to a single load is possible without introducing concerning inaccuracies.
+In simple cases, converting a resultant load distribution to a single load is possible without introducing concerning inaccuracies and local structral effects.
+
+// TODO add stiffness gradietns
 Simple cases can be imagined as geometries that contain very little or no local gradient.
 To illustrate this, imagine we want to describe a geometry using x,y,z coordinates.
-Changing one coordinate should leave the other two remaining coordinates unchanged.
-Specifically, we can imagine a cube. If we are, for example, on the upper surface of the wing, then we should be able to move across the entire surface without having to climb up or down.
-In this case, we would have a horizontal flat surface, which should be termed a simple geometry.
+Since gradient describe the cahnge of one varaible with resepect to another, the following can be said.
+If the local x and z coordinates do not change much when moving along the y direction, the gradients are accordingly low.
+Besides the geometrical aspects for structral investigations, material properties such as stiffness gradients needs to be neglianbale small as well or zero that is constant stiffness within the considered domain.
+For the transformation of the distributed load to a point load  without inducing local structral responses,  the shape and magnitude of the distributed load is of importnace.
+In the case of a distirbuted load that acts on a given length with the constant load and constant angle, the  distributed load can be converted to a single point load for a certain length.
 
-For the transformation of the distributed load to a point load to continue without major restrictions, a force should be applied on the flat surface at equal distances with equal magnitude and in the same direction.
-In such a state, the distributed load can be converted to a single point load for a certain length or area.
-
-// TODO here were have some deviations from the original german text
-Generally, the larger the length or area for which the distributed load is to be converted to a single load, the greater the risks for local phenomena.
-// TODO the example is not mentioned in the original german version
+Generally, the larger the length or area for which the distributed load is to be converted to a single load, the greater the risks for structral local phenomena.
+// formulation needs to be improved
 Here's a concrete example: if we have a large length over which a uniformly distributed load acts and this is to be represented by a single point load, the following could occur.
-// TODO the transtion does not add up
-Mathematically, everything might be correct, but a high local point load could cause material failure at that location or other unexpected events could be observed.
-
-Therefore, it is desirable to represent distributed loads through point loads over small lengths and areas, in addition to having uniform geometry and force distribution.
+// formulation needs to be improved
+While, mathematically, everything remains possible, but a high local point load could cause material failure at that location.
+Therefore, it is desirable to represent distributed loads through point loads over small lengths and areas, in addition to having uniform geometry, material properties and force distribution.
 When working with complex geometries, the effective length and area over which the distributed load can be covered by a resultant point load decreases. 
 Consequently, the number of individual forces increases accordingly.
 The same effect occurs with a complex and highly non-linear load distribution that is to be approximated locally by individual point loads.
+
+
+// ---------------------------------- here ---------------------------------- //
+The surface of a wing as an exmaple of a complex geomtry is given on the left side of @fig_68.
+It shows that the 
 
 // Images of Fi qa and discretization Slide 12
 A visual representation of the difference between the distributed load and point load is given in @fig_68 on the right side. 
