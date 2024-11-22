@@ -43,7 +43,8 @@ Furthermore, $q_a$ from @eq_80 represents a force distributed over a length, or 
 $ F_a = rho/2 dot u^2 dot C_L  dot c dot l space.quad  [#unit("N")] $ <eq_79>
 $ q_a = rho/2 dot u^2 dot C_L  dot c  space.quad [#unit("N/mm")] $ <eq_80>
 
-In order to explicitly emphasize the difference between the point load $F_a$ and a distributed load $q_a$ units for both equations are provided.
+// it should be understood that the given units are mandated to always be in that form, you could also use N/m or KN  and so on
+In order to explicitly emphasize the difference between the point load $F_a$ and a distributed load $q_a$ deomstrative units for both equations are provided.
 In common parlance, it is often said that a force acts at a local point.
 However, this is physically quite rare; in most cases, forces act along a length (distributed load) or over an area (tension/pressure).
 However, in numerical mathematics Point loads can be used for special modeling pruposees or as single  resultant load.

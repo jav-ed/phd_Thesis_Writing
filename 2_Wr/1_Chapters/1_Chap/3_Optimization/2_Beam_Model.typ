@@ -23,10 +23,10 @@ advantages and disadvantages, what numerical optimization means, its objectives,
 
 
 In many engineering programs, working with beam models is taught under the course name technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
-This represents a efficeint method that combines physics and mathematics.
+This represents an efficient method that combines physics and mathematics.
 Simplified geometry of a physical object are used to put forces acting at their respective positions.
 Next, equilibrium conditions are established. 
-Generally, the used coordinate system conists of a horizontal and vertical axis. Following that all forces are divided into horizontal and vertical force components.
+Generally, the used coordinate system consists of a horizontal and vertical axis. Following that all forces are divided into horizontal and vertical force components.
 It would be possible to rotate the coordinate system and divide the force components according to the rotated coordinate system, which can be helpful in some analyses.
 For the further explanation of equilibrium conditions, a conventional non-rotated (horizontal, vertical) coordinate system is assumed.
 
@@ -37,7 +37,7 @@ Dynamic loads are loads that change over time.
 For the task of #gls("ld") only static forces with the beam model are elucidated.
 In two dimensions, in addition to the force equilibrium condition, the moment balance is required.
 Here, all moments about a chosen point are calculated and then set to zero.
-This can be represented as @eq_88[Equations], @eq_89[] and @eq_90[] @Gross2021b.
+This can be represented as @eq_88 to @eq_90 @Gross2021b.
 Here, the index $i$ stands for the individual force, $x$ and $y$ for the force components in the respective direction, $M$ for the bending moment, the index $z$ for the imagined rotation axis pointing into the page plane, and $A$ is the local point about which the moment balance is formed.
 
 $ sum F_(i,x) = 0 $ <eq_88> 
@@ -58,62 +58,60 @@ $ sum M_(i,y)^(A) = 0 $ <eq_95>
 $ sum M_(i,z)^(A) = 0 $ <eq_96>
 
 The beam model can therefore be considered a simple physics-based method that can be applied analytically by engineers without numerical computational assistance.
-// ---------------------------------- here ---------------------------------- //
 One partial goal of the beam model is to determine support forces.
 These are the forces acting at the selected support points.
 Once the support forces are known, the internal forces can be calculated in the next step.
-The process of cutting beam models will not be explained here; for this, please refer to literature such as @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
+// maybe cutting beam model is not the best way to describe it?
+The detailed process of cutting beam models will not be explained here; for this, refer to literature such as @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
 However, the output of these internal forces includes the distributions of normal force, shear force, and moment.
-Important relationships in calculating section force distributions are given by @eq_97[Equations], @eq_98[] and @eq_99[] @Gross2021b.
+Important relationships for calculating internal force distributions are given by @eq_97 to @eq_99 @Gross2021b.
 Here, @eq_97 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
 @eq_98 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
 Furthermore, @eq_99 shows the relationship between @eq_97 and @eq_98.
+// it should be understood that the given units are mandated to always be in that form, you could also use N m or KN  and so on
+The units are given to further help in understanding the differences between shear force, distributed load and bending moment.
 
 $ (dif Q) / (dif x) = -q  $    <eq_97>
 $ (dif M )/ (dif x) = Q  $     <eq_98>
-$ (dif² M) / (dif² x) = -q  $   <eq_99>
+$ (dif^2 M) / (dif^2 x) =  (dif Q) / (dif x) -q  $   <eq_99>
 
-When @eq_97[Equations] - @eq_99[] are inverted, equations @eq_100[], @eq_101[] and @eq_102[] are obtained.
+When @eq_97 to @eq_99 are inverted, @eq_100 to @eq_102 are obtained.
 
 $ Q = - integral q dif x   $    <eq_100>
 $ M = integral Q   dif x $     <eq_101>
-$ M   = - integral integral q dif x  $   <eq_102>
+$ M   = - integral integral q dif x dif x  $   <eq_102>
 
-All equations from @eq_88[] to @eq_102[] can be used to calculate and plot normal force and shear force distributions, as well as bending moment distributions, analytically and by hand.
-// TODO not in the original german version - possible because the following is not suitable for a phd
-To the inexperienced reader, these equations may seem overwhelming, but from experience, the author of this report can say that by the first semester, these equations and their handling are very solidly embedded in students' minds.
-It can also be confirmed that once the method of internal forces is learned, it can largely be viewed as a recipe-following task.
-// found again in orig german version
-For this very reason, this process can be automated and accelerated through programming support.
-However, before moving on to this application, an exemplary example of a beam model and the resulting section force distributions should first be given.
-In @fig_70, the upper subplot shows the support, the distribution, direction, and position of the applied loads. The lower subplot shows the resulting support reaction forces.
-@fig_71 shows the resulting internal force distributions visually.
+All equations from @eq_88 to @eq_102 can be used to calculate normal force and shear force distributions, as well as bending moment distributions, symbolic using computatioanl resources @Valipour2021 @Elham2021 @Kulyabov2021 @butt2021development as well analytically by hand.
+The process can be automated and accelerated through programming support.
+However, before moving on to this application, an illustrative example of a beam model and the resulting internal force distributions should first be given.
+In @fig_70, the upper subplot shows the type of support, its posistion, the applied force distribution with its direction. In other words it provides all relevant infromation in order to solve the beam model problem through the mentioned equations. The lower subplot shows the resulting support reaction forces.
+
 
 // --------------------------------- figures -------------------------------- //
 #figure(
-
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0_Beam_Example.svg", 
   width: 100%),
   caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
-
 )<fig_70>
 
-#figure(
 
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1.svg", 
+@fig_71 shows the resulting internal force distributions, where the first plot shows the normal forces, the second the shear forces and the final subplot that bending moment distribution.
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1_Beam_Example.svg", 
   width: 100%),
   caption: [Exemplary representation of the internal force distributions from @fig_70],
-
 )<fig_71>
 
-Let's summarize our knowledge about the beam model. They help obtain internal force distributions of important parameters such as normal forces, shear forces, and moment distribution.
-The internal force calculation is an established method that can be performed analytically even without computer support.
-Due to the latter, it can be considered a relatively simple procedure.
-Furthermore, it is possible to calculate analytical equations with computer support.
-In the Python programming language @van1995python, there is a rather well-known library called SymPy @meurer2017sympy, which makes it possible to work analytically on the computer.
-
+// use it form and adapt fore phd writing
+Having provided some initral basics about beam modeling and depicted the obtained results, the focus shall be set on the computaitonal implementaiton.
+While, as mentioned it is possible to solve beam models anayltically on paper, it is not a suitable approach for integrating it into numeircal optimiaztion.
+In order to leverage optimiaztion procedure the beam model solver needs to be available as an execute numerical code. 
+// the word following is repeated in the upcoming sentces - too close. rephrase it
+The choice of the programming language is of pivotal importance for applied science. Thus, special attention to it shall be given in the following.
+In the Python programming language @van1995python, there open-source implementaitons available, which makes it possible to work analytically on the computer, that is symbolically.
+The latter is one reason why Python can be considered as a proper choice for developing the beam solver in this language.
+Besides this crucial point, more reasoning on the choice of Python as the numerical computational language are given in the following.
 // ------------------------- python implementations ------------------------- //
-At this point, it would be appropriate to explain the advantages of Python.
 Python is a programming language used in various fields
 @AliAkbari2024 @Trost2023 @Ries2024 @Barneschi2024 @Gardner2024 @Kuo2024 @Lewthwaite2024.
 This includes both scientific and non-scientific areas.
@@ -121,44 +119,44 @@ Python attracts its users with three main factors.
 First is the simple language syntax and the small number of lines of code required for a task.
 Secondly, Python is a quite advanced programming language that comes with various functions.
 Finally, it is particularly popular in scientific circles due to the large number of freely available and high-quality libraries.
-The Python community usually uploads their tools to Github.
+The Python community usually uploads their tools to #gls("github").
 Here, users can communicate with each other, report problems, conduct plausibility investigations, discuss desired new features, and jointly test and develop.
 
-Documentation can also be uploaded to Github.
-Often, other scientists from different fields have similar problems, so partial solutions can be found on Github.
+// repeated word "often"
+Documentations to the tools is often also made available on #gls("github").
+Often, other scientists from different fields have similar problems, so partial solutions can be found on #gls("github").
 Particularly popular libraries in the Python world are libraries for machine learning, deep learning, and scientific numerical mathematics.
 A comprehensive description would not be justified within the scope of this work, so the following should be noted.
-Besides Github, there are various forums, blogs, online tutorials, scientific papers, and books that explain how to work with Python, specifically with a library or in a scientific branch.
-
-
+Besides #gls("github"), there are various forums, blogs, online tutorials, scientific papers, and books that explain how to work with Python in general, focusing specifically on a library or on scientific branches.
 Furthermore, it should be mentioned that the freely available libraries help modern scientists work faster.
 If these libraries were not available, much would have to be made from scratch, which could take months or, in the case of very high-quality differential equation solvers like Fenics
 @alnaes2015fenics @Boyko2024 @Burman2024 @Burman2024a @Yang2024a @Zhang2024a,
 possibly years.
-
-// TODO not in original german verison but fine
 Very high-quality libraries are dissertation results or code written and verified by an entire department in a company.
 An example of an open-source library that, among other things, brought out OpenAI's ChatGPT and is used and developed by various companies and scientific institutions is PyTorch
 @Paszke2019 @Wei2024 @Buehler2024 @Huang2023 @Hu2024 @Chen2024a.
 
-Using SymPy @meurer2017sympy @Virtanen2020a, which represents a Python library, is applied in various scientific works
-@NEURIPS2023_4a47dd69 @Wang2024a @Yamamoto2024 @Liu2024 @Grohs2024.
-With it, it is possible to perform computer-aided analytical mathematics.
-Examples include the calculation of integrals, differentials, solving systems of equations, and other important Linear Algebra operations.
-If, among other things, the described equations are used and transferred into a SymPy representation, beam models can be calculated with computer support.
-Since SymPy can work analytically, the section force distributions can also be obtained as analytical equations.
-This idea was implemented in the open-source library SymBeam @symbeam_tool.
-Among other alternatives that try to do the same thing, SymBeam was initially chosen.
-The reasons for this were mainly the proper documentation on one hand and the easy handling on the other.
+Having provided some background on why Python was chosen for the beam model solver, the library SymPy @meurer2017sympy @Virtanen2020a should be considered. It allows to perform computer-aided analytical mathematics and is applied in various scientific works @NEURIPS2023_4a47dd69 @Wang2024a @Yamamoto2024 @Liu2024 @Grohs2024.
+Examples for computer-aided analytical mathematics include the calculation of integrals, differentials, solving systems of equations, and other important Linear Algebra operations. 
+If the described equations are used and transferred into a SymPy representation,
+the internal force distributions can also be obtained as analytical equations.
+With it the beam modeling is accelerated through computational power.
+Furthermore this allows to incorporate the beam model solver into numerical optimization frameworks.
+The idea of a computational beam model solver was implemented for instance in the open-source library SymBeam @symbeam_tool.
+While there are other alternatives SymBeam was initially chosen due to the comprehensive documentation and easy handling on the other hand.
 
-This tool was initially thoroughly investigated. Various beam models were set up and compared with the sample solution, among others from @Gross2021b.
-Unexpected issues were encountered. The source code was examined in detail and corrected accordingly.
-After the correction, we were able to calculate beam models on the computer.
+While there are advantages of openly available solvers, for proper scientific ethics funcantily checks are required. Thus. before integrating the beam solver based on SymBeam @symbeam_tool, it was compared against various beam models for which the solution was available through text books, such as @Gross2021b.
+Since, unexpected issues were encountered, the source code was examined in detail and corrected accordingly.
+With these corrections a computational beam solver could be integrated into an optimization framework.
+
+// ---------------------------------- here ---------------------------------- //
+However, focusing on real world application, the loads and supports of a 3d #gls("fem") model of a #gls("swith") 
+
+
 However, there was the limitation that currently only statically determinate calculations could be performed.
-
-
 The goal pursued with the beam model will become more evident in detail later.
 However, for current understanding, the following brief explanation is given.
+
 To be able to transfer the actual support from the three-dimensional model into a one-dimensional beam model in a two-dimensional coordinate system, it might not be sufficient in practice to calculate only statically determinate systems.
 When transforming the support conditions from three dimensions to 2 dimensions, the physical behavior must be understood in detail and assumptions must be made.
 Both together could ensure that the dimension transformation leads to a statically indeterminate support.
