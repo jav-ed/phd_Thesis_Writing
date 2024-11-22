@@ -15,12 +15,11 @@
 // use it form not we form
 In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into an desired input format for kmeans++ for the inital step of #gls("ld", long:true). 
 Furthermore, it was mentioned that the 1d form of the resulting partial forces $F_(a,i,j)$ allow the incorporation of 1d beam models within optimization frameworks. 
-This subsection aims to provide a detailed description of the beam model.
-Key questions to be addressed include: what a beam model is, how it is used, its
-
-// TODO is this actually true - or is it coveed in 4_Beam Opti part
-advantages and disadvantages, what numerical optimization means, its objectives, what theoretical possibilities exist, and how the process was specifically implemented.
-
+This subsection aims to provide a detailed mathematical based description of the beam model.
+Key questions to be addressed include: what a beam model is, how it is used and which how it can be implemented efficiently as a computational tool.
+With covering some fundamentals about optimization in @chap_4_0_3 the beam model's 
+// the idea is to say, that its pros and cons against for example #gls("fem") are viewed
+incorporation within an optimiaztion framework is investigated and assesed as suitable choice in @chap_4_0_4.
 
 In many engineering programs, working with beam models is taught under the course name technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
 This represents an efficient method that combines physics and mathematics.

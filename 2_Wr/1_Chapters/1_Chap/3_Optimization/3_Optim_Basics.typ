@@ -13,7 +13,7 @@
 // explain things about evolutionary algorithms
 === Fundamentals of Optimization<chap_4_0_3>
 
-In the previous section, important basics of the beam model were explained, particularly the internal force distributions relevant for optimization. However, before explaining in detail how optimization can work together with a beam model, it is important to have a fundamental understanding of optimization. This section is intended to meet this requirement.
+In the previous @chap_4_0_2, important basics of the beam model were explained, particularly the internal force distributions relevant for optimization. However, before explaining in detail how optimization can work together with a beam model, it is important to have a fundamental understanding of optimization. This section is intended to meet this requirement.
 
 // -------------------------------------------------------------------------- //
 
