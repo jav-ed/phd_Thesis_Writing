@@ -15,6 +15,12 @@
   // appenix equations numbering should be styled like: (A.1), (A.2);  (B.1), (B.2) and so 
   show: eq_number_appendix
 
+  // init appendix
+  heading(level: 1, numbering: none, "Appendix", supplement: [Appendix])
+
+  // adapt counter for appendix sections
+  // to have the following sections start with A.1, A.2, and so on
+  counter(heading).update(1)
 
   // -------------------------------- keep it ------------------------------- //
   body

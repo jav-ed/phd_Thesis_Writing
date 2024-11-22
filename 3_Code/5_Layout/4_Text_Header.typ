@@ -34,13 +34,37 @@
     v(4em)  // Add some vertical space
 
     if it.numbering == none {
-      // For excluded headings, just return the original heading without modifications
-      
-      block(width: 100%)[
+
+      // ----------------------- special case appendix ---------------------- //
+      if it.supplement != none and "Appendix" in it.supplement.text {
+        //  repr(type(it.supplement.text))
+        let chap_add = "Additional Materials"
+
+        block(width: 100%)[
           #set align(center)
+          #if chap_add != none {
+            chap_add
+            v(0.01em)
+          }  
+
+          #set align(center)
+          #v(-1em)
           #set text(size: 2em, weight: "bold")
           #smallcaps(it)
         ]
+      }
+
+      // ----------------------- non numbered headings ---------------------- //
+      else {
+        // For excluded headings, just return the original heading without modifications
+        
+        block(width: 100%)[
+            #set align(center)
+            #set text(size: 2em, weight: "bold")
+            #smallcaps(it)
+          ]
+
+      }
     }
      
     else {
@@ -49,8 +73,10 @@
       let chap_add = none
 
       // Could be Appendix
-      if it.numbering.contains("A.1.1") {
-         chap_add = "Appendix"
+      // if it.numbering.contains("A.1.1") {
+      if it.numbering == none and it.supplement == "Appendix" {
+        //  chap_add = "Appendix"
+         chap_add = "Additional Materials"
       }
 
       // Could be Prefix

@@ -144,27 +144,28 @@ With it the beam modeling is accelerated through computational power.
 Furthermore this allows to incorporate the beam model solver into numerical optimization frameworks.
 The idea of a computational beam model solver was implemented for instance in the open-source library SymBeam @symbeam_tool.
 While there are other alternatives SymBeam was initially chosen due to the comprehensive documentation and easy handling on the other hand.
-
 While there are advantages of openly available solvers, for proper scientific ethics funcantily checks are required. Thus. before integrating the beam solver based on SymBeam @symbeam_tool, it was compared against various beam models for which the solution was available through text books, such as @Gross2021b.
 Since, unexpected issues were encountered, the source code was examined in detail and corrected accordingly.
 With these corrections a computational beam solver could be integrated into an optimization framework.
 
-// ---------------------------------- here ---------------------------------- //
-However, focusing on real world application, the loads and supports of a 3d #gls("fem") model of a #gls("swith") 
-
-
-However, there was the limitation that currently only statically determinate calculations could be performed.
-The goal pursued with the beam model will become more evident in detail later.
-However, for current understanding, the following brief explanation is given.
-
+However, focusing on #glspl("swith") and real world application, the support will be defined in 3d. 
 To be able to transfer the actual support from the three-dimensional model into a one-dimensional beam model in a two-dimensional coordinate system, it might not be sufficient in practice to calculate only statically determinate systems.
-When transforming the support conditions from three dimensions to 2 dimensions, the physical behavior must be understood in detail and assumptions must be made.
-Both together could ensure that the dimension transformation leads to a statically indeterminate support.
+When transforming the support conditions from three dimensions to 2 dimensions, the physical behavior must be understood in detail and to make assumptions that would allow the 2d support mapping.
+This could leads to a statically indeterminate support.
+Since SymBeam is limited to solving statical determined beam models, the opensource alternative #emp_[IndeterminateBeam] @interdetbeam_tool was chosen.
+The availabiliy of another implementation for a computational beam solver strenthen the choice of Python. 
+Similar to SymBeam, more than 20 beam models were created with IndeterminateBeam.
+Their results were compared with sample solutions from textbooks, and it could be determined that the implementation of IndeterminateBeam is already correct and no modication is required.
+Results of five statically determindes and five indeterminated beam models are depicted in @fig_Ap_0 to @fig_Ap_6 and @fig_Ap_7 to @fig_Ap_11 in @chap_Append_0, respectively.
 
-Therefore, the initial path was to search again for existing tools.
-The found library is called IndeterminateBeam @interdetbeam_tool and is also freely available.
-Similar to SymBeam, IndeterminateBeam was calculated with more than 20 beam models.
-The results were compared with sample solutions from textbooks, and it could be determined that the implementation of IndeterminateBeam is correct.
 
-// TODO Appendix presentation not yet as desired, also not in original german verison
-// Three examples are shown in @chap_Apendix
+
+Finally it can be said that IndeterminateBeam @interdetbeam_tool was chosen as the computaitonal beam model solver, it was valitaed with known solutions of beam models and it can be incorporated into existing numerical optimiaztion frameworks.
+
+
+// --------------------------------- summary -------------------------------- //
+// summary based on the provided text above is missing
+// #summary_([
+
+
+// ])

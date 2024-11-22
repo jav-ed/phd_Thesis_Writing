@@ -123,8 +123,8 @@
 
 
 // -------------------------------- Appendix -------------------------------- //
-// #show: appendix_manag
-// #include "2_Wr/10_Appendix/0_File.typ"
+#show: appendix_manag
+#include "2_Wr/10_Appendix/0_Beam_Valid.typ"
 
 /* -------------------------------- glossary -------------------------------- */
 #show: output_glossary
