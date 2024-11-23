@@ -13,17 +13,37 @@
 // explain things about evolutionary algorithms
 === Fundamentals of Optimization<chap_4_0_3>
 
-In the previous @chap_4_0_2, important basics of the beam model were explained, particularly the internal force distributions relevant for optimization. However, before explaining in detail how optimization can work together with a beam model, it is important to have a fundamental understanding of optimization. This section is intended to meet this requirement.
+// this pre intro of the upcomoing text inside the subsection. you need to adapt and epand the pre-intro a bit
+In the previous @chap_4_0_2, important basics of the beam model were explained, particularly the internal force distributions relevant for optimization. However, in order to explain in detail how optimization can utilize a beam model as omne compoent, some fundamentals about optimization are focused in this subsection.
 
 // -------------------------------------------------------------------------- //
 
-Optimization is primarily a mathematical method used to obtain a so-called optimal result. Understanding the definition of "optimal" is particularly important. When optimizers speak of an optimized result, they usually refer to a local minimum rather than a global minimum. There are three important technical terms that should be explained in the following.
+// adapt language to come more close to phd
+Optimization is primarily a mathematical method used to obtain #emp_[optimal] result. Understanding the definition of #emp_[optimal] is particularly important. When optimizers speak of an optimized result, they usually refer to a local minimum rather than a global minimum. There are three important technical terms that should be explained in the following.
 
-The difference between local and global can be understood through the first and second derivatives of an analytical mathematical function. From school days, curves with many ups and downs might still be familiar. If the present graph of the analytical function shows many fluctuations in its course, then the first derivative changes from positive to negative or vice versa. If this type of variation is recognizable in many places, the function can be described as multi-modal or highly nonlinear. It is important to initially not consider simple trigonometric periodic functions, such as sine or cosine functions, which are also non-linear. The periodic sine or cosine function is a trigonometric non-linear function and exhibits many changes in first derivatives (positive to negative) when enough cycles are displayed. However, this does not help in understanding local and global minima.
+The difference between local and global can be understood through the first and second derivatives of an analytical mathematical function. 
+// adapt language according to a phd
+From school days, curves with many ups and downs might still be familiar. If the present graph of the analytical function shows many fluctuations in its course it is called multimodal and then the first derivative changes from positive to negative, vice versa or go to zero and then back to the original sign of gradient. 
+If this type of variation is recognizable in many places, the function can be described as multi-modal or highly nonlinear. 
 
 // ---------------------------- global and local ---------------------------- //
-// TODO create images to highlight how to understand global and local minima
-To illustrate the difference between local and global behavior, we consider functions where one point can clearly be identified as absolutely lowest or highest. When such a function is considered, it can be noted that the lowest point in the entire function course is referred to as the global minimum. Correspondingly, the point that results in the highest in the entire function space would be considered the global maximum. Between the global minima and maxima, so-called inflection points can be observed. Before and after these, the first derivatives, which indicate the slope of the function, usually change their sign. Exactly at the points where the first derivative has a value of zero, the local minima and maxima are located. Thus, the difference between global and local is as follows: For non-periodic and symmetric functions, there is exactly one global value for maxima and minima. If the function is highly nonlinear or even periodic, correspondingly many local minima and maxima will be found.
+// use it form
+To illustrate the difference between local and global behavior, we consider functions where one point can clearly be identified as absolutely lowest or highest. When such a function is considered, it can be noted that the lowest point in the entire function course is referred to as the global minimum. Correspondingly, the point that results in the highest in the entire function space would be considered the global maximum. Between the global minima and maxima, inflection points can be observed. Before and after these, the first derivatives, which indicate the slope of the function, usually change their sign. Exactly at the points where the first derivative has a value of zero, the local minima and maxima are located. Thus, the difference between global and local is that there is only one global maximum and one global minimum value, while there can be multiple local maxima and minima values. 
+It is also possible that fucntions do not have any global maximum or minium value.
+A concrete example can be given thorug  trigonometric functions, such as sine or cosine functions. While they are non-linear, due to their periodicty no global extreme values can be found.
+This is depicted 
+
+For non-periodic and symmetric functions, generally there is exactly one global value for maxima and minima. If the function is highly nonlinear or even periodic, correspondingly many local minima and maxima will be found.
+
+// show example with periodic function
+// // while it is a good example, it must be optimized in language
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/0_Sin_Opti.svg", 
+  width: 100%),
+  caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
+)
+
 
 Furthermore, it should be explained why the sign of the slope does not always have to change before and after a local extreme point (first derivative equals zero). In some cases, the function course comes to rest. Here, it could be that the course only briefly has a slope of zero and then continues without changing signs. If the sign is not changed after a local extreme point, it is called a saddle point. Saddle points occur less frequently than a sign change, but with complex functions, the probability of their occurrence increases. Moreover, it is also possible that after a local extreme point, the slope remains zero. In this case, a constant value would be observed for a corresponding argument interval. By argument interval, we mean an interval that has input values arranged in a sequential order. The input values are those values that the function would receive as input.
 
