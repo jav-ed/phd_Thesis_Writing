@@ -1,6 +1,7 @@
 import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pathlib import Path
 
 # Generate x values from 0 to 4π
 x = np.linspace(0, 4*np.pi, 1000)
@@ -19,12 +20,14 @@ fig = make_subplots(rows=3, cols=1,
                     subplot_titles=('Function: sin(x)', 
                                   'First Derivative: cos(x)', 
                                   'Second Derivative: -sin(x)'),
-                    vertical_spacing=0.12)
+                    vertical_spacing=0.08)
 
 # Add main sine curve
 fig.add_trace(
     go.Scatter(x=x, y=y, name='sin(x)', 
                line=dict(color='#1f77b4', width=2),
+               legendgroup="group1",
+               legendgrouptitle_text="Original Function",
                hovertemplate='x: %{x:.2f}<br>y: %{y:.2f}<extra></extra>'),
     row=1, col=1
 )
@@ -35,6 +38,7 @@ fig.add_trace(
         x=max_x, y=max_y,
         mode='markers+text',
         name='Global & Local Maximum',
+        legendgroup="group1",
         marker=dict(size=10, color='#2ca02c', symbol='circle'),
         text=['Global Maximum (y=1)', 'Global Maximum (y=1)'],
         textposition='top center',
@@ -49,6 +53,7 @@ fig.add_trace(
         x=min_x, y=min_y,
         mode='markers+text',
         name='Global & Local Minimum',
+        legendgroup="group1",
         marker=dict(size=10, color='#d62728', symbol='circle'),
         text=['Global Minimum (y=-1)', 'Global Minimum (y=-1)'],
         textposition='bottom center',
@@ -61,6 +66,8 @@ fig.add_trace(
 fig.add_trace(
     go.Scatter(x=x, y=dy, name='cos(x)', 
                line=dict(color='#ff7f0e', width=2),
+               legendgroup="group2",
+               legendgrouptitle_text="First Derivative",
                hovertemplate='x: %{x:.2f}<br>y: %{y:.2f}<extra></extra>'),
     row=2, col=1
 )
@@ -72,6 +79,7 @@ fig.add_trace(
         y=np.zeros_like(np.concatenate([max_x, min_x])),
         mode='markers',
         name='f\'(x) = 0',
+        legendgroup="group2",
         marker=dict(size=10, color='#9467bd', symbol='circle'),
         hovertemplate='x: %{x:.2f}π<br>f\'(x) = 0<extra></extra>'
     ),
@@ -82,6 +90,8 @@ fig.add_trace(
 fig.add_trace(
     go.Scatter(x=x, y=d2y, name='-sin(x)', 
                line=dict(color='#2ca02c', width=2),
+               legendgroup="group3",
+               legendgrouptitle_text="Second Derivative",
                hovertemplate='x: %{x:.2f}<br>y: %{y:.2f}<extra></extra>'),
     row=3, col=1
 )
@@ -92,6 +102,7 @@ fig.add_trace(
         x=max_x, y=-np.ones_like(max_x),
         mode='markers',
         name='f\'\'(x) < 0 at Maximum',
+        legendgroup="group3",
         marker=dict(size=10, color='#2ca02c', symbol='circle'),
         hovertemplate='x: %{x:.2f}π<br>Concave Down at Maximum<extra></extra>'
     ),
@@ -103,6 +114,7 @@ fig.add_trace(
         x=min_x, y=np.ones_like(min_x),
         mode='markers',
         name='f\'\'(x) > 0 at Minimum',
+        legendgroup="group3",
         marker=dict(size=10, color='#d62728', symbol='circle'),
         hovertemplate='x: %{x:.2f}π<br>Concave Up at Minimum<extra></extra>'
     ),
@@ -115,7 +127,9 @@ fig.update_layout(
     width=900,
     showlegend=True,
     title_text='Sine Function and its Derivatives',
-    
+    legend=dict(
+        tracegroupgap=30  # Add more space between legend groups
+    )
 )
 
 # Update axes
@@ -135,5 +149,85 @@ for i in range(1, 4):
         row=i, col=1
     )
 
+
+# ============================================================================ #
+# ================================ border_less =============================== #
+# ============================================================================ #
+def border_less(fig):
+
+    chosen_text_size = 15
+    # chosen_font = "CMU Serif"
+    chosen_font = "New Computer Modern"
+    legend_title_size = chosen_text_size
+    # legend_entry_size = chosen_text_size-2
+    legend_entry_size = chosen_text_size
+
+
+    fig.update_layout(
+        # would remove the desired helping rectangulars
+        # plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
+
+        paper_bgcolor='rgba(0,0,0,0)',  # Transparent paper
+        margin=dict(l=0, r=0, t=20, b=0),  # Remove margins
+
+        title = None,
+        # textfont = dict(size=15,family = "CMU Serif"),
+        font = dict(
+            size=chosen_text_size,
+            family = chosen_font
+        ),
+
+        xaxis=dict(
+            showline=True,
+            showgrid=True,
+            showticklabels=True,
+            linewidth=2,
+            tickfont=dict(family=chosen_font, size=chosen_text_size),
+            title_font=dict(size=chosen_text_size,family = chosen_font),
+
+        ),
+
+        yaxis=dict(
+            showline=True,
+            showgrid=True,
+            showticklabels=True,
+            linewidth=2,
+            tickfont=dict(size=chosen_text_size,family = chosen_font),
+            title_font=dict(size=chosen_text_size,family = chosen_font),
+        ),
+
+        legend=dict(
+            font=dict(family=chosen_font, size=legend_entry_size),
+            title=dict(font=dict(family=chosen_font, size=legend_title_size)),
+            tracegroupgap=30  # Added this to maintain group spacing
+        ),
+
+
+
+    )
+
+        # Update text size for all traces
+    for trace in fig.data:
+        if isinstance(trace, go.Scatter):
+            trace.textfont.update(size=chosen_text_size, family=chosen_font)
+
+    return fig
+
+
+fig = border_less(fig)
+
 # Show the plot
-fig.show()
+# fig.show()
+
+
+cwd = Path.cwd()
+# output_fold = cwd / "1_Data/2_Figs/2_Code_Created"
+output_fold = cwd / "1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics"
+
+
+# Save the plot as SVG
+fig.write_image(output_fold/"1_Sin_Opti.svg")
+
+# Optional: Save the plot
+# fig.write_html("trig_visualization.html")
+# fig.write_image("trig_visualization.pdf")  # Requires kaleido package
