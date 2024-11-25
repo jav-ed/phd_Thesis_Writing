@@ -26,6 +26,7 @@ The difference between local and global can be understood through the first and 
 From school days, curves with many ups and downs might still be familiar. If the present graph of the analytical function shows many fluctuations in its course it is called multimodal. Here many occasions can be found where the sign of the first derivative changes from positive to negative, vice versa or goes to zero and then back to the orginal sing.
 An illustative depiction of of a multimodal funciton is povided in @fig_72
 
+// proper caption required
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/0_Multi_Modal.svg", 
   width: 100%),
@@ -43,6 +44,7 @@ It is also possible that fucntions do not have one single unique global maximum 
 A concrete example can be given thorug  trigonometric functions, such as sine or cosine functions. While they are non-linear, due to their periodicty the global extreme values are the same as the local values.
 This can be verified through @fig_73.
 
+// proper caption required
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/1_Sin_Opti.svg", 
   width: 100%),
@@ -74,7 +76,8 @@ Using two varaibles imoprtant extreme occurences are visualized in @fig_75.
 
 The 
 // is this really called definiteheit of the hessian matrix?
-definiteheit mentioned in the subfigure titles of @fig_75 refers to definiteheit of the hessian matrix. The hessian matrix can be stated mathematicaly as @eq_103
+definiteheit mentioned in the subfigure titles of @fig_75 refers to definiteheit of the hessian matrix @mdobook. The hessian matrix can be stated mathematicaly as @eq_103.
+For an in depth review on the hessian matrix, how its eigenvalues are calculated and which meaining it has readers are referred to literature such as @mdobook @Papageorgiou2015 @Stein2018a.
 
 #set math.mat(gap: 1.1em)
 $ H(f) = mat(
@@ -86,7 +89,9 @@ $ H(f) = mat(
 
 // ---------------------------------- here ---------------------------------- //
 // -------------------------- general optimization -------------------------- //
-Generally, it could be assumed that the ideal goal of the optimizer is to find a global minimum. However, depending on which optimizer is used, this is only conditionally feasible. An optimizer is a combination of mathematics and logic, typically implemented through computer code. Logic in this context means that if this happens, then that should be given as an answer. There are numerous optimizers and numerous review articles comparing different optimizers @Zhang2015 @Cheng2016 @Gharehchopogh2019 @Li2021a @Gad2022. The aim of this work is not to explain the individual optimization algorithms in detail. However, where further explanations are deemed necessary for understanding, these will be provided.
+Having explained the difference between local and global extreme points, generally, it could be assumed that the ideal goal of the optimizer is to find a global minimum. However, depending on which optimizer is used, this is only conditionally feasible. An optimizer is a combination of mathematics and logic, typically implemented through computer code. 
+Logic in this context means that if this happens, then that should be given as an answer. There are numerous optimizers and numerous review articles comparing different optimizers @Zhang2015 @Cheng2016 @Gharehchopogh2019 @Li2021a @Gad2022. 
+The aim of this work is not to explain the individual optimization algorithms in detail. However, where further explanations are deemed necessary for understanding, these will be provided.
 
 It was stated that the goal is to find a global minimum. Searching for a global maximum is feasible both mathematically and programmatically. However, in science and industry, the search is usually for the minimum. This has evolved over time and could potentially be described as an unwritten, internationally recognized norm. If the function $f(x)$ is to be minimized, this could also be defined as a maximization problem, as shown in equation @eq_104. Here, $-f(x)$ would mirror the function in two dimensions about the horizontal axis. After this function $-f(x)$ has been maximized, the optimization result can be reversed in sign again to obtain the same result as minimizing $f(x)$.
 
