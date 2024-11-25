@@ -76,16 +76,18 @@ Using two varaibles imoprtant extreme occurences are visualized in @fig_75.
 
 The 
 // is this really called definiteheit of the hessian matrix?
-definiteheit mentioned in the subfigure titles of @fig_75 refers to definiteheit of the hessian matrix @mdobook. The hessian matrix can be stated mathematicaly as @eq_103.
-For an in depth review on the hessian matrix, how its eigenvalues are calculated and which meaining it has readers are referred to literature such as @mdobook @Papageorgiou2015 @Stein2018a.
+definiteheit mentioned in the subfigure titles of @fig_75 refers to definiteheit of the symetric hessian matrix @mdobook. The hessian matrix can be stated mathematicaly as @eq_103 or as @eq_104 in index notation.
+For an in depth review on the hessian matrix, how its eigenvalues are calculated and which meaning it has readers are referred to literature such as @mdobook @Papageorgiou2015 @Stein2018a.
 
 #set math.mat(gap: 1.1em)
-$ H(f) = mat(
+$ bold(H)_(f)(x) = mat(
   display(frac(diff^2 f, diff x_1 diff x_1)), display(frac(diff^2 f, diff x_1 diff x_2)), ..., display(frac(diff^2 f, diff x_1 diff x_n));
   display(frac(diff^2 f, diff x_2 diff x_1)), display(frac(diff^2 f, diff x_2 diff x_2)), ..., display(frac(diff^2 f, diff x_2 diff x_n));
   dots.v, dots.v, dots.down, dots.v;
   display(frac(diff^2 f, diff x_n diff x_1)), display(frac(diff^2 f, diff x_n diff x_2)), ..., display(frac(diff^2 f, diff x_n diff x_n))
 ) $ <eq_103>
+
+$ bold(H)_f_(i j) =  (diff^2 f)/(diff x_i diff x_j ) $ <eq_104>
 
 // ---------------------------------- here ---------------------------------- //
 // -------------------------- general optimization -------------------------- //
@@ -93,9 +95,9 @@ Having explained the difference between local and global extreme points, general
 Logic in this context means that if this happens, then that should be given as an answer. There are numerous optimizers and numerous review articles comparing different optimizers @Zhang2015 @Cheng2016 @Gharehchopogh2019 @Li2021a @Gad2022. 
 The aim of this work is not to explain the individual optimization algorithms in detail. However, where further explanations are deemed necessary for understanding, these will be provided.
 
-It was stated that the goal is to find a global minimum. Searching for a global maximum is feasible both mathematically and programmatically. However, in science and industry, the search is usually for the minimum. This has evolved over time and could potentially be described as an unwritten, internationally recognized norm. If the function $f(x)$ is to be minimized, this could also be defined as a maximization problem, as shown in equation @eq_104. Here, $-f(x)$ would mirror the function in two dimensions about the horizontal axis. After this function $-f(x)$ has been maximized, the optimization result can be reversed in sign again to obtain the same result as minimizing $f(x)$.
+It was stated that the goal is to find a global minimum. Searching for a global maximum is feasible both mathematically and programmatically. However, in science and industry, the search is usually for the minimum. This has evolved over time and could potentially be described as an unwritten, internationally recognized norm. If the function $f(x)$ is to be minimized, this could also be defined as a maximization problem, as shown in equation @eq_105. Here, $-f(x)$ would mirror the function in two dimensions about the horizontal axis. After this function $-f(x)$ has been maximized, the optimization result can be reversed in sign again to obtain the same result as minimizing $f(x)$.
 
-$ min f(x) = - max -f(x) $ <eq_104>
+$ min f(x) = - max -f(x) $ <eq_105>
 
 So far, we had assumed that we want to find a global minimum. Depending on the optimization problem, the available hardware, and the optimizer, this is not always possible. There are two major classes of optimization methods. The first works with gradient information, while the other type is gradient-free. Both have their justification and exhibit different advantages and disadvantages. A gradient-based optimizer needs both the gradients of the objective function with respect to the design variables and with respect to the constraints. A gradient can be physically and intuitively imagined through the following question: What happens to one quantity when another quantity is changed? In this case, our quantity would be the function $f(x)$ and the quantity to be changed x. In other words, what happens to the output $f(x)$ when the input x is changed? Should the change in x cause a large change in the output $f("x")$, then x is an important variable. To understand the significance of this statement, the following explanation is provided: The function $f(x)$ could also depend on a vector or multiple variables.
 

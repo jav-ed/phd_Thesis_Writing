@@ -89,7 +89,7 @@ file_paths= [
     # "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ",
     # "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ",
     "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ",
-    "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
+    # "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ",
 ]
 
 for i_c, ct_file in enumerate(file_paths):
@@ -109,7 +109,7 @@ for i_c, ct_file in enumerate(file_paths):
     # ignore = None | int
     # if you need eq_70 to be free, choose: ignore=69
     # if you want to remove: eq_70, chose: ignore=69 and increment=-1
-    content = replace_equation_numbers(content, increment=1,  ignore= 102)
+    content = replace_equation_numbers(content, increment=1,  ignore= 103)
     print_changes(original_content, content, r'eq_(\d+)')
 
     # ----------------------------------- figs ----------------------------------- #
