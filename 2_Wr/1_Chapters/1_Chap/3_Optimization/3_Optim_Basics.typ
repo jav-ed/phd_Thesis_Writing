@@ -171,7 +171,7 @@ Additionally, they can work with all forms of design variables since no gradient
 Their disadvantage is that they become significantly slower with an increasing number of design variables. 
 
 Finally, since the concept pf multidisciplinary optimization was mentioned, it is also important th mention the concept of muliobjective optimization. 
-// adapt that
+// adapt that also make sure the have clearly mentioned that there is much more that can be said about optimiaztion. howver because optimiaztion is only one part of this phd only some important aspects of optimiaztion were covered - those who are thought would be required to follow along the upcoming optimiaztion framework preswented in @chap_4_0_4 and the optimization result sin @chap_5
 Concrete example, It can also happen that the customer has wishes that are only conditionally physically related. For example, it could be that on one hand, the costs in building an aircraft should be kept as low as possible. On the other hand, the aircraft should have a high flight speed. In such a case, it could be assumed that two different objective functions can be found. If two or more objective functions are to be used, multi-objective optimization can be performed. There is sufficient literature on this topic, so reference is made to @Sengupta2016 @Cui2017 @Blank2020.
 
 // --------------------------------- summary -------------------------------- //

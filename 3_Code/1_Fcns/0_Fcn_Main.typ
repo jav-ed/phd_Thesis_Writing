@@ -12,6 +12,7 @@
 #import "3_German_Specific.typ": *
 #import "4_Glos_Fcns.typ": *
 #import "5_Boxes.typ": *
+#import "6_Drawing.typ": *
 
 
 

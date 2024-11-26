@@ -118,9 +118,10 @@
 
 
 // --------------------------------- results -------------------------------- //
+#include "2_Wr/1_Chapters/2_Chap/0_Results/0_Res_Init.typ"
 
-// discussion
-
+// ------------------------------- discussion ------------------------------- //
+#include "2_Wr/1_Chapters/3_Chap/0_Discuss/0_Discus.typ"
 
 // -------------------------------- Appendix -------------------------------- //
 #show: appendix_manag
