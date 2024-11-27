@@ -162,7 +162,7 @@ Once the optimization problem has been satisfactorily defined, the optimization 
 
 // -------------------------------------------------------------------------- //
 
-Next additional infromaiton about the difference ebtween gradient free and gradient based optimizers shall be given.
+Next additional infromaiton about the difference between gradient free and gradient based optimizers shall be given.
 When gradients are available, gradient-based optimizers are known to find a solution much faster than gradient-free optimizers. However, gradient-based optimizers usually provide a local minimum. A local minimum could already be an improvement over an initial state that meets the requirements. Therefore, the solution of the local minimum should not be directly rejected.
 Moreover, it is important to know that there are diferent types of design variables.
 For instance, one design variable might represent temperature. Temperature is a continuous quantity that can be refined between two discrete values through decimal numbers. Another type of design variable could be discrete. Here, only whole numbers can be chosen, and decimal places are thus not available. Another form of design variables could be binary variables. Here, there would be exactly two possibilities, either yes or no. For discrete and binary design variables, it is often quite difficult to obtain reliable gradients. With a gradient-based optimizer, the gradients significantly determine the optimization path. If these are unreliable or even wrong, either unreasonable results will be obtained, or no convergence can be achieved. Furthermore, it may also be impossible to calculate gradients. In this case, gradient-based optimizers cannot be used.

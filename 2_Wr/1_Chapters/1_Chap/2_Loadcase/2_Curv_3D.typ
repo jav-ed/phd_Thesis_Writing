@@ -216,7 +216,7 @@ The application of curvature results to real-world scenarios necessitates analys
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/10_Tubes_Ca_06_P_510.png", 
   width: 100%),
-  caption: ["Focused and scaled depiction of the first-order derivatives (strain) at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$. Top left: wing-fuselage intersection; top right: landing gear and engine; bottom left: end of inner wing and tubes; bottom right: outer wing end.],
+  caption: [Focused and scaled depiction of the first-order derivatives (strain) at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$. Top left: wing-fuselage intersection; top right: landing gear and engine; bottom left: end of inner wing and tubes; bottom right: outer wing end.],
 ) <fig_44>
 
 

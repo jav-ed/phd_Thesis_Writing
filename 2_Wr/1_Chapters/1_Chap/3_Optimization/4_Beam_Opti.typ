@@ -115,22 +115,17 @@ Another reason is given through @fig_78. It can be observed that the discretized
 
 The lower left part of @fig_78 shows that the continuous aerodynamic as received from APAME is injectied into the #gls("fem") model.
 Now both versions are send to a comparision block. In this block the deivation with resepct a structral meaniningful quantity could be caluclated, such as the deviation, stress, strain.
-This would allow a verifcation of wheter the proposed optimization would work for the given #gls("swith") model. 
-// too long -> break into sub sentces. also make it more clear
-Because  #glspl("swith") are expected to be made of #gls("cfrp") material and one of the major goals of the compairsion is to determine wheter the overal strucutral behaviour remains consistent, that is, no unexpected local failure, same failure modes, consistent palces and magntiude of stress, strain peaks and general stress and strain distribution should match. 
-// ---------------------------------- here ---------------------------------- //
-For these reasons a reserve factror equations ..
 
+In order to derive a proper assessment criteria, two main things need to be considered.
+First  #glspl("swith") are expected to be made of #gls("cfrp") material.
+Seocnd one of the major goals of the comparison is to determine wheter the overal strucutral behaviour remains consistent, that is, no unexpected local failure, same failure modes, consistent palces and magntiude of stress, strain peaks and general stress and strain distribution should match. 
+Because composite material is used, failure criterion such as the Von Mises failure criterion cannot be used @Altenbach2018 @markmiller2024cas.
+Von Mises failure criterion was developed for metals. Here the material behaves the same way in all directions (isotropy). In metals, this makes sense because their crystalline structure is typically randomly oriented, so statistically, the properties are the same in all directions @Hans_Bargel_2022. However, composites are intentionally designed to be stronger in some directions than others. This directional dependency (anisotropy) is actually the main advantage of composites.
+Instead criterion criteria such as ZTL, Hashin, or Puck @Altenbach2018 @markmiller2024cas should be used as the assesment criteria.
 
-//explain when optimizer expected not to work fine 
-//explain when optimizer expected to work fine
-// how to transform force back to a 3d force
-// how to calculate differences - commerical software and open source things - usally vtk format, paraview - meshio
+With a proper assesment criteria the comaprison block from @fig_78 can be used to determine how well #gls("ld") performed in 3d.
+The latter depends on multiple variables. First, it depends on the methods that were used to tranform the 1d discreiized load into 3d. Second, it depends on the considered model of the #gls("swith"). It is assumed that the more consistent material properties like the stiffness remain, the better the #gls("ld") through the optimization should work.
+For practial applications, if open-source #gls("fem") solver are used and for some commerical #gls("fem") solver as well, the free and opensource tool meshio @schlomer2022meshio can be used to easily work with element and nodes values to obtain the deviations between two #gls("fem") results.
 
-
-
-
-
-To verify whether the optimization output can be considered acceptable, @fig_78 should be considered. The discrete load obtained from the optimization is first converted back to a three-dimensional load. After that, this can be applied again to the FEM model. The results of this discrete FEM analysis should be recorded. On the other hand, the continuous aerodynamic load should be used to apply it to the FEM model. Once the results from both phases, discrete and continuous, are available, they can be compared with each other. The comparison should pay attention to characteristic structural behavior, such as locality of failure, stress peaks, and stress jumps. If the structural behavior is sufficiently similar, the results with the beam optimization model can be used.
-
-For the continuing work, the comparison procedure, which was previously described as the second option, was initially chosen. In the following section, initial optimization results with the described procedure will be shown.
+// --------------------------------- summary -------------------------------- //
+// summary based on the provided text above is missing
