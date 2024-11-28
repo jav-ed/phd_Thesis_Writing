@@ -26,8 +26,28 @@ lets start with the first optimization model. The objective fucntion is given in
 
 // explain design vars, bounds, constraints
 
-// explain beam model boundary coniditons
-note that the span was normalized. This information is important since it exaplins why the maximal bending moment has such a hihg mangnitude. Furthermore, it is important to know, the longer the span is, the bigger the available design space becomes.
+
+// adapt figure caption
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/0_True_Bem_combined.svg", 
+  width: 85%),
+  caption: [beam schematic, reaction forces, shear and bending moment distirbution over the normalized span for optimization model A.],
+)<fig_79>
+
+
+// explain beam model boundary coniditons - need heavy language modifcation - just quick fragements
+@fig_79 shows the beam model and it solution that used as reference for the optimization.
+the first row in @fig_79, the beam schematic is depicted. it gives infromaiton about the poissiiton and type of the support. here it can be observed that at the left beginning of the beam, there is a clamp, that is, the the movement along the horizontal and vertical direction are not permitted.
+Also it can bear a bending moment.
+Next, the arrows in the beam schematic give infromation about the direciton of the force. Since the aerodynamical force is pointing upwards to keep the airplaine in the air, the arrows point upwards. 
+Comapring @fig_79 to @fig_70, the concrete values of the disitrbuted laods are not given. The reason for that is, that the, aerodynamical force that was obtained through APAME as is obtained as many disitrbuted laods as explained in @chap_4_0_1.
+The high number of these loads, does not allow to add the concrete numbered values of the actual distributed load. Otherweise it would be so mcuh text, that no single disibutrion load as actual load quanity could be read.
+Therefore the added red distirbution is meant to give informaiton about the true aerodynamic load distribution.
+
+The reaction forces in @fig_79 are given in second row and provide value infromation about the reuslting shear force and bending moment that are acting at the position of support points.
+The thired and fourth rows of @fig_79 depict the shear force and bending moment diagram.
+For all subfigures the span length was nromlaized
+This information is important since it exaplins why the maximal bending moment has such a hihg mangnitude. Furthermore, it is important to know, the longer the span is, the bigger the available design space becomes.
 A big design space mean that the optimizer has to go through more possible design variable combinations to find an optimized result. Thus, the computaitonal for an optimiaztion with a high span length is expected to increase the computatioanl time.  
 // make it more clear that a span length of 1 mm spans a design space between 0 and 1
 The number of possible combinations is smaller on span length that is strected between 0 and 1 mm.

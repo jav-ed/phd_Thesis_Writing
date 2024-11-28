@@ -90,7 +90,7 @@ In @fig_70, the upper subplot shows the type of support, its posistion, the appl
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0_Beam_Example.svg", 
   width: 100%),
-  caption: [Exemplary representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
+  caption: [Illustrative representation of a bending beam model. The upper subplot shows the support and the applied loads. The lower subplot shows the resulting support forces],
 )<fig_70>
 
 
@@ -98,7 +98,7 @@ In @fig_70, the upper subplot shows the type of support, its posistion, the appl
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1_Beam_Example.svg", 
   width: 100%),
-  caption: [Exemplary representation of the internal force distributions from @fig_70],
+  caption: [Illustrative representation of the internal force distributions from @fig_70],
 )<fig_71>
 
 // use it form and adapt fore phd writing
