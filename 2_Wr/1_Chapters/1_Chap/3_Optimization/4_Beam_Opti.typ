@@ -46,9 +46,25 @@ free and open-source implementations in python available as mentioned in @chap_4
 mathamtical and theory behind it can be comphrenseded eaiser than of Fem,
 calculation time significant lower than those fem, highly advantge for optimiztation because of the mentioned multiple function calling
 calculation can be done on a regular laptop or even on a raspberry pi
+// some other adanvatage that can be integrated if not duplicated:
+// 	1. personal pc, laptop, even smartphzone can be assumed to suffice
+// 	2. costs go down
+// 		1. no need to rent high perfomance clusters
+// 	3. environmetal impact goes down
+// 	6. easier to debug if somehting goes wrong
+// 	7. easier to expand, because of some of the rasons mentioned above
+// 	8. can be used for teaching students
 
 // some here, but please complete it
-desinging a fem model takes more time, special solver required
+desinging a fem model takes more time, special solver required, could cost money, #gls("swith") is innoative, thus therefore there is no single #gls("swith") available that could be bought. 
+// At this early stage focusing on a single #gls("fem") model could have disadvantages, because there is no ensurance, that the one model cretead is the one that is actually  --- see the following, especially ion the context that fem modiufcations are time intensive
+// 1. using a complex strucutre can be aruged of no actual benefit at the moment
+// 	1. the goal would be to not only do caluclations because we can do them, but do calucaltions that have soe meaining
+// 	2. the meaning would occur, if we have a actual aircraft for which we could do some calucaltion
+// 	3. for the moment too early to decide one one special geomtry or confiuguration
+// 	4. reason for that: it could change, there is a lot of research that needs to be done until we are at the point that we know what works and what not. for the moment to much design variables that could change. their change could have quite big impacts. so results for one complex geomtry not represent work for a jother. for exampoel it could be, that we have chosen a complex gemotry where the simmilarity is just fine and the mehtod seems to work. if non experts who have not fully understood the idea behind it, see some of the results, they might assume, they could simply use this. this could go very wrong for another complex gemotry. in could be that the change in the geomtry now not any longer allow to make use of this method in a feasible way (not close enough to fem).
+// 	5. in order to understand when this metrhod can be used and when not, very heavy and long parameter studies are required. for this however, we would need already build aircrafts that we could compare to each other. based on that compairsion we could idifenty the parameter that have changed. now these parameter could changed to carry out the parameter study to find out wherter the simpler beam method is accruate enough or the compuationally hevaier fem is required.
+   
 
 
 // say you chose the beam model in proper 
