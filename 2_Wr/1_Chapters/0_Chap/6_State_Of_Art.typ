@@ -10,13 +10,13 @@ Subsequently, the key benefits of #glspl("swith") shall be outlined, followed by
 
 This work focuses on #glspl("swith"), which represent a novel configuration for aircraft design. The innovation lies in the manufacturing and design of the wing and the hydrogen tanks. 
 Concretely, the wing is structurally integrated with hydrogen tanks that are placed within the wing, forming a single structural component of the aircraft. An illustrative example of a #gls("swith") is provided in @fig_1. Note that while it would be possible to have #glspl("swith") that utilize liquid hydrogen, this thesis focuses solely on the gaseous version.
-The concept of #glspl("swith") has progressed beyond a mere scientific idea. APUS @APUS_0, an aircraft manufacturing company, is attempting to make the first #gls("swith") commercially available with their i2 model @APUS_1.
-A visual depiction of the i2 is given in @fig_2.
+The concept of #glspl("swith") has progressed beyond a mere scientific idea. APUS @APUS_0, an aircraft manufacturing company, is attempting to make the first #gls("swith") commercially available with their i-2 model @APUS_1.
+A visual depiction of the i-2 is given in @fig_2.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/3_Apus_Img.png", 
   width: 50%),
-  caption: [Visualization of the APUS i2, demonstrating the practical application of #glspl("swith") in commercial aircraft design @APUS_Image.],
+  caption: [Visualization of the APUS i-2, demonstrating the practical application of #glspl("swith") in commercial aircraft design @APUS_Image.],
 ) <fig_2>
 
 

@@ -8,7 +8,7 @@ The deployment of collets as #glspl("lie") for aircraft experimental structural 
 These custom-manufactured components, specifically designed for load introduction at particular profile geometries, present cost implications that correlate directly with wing profile variability along the span. Greater geometric variation demands additional specialized collets, potentially resulting in substantial cost escalation.
 
 To establish practical relevance, it is pertinent to consider the current state-of-the-art #gls("swith") outlined in @chap_0_7. 
-The APUS i2 @APUS_0, characterized as a small aircraft with a 13.2-meter wingspan, is assumed to incorporate tubes of approximately $gt.tilde 7 upright("m")$ length positioned within the inner wings. Based on initial assessments, it can be hypothesized that the aircraft's design utilizes constant airfoil profiles in the inner wing sections, transitioning to non-uniform cross-sections in the outer wings
+The APUS i-2 @APUS_0, characterized as a small aircraft with a 13.2-meter wingspan, is assumed to incorporate tubes of approximately $gt.tilde 7 upright("m")$ length positioned within the inner wings. Based on initial assessments, it can be hypothesized that the aircraft's design utilizes constant airfoil profiles in the inner wing sections, transitioning to non-uniform cross-sections in the outer wings
 This geometric variation requires corresponding collet adaptations, introducing additional manufacturing costs. Furthermore, the deployment calls for evaluation of crane procurement, operational expenses including electricity consumption, and personnel costs.
 // -------------------------------------------------------------------------- //
 

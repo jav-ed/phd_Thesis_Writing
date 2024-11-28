@@ -27,6 +27,18 @@ lets start with the first optimization model. The objective fucntion is given in
 // explain design vars, bounds, constraints
 
 // explain beam model boundary coniditons
+note that the span was normalized. This information is important since it exaplins why the maximal bending moment has such a hihg mangnitude. Furthermore, it is important to know, the longer the span is, the bigger the available design space becomes.
+A big design space mean that the optimizer has to go through more possible design variable combinations to find an optimized result. Thus, the computaitonal for an optimiaztion with a high span length is expected to increase the computatioanl time.  
+// make it more clear that a span length of 1 mm spans a design space between 0 and 1
+The number of possible combinations is smaller on span length that is strected between 0 and 1 mm.
+Contrary to this notion, as mentioned in @chap_1_0_6 large aircraf can have span lengths of around $80 "m "$ or $num("80000") "mm"$. 
+However, currently no large #gls("swith") is known, yet as mentioned in @chap_0_7 APUS @APUS_0 attempts to design and manufacture a small #gls("swith").
+Because higher span lengths increase the availabel design space for optimiaztion and because the i-2 of APUS is a small aircraft, the optimiaztion provided here are focused on a beam length that fits small aircraft.
+Furthermore, with the asusmption of the wings being symtrically along the vertical axis, the half span can be used.
+In this case the length was chosen to be simmilar to the halfspan of the Apus i-2 @APUS_1.
+However, note that the presented method can be used regardless of span length. 
+// maybe the repetation is not fine here?
+The only as mentioned drawback with a high span length is that the calculation time for the optimiaztion is inccreased.
 
 
 // shows results of optimiaztion
