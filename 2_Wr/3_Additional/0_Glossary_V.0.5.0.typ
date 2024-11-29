@@ -28,7 +28,7 @@
       short: "LIE",
 
       // if long form is added, then it will appear as short (long) when the acronoym appears the first time
-      long: [#text(weight: "bold")[L]oad #text(weight: "bold")[I]ntroduction #text(weight: "bold")[E]lement],
+      long: [#text(weight: "bold")[L]oad-#text(weight: "bold")[I]ntroduction #text(weight: "bold")[E]lement],
       description: [A structural component designed to distribute or transfer forces from one part of a structure to another. In aerospace engineering, these elements could be used to surround the profile of a local section of the wing span. The physical surrounding object can then transfer loads to the local surrounded area, helping manage stresses and maintain structural integrity. Structural integrity refers to the ability of a structure or component to withstand its intended loads and forces without failing or experiencing excessive deformation. It encompasses the structure's capacity to maintain its shape, functionality, and performance under various operating conditions, effectively distribute stresses throughout its elements, and resist deformation, fatigue, and environmental degradation over time. Load introduction elements can take various forms depending on their specific function and location. They are also known as load transfer elements, load-bearing elements, force distribution components, or stress transfer devices. These components are essential in engineering design, particularly in complex structures where managing and distributing forces is critical for performance and safety.]
     ),
     (

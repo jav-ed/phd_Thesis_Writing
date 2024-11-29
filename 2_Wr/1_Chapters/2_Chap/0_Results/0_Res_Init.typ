@@ -25,6 +25,7 @@ lets start with the first optimization model. The objective fucntion is given in
 
 
 // explain design vars, bounds, constraints
+// scipy 
 
 
 // adapt figure caption
@@ -33,6 +34,15 @@ lets start with the first optimization model. The objective fucntion is given in
   width: 85%),
   caption: [beam schematic, reaction forces, shear and bending moment distirbution over the normalized span for optimization model A.],
 )<fig_79>
+
+
+// TODO png looksn terrible, need to be replaced through proper svg using inkscape
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph.png", 
+  width: 100%),
+  caption: [scetch to understand the constraints, visuallay],
+)<fig_80>
+
 
 
 // explain beam model boundary coniditons - need heavy language modifcation - just quick fragements
