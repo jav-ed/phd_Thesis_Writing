@@ -43,6 +43,30 @@ lets start with the first optimization model. The objective fucntion is given in
   caption: [scetch to understand the constraints, visuallay],
 )<fig_80>
 
+// TODO png looksn terrible, need to be replaced through proper svg using inkscape
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/out.svg", 
+  width: 100%),
+  caption: [out],
+)
+// TODO png looksn terrible, need to be replaced through proper svg using inkscape
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/inksccape.svg", 
+  width: 100%),
+  caption: [out],
+)
+
+$ x_("cl",i)": collet length"$
+
+$x_i": centroid position"$
+
+$x": span direction"$
+
+$x$
+
+$x_i$
+
+$x_("cl",i)$
 
 
 // explain beam model boundary coniditons - need heavy language modifcation - just quick fragements
