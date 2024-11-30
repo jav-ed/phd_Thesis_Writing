@@ -1,5 +1,4 @@
-
-
+// use: typst fonts to see which fonts typst is able to find
 // ------------------------------- Font Tester ------------------------------ //
 #set text(font: "New Computer Modern", weight:400, size:12pt)
 New Computer Modern

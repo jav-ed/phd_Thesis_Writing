@@ -13,9 +13,14 @@
 // typst watch main.typ main.pdf
 
 
+// default font 
+// #let chosen_font = "libertinus serif"
+
 #let chosen_font = "New Computer Modern"
 #let font_weight = 400
 #let default_Font_Size = 12pt
+
+
 
 // not suited for pdfs
 // #let chosen_font = "Platypi"

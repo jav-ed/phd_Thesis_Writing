@@ -28,11 +28,11 @@ The process of averaging along the chordwise (x) and vertical (z) directions for
   
 ) <fig_45>
 
-The ellipses in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_("y,const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
+The ellipses in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_(y,"const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
 
 // -------------------------------- method 1 -------------------------------- //
-$ overline(kappa_(1, y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") ^'' / ( (1 + u_("i,j")^(2')) ^(3/2))  \
-&=  1/n_("y,const") sum_i ^(n_("y,const")) kappa_("i,j") $ <eq_53>
+$ overline(kappa_(1, y_i,j)) &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j) ^'' / ( (1 + u_(i,j)^(2')) ^(3/2))  \
+&=  1/n_(y,"const") sum_i ^(n_(y,"const")) kappa_(i,j) $ <eq_53>
 
 
 For a selected span section $y_i$ and axis $j$, the output of @eq_53 is a scalar-valued averaged component of the curvature $overline(kappa_(1, y_i,j))$. Since the output along all three axes is required, the combined result forms a three-dimensional curvature vector. To obtain a single scalar averaged mean value for the curvature, the Euclidean norm can be applied following @eq_33.
@@ -41,7 +41,7 @@ For a selected span section $y_i$ and axis $j$, the output of @eq_53 is a scalar
 The second method employs a different approach by using displacements as its primary input. These displacements are averaged across the chordwise (x) and vertical (z) axes for a numerically constant span section $y_i$. Based on these averaged displacements $overline(u)$, the method calculates the required gradients $u'$ and $u''$, which then yield the mean curvature $overline(kappa_2)$. For a selected span section $y_i$ and dimension axis $j$, these quantities are formally expressed as mean gradients $overline(u_(y_i,j))^(')$ and $overline(u_(y_i,j))^('')$. The mathematical formulation of this averaging approach is given in @eq_54.
 
 $ 
-overline(u_(y_i,j)) &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j") \
+overline(u_(y_i,j)) &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j) \
 overline(u_(y_i,j))^(') &=  (overline(u_(y_i,j)))'  \
 overline(u_(y_i,j))^('') &=  (overline(u_(y_i,j))')' \
 overline(kappa_(2, y_i,j)) &= (overline(u_(y_i,j))^('') ) / (1+ 
@@ -56,8 +56,8 @@ In this approach, both the first-order displacement derivative $u'$ and the seco
 This distinguishes it from method 2, where the gradients $u'$ and $u''$ are derived from the averaged displacement $overline(u)$. The fundamental difference lies in the gradient computation, which follows the methodology of method 1 but applies averaging at each derivative stage. The mathematical formulation of this approach is presented in @eq_55.
 
 $
-overline(u_(y_i,j))' &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j")^' \
-overline(u_(y_i,j))'' &= 1/n_("y,const") sum_i ^(n_("y,const")) u_("i,j")^('') \
+overline(u_(y_i,j))' &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j)^' \
+overline(u_(y_i,j))'' &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j)^('') \
 overline(kappa_(3, y_i,j)) &= (overline(u_(y_i,j))^('') ) / (1+ 
 overline(u_(y_i,j))^(2')
 )^(3/2)
