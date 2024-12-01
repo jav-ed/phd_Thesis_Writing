@@ -17,27 +17,36 @@ the colloboration with IMA helped to find some real world demands. Based on thes
 // maybe add, also interpreted when required
 depcited.
 Moreover, based on the multiple optimization problem defintions the flexibility of the presented approach can be seen.
+The conducated optimiaztions are presented as optimization cases. Where it starts from Optimiaztion Case A where it is the most straight forward and simplest approach. 
+// the idea is to descirbe that for K2H2 much coorperation was conducted with IMA. We had some iterations, some optimizatiosn were presented. IMA told, they need this and that. And such so we got to more concrete optimiaztion defintions - which have high relevance for actual real world application.
+// yet depending on what is actually needed, any of presented optimization case could be the right one. it does not have to be last and most compelx one.
+// through shwoing multiple optimaiztion cases, it is also hihglgihted how optimiaztion can be used to incorpaorte multiple and different real world demands, that likely aircraft manufacturer or any testing company would have.
+ togehter, iteratively more concrete and complex demands for the optimiaztions were added. These were found through presented  form real world demands through the cooprtation with IMA, additional optimization cases were added.
 
 
+== Optimization Case A <chap_5_0>
 // --------------------------------- opti A --------------------------------- //
 lets start with the first optimization model. The objective fucntion is given in
 // @
 
 
 // explain design vars, bounds, constraints
-// scipy 
+// scipy math notation
 
 
+// beam model
 // adapt figure caption
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/0_True_Bem_combined.svg", 
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
   width: 85%),
   caption: [beam schematic, reaction forces, shear and bending moment distirbution over the normalized span for optimization model A.],
 )<fig_79>
 
+// important note
+the optimizaiton was carried out using the units Nmm. Since Nmm is more accurate than Nm, therefore the bending moment infromaiton on the beam model depicted in @fig_79 are in Nmm. Yet, for püractical applicaiton the units are desired to be shown in Nm, there fore in the upcoming optimization result depcitions, the bending moments are shown In Nm.
 
 
-// TODO png looksn terrible, need to be replaced through proper svg using inkscape
+// constraints
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
   width: 100%),
@@ -72,25 +81,78 @@ The only as mentioned drawback with a high span length is that the calculation t
 
 
 // shows results of optimiaztion
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/int_Forc_4.svg", 
+  width: 95%),
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model A. 4 #glspl("lie") was selected.],
+)<fig_81>
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/int_Forc_8.svg", 
+  width: 95%),
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model A. 8 #glspl("lie") was selected.],
+)<fig_82>
+
+// optimiaztion progress
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/opti_Bar.svg", 
+  width: 95%),
+  caption: [optimization model A. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+)<fig_83>
+
 
 // interpret the results 
+// explain impact of number of lies through fig_83
+// if you can mention that kmeans centroid pos gives helpful convergence behaviour
 
-// give an reason why you selected collets - say one side open collets as mentioend  in @ 
-
-for the ongoing work we will assume that we 
-// this was based on the demand of having enough free visible area such that optical devices can be used.
-// furthermore they can be obtained easily, the IMA has high experince with their application
-// the knowledge of already carried out optimiaztions for the IMA was included in thsi decision.
-// finally the one side open collet reduces the risk of constraint forces
-// inspired from these real world experince, the collets is chosenm. therefore in the figure it will be called collet placing.
-// yet, again, one of the main objetive of the optimiaztion is to answer questions, which could lead to another gls("lie") than the collet.
-// therefore, combining the reasonong provided in @ and the otucome here in the optimiaztion with your project specifix requirements, another #gls("lie") could be selected.
 
 
 // --------------------------------- opti B --------------------------------- //
+
+== Optimization Case B <chap_5_1>
 // now introduce that this is the next optiiaztion model that could have releveance for real world application
 // explain why 
 
 // beam model 
-// results + interpret
 
+// needs better structre, potentially duplacites, make it more clear
+the beam model is NOT the same is in case A. it was changed to a support type which was beleived to be more relasitc for a #gls("swith"). This first highlgihts the fact that the chosen beam models needs to be flexible, that is powerful in allowing to make changed. next it needs ot be quick such htat these changes are possible within a short time frame.
+The ratioanle behind this support decision cannot shared with the public. Nonthelöess, regarldess of the rationale, an actual support type for an actual #gls("swith") is not public available. The later is partly because there is no #gls("swith") available for comerical bought. Again because of the innovative factor the actual final support system can be very different from presented here. Also, in case one day many #glspl("swith")  should be availabel, there is no gurantee that all #gls("swith") will ahve the same support system. Chances are they are not going to have them - which again is a reason why a flexible beam modeler is required
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/0_True_Bem_combined.svg", 
+  width: 95%),
+  caption: [optimization model B. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+)
+
+// results 
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_4.svg", 
+  width: 95%),
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model B. 4 #glspl("lie") was selected.],
+)
+
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_8.svg", 
+  width: 95%),
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model B. 8 #glspl("lie") was selected.],
+)
+
+// important note for the overlapping text for figutre with 8 lies
+in fig (the one above) the paclement of the #glspl("lie") - 8 vairation - has some overlapping text, which decreases reaidbility, the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling. Due to the colorcoded text looking carefully still allows to get all relevant information.
+
+
+// optimiaztion progress
+#figure(
+  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/opti_Bar.svg", 
+  width: 95%),
+  caption: [optimization model B. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+)
+
+
+
+
+// results interpretation
+
+
+// compare against case A
