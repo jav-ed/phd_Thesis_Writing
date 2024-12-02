@@ -2,6 +2,7 @@ import numpy as np
 from sympy import symbols, diff, hessian, Matrix
 from sympy.utilities.lambdify import lambdify
 
+
 def find_saddle_points(expr_str, vars_list):
     """
     Analyzes a function to find saddle points using the second derivative test.

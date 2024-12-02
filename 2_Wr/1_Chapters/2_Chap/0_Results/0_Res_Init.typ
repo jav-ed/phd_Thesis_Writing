@@ -139,7 +139,9 @@ The ratioanle behind this support decision cannot shared with the public. Nonthe
 )
 
 // important note for the overlapping text for figutre with 8 lies
-in fig (the one above) the paclement of the #glspl("lie") - 8 vairation - has some overlapping text, which decreases reaidbility, the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling. Due to the colorcoded text looking carefully still allows to get all relevant information.
+in fig (the one above) the paclement of the #glspl("lie") - 8 vairation -the force text is alternating shifted in the vertical direction which was done on purpose.
+Otherwise the text would have intersected with each other and no reaidbility would be given.
+Furhtermore the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling. Due to the colorcoded text looking carefully still allows to get all relevant information.
 
 
 // optimiaztion progress
