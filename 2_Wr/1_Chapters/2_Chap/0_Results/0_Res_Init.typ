@@ -290,8 +290,12 @@ For each #gls("lie") two arrows are palced at the start and end of the #gls("lie
   caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case A. 8 #glspl("lie") was selected.],
 )<fig_82>
 
+// ----------------------------- interpretation ----------------------------- //
 It can be observed that bending moment distibution found by the optimizaiton does not show much visible deviation. Also, while the objective function was to fit the bending moment behaviour, the shear force distribution between the true and the optimized output are approximated in a proper manner. The approxmiaiton quality is increased as the number of #glspl("lie") increases.
 This can be observed through comparing @fig_81 and @fig_82, but also by looking at the objective function values in @fig_83.
+It can be observed that the higher the number of the #glspl("lie") is the lower the objective function value is. The second row of @fig_83 depicts the number of iterations required for the differen number of #glspl("lie").
+The low number of iterations has multiple impactions. Among them is that the the optimiaztion problem is less computional expensive. 
+One reason for that is that the output of k-means++ was used as the center of the #glspl("lie"). Otherwise, the optimiaztion deifntion would need more design variables, which in a half span length between $gt.approx  5000/2 "mm"$ and $frac(approx #num("80000"),2) "mm"$. would increase the possible design space significantly. Consequently the optimization would require more computaitonal time and iterations to converge as will become clear through the upcoming optimiaztion cases.
 
 // optimiaztion progress
 #figure(
@@ -300,8 +304,4 @@ This can be observed through comparing @fig_81 and @fig_82, but also by looking 
   caption: [optimization model A. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
 )<fig_83>
 
-
-// interpret the results 
-// explain impact of number of lies through fig_83
-// if you can mention that kmeans centroid pos gives helpful convergence behaviour
 
