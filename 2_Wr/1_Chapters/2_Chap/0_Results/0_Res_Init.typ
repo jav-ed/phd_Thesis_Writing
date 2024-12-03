@@ -248,6 +248,9 @@ Therefore the added red distirbution is meant to give informaiton about the true
   caption: [beam schematic, reaction forces, shear and bending moment distirbution over the normalized span for optimization case A.],
 )<fig_80>
 
+Having understood how boundary coniditons of this surrogate model, it can be said that such a constellation can be regarded as a first rought and quick wing modelling. 
+// explain for what? quick fast investigations? - which potential investigaitons?
+It can be used to 
 
 The reaction forces in @fig_80 are given in second row and provide value infromation about the reuslting shear force and bending moment that are acting at the position of support points.
 The thired and fourth rows of @fig_80 depict the shear force and bending moment diagram.

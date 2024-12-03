@@ -21,8 +21,8 @@ The ratioanle behind this support decision cannot shared with the public. Nonthe
   caption: [optimization model B. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
 )
 
-// results 
-Furhtermore the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling.
+
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_4.svg", 
@@ -35,6 +35,11 @@ Furhtermore the scale was kept to maintain consitancy. with this deicion the oth
   width: 95%),
   caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case B. 8 #glspl("lie") was selected.],
 )
+
+// important note for the overlapping text for figutre with 8 lies
+in fig (the one above) the paclement of the #glspl("lie") - 8 vairation -the force text is alternating shifted in the vertical direction which was done on purpose.
+Otherwise the text would have intersected with each other and no reaidbility would be given.
+Furhtermore the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling. Due to the colorcoded text looking carefully still allows to get all relevant information.
 
 
 
