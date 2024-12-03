@@ -27,6 +27,7 @@
 #show: set_figure_numbering.with(new_format: "1.1", kind_type:table)
 #show: set_eqs_numbering.with(new_format: "1.1")
 
+
 // appendix
 #show: float_number_apend.with()
 

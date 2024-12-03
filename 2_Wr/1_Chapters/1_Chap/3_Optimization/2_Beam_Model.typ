@@ -13,7 +13,7 @@
 
 === Beam Model Fundamentals<chap_4_0_2>
 // use it form not we form
-In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into an desired input format for kmeans++ for the inital step of #gls("ld", long:true). 
+In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into an desired input format for k-means++ for the inital step of #gls("ld", long:true). 
 Furthermore, it was mentioned that the 1d form of the resulting partial forces $F_(a,i,j)$ allow the incorporation of 1d beam models within optimization frameworks. 
 This subsection aims to provide a detailed mathematical based description of the beam model.
 Key questions to be addressed include: what a beam model is, how it is used and which how it can be implemented efficiently as a computational tool.

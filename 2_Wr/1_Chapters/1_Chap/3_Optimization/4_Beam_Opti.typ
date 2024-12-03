@@ -94,7 +94,7 @@ For this the deviation between $M_"optim"$ and $M_"true"$ , which in @fig_77 is 
 With a choice of design variable combination a $Delta M = M_"optim" - M_"true" $ is achieved. The smaller $Delta M$ the closer the bending moment distribution is to the true bending moment distribution that is achieved when the APAME aerodynamic load is applied. The initial objective function thus can be stated as @eq_106.
 Here the index the objective function is denoted as $J$, the index $i$ is used to highlight that it is a moment distribution, $n$ denotes the total number of measurement points and the absolute value are taken according to the mean absolute error or the L1 norm as given in @eq_72.
 
-$ op("argmin",limits: #true)_(bold(x)_d)   J = (sum_(i=1)^n abs(M_"true,i" - M_"optim,i"))/n $<eq_106>
+$ op("argmin",limits: #true)_(bold(x)_d)   J = (sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n $<eq_106>
 
 Furthermore, it shall be noted when giving optimization problems small bold letter stand for vector. Consequently, the design variable vector $bold(x)_d$ can contain multiple design variables.
 While it would also be ppossible to integrate the shear force into the objective function $J$, soley the bending moment deviation was chosen, because bending moments is assumed to have a better representation of the characteristics of the structural behaviour.

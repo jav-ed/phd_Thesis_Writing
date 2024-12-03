@@ -295,16 +295,16 @@ The solution of the differential equation is given in @fig_61.
 This is the trajectory of the well-known Lorenz Attractor @Lorenz1963.
 The trajectory provides x-, y-, and z-coordinates in a three-dimensional space over a temporal course.
 For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in @fig_61.
-When the three-dimensional trajectory is subjected to an unsupervised procedure, such as kmeans++ that is about to be covered in detail, centroids are obtained.
+When the three-dimensional trajectory is subjected to an unsupervised procedure, such as k-means++ that is about to be covered in detail, centroids are obtained.
 The centroids are characteristic quantities that the procedure has found in the dataset consisting of the trajectory.
 Visually, the centroids can also be represented by three-dimensional points, as shown in  @fig_62.
 In the latter, it can be observed that the procedure was allowed to determine 10 characteristic quantities.
 @fig_63 shows which region each centroid covers. 
 As an example, centroid 3 describes the entire corresponding green region in  @fig_63.
 Depending on how high the number of characteristic quantities, the centroids, is chosen, finer details can be captured.
-In the case of kmeans++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model. 
-Thus, with a low number of centroids kmeans++ can be viewed as reduced order modeling technique.
-The idea behind kmeans++ is to create groups based on local or mertric based similarities.
+In the case of k-means++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model. 
+Thus, with a low number of centroids k-means++ can be viewed as reduced order modeling technique.
+The idea behind k-means++ is to create groups based on local or mertric based similarities.
 It attempts to find coordinates for the centroids so that the sum of distances of the centroids and their group members is reduced.
 The group members are all the entries that belong to a centroid. 
 Visual depcitions of the centroids are given as crosses in  @fig_63. 
@@ -316,13 +316,13 @@ All coordinates that lie within this green area are group members of centroid 3.
 The goal is to place the centroid within an effective area so that the distance to all group members is reduced.
 
 // -------------------------- kmeans init differece ------------------------- //
-After explaining the basic idea behind kmeans++, more in depth details about the procedure should be given.
+After explaining the basic idea behind k-means++, more in depth details about the procedure should be given.
 For that, it is important to understand how standard k-means initializes its centroids. The standard k-means algorithm selects k points uniformly at random from the dataset as initial centroids.
 This uniform random selection does not account for the spatial distribution of data points or the relative distances between centroids.
 As a consequence, it can result in suboptimal initial centroid configurations where multiple centroids are concentrated in proximate regions while leaving other regions of the feature space without representative centroids.
 Such configurations can lead to suboptimal local minima and slower convergence of the algorithm.
 K-means++ addresses these limitations through a more sophisticated initialization strategy.
-A visual explanation by the author of kmeans++ for the initial positions for the centroids can be found at @kmeans_Visual_Explanation.
+A visual explanation by the author of k-means++ for the initial positions for the centroids can be found at @kmeans_Visual_Explanation.
 The first centroid is selected uniformly at random from the dataset.
 For each subsequent initialization step, the algorithm computes the minimum distance from each data point to its nearest previously selected centroid.
 The distance metric employed is typically the Euclidean or L2-norm distance.
@@ -333,11 +333,11 @@ K-means++ differs from standard k-means solely in this initialization procedure.
 The improved initialization leads to several theoretical and practical advantages: faster convergence to local optima, improved statistical consistency of results, and empirically superior cluster assignments with respect to the k-means objective function
 
 // -------------------------- kmeans objective fcn -------------------------- //
-The problem that kmeans++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
-Since, the kmeans++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
-The optimization problem of the kmeans++ is given as @eq_75. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
+The problem that k-means++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
+Since, the k-means++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
+The optimization problem of the k-means++ is given as @eq_75. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
 In this case, $k$ centroids would be available.
-$ J = sum_(i=1)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_75>
+$ J = sum_(i)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_75>
 
 Furthermore, $x_j in C_i$ specifically means that only data points $x_j$ are considered that are assigned to one unique cluster or group $C_i$. 
 Note, when deploying computational numerics, in order to know which data points belong to which cluster, the difference between each available data point and each of the k clsuters needs to calculated.
@@ -348,48 +348,48 @@ This iterative process and can be visually understood with @fig_64.
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/3.png", 
   width: 100%),
-  caption: [Visual representation of the individual steps of unsupervised kmeans++ @Arthur2006  @link_Kmeans_Img_Proc],
+  caption: [Visual representation of the individual steps of unsupervised k-means++ @Arthur2006  @link_Kmeans_Img_Proc],
 )<fig_64>
 
-Inserting the squared L2-norm as the distance metric in @eq_75 and writing the objective of kmeans as an optimization problem, @eq_76 is obtained.
+Inserting the squared L2-norm as the distance metric in @eq_75 and writing the objective of k-means as an optimization problem, @eq_76 is obtained.
 The variable $Phi(C_i)$ denotes the sum of the distances between the centroid of one cluster and all its cluster members.
 
 $ op("argmin",limits: #true)_(mu_i) 
-sum_(i=1)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, Phi(C_i))  = sum_(i=1)^k Phi(C_i) $ <eq_76>
+sum_(i)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, Phi(C_i))  = sum_(i)^k Phi(C_i) $ <eq_76>
 
-// ---------------------------------- here ---------------------------------- //
+
 Up to this point, we have explained the difference between regression and unsupervised learning. 
 We have named concrete methods for both previously mentioned machine learning techniques. 
-For unsupervised learning, kmeans++ was elaborated in detail.
+For unsupervised learning, k-means++ was elaborated in detail.
 // can be said more eloquently
-For further proceedings, specific areas should be named in which kmeans++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
-Subsequently, it should be explained in detail how kmeans++ could be used for #gls("ld").
-Kmeans is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
-A list of methods similar to kmeans with calculated results can be found in @fig_65.
+For further proceedings, specific areas should be named in which k-means++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
+Subsequently, it should be explained in detail how k-means++ could be used for #gls("ld").
+K-means is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
+A list of methods similar to k-means with calculated results can be found in @fig_65.
 A detailed description of the shown methods is outside the scope of this work.
 Interested readers are encouraged to either follow the given link @link_Cluster_Meth and/or read @Ikotun2023 among others.
-In @Ikotun2023, further developments of kmeans and additional areas in which kmeans finds application are mentioned.
+In @Ikotun2023, further developments of k-means and additional areas in which k-means finds application are mentioned.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/4.png", 
   width: 100%),
-  caption: [List of other clustering methods that are similar to kmeans @link_Cluster_Meth]
+  caption: [List of other clustering methods that are similar to k-means @link_Cluster_Meth]
 )<fig_65>
 
-After having showed that kmeans++ is a method that finds application in various areas in industry and science, the focus is set to #gls("ld"). 
-The input for kmeans++ would be the numerically calculated aerodynamic load distribution. 
+After having showed that k-means++ is a method that finds application in various areas in industry and science, the focus is set to #gls("ld"). 
+The input for k-means++ would be the numerically calculated aerodynamic load distribution. 
 This is two-dimensional and includes on one hand the local position where the force acts and on the other hand the magnitude of the force. 
 However, the aerodynamic load distribution can also contain six dimensions if the load distribution is to be considered as a 3D force distribution.
 In this case, the locality of the force would already be three-dimensional, as the 3D space must be described by exactly three coordinates.
 The force could act at an angle in 3D space, thus force components would exist in each spatial direction.
 The resulting force would be divided into three force components in the three spatial directions. 
-kmeans++ is a mathematical procedure that can theoretically scale to arbitrarily high dimensions without restrictions.
+k-means++ is a mathematical procedure that can theoretically scale to arbitrarily high dimensions without restrictions.
 The limitation would arise through available computing power. 
 Here, both the number of points and the number of dimensions play a role.
 However, from experience, the author of this report can say that even with very high data points and dimensions, the procedure is remarkably fast @link_Javed_Master.
 
 // -------------------------- applying kmeans to ld ------------------------- //
-When kmeans++ is applied to #gls("ld"), the input would be a load distribution. 
+When k-means++ is applied to #gls("ld"), the input would be a load distribution. 
 The output would be the centroids, which have a physically relevant meaning.
 First, it should be noted that the number of input dimensions determines the number of dimensions of the output.
 It is a direct 1:1 relationship. If the input is two-dimensional, then the output is also two-dimensional.
@@ -420,7 +420,7 @@ $  bold(C) = mat(
   Y_(n,0),  Y_(n,1), ..., Y_(n,m);
 ) $ <eq_78>
 
-The term feature vector comes from the machine leanring environment. Since kmeans++ is a machine learning technique, for general purposes explanations, it considered to be more apropriate to use the machine-learning specific term feature vector.
+The term feature vector comes from the machine leanring environment. Since k-means++ is a machine learning technique, for general purposes explanations, it considered to be more apropriate to use the machine-learning specific term feature vector.
 In general the feature vector could contain any measurable data that can be represted through numericla numbers.
 However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_77.
 Moreover, the defintion of @eq_78 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
@@ -433,7 +433,7 @@ In order to obtain the centroids, one step is to apply geometric averaging.
 While this averaging can be used to obtain one representiative entity for an group, these averaged values cannot be used as representation for the resulting loads for the #glspl("ld").
 If an averaged force were to be applied, other partial loads that are part of the same cluster would not be accounted physically correct.
 The goal is to combine all partial loads through addition to get a resulting force.
-This means instead of using the value that kmeans++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
+This means instead of using the value that k-means++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
 This concept is explained visually through @fig_66.
 
 // number of memebers
@@ -446,18 +446,18 @@ This concept is explained visually through @fig_66.
 The upper figure shows a sinus like force distribution, which was selected for demonstration pruposes. The colored data points represent the membership to one of the five clusters. The colored background in 2d hihglights the area in which data points would become a member of the corresponding color coded cluster.
 Since the length of the colored background is not constant, it can be concluded that some clusters have a broader area in which their cluster member can be placed than other clusters.
 While not speicifally visible in this viszulaiation, generally, the number of the members of clusters do not need to match as well. It could be that one cluster has the majority of available data points as its members while the oter remaining togehter have the minority.
-Moreover, the location of  the diamond shaped dots in the top @fig_66 give the 2d dimensional informaiton for the corresponding centroid. The number next to the diamond dot is the force value, which the centroid would provide. Kmeans++ utlizes the mean as part of of its update. With reaching a convergence the final centroid values are the mean values within each unique cluster. Thus, the numbers next to the diamond dots represent the mean force within the respective cluster.
+Moreover, the location of  the diamond shaped dots in the top @fig_66 give the 2d dimensional informaiton for the corresponding centroid. The number next to the diamond dot is the force value, which the centroid would provide. K-means++ utlizes the mean as part of of its update. With reaching a convergence the final centroid values are the mean values within each unique cluster. Thus, the numbers next to the diamond dots represent the mean force within the respective cluster.
 These mean values match with the lower left figure. Comparing them with the forces depicted in the lower right figure, it becomes obious that there is a big difference wheter the froces are avergaed or summed up.
 This becomes more evident the higher the number of members of each cluster becomes.
 
 
 // --------------------------------- sklearn -------------------------------- //
-The numerical application of kmeans++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
+The numerical application of k-means++ on a computer is possible through the free and open-source library Scikit-learn @Pedregosa2011, for example.
 The implementation in Scikit-learn is already optimized and runs on multiple cores. 
 Another reason that speaks for Scikit-learn is that it is a widespread and widely used library @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024.
 Additionally, the library is easily accessible, installable, and easy to use.
-Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force after performing kmeans++ can be achieved without much effort.
-Having explained how to interpret the solution of kmeans++ with physical background, 
+Accordingly, the summation of individual partial forces within a cluster to a resulting cluster force after performing k-means++ can be achieved without much effort.
+Having explained how to interpret the solution of k-means++ with physical background, 
 Another possibility for physically motivated interpretation is offered by the clusters themselves. 
 The area of the clusters as depicted as the color coded background in the upper @fig_66 could be viewed as the dimension of individual #glspl("lie").
 However, this would be counterproductive since the clusters extend over all individual data points.
@@ -465,13 +465,13 @@ Applied to the #gls("ld"), it would mean that the entire wing skin would be cove
 If the clusters are so close together, the #glspl("lie") would accordingly also be close together and there would no longer be sufficient free viewing area for any visual measurement technology.
 
 // ------------------------------ reg vs kmeans ----------------------------- //
-After both the procedure via regression and kmeans++ have been explained and interpreted, a decision should be made between the two possible paths.
-Kmeans++ can provide a good starting value for two important quantities.
+After both the procedure via regression and k-means++ have been explained and interpreted, a decision should be made between the two possible paths.
+K-means++ can provide a good starting value for two important quantities.
 These are the center posistion of the #glspl("lie"), directly obtained through the values of the centroids $bold(C[:,0])$.
 The other iportant quantity is the resulting force, which can be obtained explained above.
-Therefore kmeans++ is preferred over the regression path.
-At this point, the following should be clearly stated. While kmeans++ has various advantages and allows physical interpretations, it does not answer all questions that would be required for the experimental execution of the structural test. 
-Through kmeans++ a good starting value for the positions of the #glspl("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
+Therefore k-means++ is preferred over the regression path.
+At this point, the following should be clearly stated. While k-means++ has various advantages and allows physical interpretations, it does not answer all questions that would be required for the experimental execution of the structural test. 
+Through k-means++ a good starting value for the positions of the #glspl("lie") and the resulting force magnitudes that should act on the respective #gls("lie") can be obtained. 
 However, this can only limitedly indicate what the dimensions of the individual #gls("lie") should look like.
 The latter is of particular importance when there is a requirement for free viewing area. 
 While it would be possible to cover the entire wing with #glspl("lie"), this is not common practice.
@@ -480,7 +480,7 @@ Besides the obstacle for optical measurement technology, it would no longer be p
 A concrete example could be that the internal pressure should be increased from $10 #unit("MPa")$ to $60 #unit("MPa")$.
 While the pressure is being increased, damage could occur that would be visually perceptible. 
 If the view were blocked, this would only be limitedly possible or not possible at all.
-Therefore, the output of kmeans++ can be used as a starting value for further optimization.
+Therefore, the output of k-means++ can be used as a starting value for further optimization.
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
@@ -488,7 +488,7 @@ Therefore, the output of kmeans++ can be used as a starting value for further op
 // These are just some starting fractions. based on the provided text above, the summary could be expanded and refined
 In this subsection, it was first explained what is meant by #gls("ld"), why it is required, and which two major paths would be possible to discretize the load.
 Furthermore, important fundamentals of Machine Learning were provided and concrete regression methods were listed. 
-Subsequently, the alternative path via kmeans++ was shown, compared with the regression path, and justified in settling on the favorite kmeans++.
+Subsequently, the alternative path via k-means++ was shown, compared with the regression path, and justified in settling on the favorite k-means++.
 The essential progress achieved in this subsection was finding, evaluating, and deciding on a method that enables #gls("ld").
 Finally, it was explained which questions are still open and that subsequent optimization can be regarded as a potential solution for them.
 ])

@@ -154,11 +154,11 @@ With a more comprehensive dataset, statistical analysis could yield valuable ins
 
 
 $ Delta M_i = M("A",p_i) - M("B",p_i) $<eq_18> 
-$ overline(Delta M) = 1/n sum_(i=1)^n Delta M_i $<eq_19> 
+$ overline(Delta M) = 1/n sum_(i)^n Delta M_i $<eq_19> 
 
 The standard deviation of these differences would then be calculated using @eq_26 @Papula2016. 
 
-$ sigma = sqrt(1/(n-1) sum_(i=1)^n (Delta M_i - overline(Delta M))^2) $<eq_26>
+$ sigma = sqrt(1/(n-1) sum_(i)^n (Delta M_i - overline(Delta M))^2) $<eq_26>
 
 If the standard deviation is small relative to the mean difference, indicated by a coefficient of variation $(sigma/overline(Delta M))$ less than 0.1 or 10%, this would indicate a reasonably consistent relationship between the two media across pressure levels. Such consistency would enable the prediction of the maximum bending moment of medium B when the maximum bending moment of medium A is known. This information is particularly valuable when evaluating whether an ignitable gas could be replaced with a fluid for testing purposes. Furthermore, it could address fundamental engineering questions, such as whether water-filled pipes consistently demonstrate triple the bending moment or curvature compared to air-filled pipes, regardless of pressure level.
 

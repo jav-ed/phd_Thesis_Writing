@@ -14,20 +14,20 @@
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_C/0_True_Bem_combined.svg", 
   width: 95%),
-  caption: [optimization model C. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+  caption: [optimization case C. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
 )
 
 // results 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_C/int_Forc_4.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model C. 4 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case C. 4 #glspl("lie") was selected.],
 )
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_C/int_Forc_8.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model C. 8 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case C. 8 #glspl("lie") was selected.],
 )
 
 // important note for the overlapping text for figutre with 8 lies
@@ -38,7 +38,7 @@ in fig (the one above) the paclement of the #glspl("lie") - 8 vairation - has so
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_C/opti_Bar.svg", 
   width: 95%),
-  caption: [optimization model C. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+  caption: [optimization case C. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
 )
 
 
@@ -67,25 +67,25 @@ depicted only the resuls that were found by the optimizer while not violating an
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_50/int_Forc_8.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model D. 4 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 4 #glspl("lie") was selected.],
 )
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_66/int_Forc_7.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model D. 8 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
 )
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_71/int_Forc_6.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model D. 8 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
 )
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_75/int_Forc_5.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization model D. 8 #glspl("lie") was selected.],
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
 )
 
 
@@ -94,7 +94,7 @@ depicted only the resuls that were found by the optimizer while not violating an
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D/1_L_Comb_Obj.svg", 
   width: 100%),
-  caption: [optimization model D (50%, 66%, 71%, 75%) shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+  caption: [optimization case D (50%, 66%, 71%, 75%) shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
 )
 
 // intepret convergence behaviour

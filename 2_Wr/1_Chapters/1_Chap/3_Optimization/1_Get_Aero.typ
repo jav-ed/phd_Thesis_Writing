@@ -15,7 +15,7 @@ In @chap_3_0_4, we examined some of the available #glspl("lie", long:true) for i
 evaluated them according to specific criteria, and explained why #gls("ld", long:true) is necessary. 
 In the subsequent @chap_4_0_0 we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
 However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load that acts on the wing of an aircraft must be obtained.
-This subsection will therefore demonstrate one method how aerodynamic loads can be obtained thorugh numerical simulations and transformed in a way that kmeans++ can be used for the #gls("ld").
+This subsection will therefore demonstrate one method how aerodynamic loads can be obtained thorugh numerical simulations and transformed in a way that k-means++ can be used for the #gls("ld").
 
 // this needs to be adapted properly for a phd - its okay to acknowledge that work is based on somehting, but should be adapted
 From previous projects conducted at TU Dresden, valuable work is available.
@@ -78,8 +78,8 @@ The meshed surface of a wing as an exmaple of a complex geomtry is given on the 
 Furthermore it depcits how the meshed can be viewed as connected elements.
 This detaield inspection is important to transfer distributed loads to a point loads.
 The motivation behind this transformation is that APAME can be used to obtain distributed load according to @eq_80.
-However, according to the reasoning provided in @chap_4_0_0, kmeans++ @Arthur2006 shall be used for the inital step of #gls("ld") of the aerodynamic load distribution.
-Since kmeans++ required discrete data points as input, distributed loads from @eq_80 need to be adapted to discrete point loads in the form of @eq_79.
+However, according to the reasoning provided in @chap_4_0_0, k-means++ @Arthur2006 shall be used for the inital step of #gls("ld") of the aerodynamic load distribution.
+Since k-means++ required discrete data points as input, distributed loads from @eq_80 need to be adapted to discrete point loads in the form of @eq_79.
 Vieweing the mesh as single connected elements as depichted on the left side of @fig_68, the distributed force $q_(a,i)$ and the resulting point load $F_(a,i)$ for one single element can be viwed on the right side of the same figure.
 The latter depcits the difference between a distributed force  $q_(a,i)$ and a point load $F_(a,i)$ visually.
 Speical attention should be given to the length of the arrow in $F_(a,i)$, which is higher than the arrows of  $q_(a,i)$ in order to signify that magnitude of the distributed load is approaximted through a single point load.
@@ -128,12 +128,12 @@ However, @fig_69 shows, with the sub-figure in the lower left corner, that this 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
   width: 68%),
-  caption: [Representation of the process of deriving point loads from distributed loads with the goal of using the point loads for kmeans++],
+  caption: [Representation of the process of deriving point loads from distributed loads with the goal of using the point loads for k-means++],
 )<fig_69>
 
 
-To understand why this approach is not entirely correct, another point about the nature of kmeans++ @Arthur2006 must be added.
-In normal application of kmeans++, each point initially has the same weighting as a standard option.
+To understand why this approach is not entirely correct, another point about the nature of k-means++ @Arthur2006 must be added.
+In normal application of k-means++, each point initially has the same weighting as a standard option.
 This means that if particularly many data points or in this case force points are found in one location, a new cluster is more likely to be formed there.
 Thus, not only the position of the points but also their number is of great importance.
 // it form should be used
@@ -142,11 +142,11 @@ The varying number of force points is a direct consequence of the variable eleme
 The latter statement can be verified by careful examination of @fig_67.
 In regions were the element lengths is small more force points are accounted there.
 As a consequence, the mentioned likelyhood to generate centroids there is falsely increased. 
-Where the centroids or #gls("lie") should be placed is not known beforehand. Through the centroid posistion, kmeans++ gives exactly these informaiton, that is the centers of the #glspl("lie").
-If a preferred direction were unknowingly provided through an incorrect data format, the kmeans++ output would be partially or completely unusable.
+Where the centroids or #gls("lie") should be placed is not known beforehand. Through the centroid posistion, k-means++ gives exactly these informaiton, that is the centers of the #glspl("lie").
+If a preferred direction were unknowingly provided through an incorrect data format, the k-means++ output would be partially or completely unusable.
 
 // --------------------------------- adjust --------------------------------- //
-To adjust the kmeans++ input data format, it must be defined how many individual forces are to be found over a reference length. 
+To adjust the k-means++ input data format, it must be defined how many individual forces are to be found over a reference length. 
 Thus, for each element, depending on its element length, it is defined into how many uniformly distributed partial point forces the distributed load is approximated.
 According to @eq_83, at a length of $100 "mm"$, a distributed load [N $"mm"^(-1)$] is approximated by 20 partial point loads [N].
 Note, the units are given to make things easier to understand and can be adapted to required units.
@@ -169,7 +169,7 @@ The structre of the data matrix $bold(X)$, as it is noted in Scikit-learn @Pedre
 $ bold(X) = bold(X)[ ("Position"); space ("Partial point loads" = F_(a,i,j))] $ <eq_85>
 
 For each partial point load, a corresponding three-dimensional position vector is specified.
-To reiterate, the clustering method kmeans++ can work with even higher dimensions without hitting hardware limitations or needing to change the implementation.
+To reiterate, the clustering method k-means++ can work with even higher dimensions without hitting hardware limitations or needing to change the implementation.
 APAME is able to provide lift coefficients that are valid for span strips and can be seen resulting entities. 
 Within a strip, the lift coefficient is integrated over the chord.
 This behavior is shown in @eq_86, the lift coefficient which is represenatrive for a span strip $i$ is denoted as $C_("lc",i)$ and is obtained through the integration of the lift coefficient $C_L$ over the boundaries leading edge le and  trailing edge te.
@@ -184,7 +184,7 @@ $ q_a = rho/2 dot u^2 dot underbrace(C_L  dot c, C_("lc")) =  rho/2 dot u^2 dot 
 In order to obtain the required individual partial point loads the descibed proedure can be followed. Because of the explained properties $C_("lc",i)$ the resulting partial forces $F_(a,i,j)$ are only distributed along the span. 
 A coordinate change in the two other remaining directions does not occur.
 Consequently, the 3d aerodynamic load distribution was tranfered to a 1d load distirbution consisting of resulting partial forces $F_(a,i,j)$.
-This has two implication. First because they are force points, they can be used with kmeans++.
+This has two implication. First because they are force points, they can be used with k-means++.
 Moreover, because of the 1d dimension, instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
 Further information about both the beam model and optimization will be elaborated in the following @chap_4_0_2 to @chap_4_0_4.
 
@@ -194,7 +194,7 @@ Further information about both the beam model and optimization will be elaborate
 
 // These are just some starting fractions. based on the provided text above, the summary could be expanded and refined
 In this section, we explained how we first obtain a three-dimensional aerodynamic load and how it interacts with the structural model.
-Then, we explained what data format is required for the kmeans++ method and what is obtained as output from APAME. 
+Then, we explained what data format is required for the k-means++ method and what is obtained as output from APAME. 
 Furthermore, the steps required to perform the needed data transformations were named. 
 These were supported with visual illustrations and equations in addition to textual descriptions.
 Finally, through the mention of the beam model and optimization, an introduction to the following @chap_4_0_2  where fundamentals of beam models are explained was made. 
