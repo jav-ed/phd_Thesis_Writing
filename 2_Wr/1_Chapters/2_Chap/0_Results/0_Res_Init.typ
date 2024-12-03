@@ -269,8 +269,13 @@ The only as mentioned drawback with a high span length is that the calculation t
 // important note before showing the optimiaztion plots
 the optimizaiton was carried out using the units Nmm. Since Nmm is more accurate than Nm, therefore the bending moment infromaiton on the beam model depicted in @fig_80 are in Nmm. Yet, for ppactical applicaiton the units are desired to be shown in Nm, there fore in the upcoming optimization result depcitions, the bending moments are shown in Nm.
 The outcome of the optimiaztion is depicted for four and eight #glspl("lie") in @fig_81 and @fig_82, respectively.
-Both figures follow the same conventional, the first row depicts in blue the disitrbuted that represents the aerodynamic load obtained from APAME and modified as explained in @chap_4_0_1.
-The red 
+Both figures follow the same conventional, the first row depicts in blue the reference disitrbuted load that represents the aerodynamic load obtained from APAME and modified as explained in @chap_4_0_1.
+The red load is the discretized load that is the output of the optimization.
+The second row of the figures depicts the shear forces that belong to the reference beam model and the shear forces that belong to the optimized output.
+The third analoughly show the bending moment distribution.
+The final row shows the placing of the #glspl("lie"). 
+For each #gls("lie") two arrows are palced at the start and end of the #gls("lie") posistion. These arrow have the same color, have the normalized span posistion written out as well as the corresponding disitrbuted load.
+
 
 // shows results of optimiaztion
 #figure(
@@ -285,6 +290,9 @@ The red
   caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case A. 8 #glspl("lie") was selected.],
 )<fig_82>
 
+It can be observed that bending moment distibution found by the optimizaiton does not show much visible deviation. Also, while the objective function was to fit the bending moment behaviour, the shear force distribution between the true and the optimized output are approximated in a proper manner. The approxmiaiton quality is increased as the number of #glspl("lie") increases.
+This can be observed through comparing @fig_81 and @fig_82, but also by looking at the objective function values in @fig_83.
+
 // optimiaztion progress
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/opti_Bar.svg", 
@@ -297,56 +305,3 @@ The red
 // explain impact of number of lies through fig_83
 // if you can mention that kmeans centroid pos gives helpful convergence behaviour
 
-
-
-// --------------------------------- opti B --------------------------------- //
-
-== Optimization Case B <chap_5_1>
-// now introduce that this is the next optiiaztion model that could have releveance for real world application
-// explain why 
-
-// beam model 
-
-// needs better structre, potentially duplacites, make it more clear
-the beam model is NOT the same is in case A. it was changed to a support type which was beleived to be more relasitc for a #gls("swith"). This first highlgihts the fact that the chosen beam models needs to be flexible, that is powerful in allowing to make changed. next it needs ot be quick such htat these changes are possible within a short time frame.
-The ratioanle behind this support decision cannot shared with the public. Nonthelöess, regarldess of the rationale, an actual support type for an actual #gls("swith") is not public available. The later is partly because there is no #gls("swith") available for comerical bought. Again because of the innovative factor the actual final support system can be very different from presented here. Also, in case one day many #glspl("swith")  should be availabel, there is no gurantee that all #gls("swith") will ahve the same support system. Chances are they are not going to have them - which again is a reason why a flexible beam modeler is required
-
-#figure(
-  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/0_True_Bem_combined.svg", 
-  width: 95%),
-  caption: [optimization model B. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
-)
-
-// results 
-#figure(
-  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_4.svg", 
-  width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case B. 4 #glspl("lie") was selected.],
-)
-
-#figure(
-  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_8.svg", 
-  width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case B. 8 #glspl("lie") was selected.],
-)
-
-// important note for the overlapping text for figutre with 8 lies
-in fig (the one above) the paclement of the #glspl("lie") - 8 vairation -the force text is alternating shifted in the vertical direction which was done on purpose.
-Otherwise the text would have intersected with each other and no reaidbility would be given.
-Furhtermore the scale was kept to maintain consitancy. with this deicion the other subplots keep the same axis scaling. Due to the colorcoded text looking carefully still allows to get all relevant information.
-
-
-// optimiaztion progress
-#figure(
-  image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/opti_Bar.svg", 
-  width: 95%),
-  caption: [optimization model B. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
-)
-
-
-
-
-// results interpretation
-
-
-// compare against case A
