@@ -270,6 +270,7 @@ The only as mentioned drawback with a high span length is that the calculation t
 the optimizaiton was carried out using the units Nmm. Since Nmm is more accurate than Nm, therefore the bending moment infromaiton on the beam model depicted in @fig_80 are in Nmm. Yet, for ppactical applicaiton the units are desired to be shown in Nm, there fore in the upcoming optimization result depcitions, the bending moments are shown in Nm.
 The outcome of the optimiaztion is depicted for four and eight #glspl("lie") in @fig_81 and @fig_82, respectively.
 Both figures follow the same conventional, the first row depicts in blue the disitrbuted that represents the aerodynamic load obtained from APAME and modified as explained in @chap_4_0_1.
+The red 
 
 // shows results of optimiaztion
 #figure(
