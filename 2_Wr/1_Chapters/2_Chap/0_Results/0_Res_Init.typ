@@ -26,9 +26,33 @@ The conducated optimiaztions are presented as optimization cases. Where it start
 
 == Optimization Case A <chap_5_0>
 // --------------------------------- opti A --------------------------------- //
-lets start with the first optimization model. The objective fucntion is given in
-// @
+lets start with the first optimization model. The objective fucntion is given in @eq_107
+#import "@preview/equate:0.2.1": equate
 
+#show: equate.with(breakable: true, sub-numbering: true)
+#set math.equation(numbering: "3.1")
+
+$
+  angle.l a, b angle.r &= arrow(a) dot arrow(b) \
+                       &= a_1 b_1 + a_2 b_2 + ... a_n b_n \
+                       &= sum_(i=1)^n a_i b_i. #<sum>
+$ <dot-product>
+
+$  
+op("argmin",limits: #true)_(bold(x)_d)   J_A = &(sum_(i=1)^n abs(M_"true,i" - M_"optim,i"))/n \
+
+// constraints
+"subject to" quad & 15+15
+
+// bounds
+$<eq_107>
+
+While the objevtive fucniton for all the considered optimization cases remains the same  as mentioned in @chap_4_0_4, yet the index in @eq_107 with the according case letter is added, for completeness reasons and helping to identify the optimization cases.
+
+It can be observed that in the provided equation it is not explicitly hihglighted that the bending moments are dependt on the design variables. 
+The rason for that is that the bending moment are depending on a high number of varaibles, such as type of support, posisiton of support, acting forces, beam length. 
+Therefore, in order to not make the equation unnessarly long, the concrete depencies were not given.
+Instead it was mentioned concreltey, that the bending moments depend on the design variables .
 
 // explain design vars, bounds, constraints
 // scipy math notation
