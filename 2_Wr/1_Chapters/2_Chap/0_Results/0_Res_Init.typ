@@ -30,7 +30,7 @@ lets start with the first optimization case. The optimization problem's definiti
 
 $
 op("argmin",limits: #true)_(bold(x)_d) 
-J_A = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n \
+J_A = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n_s \
 
 // constraints
 "subject to" quad 

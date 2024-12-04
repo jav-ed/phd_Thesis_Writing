@@ -122,6 +122,7 @@
 #include "2_Wr/1_Chapters/2_Chap/0_Results/0_Res_Init.typ"
 #include "2_Wr/1_Chapters/2_Chap/0_Results/1_Cases_B.typ"
 #include "2_Wr/1_Chapters/2_Chap/0_Results/2_Cases_C.typ"
+#include "2_Wr/1_Chapters/2_Chap/0_Results/2_Cases_D.typ"
 
 // ------------------------------- discussion ------------------------------- //
 #include "2_Wr/1_Chapters/3_Chap/0_Discuss/0_Discus.typ"
