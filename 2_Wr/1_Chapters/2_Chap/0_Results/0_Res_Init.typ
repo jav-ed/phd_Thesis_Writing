@@ -12,21 +12,18 @@
 // TODO Title
 = Results <chap_5>
 
-// what expected to see here and why
-the colloboration with IMA helped to find some real world demands. Based on these findings, the found demands shall be provided as the formualtion of optimization probelems. The optiiaztion formaulaiton shall be provided, explained, solved and 
-// maybe add, also interpreted when required
-depcited.
-Moreover, based on the multiple optimization problem defintions the flexibility of the presented approach can be seen.
-The conducated optimiaztions are presented as optimization cases. Where it starts from Optimiaztion Case A where it is the most straight forward and simplest approach. 
-// the idea is to descirbe that for K2H2 much coorperation was conducted with IMA. We had some iterations, some optimizatiosn were presented. IMA told, they need this and that. And such so we got to more concrete optimiaztion defintions - which have high relevance for actual real world application.
-// yet depending on what is actually needed, any of presented optimization case could be the right one. it does not have to be last and most compelx one.
-// through shwoing multiple optimaiztion cases, it is also hihglgihted how optimiaztion can be used to incorpaorte multiple and different real world demands, that likely aircraft manufacturer or any testing company would have.
- togehter, iteratively more concrete and complex demands for the optimiaztions were added. These were found through presented  form real world demands through the cooprtation with IMA, additional optimization cases were added.
+This chapter presents research outcomes focused on utilizing numerical optimization to discretize aerodynamic loads. The optimization framework provides solutions to crucial engineering questions, including the determination of optimal #gls("lie") quantities, force magnitudes, lengths, and precise positioning. Materialforschung und Anwendungstechnik GmbH Dresden (IMA) was consulted to incorporate real-world engineering considerations relevant for potential #gls("swith") certification processes. Through systematic analysis, these practical requirements were translated into mathematical optimization problems. The optimization formulations are presented, explained, solved, and interpreted with respect to their performance.
+
+The investigation is structured into multiple optimization cases, beginning with Case A as the fundamental approach. Each subsequent case incorporates additional constraints and considerations that emerged through iterative development of the optimization problems. This progressive development serves two purposes: first, it demonstrates the methodology's adaptability to varying certification demands, and second, it illuminates how different optimization problem definitions can address specific requirements that certification authorities or manufacturers might encounter.
+
+It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
 
 == Optimization Case A <chap_5_0>
-// --------------------------------- opti A --------------------------------- //
-lets start with the first optimization case. The optimization problem's definition is given as @eq_107.
+Optimization case A represents the first application of the theoretical foundations established in @chap_4_0_0 to @chap_4_0_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
+By solving this optimization problem, critical questions posed in @chap_4_0_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
+As this case serves as the foundation for subsequent optimization scenarios, the mathematical formulation and its implications are explained in detail. The mathematical formulation of optimization case A is given in @eq_107.
+
 
 $
 op("argmin",limits: #true)_(bold(x)_d) 
@@ -43,57 +40,45 @@ J_A = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n_s \
 & 0.03 "ha" <= x_("cl",i) <= "ha"/n_"cl"
 $<eq_107>
 
-The first sub equation in @eq_107 defines the general objective function and was already explained in @chap_4_0_4. The subscript "A" to the objectuve funtion $J$ was added to unambigiusly link it to the oiptimiaztion case A.
-The design variables are denoted as the vector $bold(x)_d$.
-It can be observed that in the provided objective function's equartion it is not explicitly hihglighted that the bending moments are dependt on the design variables. 
-The rason for that is that the bending moment are depending on a high number of varaibles, such as type of support, posisiton of support, acting forces, beam length. 
-Therefore, in order to not make the equation unnessarly long, the concrete depencies were not given.
-Instead with this it was mentioned concreltey, that the bending moments depend on the design variables.
-For the optimization case A, the design variable vector only includes the collet lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$).
-With that the three upcoming constraints given in the subject to par can be considered.
-Since it is an minimization problem they are given in the form design variables to the left $<=$ non design variable parameter.
-Also, this notation helps to incorpaorte optimiaztion problem in framework like SciPy.
-it is important to note that $x_i$ are not design variables, they provide give the locations to the center of the centroids.
-These centroids are obtained through k-means++ as explained in @chap_4_0_0 and @chap_4_0_1.
-The physical meaning behind is that the centroid locations represent the centers of the #glspl("lie").
-The first constraint ensures that the #glspl("lie") are not allowed to be positioned outside of the considered bea, length. 
-Here ha denotes the half span length. Often it can be assumed that the wings of the aircraft are symtric aroud the vertical axis.
-Leveraging this knowledge allows the beam length to become shorter, reducing computational time.
+The first equation in @eq_107 defines the general objective function, previously explained in @chap_4_0_4. The subscript #emp_[A] added to the objective function $J$ establishes a clear link to optimization case A. The design variables are denoted as vector $bold(x)_d$.
 
-In order to understand this and the other constraints easier first @fig_79 shall be viewed.
-It depicts the span direction $x$, the centroid locations $x_i$ and the #gls("lie") lengths $x_("cl",i)$. Next, the first constraint can be rearagned in a way that helps human to comprehend the constraint easier, which is given as @eq_108. With these two supplmenariy matierals it should become evident, that the first constraints demands that the sum of the centroid posistion and the collet lenght needs to be within the halfspan length.
+While the objective function includes bending moments, their explicit dependency on the design variables is not shown in the equation. 
+This simplified notation was chosen because bending moments depend on multiple parameters, including support type and position, acting forces, and beam length.
+To maintain equation clarity and conciseness, these dependencies are acknowledged explicitly by stating that the bending moments are functions of the design variables.
 
-// constraints
+For optimization case A, the design variable vector consists solely of the collet lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$). 
+The constraints that follow in the "subject to" portion are formatted with design variables on the left side of the inequality ($<=$ non-design variable parameters), a convention that facilitates implementation in optimization frameworks such as SciPy.
+
+It should be noted that the positions $x_i$ are not design variables but rather represent the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0_0 and @chap_4_0_1. These centroid locations physically correspond to the centers of the #glspl("lie").
+
+The first constraint ensures that #glspl("lie") remain within the considered beam length, where ha denotes the half-span length. This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
+For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint requires the sum of the centroid position and the collet length to remain within the halfspan length.
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
   width: 100%),
-  caption: [scetch to understand the constraints, visuallay],
+  caption: [Schematic representation of the span direction, centroid locations, and #gls("lie") lengths for constraint visualization.],
 )<fig_79>
 
 $ x_i + x_("cl",i) <= "ha" $ <eq_108>
 
-The second constraint demands that the placing of the #glspl("lie") needs to be on the wing, that is, the #glspl("lie") are not allowed to be palced on empty place. The constraint becomes easier to comprhend when rerphased to @eq_109. It says that, when being at the posistion of the center of a #gls("lie") removing the half length of the same #gls("lie") needs to be within the length defined for the wing or beam.
+The second constraint ensures that #glspl("lie") are properly positioned on the wing structure, preventing placement in void spaces. This constraint can be expressed more intuitively as shown in @eq_109, which specifies that the center position of each #gls("lie") minus half its length must remain within the defined wing or beam length.
 
 $ x_i - x_("cl",i)/2 >= 0 $ <eq_109>
 
-The third constraint from @eq_107 demands that the total length of all #glspl("lie") when added together, is not allowed to go over the maximal length which is defined through the halfspan ha.
-These constraints stem from pyhsical demands and thus do not requires additioanl explanaitons for why they were introduced to the optimiaztion formualtion.
-Next, the bounds in @eq_107 define the maximal and minimal length that each #gls("lie") need to obey. For this a minimal #gls("lie") length of 3% of the halfspan length was selected.
-The maximal #gls("lie") length was selected as $"ha"/ n_"cl"$, where $n_"cl"$ denotes the total number of #glspl("lie"). 
-Thus it has been ensured that each of the #gls("lie") has the same meaining or importance, since each of them can take up to the same maixmal fracitonal length.
+The third constraint from @eq_107 stipulates that the cumulative length of all #glspl("lie") must not exceed the halfspan length ha. If this constraint were not imposed, the optimization might suggest #gls("lie") lengths that would physically overlap or extend beyond the wing structure, which would be difficult or impossible to implement in practice. As these constraints stem from physical demands, their inclusion in the optimization formulation is self-evident.
+The bounds defined in @eq_107 establish the permissible range for each #gls("lie") length. A minimum length of 3% of the halfspan was selected as the lower bound. The upper bound was set to $"ha"/ n_"cl"$, where $n_"cl"$ represents the total number of #glspl("lie"). This choice of bounds ensures equal treatment of all #glspl("lie") in the optimization, as each can occupy the same maximum fractional length of the span.
 
 // ----------------------------- scipy notation ----------------------------- //
-Since this work attemps to provide inital helpful guidance for #glspl("swith") certifaciton, when possible computaitonal tools free chosen such that they are free and open-source. 
-This aimes to ensure that they are accesible by people around the globe.
-Which consequenlty enables other scientists to leverage this work to build upon it.
-For these reasons, as mentioned, SciPy was selected as the optimiaztion framework. In order to stick to this commitment the matrix notaiton for Scipy is proivded as @eq_110 to @eq_112.
-The left side and right the in the mentioned equations provide the lower and uppwer bounds for the linear constraint.
-They are vectors and have the dimension of the the number of constraints $m$.
-The design variable coefficient matrix gives weighting to each design variables and has the dimension of number of constraints $m$ times number of design variables $n$. 
-// maybe you can provide a reason why shape infromation is helpful or why such kind presentaiton can be handy
-This shape infromaiton can be wirtten out as: 
+In alignment with the objective of providing initial guidance for #glspl("swith") certification, this work prioritizes the use of free and open-source computational tools whenever feasible. This approach ensures global accessibility of the methodology, facilitating its adoption and further development by the scientific community. Following this principle, SciPy was selected as the optimization framework for implementation.
+
+To maintain consistency with this open-source commitment and enhance reproducibility, the matrix notation utilized in SciPy is presented in @eq_110 to @eq_112. These equations express the linear constraints through lower and upper bounds, represented as vectors with dimensions corresponding to the number of constraints $m$. The design variable coefficient matrix, which assigns weights to each design variable, maintains dimensions of $m$ constraints by $n$ design variables.
+
+The complete shape information for the optimization problem can be expressed compactly as:
 $bold(l)^(m) <= bold(A)_c^(m times n) space bold(x)_d^(n) <= bold(r)^(m)$
 
+This matrix formulation proves particularly valuable for implementation purposes, as it directly maps to SciPy's optimization interface while maintaining mathematical rigor. Furthermore, this representation facilitates the verification of dimensional consistency across the optimization problem and enables efficient computational implementation. Understanding this standardized matrix structure establishes a foundation for implementing more complex optimization cases, as subsequent formulations can follow the same systematic approach regardless of their specific constraints or objectives. 
+This transferability of knowledge not only reduces implementation effort but also minimizes the likelihood of errors through consistent structure and enables straightforward verification of new optimization formulations through dimensional analysis.
 // ------------------------------ constraint 1 ------------------------------ //
 $
 underbrace(
@@ -232,79 +217,56 @@ $ <eq_112>
 
 
 // ------------------------------- beam model ------------------------------- //
-// explain beam model boundary coniditons - need heavy language modifcation - just quick fragements
-@fig_80 provides essential infromation about the beam model and its solution that used as reference for the optimization.
-the first row in @fig_80, the beam schematic is depicted. it gives infromaiton about the poissiiton and type of the support. here it can be observed that at the left beginning of the beam, there is a clamp, that is, the the movement along the horizontal and vertical direction are not permitted.
-Also it can bear a bending moment.
-Next, the arrows in the beam schematic give infromation about the direciton of the force. Since the aerodynamical force is pointing upwards to keep the airplaine in the air, the arrows point upwards. 
-Comapring @fig_80 to @fig_70, the concrete values of the disitrbuted laods are not given. The reason for that is, that the, aerodynamical force that was obtained through APAME as is obtained as many disitrbuted laods as explained in @chap_4_0_1.
-The high number of these loads, does not allow to add the concrete numbered values of the actual distributed load. Otherweise it would be so mcuh text, that no single disibutrion load as actual load quanity could be read.
-Therefore the added red distirbution is meant to give informaiton about the true aerodynamic load distribution.
+@fig_80 presents the fundamental beam model configuration and its analytical solution, which serves as the reference for optimization. The figure consists of four key elements arranged in rows, each providing essential information for the analysis.
+In the first row, the beam schematic illustrates the support configuration and loading conditions. The beam's left end features a fixed support (clamp), which constrains both translational and rotational degrees of freedom, enabling it to resist forces in horizontal and vertical directions while bearing bending moments. The applied loads are represented by upward-pointing arrows, corresponding to the aerodynamic lift forces that maintain the aircraft's altitude during flight.
+A notable difference between @fig_80 and @fig_70 lies in the presentation of distributed loads. While APAME generates numerous discrete load values as detailed in @chap_4_0_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to represent the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
 
-// adapt figure caption
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
   width: 85%),
-  caption: [beam schematic, reaction forces, shear and bending moment distirbution over the normalized span for optimization case A.],
+  caption: [Analytical model representation composed of beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case A.],
 )<fig_80>
 
-Having understood how boundary coniditons of this surrogate model, it can be said that such a constellation can be regarded as a first rought and quick wing modelling. 
-// explain for what? quick fast investigations? - which potential investigaitons?
-It can be used to 
 
-The reaction forces in @fig_80 are given in second row and provide value infromation about the reuslting shear force and bending moment that are acting at the position of support points.
-The thired and fourth rows of @fig_80 depict the shear force and bending moment diagram.
-For all subfigures the span length was nromlaized
-This information is important since it exaplins why the maximal bending moment has such a hihg mangnitude. 
-Furthermore, it is important to know, the longer the span is, the bigger the available design space becomes.
-A big design space mean that the optimizer has to go through more possible design variable combinations to find an optimized result. Thus, the computaitonal for an optimiaztion with a high span length is expected to increase the computatioanl time.  
-// make it more clear that a span length of 1 mm spans a design space between 0 and 1
-The number of possible combinations is smaller on span length that is strected between 0 and 1 mm.
-Contrary to this notion, as mentioned in @chap_1_0_6 large aircraf can have span lengths of around $80 "m "$ or $num("80000") "mm"$. 
-However, currently no large #gls("swith") is known, yet as mentioned in @chap_0_7 APUS @APUS_0 attempts to design and manufacture a small #gls("swith").
-Because higher span lengths increase the availabel design space for optimiaztion and because the i-2 of APUS is a small aircraft, the optimiaztion provided here are focused on a beam length that fits small aircraft.
-Furthermore, with the asusmption of the wings being symtrically along the vertical axis, the half span can be used.
-In this case the length was chosen to be simmilar to the halfspan of the Apus i-2 @APUS_1.
-However, note that the presented method can be used regardless of span length. 
-// maybe the repetation is not fine here?
-The only as mentioned drawback with a high span length is that the calculation time for the optimiaztion is inccreased.
+The presented boundary conditions establish a surrogate model that serves as an efficient preliminary wing modeling approach. 
+This simplified representation serves multiple purposes in aerospace engineering beyond optimization tasks. Its applications include preliminary sizing of structural components, quick assessment of different load scenarios, evaluation of various support configurations, and rapid iteration of design concepts. 
+The second row of @fig_80 presents the reaction forces, providing quantitative information about the resulting shear forces and bending moments at the support locations. 
+The third and fourth rows illustrate the shear force and bending moment distributions, respectively. All diagrams utilize a normalized span length, which facilitates result interpretation and comparison across different configurations.
 
-// important note before showing the optimiaztion plots
-the optimizaiton was carried out using the units Nmm. Since Nmm is more accurate than Nm, therefore the bending moment infromaiton on the beam model depicted in @fig_80 are in Nmm. Yet, for ppactical applicaiton the units are desired to be shown in Nm, there fore in the upcoming optimization result depcitions, the bending moments are shown in Nm.
-The outcome of the optimiaztion is depicted for four and eight #glspl("lie") in @fig_81 and @fig_82, respectively.
-Both figures follow the same conventional, the first row depicts in blue the reference disitrbuted load that represents the aerodynamic load obtained from APAME and modified as explained in @chap_4_0_1.
-The red load is the discretized load that is the output of the optimization.
-The second row of the figures depicts the shear forces that belong to the reference beam model and the shear forces that belong to the optimized output.
-The third analoughly show the bending moment distribution.
-The final row shows the placing of the #glspl("lie"). 
-For each #gls("lie") two arrows are palced at the start and end of the #gls("lie") posistion. These arrow have the same color, have the normalized span posistion written out as well as the corresponding disitrbuted load.
+The span length selection significantly influences both the optimization process and its computational requirements. The optimization search space expands proportionally with span length, as longer spans create more possible combinations for design variable values. For instance, a normalized span length of 1 mm creates a relatively confined design space between 0 and 1, whereas actual aircraft spans can be substantially larger. As referenced in @chap_1_0_6, large aircraft can have span lengths of approximately $80 "m "$ or $num("80000") "mm"$, creating a vast design space that demands increased computational resources.
+Current #gls("swith") development focuses primarily on smaller aircraft, as evidenced by APUS's efforts mentioned in @chap_0_7 @APUS_0. Given this context and considering computational efficiency, this study employs a beam length corresponding to smaller aircraft dimensions. Specifically, the length was selected to match the half-span of the APUS i-2 @APUS_1, leveraging the assumption of vertical axis symmetry in wing design. 
+However note, the methodology's formulation remains scale-independent, making it applicable across various aircraft categories from small unmanned aerial vehicles to large commercial aircraft.
+// -------------------------------------------------------------------------- //
 
+Prior to presenting the optimization results, it is important to note the unit conventions employed in this analysis. The optimization calculations were performed using Newton-millimeters (Nmm) for enhanced numerical precision. While @fig_80 presents the beam model results in Nmm, subsequent optimization results are converted to Newton-meters (Nm) to align with common engineering practice.
+The optimization results are presented for configurations using four and eight #glspl("lie") in @fig_81 and @fig_82, respectively. Both figures maintain consistent visualization conventions across four rows:
 
-// shows results of optimiaztion
+1. The first row compares the reference aerodynamic load distribution (blue) obtained from APAME and modified as detailed in @chap_4_0_1, with the optimized discretized load distribution (red)
+2. The second row presents the shear force distributions for both the reference model and the optimization output
+3. The third row displays the corresponding bending moment distributions
+4. The fourth row illustrates the #glspl("lie") placement through paired arrows of matching colors indicating the start and end positions of each #gls("lie"). Each pair of arrows is annotated with the normalized span position and its corresponding distributed load value.
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/int_Forc_4.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case A. 4 #glspl("lie") was selected.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case A with four #glspl("lie").],
 )<fig_81>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/int_Forc_8.svg", 
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case A. 8 #glspl("lie") was selected.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case A with eight #glspl("lie").],
 )<fig_82>
 
 // ----------------------------- interpretation ----------------------------- //
-It can be observed that bending moment distibution found by the optimizaiton does not show much visible deviation. Also, while the objective function was to fit the bending moment behaviour, the shear force distribution between the true and the optimized output are approximated in a proper manner. The approxmiaiton quality is increased as the number of #glspl("lie") increases.
-This can be observed through comparing @fig_81 and @fig_82, but also by looking at the objective function values in @fig_83.
-It can be observed that the higher the number of the #glspl("lie") is the lower the objective function value is. The second row of @fig_83 depicts the number of iterations required for the differen number of #glspl("lie").
-The low number of iterations has multiple impactions. Among them is that the the optimiaztion problem is less computional expensive. 
-One reason for that is that the output of k-means++ was used as the center of the #glspl("lie"). Otherwise, the optimiaztion deifntion would need more design variables, which in a half span length between $gt.approx  5000/2 "mm"$ and $frac(approx #num("80000"),2) "mm"$. would increase the possible design space significantly. Consequently the optimization would require more computaitonal time and iterations to converge as will become clear through the upcoming optimiaztion cases.
+Analysis of the optimization results reveals that the computed bending moment distributions closely match the reference cases, showing minimal visible deviation. Although the objective function specifically targeted bending moment behavior, the shear force distributions also demonstrate good agreement between the optimized and reference cases. The approximation accuracy notably improves with an increasing number of #glspl("lie"), as evidenced by comparing @fig_81 and @fig_82.
 
-// optimiaztion progress
+This improvement in accuracy is further quantified through the objective function values presented in @fig_83, which demonstrate a clear inverse relationship between the number of #glspl("lie") and the objective function value. The second row of @fig_83 illustrates the computational efficiency of the approach through the number of iterations required for convergence.
+The relatively low iteration count indicates favorable computational efficiency. It can be reasonably attributed to the strategic use of k-means++ clustering for determining #gls("lie") center positions. This approach significantly reduces the number of design variables compared to implementations where #gls("lie") positions would be additional optimization parameters. For a half-span length ranging between $gt.approx 5000/2 "mm"$ and $frac(approx #num("80000"),2) "mm"$, this reduction in design variables substantially constrains the optimization search space, leading to faster convergence times. The significance of this computational advantage becomes particularly evident in the subsequent optimization cases.
+
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/opti_Bar.svg", 
   width: 95%),
-  caption: [optimization model A. shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+  caption: [Performance metrics for optimization case A showing objective function values and required iteration counts across varying numbers of #glspl("lie").],
 )<fig_83>
-
-
