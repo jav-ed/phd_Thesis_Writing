@@ -44,7 +44,7 @@ $<eq_118>
 Having been introduced to the design variables, the second cosntraint in @eq_117 shall be viewed.
 This constraint was modifed with adding the term $x_(s,2)$ which stands for the posistion of the second support point.
 The udnerlying beam model is the same as used for optimiaztion case B and C, given through @fig_84.
-In the third constraint of @eq_117 the baribale $Beta$ is a factor that decies how much of the tube-wing length can be used to place #glspl("lie") on it.
+In the third constraint of @eq_117 the baribale $beta$ is a factor that decies how much of the tube-wing length can be used to place #glspl("lie") on it.
 For the force design variables $x_(F,i)$ bounds have been added, where $F_(r,i)$ denote the resulting force if the force memebers inside a cluster are added as explained in @chap_4_0_0.
 The lower force factor $gamma_l$ and upper force factr $gamma_u$ can be used with the resulting force to shrink the possible resulting force values.
 
@@ -194,34 +194,50 @@ $ <eq_121>
 
 // -------------------------------------------------------------------------- //
 In the following results with different $beta$ values are be shown. Note, while $beta$ as given in @eq_117 defines the maximal length of the tube-wing length that can be used for placing #glspl("lie"), the inverse can be calculated.
-the inverse gives the amount of free lenbgth that must be free of #glspl("lie").
-// ---------------------------------- here ---------------------------------- //
+the 
+// is it really the inverse? 1-0.33 = 0.667 = 66.7%
+inverse gives the amount of free lenbgth that must be free of #glspl("lie").
+The following $beta$ values are considered: $beta = [0.5, space 0.33, space 0.285, space 0.25]$, which constitutes to a free length of $[50%, space ~66.7%, space 71.5%, space 75%]$.
+The results are depicted in @fig_91 to @fig_94.
+The number of selected #glspl("lie") of these results are based on the otuput presented in @fig_95.
+@fig_95 depicts the objective function of the four different visibility demands.
+It can be observed that depedning on the chosen $beta$ value and the number of #glspl("lie") not all objective functions were plotted. 
+The reason for that is that only objective functions that were obtained while fulfilling the cosntraints were considered as feasible solutions and shown in the first row of @fig_95.
+// this need to be become clear
+Note, not having plotted the solutions of the other cases does nto mean no solution was obtained. it only means that solutions voiolated given constraints.
+Based on informaiton given in the first row of @fig_95, the the lowest objective function a visibility demand of 50% could be achieved with 8 #glspl("lie"). 
+The best #gls("ld", long:true) with a visibility demand of  66.7% could be achieved with seven #glspl("lie") while fulfilling the constraints.
+Accordingly, for a visibility demand of 71% and 75% the best #gls("lie") could be ahcieved with six and five #glspl("lie"), while fulfilling the constraints, respecitvely.
+Based on this fidning the number of #glspl("lie") for @fig_91 to @fig_94, were selected.
+Furthermore, inspecting all objective funciton values over the number of #glspl("lie"), given in the first row of @fig_95, it can be observed that the higher the number of #glspl("lie"), the better the #gls("ld") becomes.
+Furthermore, considering the second row of @fig_95, it can be observed that the higher the number of #glspl("lie") had become the complexer the optimiaztion task had become.
+This is suggested by the high number of iterations. For four #glspl("lie") solutions fulfilling the constraints for all four visibility demands are found. However, as increasing the number of #glspl("lie") the number of iterations increases up to the maximal allowed iteration number of 3000.
+This effect goes so far that for eight #glspl("lie") required nearly 8 times as much iterations as for finding a solution when comapred with four #glspl("lie") with a visibility demand of 50%.
+For the other three visibility demands for eight #glspl("lie"), even after running 3000 iterations no solutions could be found that would not violate the constraint 
 
-// results
-depicted only the resuls that were found by the optimizer while not violating any constraints.
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_50/int_Forc_8.svg",
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 4 #glspl("lie") was selected.],
-)
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D with a free length of 50%. 8 #glspl("lie") was selected.],
+)<fig_91>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_66/int_Forc_7.svg",
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
-)
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D with a free length of 66.7%. 7 #glspl("lie") was selected.],
+)<fig_92>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_71/int_Forc_6.svg",
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
-)
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D with a free length of 71% . 6 #glspl("lie") was selected.],
+)<fig_93>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_75/int_Forc_5.svg",
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D. 8 #glspl("lie") was selected.],
-)
+  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D witha free length of 75%. 5 #glspl("lie") was selected.],
+)<fig_94>
 
 
 
@@ -229,15 +245,15 @@ depicted only the resuls that were found by the optimizer while not violating an
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D/1_L_Comb_Obj.svg",
   width: 100%),
-  caption: [optimization case D (50%, 66%, 71%, 75%) shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
-)
-
-// intepret convergence behaviour
-// solutions are found, however,t he constraints are violoated
+  caption: [optimization case D (50%, 66.7%, 71%, 75%) shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+)<fig_95>
 
 
-// results interpretation
+// --------------------------------- summary -------------------------------- //
+#summary_([
+
+// summary required not only for case D, but for all shown optimiaztion cases.
+// Also,  epxlain that collet was chosen, because IMA has much experince with it
 
 
-// compare against case A, B, C
-
+])
