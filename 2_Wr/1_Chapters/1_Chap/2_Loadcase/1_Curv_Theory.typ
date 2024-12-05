@@ -19,7 +19,7 @@ This consideration is particularly noteworthy given that the literature predomin
 After examining the dynamic loading aspects, the analysis conducted in @chap_3_0_0 established the vertical gust load as the critical static test load for this thesis. 
 
 This choice reflects the universal applicability of vertical gust loads, which can be derived for all commercial aircraft through the V-n diagram. This characteristic enhances the generalizability of this research. Additionally, the experimental setup can accommodate all four required static tests with minimal or no modifications.
-The preference for static testing over dynamic load cases is further supported by the pioneering nature of #glspl("swith") technology. Given the limited knowledge about #glspl("swith") structural testing, static testing could potentially offer better control over safety parameters during this early development phase.
+The preference for static testing over dynamic load cases is further supported by the pioneering nature of #glspl("swith"). Given the limited knowledge about #glspl("swith") structural testing, static testing could potentially offer better control over safety parameters during this early development phase.
 To gather relevant information about static external loading for #glspl("swith"), an examination of pressure vessel behavior under static external loads is warranted. The validity of this approach was established in @chap_2_0_3. The necessity of referring to pressure vessel research, rather than direct #gls("swith") studies, stems from the limited availability of #gls("swith") research, as previously elaborated in @chap_0_7.
 
 // ----------------------------- diving cylinder ---------------------------- //

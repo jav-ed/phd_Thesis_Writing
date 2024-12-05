@@ -212,25 +212,26 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_50/int_Forc_8.svg",
   width: 95%),
-  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case D with eight #glspl("lie") and a free length of 50%.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization Case D with eight #glspl("lie") and a visibility demand of 50%.],
 )<fig_91>
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_66/int_Forc_7.svg",
   width: 95%),
-  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case D with seven #glspl("lie") and a free length of 66.7%.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization Case D with seven #glspl("lie") and a visibility demand of 66.7%.],
 )<fig_92>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_71/int_Forc_6.svg",
   width: 95%),
-  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case D with eight #glspl("lie") and a free length of 50%.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization Case D with six #glspl("lie") and a visibility demand of 71%.],
 )<fig_93>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_75/int_Forc_5.svg",
   width: 95%),
-  caption: [real and optimized otucome, load, shear borde and bending moment distribution over the normalized span for optimization case D witha free length of 75%. 5 #glspl("lie") was selected.],
+  caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization Case D with five #glspl("lie") and a visibility demand of 75%.],
 )<fig_94>
 
 
@@ -246,24 +247,16 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 // --------------------------------- summary -------------------------------- //
 #summary_([
 
-// summary required not only for case D, but for all shown optimiaztion cases.
-// Also,  epxlain that collet was chosen, because IMA has much experince with it
+This investigation develops optimization approaches for #gls("ld"), focusing on determining optimal #gls("lie") configurations for structural testing. The selection of appropriate #glspl("lie") can significantly influences both test quality and implementation costs for static experimental structural validation.
+The distinctions between optimization cases reveal increasing complexity in their formulation. Case A establishes the fundamental framework with a single clamped support configuration. 
+Case B modifies the support system to include two supports instead of one. This configuration is based on proprietary data and potentially better represents #gls("swith") characteristics.
+Case C addresses practical limitations by incorporating prohibited domains where components like landing gear or propulsion systems must be mounted. Case D implements visibility demands, ensuring sufficient clear areas for optical measurement devices and monitoring equipment.
 
-// TODO add hardware infromation here
-// add the infromaiton that all carried out optimiaztions were carried out on a regular working pc, hardware information are 16GB RAM
 
-// this information is of importance since it allows to back the general statement, that the presente dmethods can be used on a regular non hpc pc or even laptop.
-// regarding the time for the otpimiaztons carried out, depending on the required number of iteratiosns or depdning on the optimiaztion case obtaineing the solution of all variations between four and eight #glspl("lie") took some hours to less than a day.
+Optimization results for configurations with four to eight #glspl("lie") revealed that increasing #gls("lie") quantities generally improved load approximation accuracy.
+Computational efficiency analysis, particularly evident in Case D, showed increasing complexity with higher numbers of #glspl("lie"). 
+The optimization framework successfully addressed essential engineering considerations for #gls("swith") development, including #gls("lie") dimensioning, positioning with appropriate spacing requirements, force magnitude determination, and quantity optimization.
+All optimizations were performed on standard computing hardware (Intel i5-10500 CPU, 3.10GHz, 6 cores/12 threads, 16GB RAM), demonstrating the methodology's accessibility without specialized computational resources. When optimizing all configurations from four to eight #glspl("lie"), solution times ranged from hours to under a day, varying with required iterations.
 
-// with the presnted optimiaztion important questions, including 
-// 1. How many #glspl("lie") should be used?
-// 2. At which locations should the #glspl("lie") be attached?
-// 3. What dimensions should the #glspl("lie") have?
-// 4. What load magnitudes must the #glspl("lie") have?
-// 5. What minimum and maximum spacing between #glspl("lie") should be maintained?
-
-// can be answered. These answers not only help in deciding on the final #gls("lie") type, but also explains how the #gls("ld") cannot be carried out in a perfomant way
-
-// TODO there is one more file, add the infos from there here in
-
+The results validate that accurate #gls("ld") can be achieved with reasonable computational resources while meeting practical engineering constraints. The framework's adaptability to varying requirements positions it as a valuable tool for future #gls("swith") structural testing and certification processes.
 ])
