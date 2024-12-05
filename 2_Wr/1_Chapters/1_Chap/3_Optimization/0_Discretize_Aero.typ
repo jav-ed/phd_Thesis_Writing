@@ -25,16 +25,17 @@
 // TODO Title
 === Discretization of Aerodynamic Loads <chap_4_0_0>
 // get proper pre intro for this subsection based on the text that follows inshallah
-In the previous @chap_3_0_4, #gls("lie", long:true) was introduced. 
-Through further examination of the physical load application, it was revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. Among these critical parameters are how many #glspl("lie") should be used, what dimensions they should have, and what load magnitudes can be expected.
-These critical parameters require systematic determination through load approximation analysis.
-This subsection will explain what is meant by the discretization of continuous aerodynamic loads, why optimization is necessary for an ideal outcome, and how this answers the questions of the critcal praemters previously mentioend.
-Furthermore, we will explore multiple methods that could potentially be used for #gls("ld", long:true) and 
-// a word that is used to describe that the decision was made based on rationale arugments
-vindicate to one favorite approach.
-// depending on the content comig, this preintro maybe was not complete and needs some adjustments
+
+// TODO redo the intro
+In the previous @chap_3_0_4, #gls("lie", long:true) was introduced as a method for approximating aerodynamic loads in structural testing. Further investigation has identified key parameters that determine the effectiveness of #gls("lie") configurations, including their quantity, dimensional specifications, and the anticipated load magnitudes. These parameters require systematic determination through comprehensive load approximation analysis.
+This subsection investigates methods for discretizing continuous aerodynamic loads. Initially, regression-based approaches for transforming continuous loads into discrete representations are examined. Subsequently, the unsupervised learning technique k-means++ is explored as an alternative approach for determining optimal #gls("lie") positions and corresponding load magnitudes. Through systematic comparison of both methods, a preferred approach is identified. 
+// maybe better to say, it is explained why the selected method can be used as startinf point for an following optimiaztion. there is no reason to give the reason in the intro - just make it clear that this is explained in the text
+The selected method provides valuable initial parameters, though additional optimization is required to maintain adequate 
+// it is not explained what is meant with that
+viewing areas for visual inspection and optical measurement systems.
 
 // -------------------------------------------------------------------------- //
+// ---------------------------------- here ---------------------------------- //
 According to current physical understanding, an aircraft in flight experiences load at every infinitesimally small point. 
 Thus, this load is considered continuous. In other words, if the load starts at point A and ends at point B, it should be impossible to find an infinitesimally small point between A and B where no force acts.
 Unless explicitly stated otherwise, the load always refers to the aerodynamic load.
