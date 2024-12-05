@@ -213,7 +213,11 @@ Furthermore, inspecting all objective funciton values over the number of #glspl(
 Furthermore, considering the second row of @fig_95, it can be observed that the higher the number of #glspl("lie") had become the complexer the optimiaztion task had become.
 This is suggested by the high number of iterations. For four #glspl("lie") solutions fulfilling the constraints for all four visibility demands are found. However, as increasing the number of #glspl("lie") the number of iterations increases up to the maximal allowed iteration number of 3000.
 This effect goes so far that for eight #glspl("lie") required nearly 8 times as much iterations as for finding a solution when comapred with four #glspl("lie") with a visibility demand of 50%.
-For the other three visibility demands for eight #glspl("lie"), even after running 3000 iterations no solutions could be found that would not violate the constraint 
+For the other three visibility demands for eight #glspl("lie"), even after running 3000 iterations no solutions could be found that would not violate the constraint.
+
+Finally, all the figures shwoing infromaiton aboout objective function values across different number of #glspl("lie") can be used to decide on the final number of #glspl("lie"). Generally, it can be assumed the lower the number of #glspl("lie") the lwoer the cost for obtianing these physical #glspl("lie"). Likewose the cost of maintaining and 
+// maybe control engineering or somehting else?
+control theory is reduced. If a higher number of #glspl("lie") does not give better #gls("ld") there is no need to buy more #glspl("lie"). However, if costs is a concern, trade offs can be made througha nsweing the question, wheter adding additional #glspl("lie") would significantly improve the #gls("ld") quality.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_50/int_Forc_8.svg",
@@ -255,5 +259,21 @@ For the other three visibility demands for eight #glspl("lie"), even after runni
 // summary required not only for case D, but for all shown optimiaztion cases.
 // Also,  epxlain that collet was chosen, because IMA has much experince with it
 
+// TODO add hardware infromation here
+// add the infromaiton that all carried out optimiaztions were carried out on a regular working pc, hardware information are 16GB RAM
+
+// this information is of importance since it allows to back the general statement, that the presente dmethods can be used on a regular non hpc pc or even laptop.
+// regarding the time for the otpimiaztons carried out, depending on the required number of iteratiosns or depdning on the optimiaztion case obtaineing the solution of all variations between four and eight #glspl("lie") took some hours to less than a day.
+
+// with the presnted optimiaztion important questions, including 
+// 1. How many #glspl("lie") should be used?
+// 2. At which locations should the #glspl("lie") be attached?
+// 3. What dimensions should the #glspl("lie") have?
+// 4. What load magnitudes must the #glspl("lie") have?
+// 5. What minimum and maximum spacing between #glspl("lie") should be maintained?
+
+// can be answered. These answers not only help in deciding on the final #gls("lie") type, but also explains how the #gls("ld") cannot be carried out in a perfomant way
+
+// TODO there is one more file, add the infos from there here in
 
 ])
