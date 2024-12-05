@@ -9,16 +9,17 @@
 // proper intro for section and subseciton required
 
 
-// TODO Title
-= Results <chap_5>
+// Title was tested and is inshallah fine 
+= Optimization-Based Load Discretization for Structural Testing <chap_5>
 
 This chapter presents research outcomes focused on utilizing numerical optimization to discretize aerodynamic loads. The optimization framework provides solutions to crucial engineering questions, including the determination of optimal #gls("lie") quantities, force magnitudes, lengths, and precise positioning. Materialforschung und Anwendungstechnik GmbH Dresden (IMA) was consulted to incorporate real-world engineering considerations relevant for potential #gls("swith") certification processes. Through systematic analysis, these practical requirements were translated into mathematical optimization problems. The optimization formulations are presented, explained, solved, and interpreted with respect to their performance.
 
-The investigation is structured into multiple optimization cases, beginning with Case A as the fundamental approach. Each subsequent case incorporates additional constraints and considerations that emerged through iterative development of the optimization problems. This progressive development serves two purposes: first, it demonstrates the methodology's adaptability to varying certification demands, and second, it illuminates how different optimization problem definitions can address specific requirements that certification authorities or manufacturers might encounter.
+The investigation is structured into multiple optimization cases, beginning with Case A as the fundamental approach. Each subsequent case incorporates additional constraints and engineering considerations that emerged through iterative consultations with structural testing experts at IMA Dresden. These considerations reflect real-world requirements, ensuring the optimization framework's practical applicability. 
+The progressive refinement of constraints through expert consultation serves multiple purposes. It bridges the gap between theoretical optimization and practical implementation requirements for potential #gls("swith") certification. This iterative development process also offers broader benefits for the field. The methodology demonstrates adaptability to varying experimental testing demands. Furthermore, it reveals how distinct optimization problem definitions can effectively address different requirements. This flexibility proves valuable for both certification authorities and manufacturers, who may encounter diverse technical specifications and constraints.
 
 It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
-
+// Title was tested and is inshallah fine 
 == Optimization Case A <chap_5_0>
 Optimization case A represents the first application of the theoretical foundations established in @chap_4_0_0 to @chap_4_0_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
 By solving this optimization problem, critical questions posed in @chap_4_0_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 

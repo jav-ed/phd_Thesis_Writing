@@ -2,8 +2,7 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// --------------------------------- opti C --------------------------------- //
-
+// Title was tested and is inshallah fine 
 == Optimization Case C <chap_5_2>
 
 For optimization case C, the underlying beam model remains identical to that presented in optimization case B through @fig_84. Similarly, the optimization definition maintains consistency with case B as provided in @eq_113. The primary contribution of optimization case C emerges from addressing a constraint commonly encountered in real-world applications.

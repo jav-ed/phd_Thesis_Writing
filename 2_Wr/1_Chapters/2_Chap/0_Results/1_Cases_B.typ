@@ -3,8 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 
-// --------------------------------- opti B --------------------------------- //
-
+// Title was tested and is inshallah fine 
 == Optimization Case B <chap_5_1>
 // word approach is used many times here
 
