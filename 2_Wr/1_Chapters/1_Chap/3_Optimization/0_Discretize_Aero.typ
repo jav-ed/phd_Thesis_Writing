@@ -35,293 +35,161 @@ The selected method provides valuable initial parameters, though additional opti
 viewing areas for visual inspection and optical measurement systems.
 
 // -------------------------------------------------------------------------- //
-// ---------------------------------- here ---------------------------------- //
-According to current physical understanding, an aircraft in flight experiences load at every infinitesimally small point. 
-Thus, this load is considered continuous. In other words, if the load starts at point A and ends at point B, it should be impossible to find an infinitesimally small point between A and B where no force acts.
-Unless explicitly stated otherwise, the load always refers to the aerodynamic load.
-In the previous @chap_3_0_4,
-// do not use the we form and never use the word discuss
-we discussed which methods are available to us for replicating these aerodynamic loads in an experimental setup. 
-// k2h2 can be replaced with swith
-It was also explained why the K2H2 project opted for a ground-based experimental setup without a wind tunnel.
-Consequently, #glspl("lie") are now needed, which must be locally attached to the wing skin.
-The #glspl("lie") serve as physical objects through which loads can be applied.
-The goal is to apply and load the #glspl("lie") in such a way that the resulting load distribution closely matches the original aerodynamic loading.
-A concrete definition for #gls("ld") could be: Approximating a continuous force distribution through individual point and area loads.
+According to current physical understanding, an aircraft in flight experiences load at every infinitesimally small point. This load is considered continuous - between any two points A and B on the aircraft's surface, it is impossible to find an infinitesimally small point where no force acts. Throughout this analysis, unless explicitly stated otherwise, the term #emp_[load] refers to aerodynamic load.
+As established in @chap_3_0_4, several methods exist for approximating these aerodynamic loads in experimental setups. For the structural testing of #gls("swith"), a ground-based experimental setup without a wind tunnel was selected. This approach necessitates #glspl("lie") attached locally to the wing skin to serve as physical interfaces for load application. The goal is to position and configure these #glspl("lie") such that their combined load distribution closely approximates the original aerodynamic loading profile.
+#gls("ld") can thus be defined as: The approximation of a continuous force distribution through discrete point and area loads.
 
-The requirement to apply #glspl("lie") in a way that can reproduce the continuous aerodynamic loading can be defined as an optimization problem.
+The application of #glspl("lie") to approximate continuous aerodynamic loading represents an optimization problem, with key parameters previously outlined in @chap_3_0_4. These parameters encompass the quantity of #glspl("lie"), their spatial positioning, dimensional specifications, load magnitudes, and inter-element spacing requirements.
+The optimization approach offers benefits beyond merely determining these parameters. From an economic and environmental perspective, optimization enables the identification of the minimum necessary number of #glspl("lie") while maintaining required accuracy. 
+Consider a hypothetical $60 #unit("m")$ wing design case. When using electrically driven cylinders for load application, initial configurations might require 46 cylinders. Through optimization, this number could potentially be reduced to 23 cylinders while maintaining comparable accuracy. Such reduction yields substantial benefits in electrical consumption, personnel requirements, procurement costs, and logistics overhead.
+The integration of #gls("ld") with optimization establishes a systematic, mathematics-based engineering approach. This methodology ensures appropriate load accuracy while minimizing both the number of required #glspl("lie") and associated resources. The benefits extend to simplified safety protocols and reduced control system complexity.
 
-// these questions were already mentioned in @chap_3_0_4 - thus its mentioning needs to be integrated proplery
-Specifically, the engineer faces the following questions:
-
-1. How many #glspl("lie") should be used?
-2. At which locations should the #glspl("lie") be attached?
-3. What dimensions should the #glspl("lie") have?
-4. What load magnitudes must the #glspl("lie") have?
-5. What minimum and maximum spacing between #glspl("lie") should be maintained?
-
-The listed questions could all be answered through optimization.
-Beyond providing important answers, optimization also supports economic and environmental consciousness. 
-As a supporting example: for an imagined $60 #unit("m")$ long wing, we should try to use the minimum number of #glspl("lie") possible. 
-To expand on this example, let's consider electrically driven cylinders.
-// it should be clear that this is just a made up example for demonstraiton pruposes
-If, say, through optimization 23 cylinders show a similar acceptable accuracy as 46 cylinders in the non-optimized state, significant costs can be saved in terms of electricity, personnel, procurement costs, other operating costs and delivery routes.
-Through proper #gls("ld") paired with subsequent optimization, the number of required #glspl("lie") can likely be reduced considerably.
-The latter would have a positive effect on aspects such as costs, safety concept, and control effort.
-Additionally, optimization would ensure that an appropriate accuracy of the #gls("ld") is achieved.
-In summary, a reasonable #gls("ld") combined with optimization is motivated by the fact that it can 
-// maybe include cost effective, systematic approach, engineering approach based on math and established methods
-achieve sufficient quality of #gls("ld") with a lower number of #glspl("lie").
-
-Up to this point, we have explained what discretization is and mentioned some advantage optimization would bring.
-Next, we will focus on concrete discretization methods. 
-For #gls("ld"), the goal is to achieve the closest match to the original aerodynamic load distribution with as few #glspl("lie") as possible. 
-Pure discretization is known as curve-fitting or regression 
-@Kaptanoglu2022 @Silva2020 @Tibshirani1996 @Brunton2016 @Frochte2020 @Brunton2022 @Bishop2006 @Arlinghaus2023 @Zielesny2016 @James2023 @Richter2019 @prince2023understanding @Zheng2018.
-Here, function values are assigned at discrete support points. 
-
-// maybe there is a better way to epxress that we are getting the pure theoretically defintition to more engineering based and real world perspective - which we need now 
-Translated to loads, discrete support points mean #glspl("lie") and the function values are force magnitudes.
-There are various methods through which regression can be performed.
-The simplest would be linear regression. 
-However, non-linearities can also be used to reproduce prescribed behavior.
-The latter corresponds to the definition of Machine Learning. 
-Machine Learning is, simply put, a method to generate a surrogate model using existing data and optimization @Brunton2022.
-This surrogate model is in many cases a regression model.
-Thus, the technique of regression is a subset of Machine Learning, which is why there is much literature available on this topic.
+// -------------------------------------------------------------------------- //
+Having established the principles of discretization and optimization benefits, the focus now shifts to specific discretization methods. The primary objective in #gls("ld") remains achieving optimal correspondence to the original aerodynamic load distribution while minimizing the number of #glspl("lie").
+In its fundamental form, discretization manifests as curve-fitting or regression @Kaptanoglu2022 @Silva2020 @Tibshirani1996 @Brunton2016 @Frochte2020 @Brunton2022 @Bishop2006 @Arlinghaus2023 @Zielesny2016 @James2023 @Richter2019 @prince2023understanding @Zheng2018. This mathematical concept assigns function values at discrete support points, which in the context of physical load application, translates to #glspl("lie") positions and corresponding force magnitudes.
+Regression techniques span from basic linear approaches to more sophisticated non-linear methods capable of reproducing complex behaviors. This broader capability forms the foundation of Machine Learning, which generates surrogate models through data analysis and optimization @Brunton2022. As regression represents a fundamental subset of Machine Learning methodology, extensive literature exists documenting its applications and theoretical underpinnings.
 
 // --------------------------------- brunton -------------------------------- //
-According to Professor Steve Brunton, who works at the University of Washington and specializes in physics-based simulations and Machine Learning, systems that represent reality are parsimonious.
-In the context of modeling surrogate models, parsimonious means that the number of free parameters should be chosen as low as possible and as high as necessary.
-To understand this, we should first 
-// the word discuss is disliked also within the upcoming description a link to the figure @fig_59 needs to be made
-discuss the difference between interpolation and extrapolation.
-For this, a concrete example should be presented. 
-// it should be clear that this is just a made up example for explanation pruposes
-Let's assume we have 100 data points in a two-dimensional space. One dimension could represent shoe size and the other dimension could represent height.
-These 100 shoe sizes and heights span a known space. 
-If a new shoe size is given that falls within the known space, the corresponding height can be determined through interpolation.
-For a simplified understanding of extrapolation, let's further assume that the minimum shoe size was 36 and the maximum shoe size was 46 in our dataset.
-If now a shoe size of 47 is given to determine a height based on it, this is called extrapolation.
-Extrapolation is the calculation of outputs where the input lies outside the training dataset.
+According to Professor Steve Brunton of the University of Washington, an expert in physics-based simulations and Machine Learning, systems that represent reality are parsimonious. In surrogate modeling, parsimony dictates selecting the minimum necessary number of free parameters while maintaining required functionality.
+
+The concept of parsimony becomes clearer when examining the distinction between interpolation and extrapolation, as illustrated in @fig_59. Consider a hypothetical dataset of 100 points correlating shoe sizes with heights. Within this dataset, shoe sizes ranging from 36 to 46 establish a known space. Determining a corresponding height for a shoe size of 40 represents interpolation, as this value falls within the known range. 
+Conversely, predicting height for a shoe size of 47 exemplifies extrapolation. This process involves generating outputs for inputs that lie beyond the boundaries of the training dataset. Extrapolation presents greater uncertainty than interpolation, as it requires the model to predict behavior in regions where no empirical data exists to validate the predictions.
+This distinction proves fundamental in understanding model behavior at and beyond known data boundaries, as demonstrated in the contrasting regions depicted in @fig_59.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/5_Interpolation.svg", 
   width: 100%),
-  caption: [Illustraitve depiction of Inteprolation and Extrapolation]
+  caption: [Illustrative depiction of Interpolation and Extrapolation.]
 ) <fig_59>
 
+Building upon the understanding of interpolation and extrapolation, consider two models that demonstrate equivalent performance on training data. When the underlying system follows a linear function, both linear and non-linear regression models can reproduce the observed behavior, though this underlying linearity remains unknown a priori.
+A linear regression model, despite its simplicity, can perfectly capture linear relationships in the training data. Its limitation lies in representing only monotonic trends with constant gradients, either increasing or decreasing. In contrast, a fourth-degree non-linear model offers greater flexibility, capable of reproducing both linear behavior and local fluctuations through varying gradients.
+While the fourth-degree model's enhanced capabilities might suggest universal superiority over the linear model, this assumption requires careful examination through the lens of interpolation, extrapolation, and optimization methodology. The relative performance of these models depends significantly on their behavior within and beyond the training data boundaries.
+// -------------------------------------------------------------------------- //
+The performance evaluation of fitting procedures relies on specific error metrics, predominantly based on L2 or L1 norms. While @eq_33 previously introduced the L2-norm in the context of curvature magnitude calculation, a more general formulation is required for universal optimization applications. 
+This generalized L2-norm (Euclidean distance) for higher dimensionality is expressed in @eq_70, with its squared form presented in @eq_71. The L1-norm (Manhattan distance) is given in @eq_72.
 
-
-Now that the difference between extrapolation and interpolation is known, let's assume we have two models that both equally well cover the observed training behavior.
-Let's assume that our actual system underlies a linear function. In other words, the training dataset was generated by an underlying linear function. 
-However, this is not known to us in advance.
-In principle, a linear regression should be able to perfectly reproduce the known training behavior.
-But non-linear regressions can also learn the linear training behavior.
-In one case we have a linear regression model and in the other we assume a non-linear model of fourth degree.
-The linear model is less complex than the non-linear model of fourth degree.
-This also means that the linear model shows lower performance in learning complex or fluctuating behavior.
-It can only capture a single trend, either an increase with a certain gradient or a decrease with a certain gradient. 
-Further differences could not be captured with a linear model.
-The non-linear model of fourth degree can not only reproduce the linear model but can also learn certain fluctuations (locally changing gradients). 
-Thus, the non-linear model can do everything the linear model can plus more.
-Consequently, one might assume that the non-linear model is always superior to the linear model.
-Whether this is actually the case can be answered, among other things, by considering the difference between interpolation and extrpolation and how models are trained through optimization.
-
-In order to determine the perforamnce of the fitting through optimization error metrics are used. 
-These error metrics are often based either on the L2 or L1 norm.
-While the L2-norm was previusly provided as @eq_33, yet it was specific to the task of calculating the magnitude of the curvature consisting of three components.
-The more general version of the L2-norm or Euclidean distance that is required for universial optimiaztion and for higher multidimeniosnality is given as @eq_70.
-The sqaured L2-norm or squared Euclidean distance in its general form is given as @eq_71 and  the L1-norm or Manhattan distance is given as @eq_72.
 
 $ norm(x)_2 = sqrt(sum_i^n x_i^2) $ <eq_70>
 $ norm(x)_2^2 = (sqrt(sum_i^n x_i^2))^2 = sum_i^n x_i^2 $ <eq_71>
 $ norm(x)_1 = sum_i^n space.thin abs(x_i) $ <eq_72>
 
-Note there are moe norms, however, their mention has no relevance for this work, thus if readers are interested to know wbaout these, they are refered to @Brunton2022.
-From the L2-norm the least-sqaured error metric @Brunton2022 as provided in @eq_73 can be obtained.
-// need to add n, number of data points
-Here, $f(x_k)$ represents the data value from the training dataset or the output of a function value, and $x_k$ is the estimate that the regression model reproduces.
+Alternative norms exist but fall outside the scope of this work. For comprehensive coverage of additional norm types, interested readers may refer to @Brunton2022.
+The least-squares error metric, derived from the L2-norm @Brunton2022, is presented in @eq_73, where $n$ denotes the number of data points, $f(x_k)$ represents the training dataset value or function output, and $x_k$ indicates the regression model's estimate.
 
 $ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_73>
 
-The L2-norm tends to assign non-zero values to all available model parameters. 
-This means it tries to attribute a certain importance to all available parameters.
-However, for this, the importance or magnitude of all the model parameters must be reduced accordingly.
-In summary, this means that the L2-norm tries to use as many available parameters as possible to learn an underlying system.
-The mean absolute error @Brunton2022 that can be obtained through the L1-norm is given as @eq_74. It gives less weight to outliers, contrary to the behavior of the L2-norm.
+// -------------------------------------------------------------------------- //
+The L2-norm optimization characteristically produces dense parameter matrices, assigning non-zero values across available model parameters while reducing their individual magnitudes to achieve optimal fit. 
+This approach inherently utilizes the full parameter space for system approximation. The mean absolute error, derived from the L1-norm @Brunton2022, is expressed in @eq_74 and demonstrates greater robustness to outliers compared to the L2-norm's quadratic penalty structure.
 
 $ E_1(f) = 1/n sum_(k=1) ^n space.thin abs( x_k - f(x_k) ) $<eq_74>
 
 // --------------------------------- l1 norm -------------------------------- //
-The consequence is that the L1-norm favors sparse weight matrices.
-Sparse means that in the matrix containing the individual coefficients or weights for a regression model, the majority of entries are assigned a 0.
-A 0 in the weight matrix means that the coefficients are not used.
-The result is an attempt to learn the underlying system behavior, which should be recognized from the training behavior, with as few parameters as possible.
-// word discuss is dilsked
-Applying what has been discussed so far to the linear and non-linear model of fourth order, the following can be noted.
-By optimizing the non-linear model of fourth degree with the L2-norm, all five available parameters are assigned some importance. 
-In interpolation, this should not pose a problem since the optimization has minimized the error specifically for this single task.
-However, highly unreliable output values are to be expected in extrapolation.
-The linear regression model should also be trained with the L2-norm. 
-Since the underlying system is a linear function, in this case both interpolation and extrapolation would be correct.
-The example presented should show that more complex models do not always provide better accuracy.
-More complex models allow more flexibility in learning. 
-However, this flexibility might exceed the behavior that should be extracted from the training data.
-The provided explanation is visually depicted in @fig_60.
-On the left it can be seen that the lienar model as well as the fourth order polynomnimal function are fine for interpolation.
-Yet, on the right hand where extrpolation is demonstrated, it can be obsevered that the fourth order model has too much flexibility, deviates highly from the linearly tending structre and thus performance worse than the linear model.
+Optimization with the L1-norm characteristically produces sparse weight matrices, where the majority of coefficients are reduced to zero, effectively eliminating their contribution to the model. This sparsity-inducing property leads to parsimonious model representations that capture underlying system behavior with minimal parameters.
+When applying these principles to polynomial regression models, distinct behavioral patterns emerge. L2-norm optimization of a fourth-degree polynomial model maintains non-zero values across all five parameters, yielding effective interpolation within the training domain. However, this parameter density often results in unreliable extrapolation performance. Conversely, while the linear regression model trained with the L2-norm offers fewer parameters, its simpler structure provides reliable performance in both interpolation and extrapolation when the underlying system exhibits linear characteristics.
+This comparative behavior is illustrated in @fig_60, where both models demonstrate comparable interpolation accuracy within the training domain. The extrapolation region, however, reveals the fourth-order model's excessive flexibility, resulting in significant deviations from the underlying linear trend and consequently diminished performance relative to the linear model.
 
+
+// -------------------------------------------------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/6_Lin_Poly.svg", 
   width: 100%),
-  caption: [On the left side a focused view on within the training range is depicted for the linear and the 4th order polynomnimal fcn. On the right side the extrpolation is hihglighted to see what happens when the funciton has too much of freedom.]
+  caption: [Comparison of linear and fourth-order polynomial regression models: (left) interpolation behavior within the training domain; (right) extrapolation performance demonstrating the polynomial model's excessive flexibility beyond the training range.]
 ) <fig_60>
 
+// -------------------------------------------------------------------------- //
+While model accuracy is paramount, computational efficiency warrants consideration in the implementation of regression and optimization methods. The relationship between model complexity and computational requirements has evolved significantly with modern hardware capabilities. For instance, a model with 2 parameters versus 100 parameters may exhibit substantial differences in extrapolation accuracy, yet the computational overhead for such parameter ranges is negligible on contemporary hardware architectures.
+Contemporary computational workflows increasingly utilize #gls("gpu") rather than traditional #gls("cpu") processing, leveraging the parallel processing capabilities of graphics hardware as previously mentioned in @chap_3_0. This architectural shift has dramatically expanded the feasible parameter space for optimization problems. 
+To contextualize the scale of modern computational capabilities, it is instructive to consider recent developments in #gls("llm", long:true). Current #gls("llm") implementations routinely employ $7 times 10^9$ parameters @Li2023 @Jiang2023 @Touvron2023a @Touvron2023, with larger architectures extending to $7 times 10^10$ parameters @Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7.
+A comprehensive review of model parameter scaling is provided in @Minaee2024, with even #emp_[tiny] language models utilizing approximately $1 times 10^9$ parameters @Zhang2024
+// -------------------------------------------------------------------------- //
 
-Besides accuracy, computation time also plays a major role. 
-Whether a model has 2 or 100 parameters would lead to very large differences in accuracy in extrapolation.
-However, for computation time, such parameter numbers would not play a role with today's available hardware.
-Today, large models are no longer calculated on the #gls("cpu"), but on the #gls("gpu").
-This has many reasons, but the main one is the parallelizability of the #gls("gpu") as mentioned in @chap_3_0.
-According to current standards, models with $7 times 10^9$ 
-@Li2023 @Jiang2023 @Touvron2023a @Touvron2023
-parameters are quite common and are seen in certain circles in the field of #gls("llm", long:true) as entry-level model size.
-Larger models can easily have $7 times 10^10$ 
-@Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7
-model parameters.
-// This is not the best way to express the intention - needs reformulation 
-Since there is a lot of rapid progress in the world of #gls("llm"), there exists more than just one overview paper.
-A fairly current overview paper on the number of model parameters can be found in @Minaee2024. 
-For interested readers, so-called tiny language models have a model count of about $1 times 10^9$ @Zhang2024
-
-The reference to #gls("llm") should show that the number of model parameters can be neglected for our approximation. The first reason for that is that load approximation does not require flexibility of $1 times 10^9$ model parameter, in fact it is even much less than $1 times 10^3$ parameters. 
-Secondly the concrete numbers provided for the #gls("llm") should have made it clear which computational power exists as of writing this thesis.
-Therefore, only the accuracy requirement is significant for the objective of load approximation.
-// Use the it form not we form
-The L2-norm can be more favorable for more flexible models for interpolation when faster convergernce beahviour during optimization is desired.
-The L1-norm on the other hand generally ensures within the optimization that superfluous model parameters are switched off (set to 0), making it more suitable for extrapolation.
-If a model is to reproduce reality, it must be able to both interpolate and extrapolate.
-As a reminder, parsimonious states, as simple or uncomplicated as possible and as complex as necessary.
-Translated to regression models, this means as few model parameters as possible and only as many as necessary.  
-If reality behaves parsimoniously, it particularly agrees well with the L1-norm.
+The preceding elaboration of #gls("llm") parameter scales serves to contextualize computational requirements for load approximation. 
+While #gls("llm") architectures operate with $1 times 10^9$ parameters or more, load approximation typically can be assumed to require fewer than $1 times 10^3$ parameters to achieve sufficient accuracy.
+This stark contrast, combined with the demonstrated computational capabilities of modern hardware, indicates that computational constraints are not limiting factors in load approximation methodology selection. Instead, accuracy requirements emerge as the primary consideration in selecting appropriate approximation methods.
+In considering accuracy optimization, the choice between L1 and L2 norms becomes significant. The L2-norm demonstrates advantages for interpolation tasks, particularly when rapid convergence during optimization is prioritized. This characteristic proves beneficial for models requiring flexibility within the training domain. Conversely, the L1-norm exhibits an inherent capacity to nullify superfluous model parameters during optimization, effectively setting them to zero. This property renders L1-norm optimization particularly suitable for extrapolation tasks.
+Given that physical reality demands both interpolation and extrapolation capabilities, the selection of an appropriate norm requires careful consideration. 
+The principle of parsimony, which states that models should maintain only necessary complexity, guides this selection. For regression models, this translates to minimizing the number of model parameters while preserving essential physical behavior. 
+The L1-norm's tendency toward parameter sparsity naturally aligns with this approach, particularly when modeling phenomena that exhibit simple underlying patterns.
 
 
 // --------------------- relationship ML and regression --------------------- //
-// maybe better way to explain what we have done and what we can now use this background knowledge for now
-So far, we have explained the relationship between Machine Learning techniques and regression models.
-Subsequently, important basic knowledge about model size and model accuracy influencing factors was provided.
-Next, this knowledge should be applied to the concrete problem of #gls("ld").
-As mentioned before, #gls("ld") is mathematically nothing other than a regression or interpolation task.
-The difference between regression and interpolation is that in interpolation, each individual support point must be hit, whereas this is optional in regression.
-This can be imagined as follows: in interpolation models, it is particularly important that the support points, which represent the data points from the training dataset, reproduce the known output as accurately as possible. 
-In other words, the known output must be hit exactly.
-In regression, this is not necessarily the case. 
-Here, other factors might have greater importance.
-A possible example for the latter would be that the course between two data points can be represented as a continuous curve with tangent continuity.
-The aerodynamic load distribution provides both local spatial coordinates and the magnitude of the force acting there.
-For the #gls("ld"), specific support points are sought at which the #glspl("lie") are applied with a force magnitude. 
-Due to the previously made justifications, the first method with which one would usually start would be the linear surrogate model.
-However, it is already known that the aerodynamic distribution load is not linear.
-Therefore, it would be possible to go higher with the order of the method.
+The preceding examination established fundamental relationships between Machine Learning techniques and regression models, along with critical factors influencing model size and accuracy. 
+This theoretical framework can now be applied to the specific challenge of #gls("ld").
+At its mathematical core, #gls("ld") represents a regression or interpolation task. The distinction between these approaches lies in their treatment of support points. 
+Interpolation methods require exact reproduction of known data points from the training dataset, demanding precise matching between input and output values at these points. 
+In contrast, regression methods offer greater flexibility, allowing deviations from exact point matching when other considerations take precedence. 
+One such consideration could be maintaining tangent continuity in the curve between adjacent data points, prioritizing smooth transitions over exact point matching.
+In the context of aerodynamic load distribution, the problem provides both spatial coordinates and corresponding force magnitudes. The objective of #gls("ld") involves identifying specific support points for #glspl("lie") application with appropriate force magnitudes. 
+While conventional practice might suggest beginning with a linear surrogate model, the known non-linear nature of aerodynamic load distribution indicates the potential necessity for higher-order methods.
 
-A potential method by which the search for the right order could be accelerated that is baed on regression and optimization is PySINDY @Kaptanoglu2022 @Silva2020 @Brunton2016.
-It is a Python @VanRossum2009 code that takes desired mathematical terms as input and generates a sparse output through optimization.
-This means the user would specify a list of candidates. 
-The candidates would be, for example, linear, quadratic, cubic, cos, sin, log, exp, and whatever terms the user considers relevant to descirbe the load distribution or regression task.
-The optimization would try to keep only the relevant candidates and remove all others.
-The output is either the list of sparse candidates or the analytically applicable equation from the candidates.
-Since an analytical equation would be available that describes the course of the continuous aerodynamics, further analytical work could be done.
-The difference between numerical and analytical approaches is that even when we speak of continuous aerodynamics, numerically this distribution cannot be represented truely continuous.
-In numerics or on the computer, lists of discrete entries are taken. 
-Therefore, the calculated aerodynamic force is not a continuous force, but since it was obtained numerically, it is strictly speaking a discrete representation of the continuous aerodynamic force distribution in reality. 
-The reader should not be confused here, the aerodynamic force distribution that comes from an aerosolver is usually resolved so finely that we can call it continuous with acceptable deviation.
-However, if the analytical replacement function is calculated with PySINDY, an analytical function is present, as known from school mathematics.
-This function can be analytically derived, integrated, or otherwise used.
+// -------------------------------------------------------------------------- //
+For determining the appropriate model order, PySINDY @Kaptanoglu2022 @Silva2020 @Brunton2016 represents a potential approach that leverages regression and optimization. 
+This Python-based @VanRossum2009 tool generates sparse output through optimization based on user-specified mathematical terms.
+These terms may include linear, quadratic, cubic functions, as well as trigonometric functions (cos, sin), logarithmic (log), exponential (exp), and any other mathematical expressions relevant to describing the load distribution or regression task
+The optimization process identifies and retains only the most relevant mathematical terms while eliminating others, producing either a list of sparse candidates or an analytically applicable equation. This analytical representation of the continuous aerodynamic behavior enables further mathematical analysis through standard calculus operations.
+A fundamental distinction exists between numerical and analytical approaches in representing continuous aerodynamics. 
+While the physical phenomenon of aerodynamic force distribution is continuous, numerical methods inherently discretize this continuity into finite data points. 
+The aerodynamic force calculated through numerical methods thus represents a discrete approximation of the continuous physical distribution. 
+Modern aerodynamic solvers typically employ sufficiently fine resolution to approximate continuity within acceptable tolerance limits.
+PySINDY's analytical output provides a continuous mathematical function analogous to classical mathematical expressions. This analytical form enables direct mathematical operations such as differentiation and integration, offering advantages over purely numerical representations.
 
+// ---------------------------------- here ---------------------------------- //
 // ---------------------------------- anly ---------------------------------- //
-If an analytical function is available that actually generates an output at any desired location within a meaningful input range a curve simplification method could be applied.
-Curve simplification methods are techniques used to reduce the number of points or support points in a curve without significantly changing the essential form or characteristic properties of the curve @Kerkhof2018 @Shen2018a @Ai2016 @Ratschek2001. 
-These methods are particularly useful in areas such as cartography, computer graphics, signal processing, and data compression, where data simplification is necessary to save storage space, reduce computation time, or improve visual clarity @CHUON2011 @Shen2018a @wu2003non @Barkowsky2000 @Boucheham2005 @Boucheham2006. 
-There are various procedures for this, a few are mentioned in the following:
-Douglas-Peucker algorithm @wu2003non, 
-Visvalingam-Whyatt algorithm @Visvalingam1993 @Visvalingam2016, 
-Lang's algorithm @Shi2006.
-The main goal of these methods is to remove insignificant support points.
-For some of the mentioned methods, freely available code implementations exist. 
-There are also procedures, such as the Chaikin algorithm @Chaikin1974 @Bityukov2016, whose main goal is curve smoothing.
-Through the latter, the focus would be on adding new points.
-Therefore, the method according to Chaikin is eliminated for our purposes.
-
+Given an analytical function capable of generating output at arbitrary points within a meaningful input range, curve simplification methods offer a potential approach for #gls("ld"). 
+These methods reduce the number of support points in a curve while preserving its essential form and characteristic properties @Kerkhof2018 @Shen2018a @Ai2016 @Ratschek2001. The application of such techniques spans multiple domains including cartography, computer graphics, signal processing, and data compression, where simplified representations facilitate storage efficiency, computational speed, and visual clarity @CHUON2011 @Shen2018a @wu2003non @Barkowsky2000 @Boucheham2005 @Boucheham2006.
+Several established methods address point reduction, including the Douglas-Peucker algorithm @wu2003non, Visvalingam-Whyatt algorithm @Visvalingam1993 @Visvalingam2016, and Lang's algorithm @Shi2006. 
+These methods focus primarily on eliminating insignificant support points while maintaining curve characteristics, with implementations readily available for various applications. 
+In contrast, methods such as the Chaikin algorithm @Chaikin1974 @Bityukov2016 emphasize curve smoothing through point addition, making them unsuitable for the current point reduction objectives.
 // ------------------------ curve simplfication concl ----------------------- //
-Whichever curve simplification method may be chosen, in the end, there would be a similar curve with significantly fewer support points.
-These support points could be seen as position specifications on the wing for the #glspl("lie").
-The magnitudes of the forces and the dimensions of the #glspl("lie") could be obtained through subsequent optimization. 
-An alternative to curve fitting or regression models is provided by unsupervised methods alongside supervised methods
+The application of any curve simplification method yields a reduced representation maintaining essential curve characteristics while utilizing significantly fewer support points. These support points can be interpreted as potential position specifications for #glspl("lie") on the wing surface. Further optimization processes could then determine appropriate force magnitudes and #glspl("lie") dimensions.
+Beyond curve fitting and regression approaches, machine learning offers alternative methodologies through supervised and unsupervised techniques 
 @Fukami2023 
 // supervised
 @Pruneski2022 @Das2024 @Nafea2024 @Sun2024
 // unsupervised
-@Luong2020 @Zhang2022a @Naeem2023 @Eckhardt2022.
-In unsupervised learning, no comparison data is provided against which the input could compare the output.  
-Only inputs are given, and the corresponding outputs or patterns must be determined independently by the model.
-To illustrate this, a concrete example should be discussed using @fig_61 to @fig_63.
+@Luong2020 @Zhang2022a @Naeem2023 @Eckhardt2022. 
+Unsupervised learning presents a distinct approach where the model independently identifies patterns and relationships within input data without reference to comparison datasets. This methodology warrants examination through concrete examples, as illustrated in @fig_61 through @fig_63.
+
 
 // -------------------------------------------------------------------------- //
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/0.svg", 
   width: 89%),
-  caption: [Trajektorie, x-, y- und z-Koordinaten über einen zeitlichen Verlauf @link_Javed_Master.]
+  caption: [Trajectory showing x-, y- and z-coordinates over time @link_Javed_Master.]
 ) <fig_61>
 
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/1.svg", 
   width: 89%),
-  caption: [Centroids, Zentrum der gefundenen characktersitischen Größen @link_Javed_Master.]
+  caption: [Centroids representing the centers of identified characteristic features @link_Javed_Master.]
 ) <fig_62>
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/2.svg", 
   width: 89%),
-  caption: [Wirkfläche der einzelnen centroids @link_Javed_Master.]
+  caption: [Active regions of individual centroids @link_Javed_Master.]
 ) <fig_63>
 // -------------------------------------------------------------------------- //
 
 
 // ------------------------------ kmeans intro ------------------------------ //
-In @fig_61, the solution of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022 is visible.
-For understanding the presented unsupervised method, it is sufficient to understand that a chaotic system is described by differential equations.
-The solution of the differential equation is given in @fig_61. 
-This is the trajectory of the well-known Lorenz Attractor @Lorenz1963.
-The trajectory provides x-, y-, and z-coordinates in a three-dimensional space over a temporal course.
-For each time point, there is exactly one combination of x-, y-, and z-coordinates, which are shown in @fig_61.
-When the three-dimensional trajectory is subjected to an unsupervised procedure, such as k-means++ that is about to be covered in detail, centroids are obtained.
-The centroids are characteristic quantities that the procedure has found in the dataset consisting of the trajectory.
-Visually, the centroids can also be represented by three-dimensional points, as shown in  @fig_62.
-In the latter, it can be observed that the procedure was allowed to determine 10 characteristic quantities.
-@fig_63 shows which region each centroid covers. 
-As an example, centroid 3 describes the entire corresponding green region in  @fig_63.
-Depending on how high the number of characteristic quantities, the centroids, is chosen, finer details can be captured.
-In the case of k-means++ @Arthur2006, it would therefore also be possible to generate a smaller and simpler substitute model. 
-Thus, with a low number of centroids k-means++ can be viewed as reduced order modeling technique.
-The idea behind k-means++ is to create groups based on local or mertric based similarities.
-It attempts to find coordinates for the centroids so that the sum of distances of the centroids and their group members is reduced.
-The group members are all the entries that belong to a centroid. 
-Visual depcitions of the centroids are given as crosses in  @fig_63. 
-// this part might be a duplicate. there might be a more efficent way to express that
-// see  centroid 3 describes the entire co..
-Let's again consider centroid 3 and its corresponding green area.
-All coordinates that lie within this green area are group members of centroid 3.
-// the goal was already mentioned once above, maybe a better way to express that or link it, or highlgiht the difference between this sentce and the one before
-The goal is to place the centroid within an effective area so that the distance to all group members is reduced.
+The concept of k-means++ clustering can be effectively demonstrated through the analysis of a chaotic system @Strogatz2019 @Argyris2017 @SPROTT2020 @Datseris2022. @fig_61 presents the solution trajectory of the well-known Lorenz Attractor @Lorenz1963, a chaotic system described by differential equations. 
+This trajectory maps three-dimensional coordinates (x, y, z) over time, with each temporal point corresponding to a unique spatial position.
+When this three-dimensional trajectory is analyzed using k-means++ @Arthur2006, an unsupervised learning procedure, the algorithm identifies characteristic points called centroids. These centroids represent local centers of data clusters, effectively reducing the complex trajectory into distinct regions. As illustrated in @fig_62, the algorithm identified 10 such characteristic points in the dataset, each representing a cluster of similar trajectory positions.
+The effectiveness of k-means++ lies in its ability to partition the data space into meaningful regions, with each centroid serving as a representative point for its corresponding cluster. 
+
+@fig_63 demonstrates this partitioning, where each colored region represents the domain of influence for its respective centroid (depicted as crosses). For instance, the green region associated with centroid 3 encompasses all trajectory points that share greater similarity with this centroid than with any other.
+The granularity of this representation can be adjusted through the number of centroids selected. By varying this parameter, k-means++ can function as a reduced-order modeling technique, with more centroids enabling finer resolution of the underlying data structure.
+
+The algorithm operates through iterative optimization of centroid positions. In each iteration, it calculates the distance between data points and centroids. Data points become cluster members of their closest centroid. 
+The algorithm then minimizes the cumulative distance between centroids and their respective cluster members.
+This clustering approach relies on metric-based similarity measures. The optimization process minimizes the total distance within each cluster. This results in distinct, well-separated clusters, each represented by its centroid.
 
 // -------------------------- kmeans init differece ------------------------- //
-After explaining the basic idea behind k-means++, more in depth details about the procedure should be given.
-For that, it is important to understand how standard k-means initializes its centroids. The standard k-means algorithm selects k points uniformly at random from the dataset as initial centroids.
-This uniform random selection does not account for the spatial distribution of data points or the relative distances between centroids.
-As a consequence, it can result in suboptimal initial centroid configurations where multiple centroids are concentrated in proximate regions while leaving other regions of the feature space without representative centroids.
-Such configurations can lead to suboptimal local minima and slower convergence of the algorithm.
+Having established the basic principles of k-means++, it is essential to examine its initialization procedure in detail, particularly in contrast to standard k-means. The standard k-means algorithm employs a simple uniform random selection of k points from the dataset as initial centroids. This approach, while straightforward, fails to account for the spatial distribution of data points or inter-centroid distances. Consequently, initial centroids may cluster in nearby regions, leaving significant portions of the feature space unrepresented. Such suboptimal initialization often results in poor local minima and extended convergence times.
 K-means++ addresses these limitations through a more sophisticated initialization strategy.
 A visual explanation by the author of k-means++ for the initial positions for the centroids can be found at @kmeans_Visual_Explanation.
 The first centroid is selected uniformly at random from the dataset.
@@ -334,10 +202,12 @@ K-means++ differs from standard k-means solely in this initialization procedure.
 The improved initialization leads to several theoretical and practical advantages: faster convergence to local optima, improved statistical consistency of results, and empirically superior cluster assignments with respect to the k-means objective function
 
 // -------------------------- kmeans objective fcn -------------------------- //
+// ---------------------------------- here ---------------------------------- //
 The problem that k-means++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
 Since, the k-means++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
 The optimization problem of the k-means++ is given as @eq_75. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
 In this case, $k$ centroids would be available.
+
 $ J = sum_(i)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_75>
 
 Furthermore, $x_j in C_i$ specifically means that only data points $x_j$ are considered that are assigned to one unique cluster or group $C_i$. 
