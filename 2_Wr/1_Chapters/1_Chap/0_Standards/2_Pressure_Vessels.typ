@@ -42,7 +42,7 @@ Aluminum tanks emerged as an alternative to steel, offering improved resistance 
 The next significant development involved replacing metallic liners with plastic ones @Wang2021b @Jella2024 @Cheng2024. In this design, composite winding encases the plastic liner. A detailed study comparing metallic and plastic liners, as well as differences among various plastics is given in @Su2021. 
 Key findings include that metals, with their higher density, provide better resistance to H#sub[2]  diffusion. However, metals are heavier and more susceptible to embrittlement. The choice of plastic and the use of special effects, such as the tortuous effect (achieved by adding fillers), can significantly influence diffusion behavior. The primary objective in liner design is to minimize H#sub[2]  diffusion, thereby achieving the lowest possible diffusion rate.
 The evolution of pressure tank design can be categorized into distinct tank types @barral2006hydrogen @Rivard2019 @Wang2021b @Jella2024 @Cheng2024. 
-The four common tank types currently available in the commercial market are illustrated in @fig_4. This figure provides a visual representation of the technological progression discussed, showcasing the structural differences between each tank type and their respective materials.
+The four common tank types currently available in the commercial market are illustrated in @fig_4. This figure provides a visual representation of the technological progression elaborated, showcasing the structural differences between each tank type and their respective materials.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/5_Tank_Types.png", 

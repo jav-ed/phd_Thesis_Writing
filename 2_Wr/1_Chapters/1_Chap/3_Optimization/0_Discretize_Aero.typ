@@ -202,110 +202,80 @@ K-means++ differs from standard k-means solely in this initialization procedure.
 The improved initialization leads to several theoretical and practical advantages: faster convergence to local optima, improved statistical consistency of results, and empirically superior cluster assignments with respect to the k-means objective function
 
 // -------------------------- kmeans objective fcn -------------------------- //
-// ---------------------------------- here ---------------------------------- //
-The problem that k-means++ tries to solve can be formulated as an mathematical optimization problem and can be solved thorugh heuristic algorithms @Brunton2022.
-Since, the k-means++ optimization problem usally is solved iteratively and the final solution depends on the inital starting point @Brunton2022, there is no gurantee that the converegnce ends at the global optima.
-The optimization problem of the k-means++ is given as @eq_75. Its notation is taken from @Frochte2020 and states the distance funciton $d$, the data point $x_j$ and the mean $mu_i$ from the cluster $i$.
-In this case, $k$ centroids would be available.
+The k-means++ clustering method can be formulated as a mathematical optimization problem solved through heuristic algorithms @Brunton2022. Given its iterative nature and dependence on initial conditions @Brunton2022, the algorithm cannot guarantee convergence to a global optimum. 
+The formal optimization problem is expressed in @eq_75, following the notation established in @Frochte2020. In this formulation, $d$ represents the distance function while $x_j$ denotes individual data points. The cluster mean for cluster $i$ is represented by $mu_i$, and $k$ indicates the total number of available centroids.
+
 
 $ J = sum_(i)^k sum_(x_j in C_i) d(x_j, mu_i) $ <eq_75>
 
-Furthermore, $x_j in C_i$ specifically means that only data points $x_j$ are considered that are assigned to one unique cluster or group $C_i$. 
-Note, when deploying computational numerics, in order to know which data points belong to which cluster, the difference between each available data point and each of the k clsuters needs to calculated.
-After its known which data points belongs to which cluster or group, the geometric center of gravity can be determined.
-The centers of gravity are the new starting positions for each of the centroids, so that the group membership of each individual data point thorugh distance calculation can be determined again.
-This iterative process and can be visually understood with @fig_64.
+The notation $x_j in C_i$ carries specific meaning: it indicates that only data points $x_j$ assigned to a unique cluster $C_i$ are considered in the calculation. 
+The computational implementation requires calculating distances between each data point and all $k$ clusters to determine cluster membership. Once membership is established, the geometric center of gravity for each cluster can be determined. These centers of gravity serve as new centroid positions for the next iteration, initiating another round of distance-based cluster membership assignments. @fig_64 provides a visual representation of this iterative process.
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/3.png", 
   width: 100%),
-  caption: [Visual representation of the individual steps of unsupervised k-means++ @Arthur2006  @link_Kmeans_Img_Proc],
+  caption: [Progression of k-means++ algorithm from initial centroid placement to final cluster convergence @Arthur2006 @link_Kmeans_Img_Proc.],
 )<fig_64>
+// -------------------------------------------------------------------------- //
 
-Inserting the squared L2-norm as the distance metric in @eq_75 and writing the objective of k-means as an optimization problem, @eq_76 is obtained.
-The variable $Phi(C_i)$ denotes the sum of the distances between the centroid of one cluster and all its cluster members.
+Employing the squared L2-norm as the distance metric in @eq_75 yields the k-means optimization problem shown in @eq_76, where $Phi(C_i)$ represents the cumulative distances between a cluster's centroid and its respective members.
 
 $ op("argmin",limits: #true)_(mu_i) 
 sum_(i)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, Phi(C_i))  = sum_(i)^k Phi(C_i) $ <eq_76>
 
 
-Up to this point, we have explained the difference between regression and unsupervised learning. 
-We have named concrete methods for both previously mentioned machine learning techniques. 
-For unsupervised learning, k-means++ was elaborated in detail.
-// can be said more eloquently
-For further proceedings, specific areas should be named in which k-means++ is already being used, both as justification for why this method is being considered and to show the reader how powerful this procedure is.
-Subsequently, it should be explained in detail how k-means++ could be used for #gls("ld").
-K-means is used, among others, in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, health @Sim2024, pandemics @GarciaVidal2024, voice cloning @Wang2024, modeling of chaotic systems @link_Javed_Master and many others.
-A list of methods similar to k-means with calculated results can be found in @fig_65.
-A detailed description of the shown methods is outside the scope of this work.
-Interested readers are encouraged to either follow the given link @link_Cluster_Meth and/or read @Ikotun2023 among others.
-In @Ikotun2023, further developments of k-means and additional areas in which k-means finds application are mentioned.
+The preceding analysis has established fundamental distinctions between regression and unsupervised learning approaches, presenting specific methodologies for each technique with particular emphasis on k-means++. To demonstrate the robustness and versatility of k-means++, it is instructive to examine its widespread applications across diverse scientific and industrial domains. The algorithm has proven effective in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, healthcare systems @Sim2024, pandemic modeling @GarciaVidal2024, voice synthesis @Wang2024, and chaotic system analysis @link_Javed_Master. This broad applicability establishes k-means++ as a robust foundation for addressing the challenges of #gls("ld").
+@fig_65 presents a comparative overview of clustering methods related to k-means. 
+A comprehensive review of these methods extends beyond this work's scope. Interested readers may find detailed elaborations in @Ikotun2023 and through the supplementary resources available at @link_Cluster_Meth. @Ikotun2023 further explores recent developments in k-means methodology and its expanding applications.
 
+
+// only the figure caption
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/4.png", 
   width: 100%),
-  caption: [List of other clustering methods that are similar to k-means @link_Cluster_Meth]
+  caption: [List of other clustering methods that are similar to k-means @link_Cluster_Meth.]
 )<fig_65>
 
-After having showed that k-means++ is a method that finds application in various areas in industry and science, the focus is set to #gls("ld"). 
-The input for k-means++ would be the numerically calculated aerodynamic load distribution. 
-This is two-dimensional and includes on one hand the local position where the force acts and on the other hand the magnitude of the force. 
-However, the aerodynamic load distribution can also contain six dimensions if the load distribution is to be considered as a 3D force distribution.
-In this case, the locality of the force would already be three-dimensional, as the 3D space must be described by exactly three coordinates.
-The force could act at an angle in 3D space, thus force components would exist in each spatial direction.
-The resulting force would be divided into three force components in the three spatial directions. 
-k-means++ is a mathematical procedure that can theoretically scale to arbitrarily high dimensions without restrictions.
-The limitation would arise through available computing power. 
-Here, both the number of points and the number of dimensions play a role.
-However, from experience, the author of this report can say that even with very high data points and dimensions, the procedure is remarkably fast @link_Javed_Master.
+Having established k-means++ as a widely adopted method across industry and scientific applications, attention can now be directed to its implementation for #gls("ld"). 
+The algorithm accepts numerically calculated aerodynamic load distributions as input data. In its simplest form, this distribution is two-dimensional, comprising the local position of force application and the corresponding force magnitude. 
+The dimensionality can extend to six dimensions when considering three-dimensional force distributions. This expansion occurs naturally as three coordinates are required to specify force locality in 3D space, while the force vector itself requires three additional components to describe its magnitude and direction in each spatial dimension. 
+k-means++ demonstrates remarkable scalability, operating effectively across arbitrary dimensional spaces without theoretical constraints. While computational limitations exist due to the interplay between the number of data points and dimensionality, practical experience indicates exceptional performance even with high-dimensional datasets and substantial point clouds @link_Javed_Master.
 
 // -------------------------- applying kmeans to ld ------------------------- //
-When k-means++ is applied to #gls("ld"), the input would be a load distribution. 
-The output would be the centroids, which have a physically relevant meaning.
-First, it should be noted that the number of input dimensions determines the number of dimensions of the output.
-It is a direct 1:1 relationship. If the input is two-dimensional, then the output is also two-dimensional.
-In a two-dimensional input, as mentioned before, the first dimension would be the locality of the load and the other would represent the magnitude of the force.
-The first dimension of the two-dimensional centroid matrix $bold(C[:,0])$ would give the respective position of the #gls("lie"). 
-The second column in the centroid matrix $bold(C[:,1])$ would give a representative force magnitude.
-This explanation can be expressed mathematically through the matrix provided in @eq_77. 
-The variables $L_i$ denotes the coordinate infromation, $F_i$ the force magnitude, the index $i in {0, ... , n}$ and the number of centroids is given as n.
+For the application of k-means++ to #gls("ld"), a load distribution serves as input, producing centroids with physical interpretation as output. A fundamental characteristic of this process is the dimensional correspondence between input and output spaces. This one-to-one relationship ensures that two-dimensional input data yields two-dimensional output data.
+In the context of two-dimensional analysis, the first dimension corresponds to load locality while the second represents force magnitude. This structure is reflected in the centroid matrix $bold(C)$, where the first column $bold(C[:,0])$ specifies #gls("lie") positions and the second column $bold(C[:,1])$ indicates representative force magnitudes. The mathematical formulation is expressed in @eq_77, where $L_i$ represents coordinate information, $F_i$ denotes force magnitude, with index $i in {0, ... , n-1}$ and $n$ indicating the total number of centroids.
 
 $  bold(C) = mat(
   L_0, F_0;
   L_1, F_1;
   L_2, F_2;
   dots.v, dots.v;
-  L_n, F_n;
+  L_(n-1), F_(n-1);
 ) $ <eq_77>
 
-For a more general and thus non 2d centroid matrix @eq_78 shall be considered. 
-First, for the general case the dimension of the centroid matrix $bold(C)$ can be given as $bold(C)^(n times m)$, where n denotes the number of centroids and m the number of the features.
-The latter is used as justification to call $bold(C)$ as centroid matrix. 
-Second, the feature vectors are given as $Y_(i,j)$, where $i in {0, ... , n}$ and $j in {0, ... , m}$.
+A more general formulation extends beyond the two-dimensional case through the centroid matrix presented in @eq_78. The dimension of this general centroid matrix $bold(C)$ is defined as $bold(C)^(n times m)$, with n representing the number of centroids and m denoting the number of features. This dimensional structure justifies the terminology #emp_[centroid matrix] for $bold(C)$. The elements are represented by feature vectors $Y_(i,j)$, where indices span $i in {0, ... , n-1}$ and $j in {0, ... , m-1}$.
 
 $  bold(C) = mat(
-  Y_(0,0), Y_(0,1), ... , Y_(0,m);
-  Y_(1,0), Y_(1,1), ... , Y_(1,m);
-  Y_(2,0), Y_(2,1), ... , Y_(2,m);
+  Y_(0,0), Y_(0,1), ... , Y_(0,m-1);
+  Y_(1,0), Y_(1,1), ... , Y_(1,m-1);
+  Y_(2,0), Y_(2,1), ... , Y_(2,m-1);
   dots.v, dots.v, dots.down, dots.v;
-  Y_(n,0),  Y_(n,1), ..., Y_(n,m);
+  Y_(n-1,0),  Y_(n-1,1), ..., Y_(n-1,m-1);
 ) $ <eq_78>
 
-The term feature vector comes from the machine leanring environment. Since k-means++ is a machine learning technique, for general purposes explanations, it considered to be more apropriate to use the machine-learning specific term feature vector.
-In general the feature vector could contain any measurable data that can be represted through numericla numbers.
-However, when adding physical meaning to the feature vector in the 2d #gls("ld") case, the features vectores becomes the positional vector $L$ and the force magnitude vector $F$ as expressed in @eq_77.
-Moreover, the defintion of @eq_78 explains that while thre are n centroids, each centroid has the dimension m, which is  the dimension of the feture vector.
-Consequently, in order to describe one centroid fully, all feature attributes needs to be known.
+The term #emp_[feature vector] originates from machine learning nomenclature, and its usage is particularly appropriate given k-means++'s foundation in machine learning methodology. Feature vectors can encompass any measurable data representable through numerical values. 
+In the specific context of two-dimensional #gls("ld"), these abstract feature vectors acquire physical meaning, where the positional vector $L$ and force magnitude vector $F$ constitute the features as shown in @eq_77. The formulation in @eq_78 demonstrates that while $n$ centroids exist, each requires m-dimensional characterization corresponding to the feature vector dimension. Complete description of any individual centroid therefore necessitates specification of all feature attributes.
 
 // ---------------------------- resulting forces ---------------------------- //
-Focusing on the physical relevant interpretation of the centroid matix, it was said that the second column $bold(C[:,1])$ would indicate a representative force magnitude that should act on the corresponding #glspl("lie").
-However, this interpretation is not complete, which should be explained in the following.
-In order to obtain the centroids, one step is to apply geometric averaging. 
-While this averaging can be used to obtain one representiative entity for an group, these averaged values cannot be used as representation for the resulting loads for the #glspl("ld").
-If an averaged force were to be applied, other partial loads that are part of the same cluster would not be accounted physically correct.
-The goal is to combine all partial loads through addition to get a resulting force.
-This means instead of using the value that k-means++ would indicate in the second dimension $bold(C[:,1])$ of the matrix as a load value for the #glspl("lie"), all partial forces within each cluster should be added up to one resulting force.
-This concept is explained visually through @fig_66.
+The physical interpretation of the centroid matrix, particularly its second column $bold(C[:,1])$, requires careful consideration regarding force magnitude representation for the corresponding #glspl("lie"). While this column initially appears to provide representative force magnitudes, a more nuanced analysis reveals additional complexity in the physical interpretation.
+
+The centroid determination process employs geometric averaging, which generates representative points for each cluster. However, these averaged values prove inadequate for accurately representing the resulting loads in #glspl("ld"). Applying averaged forces would fail to properly account for the cumulative effect of all partial loads within each cluster, leading to physically incorrect force representations.
+For physically accurate load representation, the partial forces within each cluster must be combined through superposition rather than averaging. This principle has direct implications for interpreting the k-means++ output. The force magnitude indicated by k-means++ in the second dimension $bold(C[:,1])$ of the matrix should not be directly applied as the load value for the #glspl("lie"). Instead, it is necessary to sum all partial forces within each cluster to obtain the appropriate resulting force. 
+This summation approach ensures proper accounting of all contributing loads within each cluster region and is 
+// ---------------------------------- here ---------------------------------- //
+// TODO explained visually or visually explained?
+explained visually through @fig_66.
 
 // number of memebers
 #figure(

@@ -119,7 +119,9 @@ First is the simple language syntax and the small number of lines of code requir
 Secondly, Python is a quite advanced programming language that comes with various functions.
 Finally, it is particularly popular in scientific circles due to the large number of freely available and high-quality libraries.
 The Python community usually uploads their tools to #gls("github").
-Here, users can communicate with each other, report problems, conduct plausibility investigations, discuss desired new features, and jointly test and develop.
+Here, users can communicate with each other, report problems, conduct plausibility investigations, 
+// discuss word disliked
+discuss desired new features, and jointly test and develop.
 
 // repeated word "often"
 Documentations to the tools is often also made available on #gls("github").
