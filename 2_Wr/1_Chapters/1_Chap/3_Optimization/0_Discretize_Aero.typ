@@ -284,7 +284,7 @@ explained visually through @fig_66.
   caption: [Original Data with Clusters and Centroids, Average Forces from Centroids,  Summed Forces per Cluster ]
 )<fig_66>
 
-The upper figure shows a sinus like force distribution, which was selected for demonstration pruposes. The colored data points represent the membership to one of the five clusters. The colored background in 2d hihglights the area in which data points would become a member of the corresponding color coded cluster.
+The frist row in  @fig_66  shows a sinus like force distribution, which was selected for demonstration pruposes. The colored data points represent the membership to one of the five clusters. The colored background in 2d hihglights the area in which data points would become a member of the corresponding color coded cluster.
 Since the length of the colored background is not constant, it can be concluded that some clusters have a broader area in which their cluster member can be placed than other clusters.
 While not speicifally visible in this viszulaiation, generally, the number of the members of clusters do not need to match as well. It could be that one cluster has the majority of available data points as its members while the oter remaining togehter have the minority.
 Moreover, the location of  the diamond shaped dots in the top @fig_66 give the 2d dimensional informaiton for the corresponding centroid. The number next to the diamond dot is the force value, which the centroid would provide. K-means++ utlizes the mean as part of of its update. With reaching a convergence the final centroid values are the mean values within each unique cluster. Thus, the numbers next to the diamond dots represent the mean force within the respective cluster.
