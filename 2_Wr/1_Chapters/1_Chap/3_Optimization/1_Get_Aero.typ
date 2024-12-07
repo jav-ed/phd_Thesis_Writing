@@ -97,11 +97,9 @@ The notation $[x,y,z]_(i,r)$ and $[x,y,z]_(i,l)$ represents the coordinates in t
 $ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_82>
 
 
-// ---------------------------------- here ---------------------------------- //
 // ------------------------------- point load ------------------------------- //
-Thus, with @eq_81 and @eq_82, a distributed load can be converted to a point load.
-This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
-However, @fig_69 shows, with the sub-figure in the lower left corner, that this is the complete desired solution.
+The combination of @eq_81 and @eq_82 enables the transformation of distributed loads into point loads across all mesh elements, with each element yielding exactly one resultant partial force. However, as illustrated in the lower left corner of @fig_69, this initial transformation does not provide the complete solution required for the analysis.
+
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
@@ -109,49 +107,46 @@ However, @fig_69 shows, with the sub-figure in the lower left corner, that this 
   caption: [Schematic illustration of the advanced conversion process from distributed aerodynamic loads to adjusted point loads for k-means++ @Arthur2006.],
 )<fig_69>
 
+The limitations of this transformation approach become apparent when examining the fundamental properties of k-means++ @Arthur2006. 
+In its standard implementation, k-means++ assigns equal weighting to each point during initialization. 
+Consequently, areas containing a higher density of data points - in this case, force points - have a greater likelihood of forming new clusters. 
+This characteristic makes both the position and quantity of points critical factors in the clustering process.
+When multiple small-magnitude forces concentrate in a particular location, their collective presence artificially elevates the importance of that region. This bias shifts the centroid position toward areas with higher point density, regardless of the individual force magnitudes. 
+The variation in force point density stems directly from the non-uniform element lengths within the mesh structure, as evident through careful examination of @fig_67. 
+Regions with smaller element lengths accumulate more force points, leading to an artificially increased likelihood of centroid generation in these areas.
 
-To understand why this approach is not entirely correct, another point about the nature of k-means++ @Arthur2006 must be added.
-In normal application of k-means++, each point initially has the same weighting as a standard option.
-This means that if particularly many data points or in this case force points are found in one location, a new cluster is more likely to be formed there.
-Thus, not only the position of the points but also their number is of great importance.
-// it form should be used
-If we have particularly many but small forces in one location, we artifcally increase the importance. Consequently, the position of the centroid would shift towards this point-rich area.
-The varying number of force points is a direct consequence of the variable element lengths that make up the mesh.
-The latter statement can be verified by careful examination of @fig_67.
-In regions were the element lengths is small more force points are accounted there.
-As a consequence, the mentioned likelyhood to generate centroids there is falsely increased. 
-Where the centroids or #gls("lie") should be placed is not known beforehand. Through the centroid posistion, k-means++ gives exactly these informaiton, that is the centers of the #glspl("lie").
-If a preferred direction were unknowingly provided through an incorrect data format, the k-means++ output would be partially or completely unusable.
+The optimal placement of centroids, which determine the locations of the #glspl("lie"), remains unknown prior to analysis. 
+k-means++ determines these positions through centroid calculation, providing the essential information about #gls("lie") centers. 
+However, if the input data format inadvertently introduces directional bias, the resulting k-means++ output may become partially or completely invalid for the intended analysis.
 
-// --------------------------------- adjust --------------------------------- //
-To adjust the k-means++ input data format, it must be defined how many individual forces are to be found over a reference length. 
-Thus, for each element, depending on its element length, it is defined into how many uniformly distributed partial point forces the distributed load is approximated.
-According to @eq_83, at a length of $100 "mm"$, a distributed load [N $"mm"^(-1)$] is approximated by 20 partial point loads [N].
-Note, the units are given to make things easier to understand and can be adapted to required units.
-Consequently, @eq_83 gives the number of partial forces into which a resultant point load should be subdivided.
+// ------------------------- input format adjustment ------------------------ //
+The adjustment of k-means++ input data format requires establishing a relationship between force distribution and reference length. This relationship determines how many uniformly distributed partial point forces approximate the distributed load for each element, based on its specific length. According to @eq_83, a distributed load of [N $"mm"^(-1)$] spanning a reference length of $100 "mm"$ is discretized into 20 partial point loads [N]. 
+These units, since chosen for clarity of exposition, remain adaptable to alternative requirements. 
+@eq_83 thus provides the mathematical basis for determining the number of partial forces necessary to subdivide each resultant point load.
 
 $ n_F = l_i space.thin 20/100  $ <eq_83>
 
-The individual partial point loads can be calculated with @eq_84. 
-Here, within an #gls("fem") element $i$ and the variable $j$ in this context stands for the partial point load within that element. This can be visually seen in the right lower corner in @fig_69.
+The calculation of individual partial point loads follows the formulation presented in @eq_84. Within each #gls("fem") element $i$, the variable $j$ denotes the index of the specific partial point load, as illustrated in the lower right corner of @fig_69.
 
 $ F_(a,i,j) = (q_(a,i) dot l_i )/n_F  $ <eq_84>
 
-Since the partial point loads are obtained by dividing a scalar value from the resultant single point load, within an  #gls("fem") element $i$ the following can be observed.
-// better transtion for the math reference
-With $i = op("const")$ and with $j in {0,1, ... n_F}$ then follows $F_(i= op("const"), j = op("variabel")) => F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
-Expressed in words, this means that the partial point loads within an element are equal to each other.
-While the partial point loads within an unqiw element are equal in magnitude, this does not mean that this equality can be extended to other elements.
-The structre of the data matrix $bold(X)$, as it is noted in Scikit-learn @Pedregosa2011, is given in @eq_85.
 
-$ bold(X) = bold(X)[ ("Position"); space ("Partial point loads" = F_(a,i,j))] $ <eq_85>
+The distribution of partial point loads within a single #gls("fem") element can be derived from the division of the resultant single point load by a scalar value. 
+For a given element $i$, this relationship leads to an important property regarding the distribution of forces.
+Consider an element $i$ where $i = "const"$ and $j in {0,1, ..., n_F-1}$.
+It follows that for $F_(i= "const", j)$, all partial forces are equal
+$F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
+This equality demonstrates that all partial point loads within the same element maintain identical magnitudes. However, this equality relationship is strictly limited to forces within a single element and does not extend to forces across different elements.
+The resulting data structure can be represented as a matrix $bold(X)$, following the convention used in Scikit-learn @Pedregosa2011, as shown in @eq_85.
 
-For each partial point load, a corresponding three-dimensional position vector is specified.
-To reiterate, the clustering method k-means++ can work with even higher dimensions without hitting hardware limitations or needing to change the implementation.
-APAME is able to provide lift coefficients that are valid for span strips and can be seen resulting entities. 
-Within a strip, the lift coefficient is integrated over the chord.
-This behavior is shown in @eq_86, the lift coefficient which is represenatrive for a span strip $i$ is denoted as $C_("lc",i)$ and is obtained through the integration of the lift coefficient $C_L$ over the boundaries leading edge le and  trailing edge te.
-Here, le stands for leading edge, which appears at the beginning of the chord, and te for trailing edge, which is found at the end of the chord.
+$ bold(X) = bold(X)[ ("Position"), space ("Partial point loads" = F_(a,i,j))] $ <eq_85>
+
+Each partial point load is associated with a corresponding three-dimensional position vector. 
+As established in @chap_4_0_0, such three-dimensional data structures pose no challenge for k-means++, which readily handles even higher-dimensional spaces. 
+APAME provides lift coefficients that are valid for span strips, which serve as discrete computational entities. 
+Within each strip, the lift coefficient undergoes integration over the chord length. 
+As shown in @eq_86, the representative lift coefficient for a span strip $i$, denoted as $C_("lc",i)$, is derived through the integration of the local lift coefficient $C_L$ from the leading edge (le) to the trailing edge (te). 
+
 
 $ C_("lc",i) = integral_("le") ^("te")  C_(L,i) $ <eq_86>
 
@@ -159,21 +154,33 @@ In order to obtain distributed forces from $C_("lc",i)$, @eq_80 can be modified 
 
 $ q_a = rho/2 dot u^2 dot underbrace(C_L  dot c, C_("lc")) =  rho/2 dot u^2 dot C_("lc")  $ <eq_87>
 
-In order to obtain the required individual partial point loads the descibed proedure can be followed. Because of the explained properties $C_("lc",i)$ the resulting partial forces $F_(a,i,j)$ are only distributed along the span. 
-A coordinate change in the two other remaining directions does not occur.
-Consequently, the 3d aerodynamic load distribution was tranfered to a 1d load distirbution consisting of resulting partial forces $F_(a,i,j)$.
-This has two implication. First because they are force points, they can be used with k-means++.
-Moreover, because of the 1d dimension, instead of performing the optimization with a more computationally intensive #gls("fem") model, a one-dimensional beam model can be used as a substitute model.
-Further information about both the beam model and optimization will be elaborated in the following @chap_4_0_2 to @chap_4_0_4.
+
+// -------------------------------------------------------------------------- //
+
+With the distributed forces according to @eq_87, the individual partial point loads can be determined by applying the previously described procedure. 
+Given the properties of $C_("lc",i)$, the resulting partial forces $F_(a,i,j)$ exhibit distribution exclusively along the span direction, with no coordinate variations occurring in the remaining two directions.
+This transformation effectively reduces the three-dimensional aerodynamic load distribution to a one-dimensional load distribution comprising the resulting partial forces $F_(a,i,j)$. 
+This reduction provides two significant advantages. First, the resulting force points are compatible with k-means++ implementation. 
+Second, the reduced dimensionality allows the use of a one-dimensional beam model instead of the more computationally intensive #gls("fem") model within optimization frameworks.
+A dedicated examination of both the beam model and optimization methodology is presented in @chap_4_0_2 to @chap_4_0_4, followed by concrete optimization problem definitions and their solutions in @chap_5_0 to @chap_5_3.
 
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
 
-// These are just some starting fractions. based on the provided text above, the summary could be expanded and refined
-In this section, we explained how we first obtain a three-dimensional aerodynamic load and how it interacts with the structural model.
-Then, we explained what data format is required for the k-means++ method and what is obtained as output from APAME. 
-Furthermore, the steps required to perform the needed data transformations were named. 
-These were supported with visual illustrations and equations in addition to textual descriptions.
-Finally, through the mention of the beam model and optimization, an introduction to the following @chap_4_0_2  where fundamentals of beam models are explained was made. 
+// use past tense
+Building upon @chap_4_0_0, this section focuses on obtaining and transforming three-dimensional aerodynamic loads for structural analysis and 
+// it should be clear that the optimiaztion aprt was not covered here - maybe a better way to express this
+subsequent optimization. 
+
+ The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME output characteristics.
+
+To bridge the identified gaps between APAME outputs and k-means++ requirements, a systematic transformation procedure was developed. The procedure addressed several key challenges. First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
+
+Especially the implementation of a reference-length-based force discretization method proved instrumental in resolving these challenges. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
+
+One advantage of the developed transformation framework is the successful reduction of three-dimensional load distributions to one-dimensional representations. 
+Another key advantage is the enablement of computationally efficient beam models as alternatives to full #gls("fem") analysis within an optimization framework.
+// maybe not the best way to expres sit?
+This foundational work establishes the theoretical principles that  seubsequent modeling optimization in @chap_4_0_2 to @chap_4_0_4  and @chap_5_0 to @chap_5_3 sets as prerequisites. 
 ])

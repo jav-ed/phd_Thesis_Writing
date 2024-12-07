@@ -42,7 +42,7 @@ in the following a detaield comparison between modeling the structral behaviour 
 // advantage of the beam model 
 desinging a beam model is faster, thus variiation of multiple different beam models is faster  
 if have to learn new about beam model, can be understood easier than fem
-free and open-source implementations in python available as mentioned in @chap_4_0_2
+free and open-source implementations in Python available as mentioned in @chap_4_0_2
 mathamtical and theory behind it can be comphrenseded eaiser than of Fem,
 calculation time significant lower than those fem, highly advantge for optimiztation because of the mentioned multiple function calling
 calculation can be done on a regular laptop or even on a raspberry pi
