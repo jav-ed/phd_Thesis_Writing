@@ -16,110 +16,88 @@ evaluated them according to specific criteria, and explained why #gls("ld", long
 In the subsequent @chap_4_0_0 we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
 However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load that acts on the wing of an aircraft must be obtained.
 This subsection will therefore demonstrate one method how aerodynamic loads can be obtained thorugh numerical simulations and transformed in a way that k-means++ can be used for the #gls("ld").
+// -------------------------------------------------------------------------- //
 
-// this needs to be adapted properly for a phd - its okay to acknowledge that work is based on somehting, but should be adapted
-From previous projects conducted at TU Dresden, valuable work is available.
-Among others, there exists a simulation code that can model structural behavior with additional aerodynamic loads using #gls("fem").
-This simulation code internally uses APAME @Filkovic to calculate aerodynamic loads.
-APAME is a three-dimensional frictionless panel method. 
-While the calculation is not designed for high-precision requirements, it reproduces the lift distribution with sufficient accuracy and in minimal computation time.
-APAME receives inputs including flight velocity, density, Mach number, and geometric properties, and produces the lift distribution along the wing span as output.
-This load distribution can then be mapped from the aerodynamic mesh to the structural mesh through fluid-structure coupling.
-Thus, the strucutral #gls("fem") model also integrates the aerodynamic loads. 
-An exemplary result provided by APAME is shown in @fig_67. 
-It shows the distribution of lift coefficients multiplied by the local chord length across the wing span.
+Prior research at TU Dresden has established foundational work in this domain, particularly through the development of a computational framework that integrates structural and aerodynamic analyses using #gls("fem"). This framework employs APAME @Filkovic as its aerodynamic solver, implementing a three-dimensional frictionless panel method for load calculations.
+While APAME does not target high-fidelity aerodynamic analysis, it provides an effective balance between computational efficiency and accuracy in predicting lift distribution. The solver processes several key input parameters, including flight velocity, density, Mach number, and geometric characteristics, to generate spanwise lift distributions. Through fluid-structure coupling methodology, these aerodynamic loads are mapped from the aerodynamic mesh to the structural mesh, enabling their integration into the #gls("fem") analysis framework.
+@fig_67 presents a representative output from APAME, illustrating the distribution of lift coefficients, scaled by local chord length, along the wing span.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
   width: 87%),
-  caption: [Exemplary distribution of lift coefficients multiplied by local chord length, obtained from APAME @Filkovic],
+  caption: [Illustrative spanwise distribution of the lift coefficients multiplied by local chord length, as obtained from APAME @Filkovic.],
 )<fig_67>
 
-To convert from a coefficient distribution to a force, let's examine @eq_79 and @eq_80.
-In @eq_79, the variables represent $F_a$ for a point load, $rho$ for density, $u^2$ for velocity squared, $C_L$ for lift coefficient, $c$ for chord length, and $l$ for length.
-Furthermore, $q_a$ from @eq_80 represents a force distributed over a length, or a distributed load.
+The conversion from coefficient distribution to force requires examination of @eq_79 and @eq_80. 
+In @eq_79, $F_a$ represents a point load, $rho$ denotes density, $u^2$ represents velocity squared, $C_L$ is the lift coefficient, $c$ denotes chord length, and $l$ represents length. The variable $q_a$ in @eq_80 characterizes a force distributed over length, commonly referred to as a distributed load.
 
 // dot is used because it makes the distinction between the variables much easier -> easier than just adding some space.med
 $ F_a = rho/2 dot u^2 dot C_L  dot c dot l space.quad  [#unit("N")] $ <eq_79>
 $ q_a = rho/2 dot u^2 dot C_L  dot c  space.quad [#unit("N/mm")] $ <eq_80>
 
-// it should be understood that the given units are mandated to always be in that form, you could also use N/m or KN  and so on
-In order to explicitly emphasize the difference between the point load $F_a$ and a distributed load $q_a$ deomstrative units for both equations are provided.
-In common parlance, it is often said that a force acts at a local point.
-However, this is physically quite rare; in most cases, forces act along a length (distributed load) or over an area (tension/pressure).
-However, in numerical mathematics Point loads can be used for special modeling pruposees or as single  resultant load.
-// provide better explanation for what a resultant force is
-A resultant force typically serves to reduce a force matrix  $bold(F)^(n times m)$ that extends over a length or area to a single resultant force.
-Here n denotes the number of force entries and m the dimension of a single force vector.
-The single resultant force can either be a single vector of the dimension m or be a single scalar value with its magnitude being calcualted.
-Thus, the resultant force can thus be considered as a representative load that helps representing an entire distribution as a single vector or scalar value.
+To distinguish between point load $F_a$ and distributed load $q_a$, appropriate units are provided for corresponding equations. While in common language forces are often described as acting at specific points, this idealization rarely occurs in physical systems. In reality, forces typically manifest as distributed loads along lengths or as stresses (tension/pressure) over areas. 
+Nevertheless, point loads serve valuable purposes in numerical analysis, particularly for specialized modeling applications or as resultant forces.
+A resultant force provides a mathematical means of condensing a force distribution, represented by matrix $bold(F)^(n times m)$, into a single equivalent force. 
+The matrix dimensions are defined by $n$, representing the number of force entries, and $m$, denoting the dimensionality of each force vector. 
+The resultant can be expressed either as an $m$-dimensional vector preserving directional information or as a scalar magnitude.
 
 // ------------------------------- simple case ------------------------------ //
-In simple cases, converting a resultant load distribution to a single load is possible without introducing concerning inaccuracies and local structral effects.
-Simple cases can be imagined as geometries that contain very little or no local gradient.
-To illustrate this, imagine we want to describe a geometry using x,y,z coordinates.
-Since gradient describe the cahnge of one varaible with resepect to another, the following can be said.
-If the local x and z coordinates do not change much when moving along the y direction, the gradients are accordingly low.
-Besides the geometrical aspects for structral investigations, material properties such as stiffness gradients needs to be neglianbale small as well or zero that is constant stiffness within the considered domain.
-For the transformation of the distributed load to a point load  without inducing local structral responses,  the shape and magnitude of the distributed load is of importnace.
-In the case of a distirbuted load that acts on a given length with the constant load and constant angle, the  distributed load can be converted to a single point load for a certain length.
+In simple cases, converting a resultant load distribution to a single load is possible without introducing concerning inaccuracies or local structural effects. Simple cases can be characterized by geometries that exhibit minimal or no local gradients.
+This concept can be illustrated through a geometric description using x,y,z coordinates. Gradients characterize the rate of change of one variable with respect to another. Various geometric changes can occur, such as thickness variations, curvature changes, or cross-sectional area transitions.
+For example, if the local x and z coordinates exhibit minimal change while moving along the y direction of a beam, the corresponding geometric gradients are considered low.
+Beyond geometric considerations, structural analysis must account for material properties, including stiffness gradients and density distributions. These material properties must be negligibly small or zero, ensuring constant material characteristics within the considered domain. For successful transformation of distributed loads to point loads without inducing local structural responses, both the shape and magnitude of the distributed load are of critical importance.
 
-Generally, the larger the length or area for which the distributed load is to be converted to a single load, the greater the risks for structral local phenomena.
-// formulation needs to be improved
-Here's a concrete example: if we have a large length over which a uniformly distributed load acts and this is to be represented by a single point load, the following could occur.
-// formulation needs to be improved
-While, mathematically, everything remains possible, but a high local point load could cause material failure at that location.
-Therefore, it is desirable to represent distributed loads through point loads over small lengths and areas, in addition to having uniform geometry, material properties and force distribution.
-When working with complex geometries, the effective length and area over which the distributed load can be covered by a resultant point load decreases. 
-Consequently, the number of individual forces increases accordingly.
-The same effect occurs with a complex and highly non-linear load distribution that is to be approximated locally by individual point loads.
+A distributed load can be transformed into a single point load over a specific length, with this transformation being most straightforward when the load maintains constant magnitude and angle. However, such transformations require careful consideration of potential local structural responses. The risk of inducing these responses increases with both the non-uniformity of the load distribution and the length over which the transformation occurs.
+For distributed loads acting over large lengths or areas, transformation to a single point load presents particular challenges. While mathematically feasible, the resulting concentrated force can induce significant local stresses, potentially leading to material failure at the point of application. This risk becomes especially pronounced when dealing with non-uniform load distributions.
+To mitigate these risks, it is advantageous to discretize distributed loads into multiple point loads over smaller lengths and areas. 
+This approach is essential when dealing with complex geometries or non-linear load distributions.
+As geometric complexity increases, the effective length over which a single resultant point load can adequately represent the distributed load decreases, necessitating a higher number of discrete point loads to maintain structural accuracy.
 
-The meshed surface of a wing as an exmaple of a complex geomtry is given on the left side of @fig_68.
-Furthermore it depcits how the meshed can be viewed as connected elements.
-This detaield inspection is important to transfer distributed loads to a point loads.
-The motivation behind this transformation is that APAME can be used to obtain distributed load according to @eq_80.
-However, according to the reasoning provided in @chap_4_0_0, k-means++ @Arthur2006 shall be used for the inital step of #gls("ld") of the aerodynamic load distribution.
-Since k-means++ required discrete data points as input, distributed loads from @eq_80 need to be adapted to discrete point loads in the form of @eq_79.
-Vieweing the mesh as single connected elements as depichted on the left side of @fig_68, the distributed force $q_(a,i)$ and the resulting point load $F_(a,i)$ for one single element can be viwed on the right side of the same figure.
-The latter depcits the difference between a distributed force  $q_(a,i)$ and a point load $F_(a,i)$ visually.
-Speical attention should be given to the length of the arrow in $F_(a,i)$, which is higher than the arrows of  $q_(a,i)$ in order to signify that magnitude of the distributed load is approaximted through a single point load.
-Also, it can be observed that if the uniform distributed load is to be formed into a point load, it would act at the center.
+// -------------------------------------------------------------------------- //
+The meshed surface of a wing, representing a complex geometry, is illustrated on the left side of @fig_68. The figure demonstrates how the mesh consists of interconnected elements. This detailed representation is crucial for understanding the transformation of distributed loads to point loads.
+The transformation process is motivated by two factors: APAME provides distributed loads according to @eq_80, while k-means++ @Arthur2006, as 
+outlined in @chap_4_0_0, requires discrete data points for the initial step of #gls("ld") of the aerodynamic load distribution. 
+Consequently, the distributed loads from @eq_80 must be converted to discrete point loads following the form of @eq_79.
+The force transformation mechanism is visualized on the right side of @fig_68, where a single element demonstrates the relationship between the distributed force $q_(a,i)$ and its resulting point load $F_(a,i)$. 
+The point load $F_(a,i)$ is depicted with a larger magnitude vector compared to the distributed force vectors $q_(a,i)$, illustrating the aggregation of the distributed load into a single point load. 
+For uniform distributed loads, this resultant force's point of application coincides with the element's center.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/1.svg", 
   width: 100%),
-  caption: [Representation of the basic initial concept: Reading out the aerodynamic distributed load and conversion to individual point loads],
+  caption: [Schematic illustration of the conversion process from distributed aerodynamic loads to discretized individual point loads on a meshed wing surface.],
 )<fig_68>
 
-Next, @fig_68 shows that the mesh consists of many individual elements and each element has its own distributed load.
-It is possible that the distributed loads are equal at some elements, but this would be more coincidence than a requirement.
-Generally, $q_(a,i) != op("const")$ applies, and thus the pairwise inequality
-$ forall i, j in {0, .... , n} , i != j => q_(a,i) != q_(a,j)$.
-Consequently, this also applies to the derived resultant point loads $ forall i, j in {0, .... , n} , i != j => F_(a,i) != F_(a,j)$.
-To convert a uniform distributed load $q_a$ to a point load $F_a$, @eq_81 can be used.
-Here, $l$ is a side length. 
-Since $q_a$ was obtained according to @eq_80, the length in chord direction has already been used. 
-Therefore, the sought length $l$ remains as the length of the element in span direction.
+
+
+As demonstrated in @fig_68, the mesh structure comprises multiple individual elements, each characterized by its unique distributed load. 
+While it is theoretically possible for distributed loads to be equal across some elements, such equality would be coincidental rather than a systematic requirement. The general case is expressed as $q_(a,i) != "const"$, leading to the pairwise inequality:
+
+#math.equation(block: true, numbering: none)[
+$forall i, j in {0, .... , n-1} , i != j => q_(a,i) != q_(a,j) $
+]
+This inequality relationship extends to the derived resultant point loads:
+
+#math.equation(block: true, numbering: none)[
+$ forall i, j in {0, .... , n-1} , i != j => F_(a,i) != F_(a,j) $
+]
+
+The conversion of a uniform distributed load $q_a$ to a point load $F_a$ is accomplished through @eq_81, where $l$ represents the element's side length. Given that $q_a$ was derived according to @eq_80, which incorporates the chord-directional length, $l$ specifically denotes the element length in the span direction.
 
 $ F_a = q_a dot l $ <eq_81>
 
-// use it form, not we form
-The information about the aerodynamic mesh is available to us in readable (non-binary) form and could therefore be processed without problems.
-However, for handling .vtk files @Gueunet2023 @Shen2023 @Bethel2012, quite capable open-source libraries already exist. 
-One of these is the Python library meshio 
-@Islam2024 @Baker2023 @Jha2024 @CortesOrtuno2024 @DelaporteMathurin2024 @schlomer2022meshio.
-Through this, the .vtk files can be easily read and desired information can be programmatically filtered and obtained.
-Whether this should be done through meshio or through our own tool, the goal remains unchanged.
-The element length in span direction must be obtained for each individual element.
-This is done through simple subtraction; For the shown case, the coordinates of the right node must be subtracted from the coordinates of the left node of the same element.
-Since the coordinates are given in 3D, the magnitude or length of the vector can be obtained through the Pythagorean theorem.
-Mathematically, this can also be expressed as the L2-norm as shown in @eq_82.
-Here, the indices $[x,y,z]_(i,r)$, $[x,y,z]_(i,l)$ stand for the coordinate in direction $x,y,z$, of element $i$ and the right $r$ and left $l$ node respectively.
+// -------------------------------------------------------------------------- //
+The aerodynamic mesh information is available in readable (non-binary) .vtk format, enabling straightforward processing. For handling .vtk and several other common file formats, such as XDMF, VTU, and GMSH, several robust open-source libraries exist @Gueunet2023 @Shen2023 @Bethel2012. 
+The Python library meshio @Islam2024 @Baker2023 @Jha2024 @CortesOrtuno2024 @DelaporteMathurin2024 @schlomer2022meshio emerges as a particularly capable solution. It offers comprehensive support for both binary and non-binary file formats, facilitating efficient programmatic reading and filtering of mesh data.
+While the choice between meshio and a custom tool implementation remains flexible, the fundamental requirement persists: obtaining the element length in the span direction for each individual element. 
+This calculation is accomplished through coordinate subtraction, where the coordinates of the right node are subtracted from those of the left node within the same element. Given the three-dimensional nature of the coordinates, the magnitude or length of the resulting vector is obtained through the Pythagorean theorem, which can be mathematically expressed as the L2-norm shown in @eq_82. 
+The notation $[x,y,z]_(i,r)$ and $[x,y,z]_(i,l)$ represents the coordinates in the $x$, $y$, and $z$ directions for element $i$, with subscripts $r$ and $l$ denoting the right and left nodes, respectively.
+// -------------------------------------------------------------------------- //
 
 $ l = sqrt((x_(i,r) - x_(i,l))² + (y_(i,r) - y_(i,l))² + (z_(i,r) - z_(i,l))²) $ <eq_82>
 
 
-
+// ---------------------------------- here ---------------------------------- //
 // ------------------------------- point load ------------------------------- //
 Thus, with @eq_81 and @eq_82, a distributed load can be converted to a point load.
 This can be done for all elements in the mesh, and for each individual element exactly one resultant partial force can exist.
@@ -128,7 +106,7 @@ However, @fig_69 shows, with the sub-figure in the lower left corner, that this 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
   width: 68%),
-  caption: [Representation of the process of deriving point loads from distributed loads with the goal of using the point loads for k-means++],
+  caption: [Schematic illustration of the advanced conversion process from distributed aerodynamic loads to adjusted point loads for k-means++ @Arthur2006.],
 )<fig_69>
 
 
