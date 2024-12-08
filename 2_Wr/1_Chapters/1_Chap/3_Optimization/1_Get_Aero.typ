@@ -8,14 +8,11 @@
 // all eqs
 // compared with true german text
 
-=== Obtaining Aerodynamic Loads<chap_4_0_1>
-// use it form
-In @chap_3_0_4, we examined some of the available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) for an experiment, 
-// potentially to long sentce
-evaluated them according to specific criteria, and explained why #gls("ld", long:true) is necessary. 
-In the subsequent @chap_4_0_0 we explored various possibilities for implementing #gls("ld") and determined that the presented methods alone are insufficient and should be combined with optimization.
-However, before #gls("ld") can be performed and subsequent steps can be taken, the aerodynamic load that acts on the wing of an aircraft must be obtained.
-This subsection will therefore demonstrate one method how aerodynamic loads can be obtained thorugh numerical simulations and transformed in a way that k-means++ can be used for the #gls("ld").
+// Title was tested and is inshallah fine
+=== Aerodynamic Load Computation and Post-Processing <chap_4_0_1>
+In @chap_3_0_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the establishment of #gls("ld", long:true) necessity. 
+The investigation continued in @chap_4_0_0, exploring various implementation possibilities for #gls("ld") and determining that these methods require integration with optimization approaches to solve remaining issues. Prior to executing #gls("ld") and its subsequent steps, it is essential to obtain the aerodynamic loads acting on the aircraft wing. This section presents a methodology for acquiring these loads through numerical simulations and details their transformation from distributed loads to discrete point loads. The transformation process holds particular significance for k-means++ implementation and demonstrates advantageous implications for the subsequent optimization framework.
+
 // -------------------------------------------------------------------------- //
 
 Prior research at TU Dresden has established foundational work in this domain, particularly through the development of a computational framework that integrates structural and aerodynamic analyses using #gls("fem"). This framework employs APAME @Filkovic as its aerodynamic solver, implementing a three-dimensional frictionless panel method for load calculations.
@@ -164,23 +161,14 @@ This reduction provides two significant advantages. First, the resulting force p
 Second, the reduced dimensionality allows the use of a one-dimensional beam model instead of the more computationally intensive #gls("fem") model within optimization frameworks.
 A dedicated examination of both the beam model and optimization methodology is presented in @chap_4_0_2 to @chap_4_0_4, followed by concrete optimization problem definitions and their solutions in @chap_5_0 to @chap_5_3.
 
-
 // --------------------------------- summary -------------------------------- //
 #summary_([
+Building upon @chap_4_0_0, this section presented a methodology for obtaining and transforming three-dimensional aerodynamic loads into one-dimensional resulting point loads. 
+The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
+To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. The procedure addressed some key challenges. First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
+The implementation of a reference-length-based force discretization method proved instrumental in resolving these challenges. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
 
-// use past tense
-Building upon @chap_4_0_0, this section focuses on obtaining and transforming three-dimensional aerodynamic loads for structural analysis and 
-// it should be clear that the optimiaztion aprt was not covered here - maybe a better way to express this
-subsequent optimization. 
-
- The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME output characteristics.
-
-To bridge the identified gaps between APAME outputs and k-means++ requirements, a systematic transformation procedure was developed. The procedure addressed several key challenges. First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
-
-Especially the implementation of a reference-length-based force discretization method proved instrumental in resolving these challenges. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
-
-One advantage of the developed transformation framework is the successful reduction of three-dimensional load distributions to one-dimensional representations. 
-Another key advantage is the enablement of computationally efficient beam models as alternatives to full #gls("fem") analysis within an optimization framework.
-// maybe not the best way to expres sit?
-This foundational work establishes the theoretical principles that  seubsequent modeling optimization in @chap_4_0_2 to @chap_4_0_4  and @chap_5_0 to @chap_5_3 sets as prerequisites. 
+The reduction of the three-dimensional load distributions to one-dimensional representations enables the use of computationally efficient beam models as alternatives to #gls("fem") analysis. 
+This simplified modeling approach proves particularly advantageous within optimization frameworks, where computational efficiency becomes crucial due to iterative model evaluations.
+The findings outlined in this section provide the essential foundation for understanding the concepts elaborated in @chap_4_0_2 to @chap_4_0_4 and their practical implementations highlighted in @chap_5_0 to @chap_5_3.
 ])
