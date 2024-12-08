@@ -18,66 +18,56 @@ In the previous @chap_4_0_2, important basics of the beam model were explained, 
 
 // -------------------------------------------------------------------------- //
 
-// adapt language to come more close to phd
-Optimization is primarily a mathematical method used to obtain #emp_[optimal] result. Understanding the definition of #emp_[optimal] is particularly important. When optimizers speak of an optimized result, they usually refer to a local minimum rather than a global minimum. There are three important technical terms that should be explained in the following.
+Optimization constitutes a mathematical methodology for obtaining an #emp_[optimal] result within a defined solution space. The interpretation of #emp_[optimal] requires careful consideration, as it fundamentally impacts the understanding of optimization results. 
+It is important to note that in the context of optimized results, the term typically refers to a local minimum rather than a global minimum, a distinction that necessitates further examination.
+The differentiation between local and global optima can be comprehensively understood through an analysis of the first and second derivatives of an analytical mathematical function. 
+A function exhibiting multiple local extrema in its domain is classified as multimodal. In such functions, multiple points exist where the first derivative undergoes sign changes from positive to negative or vice versa, or transitions through zero before returning to its original sign. These characteristics are fundamental to understanding the nature of optimization problems, as illustrated in @fig_72.
 
-The difference between local and global can be understood through the first and second derivatives of an analytical mathematical function. 
-// adapt language according to a phd
-From school days, curves with many ups and downs might still be familiar. If the present graph of the analytical function shows many fluctuations in its course it is called multimodal. Here many occasions can be found where the sign of the first derivative changes from positive to negative, vice versa or goes to zero and then back to the orginal sing.
-An illustative depiction of of a multimodal funciton is povided in @fig_72
-
-// proper caption required
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/0_Multi_Modal.svg", 
   width: 100%),
-  caption: [illustrative multimodal function shwoing local min, max and global min and max],
+  caption: [Visualization of a multimodal function illustrating local and global extrema.],
 )<fig_72>
 
 // ---------------------------- global and local ---------------------------- //
-// use it form
-Besides mulitmodality of functions, @fig_72 can be used to explain other important necessities for optimiazton, namely the difference between local and gloabl extreme points. The function depicted in @fig_72 clearly lets identify points of abaolsute heighest or lowest values. The function with the heihgest value inside the entire considered function space is refered to as global maxium and the with the lowest value as the global minimum. 
-NExt the focus is set on inflection points that can be observed.
-Before and after these, the first derivatives, which indicate the slope of the function, usually change their sign. 
-Exactly at the points where the first derivative has a value of zero, the local minima and maxima are located. 
-Thus, the difference between global and local is that generally there is only one global maximum and one global minimum value, while there can be multiple local maxima and minima values. 
-It is also possible that fucntions do not have one single unique global maximum or minium value and it aligns with the local extreme values.
-A concrete example can be given thorug  trigonometric functions, such as sine or cosine functions. While they are non-linear, due to their periodicty the global extreme values are the same as the local values.
-This can be verified through @fig_73.
+In addition to multimodality, @fig_72 serves to illustrate another fundamental concept in optimization: the distinction between local and global extrema. The function depicted in @fig_72 exhibits distinct points of absolute maximum and minimum values. Within the entire considered function space, the point with the highest value is defined as the global maximum, while the point with the lowest value constitutes the global minimum.
+The analysis can be extended to inflection points observable in the function. 
+Before and after inflection points, the first derivative, which represents the function's slope, usually undergoes a sign change.
+Local minima and maxima occur precisely at points where the first derivative equals zero. 
+This mathematical property establishes a key distinction: while a function typically possesses singular global maximum and minimum values, it may contain multiple local maxima and minima.
+It is noteworthy that certain functions may not exhibit unique global extrema, particularly when local and global extreme values coincide. This phenomenon can be observed in trigonometric functions, such as sine or cosine. Although these functions are nonlinear, their periodic nature results in local extrema that are equivalent to global extrema, as demonstrated in @fig_73.
 
 // proper caption required
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/1_Sin_Opti.svg", 
   width: 100%),
-  caption: [Original funcion sin(x), global and local min and max, first derivative and second derivative],
+  caption: [Comparative analysis of $sin(x)$, its first derivative $sin'(x)$ and second derivative $sin''(x)$, illustrating the relationship between extrema and derivatives.],
 )<fig_73>
 
-Another example for no unique gloabl values besides periodic functions are symmetric functions. 
-Furthermore, it was mentioned that the sign of the slope before and after a extreme point (first derivative equals zero) usally changes. 
-// should be stated more clearer
-However, it could be the case that after finding an local extreme value (derivatives is zero) the sign of the derivative does not change, but instead goes back to the original sign.
-Such kind of observations are denoted as saddle points. Saddle points occur less frequently than a sign change, espeisally in 1d functions, but with complex functions, the probability of their occurrence increases. 
-A concrete example for a saddle point is given in @fig_74
+Symmetric functions represent another category of functions that may lack unique global extrema, similar to periodic functions. Additionally, while it was previously established that the sign of the slope (first derivative) usually changes before and after an extreme point where the first derivative equals zero, an important exception exists.
+In certain cases, when a point is identified where the first derivative equals zero, the derivative's sign may return to its original value rather than changing to the opposite sign. These distinctive points are classified as saddle points in mathematical analysis. 
+While saddle points appear less frequently in one-dimensional functions compared to sign changes at extrema, their occurrence becomes more prevalent in complex, higher-dimensional functions. 
+A representative example of a saddle point is illustrated in @fig_74.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/2_Saddle_Point.svg", 
   width: 100%),
-  caption: [illustrative example of a saddle point using one variable],
+  caption: [Analytical representation of a function exhibiting a saddle point, demonstrating characteristic derivative behavior in one dimension.],
 )<fig_74>
 
 // --------------------------- multivariate optim --------------------------- //
-Using two varaibles imoprtant extreme occurences are visualized in @fig_75.
-
+In the context of multivariate optimization, essential extrema configurations for functions of two variables are presented in @fig_75.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/3_2D_Extremes.svg", 
   width: 100%),
-  caption: [illustrative example of important extreme situations, positive defnite (minimum), Positive Semidefinite (Weak Minima Line),Indefinite (Saddle Point), Negative Definite (Maximum) @mdobook ],
+  caption: [Visualization of extrema in two-dimensional space: positive definite (minimum), positive semidefinite (weak minima line), indefinite (saddle point), and negative definite (maximum) @mdobook.],
 )<fig_75>
 
-The 
-// is this really called definiteheit of the hessian matrix?
-definiteheit mentioned in the subfigure titles of @fig_75 refers to definiteheit of the symetric hessian matrix @mdobook. The hessian matrix can be stated mathematicaly as @eq_103 or as @eq_104 in index notation.
-For an in depth review on the hessian matrix, how its eigenvalues are calculated and which meaning it has readers are referred to literature such as @mdobook @Papageorgiou2015 @Stein2018a.
+
+The definiteness classifications shown in the subfigure titles of @fig_75 refer to the definiteness properties of the symmetric Hessian matrix @mdobook. 
+The Hessianis stated in matrix form in @eq_103 and in index notation in @eq_104.
+For a comprehensive analysis of the Hessian matrix, including its eigenvalue computation and geometric interpretation, readers are directed to the literature @mdobook @Papageorgiou2015 @Stein2018a
 
 #set math.mat(gap: 1.1em)
 $ bold(H)_(f)(x) = mat(
@@ -89,27 +79,24 @@ $ bold(H)_(f)(x) = mat(
 
 $ bold(H)_f_(i j) =  (diff^2 f)/(diff x_i diff x_j ) $ <eq_104>
 
-// ---------------------------------- here ---------------------------------- //
 // -------------------------- general optimization -------------------------- //
-Having explained the difference between local and global extreme points, generally, it could be assumed that the ideal goal of the optimizer is to find a global minimum. However, depending on which optimizer is used, this is only conditionally feasible. An optimizer is a combination of mathematics and logic, typically implemented through computer code. 
-Logic in this context means that if this happens, then that should be given as an answer. There are numerous optimizers and numerous review articles comparing different optimizers @Zhang2015 @Cheng2016 @Gharehchopogh2019 @Li2021a @Gad2022. 
-The aim of this work is not to explain the individual optimization algorithms in detail. However, where further explanations are deemed necessary for understanding, these will be provided.
-
-It was stated that the goal is to find a global minimum and not maximum. Searching for a global maximum is feasible both mathematically and programmatically. However, in science and industry, the search is usually for the minimum. This has evolved over time and could potentially be described as an unwritten, internationally recognized norm. If the function $f(x)$ is to be minimized, this could also be defined as a maximization problem, as shown in  @eq_105. 
+Following the examination of local and global extreme points, it is important to consider that while finding a global minimum represents the ideal objective of optimization, its attainability depends significantly on the chosen optimization method. An optimizer fundamentally combines mathematical principles with logical operations, implemented through computational algorithms. In this context, logical operations refer to conditional programming structures that determine specific outcomes based on predefined criteria. 
+The field encompasses numerous optimization approaches, with extensive comparative analyses available in the literature @Zhang2015 @Cheng2016 @Gharehchopogh2019 @Li2021a @Gad2022. While this work does not aim to provide comprehensive explanations of individual optimization algorithms, relevant theoretical foundations will be presented where necessary for understanding the broader concepts.
+In the context of optimization objectives, it is noteworthy that while both global minima and maxima can be determined through mathematical and computational methods, the predominant focus in scientific and industrial applications lies in minimization problems. This convention has developed through practical application and has become an established standard in the field. It is important to note that any maximization problem can be reformulated as a minimization problem, as expressed in @eq_105.
 
 $ min f(x) = - max -f(x) $ <eq_105>
 
-In @eq_105 $-f(x)$ would mirror the function in two dimensions about the horizontal axis as shown. This is demonstrated in @fig_76 and supports in understnading the additional following reasoning.
-After this function $-f(x)$ has been maximized, the optimization result can be reversed in sign again to obtain the same result as minimizing $f(x)$.
+The operation $-f(x)$ in @eq_105 represents a reflection of the original function about the horizontal axis, as illustrated in @fig_76. This geometric transformation provides insight into the relationship between minimization and maximization problems. 
+Once the maximum of $-f(x)$ is determined, negating this result yields an equivalent solution to minimizing the original function $f(x)$, thereby demonstrating the mathematical equivalence of these optimization approaches.
 
 // adapt figure caption
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/4_Min_Max_Sym.svg", 
   width: 100%),
-  caption: [illustrative example of a function f(x) and its -f(x) to visually understand the concept of @eq_105. ],
+  caption: [Geometric representation of $f(x)$ and its reflection $-f(x)$ illustrating the equivalence stated in @eq_105.],
 )<fig_76>
 
-
+// ---------------------------------- here ---------------------------------- //
 Coming back to the econimocal reasonign why global minima are not always the best choice. Depending on the optimization problem, the available hardware, and the optimizer, this is not always possible. There are two major classes of optimization methods. The first works with gradient information, while the other type is gradient-free. Both have their justification and exhibit different advantages and disadvantages. A gradient-based optimizer needs both the gradients of the objective function with respect to the design variables and with respect to the constraints. A gradient can be physically and intuitively imagined through the following question: What happens to one quantity when another quantity is changed? In this case, our quantity would be the function $f(x)$ and the quantity to be changed x. In other words, what happens to the output $f(x)$ when the input x is changed? Should the change in x cause a large change in the output $f("x")$, then x is an important variable. To understand the significance of this statement, the following explanation is provided: The function $f(x)$ could also depend on a vector or multiple variables.
 
 // ------------------------ definition of design vars ----------------------- //
@@ -176,4 +163,8 @@ Concrete example, It can also happen that the customer has wishes that are only 
 
 // --------------------------------- summary -------------------------------- //
 // summary based on the provided text above is missing
+#summary_([
+
 This has been a brief summary of essential aspects of optimization. Optimization is a very large field that finds application in various industries. For interested readers, several helpful book resources can be listed: @Gritzmann2013 @Papageorgiou2015 @Stein2018 @Stein2018a @Koop2018 @Grimme2018 @Scholz2018 @Jarre2019 @Dietz2019 @Schumacher2020. Finally, for multidisciplinary optimization, reference is made to the textbook @mdobook.
+
+])
