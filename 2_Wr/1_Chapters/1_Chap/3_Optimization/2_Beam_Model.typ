@@ -8,46 +8,32 @@
 // all eqs
 // compared with true german text
 
-// TODO proper justification why used and not why fem is used
-// firt explain some basics aout beam model, then about optimiaztion, then the reasoining provided why beam model can be used with optimization over FEm and optimiaztion are more clear to understand in 4_Beam_Opti
+
 
 === Beam Model Fundamentals<chap_4_0_2>
-// use it form not we form
-In the previous @chap_4_0_1, we explained how aerodynamic loads are obtained and what additional steps are required to convert them into an desired input format for k-means++ for the inital step of #gls("ld", long:true). 
-Furthermore, it was mentioned that the 1d form of the resulting partial forces $F_(a,i,j)$ allow the incorporation of 1d beam models within optimization frameworks. 
-This subsection aims to provide a detailed mathematical based description of the beam model.
-Key questions to be addressed include: what a beam model is, how it is used and which how it can be implemented efficiently as a computational tool.
-With covering some fundamentals about optimization in @chap_4_0_3 the beam model's 
-// the idea is to say, that its pros and cons against for example #gls("fem") are viewed
-incorporation within an optimiaztion framework is investigated and assesed as suitable choice in @chap_4_0_4.
 
-In many engineering programs, working with beam models is taught under the course name technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
-This represents an efficient method that combines physics and mathematics.
-Simplified geometry of a physical object are used to put forces acting at their respective positions.
-Next, equilibrium conditions are established. 
-Generally, the used coordinate system consists of a horizontal and vertical axis. Following that all forces are divided into horizontal and vertical force components.
-It would be possible to rotate the coordinate system and divide the force components according to the rotated coordinate system, which can be helpful in some analyses.
-For the further explanation of equilibrium conditions, a conventional non-rotated (horizontal, vertical) coordinate system is assumed.
+The previous @chap_4_0_1 explained how aerodynamic loads are obtained and what steps are required to convert them into a suitable input format for k-means++ during the initial step of #gls("ld", long:true). 
+It was also mentioned that the one-dimensional representation of the resulting partial forces $F_(a,i,j)$ enables the integration of one-dimensional beam models within optimization frameworks. 
+This subsection provides a mathematical description of beam modelling. It addresses fundamental questions about its definition, application, and computational implementation
+The examination of optimization fundamentals follows in @chap_4_0_3. Subsequently, @chap_4_0_4 analyzes the incorporation of beam models within optimization frameworks and assesses their advantages and limitations compared to alternative approaches.
 
-Once the force components in the two directions are known, they can be set equal to zero according to static analysis.
-However, if dynamic loading is considered, this cannot be set equal to zero and additional considerations are required @Gross2021a @Gross2023 @Gross2019a.
-Static means that loads are at rest; they are applied once and remain constant in their load.
-Dynamic loads are loads that change over time.
-For the task of #gls("ld") only static forces with the beam model are elucidated.
-In two dimensions, in addition to the force equilibrium condition, the moment balance is required.
-Here, all moments about a chosen point are calculated and then set to zero.
-This can be represented as @eq_88 to @eq_90 @Gross2021b.
-Here, the index $i$ stands for the individual force, $x$ and $y$ for the force components in the respective direction, $M$ for the bending moment, the index $z$ for the imagined rotation axis pointing into the page plane, and $A$ is the local point about which the moment balance is formed.
+// -------------------------------------------------------------------------- //
+In many engineering programs, beam model analysis is taught within the framework of technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014. The approach represents an efficient method that integrates fundamental principles of physics and mathematics. The analysis begins with a simplified geometric representation of physical objects, where forces are applied at their respective positions. Following this simplification, equilibrium conditions are determined.
+The standard coordinate system employed consists of horizontal and vertical axes, with forces decomposed into their respective directional components.
+While it is possible to utilize a rotated coordinate system and decompose forces accordingly for specific analyses, the subsequent explanation of equilibrium conditions assumes a conventional non-rotated (horizontal, vertical) coordinate system.
+In static analysis, force components along both directions are set to zero. However, dynamic loading scenarios require additional considerations, as these components cannot be zeroed @Gross2021a @Gross2023 @Gross2019a. 
+Static loading refers to conditions where forces remain constant after initial application, while dynamic loads exhibit temporal variations. For the purpose of #gls("ld"), the analysis focuses exclusively on static forces within the beam model framework.
 
+The two-dimensional analysis necessitates both force equilibrium and moment balance conditions. The latter involves calculating moments about a selected point and setting their sum to zero. These conditions are mathematically expressed in @eq_88 to @eq_90 @Gross2021b. In these equations, the index $i$ denotes individual forces, while $x$ and $y$ represent force components in their respective directions. The symbol $M$ indicates the bending moment, with index $z$ representing the rotation axis perpendicular to the page plane, and $A$ denoting the local point about which the moment balance is calculated.
+
+// -------------------------------------------------------------------------- //
 $ sum F_(i,x) = 0 $ <eq_88> 
 $ sum F_(i,y) = 0 $ <eq_89>
 
 // rotation about z
 $ sum M_(i,z)^(A) = 0 $ <eq_90>
 
-The mathematical description can be extended to any number of dimensions, though more than three dimensions rarely makes sense in most engineering cases.
-For a calculation in three dimensions, @eq_91 to @eq_96 can be used.
-Here, the force balance in the third dimension is added through @eq_93 and the moment balances in the two remaining rotation axes in @eq_94 and @eq_95.
+The mathematical formulation can be generalized to n-dimensional space, although practical engineering applications typically limit consideration to three dimensions. The three-dimensional analysis utilizes equations @eq_91 to @eq_96. The system incorporates force balance in the third spatial dimension through @eq_93, while @eq_94 and @eq_95 address moment balances about the remaining rotational axes.
 
 $ sum F_(i,x) = 0 $     <eq_91> 
 $ sum F_(i,y) = 0 $     <eq_92>
@@ -56,30 +42,25 @@ $ sum M_(i,x)^(A) = 0 $  <eq_94>
 $ sum M_(i,y)^(A) = 0 $ <eq_95>
 $ sum M_(i,z)^(A) = 0 $ <eq_96>
 
-The beam model can therefore be considered a simple physics-based method that can be applied analytically by engineers without numerical computational assistance.
-One partial goal of the beam model is to determine support forces.
-These are the forces acting at the selected support points.
-Once the support forces are known, the internal forces can be calculated in the next step.
-// maybe cutting beam model is not the best way to describe it?
-The detailed process of cutting beam models will not be explained here; for this, refer to literature such as @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014.
-However, the output of these internal forces includes the distributions of normal force, shear force, and moment.
-Important relationships for calculating internal force distributions are given by @eq_97 to @eq_99 @Gross2021b.
-Here, @eq_97 states that the derivative of the shear force $Q space.thin[#unit("N")]$ with respect to the spatial coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$.
-@eq_98 states that the derivative of the bending moment $M space.thin [op("N mm")]$ with respect to the spatial coordinate $x$ equals the shear force $Q space.thin[#unit("N")]$.
-Furthermore, @eq_99 shows the relationship between @eq_97 and @eq_98.
-// it should be understood that the given units are mandated to always be in that form, you could also use N m or KN  and so on
-The units are given to further help in understanding the differences between shear force, distributed load and bending moment.
+The beam model represents a fundamental physics-based methodology that engineers can apply through analytical means without computational assistance. A primary objective of beam model analysis is the determination of support forces, which act at designated support points. The calculation of internal forces follows the determination of these support forces.
+The method of sections, while not detailed here, provides the theoretical foundation for internal force analysis. For comprehensive treatment of this method, readers are directed to @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014. The analysis yields distributions of normal force, shear force, and bending moment throughout the beam structure.
+The fundamental relationships governing internal force distributions are expressed in @eq_97 to @eq_99 @Gross2021b. 
+@eq_97 establishes that the spatial derivative of the shear force $Q space.thin[#unit("N")]$ with respect to coordinate $x$ equals the negative distributed load $q space.thin [op("N/mm")]$. 
+Similarly, @eq_98 defines the spatial derivative of the bending moment $M space.thin [op("N mm")]$ with respect to coordinate $x$ as equal to the shear force $Q space.thin[#unit("N")]$. 
+The relationship between these derivatives is further captured in @eq_99. 
+The units were provided as an auxiliary means to distinguish between shear force, distributed load, and bending moment quantities.
 
 $ (dif Q) / (dif x) = -q  $    <eq_97>
 $ (dif M )/ (dif x) = Q  $     <eq_98>
 $ (dif^2 M) / (dif^2 x) =  (dif Q) / (dif x) -q  $   <eq_99>
 
-When @eq_97 to @eq_99 are inverted, @eq_100 to @eq_102 are obtained.
+Through integration of @eq_97 to @eq_99, the corresponding expressions in @eq_100 to @eq_102 are obtained.
 
 $ Q = - integral q dif x   $    <eq_100>
 $ M = integral Q   dif x $     <eq_101>
 $ M   = - integral integral q dif x dif x  $   <eq_102>
 
+// ---------------------------------- here ---------------------------------- //
 All equations from @eq_88 to @eq_102 can be used to calculate normal force and shear force distributions, as well as bending moment distributions, symbolic using computatioanl resources @Valipour2021 @Elham2021 @Kulyabov2021 @butt2021development as well analytically by hand.
 The process can be automated and accelerated through programming support.
 However, before moving on to this application, an illustrative example of a beam model and the resulting internal force distributions should first be given.

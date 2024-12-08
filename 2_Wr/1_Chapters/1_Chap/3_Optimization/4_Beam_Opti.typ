@@ -12,6 +12,8 @@
 // all eqs
 // compared with true german text
 
+// TODO proper justification why used and not why fem is used
+// firt explain some basics aout beam model, then about optimiaztion, then the reasoining provided why beam model can be used with optimization over FEm and optimiaztion are more clear to understand in 4_Beam_Opti
 
 // Title
 === Combination of Optimization and Beam Model<chap_4_0_4>
