@@ -14,19 +14,19 @@ fig = go.Figure()
 # Add original function
 fig.add_trace(go.Scatter(
     x=x, y=y,
-    name='f(x)',
+    name='J(x)',
 ))
 
 # Add negative function
 fig.add_trace(go.Scatter(
     x=x, y=y_neg,
-    name='-f(x)',
+    name='-J(x)',
 ))
 
 # Add annotations for minimum and maximum
 fig.add_annotation(
     x=0, y=3,
-    text='min f(x)',
+    text='min J(x)',
     showarrow=True,
     arrowhead=1,
     ax=30,
@@ -35,7 +35,7 @@ fig.add_annotation(
 
 fig.add_annotation(
     x=0, y=-3,
-    text='max -f(x)',
+    text='max -J(x)',
     showarrow=True,
     arrowhead=1,
     ax=30,
@@ -46,7 +46,7 @@ fig.add_annotation(
 fig.update_layout(
     title='Function and its Negative',
     xaxis_title='x',
-    yaxis_title='f(x); -f(x)',
+    yaxis_title='J(x); -J(x)',
     xaxis=dict(range=[-2, 7]),  # Set x-axis range from -2 to 7
     yaxis=dict(range=[y_neg.min()-3, y.max()+3]),  # Set x-axis range from -2 to 7
     showlegend=True,
