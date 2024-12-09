@@ -16,7 +16,7 @@
 // firt explain some basics aout beam model, then about optimiaztion, then the reasoining provided why beam model can be used with optimization over FEm and optimiaztion are more clear to understand in 4_Beam_Opti
 
 // Title
-=== Combination of Optimization and Beam Model<chap_4_0_4>
+=== Combination of Optimization and Beam Model <chap_4_0_4>
 // this pre intro of the upcomoing text inside the subsection. this might not be fully consistent with the actual content
 In @chap_4_0_0 it was explained how to discretize load distributions, in @chap_4_0_1 how to obtain the aerodynamic loads, in @chap_4_0_2 important fundamental information about the beam model and in @chap_4_0_3 some general background about optimization was provided. 
 This subsection builds upon the collected knowledge and expaplins how the beam model solver can be incorporated into a optimiaztion framework. 
@@ -29,7 +29,9 @@ The global goal is to answer important questions for the experimental trial. Amo
 // wording can be improved
 If a suitable objective function can be found, this question could be answered directly with a #gls("fem") coupling. 
 In other words, it is entirely possible for the optimizer to have access to the #gls("fem") solver. In this case, the optimizer could obtain important structural information through a #gls("fem") calculation while exploring the unknown territory. Since optimization is generally an iterative process, a #gls("fem") solution would be needed for each individual function evaluation. 
-However, within a single iteration step, significantly more function evaluations might be required. This can be understood particularly easily using an evolutionary algorithm as an example. 
+However, within a single iteration step, 
+// word significant overused
+significantly more function evaluations might be required. This can be understood particularly easily using an evolutionary algorithm as an example. 
 In each individual iteration step, multiple parameter combinations for the design variables are examined. 
 For each individual parameter combination, at least one function evaluation would be required. Depending on how exactly the objective function is defined, multiple function evaluations might also be required for a single parameter combination. The latter would be possible if two #gls("fem") calculations were necessary as an input for the objective function. 
 If a function evaluation is cost-efficient in terms of time and hardware, this factor can be neglected.
@@ -46,7 +48,9 @@ desinging a beam model is faster, thus variiation of multiple different beam mod
 if have to learn new about beam model, can be understood easier than fem
 free and open-source implementations in Python available as mentioned in @chap_4_0_2
 mathamtical and theory behind it can be comphrenseded eaiser than of Fem,
-calculation time significant lower than those fem, highly advantge for optimiztation because of the mentioned multiple function calling
+calculation time 
+// word significant overused
+significant lower than those fem, highly advantge for optimiztation because of the mentioned multiple function calling
 calculation can be done on a regular laptop or even on a raspberry pi
 // some other adanvatage that can be integrated if not duplicated:
 // 	1. personal pc, laptop, even smartphzone can be assumed to suffice
