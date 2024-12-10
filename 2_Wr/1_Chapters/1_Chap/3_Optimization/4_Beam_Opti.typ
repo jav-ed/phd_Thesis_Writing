@@ -24,42 +24,30 @@ Furthermore, it will first explain what goal such a constellation pursues. After
 // add the following: it was explained why beam model solver was used instead of fem solver 
 // -------------------------------------------------------------------------- //
 
-The global goal is to answer important questions for the experimental trial. Among other things, how many #glspl("lie", long:true) should be used, where should they be placed, and what forces should be applied. 
-// give an intro for that we want to compare fem and beam solver based optimization
-// wording can be improved
-If a suitable objective function can be found, this question could be answered directly with a #gls("fem") coupling. 
-In other words, it is entirely possible for the optimizer to have access to the #gls("fem") solver. In this case, the optimizer could obtain important structural information through a #gls("fem") calculation while exploring the unknown territory. Since optimization is generally an iterative process, a #gls("fem") solution would be needed for each individual function evaluation. 
-However, within a single iteration step, 
-// word significant overused
-significantly more function evaluations might be required. This can be understood particularly easily using an evolutionary algorithm as an example. 
-In each individual iteration step, multiple parameter combinations for the design variables are examined. 
-For each individual parameter combination, at least one function evaluation would be required. Depending on how exactly the objective function is defined, multiple function evaluations might also be required for a single parameter combination. The latter would be possible if two #gls("fem") calculations were necessary as an input for the objective function. 
-If a function evaluation is cost-efficient in terms of time and hardware, this factor can be neglected.
+The primary objective centers on determining optimal parameters for the experimental structural testing of #glspl("swith", pl:true). Among others, these parameters encompass the quantity of #glspl("lie", long:true), their spatial distribution throughout the test structure, and the magnitude of forces applied during testing. The determination of these parameters could be achieved through direct coupling with a #gls("fem") solver, provided appropriate optimization formulations are established. This computational approach would enable the optimization algorithm to access detailed structural information through #gls("fem") calculations while exploring the available solution space.
+The iterative nature of optimization processes necessitates multiple #gls("fem") solutions for each function evaluation. 
+This computational burden becomes particularly apparent when considering evolutionary algorithms. During each iteration, the algorithm evaluates numerous parameter combinations for the design variables. 
+Every parameter combination requires at least one function evaluation, 
+with certain objective function formulations potentially demanding multiple #gls("fem") calculations per combination. 
+For example, an objective function might require two distinct #gls("fem") analyses to generate its output. 
 
-However, with a three-dimensional structural model of an #gls("swith", long:true), the summation of multiple function calls of a #gls("fem") calculation might be unacceptably high under certain circumstances. 
-This is the first reason why an alternative to the #gls("fem") calculation in the optimization loop was sought. 
-The other reason is that when defining an optimization function as elaborated in @chap_4_0_3 often the final objective function with its design variables, bounds and constraints are found thorugh an iterative process. 
-If each individual optimization were associated with about a week to a month of calculation time, undesirable limitations would occur. When comparing the beam model with the #gls("fem") calculation, the following is clear: The beam model has lower accuracy reproduction, but is faster in calculation than the high-quality #gls("fem") model.
-// proper intro to a more detailed comparision
-in the following a detaield comparison between modeling the structral behaviour through a beam model or through #gls("fem") shall be given
+// -------------------------------------------------------------------------- //
+When function evaluations prove computationally efficient regarding temporal and hardware requirements, the cumulative computational burden becomes a minor consideration in the overall analysis framework. 
+However, the computational demands increase substantially when applying three dimensional structural analyses to an #gls("swith"), as the aggregation of multiple #gls("fem") calculations within the optimization process can lead to prohibitive computational costs under various circumstances.
+A second compelling reason emerges from the requirement of developing physics-informed optimization formulations, as outlined in @chap_4_0_3. The process can involve iterative refinement of multiple interconnected elements within the optimization framework. 
+These elements include the selection of appropriate design variables that capture essential physical characteristics and the establishment of mathematical bounds and constraints that govern the solution space. The definition of objective functions requires careful consideration to provide meaningful performance metrics that evaluate the effectiveness of potential solutions for the specific engineering task under investigation.
+Initial optimization formulations generate preliminary results that often reveal opportunities for improving the representation of physical phenomena. However, when individual optimization cycles demand computational periods extending from one week to one month, the ability to implement and evaluate such physics-based modifications becomes severely constrained. This temporal limitation can impede the methodological refinement process, potentially affecting the quality of the final physics-informed formulation.
 
-// advantage of the beam model 
-desinging a beam model is faster, thus variiation of multiple different beam models is faster  
-if have to learn new about beam model, can be understood easier than fem
-free and open-source implementations in Python available as mentioned in @chap_4_0_2
-mathamtical and theory behind it can be comphrenseded eaiser than of Fem,
-calculation time 
-// word significant overused
-significant lower than those fem, highly advantge for optimiztation because of the mentioned multiple function calling
-calculation can be done on a regular laptop or even on a raspberry pi
-// some other adanvatage that can be integrated if not duplicated:
-// 	1. personal pc, laptop, even smartphzone can be assumed to suffice
-// 	2. costs go down
-// 		1. no need to rent high perfomance clusters
-// 	3. environmetal impact goes down
-// 	6. easier to debug if somehting goes wrong
-// 	7. easier to expand, because of some of the rasons mentioned above
-// 	8. can be used for teaching students
+// -------------------------------------------------------------------------- //
+A methodological comparison between beam model and #gls("fem") approaches reveals their fundamental characteristics regarding accuracy and computational requirements. While beam models exhibit reduced accuracy in structural response reproduction, they demonstrate enhanced computational efficiency when compared to detailed #gls("fem") analyses. This trade off manifests in several practical advantages that warrant careful consideration.
+The development and implementation of beam models present notable efficiency advantages. Model creation proceeds with increased rapidity, enabling engineers to evaluate multiple design variants within compressed time frames. This accelerated development cycle facilitates comprehensive exploration of structural configurations, providing valuable insights.
+The theoretical foundation of beam models offers distinct educational and practical benefits. The mathematical principles underlying beam theory demonstrate enhanced accessibility for practitioners new to structural analysis. 
+These fundamental concepts present reduced conceptual barriers when compared with the mathematical complexities inherent in #gls("fem") formulations. Such accessibility extends to educational settings, where students can engage effectively with structural analysis concepts through practical implementation.
+
+The computational implementation draws substantial benefit from available open source Python libraries, as documented in @chap_4_0_2. These frameworks maintain mathematical transparency while providing accessible tools for beam analysis implementation. The modest computational requirements enable analyses on standard computing hardware, eliminating dependence on specialized computational resources. This accessibility yields additional advantages, including reduced financial costs and environmental impact associated with computational resource usage. Furthermore, the relative simplicity of beam models can expedite the identification and resolution of numerical issues during development.
+The computational efficiency of beam models proves particularly advantageous within optimization frameworks. The reduced calculation times become especially valuable when considering the numerous function evaluations required for optimization procedures. This temporal efficiency permits more extensive exploration of design spaces within practical time constraints, potentially enabling more comprehensive optimization studies. Such advantages become particularly relevant when considering the iterative nature of optimization processes explained previously.
+
+// -------------------------------------------------------------------------- //
 
 // some here, but please complete it
 desinging a fem model takes more time, special solver required, could cost money, #gls("swith") is innoative, thus therefore there is no single #gls("swith") available that could be bought. 
