@@ -22,6 +22,13 @@
 20. requires
 21. demonstrate
 22. particular
+23. careful
+24. warrant
+25. analy
+    1.  analysis
+    2.  analyse
+26. complexities
+27. fundamental
 
 
 
