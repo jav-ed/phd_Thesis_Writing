@@ -154,6 +154,6 @@ In practical applications, the open-source tool meshio @schlomer2022meshio provi
 This functionality extends to open-source platforms while remaining compatible with various commercial #gls("fem") solvers, thereby providing a systematic approach for structural response comparisons
 
 // --------------------------------- summary -------------------------------- //
-#sumamry_([
+#summary_([
 The analysis of structural methods suitable for optimization framework integration examined beam modeling and detailed #gls("fem") analysis. Considering computational efficiency, implementation requirements, educational benefits, open-source availability, and particularly the early developmental stage of #glspl("swith"), beam modeling emerged as the appropriate choice. Subsequently, it was demonstrated how the beam model solver could be integrated within an optimization framework to answer questions relevant for #gls("ld") through #glspl("lie") for experimental structural testing.
 ])
