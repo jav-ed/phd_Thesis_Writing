@@ -257,9 +257,9 @@ Despite this limitation, these tables serve a valuable purpose by offering an ov
 While the aforementioned standards primarily address hydrogen containment systems, it is crucial to consider that #glspl("swith") must also comply with broader aircraft regulations. This necessity led to the inclusion of #gls("cs")-23 @EASA_CS_23 and #gls("cs")-25 @EASA_CS_25 in the list of essential standards in @tab_11.
 While #gls("cs")-23 is limited to small aircraft, #gls("cs")-25 can be considered the more comprehensive version that also covers larger aircraft.
 
-#summary_[
+#summary_([
 From the numerous available standards, the introduced assessment criteria were used to obtain a few essential standards in a structured manner. This analysis has identified four essential standards pertinent to the development and certification of #glspl("swith"). While these standards collectively do not address all the unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks. They provide valuable insights into potential certification requirements and testing protocols for #glspl("swith").
 Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from 437.5 to $525 "bar"$. This upper limit is constrained by the capabilities of existing test facilities, which cannot generate arbitrarily high pressures for experimental structural verification tests.
 These findings underscore the importance of considering both hydrogen containment and aircraft-specific regulations in the development of #glspl("swith"), while also highlighting the current technological limitations in testing high-pressure systems.
-]
+])
 
