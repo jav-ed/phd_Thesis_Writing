@@ -204,6 +204,6 @@ Having established the theoretical foundation for critical load cases and V-n di
 Both organizations demonstrated substantial interest in the structural testing, development, and commercial certification of #glspl("swith"). One of these companies conducted independent investigations of critical load cases and shared their findings with this research. While specific details remain confidential, it is substantial that both organizations corroborated the identification of multiple load cases from the V-n diagram as critical. This industry validation supports the adoption of V-n diagram analysis as a valuable methodology for the structural validation testing of #glspl("swith").
 
 // --------------------------------- summary -------------------------------- //
-#summary_[
+#summary_([
 In summary, identifying critical load cases for conventional aircraft already presents a highly demanding task. The complexity increases substantially for #glspl("swith"), as they combine characteristics of both aircraft and pressurized vessels, necessitating consideration of load cases from both domains. However, through valuable statistical analysis, a comprehensive list of critical load cases for general aviation was established. From this analysis, a specific crucial load case for #glspl("swith") was derived. The validity of this approach was confirmed by two leading German aerospace companies. Furthermore, analysis of the V-n diagram provided crucial insights into the relationship between the identified critical load case and the flight envelope.
-]
+])
