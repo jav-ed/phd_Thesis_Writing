@@ -12,16 +12,15 @@
 // all eqs
 // compared with true german text
 
-// TODO proper justification why used and not why fem is used
-// firt explain some basics aout beam model, then about optimiaztion, then the reasoining provided why beam model can be used with optimization over FEm and optimiaztion are more clear to understand in 4_Beam_Opti
 
-// Title
-=== Combination of Optimization and Beam Model <chap_4_0_4>
-// this pre intro of the upcomoing text inside the subsection. this might not be fully consistent with the actual content
+
+
+// Title was tested and is inshallah fine
+=== Integration of Structural Analysis for Optimization  <chap_4_0_4>
 In @chap_4_0_0 it was explained how to discretize load distributions, in @chap_4_0_1 how to obtain the aerodynamic loads, in @chap_4_0_2 important fundamental information about the beam model and in @chap_4_0_3 some general background about optimization was provided. 
-This subsection builds upon the collected knowledge and expaplins how the beam model solver can be incorporated into a optimiaztion framework. 
-Furthermore, it will first explain what goal such a constellation pursues. Afterward, the advantages and disadvantages of the chosen systematic approach will be mentioned.
-// add the following: it was explained why beam model solver was used instead of fem solver 
+This subsection builds upon the collected knowledge and explains how the beam model solver can be incorporated into an optimization framework. 
+First, it explains what goal such a constellation pursues. 
+Subsequently, an investigation comparing beam model and #gls("fem") solvers is conducted, leading to the selection of one method based on rationale. Finally, it was explained how this selection could be integrated within an optimization framework.
 // -------------------------------------------------------------------------- //
 
 The primary objective centers on determining optimal parameters for the experimental structural testing of #glspl("swith"). Among others, these parameters encompass the quantity of #glspl("lie", long:true), their spatial distribution throughout the test structure, and the magnitude of forces applied during testing. The determination of these parameters could be achieved through direct coupling with a #gls("fem") solver, provided appropriate optimization formulations are established. This computational approach would enable the optimization algorithm to access detailed structural information through #gls("fem") calculations while exploring the available solution space.
@@ -155,10 +154,6 @@ In practical applications, the open-source tool meshio @schlomer2022meshio provi
 This functionality extends to open-source platforms while remaining compatible with various commercial #gls("fem") solvers, thereby providing a systematic approach for structural response comparisons
 
 // --------------------------------- summary -------------------------------- //
-// summary based on the provided text above is missing
-
-// ---------------------------------- here ---------------------------------- //
-In order to decide on an structral anylsis method that needs to be implemented within an optimiaztion framwork, two common mehtods presented.
-They were pros and cons were mentioned
-based on rationale a decision was made
-and finally the concept of how the chosen analyiss mehtod was integrated into the optimization framework was explained 
+#sumamry_([
+The analysis of structural methods suitable for optimization framework integration examined beam modeling and detailed #gls("fem") analysis. Considering computational efficiency, implementation requirements, educational benefits, open-source availability, and particularly the early developmental stage of #glspl("swith"), beam modeling emerged as the appropriate choice. Subsequently, it was demonstrated how the beam model solver could be integrated within an optimization framework to answer questions relevant for #gls("ld") through #glspl("lie") for experimental structural testing.
+])
