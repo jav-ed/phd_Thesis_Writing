@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
@@ -145,7 +145,7 @@ The minimum ignition energy for hydrogen is highly dependent on the air content 
 The minimum ignition energies for hydrogen, methane, and propane across various air content levels in the gas mixture, illustrated in @fig_19, provide a comparative perspective on the ignition sensitivity of these gases.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/0_Ingition_Energy.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/0_Ingition_Energy.png", 
   width: 87%),
   caption: [Comparison of minimum ignition energies for hydrogen, methane, and propane in air under standard conditions @Klell2018.],
 ) <fig_19>
@@ -194,7 +194,7 @@ An analysis of @tab_24 reveals that hydrogen exhibits a relatively high ignition
 Further complicating safety considerations is the fact that hydrogen is invisible to the naked eye. However, experimental investigations conducted by @schefer2009visible have successfully recorded hydrogen flames under specific conditions. A visual representation of these flames is provided in @fig_20, offering insights into the observable characteristics of hydrogen combustion.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/1_H2_Flame.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/1_H2_Flame.png", 
   // keep the 10% here. seems to be a very high dimensional image
   width: 10%),
   caption: [Visibility of a hydrogen flame under specific conditions: laminar jet velocity of 47 m/s, Reynolds number of 837. Image captured using a Sony DSC D700 camera (aperture f/2.4, no filter) @schefer2009visible.],
@@ -206,7 +206,7 @@ The visibility of hydrogen flames is further influenced by the oxygen content in
 The correlation between flame visibility and mixture composition offers valuable findings for safety considerations in hydrogen applications. 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/2_H2_Multi_Flame.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/1_Safety/2_H2_Multi_Flame.png", 
   width: 57%),
   caption: [Effect of oxygen content on hydrogen flame visibility. Images show flames at different equivalence ratios $phi$: (a) $phi = 1.0$, (b) $phi = 0.8$, (c) $phi = 0.7$, (d) $phi = 0.62$. Higher $phi$ values indicate closer approximation to stoichiometric combustion. Experimental conditions: jet velocity $33 "m/s"$, Reynolds number 580, turbulent flow, camera aperture f/2.4 @schefer2009visible.],
 ) <fig_21>

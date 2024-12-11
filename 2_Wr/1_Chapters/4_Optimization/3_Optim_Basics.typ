@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // INFO
@@ -26,7 +26,7 @@ The differentiation between local and global optima can be comprehensively under
 A function exhibiting multiple local extrema in its domain is classified as multimodal. In such functions, multiple points exist where the first derivative undergoes sign changes from positive to negative or vice versa, or transitions through zero before returning to its original sign. These characteristics are fundamental to understanding the nature of optimization problems, as illustrated in @fig_72.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/0_Multi_Modal.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/0_Multi_Modal.svg", 
   width: 100%),
   caption: [Visualization of a multimodal function illustrating local and global extrema.],
 )<fig_72>
@@ -41,7 +41,7 @@ It is noteworthy that certain functions may not exhibit unique global extrema, p
 
 // proper caption required
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/1_Sin_Opti.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/1_Sin_Opti.svg", 
   width: 100%),
   caption: [Comparative analysis of $sin(x)$, its first derivative $sin'(x)$ and second derivative $sin''(x)$, illustrating the relationship between extrema and derivatives.],
 )<fig_73>
@@ -52,7 +52,7 @@ While saddle points appear less frequently in one-dimensional functions compared
 A representative example of a saddle point is illustrated in @fig_74.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/2_Saddle_Point.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/2_Saddle_Point.svg", 
   width: 100%),
   caption: [Analytical representation of a function exhibiting a saddle point, demonstrating characteristic derivative behavior in one dimension.],
 )<fig_74>
@@ -61,7 +61,7 @@ A representative example of a saddle point is illustrated in @fig_74.
 In the context of multivariate optimization, essential extrema configurations for functions of two variables are presented in @fig_75.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/3_2D_Extremes.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/3_2D_Extremes.svg", 
   width: 100%),
   caption: [Visualization of extrema in two-dimensional space: positive definite (minimum), positive semidefinite (weak minima line), indefinite (saddle point), and negative definite (maximum) @mdobook.],
 )<fig_75>
@@ -92,7 +92,7 @@ The operation $-J(x)$ in @eq_105 represents a reflection of the original functio
 Once the maximum of $-J(x)$ is determined, negating this result yields an equivalent solution to minimizing the original function $J(x)$, thereby demonstrating the mathematical equivalence of these optimization approaches.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/4_Min_Max_Sym.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/4_Min_Max_Sym.svg", 
   width: 100%),
   caption: [Geometric representation of $J(x)$ and its reflection $-J(x)$ illustrating the equivalence stated in @eq_105.],
 )<fig_76>

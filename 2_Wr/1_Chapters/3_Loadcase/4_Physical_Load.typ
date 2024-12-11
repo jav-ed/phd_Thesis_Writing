@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
@@ -110,7 +110,7 @@ While standardized geometries often benefit from existing test facilities and es
 Sandbags represent one of the most traditional and economically viable approaches to wing load application. Their implementation on small aircraft structures is particularly common, as illustrated in @fig_56.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/0_Sandbags.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/0_Sandbags.png", 
   width: 100%),
   caption: [Illustrative demonstration of sandbags being applied for loading the wing of a small aircraft @ho2022development.],
 )<fig_56>
@@ -120,7 +120,7 @@ Sandbags represent one of the most traditional and economically viable approache
 Profile-conforming collets encase the wing's cross-sectional contour and serve as load transfer interfaces, as depicted in @fig_57. These devices typically operate in conjunction with load harnesses and crane systems. Wooden construction is prevalent for collets, comprising upper and lower sections secured through metal fasteners. Interface protection between the collet and wing surface can be achieved through intermediate cushioning materials.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/1_Collet.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/1_Collet.png", 
   width: 100%),
   caption: [Illustrative demonstration of profile-conforming collets applied for wing loading @yeniceli2014design.],
 )<fig_57>
@@ -136,7 +136,7 @@ These elements can be positioned at specific load introduction points and actuat
 Hydraulic cylinders offer another load introduction methodology. These actuators can either connect directly with the test specimen through adhesive pads or integrate with auxiliary #glspl("lie"). The pads, constructed from polymeric materials, serve dual functions: distributing loads across specified surface areas and providing protective contact surfaces. @fig_58 demonstrates an implementation where movable cylinders connect to collets for structural testing of a fighter aircraft @leski2016full.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/2_Cylinder.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/4_Phyiscal_Load/2_Cylinder.png", 
   width: 100%),
   caption: [Illustrative demonstration of hydraulic cylinders connected to collets for structural testing of a fighter aircraft @leski2016full.],
 )<fig_58>

@@ -72,60 +72,60 @@
 
 
 
-#include "2_Wr/1_Chapters/0_Chap/0_Intro.typ"
-#include "2_Wr/1_Chapters/0_Chap/1_Motiv.typ"
-#include "2_Wr/1_Chapters/0_Chap/2_Research_Objec.typ"
-#include "2_Wr/1_Chapters/0_Chap/3_Work_Strucutre.typ"
-#include "2_Wr/1_Chapters/0_Chap/4_Novelty.typ"
-#include "2_Wr/1_Chapters/0_Chap/5_Research_Enabler.typ"
+#include "2_Wr/1_Chapters/0_Intro/0_Intro.typ"
+#include "2_Wr/1_Chapters/0_Intro/1_Motiv.typ"
+#include "2_Wr/1_Chapters/0_Intro/2_Research_Objec.typ"
+#include "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ"
+#include "2_Wr/1_Chapters/0_Intro/4_Novelty.typ"
+#include "2_Wr/1_Chapters/0_Intro/5_Research_Enabler.typ"
 
 /* ---------------------------- State of the art ---------------------------- */
-#include "2_Wr/1_Chapters/0_Chap/6_State_Of_Art.typ"
+#include "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ"
 
 /* ========================================================================== */
 /* =============================== Methodology ============================== */
 /* ========================================================================== */
 
-#include "2_Wr/1_Chapters/1_Chap/0_Methodology.typ"
+#include "2_Wr/1_Chapters/1_Standards/0_Methodology.typ"
 
 /* -------------------------------- Standards ------------------------------- */
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/0_Standards.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/1_Aero_Standards.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/2_Pressure_Vessels.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/3_Automotive.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/4_Various_Fields.typ"
-#include "2_Wr/1_Chapters/1_Chap/0_Standards/5_Essential_Standards.typ"
+#include "2_Wr/1_Chapters/1_Standards/0_Standards.typ"
+#include "2_Wr/1_Chapters/1_Standards/1_Aero_Standards.typ"
+#include "2_Wr/1_Chapters/1_Standards/2_Pressure_Vessels.typ"
+#include "2_Wr/1_Chapters/1_Standards/3_Automotive.typ"
+#include "2_Wr/1_Chapters/1_Standards/4_Various_Fields.typ"
+#include "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ"
 
 /* -------------------------------- Hydrogen -------------------------------- */
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/0_H2_Prop.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/1_Safety.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/2_Experiment.typ"
-#include "2_Wr/1_Chapters/1_Chap/1_Hydrogen/3_Pressurized_Body.typ"
+#include "2_Wr/1_Chapters/2_Hydrogen/0_H2_Prop.typ"
+#include "2_Wr/1_Chapters/2_Hydrogen/1_Safety.typ"
+#include "2_Wr/1_Chapters/2_Hydrogen/2_Experiment.typ"
+#include "2_Wr/1_Chapters/2_Hydrogen/3_Pressurized_Body.typ"
 
 // ---------------------- loadcase and curvature study ---------------------- //
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/0_Loadcase.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/1_Curv_Theory.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/2_Curv_3D.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/3_Curv_2D.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/4_Physical_Load.typ"
-#include "2_Wr/1_Chapters/1_Chap/2_Loadcase/5_Physical_Collet.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/0_Loadcase.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/1_Curv_Theory.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/2_Curv_3D.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/3_Curv_2D.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/4_Physical_Load.typ"
+#include "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ"
 
 // ------------------------------ optimization ------------------------------ //
-#include "2_Wr/1_Chapters/1_Chap/3_Optimization/0_Discretize_Aero.typ"
-#include "2_Wr/1_Chapters/1_Chap/3_Optimization/1_Get_Aero.typ"
-#include "2_Wr/1_Chapters/1_Chap/3_Optimization/2_Beam_Model.typ"
-#include "2_Wr/1_Chapters/1_Chap/3_Optimization/3_Optim_Basics.typ"
-#include "2_Wr/1_Chapters/1_Chap/3_Optimization/4_Beam_Opti.typ"
+#include "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ"
+#include "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ"
+#include "2_Wr/1_Chapters/4_Optimization/2_Beam_Model.typ"
+#include "2_Wr/1_Chapters/4_Optimization/3_Optim_Basics.typ"
+#include "2_Wr/1_Chapters/4_Optimization/4_Beam_Opti.typ"
 
 
 // --------------------------------- results -------------------------------- //
-#include "2_Wr/1_Chapters/2_Chap/0_Results/0_Res_Init.typ"
-#include "2_Wr/1_Chapters/2_Chap/0_Results/1_Cases_B.typ"
-#include "2_Wr/1_Chapters/2_Chap/0_Results/2_Cases_C.typ"
-#include "2_Wr/1_Chapters/2_Chap/0_Results/2_Cases_D.typ"
+#include "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/0_Res_Init.typ"
+#include "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/1_Cases_B.typ"
+#include "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_C.typ"
+#include "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_D.typ"
 
 // ------------------------------- discussion ------------------------------- //
-#include "2_Wr/1_Chapters/3_Chap/0_Discuss/0_Discus.typ"
+#include "2_Wr/1_Chapters/5_Discuss/0_Discus.typ"
 
 // -------------------------------- Appendix -------------------------------- //
 #show: appendix_manag
@@ -139,7 +139,7 @@
 
 // #set page(columns: 2)
 
-// // For spacing before level-1 entries
+// For spacing before level-1 entries
 // #set par(spacing: 0.5em)
 
 // see: https://typst.app/docs/reference/model/bibliography/#parameters-full

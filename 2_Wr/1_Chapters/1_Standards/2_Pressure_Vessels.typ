@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 === Hydrogen Pressure Vessels <chap_1_0_3>
@@ -22,7 +22,7 @@ While conformable pressure vessels can assume various shapes, a demonstrative ex
 
 // -------------------------------------------------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/1_Conformable_Tank.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/1_Conformable_Tank.png", 
   width: 60%),
   caption: [Demonstrative example of a two-cell conformable tank from Thiokol @haaland2000high.],
 ) <fig_10>
@@ -30,7 +30,7 @@ While conformable pressure vessels can assume various shapes, a demonstrative ex
 Having acknowledged some of the advantages of conformable pressure vessels, an illustrative example of cylindrical pressure tanks that are commonly used is provided in @fig_8.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/0_Tank.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/0_Tank.png", 
   width: 77%),
   caption: [Illustrative example of the commonly used cylindrical shape for a hydrogen pressure vessel @link_Image_Type_4_Cylinder.],
 ) <fig_8>
@@ -45,7 +45,7 @@ The evolution of pressure tank design can be categorized into distinct tank type
 The four common tank types currently available in the commercial market are illustrated in @fig_4. This figure provides a visual representation of the technological progression elaborated, showcasing the structural differences between each tank type and their respective materials.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/5_Tank_Types.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/5_Tank_Types.png", 
   width: 100%),
   caption: [Common types of pressure vessels @Su2021.],
 ) <fig_4>
@@ -69,7 +69,7 @@ In @Mori2009 it could be shown that the tank Types III and IV require less than 
 A visual depiction of this is given in @fig_11.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/2_Same_Pressure.jpg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/2_Same_Pressure.jpg", 
   width: 50%),
   caption: [Required wall thickness for different tank types at a pressure of 350 bar. Normalized with respect to the Type I tank @Cheng2024 @Mori2009.],
 ) <fig_11>
@@ -88,7 +88,7 @@ Comparing the costs of the 700 bar Type III and IV tanks, it can be noted that t
 Still, the Type III tank at 350 bar is still cheaper than the 700 bar Type IV tank.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/3_Type_3_4_Costs.jpg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/3_Type_3_4_Costs.jpg", 
   width: 100%),
   caption: [Comparison of (a) specific costs, (b) specific weights, and (c) specific sizes of three types of commonly used hydrogen tanks for storing 1 kg of hydrogen @Cheng2024.],
 ) <fig_12>
@@ -158,7 +158,7 @@ The outcome of some experimental data from @KubilayKarayel2023 was used to displ
 
 /* ------------------------- generate plotly figures ------------------------ */
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/4_hydrogen_storage_type_4.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/4_hydrogen_storage_type_4.svg", 
   width: 100%),
   caption: [Highlighting the non-linear relationship between pressure increase and gaseous hydrogen storage capacity @KubilayKarayel2023.],
 ) <fig_13>
@@ -191,19 +191,19 @@ Furthermore provided examples in @tab_17 suggest that tank Type IV has the highe
     table.header[*Specification*][*Hyundai NEXO (2018)*][*Hyundai ix35(2013)*][*Toyota MIRAI II (2021)*][*Honda Clarity (2016)*][*Mercedes Benz GLC (2017)*],
     /* -------------- */
     [Demonstrative Image], 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/6_HMD_NEXO_21.png", fit:"cover")
+    [#image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/6_HMD_NEXO_21.png", fit:"cover")
     @link_hyundai_nexo_img],
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/7_hyundai.jpg", fit:"cover")
+    [#image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/7_hyundai.jpg", fit:"cover")
     @link_hyundai_ix35_img],
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/8_Toyota_mir.png", fit:"cover")
+    [#image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/8_Toyota_mir.png", fit:"cover")
     @link_toyota_mirai_ii_img],
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/9_Honda.jpg", fit:"cover")
+    [#image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/9_Honda.jpg", fit:"cover")
     @link_honda_clarity_img],
 
-    [#image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/10_Mercedes.jpg", fit:"cover")
+    [#image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/1_Pressure_Vessel/10_Mercedes.jpg", fit:"cover")
     @link_mercedes_glc_img],
 
 

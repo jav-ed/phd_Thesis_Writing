@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
@@ -27,7 +27,7 @@ An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. I
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/0_H2_Pressure_Venting.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/0_H2_Pressure_Venting.png", 
   width: 87%),
   caption: [Simulative investigation of hydrogen release into the ambient environment from a pressure vessel at $250 "bar"$. Mach number contours are displayed at six distinct time points @Xu2009.],
 ) <fig_22>
@@ -92,7 +92,7 @@ A proposed simplified explanation for the high temperature increase during press
 The temperature contours associated with @fig_22 are presented in @fig_23. Notably, temperatures exceeding $1000 "K "$ are typically associated with explosions @Frost2021 @Lebel2013 @Cashdollar2007 @Goroshin2006.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/1_H2_T_Venting.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/1_H2_T_Venting.png", 
   width: 87%),
   caption: [Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Temperature contours can be seen at 6 different time points @Xu2009],
 ) <fig_23>
@@ -194,7 +194,7 @@ The experimental apparatus utilized a straight expansion tube with specific dime
 The results of these experiments, presented in @fig_24, illustrate the influence of both the pressure in the hydrogen container and the ambient gas composition on the likelihood of self-ignition.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/2_H2_Experiments.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/2_Experiment/2_H2_Experiments.png", 
   width: 100%),
   caption: [Influence of hydrogen container pressure and surrounding gas composition on the self-ignition probability of a hydrogen jet @jallais2017effects.],
 ) <fig_24>

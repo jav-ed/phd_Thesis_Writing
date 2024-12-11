@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
@@ -54,7 +54,7 @@ Conversely, predicting height for a shoe size of 47 exemplifies extrapolation. T
 This distinction proves fundamental in understanding model behavior at and beyond known data boundaries, as demonstrated in the contrasting regions depicted in @fig_59.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/5_Interpolation.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/5_Interpolation.svg", 
   width: 100%),
   caption: [Illustrative depiction of Interpolation and Extrapolation.]
 ) <fig_59>
@@ -90,7 +90,7 @@ This comparative behavior is illustrated in @fig_60, where both models demonstra
 
 // -------------------------------------------------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/6_Lin_Poly.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/6_Lin_Poly.svg", 
   width: 100%),
   caption: [Comparison of linear and fourth-order polynomial regression models: (left) interpolation behavior within the training domain; (right) extrapolation performance demonstrating the polynomial model's excessive flexibility beyond the training range.]
 ) <fig_60>
@@ -152,20 +152,20 @@ Unsupervised learning presents a distinct approach where the model independently
 
 // -------------------------------------------------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/0.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/0.svg", 
   width: 89%),
   caption: [Trajectory showing x-, y- and z-coordinates over time @link_Javed_Master.]
 ) <fig_61>
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/1.svg", 
   width: 89%),
   caption: [Centroids representing the centers of identified characteristic features @link_Javed_Master.]
 ) <fig_62>
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/2.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/2.svg", 
   width: 89%),
   caption: [Active regions of individual centroids @link_Javed_Master.]
 ) <fig_63>
@@ -210,7 +210,7 @@ The computational implementation requires calculating distances between each dat
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/3.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/3.png", 
   width: 100%),
   caption: [Progression of k-means++ algorithm from initial centroid placement to final cluster convergence @Arthur2006 @link_Kmeans_Img_Proc.],
 )<fig_64>
@@ -229,7 +229,7 @@ A comprehensive review of these methods extends beyond this work's scope. Intere
 
 // only the figure caption
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/4.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/4.png", 
   width: 100%),
   caption: [List of other clustering methods that are similar to k-means @link_Cluster_Meth.]
 )<fig_65>
@@ -274,7 +274,7 @@ This summation approach ensures proper accounting of all contributing loads with
 
 // number of memebers
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/7_Kmeans_Avg_Sum.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/0_Aero_Discret/7_Kmeans_Avg_Sum.svg", 
   width: 100%),
   caption: [Comparison of force distributions showing original clustered data (top) and the resulting average forces (bottom left) versus summed forces (bottom right) for each cluster.]
 )<fig_66>

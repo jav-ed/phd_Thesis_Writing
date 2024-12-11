@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // TODO Word rep
@@ -22,7 +22,7 @@ Subsequently, for a constant spanwise position $y_i$, the curvature values are a
 The process of averaging along the chordwise (x) and vertical (z) directions for a given $y_i$ value is depicted in @fig_45.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/0_Spanwise.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/0_Spanwise.svg", 
   width: 87%),
   caption: [Visualization of the curvature averaging methodology showing the averaging directions along the chordwise (x) and vertical (z) axes at a constant spanwise position $y_i$ for dimensional reduction of three-dimensional curvature data.],
   
@@ -167,7 +167,7 @@ Having established the theoretical fundamentals, the numerical results can now b
 The results demonstrate that curvature generally increases with increasing lift coefficient, with the highest curvature values occurring at $C_L = 2.5$. The critical curvature $kappa_"crit"$ is indicated by a horizontal red line; when this threshold is exceeded, the impact of the filling agent becomes significant.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 1 according to @eq_53, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_46>
@@ -177,7 +177,7 @@ The analysis reveals that even at the highest lift coefficient value ($C_L = 2.5
 The interpretation of @fig_47 indicates that for this specific simulation model at a pressure of $51.03 "MPa"$ and lift coefficients up to $C_L = 2.5$, the filling agent's impact on the maximum bearable bending moment in experimental structural validation tests can be neglected. This interpretation suggests that for these specific conditions, hydrogen can be replaced with water for these tests. As with any simulation-based analysis, these findings are specific to the current model configuration and would need to be validated for different structural configurations or loading conditions.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude in the undisturbed region along the normalized span position calculated using method 1 according to @eq_53, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_47>
@@ -187,7 +187,7 @@ The analysis presented in @fig_46 and @fig_47 examined the impact of the lift co
 // ---------------------------- method 1 pressure --------------------------- //
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/3_Ca_0.6_Pr_Variabel_Method_1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/3_Ca_0.6_Pr_Variabel_Method_1.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 1 according to @eq_53, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_48>
@@ -196,7 +196,7 @@ Analogous to @fig_47, @fig_49 presents a detailed examination of the undisturbed
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/4_Ca_0.6_Pr_Variabel_Undisturbed_Method_1.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude in the undisturbed region along the normalized span position calculated using method 1 according to @eq_53, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_49>
@@ -209,7 +209,7 @@ The results obtained using method 1 clearly indicate that hydrogen could be repl
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/5_510bar_Ca_Var_Method_2_Disp.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/5_510bar_Ca_Var_Method_2_Disp.svg", 
   width: 100%),
   caption: [Averaged displacement magnitude $overline(u)$ along the normalized span position calculated using method 2 according to @eq_54, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_50>
@@ -219,14 +219,14 @@ As local distributions must be filtered out for the final assessment, the undist
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/6_510bar_Ca_Var_Method_2_Curv.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 2 according to @eq_54, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_51>
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/7_510bar_Ca_Var_Method_2_Curv_Undis.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/7_510bar_Ca_Var_Method_2_Curv_Undis.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude in the undisturbed region along the normalized span position calculated using method 2 according to @eq_54, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_52>
@@ -238,7 +238,7 @@ The pressure's influence demonstrates nonlinear behavior. The local span positio
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/8_Ca_0.6_Pr_Variabel_Method_2_Disp.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/8_Ca_0.6_Pr_Variabel_Method_2_Disp.svg", 
   width: 100%),
   caption: [Averaged displacement magnitude $overline(u)$ along the normalized span position calculated using method 2 according to @eq_54, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_53>
@@ -248,14 +248,14 @@ A focused examination of this configuration within the undisturbed region, isola
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/9_Ca_0.6_Pr_Variabel_Method_2_Curv.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/9_Ca_0.6_Pr_Variabel_Method_2_Curv.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 2 according to @eq_54, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_54>
 
 // fine
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/10_Ca_0.6_Pr_Variabel_Method_2_Curv_undist.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/10_Ca_0.6_Pr_Variabel_Method_2_Curv_undist.svg", 
   width: 100%),
   caption: [Averaged curvature magnitude in the undisturbed region along the normalized span position calculated using method 2 according to @eq_54, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_55>

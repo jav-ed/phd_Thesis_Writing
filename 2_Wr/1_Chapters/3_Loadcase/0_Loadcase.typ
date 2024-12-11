@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
@@ -146,7 +146,7 @@ Having established the critical nature of vertical gust loading for #glspl("swit
 The flight envelope represents the relationship between load factors and airspeed within which an aircraft is designed to operate @Gudmundsson2014 @Rossow_2014. It encompasses two distinct categories of loads: maneuver loads and gust loads @Rossow_2014. An illustrative example of a V-n diagram conforming to #gls("easa") #gls("cs")-23 @EASA_CS_23 specifications for the normal category is depicted in @fig_28.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/0_Load/0_Vn_Diag.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/0_Load/0_Vn_Diag.svg", 
   width: 100%),
   caption: [Illustrative V-n diagram for normal category aircraft showing flight envelope limits in accordance with #gls("easa") #gls("cs")-23 @EASA_CS_23.],
 ) <fig_28>

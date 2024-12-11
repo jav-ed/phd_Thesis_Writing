@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 
@@ -13,7 +13,7 @@ The insights obtained from @chap_1_0_3 can be regarded as one part of the motiva
 First, according to the current state of knowledge, no flying cars are known to exist. Thus, a significant difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
   width: 77%),
   caption: [#text(weight: "bold")[T]echnical 
 #text(weight: "bold")[R]eadiness 
@@ -26,7 +26,7 @@ In the literature, one contribution could be found that describes the use of str
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_KFZ_Tanks.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_KFZ_Tanks.png", 
   width: 77%),
   caption: [Tank configuration of Opel's HydroGen4 project @Bleser2012.],
 ) <fig_5>
@@ -35,7 +35,7 @@ The tension bands press the cylinders against the carrier system. If a longitudi
 To introduce torque that a body experiences onto a tank, two #gls("lie", long:true) are utilized. The concept proposed in @Bleser2012 is shown in @fig_6.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/2_KFZ_Tanks.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/2_KFZ_Tanks.png", 
   width: 100%),
   caption: [Automotive concept for torque transfer from vehicle body to integral hydrogen tank @Bleser2012.],
 ) <fig_6>
@@ -59,7 +59,7 @@ This explanation is made visually apparent through @fig_14.
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_Forces.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/1_Forces.svg", 
   width: 37%),
   caption: [Visualization of the relationships between circumferential force $F_t$, static friction force $H$, ring clamping force $F_c$, and normal force $N$.],
 
@@ -88,7 +88,7 @@ The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses m
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/25_Patent.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/25_Patent.png", 
   width: 77%),
   caption: [Schematic sketch of the load-bearing pressure cylinder design @ChristophBechtold2019.],
 ) <fig_7>

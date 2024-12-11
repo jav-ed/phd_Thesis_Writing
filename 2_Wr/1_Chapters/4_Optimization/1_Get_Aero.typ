@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // INFO
@@ -20,7 +20,7 @@ While APAME does not target high-fidelity aerodynamic analysis, it provides an e
 @fig_67 presents a representative output from APAME, illustrating the distribution of lift coefficients, scaled by local chord length, along the wing span.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/0.png", 
   width: 87%),
   caption: [Illustrative spanwise distribution of the lift coefficients multiplied by local chord length, as obtained from APAME @Filkovic.],
 )<fig_67>
@@ -60,7 +60,7 @@ The point load $F_(a,i)$ is depicted with a larger magnitude vector compared to 
 For uniform distributed loads, this resultant force's point of application coincides with the element's center.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/1.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/1.svg", 
   width: 100%),
   caption: [Schematic illustration of the conversion process from distributed aerodynamic loads to discretized individual point loads on a meshed wing surface.],
 )<fig_68>
@@ -99,7 +99,7 @@ The combination of @eq_81 and @eq_82 enables the transformation of distributed l
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/1_Get_Aero_Forces/2.svg", 
   width: 68%),
   caption: [Schematic illustration of the advanced conversion process from distributed aerodynamic loads to adjusted point loads for k-means++ @Arthur2006.],
 )<fig_69>

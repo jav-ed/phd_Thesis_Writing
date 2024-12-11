@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 
@@ -33,7 +33,7 @@ Relevant insights for #glspl("swith") can be derived from a study conducted by @
 
 // --------------------------- testing environment -------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/0_Bending.jpeg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/0_Bending.jpeg", 
   width: 100%),
   caption: [Experimental setup for bending tests on pressurized pipes according to @Liu2019.],
 ) <fig_29>
@@ -42,7 +42,7 @@ Relevant insights for #glspl("swith") can be derived from a study conducted by @
 @fig_30 illustrates the relationship between bending moment M and curvature $kappa$ under conditions without additional internal pressure. The influence of different fill media on the pipe's behavior is distinct. While sand demonstrates the highest maximum curvature, its maximum bending moment approximates that of the water-filled pipe. A comparison between water and air as fill media reveals that water-filled pipes exhibit superior performance in both maximum moment capacity and maximum curvature tolerance.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/1_Bending_Curves.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/1_Bending_Curves.png", 
   width: 67%),
   caption: [Relationship between bending moment M and curvature $kappa$ for pipes filled with different media without additional internal pressure @Liu2019.],
 ) <fig_30>
@@ -58,21 +58,21 @@ This pressure-dependent behavior is consistent across both fill media.
 
 // ---------------------------------- water --------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/2_Bending_Medium_Water.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/2_Bending_Medium_Water.png", 
   width: 67%),
   caption: [Relationship between bending moment M and curvature $kappa$ for water-filled pipes at different internal pressures @Liu2019.],
 ) <fig_31>
 
 // ----------------------------------- air ---------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/3_Bending_Medium_Air.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/3_Bending_Medium_Air.png", 
   width: 67%),
   caption: [Relationship between bending moment M and curvature $kappa$ for air-filled pipes at different internal pressures @Liu2019.],
 ) <fig_32>
 
 // ------------------------------ air and water ----------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/4_Water_Air.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/1_Curve_Theory/4_Water_Air.png", 
   width: 67%),
   caption: [Comparison of bending moment M and curvature $kappa$ relationships between air-filled and water-filled pipes at different internal pressures @Liu2019.],
 ) <fig_33>

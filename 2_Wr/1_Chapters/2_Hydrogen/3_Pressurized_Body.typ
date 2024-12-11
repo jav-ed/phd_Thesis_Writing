@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
@@ -14,7 +14,7 @@ A literature review on the structural behavior of pressurized bodies under exter
 The study incorporated several variable parameters to assess their influence on the structural response. The experimental design considered two filling media, hydrogen and helium, across a pressure range spanning from $7 "MPa"$ to $35 "MPa"$ (equivalent to $70 "bar"$ to $350 "bar"$). Furthermore, the investigation encompassed both Type III and Type IV tanks, evaluating their performance under varying conditions. The cylinder orientation was also taken into account, with tests conducted in both vertical and horizontal positions to elucidate any potential differences in structural behavior based on the direction of impact.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/0_Crash.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/0_Crash.png", 
   width: 77%),
   caption: [Drop test apparatus for dynamic impact testing of pressurized cylinders from @mitsuishi2000dynamic.],
 ) <fig_25>
@@ -25,7 +25,7 @@ Numerical modeling approaches have been employed to study the impact behavior of
 Upon comparison with experimental data, the study revealed that lateral impact simulations yielded more accurate results than axial impact models, with lateral impact simulations achieving acceptable quality. The correlation between experimental and numerical results for the lateral impact scenario is presented in @fig_27.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/3_Lateral_Impact.jpg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/3_Lateral_Impact.jpg", 
   width: 100%),
   caption: [Comparison of experimental and numerical force-time responses for lateral impact loading on a Type III tank from @perfetto2022numerical.],
 ) <fig_27>
@@ -42,7 +42,7 @@ Additional experiments maintaining constant impact energy while varying internal
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/1_Druckanstieg.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/3_External_Forces/1_Druckanstieg.png", 
   width: 100%),
   caption: [Failure patterns in structural steel pipes under constant impact energy with increasing internal pressures, showing progressive damage extension beyond the impact location from @jones1996influence.],
 ) <fig_26>

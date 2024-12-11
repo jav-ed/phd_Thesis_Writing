@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 // INFO
@@ -68,7 +68,7 @@ This information constitutes the complete set of parameters required to solve th
 
 // --------------------------------- figures -------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0_Beam_Example.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/0_Beam_Example.svg", 
   width: 100%),
   caption: [Illustrative representation of a beam model: applied loads and support configuration (upper), resulting support reaction forces (lower).],
 )<fig_70>
@@ -76,7 +76,7 @@ This information constitutes the complete set of parameters required to solve th
 
 @fig_71 presents the resulting internal force distributions: normal forces in the first subplot, shear forces in the second, and the bending moment distribution in the final subplot.
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1_Beam_Example.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/2_Beam_Model/1_Beam_Example.svg", 
   width: 100%),
   caption: [Internal force and moment distributions corresponding to the beam model in @fig_70.],
 )<fig_71>

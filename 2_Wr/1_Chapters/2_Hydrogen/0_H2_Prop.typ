@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
@@ -100,7 +100,7 @@ For convenience, all principal and safety-wise harmless information of this subs
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/0_Types.jpg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/0_Types.jpg", 
   width: 87%),
   caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
 ) <fig_15>
@@ -116,7 +116,7 @@ A comparison of gravimetric energy densities between pure forms and practical st
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/1_H2_densities.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/1_H2_densities.svg", 
   width: 100%),
   caption: [Gravimetric energy densities of storage systems @Klell2023.],
 ) <fig_16>
@@ -171,7 +171,7 @@ $ 50 "K and" 100 "K "$ exhibits strongly nonlinear behavior. These observations 
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/2_Divergenec_Real_Ideal.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/2_Divergenec_Real_Ideal.png", 
   width: 77%),
   caption: [Deviation of hydrogen's real gas behavior from ideal gas behavior, illustrated through the real gas factor $Z$ across various pressures and temperatures @Klell2018.],
 ) <fig_17>
@@ -180,7 +180,7 @@ $ 50 "K and" 100 "K "$ exhibits strongly nonlinear behavior. These observations 
 For this study, a custom tool was developed to generate insights into the real gas factor and real density over a desired range of pressure and temperature. This tool becomes particularly relevant when incorporating fuel mass into simulation models, such as finite element models. It provides an interactive 3D view that enables detailed examination of specific temperature-pressure combinations, enhancing the understanding of how these variables affect hydrogen density. An example of this tool is showcased in @fig_18. Readers interested in conducting their own analyses can access an interactive view online #footnote[https://jav-ed.github.io/H2O_Plot/]<fn_0>. Additionally, the source code is available on #gls("github") #footnote[https://github.com/jav-ed/H2O_Plot], allowing users to customize parameters such as the resolution.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/3_H2_Plotly.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/1_Hydro/0_Intro/3_H2_Plotly.png", 
   width: 100%),
   caption: [Excerpt shows a screenshot of an interactive tool developed for considering density and real gas factors of the ideal and real gas for hydrogen @fn_0.],
 ) <fig_18>

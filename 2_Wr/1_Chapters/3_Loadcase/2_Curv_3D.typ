@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-#import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
+#import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
 
@@ -15,7 +15,7 @@ Due to resource constraints, cost-intensive experimental investigations cannot b
 The foundation for this approach is derived from a careful examination of results presented in @Liu2019. @fig_33 demonstrates that bending moment curves exhibit similar curvature values within a specific range, independent of fill medium and pressure. This observation enables the definition of a critical curvature value, below which the bending moment remains independent of both filling agent and pressure, as illustrated in @fig_34.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/0_Critical_Curv.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/0_Critical_Curv.png", 
   width: 67%),
   caption: [Comparison of moment M and curvature $kappa$ for air and water as filling agent for different pressure levels @Liu2019 with possible critical curvature values.],
 ) <fig_34>
@@ -38,7 +38,7 @@ The solution of the #gls("fem") model provides, among other things, the displace
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/1_FEM_Displacements.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/1_FEM_Displacements.png", 
   width: 77%),
   caption: [Nodal displacement values in three spatial directions for a single element.],
 ) <fig_35>
@@ -47,7 +47,7 @@ The solution of the #gls("fem") model provides, among other things, the displace
 The element ID provides crucial information about element location and node assignments. This information enables the determination of element adjacency and their neighborhood relationships, as illustrated in @fig_36.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/2_Neigbourhood.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/2_Neigbourhood.png", 
   width: 57%),
   caption: [Element connectivity demonstrated through numbered and color-highlighted element IDs.],
 ) <fig_36>
@@ -80,7 +80,7 @@ $ f'_("central")(x_1) = (f(x_2) - f(x_0))/(2h) $<eq_31>
 
 // ------------------------------- single fdm ------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/3_Simple_FDM.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/3_Simple_FDM.svg", 
   width: 47%),
   caption: [Spatial arrangement of discretization points $x_i$ for the #gls("fd") method.],
 ) <fig_37>
@@ -97,7 +97,7 @@ As shown in @fig_38, the structural mesh is discretized using eight-node element
 
 // ------------------------------- 8 nodes fdm ------------------------------ //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/4_FEM_Ele.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/4_FEM_Ele.svg", 
   width: 47%),
   caption: [Eight-node element representation showing discretization points $x_i$ for #gls("fd") methods.],
 ) <fig_38>
@@ -113,7 +113,7 @@ Having established this intuitive understanding of the central #gls("fd") method
 This introduces complexity and consequently risk of mistake incorporation. The simplest scenario occurs when element IDs increase chronologically in all three dimensions, as illustrated for the one-dimensional case in @fig_39.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/5_Chron_Order.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/5_Chron_Order.svg", 
   width: 47%),
   caption: [Idealized example of sequential element and node numbering in a structured mesh demonstrating chronological ordering.],
 ) <fig_39>
@@ -122,7 +122,7 @@ This introduces complexity and consequently risk of mistake incorporation. The s
 In practice, however, element IDs rarely follow such chronological ordering. A pictorial representation of this is given in @fig_40. For complex three-dimensional #gls("swith") simulation models, this non-sequential ordering increases the complexity of identifying and managing element and node neighborhood relationships.relationships.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/6_Complex_Ids.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/6_Complex_Ids.svg", 
   width: 47%),
   caption: [Possible real-world representation of non-sequential element ID distribution in a 2D structural mesh.],
 ) <fig_40>
@@ -162,7 +162,7 @@ While @eq_37 to @eq_46 with neighboring relationships can be used with the forwa
 This issue is visualized in @fig_41, where the global right-ending discretization points are shown in red.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/7_Ending.svg", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/7_Ending.svg", 
   width: 47%),
   caption: [Limitation of purely using the forward #gls("fd") method for global red-colored right-end discretization points.],
 ) <fig_41>
@@ -189,7 +189,7 @@ An illustrative example of the displacement on the top left, the strains or firs
 
 // -------------------------------- 3d plots -------------------------------- //
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/8_Skin_Ca_06_P_510.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/8_Skin_Ca_06_P_510.png", 
   width: 100%),
   caption: [Illustrative depiction of the displacements ([mm], top left), first-order derivative ([-], top right), second-order derivative ([$"mm"^(-1)$], bottom left) and curvature ([$"mm"^(-1)$], bottom right) for a #gls("swith") model at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
 ) <fig_42>
@@ -203,7 +203,7 @@ Given the pivotal importance of tank structural behavior in #glspl("swith"), the
 
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/9_Tubes_Ca_06_P_510.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/9_Tubes_Ca_06_P_510.png", 
   width: 100%),
   caption: [Illustrative depiction of the displacements ([mm], top left), first-order derivative ([-], top right), second-order derivative ([$"mm"^(-1)$], bottom left) and curvature ([$"mm"^(-1)$], bottom right) solely for the tubes of a #gls("swith") model at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
 ) <fig_43>
@@ -214,7 +214,7 @@ The application of curvature results to real-world scenarios necessitates analys
 @fig_44 presents the first-order derivatives of displacement (strain) with enhanced scaling to identify critical wing regions that warrant particular attention in simulation result interpretation.
 
 #figure(
-  image("../../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/10_Tubes_Ca_06_P_510.png", 
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/10_Tubes_Ca_06_P_510.png", 
   width: 100%),
   caption: [Focused and scaled depiction of the first-order derivatives (strain) at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$. Top left: wing-fuselage intersection; top right: landing gear and engine; bottom left: end of inner wing and tubes; bottom right: outer wing end.],
 ) <fig_44>
