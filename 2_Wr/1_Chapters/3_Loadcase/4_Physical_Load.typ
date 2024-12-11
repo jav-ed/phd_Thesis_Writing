@@ -5,7 +5,7 @@
 // Title was tested and is inshallah fine
 // word repetition task inshallah completed
 
-=== Physical Load Introduction Elements for Experimental Structural Validation<chap_3_0_4>
+== Physical Load Introduction Elements for Experimental Structural Validation<chap_3_0_4>
 In @chap_3_0_0, critical load cases for #gls("swith", long:true) were established. Hydrogen's properties were examined in @chap_2_0_0, with particular attention to safety considerations in @chap_2_0_1 and @chap_2_0_2. 
 Due to several technical limitations in safely handling hydrogen within high-pressure, long-dimensional tube experiments, among others, a filling agent study was conducted in @chap_3_0_1 to @chap_3_0_3. 
 This analysis determined that alternative filling agents could potentially replace hydrogen for structural validation testing without significantly altering the structural behavior.

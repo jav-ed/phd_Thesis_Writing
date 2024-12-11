@@ -4,7 +4,7 @@
 #pagebreak(weak:true)
 
 // Title was tested and is inshallah fine
-== High-Pressure Hydrogen Properties and Structural Considerations <chap_2_0>
+= High-Pressure Hydrogen Properties and Structural Considerations <chap_2_0>
 A comprehensive definition and state-of-the-art review of #gls("swith", long:true) were provided in @chap_0_7, establishing the foundational context for this investigation. Building upon this, @chap_1_0 presented an extensive analysis of current standards and regulations governing the commercial certification of #gls("swith", long:true). The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in this section.
 This section explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: First, @chap_2_0_0 establishes the fundamental properties of hydrogen, examining its basic characteristics and, among others, its gravimetric energy density and its behavior under varying pressure and temperature conditions.
 
@@ -14,7 +14,7 @@ Finally, acknowledging that #glspl("swith") must withstand both internal pressur
 This comprehensive approach integrates theoretical understanding, safety considerations, and practical engineering challenges to establish a robust framework for developing and validating #glspl("swith").
 
 // Title was tested and is inshallah fine
-=== Essential Properties of Hydrogen <chap_2_0_0>
+== Essential Properties of Hydrogen <chap_2_0_0>
 
 The pursuit of structural validation tests for #gls("swith") certification represents a novel endeavor, motivated by multiple factors examined throughout this thesis. This subsection focuses specifically on the hydrogen aspect of these tests. Conducting structural tests with compressed hydrogen necessitates both a foundational understanding and an in-depth investigation of hydrogen's properties, particularly those related to safety.
 This subsection explores the basic properties of hydrogen, elucidating why it stands as an attractive alternative to current fossil fuels. The potential hazards associated with hydrogen in practical applications are addressed in @chap_2_0_1. Initially, a clear rationale for understanding hydrogen's basic properties is presented. Following this, the fundamental properties of hydrogen are outlined in a clear and structured manner.

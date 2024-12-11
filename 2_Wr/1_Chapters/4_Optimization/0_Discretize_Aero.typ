@@ -16,14 +16,14 @@
 
 
 // TODO Title
-== Fundamentals for Optimization <chap_4_0>
+= Fundamentals for Optimization <chap_4_0>
 
 // needs to be filled 
 
 
 
 // Title was tested and is inshallah fine
-=== Discretization of Aerodynamic Loads <chap_4_0_0>
+== Discretization of Aerodynamic Loads <chap_4_0_0>
 
 In the previous @chap_3_0_4, #gls("lie", long:true) was introduced as a method for approximating aerodynamic loads in structural testing. Further investigation has identified key parameters that determine the effectiveness of #gls("lie") configurations, including their quantity, dimensional specifications, and the anticipated load magnitudes. These parameters require systematic determination through comprehensive load approximation analysis.
 The development of a structural testing methodology for both conventional aircraft and #gls("swith") necessitates the transformation of continuous aerodynamic loads into physically applicable discrete forces. This transformation presents a fundamental challenge in experimental mechanics: how to appropriately represent a continuous load distribution through a finite number of discrete load application points while maintaining the essential characteristics of the original distribution.

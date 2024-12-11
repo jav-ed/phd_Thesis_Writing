@@ -4,7 +4,7 @@
 
 
 // Title was checked and is fine - inshallah
-=== Specific Standards from Various Fields <chap_1_0_5>
+== Specific Standards from Various Fields <chap_1_0_5>
 In previous @chap_1_0_4 and @chap_1_0_3, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. While the automotive industry was highlighted, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
 The goal of this subsection is to provide a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_0_6.
 

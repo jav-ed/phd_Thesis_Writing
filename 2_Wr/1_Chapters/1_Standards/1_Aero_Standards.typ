@@ -5,7 +5,7 @@
 
 
 
-=== Aviation Standards <chap_1_0_2>
+== Aviation Standards <chap_1_0_2>
 The preceding @chap_1_0_1 elaborated on the general importance of standards and their particular significance in the context of #gls("swith", long:true).
 It highlighted the current absence of a single standard that could support the design of #gls("swith", long:true) or guide the design and conduct of structural validation tests. 
 Due to the lack of established rules for structural validation, no authority can currently grant certification for flying with a #gls("swith"). 

@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine
-===  Pressurized Vessels Under External Dynamic Loading<chap_2_0_3>
+==  Pressurized Vessels Under External Dynamic Loading<chap_2_0_3>
 
 In @chap_2_0_2, a roadmap was proposed for conducting experimental structural validation tests on #gls("swith", long:true) at scales comparable to large aircraft. A key aspect of this roadmap involves experiments and simulations on small high-pressure hydrogen cylinders subjected to external loads.
 Currently, no commercially certified #glspl("swith") are available, precluding studies related to hydrogen ignition in these systems. For the purpose of initial analysis, #glspl("swith") can be conceptualized as vessels subject to external loading, irrespective of their filling medium. This conceptual simplification enables the utilization of externally loaded cylinders as representative models for the prospective #glspl("swith"), which are still in the developmental stage.

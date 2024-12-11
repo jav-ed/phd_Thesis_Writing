@@ -9,7 +9,7 @@
 // compared with true german text
 
 // Title was tested and is inshallah fine
-=== Aerodynamic Load Computation and Post-Processing <chap_4_0_1>
+== Aerodynamic Load Computation and Post-Processing <chap_4_0_1>
 In @chap_3_0_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the establishment of #gls("ld", long:true) necessity. 
 The investigation continued in @chap_4_0_0, exploring various implementation possibilities for #gls("ld") and determining that these methods require integration with optimization approaches to solve remaining issues. Prior to executing #gls("ld") and its subsequent steps, it is essential to obtain the aerodynamic loads acting on the aircraft wing. This section presents a methodology for acquiring these loads through numerical simulations and details their transformation from distributed loads to discrete point loads. The transformation process holds particular significance for k-means++ implementation and demonstrates advantageous implications for the subsequent optimization framework.
 

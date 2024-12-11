@@ -5,7 +5,7 @@
 
 // Title was tested and is inshallah fine
 
-== Load Case Assessment and Filling Media Influence<chap_3_0>
+= Load Case Assessment and Filling Media Influence<chap_3_0>
 In @chap_1_0, the primary objective was to identify specific requirements for experimental structural certification tests of #gls("swith", long:true). The analysis revealed that no single standard currently exists dedicated to the certification of #glspl("swith"). Consequently, existing state-of-the-art standards were evaluated and filtered to establish essential certification requirements. These identified standards not only serve certification purposes but could also be leveraged to inform design decisions.
 
 The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
@@ -20,7 +20,7 @@ Finally, in @chap_3_0_4, practical methods for introducing physical loads during
 
 // Title was tested and is inshallah fine
 // word repetition task inshallah completed
-=== Study of Critical Load Cases<chap_3_0_0>
+== Study of Critical Load Cases<chap_3_0_0>
 Findings from @chap_2_0_1 and @chap_2_0_2 demonstrate that conducting experimental structural tests with hydrogen in long tubes under high pressure presents severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
 To address this question, it is first necessary to establish the primary prerequisite: identifying concrete load cases for analysis. Thus, this subsection focuses on identifying critical load cases and explains why testing all potential load cases, either experimentally or through simulation, is not feasible. Based on these constraints, an alternative methodological approach is presented and justified. It is demonstrated how one crucial load case can be filtered from the many available scenarios. Additionally, an introduction to the V-n diagram is provided to establish the relationship between the primary critical load case and the flight envelope.
 

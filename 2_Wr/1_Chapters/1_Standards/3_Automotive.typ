@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 
-=== Structural Integral Tanks in Automotive <chap_1_0_4>
+== Structural Integral Tanks in Automotive <chap_1_0_4>
 
 In the previous @chap_1_0_3, it was observed that the automotive industry offers significant advancements in hydrogen-driven vehicles. Furthermore, this industry contributes a considerable amount of literature and expertise to the field. The previous @chap_1_0_3 also highlighted substantial similarities between the hydrogen-driven automotive industry and aerospace. Both fields desire lightweight #gls("cfrp", long:true) tanks to store, among other things, #gls("cgh2", long:true). Due to the value the automotive industry provides to the realization of a #gls("swith", long:true), an in-depth study shall be carried out.
 The objective of this subsection and study is to find publicly available work from the automotive industry that deals with externally loaded #gls("cgh2") tanks. The identified work needs to be investigated thoroughly to find potentially helpful insights for the experimental structural validation tests of #glspl("swith"). More specifically, this subsection will address the following: First, if similar work is found, it will be explained in depth. Subsequently, it will be elaborated whether the found work can be leveraged for experimental structural validation tests of #glspl("swith").
