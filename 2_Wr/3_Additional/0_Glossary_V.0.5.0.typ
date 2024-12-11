@@ -12,6 +12,8 @@
 // if you want to see wheter an update exists go to
 // https://github.com/typst/packages/tree/main/packages/preview/glossarium
 
+
+// Inshallah completed
 #let glos_entry_list = (
   (
 
