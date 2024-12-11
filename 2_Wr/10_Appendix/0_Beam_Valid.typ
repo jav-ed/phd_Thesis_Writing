@@ -2,24 +2,25 @@
 #import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO 
-// check title 
-// maybe add some introducing words
-// check captions 
-// make use scale of figures is fine
-== Beam Solver Validation examples <chap_Append_0> 
+
+// Title was tested and is inshallah fine 
+== Beam Solver Validation Examples <chap_Append_0> 
+
+As elaborated in @chap_4_0_2, the computational implementation of beam models required thorough validation of the selected solver. This appendix presents some of the validation results for IndeterminateBeam @interdetbeam_tool against established textbook solutions. 
+For the first validation case, @fig_Ap_0 shows the beam schematic along with the reaction forces, while @fig_Ap_1 presents the corresponding distributions of normal forces, shear force distribution, and bending moments. For all subsequent validation cases (@fig_Ap_2 through @fig_Ap_11), each figure combines the beam schematic, reaction forces, shear force distribution, and bending moment distributions. 
+The normal force distributions are omitted in these cases as they are zero throughout the beam length. 
+@fig_Ap_0 through @fig_Ap_6 demonstrate the validation for five statically determinate beam configurations, while @fig_Ap_7 through @fig_Ap_11 show the results for five statically indeterminate cases.
 
 
 // -------------------- statically determined beam models ------------------- //
 
-statically indetermined beam model 0 to 9
-Note, since the normal force is zero for the considered beam models, it is not plotted seperatedly, but rather mentioned here once.
 
 // ------------------------------ beam model 0 ------------------------------ //
+
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a0_0.svg", 
   width: 100%),
-  caption: [],
+  caption: [Beam schematic with boundary conditions and corresponding reaction forces for the first statically determined model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_0>
@@ -27,7 +28,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a0_1.svg", 
   width: 100%),
-  caption: [],
+  caption: [Normal force, shear force, and bending moment distributions for the first statically determined model of @fig_Ap_0.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_1>
@@ -38,7 +39,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a1_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically determined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the second statically determined model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_3>
@@ -48,7 +49,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a3_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically determined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the third statically determined model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_4>
@@ -58,7 +59,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a4_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically determined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the fourth statically determined model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_5>
@@ -68,7 +69,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a9_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically determined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the fifth statically determined model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_6>
@@ -81,7 +82,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a10_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically indetermined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the first statically indeterminate model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_7>
@@ -91,7 +92,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a11_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically indetermined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the second statically indeterminate model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_8>
@@ -101,7 +102,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a12_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically indetermined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the third statically indeterminate model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_9>
@@ -111,7 +112,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a13_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically indetermined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the fourth statically indeterminate model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_10>
@@ -122,7 +123,7 @@ Note, since the normal force is zero for the considered beam models, it is not p
 #figure(
   image("../../1_Data/2_Figs/0_Content/3_Appendix/0_Beam_Verific/a15_combined.svg", 
   width: 95%),
-  caption: [results of beam model for verification, statically indetermined],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distributions for the fifth statically indeterminate model.],
   kind:"image_app",
   supplement: "Figure",
 )<fig_Ap_11>

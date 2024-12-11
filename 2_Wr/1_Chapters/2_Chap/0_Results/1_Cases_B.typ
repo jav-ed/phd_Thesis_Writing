@@ -27,7 +27,7 @@ Furthermore, @fig_84 shows a small gap between the left and right supports where
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/0_True_Bem_combined.svg", 
   width: 95%),
-  caption: [Analytical model representation composed of beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case B.],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case B.],
 )<fig_84>
 
 The optimization problem formulation for case B is presented in @eq_113.

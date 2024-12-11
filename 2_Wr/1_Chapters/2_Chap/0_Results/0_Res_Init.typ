@@ -225,7 +225,7 @@ A notable difference between @fig_80 and @fig_70 lies in the presentation of dis
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
   width: 85%),
-  caption: [Analytical model representation composed of beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case A.],
+  caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case A.],
 )<fig_80>
 
 
