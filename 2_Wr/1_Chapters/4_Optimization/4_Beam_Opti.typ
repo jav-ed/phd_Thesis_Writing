@@ -18,7 +18,7 @@
 // Title was tested and is inshallah fine
 == Integration of Structural Analysis for Optimization  <chap_4_0_4>
 In @chap_4_0_0 it was explained how to discretize load distributions, in @chap_4_0_1 how to obtain the aerodynamic loads, in @chap_4_0_2 important fundamental information about the beam model and in @chap_4_0_3 some general background about optimization was provided. 
-This subsection builds upon the collected knowledge and explains how the beam model solver can be incorporated into an optimization framework. 
+This section builds upon the collected knowledge and explains how the beam model solver can be incorporated into an optimization framework. 
 First, it explains what goal such a constellation pursues. 
 Subsequently, an investigation comparing beam model and #gls("fem") solvers is conducted, leading to the selection of one method based on rationale. Finally, it was explained how this selection could be integrated within an optimization framework.
 // -------------------------------------------------------------------------- //

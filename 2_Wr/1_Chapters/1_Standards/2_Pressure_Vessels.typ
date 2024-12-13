@@ -5,7 +5,7 @@
 // Title was checked and is fine - inshallah
 == Classification and Analysis of Hydrogen Pressure Vessels <chap_1_0_3>
 
-Besides aviation, according to @chap_1_0_1, one of the other main domains into which #glspl("swith") can be divided is the domain of pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. 
+Besides aviation, according to @chap_1_0_1, one of the other main domains into which #glspl("swith") can be divided is the domain of pressure vessels. Following this, this section will first provide general basics about pressure tanks. 
 Then, an in-depth investigation into the different available tank types shall be presented. 
 Given this thesis's focus on real-world application, particular attention will be paid to costs and current fields of application, both critical factors in practical implementations. 
 Subsequently, a pathway for selecting the appropriate tank type for #glspl("swith") will be outlined. 

@@ -26,7 +26,7 @@ Finally in @chap_0_6 the financial funding is made transparent such that the rea
 /* ---------------------------- Inital Background --------------------------- */
 == Initial Background <chap_0_1>
 
-In this subsection, a concise definition of the term #gls("swith", long:true) shall be provided. Detailed information about #glspl("swith") can be found in @chap_0_7
+In this section, a concise definition of the term #gls("swith", long:true) shall be provided. Detailed information about #glspl("swith") can be found in @chap_0_7
 The rationale for beginning with a brief definition of #gls("swith") is to approach the topic systematically. Presenting an overall concept first is generally easier to comprehend, especially for non-specialists. Once the basics are properly understood, in-depth knowledge becomes more accessible.
 
 The aviation industry is actively pursuing improvements in various aspects, with a significant focus on reducing environmental impact 

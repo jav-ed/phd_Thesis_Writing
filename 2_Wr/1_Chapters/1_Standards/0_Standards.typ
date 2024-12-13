@@ -18,7 +18,7 @@ The safety considerations, particularly those arising from the application of hy
 
 The development of #gls("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with critical structural elements. 
 As with any groundbreaking technology, the path from concept to implementation is fraught with challenges. 
-This subsection elucidates the critical role that standards play in navigating the challenges of #glspl("swith") development and structral validation testing. 
+This section elucidates the critical role that standards play in navigating the challenges of #glspl("swith") development and structral validation testing. 
 It shall be made clear that standards are not only important for the final certification process but also for designing the experimental structural testing environment. 
 
 Depending on the literature that is read different defintions for the term standard can be found @Tassey2000 @Nickerson2006 @Farrell1992 @Anderson1990 @Murmann2006.

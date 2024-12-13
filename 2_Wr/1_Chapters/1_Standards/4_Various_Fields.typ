@@ -6,7 +6,7 @@
 // Title was checked and is fine - inshallah
 == Specific Standards from Various Fields <chap_1_0_5>
 In previous @chap_1_0_4 and @chap_1_0_3, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. While the automotive industry was highlighted, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
-The goal of this subsection is to provide a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_0_6.
+The goal of this section is to provide a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_0_6.
 
 Throughout @chap_1_0, it was observed that many fields desire a secure, feasible, and industrial application of hydrogen. The automotive industry, being one of them, was especially highlighted in @chap_1_0_3 and @chap_1_0_4. However, the automotive industry is only one significant domain under the broader category of mobility.
 The focus is on finding standards that could provide helpful insights for #gls("swith")-related standards. Two main reasons for focusing on mobility can be regarded as reasonable approaches:
@@ -279,7 +279,7 @@ Generally, for hydrogen-powered mobility domains in transport, a distinction can
 
 
 Besides #gls("iso")'s focus on hydrogen, another reason for mentioning #gls("iso") hydrogen-based standards is the organization's excellent international reputation. This increases the chances of partial to potentially full international recognition of these standards.
-As mentioned in the introduction of this subsection, the goal was to identify potential #gls("cgh2") standards, provide reasons for their selection, and present them in an organized manner. The process of filtering the standards with the highest potential for providing information relevant to #gls("swith") certification will be addressed in @chap_1_0_6, based on specific criteria.
+As mentioned in the introduction of this section, the goal was to identify potential #gls("cgh2") standards, provide reasons for their selection, and present them in an organized manner. The process of filtering the standards with the highest potential for providing information relevant to #gls("swith") certification will be addressed in @chap_1_0_6, based on specific criteria.
 
 
 #summary_([

@@ -3,11 +3,6 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
-
-// TODO section required
-// subsection required 
-// proper intro for section and subseciton required
-
 // INFO
 // all refs
 // all figs - the image data was copied
@@ -27,10 +22,10 @@ Since the optimization framework needs to work with structural information, esse
 Similarly, fundamental knowledge about optimization is presented in @chap_4_0_3.
 As optimization is a vast topic, only selected information relevant to understanding the optimization framework is included.
 The integration of beam modeling within the optimization framework is presented in @chap_4_0_4.
-This section also provides justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
+The latter section also provides justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
 The optimization framework is then applied to obtain multiple solutions.
 These solutions reflect real-world efforts undertaken for static experimental structural validation testing.
-The modeling rationale and results are presented in subsections @chap_5_0 to @chap_5_3.
+The modeling rationale and results are presented in @chap_5_0 to @chap_5_3.
 
 
 // Title was tested and is inshallah fine
@@ -316,7 +311,7 @@ The integration of k-means++ with a comprehensive optimization framework is exam
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
-This subsection established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads. The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
+This section established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads. The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 

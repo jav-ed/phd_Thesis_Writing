@@ -79,7 +79,7 @@ The theoretical knowledge presented underscores the need for heightened attentio
 
 *@chap_2_0_2 -*
 In conclusion, the potential for hydrogen self-ignition has been demonstrated to be a tangible concern in real-world applications. 
-This subsection has elucidated the primary geometrical factors that can precipitate ignition and explained the modifications necessary to mitigate this risk. 
+This section has elucidated the primary geometrical factors that can precipitate ignition and explained the modifications necessary to mitigate this risk. 
 Despite the acknowledged threat of hydrogen self-ignition, literature review supports the premise that secure hydrogen application is feasible, provided that its properties are thoroughly understood and accounted for.
 However, it is crucial to exercise caution when considering the direct transposition of hydrogen applications from the automotive industry to #glspl("swith") on the scale of large commercial aircraft, such as the Airbus A350-1000. 
 A more judicious strategy involves conducting a series of smaller-scale experimental and numerical studies, incrementally approaching the scale of a large aircraft. 
@@ -111,7 +111,7 @@ The interpretation of results indicated that for experimental investigations, hy
 
 // -------------------------------- 3_Curv_2D ------------------------------- //
 *@chap_3_0_3 -*
-This subsection addressed the challenge of interpreting complex three-dimensional curvature data by developing transformation methods for two-dimensional analysis. The mathematical framework established how to convert six-dimensional matrix representations ($bold(A)^(n times 6)$) into more manageable two-dimensional forms ($bold(A)^(n times 2)$). While three averaging approaches were initially proposed, mathematical analysis demonstrated that only two fundamentally different methods exist.
+This section addressed the challenge of interpreting complex three-dimensional curvature data by developing transformation methods for two-dimensional analysis. The mathematical framework established how to convert six-dimensional matrix representations ($bold(A)^(n times 6)$) into more manageable two-dimensional forms ($bold(A)^(n times 2)$). While three averaging approaches were initially proposed, mathematical analysis demonstrated that only two fundamentally different methods exist.
 These methods were systematically evaluated using a range of lift coefficients and internal pressures from $15 "MPa"$ to $110 "MPa"$. The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region remained substantially below critical thresholds.
 This finding led to a practical conclusion potentially specific to the investigated simulation model. 
 Under the analyzed load conditions, hydrogen could be substituted with an alternative filling agent in experimental structural validation testing. 
@@ -123,7 +123,7 @@ However, while the interpretation needs to be done for each specific simulation 
 // ----------------------------- 4_Physical_Load ---------------------------- //
 // ---------------------------- 5_Physical_Collet --------------------------- //
 *@chap_3_0_4 -*
-This subsection established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous chapters, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
+This section established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
 A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
 The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
 
@@ -138,7 +138,7 @@ This investigation provides a methodological foundation for #gls("lie") selectio
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //
 *@chap_4_0_0 -*
-This subsection established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads. The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
+This section established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads. The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 

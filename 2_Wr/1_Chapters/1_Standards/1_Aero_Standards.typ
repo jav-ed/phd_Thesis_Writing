@@ -12,12 +12,12 @@ Due to the lack of established rules for structural validation, no authority can
 The goal of this thesis is to provide initial work that can be utilized by industry, scientists, aerospace certification authorities, or standards institutions to build upon and help close this gap. 
 Additional motivation for the need for #glspl("swith") standards, along with suggested possible next steps, was also presented in @chap_1_0_1.
 It could be deduced that #glspl("swith") encompass multiple subfields, including aircraft design, hydrogen systems, and pressure vessel technology, each governed by its own set of standards. 
-This subsection focuses on the significant standards employed in aerospace. Initially, it presents the commonly used and available aviation standards. 
+This section focuses on the significant standards employed in aerospace. Initially, it presents the commonly used and available aviation standards. 
 Subsequently, it examines the potential applicability of these standards to #glspl("swith"). 
 Lastly, it examines emerging standards currently under development and evaluates their potential utility for #gls("swith") certification upon their release.
 
 /* -------------------------------------------------------------------------- */
-At the outset of this subsection, it is important to reiterate that, at the time of writing this thesis, there is no single standard available that pertains to the certification of #glspl("swith"). Certification extends beyond mere bureaucratic processes; it signifies that local or global aviation authorities permit the use of a #gls("swith"). Only with such certification is a commercial application of a #gls("swith") possible. 
+At the outset of this section, it is important to reiterate that, at the time of writing this thesis, there is no single standard available that pertains to the certification of #glspl("swith"). Certification extends beyond mere bureaucratic processes; it signifies that local or global aviation authorities permit the use of a #gls("swith"). Only with such certification is a commercial application of a #gls("swith") possible. 
 
 Considering one of the sub-domains in which #gls("swith") can be classified, namely aviation, it is crucial to understand how aircraft are categorized. In aviation, aircraft classification is based on various factors, including the region of certification, maximum takeoff mass, and type of aircraft. The region of certification refers to the geographical location where the aircraft is to be approved and operated. Different approval authorities and regulations exist depending on the country or region in which the aircraft is to be certified. For instance, in Europe, the #gls("easa", long:true) @EASA_Homepage @Mensen2013 is responsible for aircraft approval, while in the USA, this task falls under the purview of the Federal Aviation Administration (FAA) @FAA_Homepage @Mensen2013.
 

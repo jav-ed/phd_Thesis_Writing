@@ -4,7 +4,7 @@
 
 // Title was tested and is inshallah fine
 == Filtering Essential Standards<chap_1_0_6>
-In previous @chap_1_0_5, an overview of standards from various areas using #gls("cgh2", long:true) as fuel was presented. Building upon this list of options, this subsection aims to summarize the overarching categories of hydrogen applications and clearly identify the category in which #gls("swith", long:true) is classified.
+In previous @chap_1_0_5, an overview of standards from various areas using #gls("cgh2", long:true) as fuel was presented. Building upon this list of options, this section aims to summarize the overarching categories of hydrogen applications and clearly identify the category in which #gls("swith", long:true) is classified.
 Subsequently, a systematic approach for narrowing down the extensive list to a few essential standards is introduced. 
 These essential standards are selected based on their high potential applicability for #gls("swith") certification. A comprehensive review of all standards is beyond the scope of this thesis. However, fundamental insights from non-aviation standards are presented to provide a basic understanding of potential tests that authorities might require for commercial certification of #glspl("swith").
 These insights are presented in a structured and concise manner, extracted from the essential standards to reinforce their relevance. Special attention is given to the burst test, considered a crucial component of certification. 

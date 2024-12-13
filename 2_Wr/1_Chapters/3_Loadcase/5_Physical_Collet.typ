@@ -222,7 +222,7 @@ This quantitative foundation, coupled with the qualitative evaluation criteria, 
 
 
 #summary_([
-This subsection established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous chapters, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
+This section established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
 A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
 The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
 

@@ -15,7 +15,7 @@
 == Optimization Fundamentals <chap_4_0_3>
 In the previous @chap_4_0_2, fundamental principles of the beam modelling were presented, including elaborations on internal force distributions, which will be relevant for optimization as shown in @chap_4_0_4 and @chap_5_0 to @chap_5_3. 
 However, before exploring the integration of beam models within an optimization framework, it is essential to establish a thorough understanding of optimization fundamentals.
-This subsection introduces key optimization concepts and terminology, utilizing one concrete practical example to enhance their comprehension beyond purely theoretical definitions and demonstrate their practical implementation.
+This section introduces key optimization concepts and terminology, utilizing one concrete practical example to enhance their comprehension beyond purely theoretical definitions and demonstrate their practical implementation.
 
 
 // -------------------------------------------------------------------------- //

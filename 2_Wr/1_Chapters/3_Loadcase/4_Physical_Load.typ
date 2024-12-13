@@ -13,7 +13,7 @@ While numerical simulations offer considerable advantages in analyzing structura
 Among various advantages, numerical methods allow straightforward modification of parameters such as internal pressure and benefit from well-established theoretical frameworks for load application. 
 However, experimental investigations present distinct challenges. The application of physical forces for aircraft testing is inherently demanding, and these requirements increase notably when dealing with pressurized tubes in #gls("swith") configurations.
 
-This subsection addresses some of these experimental challenges by examining physical #glspl("lie", long:true) for aircraft wings. 
+This section addresses some of these experimental challenges by examining physical #glspl("lie", long:true) for aircraft wings. 
 An analysis of each #gls("lie")'s characteristics is presented, followed by systematic evaluation using relevant assessment criteria to determine suitable approaches for structural testing.
 These findings provide the motivation for the upcoming aerodynamical load discretization and optimization detailed in @chap_4_0. 
 Understanding the practical implications of different load introduction methods provides crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
@@ -45,7 +45,7 @@ This methodology raises several fundamental questions regarding implementation:
 6. How should spacing between adjacent #glspl("lie") be determined
 7. Which force magnitudes and directions should be applied
 
-The first two questions are addressed within this subsection, while the remaining aspects are examined throughout @chap_4_0.
+The first two questions are addressed within this section, while the remaining aspects are examined throughout @chap_4_0.
 Before proceeding with the detailed analysis, it is pertinent to elaborate on the rationale behind selecting this approach over the previously mentioned alternatives.
 As mentioned in @chap_0_6, this research was conducted within the framework of the K#sub[2]H#sub[2] project. Through collaboration with the industrial partner Materialforschung und Anwendungstechnik GmbH Dresden (IMA), valuable practical insights were obtained for this thesis.
 IMA's expertise encompasses extensive experience in experimental structural testing of aircraft across various size categories, including the Airbus A380 @link_Lufthansa_Airbus_380.
