@@ -10,7 +10,7 @@
 
 
 // Title was tested and is inshallah fine 
-= Optimization-Based Load Discretization for Structural Testing <chap_5>
+== Optimization-Based Load Discretization for Structural Testing <chap_5>
 
 This chapter presents research outcomes focused on utilizing numerical optimization to discretize aerodynamic loads. The optimization framework provides solutions to crucial engineering questions, including the determination of optimal #gls("lie") quantities, force magnitudes, lengths, and precise positioning. Materialforschung und Anwendungstechnik GmbH Dresden (IMA) was consulted to incorporate real-world engineering considerations relevant for potential #gls("swith") certification processes. Through systematic analysis, these practical requirements were translated into mathematical optimization problems. The optimization formulations are presented, explained, solved, and interpreted with respect to their performance.
 
@@ -20,7 +20,7 @@ The progressive refinement of constraints through expert consultation serves mul
 It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
 // Title was tested and is inshallah fine 
-== Optimization Case A <chap_5_0>
+=== Optimization Case A <chap_5_0>
 Optimization case A represents the first application of the theoretical foundations established in @chap_4_0_0 to @chap_4_0_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
 By solving this optimization problem, critical questions posed in @chap_4_0_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
 As this case serves as the foundation for subsequent optimization scenarios, the mathematical formulation and its implications are explained in detail. The mathematical formulation of optimization case A is given in @eq_107.

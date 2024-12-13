@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine 
-== Optimization Case D <chap_5_3>
+=== Optimization Case D <chap_5_3>
 // talk about overlappting collets and how this issues was resolved
 // case L,M,N,O
 // D 50%

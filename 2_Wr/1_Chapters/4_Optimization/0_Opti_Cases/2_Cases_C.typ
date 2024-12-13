@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine 
-== Optimization Case C <chap_5_2>
+=== Optimization Case C <chap_5_2>
 
 For optimization case C, the underlying beam model remains identical to that presented in optimization case B through @fig_84. Similarly, the optimization definition maintains consistency with case B as provided in @eq_113. The primary contribution of optimization case C emerges from addressing a constraint commonly encountered in real-world applications.
 In practical aircraft design, certain sections of the wing-tube structure are inherently unsuitable for #glspl("lie") placement. This limitation typically occurs in areas where critical components such as propulsion systems and landing gear are mounted to the wing-tube section. Even in scenarios where these components could theoretically be relocated, existing structural connection elements may preclude the placement of standard #glspl("lie").
