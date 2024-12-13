@@ -19,21 +19,21 @@ Although each topic represents its own specialized field, their findings build u
 investigations.
 Within each topic, careful attention is given to providing essential fundamental knowledge, ensuring that assumptions and their progression are clearly evident. 
 
-// here
-If the assumptions are not obiois, to the best knowledge of the authot, for most of the time they are justified. Based on these assumptions results are obtained, which are presented and interpeted within the respective topic's chapter.
-The justification for why for each of the considered topic, their background is initally provided is due the hihg number of the topics. 
-It is unlikely that the reader is familar with all of these basics. 
-Therefore, it could be that for some readers some fundamentals are considered not required, while others would need more.
-The topics covered within this these are among others, standards, certifcation regualtions, pressure vessels types, their proprties, their applications 
+// ---------------------------------- here ---------------------------------- //
+If the assumptions are not obvious, they are justified to the best knowledge of the author. Based on these assumptions, results are obtained, presented, and interpreted within their respective chapters.
+The background for each topic is provided due to the broad range of subjects covered. 
+It is unlikely that readers will be familiar with all fundamental concepts. 
+Therefore, while some readers may find certain fundamentals redundant, others might require even more information to understand the topic.
+The topics covered within this thesis include standards, certification regulations, pressure vessel types, their properties, their applications 
 // the more refers to the pressure vessel things
 and more,
 
 // now more topics,
-hydrogen tank applicaitons on mobility industries including aviation and automotive industry, general hydrogen proerotes, safety relevant properties, experiments and simulations
+hydrogen tank applications in mobility industries including aviation and automotive industry, general hydrogen properties, safety relevant properties, experiments and simulations
 // more topics are
-finding critical loadcases for aircraft certifcaiton, impact of filling agent, wheter filling agent can be replaced for strcutral experiemntal, methods to physically introduce loads, discretize loads, beam modeling and optimiaztion. 
+finding critical load cases for aircraft certification, impact of filling agents, whether filling agents can be replaced for structural experiments, methods to physically introduce loads, load discretization, beam modeling and optimization. 
 
-// if required we can mention again that the thigns above were mentioned
+// if required we can mention again that the things above were mentioned
 
 // -------------------------------------------------------------------------- //
 // the idea is to express that initally we provide only a bit of knowledge such that the upcoming secitons that are initally non technical that they can be understood without having to understand the details. 
@@ -89,4 +89,3 @@ The modeling rationale and results are presented in @chap_5_0 to @chap_5_3.
 @chap_6 gives a detailed dicussion with mostly repeating the summaries of the sections. @chap_7 gives the conclusion and outlook.
 Furthermore, @chap_Append_A_0 is part of the appendix and gives some of the exmaples that were used to validate the slected beam solver.
 Finally, the glossary gives short defintions and page number of occurence of some of the relevant and frequently used abbreviations. 
-
