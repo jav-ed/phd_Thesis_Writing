@@ -120,7 +120,8 @@
 #include "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_D.typ"
 
 // ------------------------------- discussion ------------------------------- //
-#include "2_Wr/1_Chapters/5_Discuss/0_Discus.typ"
+#include "2_Wr/1_Chapters/5_Final/0_Discus.typ"
+#include "2_Wr/1_Chapters/5_Final/1_Outlook.typ"
 
 // -------------------------------- Appendix -------------------------------- //
 #show: appendix_manag

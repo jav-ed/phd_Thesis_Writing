@@ -40,7 +40,7 @@
 
     set heading(numbering: none)
 
-    [= Glossary]
+    [= Glossary <chap_Glossary>]
 
     print-glossary(
         glos_entry_list,

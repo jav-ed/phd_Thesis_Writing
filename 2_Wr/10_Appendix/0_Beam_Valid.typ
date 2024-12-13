@@ -4,7 +4,7 @@
 
 
 // Title was tested and is inshallah fine 
-== Beam Solver Validation Examples <chap_Append_0> 
+== Beam Solver Validation Examples <chap_Append_A_0> 
 
 As elaborated in @chap_4_0_2, the computational implementation of beam models required thorough validation of the selected solver. This appendix presents some of the validation results for IndeterminateBeam @interdetbeam_tool against established textbook solutions. 
 For the first validation case, @fig_Ap_0 shows the beam schematic along with the reaction forces, while @fig_Ap_1 presents the corresponding distributions of normal forces, shear force distribution, and bending moments. For all subsequent validation cases (@fig_Ap_3 through @fig_Ap_11), each figure combines the beam schematic, reaction forces, shear force distribution, and bending moment distributions. 

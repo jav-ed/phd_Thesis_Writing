@@ -113,7 +113,7 @@ In the context of #glspl("swith") and practical applications, support conditions
 Given SymBeam's limitation to statically determinate beam models, the open-source alternative #emp_[IndeterminateBeam] @interdetbeam_tool was selected. The availability of this additional computational beam solver implementation further validates the selection of Python as the development platform. 
 Following the validation approach used with SymBeam, more than 20 beam models were constructed using IndeterminateBeam. 
 Comparison of these results with textbook reference solutions confirmed the accuracy of IndeterminateBeam's implementation, requiring no additional modifications. 
-The validation results for five statically determinate and five indeterminate beam models are presented in @fig_Ap_0 to @fig_Ap_6 and @fig_Ap_7 to @fig_Ap_11 in @chap_Append_0, respectively.
+The validation results for five statically determinate and five indeterminate beam models are presented in @fig_Ap_0 to @fig_Ap_6 and @fig_Ap_7 to @fig_Ap_11 in @chap_Append_A_0, respectively.
 
 
 In conclusion, IndeterminateBeam @interdetbeam_tool was selected as the computational beam model solver based on its validation against known beam model solutions and its capability for integration into existing numerical optimization frameworks.
