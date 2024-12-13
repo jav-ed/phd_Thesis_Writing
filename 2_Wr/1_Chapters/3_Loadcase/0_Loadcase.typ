@@ -4,18 +4,20 @@
 #pagebreak(weak:true)
 
 // Title was tested and is inshallah fine
-
 = Load Case Assessment and Filling Media Influence<chap_3_0>
 In @chap_1_0, the primary objective was to identify specific requirements for experimental structural certification tests of #gls("swith", long:true). The analysis revealed that no single standard currently exists dedicated to the certification of #glspl("swith"). Consequently, existing state-of-the-art standards were evaluated and filtered to establish essential certification requirements. These identified standards not only serve certification purposes but could also be leveraged to inform design decisions.
-
-The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
+The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. 
+In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
 To safely conduct experimental investigations, a long-term strategy was proposed for working with high-pressure hydrogen in tubes of aircraft wing dimensions. This approach advocates for a gradual progression of simulations and experiments, starting with smaller tube lengths and lower pressure values, systematically increasing both parameters as safety protocols are validated. 
 The current technical capabilities for safely handling high-pressure hydrogen in long tubes cannot adequately protect human operators, testing equipment, and the #gls("swith") itself from potential hydrogen-related incidents during experiments. Due to these safety limitations, alternative methods for conducting the certification tests must be explored.
 
 The primary objective of this section is to determine whether hydrogen can be substituted with an alternative filling agent without substantially altering the structural properties that would invalidate test results. 
-To address this question, the most critical load cases will be examined in @chap_3_0_0. These findings will inform the central question addressed in @chap_3_0_1 to @chap_3_0_3: Can hydrogen be replaced with an alternative medium in the tanks without significantly affecting the structural properties during experimental structural investigation?
-Finally, in @chap_3_0_4, practical methods for introducing physical loads during experimental tests are evaluated against selected criteria. The insights gained from this evaluation establish the foundation for the aerodynamic load discretization and optimization methodology developed in @chap_4_0.
-
+To address this question, the most critical load cases will be examined in @chap_3_0_0. 
+@chap_3_0_1 presents experimental studies comparing the behavior of liquid and gas-filled pressure vessels. Based on these findings, critical curvature is introduced as a key metric for assessing filling media impact.
+The investigation of filling media begins with three-dimensional modeling in @chap_3_0_2. 
+To make the complex structural responses more interpretable, @chap_3_0_3 introduces a simplified two-dimensional representation.
+Through systematic averaging procedures, this approach transforms intricate structural behaviors into clear, meaningful results.
+Finally, @chap_3_0_4 examines the implementation of physical loads during experimental tests using defined criteria. These findings lay the groundwork for the aerodynamic load discretization and optimization framework presented in @chap_4_0.
 
 
 // Title was tested and is inshallah fine

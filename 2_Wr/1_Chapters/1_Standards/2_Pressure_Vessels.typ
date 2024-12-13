@@ -2,7 +2,8 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-== Hydrogen Pressure Vessels <chap_1_0_3>
+// Title was checked and is fine - inshallah
+== Classification and Analysis of Hydrogen Pressure Vessels <chap_1_0_3>
 
 Besides aviation, according to @chap_1_0_1, one of the other main domains into which #glspl("swith") can be divided is the domain of pressure vessels. Following this, this subsection will first provide general basics about pressure tanks. 
 Then, an in-depth investigation into the different available tank types shall be presented. 

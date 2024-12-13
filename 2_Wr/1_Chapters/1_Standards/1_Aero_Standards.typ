@@ -4,8 +4,8 @@
 
 
 
-
-== Aviation Standards <chap_1_0_2>
+// Title was checked and is fine - inshallah
+== Aviation Certification Standards <chap_1_0_2>
 The preceding @chap_1_0_1 elaborated on the general importance of standards and their particular significance in the context of #gls("swith", long:true).
 It highlighted the current absence of a single standard that could support the design of #gls("swith", long:true) or guide the design and conduct of structural validation tests. 
 Due to the lack of established rules for structural validation, no authority can currently grant certification for flying with a #gls("swith"). 
@@ -164,7 +164,7 @@ Given the special requirements of #glspl("swith"), which according to the curren
 In conclusion, there are currently available standards that, in theory, could be applied to #gls("swith")-certification. However, with simple argumentation concerning the high-pressure and much larger scale of the tanks, authorities can deny the application of current available standards for the certification of #glspl("swith").
 Driven by this reasoning, two standards for hydrogen-powered general aviation have been announced: @SAE_Liquid and @SAE_Gas. At present, they are not commercially available. However, even upon their release, there is no guarantee that they can be applied to #glspl("swith"). 
 Firstly, it is unknown whether these SAE standards will be limited to non-integral, non-external, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated hydrogen tanks. Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
- Secondly, these standards, in their current form, might not be accepted in Europe without modifications.
+Secondly, these standards, in their current form, might not be accepted in Europe without modifications.
 
 Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS7373 @SAE_Liquid, a standard for liquid hydrogen in aviation. 
 However, as of late 2024, five years after its initiation, this development is still ongoing. This extended timeline suggests that transferring existing space standards to general aviation is not straightforward and requires substantial time and effort.
