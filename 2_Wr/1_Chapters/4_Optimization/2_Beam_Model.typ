@@ -10,12 +10,12 @@
 
 
 // Title was tested and is inshallah fine
-== Beam Modeling Fundamentals <chap_4_0_2>
+== Beam Modeling Fundamentals <chap_4_2>
 
-The previous @chap_4_0_1 explained how aerodynamic loads are obtained and what steps are required to convert them into a suitable input format for k-means++ during the initial step of #gls("ld", long:true). 
+The previous @chap_4_1 explained how aerodynamic loads are obtained and what steps are required to convert them into a suitable input format for k-means++ during the initial step of #gls("ld", long:true). 
 It was also mentioned that the one-dimensional representation of the resulting partial forces $F_(a,i,j)$ enables the integration of one-dimensional beam models within optimization frameworks. 
 This section provides a mathematical description of beam modelling. It addresses fundamental questions about its definition, application, and computational implementation.
-The examination of optimization fundamentals follows in @chap_4_0_3. Subsequently, @chap_4_0_4 analyzes the incorporation of beam models within optimization frameworks and assesses their advantages and limitations compared to alternative approaches.
+The examination of optimization fundamentals follows in @chap_4_3. Subsequently, @chap_4_4 analyzes the incorporation of beam models within optimization frameworks and assesses their advantages and limitations compared to alternative approaches.
 
 // -------------------------------------------------------------------------- //
 In many engineering programs, beam model analysis is taught within the framework of technical mechanics @Spura2019 @Gross2019 @Gross2021b @Gross2017 @Gross2021 @Rossow_2014. The approach represents an efficient method that integrates fundamental principles of physics and mathematics. The analysis begins with a simplified geometric representation of physical objects, where forces are applied at their respective positions. Following this simplification, equilibrium conditions are determined.

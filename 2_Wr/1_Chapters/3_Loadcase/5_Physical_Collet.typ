@@ -216,7 +216,7 @@ Load discretization analysis yields critical methods for finding other key varia
 + Minimum and maximum spacing requirements
 + Force magnitude and directional parameters
 
-@chap_4_0 presents a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
+@chap_4 presents a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
 The required quantity of #glspl("lie") directly impacts cost considerations. Additionally, spacing requirements influence both the feasibility of attachment methods and the availability of unobstructed areas. These clear areas are potentially beneficial for visual strain measurements and structural monitoring.
 This quantitative foundation, coupled with the qualitative evaluation criteria, provides a comprehensive basis for informed #gls("lie") selection tailored to specific project requirements.
 
@@ -229,6 +229,6 @@ The assessment results were presented through detailed analytical considerations
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This illustrates both the systematic approach and inherent complexity of the assessment process.
 The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. These critical parameters require systematic determination through load approximation analysis.
-This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4_0.
+This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4.
 
 ])

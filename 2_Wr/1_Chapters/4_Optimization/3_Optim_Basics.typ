@@ -12,8 +12,8 @@
 // potentially hihg number of word repetitions
 
 // Title was tested and is inshallah fine
-== Optimization Fundamentals <chap_4_0_3>
-In the previous @chap_4_0_2, fundamental principles of the beam modelling were presented, including elaborations on internal force distributions, which will be relevant for optimization as shown in @chap_4_0_4 and @chap_5_0 to @chap_5_3. 
+== Optimization Fundamentals <chap_4_3>
+In the previous @chap_4_2, fundamental principles of the beam modelling were presented, including elaborations on internal force distributions, which will be relevant for optimization as shown in @chap_4_4 and @chap_4_5_0 to @chap_4_5_3. 
 However, before exploring the integration of beam models within an optimization framework, it is essential to establish a thorough understanding of optimization fundamentals.
 This section introduces key optimization concepts and terminology, utilizing one concrete practical example to enhance their comprehension beyond purely theoretical definitions and demonstrate their practical implementation.
 
@@ -144,7 +144,7 @@ In such instances, the variable can be decoupled by removing it from the discipl
 
 // ------------------------------ objective fcn ----------------------------- //
 To illustrate the practical aspects of optimization, it is valuable to walk through a concrete example. 
-This demonstration is helpful for understanding the optimization framework presented in @chap_4_0_4 and the results outlined in @chap_5_0 through @chap_5_3. 
+This demonstration is helpful for understanding the optimization framework presented in @chap_4_4 and the results outlined in @chap_4_5_0 through @chap_4_5_3. 
 For this example, consider an aircraft design optimization with the objective of reducing fuel consumption. 
 This seemingly straightforward goal demonstrates how a real-world engineering objective transforms into a demanding optimization problem. 
 The formulation requires integration of multiple physical models. Among them, accurate aerodynamic analysis necessitates the Navier-Stokes equations from fluid mechanics @Sigloch2022, while structural mechanics equations determine mass properties.
@@ -193,7 +193,7 @@ However, their primary limitation relates to computational efficiency, as their 
 
 // -------------------------------------------------------------------------- //
 
-Finally, having addressed multidisciplinary optimization, it is pertinent to acknowledge the concept of multi-objective optimization. While optimization theory encompasses numerous additional concepts and methodologies, this section focuses on selected aspects that provide the necessary foundation for understanding the optimization framework presented in @chap_4_0_4 and its subsequent results in @chap_5_0 to @chap_5_3.
+Finally, having addressed multidisciplinary optimization, it is pertinent to acknowledge the concept of multi-objective optimization. While optimization theory encompasses numerous additional concepts and methodologies, this section focuses on selected aspects that provide the necessary foundation for understanding the optimization framework presented in @chap_4_4 and its subsequent results in @chap_4_5_0 to @chap_4_5_3.
 Multi-objective optimization addresses scenarios where multiple objectives require simultaneous consideration. 
 These objectives may exhibit various relationships: they might be physically correlated, partially aligned, or contradicting. 
 In aircraft design, for instance, two distinct objectives might include maximum range and payload capacity, where increasing one inherently reduces the other due to fundamental physical constraints. 

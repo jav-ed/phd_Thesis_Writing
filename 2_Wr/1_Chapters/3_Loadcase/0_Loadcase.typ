@@ -4,26 +4,26 @@
 #pagebreak(weak:true)
 
 // Title was tested and is inshallah fine
-= Load Case Assessment and Filling Media Influence<chap_3_0>
+= Load Case Assessment and Filling Media Influence<chap_3>
 In @chap_1, the primary objective was to identify specific requirements for experimental structural certification tests of #gls("swith", long:true). The analysis revealed that no single standard currently exists dedicated to the certification of #glspl("swith"). Consequently, existing state-of-the-art standards were evaluated and filtered to establish essential certification requirements. These identified standards not only serve certification purposes but could also be leveraged to inform design decisions.
-The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2_0. 
-In @chap_2_0_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
+The evaluation of these standards indicated varying flexibility regarding tank filling agents. While some testing protocols permitted the substitution of hydrogen with alternative filling agents, others mandated the use of hydrogen. For practical applications involving hydrogen, a thorough understanding of its properties is essential. These properties were extensively elaborated in @chap_2. 
+In @chap_2_2, it was established that while hydrogen can be utilized in experimental settings, its direct application in long tubes under high pressure, as typically required for #glspl("swith"), presents significant challenges.
 To safely conduct experimental investigations, a long-term strategy was proposed for working with high-pressure hydrogen in tubes of aircraft wing dimensions. This approach advocates for a gradual progression of simulations and experiments, starting with smaller tube lengths and lower pressure values, systematically increasing both parameters as safety protocols are validated. 
 The current technical capabilities for safely handling high-pressure hydrogen in long tubes cannot adequately protect human operators, testing equipment, and the #gls("swith") itself from potential hydrogen-related incidents during experiments. Due to these safety limitations, alternative methods for conducting the certification tests must be explored.
 
 The primary objective of this chapter is to determine whether hydrogen can be substituted with an alternative filling agent without substantially altering the structural properties that would invalidate test results. 
-To address this question, the most critical load cases will be examined in @chap_3_0_0. 
-@chap_3_0_1 presents experimental studies comparing the behavior of liquid and gas-filled pressure vessels. Based on these findings, critical curvature is introduced as a key metric for assessing filling media impact.
-The investigation of filling media begins with three-dimensional modeling in @chap_3_0_2. 
-To make the complex structural responses more interpretable, @chap_3_0_3 introduces a simplified two-dimensional representation.
+To address this question, the most critical load cases will be examined in @chap_3_0. 
+@chap_3_1 presents experimental studies comparing the behavior of liquid and gas-filled pressure vessels. Based on these findings, critical curvature is introduced as a key metric for assessing filling media impact.
+The investigation of filling media begins with three-dimensional modeling in @chap_3_2. 
+To make the complex structural responses more interpretable, @chap_3_3 introduces a simplified two-dimensional representation.
 Through systematic averaging procedures, this approach transforms intricate structural behaviors into clear, meaningful results.
-Finally, @chap_3_0_4 examines the implementation of physical loads during experimental tests using defined criteria. These findings lay the groundwork for the aerodynamic load discretization and optimization framework presented in @chap_4_0.
+Finally, @chap_3_4 examines the implementation of physical loads during experimental tests using defined criteria. These findings lay the groundwork for the aerodynamic load discretization and optimization framework presented in @chap_4.
 
 
 // Title was tested and is inshallah fine
 // word repetition task inshallah completed
-== Study of Critical Load Cases<chap_3_0_0>
-Findings from @chap_2_0_1 and @chap_2_0_2 demonstrate that conducting experimental structural tests with hydrogen in long tubes under high pressure presents severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
+== Study of Critical Load Cases<chap_3_0>
+Findings from @chap_2_1 and @chap_2_2 demonstrate that conducting experimental structural tests with hydrogen in long tubes under high pressure presents severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
 To address this question, it is first necessary to establish the primary prerequisite: identifying concrete load cases for analysis. Thus, this section focuses on identifying critical load cases and explains why testing all potential load cases, either experimentally or through simulation, is not feasible. Based on these constraints, an alternative methodological approach is presented and justified. It is demonstrated how one crucial load case can be filtered from the many available scenarios. Additionally, an introduction to the V-n diagram is provided to establish the relationship between the primary critical load case and the flight envelope.
 
 The identification of crucial load cases for structure-integrated hydrogen tanks presents a complex engineering challenge when designed as integral components of general aviation aircraft wings. The inherent complexity arises from the dual-nature of #glspl("swith"): these components simultaneously function as integral elements of the wing structure bearing aerodynamic loads while containing high internal pressures. This duality necessitates that each conventional load case be evaluated across a spectrum of pressure conditions, from unpressurized states through various pressure levels, substantially expanding the testing matrix.
@@ -64,7 +64,7 @@ Yet, it is important to note that the fundamental challenge lies not in solving 
 Moreover, the interpretation of such multidimensional results requires sophisticated post-processing methodologies to identify truly critical load cases, as the interaction between different physical phenomena may lead to non-obvious failure modes. 
 
 To give some perspective on why load case simulations for #gls("swith") are complex and multidisciplinary, @tab_12 and @tab_13 provide relevant examples. The diverse expertise required becomes evident when comparing different test scenarios. For instance, simulating a gunfire test demands fundamentally different capabilities than those needed for a pneumatic cycle test or a glass transition temperature test.
-The reasons for inclusion of pressurized cylinder tests for #glspl("swith") were elaborated in @chap_1_0_6. Since this thesis focuses on #glspl("swith") using #gls("cgh2", long:true), it is reasonable to anticipate that some or all tests required for pressurized cylinders may also be applicable to high-pressure vessels when integrated as load-bearing components within an aircraft's wing. Additionally, aircraft standards such as @EASA_CS_23 and @EASA_CS_25 outline numerous potential load cases requiring consideration.
+The reasons for inclusion of pressurized cylinder tests for #glspl("swith") were elaborated in @chap_1_5. Since this thesis focuses on #glspl("swith") using #gls("cgh2", long:true), it is reasonable to anticipate that some or all tests required for pressurized cylinders may also be applicable to high-pressure vessels when integrated as load-bearing components within an aircraft's wing. Additionally, aircraft standards such as @EASA_CS_23 and @EASA_CS_25 outline numerous potential load cases requiring consideration.
 
 
 // --------------------------- general load cases --------------------------- //
@@ -134,14 +134,14 @@ Aircraft certification authorities require five static load cases for static str
 Once a suitable setup is established, which is covered in 
 // TODO - reference
 // refernce that goes to the optimiaztion, where it is clear which lenght, distance, amount and so on for collets it required
-// @chap_4_0, 
+// @chap_4, 
 the loads can be gradually increased from calibration to limit to ultimate to rupture test.
 
 While the static load testing sequence provides a framework for structural validation, for #glspl("swith") these tests must also account for internal pressure effects. 
 As elaborated in @chap_1_2, the internal pressure significantly influences the weight, costs, and safety characteristics of the pressure vessel.
-The implications of pressure selection can be analyzed from multiple perspectives. From an economic standpoint, higher pressure values enable increased hydrogen storage capacity. From a structural perspective, elevated pressure values intensify the loads on both the pressure vessel and the wing structure due to the structural integration. The safety implications, as elaborated in @chap_2_0_1 and @chap_2_0_2, indicate that higher pressure values increase the risk of self-ignition in case of leakage. From a practical testing perspective, as explained in @chap_1_0_6 with reference to @tab_14, experimental structural validation tests are constrained by maximum allowable pressure limits.
-Furthermore, @chap_2_0_2 established a systematic pathway for conducting structural validation tests with #glspl("swith"). Determining appropriate internal pressure values when using #gls("cgh2") as the filling agent presents significant challenges, with substantial implications for the safety of the #gls("swith"), the test environment, and human operators. 
-In @chap_3_0_1 to @chap_3_0_3 it is laid out whether the filling agent can be replaced with another medium without changing the structural properties. These findings should be used to make a more sophisticated decision.
+The implications of pressure selection can be analyzed from multiple perspectives. From an economic standpoint, higher pressure values enable increased hydrogen storage capacity. From a structural perspective, elevated pressure values intensify the loads on both the pressure vessel and the wing structure due to the structural integration. The safety implications, as elaborated in @chap_2_1 and @chap_2_2, indicate that higher pressure values increase the risk of self-ignition in case of leakage. From a practical testing perspective, as explained in @chap_1_5 with reference to @tab_14, experimental structural validation tests are constrained by maximum allowable pressure limits.
+Furthermore, @chap_2_2 established a systematic pathway for conducting structural validation tests with #glspl("swith"). Determining appropriate internal pressure values when using #gls("cgh2") as the filling agent presents significant challenges, with substantial implications for the safety of the #gls("swith"), the test environment, and human operators. 
+In @chap_3_1 to @chap_3_3 it is laid out whether the filling agent can be replaced with another medium without changing the structural properties. These findings should be used to make a more sophisticated decision.
 
 // ------------------------------- v-n-diagram ------------------------------ //
 Having established the critical nature of vertical gust loading for #glspl("swith"), it is essential to understand how these loads are determined in aircraft design. Vertical gust loads can be systematically obtained and analyzed through V-n diagrams, also known as flight envelopes or V-g diagrams. 

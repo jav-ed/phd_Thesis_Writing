@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Title was tested and is inshallah fine 
-=== Optimization Case D <chap_5_3>
+=== Optimization Case D <chap_4_5_3>
 // talk about overlappting collets and how this issues was resolved
 // case L,M,N,O
 // D 50%
@@ -11,7 +11,7 @@
 // D 71%
 // D 75%
 
-In optimization Case B (@chap_5_1), the #glspl("lie") were positioned in close proximity to one another, utilizing nearly the entire tube-wing length. The subsequent optimization Case C (@chap_5_2) introduced a prohibited domain. However, since this constraint did not address the spacing between #glspl("lie"), they maintained their tight spatial arrangement.
+In optimization Case B (@chap_4_5_1), the #glspl("lie") were positioned in close proximity to one another, utilizing nearly the entire tube-wing length. The subsequent optimization Case C (@chap_4_5_2) introduced a prohibited domain. However, since this constraint did not address the spacing between #glspl("lie"), they maintained their tight spatial arrangement.
 For optimization Case D, the problem definition has been modified to incorporate a designated free wing-tube length. As the constraints become more restrictive, the objective function typically exhibits higher values. To mitigate this effect, the forces applied to the #glspl("lie") have been incorporated as additional design variables. The complete mathematical formulation of this optimization problem is presented in @eq_117.
 
 $
@@ -40,7 +40,7 @@ $<eq_118>
 With the design variables established, attention can be directed to the second constraint in @eq_117. This constraint has been modified by incorporating the term $x_(s,2)$. 
 By adding the term $x_(s,2)$, which represents the position of the second support point, it is ensured that #glspl("lie") cannot be placed in the region left of the second support position. 
 The underlying beam model remains consistent with that used in optimization Cases B and C, as illustrated in @fig_84. In the third constraint of @eq_117, the variable $beta$ serves as a factor that determines what proportion of the tube-wing length may be utilized for #glspl("lie") placement.
-Regarding the force design variables $x_(F,i)$, bounds have been implemented where $F_(r,i)$ represents the resultant force when force members within a cluster are summed, as detailed in @chap_4_0_0. 
+Regarding the force design variables $x_(F,i)$, bounds have been implemented where $F_(r,i)$ represents the resultant force when force members within a cluster are summed, as detailed in @chap_4_0. 
 The lower force factor $gamma_l$ and upper force factor $gamma_u$ can be applied to the resultant force to constrain its possible values.
 
 // ---------------------------------- scipy --------------------------------- //

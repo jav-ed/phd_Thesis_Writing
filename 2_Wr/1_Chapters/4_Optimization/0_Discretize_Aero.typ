@@ -10,28 +10,28 @@
 // compared with true german text
 
 
-= Structural Testing Optimization Framework<chap_4_0>
-The critical load case for an experimental structural static test was identified in @chap_3_0_0. 
-The question whether hydrogen can be replaced by other filling agents was addressed through the curvature study presented in @chap_3_0_1 to @chap_3_0_3.
-Subsequently, @chap_3_0_4 details the physical objects required to exert forces on the wing of a #gls("swith", long:true).
-As established in @chap_3_0_4, selecting an appropriate #gls("lie") or a combination of them requires additional information.
+= Structural Testing Optimization Framework<chap_4>
+The critical load case for an experimental structural static test was identified in @chap_3_0. 
+The question whether hydrogen can be replaced by other filling agents was addressed through the curvature study presented in @chap_3_1 to @chap_3_3.
+Subsequently, @chap_3_4 details the physical objects required to exert forces on the wing of a #gls("swith", long:true).
+As established in @chap_3_4, selecting an appropriate #gls("lie") or a combination of them requires additional information.
 To obtain this information, an optimization framework is developed.
-Initially, @chap_4_0_0 describes how force distributions can be discretized.
-@chap_4_0_1 then explains how aerodynamic forces can be obtained and incorporated into the method selected in @chap_4_0_0.
-Since the optimization framework needs to work with structural information, essential beam model background is provided in @chap_4_0_2.
-Similarly, fundamental knowledge about optimization is presented in @chap_4_0_3.
+Initially, @chap_4_0 describes how force distributions can be discretized.
+@chap_4_1 then explains how aerodynamic forces can be obtained and incorporated into the method selected in @chap_4_0.
+Since the optimization framework needs to work with structural information, essential beam model background is provided in @chap_4_2.
+Similarly, fundamental knowledge about optimization is presented in @chap_4_3.
 As optimization is a vast topic, only selected information relevant to understanding the optimization framework is included.
-The integration of beam modeling within the optimization framework is presented in @chap_4_0_4.
+The integration of beam modeling within the optimization framework is presented in @chap_4_4.
 The latter section also provides justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
 The optimization framework is then applied to obtain multiple solutions.
 These solutions reflect real-world efforts undertaken for static experimental structural validation testing.
-The modeling rationale and results are presented in @chap_5_0 to @chap_5_3.
+The modeling rationale and results are presented in @chap_4_5_0 to @chap_4_5_3.
 
 
 // Title was tested and is inshallah fine
-== Discretization of Aerodynamic Loads <chap_4_0_0>
+== Discretization of Aerodynamic Loads <chap_4_0>
 
-In the previous @chap_3_0_4, #gls("lie", long:true) was introduced as a method for approximating aerodynamic loads in structural testing. Further investigation has identified key parameters that determine the effectiveness of #gls("lie") configurations, including their quantity, dimensional specifications, and the anticipated load magnitudes. These parameters require systematic determination through comprehensive load approximation 
+In the previous @chap_3_4, #gls("lie", long:true) was introduced as a method for approximating aerodynamic loads in structural testing. Further investigation has identified key parameters that determine the effectiveness of #gls("lie") configurations, including their quantity, dimensional specifications, and the anticipated load magnitudes. These parameters require systematic determination through comprehensive load approximation 
 // analysis overused
 analysis.
 The development of a structural testing methodology for both conventional aircraft and #gls("swith") necessitates the transformation of continuous aerodynamic loads into physically applicable discrete forces. This transformation presents a fundamental challenge in experimental mechanics: how to appropriately represent a continuous load distribution through a finite number of discrete load application points while maintaining the essential characteristics of the original distribution.
@@ -41,10 +41,10 @@ This method's capabilities and limitations are then examined in detail, followed
 
 // -------------------------------------------------------------------------- //
 According to current physical understanding, an aircraft in flight experiences load at every infinitesimally small point. This load is considered continuous - between any two points A and B on the aircraft's surface, it is impossible to find an infinitesimally small point where no force acts. Throughout this analysis, unless explicitly stated otherwise, the term #emp_[load] refers to aerodynamic load.
-As established in @chap_3_0_4, several methods exist for approximating these aerodynamic loads in experimental setups. For the structural testing of #gls("swith"), a ground-based experimental setup without a wind tunnel was selected. This approach necessitates #glspl("lie") attached locally to the wing skin to serve as physical interfaces for load application. The goal is to position and configure these #glspl("lie") such that their combined load distribution closely approximates the original aerodynamic loading profile.
+As established in @chap_3_4, several methods exist for approximating these aerodynamic loads in experimental setups. For the structural testing of #gls("swith"), a ground-based experimental setup without a wind tunnel was selected. This approach necessitates #glspl("lie") attached locally to the wing skin to serve as physical interfaces for load application. The goal is to position and configure these #glspl("lie") such that their combined load distribution closely approximates the original aerodynamic loading profile.
 #gls("ld") can thus be defined as: The approximation of a continuous force distribution through discrete point and area loads.
 
-The application of #glspl("lie") to approximate continuous aerodynamic loading represents an optimization problem, with key parameters previously outlined in @chap_3_0_4. These parameters encompass the quantity of #glspl("lie"), their spatial positioning, dimensional specifications, load magnitudes, and inter-element spacing requirements.
+The application of #glspl("lie") to approximate continuous aerodynamic loading represents an optimization problem, with key parameters previously outlined in @chap_3_4. These parameters encompass the quantity of #glspl("lie"), their spatial positioning, dimensional specifications, load magnitudes, and inter-element spacing requirements.
 The optimization approach offers benefits beyond merely determining these parameters. From an economic and environmental perspective, optimization enables the identification of the minimum necessary number of #glspl("lie") while maintaining required accuracy. 
 Consider a hypothetical $60 #unit("m")$ wing design case. When using electrically driven cylinders for load application, initial configurations might require 46 cylinders. Through optimization, this number could potentially be reduced to 23 cylinders while maintaining comparable accuracy. Such reduction yields substantial benefits in electrical consumption, personnel requirements, procurement costs, and logistics overhead.
 The integration of #gls("ld") with optimization establishes a systematic, mathematics-based engineering approach. This methodology ensures appropriate load accuracy while minimizing both the number of required #glspl("lie") and associated resources. The benefits extend to simplified safety protocols and reduced control system complexity.
@@ -105,7 +105,7 @@ This comparative behavior is illustrated in @fig_60, where both models demonstra
 
 // -------------------------------------------------------------------------- //
 While model accuracy is paramount, computational efficiency warrants consideration in the implementation of regression and optimization methods. The relationship between model complexity and computational requirements has evolved significantly with modern hardware capabilities. For instance, a model with 2 parameters versus 100 parameters may exhibit substantial differences in extrapolation accuracy, yet the computational overhead for such parameter ranges is negligible on contemporary hardware architectures.
-Contemporary computational workflows increasingly utilize #gls("gpu") rather than traditional #gls("cpu") processing, leveraging the parallel processing capabilities of graphics hardware as previously mentioned in @chap_3_0. This architectural shift has dramatically expanded the feasible parameter space for optimization problems. 
+Contemporary computational workflows increasingly utilize #gls("gpu") rather than traditional #gls("cpu") processing, leveraging the parallel processing capabilities of graphics hardware as previously mentioned in @chap_3. This architectural shift has dramatically expanded the feasible parameter space for optimization problems. 
 To contextualize the scale of modern computational capabilities, it is instructive to consider recent developments in #gls("llm", long:true). Current #gls("llm") implementations routinely employ $7 times 10^9$ parameters @Li2023 @Jiang2023 @Touvron2023a @Touvron2023, with larger architectures extending to $7 times 10^10$ parameters @Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7.
 A comprehensive review of model parameter scaling is provided in @Minaee2024, with even #emp_[tiny] language models utilizing approximately $1 times 10^9$ parameters @Zhang2024
 // -------------------------------------------------------------------------- //
@@ -307,7 +307,7 @@ This dimensional consideration assumes particular significance in contexts requi
 To illustrate this limitation, consider a pressure testing scenario where internal pressure requires incremental increase from $10 #unit("MPa")$ to $60 #unit("MPa")$. During this process, the ability to visually detect potential structural anomalies or damage becomes critical. Excessive #glspl("lie") coverage would significantly compromise this essential monitoring capability.
 
 Consequently, while k-means++ provides valuable initial parameters, these values are best utilized as starting points for subsequent optimization processes that can incorporate additional practical constraints and testing requirements. 
-The integration of k-means++ with a comprehensive optimization framework is examined in detail in @chap_5_0 to @chap_5_3.
+The integration of k-means++ with a comprehensive optimization framework is examined in detail in @chap_4_5_0 to @chap_4_5_3.
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
@@ -315,5 +315,5 @@ This section established the fundamental concepts and methodologies for #gls("ld
 
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
-However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_5_0 to @chap_5_3, provides a pathway for addressing these remaining challenges while maintaining the advantages of the clustering approach.
+However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provides a pathway for addressing these remaining challenges while maintaining the advantages of the clustering approach.
 ])

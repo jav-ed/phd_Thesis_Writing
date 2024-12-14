@@ -4,7 +4,7 @@
 
 
 // Title was tested and is inshallah fine 
-=== Optimization Case B <chap_5_1>
+=== Optimization Case B <chap_4_5_1>
 // word approach is used many times here
 
 // ------------------------------- beam model ------------------------------- //
@@ -188,10 +188,10 @@ bold(r)\
 
 $ <eq_116>
 
-As established in optimization case A (@chap_5_0), the optimization results are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve  high-quality approximations of both shear force and bending moment distributions.
+As established in optimization case A (@chap_4_5_0), the optimization results are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve  high-quality approximations of both shear force and bending moment distributions.
 For clarity in @fig_86, the force text annotations for the 8 #glspl("lie") configuration are deliberately positioned with alternating vertical offsets. This arrangement was necessary to prevent textual overlap between adjacent annotations. The visualization maintains consistent scaling across all subplots to enable direct comparisons between different configurations. The color-coded text scheme aids in distinguishing individual force components.
 The results demonstrate that the #glspl("lie") positions satisfy the constraint that prohibits overlapping between individual #glspl("lie"). The optimizer utilized the entire available inner wing length for #gls("lie") placement, identifying this as the optimal design configuration.
-While this optimization definition proves suitable for scenarios without restrictions on #gls("lie") placement within the wing-tube section, applications requiring optical measurement devices necessitate specific regions to remain free of #glspl("lie"). This consideration is addressed in optimization case D, presented in @chap_5_3.
+While this optimization definition proves suitable for scenarios without restrictions on #gls("lie") placement within the wing-tube section, applications requiring optical measurement devices necessitate specific regions to remain free of #glspl("lie"). This consideration is addressed in optimization case D, presented in @chap_4_5_3.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/int_Forc_4.svg", 
@@ -205,7 +205,7 @@ While this optimization definition proves suitable for scenarios without restric
   caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case B with eight #glspl("lie").],
 )<fig_86>
 
-The influence of varying #gls("lie") quantities on optimization performance is illustrated in @fig_87. In alignment with the findings from optimization case A (@chap_5_0), increasing the number of #glspl("lie") leads to a reduction in the objective function value, resulting in improved load approximation accuracy. While optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to reach the optimal solution.
+The influence of varying #gls("lie") quantities on optimization performance is illustrated in @fig_87. In alignment with the findings from optimization case A (@chap_4_5_0), increasing the number of #glspl("lie") leads to a reduction in the objective function value, resulting in improved load approximation accuracy. While optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to reach the optimal solution.
 
 // optimiaztion progress
 #figure(

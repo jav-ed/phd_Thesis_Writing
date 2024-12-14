@@ -5,7 +5,7 @@
 
 
 // Title was tested and is inshallah fine 
-== Optimization-Based Load Discretization for Structural Testing <chap_5>
+== Optimization-Based Load Discretization for Structural Testing <chap_4_5>
 
 This section presents research outcomes focused on utilizing numerical optimization to discretize aerodynamic loads. The optimization framework provides solutions to crucial engineering questions, including the determination of optimal #gls("lie") quantities, force magnitudes, lengths, and precise positioning. Materialforschung und Anwendungstechnik GmbH Dresden (IMA) was consulted to incorporate real-world engineering considerations relevant for potential #gls("swith") certification processes. Through systematic analysis, these practical requirements were translated into mathematical optimization problems. The optimization formulations are presented, explained, solved, and interpreted with respect to their performance.
 
@@ -15,9 +15,9 @@ The progressive refinement of constraints through expert consultation serves mul
 It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
 // Title was tested and is inshallah fine 
-=== Optimization Case A <chap_5_0>
-Optimization case A represents the first application of the theoretical foundations established in @chap_4_0_0 to @chap_4_0_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
-By solving this optimization problem, critical questions posed in @chap_4_0_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
+=== Optimization Case A <chap_4_5_0>
+Optimization case A represents the first application of the theoretical foundations established in @chap_4_0 to @chap_4_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
+By solving this optimization problem, critical questions posed in @chap_4_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
 As this case serves as the foundation for subsequent optimization scenarios, the mathematical formulation and its implications are explained in detail. The mathematical formulation of optimization case A is given in @eq_107.
 
 
@@ -36,7 +36,7 @@ J_A = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n_s \
 & 0.03 "ha" <= x_("cl",i) <= "ha"/n_"cl"
 $<eq_107>
 
-The first equation in @eq_107 defines the general objective function, previously explained in @chap_4_0_4. The subscript #emp_[A] added to the objective function $J$ establishes a clear link to optimization case A. The design variables are denoted as vector $bold(x)_d$.
+The first equation in @eq_107 defines the general objective function, previously explained in @chap_4_4. The subscript #emp_[A] added to the objective function $J$ establishes a clear link to optimization case A. The design variables are denoted as vector $bold(x)_d$.
 
 While the objective function includes bending moments, their explicit dependency on the design variables is not shown in the equation. 
 This simplified notation was chosen because bending moments depend on multiple parameters, including support type and position, acting forces, and beam length.
@@ -45,7 +45,7 @@ To maintain equation clarity and conciseness, these dependencies are acknowledge
 For optimization case A, the design variable vector consists solely of the collet lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$). 
 The constraints that follow in the "subject to" portion are formatted with design variables on the left side of the inequality ($<=$ non-design variable parameters), a convention that facilitates implementation in optimization frameworks such as SciPy.
 
-It should be noted that the positions $x_i$ are not design variables but rather represent the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0_0 and @chap_4_0_1. These centroid locations physically correspond to the centers of the #glspl("lie").
+It should be noted that the positions $x_i$ are not design variables but rather represent the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0 and @chap_4_1. These centroid locations physically correspond to the centers of the #glspl("lie").
 
 The first constraint ensures that #glspl("lie") remain within the considered beam length, where ha denotes the half-span length. This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
 For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint requires the sum of the centroid position and the collet length to remain within the halfspan length.
@@ -215,7 +215,7 @@ $ <eq_112>
 // ------------------------------- beam model ------------------------------- //
 @fig_80 presents the fundamental beam model configuration and its analytical solution, which serves as the reference for optimization. The figure consists of four key elements arranged in rows, each providing essential information for the analysis.
 In the first row, the beam schematic illustrates the support configuration and loading conditions. The beam's left end features a fixed support (clamp), which constrains both translational and rotational degrees of freedom, enabling it to resist forces in horizontal and vertical directions while bearing bending moments. The applied loads are represented by upward-pointing arrows, corresponding to the aerodynamic lift forces that maintain the aircraft's altitude during flight.
-A notable difference between @fig_80 and @fig_70 lies in the presentation of distributed loads. While APAME generates numerous discrete load values as detailed in @chap_4_0_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to represent the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
+A notable difference between @fig_80 and @fig_70 lies in the presentation of distributed loads. While APAME generates numerous discrete load values as detailed in @chap_4_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to represent the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
@@ -229,7 +229,7 @@ This simplified representation serves multiple purposes in aerospace engineering
 The second row of @fig_80 presents the reaction forces, providing quantitative information about the resulting shear forces and bending moments at the support locations. 
 The third and fourth rows illustrate the shear force and bending moment distributions, respectively. All diagrams utilize a normalized span length, which facilitates result interpretation and comparison across different configurations.
 
-The span length selection significantly influences both the optimization process and its computational requirements. The optimization search space expands proportionally with span length, as longer spans create more possible combinations for design variable values. For instance, a normalized span length of 1 mm creates a relatively confined design space between 0 and 1, whereas actual aircraft spans can be substantially larger. As referenced in @chap_1_0_6, large aircraft can have span lengths of approximately $80 "m "$ or $num("80000") "mm"$, creating a vast design space that demands increased computational resources.
+The span length selection significantly influences both the optimization process and its computational requirements. The optimization search space expands proportionally with span length, as longer spans create more possible combinations for design variable values. For instance, a normalized span length of 1 mm creates a relatively confined design space between 0 and 1, whereas actual aircraft spans can be substantially larger. As referenced in @chap_1_5, large aircraft can have span lengths of approximately $80 "m "$ or $num("80000") "mm"$, creating a vast design space that demands increased computational resources.
 Current #gls("swith") development focuses primarily on smaller aircraft, as evidenced by APUS's efforts mentioned in @chap_0_7 @APUS_0. Given this context and considering computational efficiency, this study employs a beam length corresponding to smaller aircraft dimensions. Specifically, the length was selected to match the half-span of the APUS i-2 @APUS_1, leveraging the assumption of vertical axis symmetry in wing design. 
 However note, the methodology's formulation remains scale-independent, making it applicable across various aircraft categories from small unmanned aerial vehicles to large commercial aircraft.
 // -------------------------------------------------------------------------- //
@@ -237,7 +237,7 @@ However note, the methodology's formulation remains scale-independent, making it
 Prior to presenting the optimization results, it is important to note the unit conventions employed in this analysis. The optimization calculations were performed using Newton-millimeters (Nmm) for enhanced numerical precision. While @fig_80 presents the beam model results in Nmm, subsequent optimization results are converted to Newton-meters (Nm) to align with common engineering practice.
 The optimization results are presented for configurations using four and eight #glspl("lie") in @fig_81 and @fig_82, respectively. Both figures maintain consistent visualization conventions across four rows:
 
-1. The first row compares the reference aerodynamic load distribution (blue) obtained from APAME and modified as detailed in @chap_4_0_1, with the optimized discretized load distribution (red)
+1. The first row compares the reference aerodynamic load distribution (blue) obtained from APAME and modified as detailed in @chap_4_1, with the optimized discretized load distribution (red)
 2. The second row presents the shear force distributions for both the reference model and the optimization output
 3. The third row displays the corresponding bending moment distributions
 4. The fourth row illustrates the #glspl("lie") placement through paired arrows of matching colors indicating the start and end positions of each #gls("lie"). Each pair of arrows is annotated with the normalized span position and its corresponding distributed load value.

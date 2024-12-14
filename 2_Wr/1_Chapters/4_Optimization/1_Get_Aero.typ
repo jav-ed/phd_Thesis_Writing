@@ -9,9 +9,9 @@
 // compared with true german text
 
 // Title was tested and is inshallah fine
-== Aerodynamic Load Computation and Post-Processing <chap_4_0_1>
-In @chap_3_0_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the establishment of #gls("ld", long:true) necessity. 
-The investigation continued in @chap_4_0_0, exploring various implementation possibilities for #gls("ld") and determining that these methods require integration with optimization approaches to solve remaining issues. Prior to executing #gls("ld") and its subsequent steps, it is essential to obtain the aerodynamic loads acting on the aircraft wing. This section presents a methodology for acquiring these loads through numerical simulations and details their transformation from distributed loads to discrete point loads. The transformation process holds particular significance for k-means++ implementation and demonstrates advantageous implications for the subsequent optimization framework.
+== Aerodynamic Load Computation and Post-Processing <chap_4_1>
+In @chap_3_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of a #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the establishment of #gls("ld", long:true) necessity. 
+The investigation continued in @chap_4_0, exploring various implementation possibilities for #gls("ld") and determining that these methods require integration with optimization approaches to solve remaining issues. Prior to executing #gls("ld") and its subsequent steps, it is essential to obtain the aerodynamic loads acting on the aircraft wing. This section presents a methodology for acquiring these loads through numerical simulations and details their transformation from distributed loads to discrete point loads. The transformation process holds particular significance for k-means++ implementation and demonstrates advantageous implications for the subsequent optimization framework.
 
 // -------------------------------------------------------------------------- //
 
@@ -53,7 +53,7 @@ As geometric complexity increases, the effective length over which a single resu
 // -------------------------------------------------------------------------- //
 The meshed surface of a wing, representing a complex geometry, is illustrated on the left side of @fig_68. The figure demonstrates how the mesh consists of interconnected elements. This detailed representation is crucial for understanding the transformation of distributed loads to point loads.
 The transformation process is motivated by two factors: APAME provides distributed loads according to @eq_80, while k-means++ @Arthur2006, as 
-outlined in @chap_4_0_0, requires discrete data points for the initial step of #gls("ld") of the aerodynamic load distribution. 
+outlined in @chap_4_0, requires discrete data points for the initial step of #gls("ld") of the aerodynamic load distribution. 
 Consequently, the distributed loads from @eq_80 must be converted to discrete point loads following the form of @eq_79.
 The force transformation mechanism is visualized on the right side of @fig_68, where a single element demonstrates the relationship between the distributed force $q_(a,i)$ and its resulting point load $F_(a,i)$. 
 The point load $F_(a,i)$ is depicted with a larger magnitude vector compared to the distributed force vectors $q_(a,i)$, illustrating the aggregation of the distributed load into a single point load. 
@@ -139,7 +139,7 @@ The resulting data structure can be represented as a matrix $bold(X)$, following
 $ bold(X) = bold(X)[ ("Position"), space ("Partial point loads" = F_(a,i,j))] $ <eq_85>
 
 Each partial point load is associated with a corresponding three-dimensional position vector. 
-As established in @chap_4_0_0, such three-dimensional data structures pose no challenge for k-means++, which readily handles even higher-dimensional spaces. 
+As established in @chap_4_0, such three-dimensional data structures pose no challenge for k-means++, which readily handles even higher-dimensional spaces. 
 APAME provides lift coefficients that are valid for span strips, which serve as discrete computational entities. 
 Within each strip, the lift coefficient undergoes integration over the chord length. 
 As shown in @eq_86, the representative lift coefficient for a span strip $i$, denoted as $C_("lc",i)$, is derived through the integration of the local lift coefficient $C_L$ from the leading edge (le) to the trailing edge (te). 
@@ -159,16 +159,16 @@ Given the properties of $C_("lc",i)$, the resulting partial forces $F_(a,i,j)$ e
 This transformation effectively reduces the three-dimensional aerodynamic load distribution to a one-dimensional load distribution comprising the resulting partial forces $F_(a,i,j)$. 
 This reduction provides two significant advantages. First, the resulting force points are compatible with k-means++ implementation. 
 Second, the reduced dimensionality allows the use of a one-dimensional beam model instead of the more computationally intensive #gls("fem") model within optimization frameworks.
-A dedicated examination of both the beam model and optimization methodology is presented in @chap_4_0_2 to @chap_4_0_4, followed by concrete optimization problem definitions and their solutions in @chap_5_0 to @chap_5_3.
+A dedicated examination of both the beam model and optimization methodology is presented in @chap_4_2 to @chap_4_4, followed by concrete optimization problem definitions and their solutions in @chap_4_5_0 to @chap_4_5_3.
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
-Building upon @chap_4_0_0, this section presented a methodology for obtaining and transforming three-dimensional aerodynamic loads into one-dimensional resulting point loads. 
+Building upon @chap_4_0, this section presented a methodology for obtaining and transforming three-dimensional aerodynamic loads into one-dimensional resulting point loads. 
 The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
 To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. The procedure addressed some key challenges. First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
 The implementation of a reference-length-based force discretization method proved instrumental in resolving these challenges. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
 
 The reduction of the three-dimensional load distributions to one-dimensional representations enables the use of computationally efficient beam models as alternatives to #gls("fem") analysis. 
 This simplified modeling approach proves particularly advantageous within optimization frameworks, where computational efficiency becomes crucial due to iterative model evaluations.
-The findings outlined in this section provide the essential foundation for understanding the concepts elaborated in @chap_4_0_2 to @chap_4_0_4 and their practical implementations highlighted in @chap_5_0 to @chap_5_3.
+The findings outlined in this section provide the essential foundation for understanding the concepts elaborated in @chap_4_2 to @chap_4_4 and their practical implementations highlighted in @chap_4_5_0 to @chap_4_5_3.
 ])

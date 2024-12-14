@@ -16,8 +16,8 @@
 
 
 // Title was tested and is inshallah fine
-== Integration of Structural Analysis for Optimization  <chap_4_0_4>
-In @chap_4_0_0 it was explained how to discretize load distributions, in @chap_4_0_1 how to obtain the aerodynamic loads, in @chap_4_0_2 important fundamental information about the beam model and in @chap_4_0_3 some general background about optimization was provided. 
+== Integration of Structural Analysis for Optimization  <chap_4_4>
+In @chap_4_0 it was explained how to discretize load distributions, in @chap_4_1 how to obtain the aerodynamic loads, in @chap_4_2 important fundamental information about the beam model and in @chap_4_3 some general background about optimization was provided. 
 This section builds upon the collected knowledge and explains how the beam model solver can be incorporated into an optimization framework. 
 First, it explains what goal such a constellation pursues. 
 Subsequently, an investigation comparing beam model and #gls("fem") solvers is conducted, leading to the selection of one method based on rationale. Finally, it was explained how this selection could be integrated within an optimization framework.
@@ -33,7 +33,7 @@ For example, an objective function might require two distinct #gls("fem") analys
 // -------------------------------------------------------------------------- //
 When function evaluations prove computationally efficient regarding temporal and hardware requirements, the cumulative computational burden becomes a minor consideration in the overall analysis framework. 
 However, the computational demands increase substantially when applying three dimensional structural analyses to an #gls("swith"), as the aggregation of multiple #gls("fem") calculations within the optimization process can lead to prohibitive computational costs under various circumstances.
-A second compelling reason emerges from the requirement of developing physics-informed optimization formulations, as outlined in @chap_4_0_3. The process can involve iterative refinement of multiple interconnected elements within the optimization framework. 
+A second compelling reason emerges from the requirement of developing physics-informed optimization formulations, as outlined in @chap_4_3. The process can involve iterative refinement of multiple interconnected elements within the optimization framework. 
 These elements include the selection of appropriate design variables that capture essential physical characteristics and the establishment of mathematical bounds and constraints that govern the solution space. The definition of objective functions requires careful consideration to provide meaningful performance metrics that evaluate the effectiveness of potential solutions for the specific engineering task under investigation.
 Initial optimization formulations generate preliminary results that often reveal opportunities for improving the representation of physical phenomena. However, when individual optimization cycles demand computational periods extending from one week to one month, the ability to implement and evaluate such physics-based modifications becomes severely constrained. This temporal limitation can impede the methodological refinement process, potentially affecting the quality of the final physics-informed formulation.
 
@@ -43,7 +43,7 @@ The development and implementation of beam models present notable efficiency adv
 The theoretical foundation of beam models offers distinct educational and practical benefits. The mathematical principles underlying beam theory demonstrate enhanced accessibility for practitioners new to structural analysis. 
 These fundamental concepts present reduced conceptual barriers when compared with the mathematical complexities inherent in #gls("fem") formulations. Such accessibility extends to educational settings, where students can engage effectively with structural analysis concepts through practical implementation.
 
-The computational implementation draws substantial benefit from available open source Python libraries, as documented in @chap_4_0_2. These frameworks maintain mathematical transparency while providing accessible tools for beam analysis implementation. The modest computational requirements enable analyses on standard computing hardware, eliminating dependence on specialized computational resources. This accessibility yields additional advantages, including reduced financial costs and environmental impact associated with computational resource usage. Furthermore, the relative simplicity of beam models can expedite the identification and resolution of numerical issues during development.
+The computational implementation draws substantial benefit from available open source Python libraries, as documented in @chap_4_2. These frameworks maintain mathematical transparency while providing accessible tools for beam analysis implementation. The modest computational requirements enable analyses on standard computing hardware, eliminating dependence on specialized computational resources. This accessibility yields additional advantages, including reduced financial costs and environmental impact associated with computational resource usage. Furthermore, the relative simplicity of beam models can expedite the identification and resolution of numerical issues during development.
 The computational efficiency of beam models proves particularly advantageous within optimization frameworks. The reduced calculation times become especially valuable when considering the numerous function evaluations required for optimization procedures. This temporal efficiency permits more extensive exploration of design spaces within practical time constraints, potentially enabling more comprehensive optimization studies. Such advantages become particularly relevant when considering the iterative nature of optimization processes explained previously.
 
 // -------------------------------- fem story ------------------------------- //
@@ -67,8 +67,8 @@ The beam modeling approach offers an appropriate balance between computational r
 Based on these considerations, the optimization framework implements beam model analysis as its primary computational methodology.
 
 // ------------------------- optimizer step overview ------------------------ //
-The integration of knowledge from @chap_4_0_0 to @chap_4_0_3 into an optimization framework is illustrated in @fig_77. 
-The diagram demonstrates that APAME generates the aerodynamic loads, which undergo conversion into a one-dimensional aerodynamic distributed load, as previously detailed in @chap_4_0_1. 
+The integration of knowledge from @chap_4_0 to @chap_4_3 into an optimization framework is illustrated in @fig_77. 
+The diagram demonstrates that APAME generates the aerodynamic loads, which undergo conversion into a one-dimensional aerodynamic distributed load, as previously detailed in @chap_4_1. 
 This distributed load serves as input for the beam model solver, which generates two primary outputs: the shear force distribution and bending moment distribution corresponding to the actual aerodynamic loading, denoted as $Q_"true"$ and $M_"true"$, respectively. 
 The optimization process, depicted in the lower portion of @fig_77, functions by transmitting various combinations of design variables to the beam model solver. 
 The resulting solutions yield what are termed the discrete or optimized distributions: the shear force distribution $Q_"optim"$ and the bending moment distribution $M_"optim"$.
@@ -100,8 +100,8 @@ In the context of optimization problems, lowercase bold letters denote vectors. 
 The formulation of the objective function $J$ considers only the bending moment deviation, although it would be mathematically feasible to incorporate shear force deviations. 
 This focused approach rests upon the assumption that bending moment distributions provide a more comprehensive representation of the structural behavior characteristics.
 The optimization framework exhibits adaptability through design variables, bounds, and constraints that can be modified according to project requirements.
-A detailed exposition of these optimization parameters for each investigated scenario appears in @chap_5. 
-Despite these case-specific adaptations, the fundamental form of the objective function presented in @eq_106 remains unchanged throughout all investigations documented in @chap_5.
+A detailed exposition of these optimization parameters for each investigated scenario appears in @chap_4_5. 
+Despite these case-specific adaptations, the fundamental form of the objective function presented in @eq_106 remains unchanged throughout all investigations documented in @chap_4_5.
 
 The computational implementation utilizes the differential evolution algorithm @Storn1997 @osti_1163659 @Suganthan2012 @Wong @Wang2012 through its integration in the open-source numerical computing package SciPy @Virtanen2020a. 
 This selection was motivated by several technical and practical considerations. 
@@ -112,7 +112,7 @@ A particularly relevant feature of the SciPy differential evolution implementati
 
 // --------------------------- application to lie --------------------------- //
 The optimization process yields a discretized representation of the aerodynamic loads, providing essential parameters for experimental structural testing. These parameters determine the dimensional specifications of #glspl("lie"), establish the optimal number of #glspl("lie"), and define their corresponding force magnitudes. 
-Detailed examples demonstrating these optimization results appear in @chap_5_0 to @chap_5_3.
+Detailed examples demonstrating these optimization results appear in @chap_4_5_0 to @chap_4_5_3.
 The discretized one-dimensional forces obtained through optimization prove sufficient for direct implementation in experimental testing, contingent upon the required accuracy levels and the particular #glspl("lie") selected. 
 This direct application manifests when considering, for instance, collets as the selected #glspl("lie").
 Given that collets encompass the complete airfoil profile, the force magnitude can be appropriately applied at the collet center.
