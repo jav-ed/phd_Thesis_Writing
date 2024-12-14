@@ -42,13 +42,14 @@ Subsequently, in
 // @chap_T_B_D
 the reader is introduced to the general properties of hydrogen, followed by a comprehensive exploration of potential hazards associated with its use. This exploration is substantiated by both experimental and simulation results. The work identifies key factors that can trigger risks, such as ignition and detonation, and includes methods to mitigate these situations.
 The benefit of this comprehensive exploration becomes especially evident when designing and conducting an experimental structural verification test, which can be assumed to become mandatory for the commercial certification of a #gls("swith").
-
+//
 /* --------------------------------- roadmap -------------------------------- */
 Furthermore,
 //
 // TODO
 // @chap_T_B_D
 proposes a detailed roadmap with two primary objectives:
+
 1. To enable the conduct of experimental tests on hydrogen #glspl("swith") at scales equivalent to large aircraft for their certification.
 2. To advance simulation techniques to a point where they might be able to replace most costly experimental tests while offering sufficient accuracy for #gls("swith") certification.
 
