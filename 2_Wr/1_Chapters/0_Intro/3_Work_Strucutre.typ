@@ -19,32 +19,28 @@ Although each topic represents its own specialized field, their findings build u
 investigations.
 Within each topic, careful attention is given to providing essential fundamental knowledge, ensuring that assumptions and their progression are clearly evident. 
 
-// ---------------------------------- here ---------------------------------- //
-If the assumptions are not obvious, they are justified to the best knowledge of the author. Based on these assumptions, results are obtained, presented, and interpreted within their respective chapters.
-The background for each topic is provided due to the broad range of subjects covered. 
-It is unlikely that readers will be familiar with all fundamental concepts. 
-Therefore, while some readers may find certain fundamentals redundant, others might require even more information to understand the topic.
-The topics covered within this thesis include standards, certification regulations, pressure vessel types, their properties, their applications 
-// the more refers to the pressure vessel things
-and more,
+To the best knowledge of the author, effort has been made throughout this work to identify situations where assumptions might not be immediately evident to readers. When such instances were recognized, the author attempted to provide appropriate justification to support scientific transparency and enhance reader comprehension.
+These documented assumptions serve as the foundation upon which results are derived, presented, and interpreted within their respective chapters.
 
-// now more topics,
-hydrogen tank applications in mobility industries including aviation and automotive industry, general hydrogen properties, safety relevant properties, experiments and simulations
-// more topics are
-finding critical load cases for aircraft certification, impact of filling agents, whether filling agents can be replaced for structural experiments, methods to physically introduce loads, load discretization, beam modeling and optimization. 
+The decision to provide background information for each topic stems from the broad scope of the research. Given the diversity of subjects covered, readers cannot reasonably be expected to possess comprehensive knowledge of all fundamental aspects. 
+Readers with expertise in structural engineering will likely find the beam modeling background provided in @chap_4_0_2 familiar from their prior education and experience. Similarly, those well-versed in numerical optimization will recognize the fundamental principles presented in @chap_4_0_3 from their existing knowledge base.
+Conversely, readers from other disciplines might require additional theoretical foundations beyond what these chapters provide.
+The research encompasses various interconnected subjects, including:
 
-// if required we can mention again that the things above were mentioned
++ Standards and certification regulations
++ Pressure vessel types, properties, and applications
++ Hydrogen tank applications in mobility sectors, spanning aviation and automotive industries
++ Fundamental hydrogen properties and characteristics
++ Safety considerations for hydrogen systems, supported by experimental investigations and numerical simulations
++ Critical load case analysis for aircraft certification
++ Impact of filling agents on structural behavior
++ Feasibility assessment of hydrogen substitution in structural testing
++ Methodologies for physical load introduction and discretization
++ Beam modeling and optimization 
 
 // -------------------------------------------------------------------------- //
-// the idea is to express that initally we provide only a bit of knowledge such that the upcoming secitons that are initally non technical that they can be understood without having to understand the details. 
-A brief introduciton into #glspl("swith") is given in @chap_0_1, to ensure that upcoming non tecincal sections can be understood in the light of having enough knowledge.
-The  motivation is given in @chap_0_2.
-While the novelty and significance of this work should be extractable from the written content, still  @chap_0_5 was dedicated for this purpose to have this task fulfilled formally.
-Since research can be biased, the fincial provider for the reserarch is important. The latter is met in @chap_0_6.
-
-// now here begins the detailed state of the art information
-Detailed state of the art regarding #glspl("swith") is provided in @chap_0_7
-
+A brief introduction to #glspl("swith") is presented in @chap_0_1, providing sufficient foundational knowledge for readers to comprehend the subsequent non-technical sections. The research motivation follows in @chap_0_2. Although the novelty and significance of this work are woven throughout the content, @chap_0_5 formally addresses these aspects. Given that research outcomes can be influenced by funding sources, @chap_0_6 transparently presents the financial contributors to this research.
+A detailed review of the state of the art regarding #glspl("swith") is provided in @chap_0_7.
 
 @chap_1_0 provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0_1. 
 The @chap_1_0 then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_0_2.

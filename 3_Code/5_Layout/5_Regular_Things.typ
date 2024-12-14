@@ -43,6 +43,9 @@
   // space between different paragrpahs
   set block(above:1.6em)
 
+  // numbered list
+  set enum(indent: 0.5em, spacing: 1em)
+
   // show link: set text(fill: blue)
   
   // the version with regular brakets () looks better 

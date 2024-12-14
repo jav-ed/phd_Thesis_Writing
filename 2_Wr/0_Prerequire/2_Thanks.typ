@@ -2,6 +2,15 @@
 #pagebreak()
 #heading("Acknowledgments", level:2, numbering: "I.1.1")
 
+#set par(
+    justify: true,
+    first-line-indent: 0em,
+    linebreaks: "optimized",
+    // leading: 0.65em
+    // hanging-indent: 1em
+
+    )
+    
 // the i needs to be small to hihglight that i am small, when we talk about Allah the allmighty
 Thanks belongs to the *ONE* Who does not need my thanks.
 
