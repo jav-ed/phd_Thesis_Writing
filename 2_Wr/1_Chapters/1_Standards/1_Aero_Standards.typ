@@ -5,12 +5,12 @@
 
 
 // Title was checked and is fine - inshallah
-== Aviation Certification Standards <chap_1_0_2>
-The preceding @chap_1_0_1 elaborated on the general importance of standards and their particular significance in the context of #gls("swith", long:true).
+== Aviation Certification Standards <chap_1_1>
+The preceding @chap_1_0 elaborated on the general importance of standards and their particular significance in the context of #gls("swith", long:true).
 It highlighted the current absence of a single standard that could support the design of #gls("swith", long:true) or guide the design and conduct of structural validation tests. 
 Due to the lack of established rules for structural validation, no authority can currently grant certification for flying with a #gls("swith"). 
 The goal of this thesis is to provide initial work that can be utilized by industry, scientists, aerospace certification authorities, or standards institutions to build upon and help close this gap. 
-Additional motivation for the need for #glspl("swith") standards, along with suggested possible next steps, was also presented in @chap_1_0_1.
+Additional motivation for the need for #glspl("swith") standards, along with suggested possible next steps, was also presented in @chap_1_0.
 It could be deduced that #glspl("swith") encompass multiple subfields, including aircraft design, hydrogen systems, and pressure vessel technology, each governed by its own set of standards. 
 This section focuses on the significant standards employed in aerospace. Initially, it presents the commonly used and available aviation standards. 
 Subsequently, it examines the potential applicability of these standards to #glspl("swith"). 

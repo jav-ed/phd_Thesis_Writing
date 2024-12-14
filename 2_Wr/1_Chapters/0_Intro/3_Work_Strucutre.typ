@@ -8,7 +8,7 @@
 // TODO Title
 == Structure of This Work <chap_0_4>
 
-This work consists of chapters, sections, and, where necessary, subsections. Each chapter and section begins with its own introduction to the topic, providing a high-level overview of the content to be covered. From @chap_1_0_1 onward, each section concludes with a concise summary that reiterates the primary findings. 
+This work consists of chapters, sections, and, where necessary, subsections. Each chapter and section begins with its own introduction to the topic, providing a high-level overview of the content to be covered. From @chap_1_0 onward, each section concludes with a concise summary that reiterates the primary findings. 
 As an exception to this structure, @chap_5_0 to @chap_5_3 are collectively summarized in @chap_5_3, owing to their closely interconnected content.
 
 
@@ -42,12 +42,12 @@ The research encompasses various interconnected subjects, including:
 A brief introduction to #glspl("swith") is presented in @chap_0_1, providing sufficient foundational knowledge for readers to comprehend the subsequent non-technical sections. The research motivation follows in @chap_0_2. Although the novelty and significance of this work are woven throughout the content, @chap_0_5 formally addresses these aspects. Given that research outcomes can be influenced by funding sources, @chap_0_6 transparently presents the financial contributors to this research.
 A detailed review of the state of the art regarding #glspl("swith") is provided in @chap_0_7.
 
-@chap_1_0 provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0_1. 
-The @chap_1_0 then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_0_2.
-The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_0_3. 
-Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_0_4, including a review of relevant patents.
-An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_0_5. 
-@chap_1_0 concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_0_6.
+@chap_1 provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0. 
+The @chap_1 then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_1.
+The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_2. 
+Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
+An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
+@chap_1 concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_0_6.
 Throughout, the text emphasizes the current standardization challenges and the need for new or adapted standards. 
 The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2_0.
 

@@ -18,7 +18,7 @@ The field of #glspl("swith") is characterized by a scarcity of scientific litera
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it could pose initial challenges that need to be overcome in the pursuit of sustainable aviation.
 
 // ------------------------------- 0_Standards ------------------------------ //
-*@chap_1_0 -*
+*@chap_1 -*
 In conclusion, the role of standards in #gls("swith") development is multifaceted and still in its infancy. 
 While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
 At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
@@ -27,7 +27,7 @@ This proactive approach to standardization could be crucial in overcoming the cu
 By carefully adapting existing standards and paving the way for #gls("swith")-specific standards in the future, researchers and engineers could ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations. 
 
 // ---------------------------- 1_Aero_Standards ---------------------------- //
-*@chap_1_0_2 -*
+*@chap_1_1 -*
 In conclusion, there are currently available standards that, in theory, could be applied to #gls("swith")-certification. However, with simple argumentation concerning the high-pressure and much larger scale of the tanks, authorities can deny the application of current available standards for the certification of #glspl("swith").
 Driven by this reasoning, two standards for hydrogen-powered general aviation have been announced: @SAE_Liquid and @SAE_Gas. At present, they are not commercially available. However, even upon their release, there is no guarantee that they can be applied to #glspl("swith"). 
 Firstly, it is unknown whether these SAE standards will be limited to non-integral, non-external, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated hydrogen tanks. Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
@@ -37,7 +37,7 @@ Finally, a connection was made between two events in aerospace standardization. 
 However, as of late 2024, five years after its initiation, this development is still ongoing. This extended timeline suggests that transferring existing space standards to general aviation is not straightforward and requires substantial time and effort.
 
 // --------------------------- 2_Pressure_Vessels --------------------------- //
-*@chap_1_0_3 -*
+*@chap_1_2 -*
 In summary, it can be said that there is a vast field of application for hydrogen pressure vessels.
 Most of the application fields are driven by the uniform goal to reduce the negative impact on the environment.
 Having shown especially the different areas of mobility, which are a major factor in economic and scientific growth, the undeniable importance of hydrogen pressure vessels could be underlined.
@@ -45,13 +45,13 @@ Furthermore, it could be observed that the #gls("swith") development can build u
 From the five known tank types, their current fields of applications, advantages, and disadvantages could be extracted. This analysis led to the conclusion that tank Type IV should be considered for #gls("swith") design due to its maturity, commercial availability, and balance between performance and safety concerns.
 
 // ------------------------------ 3_Automotive ------------------------------ //
-*@chap_1_0_4 -*
+*@chap_1_3 -*
 In summary, academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks. It is evident that these tanks are of interest not only for aviation but also for automotive applications. However, the available literature in this field is scarce, mirroring the limited research in aerospace.
 The sole academic paper found in the automotive sector @Bleser2012 focused on utilizing hydrogen tanks as torque absorbers. However, the information provided lacked detail, particularly in the experimental section. Consequently, based on the current state of research, no significant added value could be derived from automotive academic literature for certification-oriented experimental structural validation tests of #glspl("swith").
 While additional patents aimed at using tanks as load-bearing structural integral parts were identified, their descriptions did not provide substantial additional information for experimental structural validation tests of #glspl("swith"). This further underscores the need for more comprehensive research in this area across both industries.
 
 // ---------------------------- 4_Various_Fields ---------------------------- //
-*@chap_1_0_5 -*
+*@chap_1_4 -*
 It can be summarized that a high number of standards dealing with hydrogen have been identified. While some of these standards are already in use, others are in the process of being updated or have just been announced and are yet to be published for the first time.
 Regardless of their current status, it should be highlighted once again that narrowing down such a high number of hydrogen norms to the most promising ones requires a systematic approach. This systematic evaluation will be crucial in identifying the standards most relevant to #gls("swith") certification.
 

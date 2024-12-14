@@ -17,7 +17,7 @@ The fundamental mechanical principle underlying collet operation mandates that t
 This design constraint impacts the wing's deformation behavior in multiple directions. 
 When the collet fully encloses the wing profile, it inherently constrains expansion in both vertical and profile-normal directions. Additionally, the collet's enclosure affects spanwise deformation through frictional forces at the contact interface, with the magnitude of this effect correlating with the contact force.
 
-Further information regarding the general underlying friction mechanics can be found in @chap_1_0_4
+Further information regarding the general underlying friction mechanics can be found in @chap_1_3.
 The geometric constraints imposed by the collet-wing interface generate constraint forces within the wing structure. These forces primarily arise from two sources: bending loads transmitted through the collet interface and the prevention of pressure-induced expansion in the internal tubes.
 The latter effect merits particular attention in pressurized systems, as the tubes' radial expansion tendencies transmit forces to the wing skin. 
 While the wing skin may possess sufficient stiffness to resist this expansion under certain conditions, high internal pressures could induce outward deformation in an unconstrained state. 

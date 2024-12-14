@@ -4,17 +4,17 @@
 
 
 // Title was checked and is fine - inshallah
-= Standards and Regulations<chap_1_0>
-This chapter provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0_1. The chapter then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_0_2.
-The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_0_3. 
-Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_0_4, including a review of relevant patents.
-An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_0_5. 
+= Standards and Regulations<chap_1>
+This chapter provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0. The chapter then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_1.
+The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_2. 
+Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
+An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
 This chapter concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_0_6.
 Throughout, the text emphasizes the current standardization challenges and the need for new or adapted standards. 
 The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2_0.
 
 // Title was checked and is fine - inshallah
-== Importance of Standards <chap_1_0_1>
+== Importance of Standards <chap_1_0>
 
 The development of #gls("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with critical structural elements. 
 As with any groundbreaking technology, the path from concept to implementation is fraught with challenges. 
