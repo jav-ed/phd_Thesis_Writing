@@ -35,17 +35,66 @@ These procedures ensure that #glspl("swith") are developed and structurally vali
 // ---------------------------- 1_Aero_Standards ---------------------------- //
 However, the path toward establishing these standards presents several challenges. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
 To address this gap, two standards specifically for hydrogen-powered general aviation have been announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not yet commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
-
-Firstly, these standards may be limited to conventional hydrogen tank configurations - specifically non-integral, non-external, and non-load-carrying designs. Whether they will encompass external-load carrying integrated tanks or address the unique requirements of wing-integral tanks (as opposed to just fuselage-integral tanks) remains unclear. Therefore, the relevance of these announced SAE standards to #gls("swith") certification cannot yet be determined.
+Firstly, the scope of these SAE standards regarding tank configuration remains uncertain. 
+Specifically, it is not yet clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
+While they may address fuselage-integral hydrogen tanks, their applicability to wing-integral tanks is not guaranteed. 
+Therefore, the relevance of these announced SAE standards to #gls("swith") certification remains to be determined.
 Secondly, these standards may require modifications before gaining acceptance within European regulatory frameworks.
-The timeline of aerospace standardization developments provides additional context. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. Subsequently, in 2019, SAE initiated the development of SAE AS7373 @SAE_Liquid for liquid hydrogen in aviation. However, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and careful consideration.
+The timeline of aerospace standardization developments provides additional context. 
+In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. 
+Subsequently, in 2019, SAE initiated the development of SAE AS7373 @SAE_Liquid for liquid hydrogen in aviation. 
+Notably, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and careful consideration.
+
+// --------------------------- 2_Pressure_Vessels --------------------------- //
+
+While standards development progresses, the broader context of hydrogen pressure vessels reveals promising opportunities. 
+As outlined in @chap_1_2, there exists a vast field of applications for hydrogen pressure vessels.
+The examination of different mobility sectors, which are crucial drivers of economic and scientific growth, underscores the fundamental importance of hydrogen pressure vessels. Moreover, #gls("swith") development can leverage current advances from these other mobility sectors.
+Analysis of the five known tank types, including their applications, advantages, and disadvantages, presented in @chap_1_2 leads to a clear conclusion: tank Type IV emerges as the most suitable choice for #gls("swith") design, based on its maturity, commercial availability, and optimal balance between performance and safety considerations.
+
+// ------------------------------ 3_Automotive ------------------------------ //
+Beyond tank selection, @chap_1_3 explores potential insights from the automotive sector. Academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks, demonstrating interest in this technology across multiple transportation sectors. 
+As in the aerospace field, available literature on this topic remains scarce.
+The most relevant academic contribution from the automotive sector, presented by @Bleser2012, investigates the use of hydrogen tanks as torque absorbers. 
+However, this research lacks crucial details, particularly regarding experimental methodology. 
+Consequently, the current state of automotive research offers limited guidance for certification-oriented experimental structural validation tests of #glspl("swith").
+While existing patents describe tanks as load-bearing structural integral components, they too provide insufficient detail for experimental structural validation tests of #glspl("swith"). This gap in detailed technical documentation emphasizes the need for more comprehensive research spanning both automotive and aerospace industries.
+
+// ---------------------------- 4_Various_Fields ---------------------------- //
+Moving beyond transportation sectors, @chap_1_4 reveals a broader perspective on hydrogen standards. A significant number of standards addressing hydrogen applications have been identified. 
+These standards exist in various stages of development. Some standards are currently in use, while others are undergoing updates. 
+Additionally, several standards have been announced but still await their initial publication.
+Given this extensive array of standards, a systematic approach emerges as imperative for identifying those most applicable to #gls("swith") certification.
+This methodical evaluation will be crucial in determining which standards offer the most relevant guidance for #gls("swith") development and certification processes.
+
+// -------------------------- 5_Essential_Standards ------------------------- //
+The implementation of this systematic approach, as detailed in @chap_1_5, has yielded 
+meaningful results. 
+Through the application of specific assessment criteria, four essential standards have been identified as particularly relevant to the development and certification of #glspl("swith"). 
+Although these standards do not comprehensively address all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks and provide valuable insights into potential certification requirements and testing protocols.
+Among these selected standards, two offer critical specifications regarding working nominal pressure. 
+The maximum allowable nominal pressure varies between standards, ranging from 437.5 to $525 "bar"$. 
+This upper limit is not arbitrary but rather constrained by the capabilities of existing test facilities, which cannot exceed certain pressure thresholds for experimental structural verification tests.
+These findings emphasize the dual considerations necessary in #gls("swith") development: adherence to both hydrogen containment and aircraft-specific regulations, while acknowledging the current technological constraints in testing high-pressure systems.
+
+// -------------------------------- 0_H2_Prop ------------------------------- //
+Given these regulatory requirements and testing limitations, a comprehensive understanding of the physical properties and behavior of hydrogen becomes essential for successful #gls("swith") development and certification.
+@chap_2_0 provides an overview of hydrogen's fundamental properties that underpin its potential as an aviation fuel.
+While safety aspects are addressed in @chap_2_1, the examined properties demonstrate hydrogen's predominantly positive characteristics as an energy carrier. 
+One notable challenge, however, is hydrogen's invisibility to the human eye due to its small molecular size, which presents specific detection and measurement requirements.
+The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems reveals both opportunities and challenges in its implementation as a fuel source. 
+The analytical functions developed for calculating hydrogen mass from density and volume across various pressure and temperature ranges enhance this understanding. 
 
 
 
-In conclusion, there are currently available standards that, in theory, could be applied to #gls("swith")-certification. However, with simple argumentation concerning the high-pressure and much larger scale of the tanks, authorities can deny the application of current available standards for the certification of #glspl("swith").
-Driven by this reasoning, two standards for hydrogen-powered general aviation have been announced: @SAE_Liquid and @SAE_Gas. At present, they are not commercially available. However, even upon their release, there is no guarantee that they can be applied to #glspl("swith"). 
-Firstly, it is unknown whether these SAE standards will be limited to non-integral, non-external, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated hydrogen tanks. Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
-Secondly, these standards, in their current form, might not be accepted in Europe without modifications.
+These functions, which account for real gas behavior, enable accurate modeling and simulation of hydrogen storage in applications such as #glspl("swith").
+The custom analysis tool developed can offer valuable insights into hydrogen's behavior under various pressure and temperature conditions. While these analytical capabilities are essential for design and optimization, they must be complemented by a thorough understanding of hydrogen's safety implications, particularly for high-pressure applications like #glspl("swith").
 
-Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS7373 @SAE_Liquid, a standard for liquid hydrogen in aviation. 
-However, as of late 2024, five years after its initiation, this development is still ongoing. This extended timeline suggests that transferring existing space standards to general aviation is not straightforward and requires substantial time and effort.
+These functions, which account for real gas behavior, enable accurate modeling and simulation of hydrogen storage in applications such as #glspl("swith").
+The custom analysis tool developed can offer valuable insights into hydrogen's behavior under various pressure and temperature conditions. 
+
+
+// -------------------------------- 1_Safety -------------------------------- //
+// now the text from @chap_2_1 needs to be included. again, a proper trnaisaiotn and tense correciton is required
+In conclusion, hydrogen's significant potential for ignition, explosion, and detonation is contingent upon specific air-hydrogen mixtures. Two factors amplify safety concerns: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition or detonation. Additionally, hydrogen's diffusion behavior and material compatibility are critical for safe containment. While metals offer superior retention compared to plastics, they risk hydrogen embrittlement.
+The theoretical knowledge presented underscores the need for heightened attention to hydrogen safety in real-world applications. It also emphasizes the importance of gathering data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. This synthesis of theory and practice is crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
