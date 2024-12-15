@@ -126,7 +126,6 @@ This identified gap in current research emphasizes the necessity for additional 
 // ------------------------------- 0_Loadcase ------------------------------- //
 The challenge of understanding static load behavior becomes particularly significant when considering the broader context of aircraft load cases. As detailed in @chap_3_0, the task of identifying critical load cases for conventional aircraft already presents significant complexity. 
 For #glspl("swith"), this complexity increases substantially due to their hybrid nature, combining characteristics of both aircraft and pressurized vessels. This dual characteristic necessitates consideration of load cases from both domains, creating a more intricate evaluation scenario.
-
 Nevertheless, @chap_3_0 demonstrates that through careful statistical assessment, a comprehensive list of critical load cases for general aviation can be established. From this foundational investigation, a key load case for #glspl("swith") has been derived. The validity of this methodological approach gains significant credibility through confirmation from two leading German aerospace companies. 
 Furthermore, detailed examination of the V-n diagram provides essential insights into the relationship between the identified critical load case and the flight envelope.
 
@@ -135,8 +134,6 @@ Furthermore, detailed examination of the V-n diagram provides essential insights
 Building upon this understanding of load cases, @chap_3_1 explores another crucial aspect: the effects of fill media on pressurized structures under static external loading. The research reveals that both internal pressure and medium selection significantly influence structural behavior. 
 Comparative studies demonstrate that water-filled pipes consistently outperform their air-filled counterparts, exhibiting higher maximum bending moments and enhanced curvature tolerance across all pressure ranges evaluated. 
 The observed relationship between internal pressure and structural response exhibits distinct patterns: while both media show comparable increases in maximum bending moment with elevated pressure, their curvature responses differ markedly. 
-
-The observed relationship between internal pressure and structural response exhibits distinct patterns: while both media show comparable increases in maximum bending moment with elevated pressure, their curvature responses differ substantially. 
 A simplified conceptual model was proposed to explain these experimental observations. The model suggests that in water-filled pipes, the confined liquid acts as an integral part of the structural system. 
 Under pressure, water particles maintain relatively fixed positions, enabling effective load transfer and redistribution across the pipe's inner surface. 
 In contrast, gases maintain greater particle spacing even under compression, requiring higher pressures to achieve similar structural effects.
@@ -145,8 +142,48 @@ The research proposes statistical methodologies for quantifying relationships be
 Such insights prove especially relevant for #glspl("swith"), where pressurized vessels must withstand external loading conditions while maintaining structural integrity.
 
 // -------------------------------- 2_Curv_3D ------------------------------- //
-*@chap_3_2 -*
-In summary, a methodology for calculating curvature and its interpretation was provided. For this analysis, a #gls("fem") simulation model of a #gls("swith") configuration was utilized. The procedure for obtaining required derivatives was explained in detail. Since the methodology was developed from a displacement-based foundation, it can be applied to both analytical and numerical simulation approaches.
-The method's applicability extends beyond simulation, as displacement data could alternatively be obtained from experimental investigations. Through important examples demonstrating critical curvature assessment, the challenges of directly comparing obtained curvature results with critical curvature values for complex structures like aircraft became evident.
-The interpretation of results indicated that for experimental investigations, hydrogen could be replaced with an alternative filling agent without significantly impacting the maximum bearable bending moment. Finally, the complexity of assessing critical curvature in three-dimensional space was acknowledged, leading to the introduction of an enhanced approach in @chap_3_3.
-// now i need to include the following text. it comes from @chap_3_1. make sure to mention @chap_3_1 inside the text where suited. again: we want a proper transition and prooper tenses. do not overuse the word analysis, consider
+To further advance the understanding of these structural behaviors, @chap_3_2 presents a comprehensive methodology for curvature calculation and interpretation. 
+The study employs a #gls("fem") simulation model of a #gls("swith") configuration, detailing the procedure for obtaining necessary derivatives. 
+A key strength of this approach lies in its displacement-based foundation, enabling application to both analytical solutions and numerical simulations.
+The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations. 
+Through illustrative examples of critical curvature assessment, the work reveals inherent challenges in directly comparing obtained curvature results with critical curvature values for complex structures like aircraft.
+The findings yield practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. However, the examination also highlights the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach, which is subsequently presented in @chap_3_3.
+The experimental tests have revealed important practical implications regarding the use of alternative filling agents. Studies indicate that hydrogen could be replaced by another medium without significantly affecting the maximum bearable bending moment in the structure. Nevertheless, significant challenges emerge when assessing critical curvature in three-dimensional space. These challenges have led to the development of an enhanced analytical approach, which @chap_3_3 presents in detail.
+
+
+// -------------------------------- 3_Curv_2D ------------------------------- //
+@chap_3_3 addresses this complexity by introducing transformation methods that convert three-dimensional curvature data into more manageable two-dimensional representations. The developed mathematical framework enables the conversion of six-dimensional matrix representations ($bold(A)^(n times 6)$) into simplified two-dimensional forms ($bold(A)^(n times 2)$). 
+While three averaging approaches were initially considered, mathematical evaluation demonstrates that only two fundamentally different methods exist.
+These methods were systematically evaluated using a range of lift coefficients and internal pressures from $15 "MPa"$ to $110 "MPa"$. The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region remained substantially below critical thresholds.
+This finding led to a practical conclusion potentially specific to the investigated simulation model. 
+Under the analyzed load conditions, hydrogen could be substituted with an alternative filling agent in experimental structural validation testing. 
+This substitution would not affect the structural behavior, as the material's stiffness characteristics would remain unchanged.
+However, while the interpretation needs to be done for each specific simulation configuration, the laid out method is of general nature.
+
+// ----------------------------- 4_Physical_Load ---------------------------- //
+// ---------------------------- 5_Physical_Collet --------------------------- //
+As another critical aspect of experimental structural testing, @chap_3_4 addresses a fundamental requirement by establishing the core principles of load introduction in aircraft testing, with particular emphasis on #gls("swith") configurations.
+Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
+A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
+The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
+
+The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
+This highlights both the methodical nature and inherent complexity of the assessment process.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. 
+These critical parameters require rigorous determination through load approximation analysis.
+This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4.
+
+// ---------------------------- 0_Discretize_Aero --------------------------- //#
+// now i need to include the following text. it comes from @chap_4_0. make sure to mention @chap_4_0 inside the text where suited. again: we want a proper transition and prooper tenses. do not overuse the word analysis, consider
+
+Building upon this, @chap_4_0  establishes the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
+The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. 
+Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
+Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
+The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
+Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
+
+However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. 
+These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. 
+Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. 
+The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provides a pathway for addressing these remaining challenges, while maintaining the advantages of the clustering approach.

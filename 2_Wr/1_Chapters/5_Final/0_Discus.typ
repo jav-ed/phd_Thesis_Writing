@@ -131,16 +131,14 @@ However, while the interpretation needs to be done for each specific simulation 
 // ---------------------------- 5_Physical_Collet --------------------------- //
 *@chap_3_4 -*
 This section established the foundational framework for physical load introduction in aircraft structural testing, with particular focus on #gls("swith") configurations. Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie") methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
-A systematic evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
+A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
 The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
-This illustrates both the systematic approach and inherent complexity of the assessment process.
-The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. These critical parameters require systematic determination through load approximation analysis.
+This highlights both the methodical nature and inherent complexity of the assessment process.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. 
+These critical parameters require rigorous determination through load approximation analysis.
 This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4.
-
-
-
 
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //
