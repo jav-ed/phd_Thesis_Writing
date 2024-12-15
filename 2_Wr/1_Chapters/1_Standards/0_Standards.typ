@@ -67,7 +67,6 @@ While the innovative nature of #glspl("swith") presents challenges in terms of s
 At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
 Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #glspl("swith").
-By carefully adapting existing standards and paving the way for #gls("swith")-specific standards in the future, researchers and engineers could ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations. 
-
+By carefully adapting existing standards and paving the way for #gls("swith")-specific standards, researchers and engineers can establish comprehensive validation protocols. These protocols ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
 ])
 
