@@ -93,9 +93,60 @@ The custom analysis tool developed can offer valuable insights into hydrogen's b
 While these analytical capabilities are helpful, they must be complemented by a thorough understanding of hydrogen's safety implications, particularly for high-pressure applications like #glspl("swith").
 The focus on safety aspects in @chap_2_1 reveals that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
 Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
-Additionally, hydrogen's diffusion behavior and material compatibility emerge as critical factors for safe containment. While metals provide superior retention compared to plastics, they face the challenge of potential hydrogen embrittlement.
-The theoretical knowledge presented emphasizes the need for heightened attention to hydrogen safety in real-world applications. It also highlights the importance of combining data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. This synthesis of theory and practice proves crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
+Additionally, hydrogen's diffusion behavior and material compatibility emerge as critical factors for safe containment. 
+While metals provide superior retention compared to plastics, they face the challenge of potential hydrogen embrittlement.
+The theoretical knowledge presented in @chap_2_1 emphasizes the need for heightened attention to hydrogen safety in real-world applications. 
+It also highlights the importance of combining data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. 
+This synthesis of theory and practice proves crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
 
-// -------------------------------------------------------------------------- //
-In conclusion, hydrogen's significant potential for ignition, explosion, and detonation is contingent upon specific air-hydrogen mixtures. Two factors amplify safety concerns: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition or detonation. Additionally, hydrogen's diffusion behavior and material compatibility are critical for safe containment. While metals offer superior retention compared to plastics, they risk hydrogen embrittlement.
-The theoretical knowledge presented underscores the need for heightened attention to hydrogen safety in real-world applications. It also emphasizes the importance of gathering data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. This synthesis of theory and practice is crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
+
+// ------------------------------ 2_Experiment ------------------------------ //
+Building on these safety considerations, experimental investigations provide further insights into specific challenges and mitigation strategies.
+The experimental investigations mentioned in @chap_2_2 demonstrate that hydrogen self-ignition represents a tangible concern in real-world applications.
+Additionally, @chap_2_2 identifies the primary geometrical factors that can precipitate ignition and outlines the necessary modifications to mitigate this risk. 
+While the threat of hydrogen self-ignition requires serious consideration, the literature review supports the feasibility of secure hydrogen application, provided that its properties are thoroughly understood and appropriately managed.
+A critical 
+// consideration overused
+consideration emerges when evaluating the transferability of hydrogen applications from the automotive industry to #glspl("swith") for large commercial aircraft, such as the Airbus A350-1000 @link_Airbus_350. 
+Rather than direct transposition, a systematic approach becomes necessary.
+This involves conducting a series of smaller-scale experimental and numerical studies, progressively advancing toward large aircraft scale. 
+Such a methodical progression enables systematic knowledge accumulation while carefully managing the risks associated with scaling up hydrogen technologies in aviation.
+The research outlines a potential development path that emphasizes this gradual, methodical approach to research and development, ensuring that each step builds upon validated understanding from previous investigations.
+
+
+// --------------------------- 3_Pressurized_Body --------------------------- //
+Given that #glspl("swith") must withstand both internal pressure from hydrogen storage and external aerodynamic loads during flight, understanding the behavior of pressurized vessels under external loading conditions becomes crucial.
+The literature review presented in @chap_2_3 reveals substantial research on pressurized vessels under external dynamic loading. 
+The reviewed studies demonstrate that, for their specific test configurations, internal pressure significantly influences structural behavior, with lateral loads typically generating higher stresses than axial loads. 
+The documented failure mechanisms progress from initial deformation through local failure to global failure, depending on impact energy levels.
+While these studies provide valuable insights into pressure vessel behavior for dynamic loading conditions, which are essential for aircraft certification, they do not address quasi-static loading scenarios. 
+Quasi-static testing, such as ultimate load testing, represents another critical requirement for aircraft certification and, consequently, for potential #gls("swith") certification. 
+This identified gap in current research emphasizes the necessity for additional investigations into pressure vessel behavior under external static loads.
+
+// ------------------------------- 0_Loadcase ------------------------------- //
+The challenge of understanding static load behavior becomes particularly significant when considering the broader context of aircraft load cases. As detailed in @chap_3_0, the task of identifying critical load cases for conventional aircraft already presents significant complexity. 
+For #glspl("swith"), this complexity increases substantially due to their hybrid nature, combining characteristics of both aircraft and pressurized vessels. This dual characteristic necessitates consideration of load cases from both domains, creating a more intricate evaluation scenario.
+
+Nevertheless, @chap_3_0 demonstrates that through careful statistical assessment, a comprehensive list of critical load cases for general aviation can be established. From this foundational investigation, a key load case for #glspl("swith") has been derived. The validity of this methodological approach gains significant credibility through confirmation from two leading German aerospace companies. 
+Furthermore, detailed examination of the V-n diagram provides essential insights into the relationship between the identified critical load case and the flight envelope.
+
+
+// ------------------------------ 1_Curv_Theory ----------------------------- //
+Building upon this understanding of load cases, @chap_3_1 explores another crucial aspect: the effects of fill media on pressurized structures under static external loading. The research reveals that both internal pressure and medium selection significantly influence structural behavior. 
+Comparative studies demonstrate that water-filled pipes consistently outperform their air-filled counterparts, exhibiting higher maximum bending moments and enhanced curvature tolerance across all pressure ranges evaluated. 
+The observed relationship between internal pressure and structural response exhibits distinct patterns: while both media show comparable increases in maximum bending moment with elevated pressure, their curvature responses differ markedly. 
+
+The observed relationship between internal pressure and structural response exhibits distinct patterns: while both media show comparable increases in maximum bending moment with elevated pressure, their curvature responses differ substantially. 
+A simplified conceptual model was proposed to explain these experimental observations. The model suggests that in water-filled pipes, the confined liquid acts as an integral part of the structural system. 
+Under pressure, water particles maintain relatively fixed positions, enabling effective load transfer and redistribution across the pipe's inner surface. 
+In contrast, gases maintain greater particle spacing even under compression, requiring higher pressures to achieve similar structural effects.
+These findings carry important implications for current testing standards, particularly regarding the use of substitute fill media in certification procedures. 
+The research proposes statistical methodologies for quantifying relationships between different fill media, potentially informing future testing protocols. 
+Such insights prove especially relevant for #glspl("swith"), where pressurized vessels must withstand external loading conditions while maintaining structural integrity.
+
+// -------------------------------- 2_Curv_3D ------------------------------- //
+*@chap_3_2 -*
+In summary, a methodology for calculating curvature and its interpretation was provided. For this analysis, a #gls("fem") simulation model of a #gls("swith") configuration was utilized. The procedure for obtaining required derivatives was explained in detail. Since the methodology was developed from a displacement-based foundation, it can be applied to both analytical and numerical simulation approaches.
+The method's applicability extends beyond simulation, as displacement data could alternatively be obtained from experimental investigations. Through important examples demonstrating critical curvature assessment, the challenges of directly comparing obtained curvature results with critical curvature values for complex structures like aircraft became evident.
+The interpretation of results indicated that for experimental investigations, hydrogen could be replaced with an alternative filling agent without significantly impacting the maximum bearable bending moment. Finally, the complexity of assessing critical curvature in three-dimensional space was acknowledged, leading to the introduction of an enhanced approach in @chap_3_3.
+// now i need to include the following text. it comes from @chap_3_1. make sure to mention @chap_3_1 inside the text where suited. again: we want a proper transition and prooper tenses. do not overuse the word analysis, consider
