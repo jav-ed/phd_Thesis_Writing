@@ -12,7 +12,6 @@ This innovative design aims to optimize space usage and potentially increase win
 // ------------------------------ state of art ------------------------------ //
 
 The detailed definition of a #gls("swith") and its comparison with other structure integrated concepts as well with regular aircraft is given in @chap_0_7.
-
 Here, it was concluded that all hydrogen-powered aircraft concepts share the same primary objective: the reduction of negative environmental impact. 
 The structural integration of hydrogen tanks offers a dual advantage. 
 These tanks not only store hydrogen but also share the load with the attached structural components. 
@@ -30,11 +29,19 @@ While the innovative nature of #glspl("swith") presents challenges for standard 
 At the time of writing this thesis, no established standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").
 Consequently, there is a pressing need for appropriate standards upon which industry and scientific institutions can build.
 This proactive approach to standardization is crucial for overcoming current limitations and facilitating broader adoption of #glspl("swith").
-Through careful adaptation of existing standards and development of #gls("swith")-specific regulations, researchers and engineers can ensure that #glspl("swith") are developed and structurally validated in a manner that is both safe and efficient, while meeting industry and regulatory requirements.
+Through careful adaptation of existing standards and development of #gls("swith")-specific regulations, researchers and engineers can establish robust validation procedures. 
+These procedures ensure that #glspl("swith") are developed and structurally validated in a manner that is both safe and efficient, while meeting industry and regulatory requirements.
 
 // ---------------------------- 1_Aero_Standards ---------------------------- //
-// wonderful, now i need to the same with the following, that is foind in @chap_1_1
-// so i need a proper transition and tense correction
+However, the path toward establishing these standards presents several challenges. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
+To address this gap, two standards specifically for hydrogen-powered general aviation have been announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not yet commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
+
+Firstly, these standards may be limited to conventional hydrogen tank configurations - specifically non-integral, non-external, and non-load-carrying designs. Whether they will encompass external-load carrying integrated tanks or address the unique requirements of wing-integral tanks (as opposed to just fuselage-integral tanks) remains unclear. Therefore, the relevance of these announced SAE standards to #gls("swith") certification cannot yet be determined.
+Secondly, these standards may require modifications before gaining acceptance within European regulatory frameworks.
+The timeline of aerospace standardization developments provides additional context. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. Subsequently, in 2019, SAE initiated the development of SAE AS7373 @SAE_Liquid for liquid hydrogen in aviation. However, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and careful consideration.
+
+
+
 In conclusion, there are currently available standards that, in theory, could be applied to #gls("swith")-certification. However, with simple argumentation concerning the high-pressure and much larger scale of the tanks, authorities can deny the application of current available standards for the certification of #glspl("swith").
 Driven by this reasoning, two standards for hydrogen-powered general aviation have been announced: @SAE_Liquid and @SAE_Gas. At present, they are not commercially available. However, even upon their release, there is no guarantee that they can be applied to #glspl("swith"). 
 Firstly, it is unknown whether these SAE standards will be limited to non-integral, non-external, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated hydrogen tanks. Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
