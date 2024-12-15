@@ -148,7 +148,7 @@ A key strength of this approach lies in its displacement-based foundation, enabl
 The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations. 
 Through illustrative examples of critical curvature assessment, the work reveals inherent challenges in directly comparing obtained curvature results with critical curvature values for complex structures like aircraft.
 The findings yield practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. However, the examination also highlights the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach, which is subsequently presented in @chap_3_3.
-The experimental tests have revealed important practical implications regarding the use of alternative filling agents. Studies indicate that hydrogen could be replaced by another medium without significantly affecting the maximum bearable bending moment in the structure. Nevertheless, significant challenges emerge when assessing critical curvature in three-dimensional space. These challenges have led to the development of an enhanced analytical approach, which @chap_3_3 presents in detail.
+
 
 
 // -------------------------------- 3_Curv_2D ------------------------------- //
