@@ -316,7 +316,7 @@ This section established the fundamental concepts and methodologies for #gls("ld
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
 However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. 
-The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provides a pathway for addressing these remaining challenges, while maintaining the advantages of the clustering approach.
+The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provides a pathway for addressing these remaining challenges while maintaining the advantages of the clustering approach.
 
 
 ])

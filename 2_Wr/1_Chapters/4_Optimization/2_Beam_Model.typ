@@ -127,6 +127,6 @@ Finally it can be said that IndeterminateBeam @interdetbeam_tool was chosen as t
 In summary, essential mathematical foundations of beam modeling theory were established. While analytical solutions for individual beam models using traditional pen-and-paper methods are feasible, this approach proves impractical for integration within numerical optimization frameworks. 
 To address this limitation, the Python programming language was selected as the computational environment, with a detailed justification provided for this choice. 
 The investigation examined two beam solvers, which were first validated against established textbook solutions and subsequently integrated into an optimization framework. 
-The transformation of three-dimensional support conditions in #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. Consequently, the IndeterminateBeam solver emerged as the most appropriate solution.
+The transformation of three-dimensional support conditions in #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the most appropriate solution.
 
 ])

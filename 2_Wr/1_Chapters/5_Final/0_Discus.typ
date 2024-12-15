@@ -182,11 +182,15 @@ Optimization is a very large field that finds application in various industries.
 
 // ------------------------------- 4_Beam_Opti ------------------------------ //
 *@chap_4_4 -*
-The analysis of structural methods suitable for optimization framework integration examined beam modeling and detailed #gls("fem") analysis. Considering computational efficiency, implementation requirements, educational benefits, open-source availability, and particularly the early developmental stage of #glspl("swith"), beam modeling emerged as the appropriate choice. Subsequently, it was demonstrated how the beam model solver could be integrated within an optimization framework to answer questions relevant for #gls("ld") through #glspl("lie") for experimental structural testing.
+This section evaluated beam modeling and detailed #gls("fem") analysis as potential methods for integration into the optimization framework.
+Considering computational efficiency, implementation requirements, educational benefits, open-source availability, and particularly the early developmental stage of #glspl("swith"), beam modeling emerged as the appropriate choice. 
+Subsequently, it was demonstrated how the beam model solver could be integrated within an optimization framework to answer questions relevant for #gls("ld") through #glspl("lie") for experimental structural testing.
+
 
 
 
 // --------------------------- optimiaztion cases --------------------------- //
+// TODO should be in past tense?
 *@chap_4_5_0 to @chap_4_5_3 -*
 This investigation presents a systematic optimization approach for #gls("ld"), establishing methodologies for determining optimal #gls("lie") configurations in structural testing applications. 
 The strategic selection and placement of #glspl("lie") can significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
