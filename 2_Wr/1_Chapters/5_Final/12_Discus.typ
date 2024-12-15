@@ -23,7 +23,8 @@ Conversely, the limited availability of prior work means that scientists have a 
 
 // ------------------------------- 0_Standards ------------------------------ //
 
-Beyond these general research challenges, a critical aspect for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
+// another word for aspect
+Beyond these general research challenges, a critical concern for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
 The role of standards in #gls("swith") development is multifaceted and remains in its infancy.
 While the innovative nature of #glspl("swith") presents challenges for standard application, these challenges also create opportunities for advancing both the technology and their regulatory framework.
 At the time of writing this thesis, no established standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").
@@ -85,16 +86,16 @@ One notable challenge, however, is hydrogen's invisibility to the human eye due 
 The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems reveals both opportunities and challenges in its implementation as a fuel source. 
 The analytical functions developed for calculating hydrogen mass from density and volume across various pressure and temperature ranges enhance this understanding. 
 
-
-
-These functions, which account for real gas behavior, enable accurate modeling and simulation of hydrogen storage in applications such as #glspl("swith").
-The custom analysis tool developed can offer valuable insights into hydrogen's behavior under various pressure and temperature conditions. While these analytical capabilities are essential for design and optimization, they must be complemented by a thorough understanding of hydrogen's safety implications, particularly for high-pressure applications like #glspl("swith").
-
 These functions, which account for real gas behavior, enable accurate modeling and simulation of hydrogen storage in applications such as #glspl("swith").
 The custom analysis tool developed can offer valuable insights into hydrogen's behavior under various pressure and temperature conditions. 
 
-
 // -------------------------------- 1_Safety -------------------------------- //
-// now the text from @chap_2_1 needs to be included. again, a proper trnaisaiotn and tense correciton is required
+While these analytical capabilities are helpful, they must be complemented by a thorough understanding of hydrogen's safety implications, particularly for high-pressure applications like #glspl("swith").
+The focus on safety aspects in @chap_2_1 reveals that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
+Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
+Additionally, hydrogen's diffusion behavior and material compatibility emerge as critical factors for safe containment. While metals provide superior retention compared to plastics, they face the challenge of potential hydrogen embrittlement.
+The theoretical knowledge presented emphasizes the need for heightened attention to hydrogen safety in real-world applications. It also highlights the importance of combining data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. This synthesis of theory and practice proves crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
+
+// -------------------------------------------------------------------------- //
 In conclusion, hydrogen's significant potential for ignition, explosion, and detonation is contingent upon specific air-hydrogen mixtures. Two factors amplify safety concerns: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition or detonation. Additionally, hydrogen's diffusion behavior and material compatibility are critical for safe containment. While metals offer superior retention compared to plastics, they risk hydrogen embrittlement.
 The theoretical knowledge presented underscores the need for heightened attention to hydrogen safety in real-world applications. It also emphasizes the importance of gathering data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. This synthesis of theory and practice is crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.

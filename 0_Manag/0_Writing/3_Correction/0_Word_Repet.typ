@@ -29,6 +29,7 @@
     2.  analyse
 26. complexities
 27. fundamental
+28. aspect
 
 
 
