@@ -32,7 +32,7 @@ To apply physical loads to the wing of a #gls("swith"), #glspl("lie", long:true)
 // --------------------------------- outlook -------------------------------- //
 Research on #glspl("swith") remains notably sparse, with this thesis representing, to the best of the author's knowledge, the first doctoral dissertation dedicated to this topic. This scarcity of research underscores the need to motivate broader academic participation in both numerical simulations and experimental testing. Such expanded research efforts would contribute significantly to advancing the understanding and development of #glspl("swith").
 Building upon this foundation, several important areas for future research have emerged from this investigation. Substantial work remains necessary to develop comprehensive standards and certification rules for #glspl("swith"). 
-To support this development, the establishment of an open-source #gls("fem, long:true")-based model for #gls("swith") could facilitate collaborative research efforts in this field.
+To support this development, the establishment of an open-source #gls("fem", long:true)-based model for #gls("swith") could facilitate collaborative research efforts in this field.
 
 A fundamental question that requires investigation is whether #glspl("swith") demonstrate superior performance compared to conventional aircraft designs where hydrogen tanks are simply incorporated into the existing structure.
 Further technical advancement could be achieved through a comparative analysis between beam optimization and #gls("fem") optimization approaches. 
