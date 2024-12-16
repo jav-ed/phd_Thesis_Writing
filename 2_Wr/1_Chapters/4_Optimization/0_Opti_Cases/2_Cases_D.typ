@@ -246,19 +246,11 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 // --------------------------------- summary -------------------------------- //
 #summary_([
 
-// TODO issues here
-In @chap_4_5_0 to @chap_4_5_3, the optimization framework elucidated in @chap_4_4 is modified and applied. 
-The goal of 
-to provide answered ragrding #glspl("lie") to achieve accurate #gls("ld"). 
-This investigation presents a systematic optimization approach for #gls("ld"), establishing methodologies for determining optimal #gls("lie") configurations in structural testing applications. 
-The strategic selection and placement of #glspl("lie") can significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
-
-
+The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. The framework was developed to determine key parameters of the #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
 The progression of optimization cases reflects increasingly sophisticated engineering demands. Case A introduces the foundational framework with a single clamped support configuration, establishing the baseline approach for load discretization. Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. While maintaining the core optimization framework, Case C addresses practical installation requirements by incorporating spatial restrictions for essential components such as landing gear and propulsion systems. Case D extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
 
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. While computational complexity increased across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands. 
 The developed optimization framework successfully answered essential questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
-
 All optimizations were performed on standard computing hardware (Intel i5-10500 CPU, 3.10GHz, 6 cores/12 threads, 16GB RAM), demonstrating the methodology's accessibility without specialized computational resources. When optimizing all configurations from four to eight #glspl("lie"), solution times ranged from hours to under a day, varying with required iterations.
 The results demonstrate the feasibility of achieving satisfactory #gls("ld") using accessible computational resources while meeting practical engineering constraints. The framework's adaptability to diverse requirements indicates its potential value for future #gls("swith") structural testing and certification processes.
 ])

@@ -80,5 +80,5 @@ The optimization framework is subsequently applied to obtain multiple solutions 
 
 
 // ---------------------------------- final --------------------------------- //
-@chap_6 presents a comprehensive discussion that draws from the summaries provided at the end of the respective sections, while intentionally condensing it to keep the chapter rather short. @chap_7 provides conclusions and perspectives for future research.
+@chap_6 presents a comprehensive discussion that draws from the summaries provided at the end of the respective sections. @chap_7 provides conclusions and perspectives for future research.
 @chap_Append_A_0, as part of the appendix, presents validation examples for the selected beam solver. The glossary provides concise definitions and page references for relevant technical terms and frequently used abbreviations.
