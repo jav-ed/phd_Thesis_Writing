@@ -251,6 +251,13 @@ The progression of optimization cases reflects increasingly sophisticated engine
 
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. While computational complexity increased across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands. 
 The developed optimization framework successfully answered essential questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
-All optimizations were performed on standard computing hardware (Intel i5-10500 CPU, 3.10GHz, 6 cores/12 threads, 16GB RAM), demonstrating the methodology's accessibility without specialized computational resources. When optimizing all configurations from four to eight #glspl("lie"), solution times ranged from hours to under a day, varying with required iterations.
-The results demonstrate the feasibility of achieving satisfactory #gls("ld") using accessible computational resources while meeting practical engineering constraints. The framework's adaptability to diverse requirements indicates its potential value for future #gls("swith") structural testing and certification processes.
+
+Some optimizations were conducted on the High-Performance Computing (HPC) cluster #emp_[Barnard] at the Technical University Dresden. 
+However, all optimization cases can be executed on conventional desktop computers. This was demonstrated by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10GHz, 6 cores/12 threads, 16GB RAM). 
+Using this hardware specifications, the complete analysis spanning configurations from four to eight #glspl("lie") required computation times ranging from a few hours to under a day, depending on the number of required iterations.
+
+The results demonstrate the feasibility of achieving satisfactory #gls("ld") while meeting practical engineering constraints. The framework's adaptability to diverse requirements indicates its potential value for future #gls("swith") structural testing and certification processes.
+
+
+
 ])
