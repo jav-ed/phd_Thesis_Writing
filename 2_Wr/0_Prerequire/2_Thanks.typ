@@ -30,3 +30,9 @@ He knows when i am feeling pain, when no one else knows about it. He is the firs
 The desire is to get His forgiveness, His guidance, His rahma ($~$ mercy), His contentment and good news from Him.
 
 You can call Him how you like, the most beautiful names are His. 
+
+
+
+// -------------------------------------------------------------------------- //
+
+The authors gratefully acknowledge the computing time made available to them on the high-performance computer at the NHR Center of TU Dresden. This center is jointly supported by the Federal Ministry of Education and Research and the state governments participating in the NHR (www.nhr-verein.de/unsere-partner).

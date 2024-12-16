@@ -121,7 +121,7 @@
 
 // ------------------------------- discussion ------------------------------- //
 #include "2_Wr/1_Chapters/5_Final/0_Discus.typ"
-#include "2_Wr/1_Chapters/5_Final/1_Outlook.typ"
+#include "2_Wr/1_Chapters/5_Final/1_Conc.typ"
 
 // -------------------------------- Appendix -------------------------------- //
 #show: appendix_manag
