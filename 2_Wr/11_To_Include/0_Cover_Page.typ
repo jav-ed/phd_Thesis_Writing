@@ -6,7 +6,7 @@
 
 // #heading("Coverpage", level:1, numbering: none, outlined: false)
 #set par(
-    justify: true,
+    justify: false,
     first-line-indent: 0em,
     linebreaks: "optimized",
     )
@@ -42,5 +42,14 @@ submitted to obtain the academic degree of\
 written by \
 #v(0.01em)
 #text(size: 1.1em, weight: "bold")[Javed Arshad Butt] \
-born on 20.05.1996 in Gujrat (Pakistan)
+born on 20.05.1996 in Gujrat (Pakistan)\
+#v(0.9em)
 
+
+// #table(
+//   columns: (auto, auto),
+//   stroke: none,
+//   align: (left, left),
+//   [Submission date:], [TBD],
+//   [Examiner:], [Prof. Dr. Johannes \ Markmiller]
+// )
