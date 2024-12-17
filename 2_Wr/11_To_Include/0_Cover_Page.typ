@@ -40,7 +40,6 @@
 Investigations on Aircraft Wing Structure-Integrated High-Pressure Hydrogen Tanks (SWITH)
 ]
 
-
 #v(1em)
 Technische Universität Dresden (Germany)\
 Faculty of Mechanical Science and Engineering\
@@ -81,6 +80,7 @@ image("../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png",width: 100%)
 // #v(0.9em)
 
 
+// Note, if this shall be activated, make sure that the #v(-2em) at the top of this page is inshallaha activated
 // #table(
 //   columns: (auto, auto),
 //   stroke: none,
