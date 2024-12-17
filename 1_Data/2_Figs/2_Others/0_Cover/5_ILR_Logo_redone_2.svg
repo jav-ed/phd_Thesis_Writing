@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35mm" height="30mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3500 3000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:100;stroke-linecap:round}
+    .fil0 {fill:none}
+    .fil1 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0 str0" d="M3225 378c0,0 -1457,580 -1812,746 -355,166 -440,222 -577,305 -137,83 -264,177 -336,238 -73,61 -122,118 -154,156 -32,39 -45,56 -57,77 -12,21 -27,53 -30,71 -3,17 -10,43 -8,66 3,22 12,45 26,73 14,28 54,66 87,92 33,26 84,54 134,74 49,21 132,45 194,63 62,18 145,38 222,53 76,14 186,29 287,40 102,11 282,24 391,30 109,7 199,11 335,15 136,4 575,5 575,5"/>
+  <line class="fil0 str0" x1="1436" y1="2127" x2="1547" y2= "1643" />
+  <line class="fil0 str0" x1="1631" y1="2124" x2="1781" y2= "1471" />
+  <line class="fil0 str0" x1="1825" y1="2127" x2="1936" y2= "1643" />
+  <path class="fil1" d="M1643 1471c0,31 -25,57 -57,57 -31,0 -57,-25 -57,-57 0,-31 25,-57 57,-57 31,0 57,25 57,57z"/>
+  <path class="fil1" d="M2135 1653c0,31 -25,57 -57,57 -31,0 -57,-25 -57,-57 0,-31 25,-57 57,-57 31,0 57,25 57,57z"/>
+ </g>
+</svg>

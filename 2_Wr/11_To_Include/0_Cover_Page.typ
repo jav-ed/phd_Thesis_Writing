@@ -4,7 +4,6 @@
 #import "@preview/oasis-align:0.2.0": *
 
 
-// #heading("Coverpage", level:1, numbering: none, outlined: false)
 #set par(
     justify: false,
     first-line-indent: 0em,
@@ -12,20 +11,37 @@
     )
 
 
-#oasis-align(
-image("../../1_Data/2_Figs/2_Others/0_Cover/0_TU_Dresden_Logo_blau_HKS41.svg"),
+// #v(-2em)
 
-image("../../1_Data/2_Figs/2_Others/0_Cover/0_TU_Dresden_Logo_blau_HKS41.svg"),
+#table(
+    columns: (1fr, 1fr),
+    align: (center+ horizon, center+ horizon, ),
+    stroke: none,
+    rows: 2,
+
+    image("../../1_Data/2_Figs/2_Others/0_Cover/0_TU_Dresden_Logo_blau_HKS41.svg", width: 70%),
+    
+    image("../../1_Data/2_Figs/2_Others/0_Cover/5_ILR_Logo_redone_2.svg",
+    width: 40%),
+
+    image("../../1_Data/2_Figs/2_Others/0_Cover/3_Ima.svg", width: 50%),
+
+    image("../../1_Data/2_Figs/2_Others/0_Cover/4_BMWK_Fz_2017_WebSVG_en.svg",
+    width: 50%),
 )
 
-#v(3em)
+
+
+
+#v(2em)
 #set align(center)
 
 #text(size: 1.2em, weight: "medium")[
 Investigations on Aircraft Wing Structure-Integrated High-Pressure Hydrogen Tanks (SWITH)
 ]
 
-#v(2em)
+
+#v(1em)
 Technische Universität Dresden (Germany)\
 Faculty of Mechanical Science and Engineering\
 Institute of Aerospace Engineering\
@@ -38,12 +54,31 @@ submitted to obtain the academic degree of\
 #text(size: 1.1em, weight: "medium")[Doktoringenieur (Dr.-Ing.)]\
 #v(0.9em)
 
+// -------------------------------------------------------------------------- //
+#table(
+    columns: (1fr, 1fr),
+    align: (center+ horizon, center+ horizon, ),
+    stroke: none,
 
+[
 written by \
 #v(0.01em)
 #text(size: 1.1em, weight: "bold")[Javed Arshad Butt] \
+#v(0.1em)
 born on 20.05.1996 in Gujrat (Pakistan)\
 #v(0.9em)
+],
+
+image("../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png",width: 100%)
+)
+// -------------------------------------------------------------------------- //
+
+
+// written by \
+// #v(0.01em)
+// #text(size: 1.1em, weight: "bold")[Javed Arshad Butt] \
+// born on 20.05.1996 in Gujrat (Pakistan)\
+// #v(0.9em)
 
 
 // #table(
