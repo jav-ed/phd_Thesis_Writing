@@ -35,7 +35,6 @@
 // --------------------------------- header -------------------------------- //
 #show: text_header
 #show: page_header
-// #show: doc => def_page_footer(doc, "Javed Arshad Butt | Dresden (DE) - Doctoral Thesis")
 #show: doc => def_page_footer(doc, "Javed Arshad Butt - Dresden, Germany | Doctoral Thesis ")
 
 /* ---------------------------------- tocs ---------------------------------- */
