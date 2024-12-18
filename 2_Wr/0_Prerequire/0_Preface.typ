@@ -6,7 +6,7 @@
 The Front Matter contains the Declaration of Independent Authorship, Acknowledgments, and the Abstract.
 
 #include "1_Declaration.typ"
-#include "2_Thanks.typ"
+#include "2_Acknowledge.typ"
 #include "3_Abstract.typ"
 
 

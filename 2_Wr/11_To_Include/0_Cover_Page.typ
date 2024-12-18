@@ -85,6 +85,7 @@ image("../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png",width: 100%)
 //   columns: (auto, auto),
 //   stroke: none,
 //   align: (left, left),
+//   TODO Islamic date required as well
 //   [Submission date:], [TBD],
 //   [Examiner:], [Prof. Dr. Johannes \ Markmiller]
 // )

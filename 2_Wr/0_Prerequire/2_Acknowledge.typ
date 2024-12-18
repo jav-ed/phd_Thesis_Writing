@@ -115,8 +115,9 @@ Israel's war on Gaza is genocidal @albanese2024anatomy, and the dimensions of th
 ]
 
 
-Instituations like Amnestiy International @link_Amnesty_0 @link_Amnesty_1 and the Unitied Nations
-@link_UN_0 @link_UN_1 @link_UN_2 @link_UN_3, while being under poltical pressure are also not quite about the genocide conducted by Israel against the humans in Palestine.
+Instituations like Amnestiy International @link_Amnesty_0 @link_Amnesty_1, the Unitied Nations
+@link_UN_0 @link_UN_1 @link_UN_2 @link_UN_3, and the 
+International Criminal Court (ICC) @link_ICC_0 while being under poltical pressure are also not quite about the genocide conducted by Israel against the humans in Palestine.
  
 I know enough about global poltics to know that publicaly stating  things that are against the desire of leading politicans in germany could  have big negative concequnecies for my life and this thesis.
 Yet, i think that it is important that people take risks to stand up for justice.
