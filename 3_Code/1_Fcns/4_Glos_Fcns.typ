@@ -5,6 +5,7 @@
 #import "../../2_Wr/3_Additional/0_Glossary_V.0.5.0.typ": glos_entry_list
 
 
+
 /* ========================================================================== */
 /* ================================ Glossary ================================ */
 /* ========================================================================== */
@@ -41,6 +42,10 @@
     set heading(numbering: none)
 
     [= Glossary <chap_Glossary>]
+
+    // let chap_add
+
+    // logo_adder()
 
     print-glossary(
         glos_entry_list,

@@ -11,8 +11,7 @@
     // hanging-indent: 1em
 
     )
-    
-#pagebreak()
+#v(3em)
 #heading("Declaration of Independent Authorship", level:2, numbering: "I.1.1")
 
 I hereby declare that the present work, the doctoral thesis, is solely and independently done by myself in all aspects, such as developments, code implementations, and writing of the thesis.

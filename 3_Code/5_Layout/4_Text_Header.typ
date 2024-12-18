@@ -2,6 +2,44 @@
 #import "../1_Fcns/0_Fcn_Main.typ": *
 
 
+
+// ========================================================================== //
+// =============================== logo_adder =============================== //
+// ========================================================================== //
+#let logo_adder(chap_add, it) = (
+
+  table(
+    columns: (1fr,0.3fr),
+    stroke: none,
+    align: (center+horizon, right+horizon),
+    column-gutter:0.5em,
+
+    [
+      #if chap_add != none {
+        chap_add 
+        v(0.01em)  
+        v(-1em)
+
+      }
+
+      #set align(center)
+      #set par(
+        justify: false,
+        first-line-indent: 0em,
+        linebreaks: "optimized",
+        )
+      #set text(size: 2em, weight: "bold")
+      #smallcaps(it)
+
+    ],
+
+    image("../../1_Data/2_Figs/2_Others/0_Cover/2_Swith.svg", width: 100%)
+  )
+
+
+)
+
+
 // the title headers are the regular big headers in the text, that is text headers. they are NOT in the starting of the page. the headers that are talked about are #chapter #
 #let text_header(body) = [
 
@@ -39,30 +77,21 @@
       if it.supplement != none and "Appendix" in it.supplement.text {
         //  repr(type(it.supplement.text))
         let chap_add = "Additional Materials"
-
-        block(width: 100%)[
-          #set align(center)
-          #if chap_add != none {
-            chap_add
-            v(0.01em)
-          }  
-
-          #set align(center)
-          #v(-1em)
-          #set text(size: 2em, weight: "bold")
-          #smallcaps(it)
-        ]
+        logo_adder(chap_add, it)
       }
 
       // ----------------------- non numbered headings ---------------------- //
       else {
         // For excluded headings, just return the original heading without modifications
+
+        let chap_add = none
+        logo_adder(chap_add, it)
         
-        block(width: 100%)[
-            #set align(center)
-            #set text(size: 2em, weight: "bold")
-            #smallcaps(it)
-          ]
+        // block(width: 100%)[
+        //     #set align(center)
+        //     #set text(size: 2em, weight: "bold")
+        //     #smallcaps(it)
+        //   ]
 
       }
     }
@@ -89,23 +118,9 @@
          chap_add = "Chapter"
       }
 
+      logo_adder(chap_add, it)
 
-      block(width: 100%)[
-        #set align(center)
-        // [Chapter #repr(it.numbering) ]
-        // [#chap_add #type(it.numbering)] 
-        
-        #if chap_add != none {
-          chap_add
-          v(0.01em)
-        }  
 
-        #set align(center)
-        #v(-1em)
-        #set text(size: 2em, weight: "bold")
-        #smallcaps(it)
-      ]
-    
     }
 
     v(3em)  // Add some vertical space after the heading
