@@ -61,7 +61,6 @@
 #include "2_Wr/0_Prerequire/1_Declaration.typ"
 #include "2_Wr/0_Prerequire/2_Acknowledge.typ"
 #include "2_Wr/0_Prerequire/3_Abstract.typ"
-// #include "2_Wr/11_To_Include/0_File.typ"
 
 
 /* ========================================================================== */

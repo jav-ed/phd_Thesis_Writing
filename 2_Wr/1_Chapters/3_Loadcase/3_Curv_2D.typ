@@ -265,6 +265,13 @@ The results obtained from method 1 according to @eq_53 and method 2 according to
 This finding has important implications for experimental validation testing, though it must be noted that these results are specific to the current simulation model and load conditions. Based on the simulation results, it can be concluded that hydrogen could be substituted with an alternative filling agent in experimental structural validation tests without affecting the maximum bearable bending moment.
 The substantial margin between measured and critical curvature values in the undisturbed region eliminates the need for detailed investigation of differences between method 1 and method 2. However, for scenarios where curvature values approach the critical threshold, a thorough comparative analysis would become necessary. Such an analysis would provide deeper insights into when each method might be preferential over the other.
 
+// ---------------------------------- here ---------------------------------- //
+Finally, one assesing water against hydrogen as the alternative filling agent is water. 
+The Materialforschung und Anwendungstechnik GmbH Dresden (IMA), has expertise in conducting experiemtnal structral validation tests. THrough collaboration with IMA, it can said that IMA specially has experience with filling pressure vessels with water. 
+Water is regarded as being more safe when conducitng experimental structral validaiton tests.
+Some justificaiton for that can be found throguh reviewing @chap_2_0 to @chap_2_2.
+// -------------------------------------------------------------------------- //
+
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
