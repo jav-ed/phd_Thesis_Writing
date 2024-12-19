@@ -146,7 +146,7 @@ The complete listing can be found in @Shin2023 or updated prices at @link_plasti
   ),
 
   kind: table,
-  caption: [Selection of a few liner materials for commercially available hydrogen storage tanks of Type IV @Shin2023],
+  caption: [Selection of a few liner materials for commercially available hydrogen storage tanks of Type IV @Shin2023.],
 )<tab_16>
 
 To conclude the analysis about the costs, especially for tank Types III and IV, the following can be said. 

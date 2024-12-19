@@ -69,7 +69,7 @@ An illustrative example of the wing of a #gls("swith") is provided in @fig_1. Wh
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png", 
   width: 100%),
-  caption: [Illustrative example of a wing of a #gls("swith")],
+  caption: [Illustrative example of the wing of a #gls("swith").],
 ) <fig_1>
 
 When working with #glspl("swith"), it is crucial to understand the implications arising from the key difference between regular aircraft or non-wing structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. To emphasize this critical point:

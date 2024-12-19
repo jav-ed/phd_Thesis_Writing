@@ -11,7 +11,7 @@ Thus, before delving deeper into research on #glspl("swith"), it is important to
 #figure(
   image("../../../1_Data/2_Figs/2_Others/0_Cover/4_BMWK_Fz_2017_WebSVG_en.svg", 
   width: 40%),
-  caption: [The Federal Ministry for Economic Affairs and Climate Action's logo],
+  caption: [The Federal Ministry for Economic Affairs and Climate Action's logo.],
 ) <fig_96>
 
 This project was awarded to the TU Dresden, where the author of this thesis was employed and granted permission to utilize some of the project outcomes for doctoral research.
