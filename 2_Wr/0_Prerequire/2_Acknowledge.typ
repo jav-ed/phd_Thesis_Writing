@@ -117,6 +117,7 @@ Being well aware of global politics, I understand that opposing the stance of le
 Yet, I believe standing up for justice is worth taking such risks.
 This stance also demonstrates to Whom my loyalty belongs - the *ONE*.
 
-During this period, another situation that deeply distressed me was the imprisonment of Pakistani Prime Minister Imran Khan and journalist Imran Riaz Khan.
+During this period, another situation that deeply distressed me was the imprisonment of Pakistani Prime Minister Imran Khan and beloved journalist and freedom advocate Imran Riaz Khan.
+
 
 Finally, to show one beautiful aspect of Germany, I would like to express my gratitude to the Federal Ministry for Economic Affairs and Climate Action of Germany. It has sponsored this research as properly acknowledged in @chap_0_6.
