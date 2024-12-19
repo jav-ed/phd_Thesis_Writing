@@ -4,9 +4,7 @@
 /* -------------------------------------------------------------------------- */
 
 
-#pagebreak()
-#heading("Abstract", level:2, numbering: "I.1.1")
-
+= Abstract
 
 This thesis investigates #glspl("swith", long:true) as an innovative approach to sustainable aviation. The integration of hydrogen fuel tanks into wing structures represents a significant departure from conventional aircraft design, offering potential benefits in both fuel storage efficiency and structural performance. However, no operational #glspl("swith") currently exist in commercial aviation, and the field lacks established standards and regulatory frameworks.
 This research advances the development of static testing methodologies for #glspl("swith"), addressing critical challenges in their certification pathway.

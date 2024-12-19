@@ -57,8 +57,10 @@
 // ========================================================================== //
 
 // --------------------------------- Preface -------------------------------- //
-#include "2_Wr/0_Prerequire/0_Preface.typ"
-
+#set heading(numbering: "I.1.1")
+#include "2_Wr/0_Prerequire/1_Declaration.typ"
+#include "2_Wr/0_Prerequire/2_Acknowledge.typ"
+#include "2_Wr/0_Prerequire/3_Abstract.typ"
 // #include "2_Wr/11_To_Include/0_File.typ"
 
 
@@ -66,7 +68,7 @@
 /* ================================== Intro ================================= */
 /* ========================================================================== */
 #counter(heading).update(0)
-
+#set heading(numbering: "1.1.1")
 // link color changed here in order not to effect the link color of the tocs
 #show link: set text(fill: color_Link)
 
