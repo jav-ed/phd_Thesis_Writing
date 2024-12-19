@@ -93,8 +93,7 @@ At the time of writing this thesis, I lived in Dresden, Germany.
 During this period, while Israel was bombing Palestine, leading German politicians publicly declared that the German nation would stand with Israel.
 Dear reader, I ask you to recognize my utmost desire to distance myself as much as possible from the actions taken by leading German politicians in the years 2023 and 2024.
 
-// cannot express myself suffincently
-While this short paragraph does not permit space for detailed explanations of this issue, I would like to pinpoint a few crucial points.
+While this short paragraph does not permit space for detailed elaborations, I would like to pinpoint a few crucial points.
 I am saying this as a non-Arab - I was not born in Palestine, I never went there, from what I know I also do not have any family members there, nor do I have any connections to people there.
 Taking away drinking water from any population, be it a Muslim Arab or whoever else, can easily be seen as a monstrous act. I know that every human was gifted with dignity, honor and respect.
 Part of this dignity is unrestricted access to water. Another important aspect of human dignity are human rights - all of them.
