@@ -7,7 +7,7 @@
 = Conclusion and Outlook <chap_7>
 
 Aviation's pivotal role in the global economy brings with it an increasing responsibility to address environmental impacts. 
-This thesis investigated #glspl("swith", long:true) as an innovative approach to sustainable aviation. 
+This thesis investigated #gls("swith", long:true) as an innovative approach to sustainable aviation. 
 The concept represents a significant departure from conventional aircraft design by integrating hydrogen fuel storage directly into the wing structure, where tanks not only store the fuel but actively participate in load sharing. 
 This dual functionality aims to optimize space usage while potentially enhancing wing stiffness, addressing both storage efficiency and structural performance challenges simultaneously.
 

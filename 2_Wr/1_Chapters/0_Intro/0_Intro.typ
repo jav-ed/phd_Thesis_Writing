@@ -5,18 +5,13 @@
 
 // TODO
 // Needs to be reviewed in depth
-// if working with LLM, you might to provide it the pdf of the content, such that is knows what we are talking about - inshallah
 /* ------------------------------ Introduction ------------------------------ */
 = Introduction <chap_0>
-In the starting chapter of this work, first some inital background regarding the niche field shall be given 
-in @chap_0_1. 
+In the introduciton of this work, first some inital background regarding the niche field of #gls("swith", long:true) shall be given in @chap_0_1. 
 This aims to give the reader a broad overview of the field of research.
 The deeper look into this subject can inshallah be found in 
-@chap_0_7 and 
-//
-//TODO add ref to the whole chapter 2
-// @chap_0_7 
-Once a rough understanding of #gls("swith", long:true), pronounced sweet, is obtained, the motivation behind this work shall be explained in @chap_0_2.
+@chap_0_7.
+Once a rough understanding of #glspl("swith"), pronounced sweets, is obtained, the motivation behind this work shall be explained in @chap_0_2.
 The next @chap_0_3 shall outline the overall goals of this work. The reader can refer to it for gaining a quick overview about the topics that are covered.
 In @chap_0_4 the systematic strucutre of writing this thesis is given.
 The following @chap_0_5 highlights the novelty and significance of this work.
