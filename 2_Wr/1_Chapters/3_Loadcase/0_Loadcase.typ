@@ -131,10 +131,7 @@ While gust loading is inherently a dynamic load case, for the experimental stati
 The selection of a static load case is justified by several reasons. First, vertical gust loads can be obtained for all commercially available aircraft through the V-n diagram, thus promoting the generalizability of this work.
 To emphasize the relevance of this work, it is important to note that once a setup for conducting static experimental structural tests is established, the same or similar setup can be used for multiple static tests.
 Aircraft certification authorities require five static load cases for static strength substantiation @Rossow_2014. These are: preliminary static tests (calibration load cases), proof pressure tests, limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$). From these five tests, four can be conducted without requiring significant changes to the setup established for the major load case: preliminary static tests (calibration load cases), limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$).
-Once a suitable setup is established, which is covered in 
-// TODO - reference
-// refernce that goes to the optimiaztion, where it is clear which lenght, distance, amount and so on for collets it required
-// @chap_4, 
+Once a suitable setup is established, which is covered in @chap_4_4 and @chap_4_5, 
 the loads can be gradually increased from calibration to limit to ultimate to rupture test.
 
 While the static load testing sequence provides a framework for structural validation, for #glspl("swith") these tests must also account for internal pressure effects. 
@@ -199,10 +196,8 @@ $ C_L = L / ( rho/2 u^2 S)  =  (W space.thin n) / ( rho/2 u^2 S) =  (m space.thi
 
 This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem") models.
 
-Having established the theoretical foundation for critical load cases and V-n diagram analysis, industry consultation provided empirical validation. Meetings were conducted with two German companies: a pioneering aircraft manufacturer and one of Europe's leading aerospace testing facilities 
-// TODO mention ima properly
-#footnote[Company names withheld due to confidential knowledge], the latter being particularly experienced in structural validation testing of large commercial aircraft.
-
+Having established the theoretical foundation for critical load cases and V-n diagram analysis, industry consultation provided empirical validation. Meetings were conducted with two German companies: a pioneering aircraft manufacturer#footnote[Company name withheld due to confidential knowledge.] 
+and IMA Dresden, one of Europe's leading small and large aerospace testing facilities. 
 Both organizations demonstrated substantial interest in the structural testing, development, and commercial certification of #glspl("swith"). One of these companies conducted independent investigations of critical load cases and shared their findings with this research. While specific details remain confidential, it is substantial that both organizations corroborated the identification of multiple load cases from the V-n diagram as critical. This industry validation supports the adoption of V-n diagram analysis as a valuable methodology for the structural validation testing of #glspl("swith").
 
 // --------------------------------- summary -------------------------------- //

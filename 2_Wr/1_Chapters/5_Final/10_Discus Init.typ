@@ -2,7 +2,6 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO remove redundancies
 = Discussion <chap_6>
 
 // ------------------------------- motivation ------------------------------- //
@@ -190,7 +189,7 @@ Subsequently, it was demonstrated how the beam model solver could be integrated 
 
 
 // --------------------------- optimiaztion cases --------------------------- //
-// TODO should be in past tense?
+
 *@chap_4_5_0 to @chap_4_5_3 -*
 The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. The framework was developed to determine key parameters of the #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
 

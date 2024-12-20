@@ -52,10 +52,10 @@ An illustrative example of the latter is given in @fig_0.
 
 The specific location for placing these tanks is complex and depends on numerous factors
 @Eissele2023 @Adler2024 @Onorato2022
-@Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022
-. However, an alternative approach involves integrating high-pressure hydrogen tanks structurally inside the fuselage
-@Onorato2022 @Huete2021 @Baroutaji2019 @Verstraete2013 @onorato2021fuel
-.
+@Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022. 
+However, an alternative approach involves integrating high-pressure hydrogen tanks structurally inside the fuselage
+@Onorato2022 @Huete2021 @Baroutaji2019 @Verstraete2013 @onorato2021fuel.
+
 This work, on the other hand, deals with the structural integration of the high-pressure hydrogen tanks to the wing.
 As a consequence of this structural connection, loads are shared between the tanks and the wing.
 More specifically, when the wing experiences lift distribution, part of the load is transferred to the hydrogen tanks. Conversely, acceptable deformations caused by the high pressure within the tanks will exert stress on the wing skin. The structural connections between the wing and tanks create load paths in the connection areas.

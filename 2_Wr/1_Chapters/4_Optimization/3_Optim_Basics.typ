@@ -39,7 +39,6 @@ Local minima and maxima occur precisely at points where the first derivative equ
 This mathematical property establishes a key distinction: while a function typically possesses singular global maximum and minimum values, it may contain multiple local maxima and minima.
 It is noteworthy that certain functions may not exhibit unique global extrema, particularly when local and global extreme values coincide. This phenomenon can be observed in trigonometric functions, such as sine or cosine. Although these functions are nonlinear, their periodic nature results in local extrema that are equivalent to global extrema, as demonstrated in @fig_73.
 
-// proper caption required
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/1_Sin_Opti.svg", 
   width: 100%),
