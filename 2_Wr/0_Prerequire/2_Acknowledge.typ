@@ -81,7 +81,7 @@ I would like to thank Dr.-Ing. Silvio Nebel, Head of Department Aerospace at IMA
 
 
 #line(length: 100%)
-The authors gratefully acknowledge the computing time made available to them on the high-performance computer at the NHR Center of TU Dresden. This center is jointly supported by the Federal Ministry of Education and Research and the state governments participating in the NHR (www.nhr-verein.de/unsere-partner).
+The author gratefully acknowledges the computing time made available to him on the high-performance computer at the NHR Center of TU Dresden. This center is jointly supported by the Federal Ministry of Education and Research and the state governments participating in the NHR (www.nhr-verein.de/unsere-partner).
 
 #line(length: 100%)
 

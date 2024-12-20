@@ -5,7 +5,7 @@
 /* --------------------------- Research Objectives -------------------------- */
 == Research Objectives <chap_0_3>
 
-This section presents the overarching objectives of this work as defined by the thesis title: #emph([Investigations on Aircraft #gls("swith", long:true)]).
+This section presents the overarching objectives of this work as defined by the thesis title: #emp_([Investigations on Aircraft #gls("swith", long:true)]).
 Building upon the fundamental understanding of #gls("swith") established in @chap_0_2, it is acknowledged that this field requires wide-ranging research. 
 The term "investigations" is particularly significant, as the breadth of research necessary for #gls("swith") extends far beyond what a single researcher or even a single academic department could fully explore.
 Nevertheless, initial steps towards realizing a commercially viable #gls("swith") are not only essential but also increasingly valuable due to their pioneering nature. 
@@ -15,7 +15,7 @@ The concrete topics to be covered in this research are as follows.
 /* ---------------------------------- intro --------------------------------- */
 One primary objective of this research is to develop a comprehensive understanding of the #gls("swith") concept. This involves precisely defining what a #gls("swith") is, exploring its potential applications in aviation and elucidating its crucial relationship with #gls("cgh2", long:true) as the fuel. 
 The study should evaluate the benefits that #glspl("swith") could bring to aircraft aviation and environment. 
-Following this, the research needs to conduct a analysis of the current state of the art in #glspl("swith"), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field.
+Following this, the research needs to conduct an analysis of the current state of the art in #glspl("swith"), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field.
 
 /* ---------------------------------- norms --------------------------------- */
 Another critical objective is to examine the regulatory landscape for #glspl("swith"). This examination aims to gain insights crucial for the real-world certification of #glspl("swith"). 
