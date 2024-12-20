@@ -30,11 +30,11 @@ While there are numerous additional reasons why altering the tube dimensions is 
 /* -------------------------------------------------------------------------- */
 
 The second method to increase the hydrogen capacity of the tubes is through compression
-@Muthukumar2023 @Klell2023 
-. With a fixed volume, increasing the pressure within the tanks allows for comparatively greater hydrogen storage. To maximize the flight range of an economically viable #gls("swith"), a very high tank pressure is desirable. However, the pressurized structure must ensure secure storage and operational safety. Consequently, the magnitude of pressure is constrained, among other factors, by material properties @Cheng2024 @Bagarello2024.
+@Muthukumar2023 @Klell2023. 
+With a fixed volume, increasing the pressure within the tanks allows for comparatively greater hydrogen storage. To maximize the flight range of an economically viable #gls("swith"), a very high tank pressure is desirable. However, the pressurized structure must ensure secure storage and operational safety. Consequently, the magnitude of pressure is constrained, among other factors, by material properties @Cheng2024 @Bagarello2024.
 Given the reasoning above, it can be concluded that for commercial and economically attractive #glspl("swith"), the structure-integrated hydrogen tanks are subject to high pressure
-@Klell2023 @Cheng2024 @Bagarello2024
-. Due to this high pressure and the structural connectivity between the wing and the tanks, the pressure loads from the tanks are shared with the wing. Conversely, the aerodynamic loads acting on the wing are shared with the tanks. Thus, the concept of a #gls("swith") serves a dual purpose: fuel storage and load sharing between wing and tanks @Adler2023.
+@Klell2023 @Cheng2024 @Bagarello2024. 
+Due to this high pressure and the structural connectivity between the wing and the tanks, the pressure loads from the tanks are shared with the wing. Conversely, the aerodynamic loads acting on the wing are shared with the tanks. Thus, the concept of a #gls("swith") serves a dual purpose: fuel storage and load sharing between wing and tanks @Adler2023.
 
 A significant advantage of this configuration is the efficient utilization of available space within the aircraft. In contrast, non-structure-integrated hydrogen tanks are typically placed within the aircraft, often in the fuselage 
 @Eissele2023 @Prewitz2023 @Huete2022 @Cipolla2022, although they could potentially be located within the wing @Huete2021. 
@@ -50,8 +50,8 @@ An alternative approach involves integrating the tanks within the fuselage rathe
 
 
 In the scenario of fuselage-integrated hydrogen tanks
-@Onorato2022 @Huete2021  @Baroutaji2019   @Verstraete2013 @onorato2021fuel   @verstraete2009potential   
-, the tanks contribute to load-bearing. However, due to the conventional tube-and-wing configuration, the loads experienced within the fuselage are significantly lower than in a #gls("swith") design. 
+@Onorato2022 @Huete2021  @Baroutaji2019   @Verstraete2013 @onorato2021fuel   @verstraete2009potential, 
+the tanks contribute to load-bearing. However, due to the conventional tube-and-wing configuration, the loads experienced within the fuselage are significantly lower than in a #gls("swith") design. 
 
 In addition to aerodynamic loads, conventional aircraft wings bear substantial localized forces from mounted components such as engines and landing gear. #glspl("swith")  present a unique advantage in this context. By integrating high-pressure hydrogen tanks within the wing structure, #glspl("swith") facilitate a more distributed load-bearing system. This integration enables the hydrogen tanks to partly alleviate the wing structure from the concentrated loads imposed by these attached components.
 

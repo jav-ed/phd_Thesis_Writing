@@ -48,7 +48,7 @@ This methodology raises several fundamental questions regarding implementation:
 The first two questions are addressed within this section, while the remaining aspects are examined throughout @chap_4.
 Before proceeding with the detailed analysis, it is pertinent to elaborate on the rationale behind selecting this approach over the previously mentioned alternatives.
 As mentioned in @chap_0_6, this research was conducted within the framework of the K#sub[2]H#sub[2] project. 
-Through collaboration with the industrial partner Materialforschung und Anwendungstechnik GmbH Dresden (IMA), valuable practical insights were obtained for this thesis.
+Through collaboration with the industrial partner IMA Materialforschung und Anwendungstechnik GmbH Dresden, valuable practical insights were obtained for this thesis.
 IMA's expertise encompasses extensive experience in experimental structural testing of aircraft across various size categories, including the Airbus A380 @link_Lufthansa_Airbus_380.
 Their established methodology primarily employs #glspl("lie") in ground-based testing configurations. This existing expertise offers notable advantages regarding implementation efficiency. The sustained application of this testing methodology by IMA demonstrates both its economic viability and technical reliability. Moreover, cost projections for this approach are considerably lower than the alternative methods, primarily due to existing infrastructure, established procedures, and personnel expertise.
 
