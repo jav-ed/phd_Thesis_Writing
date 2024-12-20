@@ -85,7 +85,7 @@ This information constitutes the complete set of parameters required to solve th
 The investigation advances from beam modeling fundamentals to its computational implementation.
 While analytical solutions on paper are feasible, this approach becomes impractical when integrating beam models into numerical optimization frameworks. Effective implementation of optimization procedures requires the beam model solver to be available as executable numerical code.
 The selection of an appropriate programming language represents a critical decision in applied scientific computing. Python @van1995python provides access to open-source libraries that enable symbolic computation. The availability of this symbolic computation capability constitutes a primary factor in selecting Python for beam solver development.
-Additional justification for choosing Python as the computational platform is provided in subsequent discussion.
+Additional justification for choosing Python as the computational platform is provided in subsequent elaboration.
 // ------------------------- python implementations ------------------------- //
 
 Python has established itself as a versatile programming language with widespread adoption across diverse fields @AliAkbari2024 @Trost2023 @Ries2024 @Barneschi2024 @Gardner2024 @Kuo2024 @Lewthwaite2024. 
