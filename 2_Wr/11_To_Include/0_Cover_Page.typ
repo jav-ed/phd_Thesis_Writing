@@ -11,7 +11,7 @@
     )
 
 
-// #v(-2em)
+#v(-2em)
 
 #table(
     columns: (1fr, 1fr),
@@ -81,11 +81,11 @@ image("../../1_Data/2_Figs/0_Content/0_Chap/0_Wing_Tube.png",width: 100%)
 
 
 // Note, if this shall be activated, make sure that the #v(-2em) at the top of this page is inshallaha activated
-// #table(
-//   columns: (auto, auto),
-//   stroke: none,
-//   align: (left, left),
+#table(
+  columns: (auto, auto),
+  stroke: none,
+  align: (left, left),
 //   TODO Islamic date required as well
-//   [Submission date:], [TBD],
-//   [Examiner:], [Prof. Dr. Johannes \ Markmiller]
-// )
+  [Submission date:], [TBD | Islamic Date],
+  [Examiner:], [Prof. Dr. Johannes \ Markmiller]
+)
