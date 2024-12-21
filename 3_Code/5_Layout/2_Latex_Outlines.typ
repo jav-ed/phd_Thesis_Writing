@@ -57,7 +57,6 @@
   // show: bod => init_latex_figs(bod, [Figure])
 
   // the second attempt - should be more powerful
-  // TODO - adding heading creates iteration issues
   show: latex_figs
 
   heading("List of Figures", level:1, numbering:none)

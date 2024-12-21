@@ -53,8 +53,7 @@
       // [counter: #context repr(chap_counter_helper.get()) ]
     }
 
-  context {
-
+    context {
       let ct_counter_val = chap_counter_helper.get()
 
       // Check if it's the first figure in a new chapter (excluding chapter 1) and special treatment for the Appendix - heading counting was set to zero
@@ -85,26 +84,33 @@
         }
       }
 
-      // [#repr(et)]
-      // if ct_elem.numbering != none{
-      //   [#repr(ct_elem.numbering)]
-      // }
+    }
+
+    // ------------------------- outside of context ------------------------- //
+
+    // [#repr(et)]
+    // if ct_elem.numbering != none{
+    //   [#repr(ct_elem.numbering)]
+    // }
 
 
-      // let number = if ct_elem.numbering != none {
-      //   numbering(ct_elem.numbering, ..ct_elem.counter.at(ct_elem.location()))
-      // }
+    // let number = if ct_elem.numbering != none {
+    //   numbering(ct_elem.numbering, ..ct_elem.counter.at(ct_elem.location()))
+    // }
 
-      // get the number
-      let number = if ct_elem.numbering != none {
-        it.body.children.at(2)
-      }
+    // get the number
+    let number = if ct_elem.numbering != none {
+      it.body.children.at(2)
+    }
 
-      let page = {
-        let page-numbering = ct_elem.location().page-numbering()
-        if page-numbering == none { page-numbering = "1" }
-        numbering(page-numbering, ct_elem.location().page())
-      }
+    let page = {
+      let page-numbering = ct_elem.location().page-numbering()
+      if page-numbering == none { page-numbering = "1" }
+      numbering(page-numbering, ct_elem.location().page())
+    }
+
+    
+    context {
 
       let number-width = measure(number).width
       let page-width = measure(page).width
@@ -145,6 +151,7 @@
       ))
 
      // --------------------------- inside context -------------------------- //
+  
     }
 
   }
