@@ -10,6 +10,8 @@
 #let twc_Col = tailwind
 
 #let table_cl_header = rgb("#7FFF7F")
+
+// 67FFB7
 // #let table_cl_header = twc_Col.green-400
 #let table_cl_0 = twc_Col.slate-50
 #let table_cl_1 = twc_Col.gray-300
