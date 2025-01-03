@@ -13,7 +13,7 @@ Following an introduction to #glspl("swith"), @chap_0_2 examines the motivation 
 enables transparency regarding the research funding sources and acknowledges all financial support.
 
 
-/* ---------------------------- Inital Background --------------------------- */
+// --------------------------- Initial Background --------------------------- //
 == Initial Background <chap_0_1>
 
 This section introduces the concept of #gls("swith", long:true), providing a foundational definition for the subsequent elaborations. While comprehensive technical details about #glspl("swith") are presented in @chap_0_7, this initial overview establishes the essential principles necessary for understanding the research context. By introducing core concepts before delving into technical complexities, this approach facilitates comprehension for readers across different levels of expertise in the field.

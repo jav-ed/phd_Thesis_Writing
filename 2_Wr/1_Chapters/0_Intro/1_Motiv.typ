@@ -34,24 +34,23 @@ These emissions include carbon dioxide (CO2), nitrogen oxides (NOx), and sulphur
 The magnitude of this issue is reflected in policy initiatives such as the European Commission's Flightpath 2050 @Zaporozhets2021. 
 This document sets ambitious goals for the aviation industry, including a 75% reduction in CO2 emissions and a 90% reduction in NOx emissions per passenger kilometer @Zaporozhets2021. These targets underscore the urgent need for innovative solutions in aviation technology and fuel systems.
 
-One promising approach to meeting these environmental challenges, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to potentially eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. However, lack of awareness or mishandling of these properties could potentially cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation.
+One promising approach to meeting these environmental challenges, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to 
+eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. 
+However, lack of awareness or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and challenges regarding the practical implementation of hydrogen in aviation.
 These are especially of importance in the face of conducting experimental structural validation tests that are mandatory for certifying any aircraft. A more detailed examination of hydrogen's properties and challenges can be found in @chap_2_0 to @chap_2_2.
-
 Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022 @Capurso2022. 
 Considering only the mobility sector 
 @Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause 
 severe damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
 
 Furthermore, based on the literature reviewed for this thesis, the author observes that valuable information for a specific domain can often be found within seemingly unrelated fields. 
-This interdisciplinary nature of knowledge implies that domains without apparent direct links can potentially contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
-
+This interdisciplinary nature of knowledge implies that domains without apparent direct links could contribute to each other's progress, highlighting the importance of cross-disciplinary research and collaboration.
 #glspl("swith") represent a novel concept in aviation fuel storage, integrating hydrogen tanks within the wing structure. This design aims to maximize space utilization while potentially contributing to load-bearing, distinguishing it from conventional fuel storage methods. Besides the scarcity of literature about #glspl("swith"), their unique characteristics present 
 critical challenges. Unlike most structure-integrated implementations reviewed in literature, which predominantly focus on fuselage integration, #glspl("swith") involve wing integration. 
 This distinction is crucial, as wing-integrated tanks experience substantially greater aerodynamic loads compared to fuselage-integrated tanks in conventional tube-and-wing configurations.
 
 The dual functionality of #glspl("swith") - serving as both fuel storage and load-bearing structures - introduces complexity that extends beyond the scope of current certification procedures for commercial aircraft. This novel approach necessitates a reevaluation of existing safety standards and certification processes.
 Certification authorities need to ensure that #glspl("swith") can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in @chap_1.
-
 First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #glspl("swith").
 Second, even when assuming it would be known what to test, there remains a 
 formidable challenge in determining how to conduct these tests safely. Addressing these certification challenges is crucial for the successful implementation of #glspl("swith") in commercial aviation.
@@ -59,7 +58,7 @@ formidable challenge in determining how to conduct these tests safely. Addressin
 The primary focus of this work is scientific, aiming to advance the understanding of #glspl("swith") and their experimental structural validation tests.
 However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #glspl("swith") could have 
 profound implications in economic, technological, and strategic domains.
-While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These potential advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive exploration of these aspects is presented in @chap_0_5.
+While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These possible advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive exploration of these aspects is presented in @chap_0_5.
 
 
 /* --------------------------------- summary -------------------------------- */

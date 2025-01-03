@@ -13,10 +13,13 @@ import b_Words_2_Find as w_h
 
 
 def display_results(results: dict):
-   for file_path, word_data in results.items():
-       print(f"\nFile: {file_path}")
-       for word, duplicates in word_data.items():
-           print(f"- {word:<30} appears {len(duplicates)} times in close proximity")
+    if len(results) == 0:
+        print("\nNo duplicates found in close proximity - just fine")
+    
+    for file_path, word_data in results.items():
+        print(f"\nFile: {file_path}")
+        for word, duplicates in word_data.items():
+            print(f"- {word:<30} appears {len(duplicates)} times in close proximity")
 
 def find_typ_files(root_dir: str) -> List[Path]:
     return sorted(Path(root_dir).rglob("*.typ"))
@@ -61,9 +64,18 @@ def analyze_duplicates(file_paths: List[Path],
 # Example usage:
 # files = find_typ_files("2_Wr/1_Chapters/0_Intro")
 
-singl_file = "2_Wr/1_Chapters/0_Intro/1_Motiv.typ"
+# just fine: A
+# contains some rep, but fine : BJ
+# ---------------------------------- chap 0 ---------------------------------- #
+# singl_file = "2_Wr/1_Chapters/0_Intro/0_Intro.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/0_Intro/1_Motiv.typ" # A
+# singl_file = "2_Wr/1_Chapters/0_Intro/2_Research_Objec.typ" # BJ
+singl_file = "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ" # BJ
 
-files = find_typ_file("singl_file")
+# ---------------------------- chap 1 - standards ---------------------------- #
+
+# ---------------------------------------------------------------------------- #
+files = find_typ_file(singl_file)
 words_to_find = w_h.words_2_find
 
 results = analyze_duplicates(files, words_to_find)

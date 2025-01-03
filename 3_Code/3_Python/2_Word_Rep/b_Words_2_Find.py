@@ -30,6 +30,7 @@ words_2_find = [
         "fundamental",
         "aspect",
         "systematic",
+        "demand",
         
         
         
@@ -42,7 +43,10 @@ words_2_find = [
         "give",
         "factor",
         "profound",
-        "implement"
+        "implement",
+        "vital",
+        "technique",
+        "potential"
         
         
 ]
