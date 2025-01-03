@@ -61,8 +61,11 @@ def analyze_duplicates(file_paths: List[Path],
 # Example usage:
 # files = find_typ_files("2_Wr/1_Chapters/0_Intro")
 
-files = find_typ_file("2_Wr/1_Chapters/0_Intro/0_Intro.typ")
+singl_file = "2_Wr/1_Chapters/0_Intro/1_Motiv.typ"
+
+files = find_typ_file("singl_file")
 words_to_find = w_h.words_2_find
 
 results = analyze_duplicates(files, words_to_find)
 display_results(results=results)
+print(f"\ndone with: {singl_file}")

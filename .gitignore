@@ -2,3 +2,8 @@
 
 fast.typ
 fast_1.typ
+
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class

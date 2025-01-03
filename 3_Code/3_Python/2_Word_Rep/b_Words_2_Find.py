@@ -19,6 +19,7 @@ words_2_find = [
         "notable",
         "exhaustive",
         "necessitates",
+        "necessary",
         "requires",
         "demonstrate",
         "particular",
@@ -40,6 +41,8 @@ words_2_find = [
         "outline",
         "give",
         "factor",
+        "profound",
+        "implement"
         
         
 ]
