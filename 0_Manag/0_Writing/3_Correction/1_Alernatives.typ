@@ -67,3 +67,34 @@
 9. compels
 10. obliges
 11. needs
+
+
+// --------------------------------- provide -------------------------------- //
+1. supply 
+2. furnish 
+3. deliver 
+4. offer
+5. give 
+6. contribute 
+7. present 
+8. extend
+9. equip 
+10. outfit 
+11. stock 
+12. provision
+13. grant 
+14. bestow 
+15. dispense 
+16. distribute
+17. yield 
+18. generate 
+19. produce 
+20. render
+21. Issue 
+22. administer 
+23. allocate 
+24. assign
+25. afford 
+26. impart 
+27. convey 
+28. tender
