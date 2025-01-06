@@ -3,12 +3,14 @@
 /* -------------------------------------------------------------------------- */
 
 
+// Word rep ins. done
+
 == Research Enabler <chap_0_6>
 This section provides context for the research environment that facilitated this study on #glspl("swith"). It outlines the funding sources that enabled this contribution to #glspl("swith"). By transparently presenting this information, readers can better understand the research ecosystem and form their own opinions on the study's context.
 Thus, before delving deeper into research on #glspl("swith"), it is important to acknowledge the research funding and support structure. 
 // -------------------------------------------------------------------------- //
 
-The Federal Ministry for Economic Affairs and Climate Action, whose logo is shown in @fig_96, provided the primary sponsorship. They supported the research project "K#sub[2]H#sub[2] (Konzeptprüfstand für Kleinflugzeugflügel mit hochintegralen Hochdruckwasserstofftanks)" under the identification number 20M2117B.
+The Federal Ministry for Economic Affairs and Climate Action, whose logo is shown in @fig_96, granted the primary sponsorship. They supported the research project "K#sub[2]H#sub[2] (Konzeptprüfstand für Kleinflugzeugflügel mit hochintegralen Hochdruckwasserstofftanks)" under the identification number 20M2117B.
 
 #figure(
   image("../../../1_Data/2_Figs/2_Others/0_Cover/4_BMWK_Fz_2017_WebSVG_en.svg", 
