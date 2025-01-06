@@ -56,7 +56,9 @@ words_2_find = [
         "potential"
         "offer",
         "include",
-        "encompas"
+        "encompas",
+        
+        "applicable",
         
         
 ]

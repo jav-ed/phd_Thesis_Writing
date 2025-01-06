@@ -10,19 +10,19 @@ The fundamentals of pressure vessels are explored, laying the groundwork for und
 Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
 An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
 This chapter concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_5.
-Throughout, the text emphasizes the current standardization challenges and the need for new or adapted standards. 
+Throughout, the text emphasizes the current standardization hurdles and the need for new or adapted standards. 
 The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2.
 
 // Title was checked and is fine - inshallah
 == Importance of Standards <chap_1_0>
 
-The development of #gls("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with critical structural elements. 
-As with any groundbreaking technology, the path from concept to implementation is fraught with challenges. 
-This section elucidates the critical role that standards play in navigating the challenges of #glspl("swith") development and structral validation testing. 
+The development of #gls("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with relevant structural elements. 
+As with any groundbreaking technology, the path from concept to application is fraught with obstacles. 
+This section elucidates the critical role that standards play in navigating the barriers of #glspl("swith") development and structral validation testing. 
 It shall be made clear that standards are not only important for the final certification process but also for designing the experimental structural testing environment. 
 
-Depending on the literature that is read different defintions for the term standard can be found @Tassey2000 @Nickerson2006 @Farrell1992 @Anderson1990 @Murmann2006.
-For this thesis, the following defintion shall suffice.
+Depending on the literature that is read different definitions for the term standard can be found @Tassey2000 @Nickerson2006 @Farrell1992 @Anderson1990 @Murmann2006.
+For this thesis, the following definition shall suffice.
 Standards, at their core, serve as codified best practices and guidelines within a given field. 
 Standards encapsulate collective knowledge and experience, providing a framework for consistent, safe, and efficient development and implementation of technologies @Narayanan2012 @Zoo2017 @Jiang2018. 
 Moreover, as more stakeholders adopt these standards, network effects come into play, increasing the value and effectiveness of the standards across the industry @Narayanan2012 @Zoo2017.
@@ -39,7 +39,7 @@ Moreover, standards form the basis for certification procedures, ensuring that #
 
 /* ------------------------------- advantages ------------------------------- */
 As the development of comprehensive standards proves essential for #glspl("swith") implementation and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gls("swith") development offers several key benefits that extend beyond mere regulatory compliance
-Firstly, it provides a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
+Firstly, it offers a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
 Furthermore the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
 Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017. 
 This is particularly important for #glspl("swith"), where the integration of high-pressure hydrogen storage with critical aircraft structures presents unique safety considerations. 
@@ -63,7 +63,7 @@ Consequently, it can be said that the evolution of standards is likely to play a
 
 #summary_([
 In conclusion, the role of standards in #gls("swith") development is multifaceted and still in its infancy. 
-While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these challenges also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
+While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these hurdles also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
 At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
 Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #glspl("swith").
