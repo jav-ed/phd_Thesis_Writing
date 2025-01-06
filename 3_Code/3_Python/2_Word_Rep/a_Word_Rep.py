@@ -62,7 +62,7 @@ def analyze_duplicates(file_paths: List[Path],
     return results
 
 # Example usage:
-files = find_typ_files("2_Wr/1_Chapters/0_Intro")
+# files = find_typ_files("2_Wr/1_Chapters/0_Intro")
 
 # just fine: A
 # contains some rep, but fine : BJ
@@ -73,9 +73,10 @@ files = find_typ_files("2_Wr/1_Chapters/0_Intro")
 # singl_file = "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/4_Novelty.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/5_Research_Enabler.typ" # A
-# singl_file = "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ" # A
+singl_file = "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ" # A
 
 # ---------------------------- chap 1 - standards ---------------------------- #
+# singl_file = "2_Wr/1_Chapters/1_Standards/0_Standards.typ" # A
 
 # ---------------------------------------------------------------------------- #
 

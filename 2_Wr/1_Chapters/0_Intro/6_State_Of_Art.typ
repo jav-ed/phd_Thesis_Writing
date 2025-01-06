@@ -6,8 +6,11 @@
 
 == State of The Art <chap_0_7>
 
-This section presents an overview of #glspl("swith"). Initially, a detailed definition of #gls("swith", long:true) shall be provided. The section then shall examine whether #glspl("swith") are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these approaches and #glspl("swith").
-Subsequently, the key benefits of #glspl("swith") shall be outlined, followed by a short analysis of potential drawbacks associated with this pioneering approach. By this point, the differences between #glspl("swith") and currently available commercial aircraft should be evident. After reading this section, the reader should clearly understand what #glspl("swith") are, their main purposes, and how they differ from other existing approaches.
+This section presents an overview of #glspl("swith"). Initially, a detailed definition of #gls("swith", long:true) shall be provided. The section then shall examine whether #glspl("swith") are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. 
+Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these attempts and #glspl("swith").
+Subsequently, the key benefits of #glspl("swith") shall be outlined, followed by a short analysis of potential drawbacks associated with this pioneering concept. 
+By this point, the differences between #glspl("swith") and currently available commercial aircraft should be evident. 
+After reading this section, the reader should clearly understand what #glspl("swith") are, their main purposes, and how they differ from other existing solutions.
 /* -------------------------------------------------------------------------- */
 
 This work focuses on #glspl("swith"), which constitute a novel configuration for aircraft design. The innovation lies in the manufacturing and design of the wing and the hydrogen tanks. 
@@ -25,7 +28,7 @@ A visual depiction of the i-2 is given in @fig_2.
 Due to the goal of bringing this aircraft to market, real-world demands must be considered. A primary concern is the range of flight 
 @butt2021development @Viswanathan2022, which necessitates storing as much hydrogen as possible within the tanks @Muthukumar2023.
 Given the focus on gaseous hydrogen @Manigandan2023 @Yusaf2024 @Meissner2023, two main options exist for increasing storage capacity: enlarging the tank dimensions or compressing the gas. However, increasing the dimensions presents significant challenges due to constraints from various disciplines. Larger tubes would add mass, a crucial factor in structural design. 
-Moreover, any change in the shape or dimensions of the tubes would necessitate corresponding changes to the wing shape and dimensions, as they are structurally connected. The wing, being the primary generator of aerodynamic force, is highly sensitive to such changes. Any modification ofn the wing would directly impact the lift distribution
+Moreover, any change in the shape or dimensions of the tubes would necessitate corresponding changes to the wing shape and dimensions, as they are structurally connected. The wing, being the primary generator of aerodynamic force, is highly sensitive to such changes. Any modification of the wing would directly impact the lift distribution
 @McLean2014 @McBain2012 @Schuetz_2023 @Hucho2012 @Sigloch2022. 
 While there are numerous additional reasons why altering the tube dimensions is problematic, these examples suffice to highlight the complexities involved in increasing storage capacity through dimensional changes.
 
@@ -40,9 +43,8 @@ Due to this high pressure and the structural connectivity between the wing and t
 
 A significant advantage of this configuration is the efficient utilization of available space within the aircraft. In contrast, non-structure-integrated hydrogen tanks are typically placed within the aircraft, often in the fuselage 
 @Eissele2023 @Prewitz2023 @Huete2022 @Cipolla2022, although they could potentially be located within the wing @Huete2021. 
-The key distinction is that these non-structure-integrated tanks do not serve a dual purpose. They solely store fuel without structurally alleviating any other part of the aircraf. In other words, they do not share loads with other aircraft components.
-
-An alternative approach involves integrating the tanks within the fuselage rather than the wings, as is the case with #glspl("swith"). Illustrative variations of this approach are given in @fig_3. 
+The key distinction is that these non-structure-integrated tanks do not serve a dual purpose. They solely store fuel without structurally alleviating any other part of the aircraft. In other words, they do not share loads with other aircraft components.
+An alternative solution involves integrating the tanks within the fuselage rather than the wings, as is the case with #glspl("swith"). Illustrative variations of this approach are given in @fig_3. 
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/0_Chap/2_Fuselage_Integration.jpg", 
@@ -59,9 +61,8 @@ In addition to aerodynamic loads, conventional aircraft wings bear substantial l
 
 /* -------------------------------------------------------------------------- */
 That being said, the primary advantage of hydrogen-powered aircraft is the mitigation of negative environmental impacts associated with kerosene-driven aircraft. This advantage is consistent across all integration methods: non-structure integrated, fuselage-structure integrated, and #gls("swith").
-
 Both structure-integrated variations constitute niche fields within aerospace engineering, as evidenced by a review of the literature. However, when comparing the two approaches, it is observed that there is appreciably more publicly available research on fuselage-integrated high-pressure tanks than on #glspl("swith"). 
-At the time of this thesis's composition, only one publicly available scientific paper examining wing-integrated high-pressure gaseous hydrogen tanks was identified @Friedmann2023. This paper cites multiple patents related to #glspl("swith"), including @Scheffel2015 from APUS @APUS_0. Beyond these patents, the paper does not reference any additional scientific work concretely addressing #glspl("swith").
+At the time of this thesis's composition, only one publicly available scientific paper examining wing-integrated high-pressure gaseous hydrogen tanks was identified @Friedmann2023. This paper cites multiple patents related to #glspl("swith"), including @Scheffel2015 from APUS @APUS_0. Beyond these patents, the paper does not reference any additional scientific document concretely addressing #glspl("swith").
 
 
 The scarcity of openly available scientific work on #glspl("swith"), coupled with the limited number of aircraft manufacturers capable of demonstrating a functional #gls("swith"), suggests that the manufacturing industry could face significant challenges in the production process. A primary obstacle could be the complexity of producing a single component that integrates both the wing and the tubes.
