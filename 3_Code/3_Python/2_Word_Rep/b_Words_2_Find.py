@@ -19,6 +19,7 @@ words_2_find = [
         "notable",
         "exhaustive",
         "necessitates",
+        "essential",
         "necessary",
         "requires",
         "demonstrate",
@@ -32,11 +33,16 @@ words_2_find = [
         "systematic",
         "demand",
         
+        "work",
+        "thesis",
+        
+        
         
         
         "examine",
+        "examination",
+        
         "explore", 
-        "examine", 
         "addres", 
         "detail",
         "outline",
@@ -47,6 +53,9 @@ words_2_find = [
         "vital",
         "technique",
         "potential"
+        "offer",
+        "include",
+        "encompas"
         
         
 ]

@@ -9,8 +9,7 @@
 The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers with a foundational overview of the research field, while a detailed examination of the subject is 
 given in @chap_0_7.
 Following an introduction to #glspl("swith"), @chap_0_2 examines the motivation underlying this work. @chap_0_3 delineates the overall objectives of the research. @chap_0_4 outlines the structural organization of this thesis, offering readers a systematic overview of the covered topics.
-@chap_0_5 addresses the novel contributions and importance of this work. The introduction also includes @chap_0_6, which 
-enables transparency regarding the research funding sources and acknowledges all financial support.
+@chap_0_5 addresses the novel contributions and importance of this dissertation. The introduction also includes @chap_0_6, which enables transparency regarding the research funding sources and acknowledges all financial support.
 
 
 // --------------------------- Initial Background --------------------------- //
@@ -23,14 +22,14 @@ The aviation industry is actively pursuing improvements in various aspects, with
 Among the numerous options being researched, this work explores the application of hydrogen as a potential solution. In this context, hydrogen would replace conventional fuel (kerosene) as the power source for aircraft
 @Rupcic2023 @Afonso2023 @Ansell2023 @Ficca2023 
 @Manigandan2023 @Mueller2023 @Degirmenci2023 @Eissele2023.
-When working with hydrogen, engineers currently have two economically viable options @Klell2018[p.~109] @Klell2023[p.~107] @Bosu2024: gaseous 
+When dealing with hydrogen, engineers currently have two economically viable options @Klell2018[p.~109] @Klell2023[p.~107] @Bosu2024: gaseous 
 //
 @Manigandan2023 @Yusaf2024 @Meissner2023 
 //
 and liquid hydrogen 
 //
 @Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024. 
-This work focuses on gaseous hydrogen. To achieve operational flight ranges, the hydrogen must be stored at elevated pressures. Following the principle of gas compressibility, increased pressure allows for greater hydrogen mass storage within a given volume. These storage conditions necessitate the development of structurally robust containment systems.
+This thesis focuses on gaseous hydrogen. To achieve operational flight ranges, the hydrogen must be stored at elevated pressures. Following the principle of gas compressibility, increased pressure allows for greater hydrogen mass storage within a given volume. These storage conditions necessitate the development of structurally robust containment systems.
 
 One conventional approach involves designating a dedicated space for hydrogen tanks within the aircraft structure @Eissele2023 @Adler2024. An alternative method maintains the existing aircraft configuration while incorporating additional external storage space. This external storage solution is illustrated in @fig_0.
 

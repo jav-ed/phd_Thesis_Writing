@@ -15,7 +15,7 @@ This capability has changed personal travel, enabling people to explore distant 
 In the business sector, aviation stands as an indispensable part of global commerce
 @FloridoBenitez2023 @Li2024. 
 It offers reliable and swift transportation of goods, ranging from small, high-value items to oversized cargo that exceeds the capacity of standard ground or some sea transport. 
-These logistical advancements have enabled the development of complex, international supply chains that are an essential part of modern industry. 
+These logistical advancements have enabled the development of complex, international supply chains that are an integral part of modern industry. 
 Furthermore, business travel @Lai2022 facilitated by aviation has become integral to maintaining personal relationships in an increasingly globalized economy, where face-to-face meetings can make or break crucial deals and partnerships.
 The importance of aircraft extends well beyond these primary functions @Zachariah2023. 
 In the realm of emergency services, aircraft play a vital role in search and rescue operations @Lawson2023, medical evacuations @Herstein2023, and disaster relief efforts @Pak2021. 
@@ -58,7 +58,7 @@ formidable challenge in determining how to conduct these tests safely. Addressin
 The primary focus of this work is scientific, aiming to advance the understanding of #glspl("swith") and their experimental structural validation tests.
 However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #glspl("swith") could have 
 profound implications in economic, technological, and strategic domains.
-While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These possible advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this work. A more comprehensive exploration of these aspects is presented in @chap_0_5.
+While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These possible advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this thesis. A more comprehensive exploration of these aspects is presented in @chap_0_5.
 
 
 /* --------------------------------- summary -------------------------------- */

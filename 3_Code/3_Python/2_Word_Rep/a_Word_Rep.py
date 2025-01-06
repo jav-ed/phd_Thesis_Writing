@@ -70,14 +70,19 @@ def analyze_duplicates(file_paths: List[Path],
 # singl_file = "2_Wr/1_Chapters/0_Intro/0_Intro.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/1_Motiv.typ" # A
 # singl_file = "2_Wr/1_Chapters/0_Intro/2_Research_Objec.typ" # BJ
-singl_file = "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ" # BJ
+singl_file = "2_Wr/1_Chapters/0_Intro/4_Novelty.typ" # BJ
 
 # ---------------------------- chap 1 - standards ---------------------------- #
 
 # ---------------------------------------------------------------------------- #
-files = find_typ_file(singl_file)
+
+if "singl_file" in locals():
+    files = find_typ_file(singl_file)
 words_to_find = w_h.words_2_find
 
 results = analyze_duplicates(files, words_to_find)
 display_results(results=results)
-print(f"\ndone with: {singl_file}")
+
+if "singl_file" in locals():
+    print(f"\ndone with: {singl_file}")
