@@ -8,7 +8,7 @@
 = Introduction <chap_0>
 The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers with a foundational overview of the research field, while a detailed examination of the subject is 
 given in @chap_0_7.
-Following an introduction to #glspl("swith"), @chap_0_2 examines the motivation underlying this work. @chap_0_3 delineates the overall objectives of the research. @chap_0_4 outlines the structural organization of this thesis, offering readers a systematic overview of the covered topics.
+Following an introduction to #glspl("swith"), @chap_0_2 explains the motivation underlying this work. @chap_0_3 delineates the overall objectives of the research. @chap_0_4 outlines the structural organization of this thesis, offering readers a systematic overview of the covered topics.
 @chap_0_5 addresses the novel contributions and importance of this dissertation. The introduction also includes @chap_0_6, which enables transparency regarding the research funding sources and acknowledges all financial support.
 
 

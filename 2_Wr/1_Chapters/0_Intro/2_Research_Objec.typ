@@ -21,7 +21,7 @@ Following this, the research needs to conduct an analysis of the current state o
 
 /* ---------------------------------- norms --------------------------------- */
 Another important objective is to examine the regulatory landscape for #glspl("swith"). This examination aims to gain insights crucial for the real-world certification of #glspl("swith"). 
-This includes examining the current processes and requirements for potential #gls("swith") certification, enabling commercial deployment.
+This includes evaluating the current processes and requirements for potential #gls("swith") certification, enabling commercial deployment.
 The research should determine current limitations in the regulatory framework and propose possible solutions to overcome these barriers. 
 One objective is to establish critical load cases for prospective #gls("swith") certification. 
 This involves the identification and prioritization of load cases that are most likely to be scrutinized in the certification process.

@@ -2,13 +2,15 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 == State of The Art <chap_0_7>
 
 This section presents an overview of #glspl("swith"). Initially, a detailed definition of #gls("swith", long:true) shall be provided. The section then shall examine whether #glspl("swith") are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these approaches and #glspl("swith").
 Subsequently, the key benefits of #glspl("swith") shall be outlined, followed by a short analysis of potential drawbacks associated with this pioneering approach. By this point, the differences between #glspl("swith") and currently available commercial aircraft should be evident. After reading this section, the reader should clearly understand what #glspl("swith") are, their main purposes, and how they differ from other existing approaches.
 /* -------------------------------------------------------------------------- */
 
-This work focuses on #glspl("swith"), which represent a novel configuration for aircraft design. The innovation lies in the manufacturing and design of the wing and the hydrogen tanks. 
+This work focuses on #glspl("swith"), which constitute a novel configuration for aircraft design. The innovation lies in the manufacturing and design of the wing and the hydrogen tanks. 
 Concretely, the wing is structurally integrated with hydrogen tanks that are placed within the wing, forming a single structural component of the aircraft. An illustrative example of a #gls("swith") is provided in @fig_1. Note that while it would be possible to have #glspl("swith") that utilize liquid hydrogen, this thesis focuses solely on the gaseous version.
 The concept of #glspl("swith") has progressed beyond a mere scientific idea. APUS @APUS_0, an aircraft manufacturing company, is attempting to make the first #gls("swith") commercially available with their i-2 model @APUS_1.
 A visual depiction of the i-2 is given in @fig_2.
@@ -58,12 +60,8 @@ In addition to aerodynamic loads, conventional aircraft wings bear substantial l
 /* -------------------------------------------------------------------------- */
 That being said, the primary advantage of hydrogen-powered aircraft is the mitigation of negative environmental impacts associated with kerosene-driven aircraft. This advantage is consistent across all integration methods: non-structure integrated, fuselage-structure integrated, and #gls("swith").
 
-Both structure-integrated variations constitute niche fields within aerospace engineering, as evidenced by a review of the literature. However, when comparing the two approaches, it is observed that there is substantially more publicly available research on fuselage-integrated high-pressure tanks than on #glspl("swith"). 
-At the time of this thesis's composition, only one publicly available scientific paper 
-// word addressing overused
-addressing wing-integrated high-pressure gaseous hydrogen tanks was identified @Friedmann2023. This paper cites multiple patents related to #glspl("swith"), including @Scheffel2015 from APUS @APUS_0. Beyond these patents, the paper does not reference any additional scientific work concretely 
-// word addressing overused
-addressing #glspl("swith").
+Both structure-integrated variations constitute niche fields within aerospace engineering, as evidenced by a review of the literature. However, when comparing the two approaches, it is observed that there is appreciably more publicly available research on fuselage-integrated high-pressure tanks than on #glspl("swith"). 
+At the time of this thesis's composition, only one publicly available scientific paper examining wing-integrated high-pressure gaseous hydrogen tanks was identified @Friedmann2023. This paper cites multiple patents related to #glspl("swith"), including @Scheffel2015 from APUS @APUS_0. Beyond these patents, the paper does not reference any additional scientific work concretely addressing #glspl("swith").
 
 
 The scarcity of openly available scientific work on #glspl("swith"), coupled with the limited number of aircraft manufacturers capable of demonstrating a functional #gls("swith"), suggests that the manufacturing industry could face significant challenges in the production process. A primary obstacle could be the complexity of producing a single component that integrates both the wing and the tubes.
@@ -71,7 +69,7 @@ According to publicly available information from APUS @APUS_1, the full wingspan
 From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises approximately more than half of this length, suggesting a tube length of around 7 meters. 
 Generally, with a given pressure, longer tubes allow for increased hydrogen storage capacity. 
 Consequently, for extended flight ranges and assuming the highest allowable pressure has already been selected, even longer tubes may be required.
-Based on the 7-meter assumption, it is plausible that manufacturers could need to either develop novel methods or significantly improve existing techniques to craft such large-scale and complex structures. This process must adhere to the required material specifications and manufacturing accuracy demands, potentially presenting a considerable engineering challenge.
+Based on the 7-meter assumption, it is plausible that manufacturers could need to either develop novel methods or materially improve existing techniques to craft such large-scale and complex structures. This process must adhere to the required material specifications and manufacturing accuracy demands, potentially posing a substantial engineering barriers.
   
   
 /* --------------------------------- summary -------------------------------- */
@@ -79,6 +77,7 @@ Based on the 7-meter assumption, it is plausible that manufacturers could need t
 In summary, all hydrogen-powered aircraft concepts share the same primary objective: the reduction of negative environmental impact. The structural integration of hydrogen tanks offers a dual advantage. These tanks not only store hydrogen but also share the load with the attached structural components. At the time of writing, two distinct approaches to structural integration have been identified: fuselage-integrated and wing-integrated.
 
 The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and challenges. On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
-Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it could pose initial challenges that need to be overcome in the pursuit of sustainable aviation.
+Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. 
+As a result, it could pose initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 
 ])

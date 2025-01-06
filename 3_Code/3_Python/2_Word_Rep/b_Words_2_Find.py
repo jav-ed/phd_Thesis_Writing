@@ -35,12 +35,13 @@ words_2_find = [
         
         "work",
         "thesis",
+        "challenge",
         
         
         
-        
-        "examine",
+        "examin", # e, ing,
         "examination",
+        "investigation",
         
         "explore", 
         "addres", 

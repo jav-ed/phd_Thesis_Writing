@@ -88,7 +88,8 @@ The development of #glspl("swith") also has the potential to impact environmenta
 From an educational perspective, research programs focused on #glspl("swith") have the potential to stimulate interest in STEM fields among students. This could help cultivate the next generation of scientists and engineers, fostering a skilled workforce prepared to tackle future technological challenges. Moreover, the skills and knowledge developed through such research could have spillover effects, potentially benefiting other sectors of the economy and driving innovation across various industries.
 //
 /* ----------------- international scientific collaboration ----------------- */
-The pioneering nature of #glspl("swith") research may also create opportunities for international scientific collaboration. Such collaborations could foster diplomatic ties and facilitate knowledge exchange between nations. By pooling resources and expertise, countries could potentially reduce costs and accelerate progress in confronting global challenges related to sustainable aviation and beyond. 
+The pioneering nature of #glspl("swith") research may also create opportunities for international scientific collaboration. Such collaborations could foster diplomatic ties and facilitate knowledge exchange between nations. By pooling resources and expertise, countries could potentially reduce costs and accelerate progress in confronting global barriers related to sustainable aviation and beyond. 
+
 These collaborative efforts might lead to shared resources, more efficient research processes, and faster advancements in addressing complex technological and environmental issues on a global scale.
 
 /* ---------------------------- national security --------------------------- */

@@ -48,14 +48,14 @@ The fundamentals of pressure vessels are explored, laying the groundwork for und
 Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
 An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
 @chap_1 concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_5.
-Throughout, the text emphasizes the current standardization challenges and the need for new or adapted standards. 
+Throughout, the text emphasizes the current standardization obstacles and the need for new or adapted standards. 
 The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2.
 
 // -------------------------------- hydrogen -------------------------------- //
 The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in @chap_2.
 @chap_2 explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
 First, @chap_2_0 establishes the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
-Following this, @chap_2_1 conducts an in-depth examination of the safety-relevant characteristics of #gls("cgh2", long:true), encompassing both theoretical aspects and practical implications for structural design.
+Following this, @chap_2_1 conducts an in-depth study of the safety-relevant characteristics of #gls("cgh2", long:true), encompassing both theoretical aspects and practical implications for structural design.
 The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide important insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety measures. 
 Finally, acknowledging that #glspl("swith") must withstand both internal pressure and external aerodynamic loads, @chap_2_3 analyzes essential findings regarding the behavior of pressure vessels under external dynamic loading conditions.
 
