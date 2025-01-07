@@ -66,6 +66,7 @@ words_2_find = [
         "thorough",
         "framework",
         "evaluate",
+        "depict"
         
         
         
