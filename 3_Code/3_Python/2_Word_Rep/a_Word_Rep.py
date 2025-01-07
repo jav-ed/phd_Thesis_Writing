@@ -77,7 +77,9 @@ def analyze_duplicates(file_paths: List[Path],
 # singl_file = "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ" # A
 
 # ---------------------------- chap 1 - standards ---------------------------- #
-singl_file = "2_Wr/1_Chapters/1_Standards/0_Standards.typ" # A
+# singl_file = "2_Wr/1_Chapters/1_Standards/0_Standards.typ" # A
+# singl_file = "2_Wr/1_Chapters/1_Standards/1_Aero_Standards.typ" # BJ
+singl_file = "2_Wr/1_Chapters/1_Standards/1_Aero_Standards.typ" # BJ
 
 # ---------------------------------------------------------------------------- #
 

@@ -2,7 +2,7 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-
+// Word rep ins. done
 
 // Title was checked and is fine - inshallah
 == Aviation Certification Standards <chap_1_1>
@@ -10,11 +10,11 @@ The preceding @chap_1_0 elaborated on the general importance of standards and th
 It highlighted the current absence of a single standard that could support the design of #gls("swith", long:true) or guide the design and conduct of structural validation tests. 
 Due to the lack of established rules for structural validation, no authority can currently grant certification for flying with a #gls("swith"). 
 The goal of this thesis is to provide initial work that can be utilized by industry, scientists, aerospace certification authorities, or standards institutions to build upon and help close this gap. 
-Additional motivation for the need for #glspl("swith") standards, along with suggested possible next steps, was also presented in @chap_1_0.
+Additional motivation for the need for #glspl("swith") standards, along with suggested possible next steps, was also outlined in @chap_1_0.
 It could be deduced that #glspl("swith") encompass multiple subfields, including aircraft design, hydrogen systems, and pressure vessel technology, each governed by its own set of standards. 
 This section focuses on the significant standards employed in aerospace. Initially, it presents the commonly used and available aviation standards. 
 Subsequently, it examines the potential applicability of these standards to #glspl("swith"). 
-Lastly, it examines emerging standards currently under development and evaluates their potential utility for #gls("swith") certification upon their release.
+Lastly, it investigates emerging standards currently under development and evaluates their potential utility for #gls("swith") certification upon their release.
 
 /* -------------------------------------------------------------------------- */
 At the outset of this section, it is important to reiterate that, at the time of writing this thesis, there is no single standard available that pertains to the certification of #glspl("swith"). Certification extends beyond mere bureaucratic processes; it signifies that local or global aviation authorities permit the use of a #gls("swith"). Only with such certification is a commercial application of a #gls("swith") possible. 
@@ -25,7 +25,7 @@ The Maximum Takeoff Weight (MTOW) denotes the maximum weight an aircraft can saf
 
 
 /* -------------------------------------------------------------------------- */
-This thesis is written in Germany; thus, the focus is primarily on European standards. While there are differences between European and US standards, it is common knowledge that they do not differ significantly in many areas @Mensen2013. This similarity extends to the extent that even the numbering of the documents and their respective paragraphs align. Detailed analyses of their similarities and differences can be found, among others, in @Kun2011 and @Ramadhanti2024.
+This thesis is written in Germany; thus, the focus is primarily on European standards. While there are differences between European and US standards, it is common knowledge that they do not differ significantly in many areas @Mensen2013. This similarity extends to the extent that even the numbering of the documents and their respective paragraphs align. In-depth analyses of their similarities and differences can be found, among others, in @Kun2011 and @Ramadhanti2024.
 The European Union has established uniform standards for the aviation industry that are binding for all member states. This ensures a consistent basis for aircraft operation and safety in air traffic. 
 European aviation standards are referred to as #gls("cs", long:true) @Mensen2013 @EASA_CS_Genereral. Among these, the standards that might be classified as relevant to #glspl("swith") are #gls("cs")-23 @EASA_CS_23, #gls("cs")-25 @EASA_CS_25, #gls("cs")-27 @EASA_CS_27, and #gls("cs")-29 @EASA_CS_29.
 
@@ -70,11 +70,11 @@ Nevertheless, the intent of this thesis is not to delve into a comprehensive exp
 
 Next, closer attention shall be paid to the two most suitable #glspl("cs"), namely #gls("cs")-23 and #gls("cs")-25. #gls("cs")-23 can be used for small aircraft certification. Since #glspl("swith") are not restricted to either small or large aircraft, #gls("cs")-23 is a suitable candidate to infer potential information for desired #gls("swith")-certification.
 
-Compared to #gls("cs")-25, which is intended for regular commercial and civil large aircraft, #gls("cs")-23 comes with significantly fewer restrictions. Fewer restrictions also mean fewer topics that are addressed and elaborated upon. However, high standard detailing could offer valuable advantages, especially in terms of safety aspects. Furthermore, concrete ideas for conducting structural tests could also be provided, for example, to answer the following questions:
+Compared to #gls("cs")-25, which is intended for regular commercial and civil large aircraft, #gls("cs")-23 comes with significantly fewer restrictions. Fewer restrictions also mean fewer topics that are addressed and elaborated upon. However, high standard detailing could offer valuable advantages, especially in terms of safety concerns. Furthermore, concrete ideas for conducting structural tests could also be provided, for example, to answer the following questions:
 
 - Which measurement technologies are allowed, which are preferred, and why?
 - What possibilities exist for physically introducing loads?
-- Which points can be neglected in detail if important and core aspects are reliably proven?
+- Which points can be neglected in depth if important and core aspects are reliably proven?
 
 In #gls("cs")-23, the author of this work was unable to extrapolate information that would be valid for a high-pressure hydrogen container. It is quite possible that this will be adjusted in the coming years, as #gls("cs")-23 could be adapted for hydrogen-powered aircraft. Therefore, the statement made above should be considered only in the context of #gls("cs")-23 Version 2018. Search terms such as high-pressure containers, hydrogen in all its states of aggregation, and other gases, such as helium, were also consulted to build on possible knowledge from #gls("cs")-23. The core result is that no helpful knowledge could be gained from #gls("cs")-23 for #glspl("swith").
 In #gls("cs")-25 @EASA_CS_25 Amendment 27, under point CS 25.1453, there is information on the topic #emp_([Protection of oxygen equipment from rupture]). It requires that the oxygen bottles can withstand the maximum working pressure. The standard goes even further, demanding that loads induced by temperature and externally applied forces must also be taken into account and withstood.
@@ -116,7 +116,7 @@ Furthermore, temperature influence and proof of strength are addressed. Specific
   caption: [Proof and burst factors for pressurized components. Table obtained from CS 25.1453 - Protection of oxygen equipment from rupture @EASA_CS_25.],
 )<tab_1>
 
-One might consider the possibility of convincing approval authorities to accept a test factor of 1.5 and a burst factor of 2.0 for #glspl("swith") through persuasive argumentation. #gls("easa") might potentially categorize voluminous high-pressure tanks as "other components" from @tab_1. However, two key counterarguments exist. First, the hydrogen tank is a pressure vessel with an internal pressure significantly higher than that of oxygen bottles. Second, the tank's dimensions are considerably larger than those of an oxygen bottle. This straightforward reasoning could be employed by approval authorities to reject the proposed factors of 1.5 and 2.0. Consequently, it is prudent to examine aerospace-related areas more closely.
+One might evaluate the possibility of convincing approval authorities to accept a test factor of 1.5 and a burst factor of 2.0 for #glspl("swith") through persuasive argumentation. #gls("easa") might potentially categorize voluminous high-pressure tanks as "other components" from @tab_1. However, two key counterarguments exist. First, the hydrogen tank is a pressure vessel with an internal pressure significantly higher than that of oxygen bottles. Second, the tank's dimensions are notably larger than those of an oxygen bottle. This straightforward reasoning could be employed by approval authorities to reject the proposed factors of 1.5 and 2.0. Consequently, it is prudent to examine aerospace-related areas more closely.
 One relevant option is space technology. In this field, the ANSI/AIAA S-081B-2018 Space Systems—Composite Overwrapped Pressure Vessels standard @ansi_standard_2018 is noteworthy. 
 ANSI, the American National Standards Institute, primarily develops standards for use in the USA. However, it is common for other countries or the EU to use existing standards as a basis for developing their own @Mensen2013. 
 While complete adoption of foreign guidelines is conceivable, there is no guarantee of universal acceptance.
@@ -155,7 +155,7 @@ This suggests that the ANSI/AIAA S-081B-2018 Space Systems standard cannot be di
 )<tab_2>
 
 Furthermore, even if SAE AS 7373 @SAE_Gas were available, it would not necessarily account for external loads on high-pressure hydrogen tanks. In other words, it remains unclear whether these standards, once completed, will be applicable to structurally integrated high-pressure hydrogen tanks.
-While aerospace standards that could be of interest for #glspl("swith") certification or as initial references could indeed be found, simple arguments demonstrate why these standards offer insufficient security for official recognition. Firstly, it is uncertain whether these standards are applicable in the European context. Secondly, it is unclear whether they are valid for structurally integrated and externally loaded high-pressure hydrogen tanks.
+While aerospace standards that could be of interest for #glspl("swith") certification or as initial references could indeed be found, simple arguments demonstrate why these standards offer insufficient security for official recognition. Firstly, it is uncertain whether these standards are valid in the European context. Secondly, it is unclear whether they are valid for structurally integrated and externally loaded high-pressure hydrogen tanks.
 Given the special requirements of #glspl("swith"), which according to the current state cannot be comprehensively covered by a single standard, #glspl("swith") represent a very specialized area of research.
 
 
