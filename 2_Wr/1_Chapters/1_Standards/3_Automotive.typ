@@ -2,15 +2,19 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 // Title was checked and is fine - inshallah
 == Structural Integration of Hydrogen Tanks in the Automotive Industry <chap_1_3>
 
 In the previous @chap_1_2, it was observed that the automotive industry offers significant advancements in hydrogen-driven vehicles. Furthermore, this industry contributes a considerable amount of literature and expertise to the field. The previous @chap_1_2 also highlighted substantial similarities between the hydrogen-driven automotive industry and aerospace. Both fields desire lightweight #gls("cfrp", long:true) tanks to store, among other things, #gls("cgh2", long:true). Due to the value the automotive industry provides to the realization of a #gls("swith", long:true), an in-depth study shall be carried out.
-The objective of this section and study is to find publicly available work from the automotive industry that deals with externally loaded #gls("cgh2") tanks. The identified work needs to be investigated thoroughly to find potentially helpful insights for the experimental structural validation tests of #glspl("swith"). More specifically, this section will address the following: First, if similar work is found, it will be explained in depth. Subsequently, it will be elaborated whether the found work can be leveraged for experimental structural validation tests of #glspl("swith").
+The objective of this section and study is to find publicly available research from the automotive industry that deals with externally loaded #gls("cgh2") tanks. The identified literature needs to be investigated thoroughly to find potentially helpful insights for the experimental structural validation tests of #glspl("swith"). More specifically, this section will address the following: First, if similar studies are found, they will be explained in depth. Subsequently, it will be elaborated whether these findings can be leveraged for experimental structural validation tests of #glspl("swith").
+
+
 // -------------------------------------------------------------------------- //
 
 The insights obtained from @chap_1_2 can be regarded as one part of the motivation for conducting an in-depth investigation into the automotive industry to find helpful insights for experimental structural validation tests of #glspl("swith"). Nonetheless, additional motivations shall be presented.
-First, according to the current state of knowledge, no flying cars are known to exist. Thus, a significant difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
+First, according to the current state of knowledge, no flying cars are known to exist. Thus, a crucial difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
@@ -21,7 +25,7 @@ First, according to the current state of knowledge, no flying cars are known to 
 ) <fig_9>
 
 There are already hydrogen cars approved for traffic @link_hyundai_nexo_img @link_hyundai_ix35_img @link_toyota_mirai_ii_img @link_honda_clarity_img @link_mercedes_glc_img, as demonstrated in @chap_1_2. This raises the justified question of whether there are already initial concepts for externally loaded structural integral #gls("cgh2") tanks in the automotive industry. 
-One of the main reasons for aviation lagging behind is that it has numerous and demanding approval and quality requirements. Furthermore, aircraft are significantly larger in dimensions than cars, resulting in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were substantial competition, building aircraft remains a highly complex and interdisciplinary achievement. While acknowledging that road vehicles are also interdisciplinary, aircraft design, manufacturing, and approval require significantly more time from concept to finished product than is necessary for road vehicles.
+One of the main reasons for aviation lagging behind is that it has numerous and demanding approval and quality requirements. Furthermore, aircraft are significantly larger in dimensions than cars, resulting in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were meaningful competition, building aircraft remains a highly complex and interdisciplinary achievement. While acknowledging that road vehicles are also interdisciplinary, aircraft design, manufacturing, and approval require substantially more time from concept to finished product than is necessary for road vehicles.
 In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this work, the torque stiffness of the body was to be increased with the help of #gls("cfrp") tanks. This is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that Opel carried out a first preliminary test. In this test, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent.
 
 
@@ -66,24 +70,24 @@ This explanation is made visually apparent through @fig_14.
 ) <fig_14>
 
 
-The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu $, which is usually significantly smaller than 1 @Gross2019. For stationary consideration, the condition is: $F_t = H = mu N$. If the equation is rearranged, the following can be concluded:
+The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu $, which is usually significantly smaller than 1 @Gross2019. For stationary evaluation, the condition is: $F_t = H = mu N$. If the equation is rearranged, the following can be concluded:
 
 $ N = F_t / mu  = H/ mu $<eq_2>
 
 
-From @eq_2 and considering that $μ << 1$, it is evident that the required normal force $N$ can reach significantly high magnitudes. Consequently, the ring clamping force $F_c$ attains the same significantly high magnitudes.
+From @eq_2 and considering that $μ << 1$, it is evident that the required normal force $N$ can reach markedly high magnitudes. Consequently, the ring clamping force $F_c$ attains the same substantially high magnitudes.
 Applied to the concept shown in @fig_6, it must be ensured that the normal forces (in radial direction) do not become too high for the tank, which could, among other effects, cause buckling of the tank @Rossow_2014 @Parello2024 @Chen2024. Conversely, if the normal force is too small, the consequence would be a weakened, possibly negligible, transfer of torque to or from the #gls("cgh2") tanks.
 Furthermore, upon closer examination of @fig_6, it can be observed that each of the two clamping ring bands exerts pressure on only a small percentage of the tank's available area. 
 As a result, the area connecting the tank with the shells is limited. Increasing the dimensions of the clamping ring bands and ensuring they can exert pressure over a larger area of the shells could offer two benefits. First, when high torque needs to be transferred, effects occurring due to local overloading can be prevented. Second, a more reliable connection between the shells and the tanks can be expected.
-Moreover, @Bleser2012 demonstrates different possible positions where the #gls("cgh2") tanks could be placed and connected with the body of the car. 
+Moreover, @Bleser2012 illustrates different possible positions where the #gls("cgh2") tanks could be placed and connected with the body of the car. 
 They also demonstrate the impact of shell geometries on mass and stiffness. 
 Finally, the experimental investigation is briefly mentioned.
 
-It can be seen that the automotive industry also had a similar idea of not only using hydrogen tanks as fuel providers but leveraging them as an integral part of the load-bearing car structure. The presented work from the automotive industry introduces the idea of potentially using #gls("cgh2") tanks as torque-bearing vessels in aerospace as well. However, the insights obtained from @Bleser2012 cannot be directly applied to an experimental structural validation test of #glspl("swith").
+It can be seen that the automotive industry also had a similar idea of not only using hydrogen tanks as fuel providers but leveraging them as an integral part of the load-bearing car structure. The reviewed work from the automotive industry introduces the idea of potentially using #gls("cgh2") tanks as torque-bearing vessels in aerospace as well. However, the insights obtained from @Bleser2012 cannot be directly applied to an experimental structural validation test of #glspl("swith").
 
-In addition to academic literature, the field of patents could offer potential insights for experimental structural validation tests of #glspl("swith"). Given that #glspl("swith") represent a pioneering concept, and adherence to proper scientific work ethics necessitates the utilization of all publicly available resources, it is prudent to examine and present research findings from patents as well.
+In addition to academic literature, the field of patents could offer potential insights for experimental structural validation tests of #glspl("swith"). Given that #glspl("swith") exhibit a pioneering concept, and adherence to proper scientific work ethics necessitates the utilization of all publicly available resources, it is prudent to examine and present research findings from patents as well.
 // --------------------------------- patents -------------------------------- //
-The patent research provided some information about existing concepts similar to #gls("swith"). Two German patents from the automotive industry are particularly noteworthy in their pursuit of load-bearing pressure cylinder concepts. The first, published by BMW in 2015 @Stahl2017, suggests constructing the first longitudinal structure as a pressure cylinder capable of absorbing both fuel and external forces. However, according to the description on Google Patents @Stahl2017, this patent was withdrawn, possibly due to the novelty and complexity of such an endeavor.
+The patent research offered some information about existing concepts similar to #gls("swith"). Two German patents from the automotive industry are particularly noteworthy in their pursuit of load-bearing pressure cylinder concepts. The first, published by BMW in 2015 @Stahl2017, suggests constructing the first longitudinal structure as a pressure cylinder capable of absorbing both fuel and external forces. However, according to the description on Google Patents @Stahl2017, this patent was withdrawn, possibly due to the novelty and complexity of such an endeavor.
 The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses motor vehicles with pressure cylinders. The patent description explicitly states that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. The concept involves introducing loads into the rigid pressure cylinder via pole caps attached at the ends. The sketch from this patent is depicted in @fig_7. According to Google Patents @ChristophBechtold2019, the patent remains active until its expiration on December 14, 2037.
 
 
@@ -94,15 +98,17 @@ The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses m
 ) <fig_7>
 
 
-Similar to the academic paper @Bleser2012, the mentioned patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. 
+Similar to the academic paper @Bleser2012, the cited patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. 
 Upon further consideration, these automotive concepts could potentially inspire additional load cases for integrated tanks in aerospace applications. 
 However, neither academic papers nor patent descriptions from the automotive industry provide direct additional valuable insights for experimental structural validation tests of #glspl("swith").
-For completeness, it shall be stated that patents from the field of aviation were already mentioned in @chap_0_7. The only relevant patent to mention again is @Scheffel2015. While @Friedmann2023 mentions 7 patents, only 2 of them could be found, which might be due to the fact that the other five predate 1939.
+For completeness, it shall be stated that patents from the field of aviation were already covered in @chap_0_7. The only relevant patent to highlight again is @Scheffel2015. While @Friedmann2023 names 7 patents, only 2 of them could be found, which might be due to the fact that the other five predate 1939.
 
 
 // -------------------------------------------------------------------------- //
 #summary_([
 In summary, academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks. It is evident that these tanks are of interest not only for aviation but also for automotive applications. However, the available literature in this field is scarce, mirroring the limited research in aerospace.
-The sole academic paper found in the automotive sector @Bleser2012 focused on utilizing hydrogen tanks as torque absorbers. However, the information provided lacked detail, particularly in the experimental section. Consequently, based on the current state of research, no significant added value could be derived from automotive academic literature for certification-oriented experimental structural validation tests of #glspl("swith").
-While additional patents aimed at using tanks as load-bearing structural integral parts were identified, their descriptions did not provide substantial additional information for experimental structural validation tests of #glspl("swith"). This further underscores the need for more comprehensive research in this area across both industries.
+The sole academic paper found in the automotive sector @Bleser2012 focused on utilizing hydrogen tanks as torque absorbers.
+However, details were sparse, especially regarding the experimental section.
+Consequently, based on the current state of research, no significant added value could be derived from automotive academic literature for certification-oriented experimental structural validation tests of #glspl("swith").
+While additional patents aimed at using tanks as load-bearing structural integral parts were identified, their descriptions did not contain substantial additional information for experimental structural validation tests of #glspl("swith"). This further underscores the need for more comprehensive research in this area across both industries.
 ])

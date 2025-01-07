@@ -111,3 +111,8 @@
 3. examination
 4. review
 5. investigation
+
+// ----------------------------- implementation ----------------------------- //
+1. employment
+2. application
+3. utilization
