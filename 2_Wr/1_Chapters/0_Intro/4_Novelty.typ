@@ -26,7 +26,7 @@ Thus, this research contributes to the potential certification of #glspl("swith"
 
 
 /* --------------------------------- 525 bar -------------------------------- */
-Next, in @chap_1_5 the thesis explains the procedure for determining the maximum nominal working pressure for high-pressure tanks intended for burst tests. The findings reveal a current upper threshold of $525 "bar"$, a constraint imposed by the capabilities of existing test facilities. This study emphasizes that these standards should function as flexible guiding frameworks rather than rigid protocols, thereby encouraging the progressive development of #glspl("swith").
+Next, in @chap_1_5 the thesis explains the procedure for determining the maximum nominal working pressure for high-pressure tanks intended for burst tests. The findings reveal a current upper threshold of $525 "bar"$, a constraint imposed by the capabilities of existing test facilities. This study emphasizes that these standards should function as flexible guiding principles rather than rigid protocols, thereby encouraging the progressive development of #glspl("swith").
 
 /* --------------------------- hydrogen detonation -------------------------- */
 Subsequently, in @chap_2_0 the reader is introduced to the general properties of hydrogen, followed by a thorough exploration of potential hazards associated with its use in @chap_2_1 and @chap_2_2. This exploration is substantiated by both experimental and simulation results. 

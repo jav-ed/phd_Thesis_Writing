@@ -2,13 +2,14 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
 
 // Title was checked and is fine - inshallah
 = Standards and Regulations<chap_1>
-This chapter provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0. The chapter then proceeds to analyze potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_1.
+This chapter provides a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0. The chapter then proceeds to evaluate potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_1.
 The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_2. 
 Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
-An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
+An examination of specific standards from various sectors follows, along with an analysis of overarching norms governing high-pressure hydrogen systems in @chap_1_4. 
 This chapter concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_5.
 Throughout, the text emphasizes the current standardization hurdles and the need for new or adapted standards. 
 The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2.
@@ -18,7 +19,7 @@ The safety considerations, particularly those arising from the application of hy
 
 The development of #gls("swith",long:true ) represents a significant innovation in aircraft design, combining advanced hydrogen storage with relevant structural elements. 
 As with any groundbreaking technology, the path from concept to application is fraught with obstacles. 
-This section elucidates the critical role that standards play in navigating the barriers of #glspl("swith") development and structral validation testing. 
+This section elucidates the critical role that standards play in navigating the barriers of #glspl("swith") development and structural validation testing. 
 It shall be made clear that standards are not only important for the final certification process but also for designing the experimental structural testing environment. 
 
 Depending on the literature that is read different definitions for the term standard can be found @Tassey2000 @Nickerson2006 @Farrell1992 @Anderson1990 @Murmann2006.
@@ -34,24 +35,24 @@ They offer a structured approach to addressing known obstacles while providing f
 This balance is crucial in the development of #glspl("swith"), where the integration of high-pressure hydrogen tanks with aircraft wing structures presents unique engineering hurdles.
 The role of standards extends beyond the physical design of #glspl("swith") to encompass the development process, including structural validation testing. 
 For the goal of safely designing and conducting experimental structural validation tests of a #gls("swith"), standards can be assumed to provide critical guidelines. 
-Moreover, standards form the basis for certification procedures, ensuring that #glspl("swith") meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but essential for the successful implementation and certification of #glspl("swith") in aviation.
+Moreover, standards form the basis for certification procedures, ensuring that #glspl("swith") meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but vital for the successful implementation and certification of #glspl("swith") in aviation.
 
 
 /* ------------------------------- advantages ------------------------------- */
-As the development of comprehensive standards proves essential for #glspl("swith") implementation and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gls("swith") development offers several key benefits that extend beyond mere regulatory compliance
+As the development of thorough standards proves essential for #glspl("swith") employment and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gls("swith") development offers several key benefits that extend beyond mere regulatory compliance
 Firstly, it offers a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
-Furthermore the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
+Furthermore, the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
 Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017. 
-This is particularly important for #glspl("swith"), where the integration of high-pressure hydrogen storage with critical aircraft structures presents unique safety considerations. 
-Lastly they offer a framework for systematic evaluation and validation, indispensable for ensuring the safety and reliability of innovative technologies like #glspl("swith"). 
+This is particularly important for #glspl("swith"), where the integration of high-pressure hydrogen storage with critical aircraft structures presents unique safety implications. 
+Lastly they offer a methodology for structured evaluation and validation, indispensable for ensuring the safety and reliability of innovative technologies like #glspl("swith"). 
 
 
 While the benefits of applying standards to #glspl("swith") development are clear, the process is not without its challenges. 
-The primary difficulty lies in the innovative nature of #gls("swith") itself. 
+The primary barrier lies in the innovative nature of #gls("swith") itself. 
 As an emerging technology, there is no single standard that would cover all the unique characteristics of #glspl("swith"). This absence, however, does not diminish the importance of standards-based approaches. 
 Instead, it necessitates a careful and considered application of related standards from adjacent fields.
 In the case of #gls("swith"), relevant adjacent fields include aerospace engineering, hydrogen storage and handling, pressure vessel design, and structural engineering. The task lies in judiciously selecting and adapting these standards to address the specific needs of #gls("swith") development.
-This adaptive approach is particularly crucial in the realm of experimental structural testing. Standards provide guidance on test methodologies, safety protocols, and data collection and analysis procedures. By leveraging these established practices, researchers can ensure that their experimental work on #gls("swith") is rigorous, repeatable, and aligned with industry expectations.
+This adaptive system is particularly crucial in the realm of experimental structural testing. Standards provide guidance on test methodologies, safety protocols, and data collection and analysis procedures. By leveraging these established practices, researchers can ensure that their experimental work on #gls("swith") is rigorous, repeatable, and aligned with industry expectations.
 
 On top of that, the process of applying and adapting existing standards to #gls("swith") development could itself contribute to the eventual formulation of #gls("swith")-specific standards @Jiang2018. 
 This iterative process of standard application and refinement is a hallmark of technological progress, ensuring that as #glspl("swith") mature, so too does the regulatory and standards framework surrounding it @Jiang2018. 

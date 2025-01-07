@@ -63,6 +63,9 @@ words_2_find = [
         "obstacle",
         "barrier",
         "difficult",
+        "thorough",
+        "framework",
+        "evaluate",
         
         
         

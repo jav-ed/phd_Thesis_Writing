@@ -104,3 +104,10 @@
 1. hurdle
 2. obstacle
 3. barrier
+
+// -------------------------------- analysis -------------------------------- //
+1. evaluation
+2. assessment
+3. examination
+4. review
+5. investigation

@@ -73,7 +73,7 @@ Finally, @chap_3_4 investigates the implementation of physical loads during expe
 // ------------------------------ optimization ------------------------------ //
 Initially, @chap_4_0 describes how force distributions can be discretized.
 @chap_4_1 then explains how aerodynamic forces can be derived and incorporated into the method selected in @chap_4_0.
-Since the optimization framework needs to work with structural information, essential beam model background is provided in @chap_4_2.
+Since the optimization framework needs to work with structural information, foundational beam model background is provided in @chap_4_2.
 Similarly, fundamental knowledge about optimization is explored in @chap_4_3.
 As optimization is a vast topic, only selected information relevant to understanding the developed optimization framework is included.
 The integration of beam modeling within the optimization workflow is documented in @chap_4_4.
