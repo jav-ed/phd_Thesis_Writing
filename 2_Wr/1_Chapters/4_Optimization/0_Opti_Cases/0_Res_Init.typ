@@ -42,13 +42,13 @@ While the objective function includes bending moments, their explicit dependency
 This simplified notation was chosen because bending moments depend on multiple parameters, including support type and position, acting forces, and beam length.
 To maintain equation clarity and conciseness, these dependencies are acknowledged explicitly by stating that the bending moments are functions of the design variables.
 
-For optimization case A, the design variable vector consists solely of the collet lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$). 
+For optimization case A, the design variable vector consists solely of the #gls("lie") lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$). 
 The constraints that follow in the "subject to" portion are formatted with design variables on the left side of the inequality ($<=$ non-design variable parameters), a convention that facilitates implementation in optimization frameworks such as SciPy.
 
 It should be noted that the positions $x_i$ are not design variables but rather represent the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0 and @chap_4_1. These centroid locations physically correspond to the centers of the #glspl("lie").
 
 The first constraint ensures that #glspl("lie") remain within the considered beam length, where ha denotes the half-span length. This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
-For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint requires the sum of the centroid position and the collet length to remain within the halfspan length.
+For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint requires the sum of the centroid position and the #gls("lie") length to remain within the halfspan length.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
