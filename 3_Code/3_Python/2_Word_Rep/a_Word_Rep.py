@@ -61,7 +61,11 @@ def analyze_duplicates(file_paths: List[Path],
             
     return results
 
-# Example usage:
+# ---------------------------------------------------------------------------- #
+# if only the last word shall be checked
+# b_last_word = True
+b_last_word = False
+
 # files = find_typ_files("2_Wr/1_Chapters/0_Intro")
 files = find_typ_files("2_Wr/1_Chapters/1_Standards")
 
@@ -79,14 +83,19 @@ files = find_typ_files("2_Wr/1_Chapters/1_Standards")
 # ---------------------------- chap 1 - standards ---------------------------- #
 # singl_file = "2_Wr/1_Chapters/1_Standards/0_Standards.typ" # A
 # singl_file = "2_Wr/1_Chapters/1_Standards/1_Aero_Standards.typ" # BJ
-# singl_file = "2_Wr/1_Chapters/1_Standards/2_Pressure_Vessels.typ" # A
+# singl_file = "2_Wr/1_Chapters/1_Standards/2_Pressure_Vessels.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/1_Standards/3_Automotive.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/1_Standards/4_Various_Fields.typ" # A
+singl_file = "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ" # BJ
 
 # ---------------------------------------------------------------------------- #
 
 if "singl_file" in locals():
     files = find_typ_file(singl_file)
 words_to_find = w_h.words_2_find
+
+if b_last_word:
+    words_to_find = [words_to_find[-1]]
 
 results = analyze_duplicates(files, words_to_find)
 display_results(results=results)

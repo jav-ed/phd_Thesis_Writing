@@ -67,7 +67,13 @@ words_2_find = [
         "framework",
         "evaluate",
         "depict",
-        "illustrat"
+        "illustrat",
+        "show",
+        "state",
+        "furthermore",
+        "moreover",
+        "consequently",
+        "however",
         
         
         

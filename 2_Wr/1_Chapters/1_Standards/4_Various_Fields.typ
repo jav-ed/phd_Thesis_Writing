@@ -2,20 +2,24 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
 
 // Title was checked and is fine - inshallah
 == Specific Standards from Various Fields <chap_1_4>
 In previous @chap_1_3 and @chap_1_2, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. While the automotive industry was highlighted, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
-The goal of this section is to provide a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_5.
+The goal of this section is to offer a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_5.
 
-Throughout @chap_1, it was observed that many fields desire a secure, feasible, and industrial application of hydrogen. The automotive industry, being one of them, was especially highlighted in @chap_1_2 and @chap_1_3. However, the automotive industry is only one significant domain under the broader category of mobility.
-The focus is on finding standards that could provide helpful insights for #gls("swith")-related standards. Two main reasons for focusing on mobility can be regarded as reasonable approaches:
-First, #glspl("swith") are regular aircraft with some special modifications. Aircraft themselves are a subset of mobility. Due to this, it can be assumed that hydrogen-powered aircraft offer significant similarities with other mobility sectors. A concrete example of this was provided in @chap_1_3 through the work of Opel, as reported in @Bleser2012.
+Throughout @chap_1, it was observed that many fields desire a secure, feasible, and industrial application of hydrogen. The automotive industry, being one of them, was especially highlighted in @chap_1_2 and @chap_1_3. However, the automotive industry is only one crucial domain under the broader category of mobility.
+The focus is on finding standards that could yield helpful insights for #gls("swith")-related standards. 
+There are two principal rationales for the emphasis on mobility.
+First, #glspl("swith") are conventional aircraft that have undergone specific modifications. Aircraft themselves are a subset of mobility. 
+Consequently, it can be hypothesized that hydrogen-powered aircraft exhibit significant parallels with other mobility sectors. A concrete example of this was presented in @chap_1_3 through the work of Opel, as reported in @Bleser2012.
 Second, economically impactful mobility sectors can be assumed to be regulated and supported through standards. Thus, availability for both academic publications and science and government-backed standards should be given.
-Besides targeting the mobility sector, another noteworthy approach could be to investigate available standards that are dedicated specifically to hydrogen applications. As laid out on many occasions in @chap_1, currently there is no single standard that could be used for the commercial certification of #glspl("swith"). Due to the sensibility found in the provided reasoning, both mentioned approaches shall be undertaken.
+In addition to targeting the mobility sector, it would be worthwhile to investigate available standards that are dedicated specifically to hydrogen applications.
+As laid out on many occasions in @chap_1, currently there is no single standard that could be used for the commercial certification of #glspl("swith"). Due to the sensibility found in the outlined reasoning, both mentioned approaches shall be undertaken.
 
 The automotive industry generally includes cars (motor vehicles), buses, and heavy goods transporters (trucks). The mobility sector, on the other hand, encompasses the automotive industry and other noteworthy sectors. Examples of other mobility industrial sectors for which hydrogen is being considered as a potential future energy source are listed in @tab_3. 
-It is important to note that the mentioned industries are actively conducting research to realize hydrogen-powered vehicles in their respective domains.
+It is important to note that the stated industries are actively conducting research to realize hydrogen-powered vehicles in their respective domains.
 
 
 #figure(
@@ -58,13 +62,14 @@ A significant difference between aviation and ground mobility vehicles such as t
 Moreover, the temperature changes with flight altitude, ranging from $15 " " degree.c "to" hyph.minus 50 " " degree.c $ ($288.15 "K " "to"  233.15 "K " $)
 for an altitude from $0  "km to" 10  "km" $
 cruise altitude. According to @Rossow_2014, the maximal flight height is around $10 "km to" 13 "km"$, and according to @Filippone2010, most commercial airliners and business jets have final cruise altitudes well beyond $12 "km" ( approx 40,000 "ft")$. From $0 "km to" 11 "km"$, the altitude range is called the troposphere, where the temperature drops from $288.15 "K " "to"  216.65 "K "$ ($15 " " degree.c "to"  hyph.minus 56.5 " " degree.c$).
-From $11 "km to" 20 "km"$, the stratosphere is reached, where no difference in temperature is observed. As the temperature remains constant between $11 "km and" 13 "km"$, it can be said that aircraft need to withstand temperatures between $288.15 "K "$ ($15 " " degree.c$) and $216.65 "K "$ ($hyph.minus 56.5 degree.c$), as well as variations within this range.
+From $11 "km to" 20 "km"$, the stratosphere is reached, where no difference in temperature is observed. As the temperature remains constant between $11 "km and" 13 "km"$, it can be said that aircraft need to withstand temperatures between $288.15 "K "$ ($15 " " degree.c$) and $216.65 "K "$ ($hyph.minus 56.5 " " degree.c$), as well as variations within this range.
 
 
-There are three common atmospheric models: the ICAO Standard Atmosphere @link_icao_atmposhere, the US Standard Atmosphere @link_us_atmposhere, and the Norm Atmosphere DIN 5450 @lecture_notes_Entwerfen_von_Verkehrsflugzeugen_I @butt2021development. The temperatures provided above were obtained using the Norm Atmosphere DIN 5450.
-It is important to note that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree$C might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree$C in Dubai during summer would be considerably lower than the typical temperatures experienced in that region.
-Furthermore, similar to the modern automotive industry, aviation is an area strongly dominated by lightweight construction. Thus, this information should be considered when adopting hydrogen standards from non-lightweight-focused areas.
-Generally, for hydrogen-powered mobility domains in transport, a distinction can be made between light and heavy mobility solutions. An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel for the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application, are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards provided by #gls("iso", long:true) are given in @tab_8.
+There are three common atmospheric models: the ICAO Standard Atmosphere @link_icao_atmposhere, the US Standard Atmosphere @link_us_atmposhere, and the Norm Atmosphere DIN 5450 @lecture_notes_Entwerfen_von_Verkehrsflugzeugen_I @butt2021development. The temperatures stated above were obtained using the Norm Atmosphere DIN 5450.
+It is important to note that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree.c$ might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree.c$ in Dubai during summer would be markedly lower than the typical temperatures experienced in that region.
+Furthermore, similar to the modern automotive industry, aviation is an area strongly dominated by lightweight construction. Thus, this information should be taken into account when adopting hydrogen standards from non-lightweight-focused areas.
+Generally, for hydrogen-powered mobility domains in transport, a distinction can be made between light and heavy mobility solutions. 
+An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel for the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application, are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards issued by #gls("iso", long:true) are given in @tab_8.
 
 /* -------------------------------------------------------------------------- */
 /* ----------------------------------- car ---------------------------------- */
@@ -278,11 +283,11 @@ Generally, for hydrogen-powered mobility domains in transport, a distinction can
 
 
 
-Besides #gls("iso")'s focus on hydrogen, another reason for mentioning #gls("iso") hydrogen-based standards is the organization's excellent international reputation. This increases the chances of partial to potentially full international recognition of these standards.
+Besides #gls("iso")'s focus on hydrogen, another reason for including #gls("iso") hydrogen-based standards is the organization's excellent international reputation. This increases the chances of partial to potentially full international recognition of these standards.
 As mentioned in the introduction of this section, the goal was to identify potential #gls("cgh2") standards, provide reasons for their selection, and present them in an organized manner. The process of filtering the standards with the highest potential for providing information relevant to #gls("swith") certification will be addressed in @chap_1_5, based on specific criteria.
 
 
 #summary_([
 It can be summarized that a high number of standards dealing with hydrogen have been identified. While some of these standards are already in use, others are in the process of being updated or have just been announced and are yet to be published for the first time.
-Regardless of their current status, it should be highlighted once again that narrowing down such a high number of hydrogen norms to the most promising ones requires a systematic approach. This systematic evaluation will be crucial in identifying the standards most relevant to #gls("swith") certification.
+Regardless of their current status, it should be highlighted once again that narrowing down such a high number of hydrogen norms to the most promising ones requires a systematic approach. This structured evaluation will be crucial in identifying the standards most relevant to #gls("swith") certification.
 ])

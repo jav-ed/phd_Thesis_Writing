@@ -166,7 +166,7 @@ One approachable method to infer insights is to review pressure vessels in their
 Hydrogen pressure vessels are known to be required, among others, in submarines @barral2006hydrogen @Li2024a, aviation @link_hydro_airbus, personal vehicles @link_hyundai_nexo @Rath2019, and trains @link_alstom.
 Furthermore, @Rath2019 provides a comprehensive list of additional hydrogen applications. Among them are additional examples for personal vehicles, electronic devices such as laptops and smartphones, military applications, and toys.
 
-It has been shown that tank Types I and II are heavier than Types III - V. 
+It has been demonstrated that tank Types I and II are heavier than Types III - V. 
 Due to the desire to reduce environmental impact and the cost of fuel or other driving energy in every mobility sector, these high weights are undesired.
 Thus, tanks of Types I and II are best suited for stationary applications @barral2006hydrogen
 Consequently, the remaining lighter Types III - V are more favorable for mobile applications like in automotive or aerospace sectors.
