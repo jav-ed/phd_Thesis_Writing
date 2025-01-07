@@ -203,6 +203,7 @@ The computational demand becomes particularly evident when comparing the number 
 
 // ---------------------------------- here ---------------------------------- //
 // -------------------------------------------------------------------------- //
+// TODO corrections required here (langauge based) 
 Finally, all the figures shwoing infromaiton aboout objective function values across different number of #glspl("lie") can be used to decide on the final number of #glspl("lie"). Generally, it can be assumed the lower the number of #glspl("lie") the lwoer the cost for obtianing these physical #glspl("lie"). Likewose the cost of maintaining and 
 // maybe control engineering or somehting else?
 control theory is reduced. If a higher number of #glspl("lie") does not give better #gls("ld") there is no need to buy more #glspl("lie"). However, if costs is a concern, trade offs can be made througha nsweing the question, wheter adding additional #glspl("lie") would significantly improve the #gls("ld") quality.

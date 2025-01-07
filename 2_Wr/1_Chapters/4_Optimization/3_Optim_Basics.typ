@@ -124,12 +124,12 @@ Sensitivity analysis, fundamentally based on gradient calculations, can be expre
 Several reasons have already been mentioned regarding the desirability of describing optimization problems as simply as possible. Additional considerations emerge when examining the two major types of optimization in detail.
 As mentioned earlier, a high number of design variables can potentially increase the accuracy of an optimization problem's description. 
 However, in multidisciplinary optimization where individual disciplines share limited interdependence, this increased dimensionality poses substantial challenges. 
-These challenges manifest in multiple aspects: the complexity of maintaining and comprehending the optimization model, the increased effort required for numerical modeling, and the heightened computational requirements.
+These barriers manifest in multiple aspects: the complexity of maintaining and comprehending the optimization model, the increased effort required for numerical modeling, and the heightened computational requirements.
 The diversity of disciplines in such optimization problems can span multiple domains, including economics, environmental impact, mechanical structural analysis, logistics, aerodynamics, propulsion systems, and control engineering. 
 These disciplines can vary in their mathematical tractability. 
 Some, such as structural mechanics and aerodynamics, can be comprehensively described through differential equations. 
 Others, however, may resist complete mathematical formulation due to their inherent qualitative nature. 
-In such cases, developing appropriate numerical representations may require significant effort. The challenge lies in attempting to capture the essential characteristics of these disciplines while maintaining computational feasibility.
+In such cases, developing appropriate numerical representations may require significant effort. The obstacle lies in attempting to capture the essential characteristics of these disciplines while maintaining computational feasibility.
 
 The aforementioned disciplines exemplify the complexity inherent in optimization problems, which among others are found in aircraft design. While these disciplines represent key aspects of aircraft development, the field encompasses an even broader range of specialized domains than those enumerated.
 Each domain typically requires its own set of design variables, yet these variables often exhibit complex interdependencies. When multiple disciplines share common design variables, these are classified as coupled design variables @Li2016. 
@@ -165,7 +165,7 @@ This requirement for complete restarts presents particular challenges in computa
 // -------------------------------------------------------------------------- //
 
 In practical optimization applications, the concept of constraints warrants careful consideration. While constraints represent another form of boundaries, they are distinctly expressed through mathematical equations. This formulation enables the incorporation of complex physical principles and empirical knowledge, either through direct mathematical expressions or surrogate models.
-To summarize the preceding elaboration, the definition of an complete optimization problem encompasses several essential components. 
+To summarize the preceding elaboration, the definition of a complete optimization problem encompasses several essential components. 
 Design variables constitute the primary element, serving as parameters the optimizer can adjust to minimize the objective function. Additional components include the aforementioned constraints, expressed through equations, and the previously described boundaries. 
 While this framework provides a general approach to optimization, the earlier example demonstrated that formulating a precise optimization problem often requires an iterative approach.
 With some fundamental concepts established and under the assumption of a well-defined optimization formulation, the solution process can be initiated. 
@@ -175,7 +175,7 @@ The optimization process begins with an initial set of parameter values, from wh
 Each iteration generates results that inform the selection of subsequent parameter combinations, guiding the algorithm's trajectory toward either a local or global minimum. 
 The convergence path length exhibits significant variability depending on several factors. A well-chosen initial value may facilitate rapid convergence, while suboptimal starting conditions or inherently complex problem characteristics may necessitate extended computational paths.
 Several factors can impede successful convergence. The selected optimization algorithm may prove unsuitable for the specific problem characteristics, or the solution path may exhibit oscillatory behavior. 
-In the latter case, the optimizer may encounter difficulties in achieving convergence or identifying a unique solution. Such convergence challenges can stem from various sources, including excessive step sizes in gradient-based optimization algorithms.
+In the latter case, the optimizer may encounter difficulties in achieving convergence or identifying a unique solution. Such convergence issues can stem from various sources, including excessive step sizes in gradient-based optimization algorithms.
 
 // -------------------------------------------------------------------------- //
 

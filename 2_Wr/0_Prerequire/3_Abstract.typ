@@ -12,7 +12,7 @@ Through comprehensive analysis of existing standards and pressure vessel technol
 Due to safety considerations with hydrogen handling, the study developed a curvature-based approach to assess whether alternative filling agents could be used during experimental testing without significantly affecting the structural properties.
 
 The thesis introduces an optimization framework for #glspl("lie", long:true) to discretize aerodynamic loads, providing crucial insights into their configuration, quantity, dimensions, and force application. 
-This framework advances understanding of practical implementation challenges in #gls("swith") testing.
+This framework advances understanding of practical implementation barriers in #gls("swith") testing.
 This dissertation, being the first doctoral thesis dedicated to #glspl("swith"), establishes a foundation for future research. 
 Key recommendations for #glspl("swith") progression include developing comprehensive certification standards and creating open-source #gls("fem", long:true) models. 
 Essential to these advancements, a pathway was proposed combining experimental testing and numerical simulations to enable safe hydrogen-based structural validation at large aircraft scale.

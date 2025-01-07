@@ -53,7 +53,7 @@ The safety considerations, particularly those arising from the application of hy
 
 // -------------------------------- hydrogen -------------------------------- //
 The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in @chap_2.
-@chap_2 explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
+@chap_2 explores the multifaceted hurdles of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
 First, @chap_2_0 establishes the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
 Following this, @chap_2_1 conducts an in-depth study of the safety-relevant characteristics of #gls("cgh2", long:true), encompassing both theoretical aspects and practical implications for structural design.
 The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide important insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety measures. 
@@ -78,9 +78,7 @@ Similarly, fundamental knowledge about optimization is explored in @chap_4_3.
 As optimization is a vast topic, only selected information relevant to understanding the developed optimization framework is included.
 The integration of beam modeling within the optimization workflow is documented in @chap_4_4.
 The latter section also offers justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
-The optimization framework is subsequently applied to 
-
-obtain multiple solutions that reflect real-world efforts undertaken for static experimental structural validation testing. @chap_4_5_0 to @chap_4_5_3 detail the complete modeling rationale and results.
+The optimization framework is subsequently applied to obtain multiple solutions that reflect real-world efforts undertaken for static experimental structural validation testing. @chap_4_5_0 to @chap_4_5_3 detail the complete modeling rationale and results.
 
 
 // ---------------------------------- final --------------------------------- //

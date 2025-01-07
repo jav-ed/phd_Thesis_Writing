@@ -36,7 +36,7 @@ In the previous @chap_3_4, #gls("lie", long:true) was introduced as a method for
 analysis.
 The development of a structural testing methodology for both conventional aircraft and #gls("swith") necessitates the transformation of continuous aerodynamic loads into physically applicable discrete forces. This transformation presents a fundamental challenge in experimental mechanics: how to appropriately represent a continuous load distribution through a finite number of discrete load application points while maintaining the essential characteristics of the original distribution.
 
-The following section examines various approaches to this discretization challenge, evaluating both traditional regression-based methods and modern unsupervised machine learning techniques. Through systematic comparison of these approaches, a preferred method is identified based on reasoned analysis.
+The following section examines various approaches to this discretization hurdle, evaluating both traditional regression-based methods and modern unsupervised machine learning techniques. Through systematic comparison of these approaches, a preferred method is identified based on reasoned analysis.
 This method's capabilities and limitations are then examined in detail, followed by an exploration of complementary techniques for addressing the identified constraints.
 
 // -------------------------------------------------------------------------- //

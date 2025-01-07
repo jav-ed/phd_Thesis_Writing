@@ -77,7 +77,7 @@ Based on the 7-meter assumption, it is plausible that manufacturers could need t
 #summary_([
 In summary, all hydrogen-powered aircraft concepts share the same primary objective: the reduction of negative environmental impact. The structural integration of hydrogen tanks offers a dual advantage. These tanks not only store hydrogen but also share the load with the attached structural components. At the time of writing, two distinct approaches to structural integration have been identified: fuselage-integrated and wing-integrated.
 
-The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and challenges. On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
+The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and difficulties. On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. 
 As a result, it could pose initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 

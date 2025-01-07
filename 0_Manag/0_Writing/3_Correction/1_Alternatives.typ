@@ -50,9 +50,9 @@
 6. noticeably
 7. demonstrably
 8. quantifiably
-9. materially
-10. distinctly
-11. notably
+10. materially
+11. distinctly
+12. notably
 
 
 // -------------------------------- requires -------------------------------- //
@@ -98,3 +98,9 @@
 26. impart 
 27. convey 
 28. tender
+
+
+// -------------------------------- challenge ------------------------------- //
+1. hurdle
+2. obstacle
+3. barrier

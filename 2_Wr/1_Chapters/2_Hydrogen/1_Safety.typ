@@ -264,7 +264,7 @@ The preceding analysis has primarily focused on the theoretical aspects of hydro
 
 The analysis thus far has elucidated two primary aspects. Firstly, considering this section in conjunction with the previous @chap_2_0 and forthcoming sections, it becomes evident that hydrogen possesses numerous unique properties warranting thorough examination. 
 Secondly, the necessity for specialized considerations in work involving hydrogen has been clearly demonstrated, particularly when moving from theoretical to practical applications.
-While the theoretical foundation and measured data are essential for initial #gls("swith") certification steps, the ultimate objective is to apply this knowledge to real-world scenarios. To bridge the gap between theory and practice, it is crucial to synthesize information from both theoretical models and empirical measurements of hydrogen behavior. The subsequent @chap_2_2 addresses this need by exploring numerical simulations and hydrogen experiments, offering valuable insights into the challenges and considerations of working with hydrogen in practical settings.
+While the theoretical foundation and measured data are essential for initial #gls("swith") certification steps, the ultimate objective is to apply this knowledge to real-world scenarios. To bridge the gap between theory and practice, it is crucial to synthesize information from both theoretical models and empirical measurements of hydrogen behavior. The subsequent @chap_2_2 addresses this need by exploring numerical simulations and hydrogen experiments, offering valuable insights into the obstacles and considerations of working with hydrogen in practical settings.
 
 
 #summary_([

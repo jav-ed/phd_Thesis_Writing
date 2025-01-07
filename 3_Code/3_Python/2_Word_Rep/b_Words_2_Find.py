@@ -59,6 +59,11 @@ words_2_find = [
         "encompas",
         
         "applicable",
+        "hurdle",
+        "obstacle",
+        "barrier",
+        "difficult",
+        
         
         
 ]

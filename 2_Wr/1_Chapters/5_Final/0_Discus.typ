@@ -4,7 +4,6 @@
 = Discussion <chap_6>
 
 // another word for aspect
-// word challenge overused
 
 // can you check the language aspects liek grammar ans spelling
 Starting with @chap_0_2, it was explained that aviation has become an indispensable part of the global economy, serving both personal and business sectors with fast and reliable transportation. 
@@ -22,15 +21,15 @@ Here, it was concluded that all hydrogen-powered aircraft concepts share the sam
 The structural integration of hydrogen tanks offers a dual advantage. 
 These tanks not only store hydrogen but also share the load with the attached structural components. 
 At the time of writing, two distinct approaches to structural integration were identified: fuselage-integrated and wing-integrated.
-The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and challenges. 
+The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and barriers. 
 On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. 
 Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
-Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial challenges that need to be overcome in the pursuit of sustainable aviation.
+Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 
 // ------------------------------- 0_Standards ------------------------------ //
-Beyond these general research challenges, a critical concern for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
+Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
 The role of standards for #gls("swith") certification is multifaceted and remains in its infancy.
-While the innovative nature of #glspl("swith") present challenges for standard application, these challenges also create opportunities for advancing both the technology and their regulatory framework.
+While the innovative nature of #glspl("swith") present challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
 At the time of writing this thesis, no established standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").
 Consequently, there is a pressing need for appropriate standards upon which industry and scientific institutions can build.
 This proactive approach to standardization is crucial for overcoming current limitations and facilitating broader adoption of #glspl("swith").
@@ -38,7 +37,7 @@ Through careful adaptation of existing standards and development of #gls("swith"
 These procedures could ensure that #glspl("swith") are developed and structurally validated in a manner that is both safe and efficient, while meeting industry and regulatory requirements.
 
 // ---------------------------- 1_Aero_Standards ---------------------------- //
-However, the path toward establishing these standards presented several challenges. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
+However, the path toward establishing these standards presented several obstacles. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
 To address this gap, two standards specifically for hydrogen-powered general aviation were announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not yet commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
 Firstly, the scope of these SAE standards regarding tank configuration remains uncertain. 
 Specifically, it is not yet clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
@@ -85,7 +84,7 @@ These findings emphasized the dual considerations necessary for #gls("swith") de
 Given these regulatory requirements and testing limitations, a comprehensive understanding of the physical properties and behavior of hydrogen became essential for successful #gls("swith") development and certification.
 @chap_2_0 provided an overview of hydrogen's fundamental properties that underpin its potential as an aviation fuel.
 While safety aspects are addressed in @chap_2_1, the examined properties demonstrated hydrogen's predominantly positive characteristics as an energy carrier. 
-One notable challenge, however, was hydrogen's invisibility to the human eye due to its small molecular size, which presents specific detection and measurement requirements.
+One notable hurdle, however, was hydrogen's invisibility to the human eye due to its small molecular size, which presents specific detection and measurement requirements.
 The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems revealed both opportunities and challenges in its implementation as a fuel source. 
 The analytical functions developed for calculating hydrogen mass from density and volume across various pressure and temperature ranges enhance this understanding. 
 These functions, which account for real gas behavior, can support the modeling and simulation of hydrogen storage in applications such as #glspl("swith").
@@ -96,14 +95,14 @@ While these analytical capabilities are helpful, they must be complemented by a 
 The focus on safety aspects in @chap_2_1 revealed that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
 Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
 Additionally, hydrogen's diffusion behavior and material compatibility emerged as critical factors for safe containment. 
-While metals provide superior retention compared to plastics, they face the challenge of potential hydrogen embrittlement.
+While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement.
 The theoretical knowledge presented in @chap_2_1 emphasized the need for heightened attention to hydrogen safety in real-world applications. 
 It also highlighted the importance of combining data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. 
 This synthesis of theory and practice proves crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
 
 
 // ------------------------------ 2_Experiment ------------------------------ //
-Building on these safety considerations, experimental investigations provided further insights into specific challenges and mitigation strategies.
+Building on these safety considerations, experimental investigations provided further insights into specific obstacles and mitigation strategies.
 The experimental investigations mentioned in @chap_2_2 demonstrated that hydrogen self-ignition represents a tangible concern in real-world applications.
 Additionally, @chap_2_2 identified the primary geometrical factors that can precipitate ignition and outlined the necessary modifications to mitigate this risk. 
 While the threat of hydrogen self-ignition requires serious consideration, the literature review supported the feasibility of secure hydrogen application, provided that its properties are thoroughly understood and appropriately managed.
@@ -149,7 +148,7 @@ To further advance the understanding of these structural behaviors, @chap_3_2 pr
 The study employed a #gls("fem", long:true) simulation model of a #gls("swith") configuration, detailed the procedure for obtaining necessary derivatives. 
 A key strength of this approach lies in its displacement-based foundation, enabling application to both analytical solutions and numerical simulations.
 The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations. 
-Through illustrative examples of critical curvature assessment, the work revealed inherent challenges in directly comparing obtained curvature results with critical curvature values for complex structures like aircraft.
+Through illustrative examples of critical curvature assessment, the work revealed inherent hurdles in directly comparing obtained curvature results with critical curvature values for complex structures like aircraft.
 The findings yielded practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. However, the examination also highlighted the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach, which was subsequently presented in @chap_3_3.
 
 // -------------------------------- 3_Curv_2D ------------------------------- //
@@ -194,10 +193,10 @@ The integration of k-means++ outputs with a comprehensive optimization framework
 To implement this optimization framework effectively, @chap_4_1 introduced a sophisticated methodology for transforming complex three-dimensional aerodynamic loads into manageable one-dimensional resulting point loads.
 The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
 To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. 
-The procedure addressed some key challenges. 
+The procedure addressed some key hurdles. 
 First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. 
 Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
-The implementation of a reference-length-based force discretization method proved instrumental in resolving these challenges. 
+The implementation of a reference-length-based force discretization method proved instrumental in resolving these obstacles. 
 The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
 
 The reduction of the three-dimensional load distributions to one-dimensional representations enabled the use of computationally efficient beam models as alternatives to #gls("fem") analysis. 
