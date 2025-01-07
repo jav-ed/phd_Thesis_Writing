@@ -67,7 +67,7 @@ def analyze_duplicates(file_paths: List[Path],
 b_last_word = False
 
 # files = find_typ_files("2_Wr/1_Chapters/0_Intro")
-files = find_typ_files("2_Wr/1_Chapters/1_Standards")
+# files = find_typ_files("2_Wr/1_Chapters/1_Standards")
 
 # just fine: A
 # contains some rep, but fine : BJ
