@@ -3,6 +3,8 @@
 #import "../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 #set par(
     justify: true,
     first-line-indent: 0em,
@@ -68,10 +70,10 @@ you can call Him how you like, the most beautiful names are His.
 
 // from here on regular english cna be used, that is, I should be written big
 Prof. Johannes Markmiller, thank you for that decisive job interview. Your warm and approachable personality convinced me to accept the position at your Chair of Aircraft Engineering, even though the research topic seemed rather unexciting at first. 
-Having worked with you over these years, I would like to highlight one special aspect: I truly enjoyed our conversations. Our meetings often extended well beyond their planned duration. It was particularly enriching that we could explore various topics, not solely those related to science. You possess the rare ability to present complex differential equations with remarkable clarity. One quality that particularly impressed me was your skill in making me feel respected throughout our interactions.
+Having worked with you over these years, I would like to highlight one special aspect: I truly enjoyed our conversations. Our meetings often extended well beyond their planned duration. It was especially enriching that we could explore various topics, not solely those related to science. You possess the rare ability to present complex differential equations with remarkable clarity. One quality that particularly impressed me was your skill in making me feel respected throughout our interactions.
 
 #v(1em)
-Next, I would like to thank Dr.-Ing. Florian Dexl. You were one of the reasons why I applied at the Technische Universität Dresden in the first place. It turned out that you would become the supervisor of our small engineering working group. One special occasion I particularly remember is how enjoyable it was to solve analytical equations with you.
+Next, I would like to thank Dr.-Ing. Florian Dexl. You were one of the reasons why I applied at the Technische Universität Dresden in the first place. It turned out that you would become the supervisor of our small engineering working group. A standout experience I remember is how enjoyable it was to solve analytical equations with you.
 Besides the scientific aspect, I enjoyed our conversations about other topics as well. Thank you also for conducting the perfume study with me.
 All in all, I want to express my gratitude for your time and appreciation of your ideas.
 
@@ -96,7 +98,7 @@ Dear reader, I ask you to recognize my utmost desire to distance myself as much 
 While this short paragraph does not permit space for detailed elaborations, I would like to pinpoint a few crucial points.
 I am saying this as a non-Arab - I was not born in Palestine, I never went there, from what I know I also do not have any family members there, nor do I have any connections to people there.
 Taking away drinking water from any population, be it a Muslim Arab or whoever else, can easily be seen as a monstrous act. I know that every human was gifted with dignity, honor and respect.
-Part of this dignity is unrestricted access to water. Another important aspect of human dignity are human rights - all of them.
+Part of this dignity is unrestricted access to water. Another important element of human dignity are human rights - all of them.
 
 Many more examples could be given, highlighting simple and ubiquitously ethical aspects. Yet, even politically constrained academia can be consulted @Jones2024 @Kunichoff2024 @El_Shewy2024 @Brooks2024 @Ram2024 @Khafaei2024 @neier2024israel @Segal2024 @Abuawad2024 @link_UN_3.
 Most of them are very clear in their arguments, such as:

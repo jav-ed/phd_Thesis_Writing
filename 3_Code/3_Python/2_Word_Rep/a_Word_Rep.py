@@ -81,14 +81,21 @@ b_last_word = False
 b_multiple = False
 
 files_list = [
-    "2_Wr/1_Chapters/0_Intro",      # 0
-    "2_Wr/1_Chapters/1_Standards"   # 1
+    "2_Wr/0_Prerequire",            # 0
+    "2_Wr/1_Chapters/0_Intro",      # 1
+    "2_Wr/1_Chapters/1_Standards"   # 2
               ]
 
-# files = find_typ_files(files_list[1])
+files = find_typ_files(files_list[0])
 
 # just fine: A
 # contains some rep, but fine : BJ
+# -------------------------------- prerequire -------------------------------- #
+# singl_file = "2_Wr/0_Prerequire/1_Declaration.typ" # BJ
+# singl_file = "2_Wr/0_Prerequire/2_Acknowledge.typ" # BJ
+# singl_file = "2_Wr/0_Prerequire/3_Abstract.typ" # BJ
+
+
 # ---------------------------------- chap 0 ---------------------------------- #
 # singl_file = "2_Wr/1_Chapters/0_Intro/0_Intro.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/1_Motiv.typ" # A
@@ -104,7 +111,7 @@ files_list = [
 # singl_file = "2_Wr/1_Chapters/1_Standards/2_Pressure_Vessels.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/1_Standards/3_Automotive.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/1_Standards/4_Various_Fields.typ" # A
-singl_file = "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ" # BJ
 
 # ---------------------------------------------------------------------------- #
 
