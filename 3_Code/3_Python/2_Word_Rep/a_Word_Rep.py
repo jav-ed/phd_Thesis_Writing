@@ -33,18 +33,32 @@ def analyze_duplicates(file_paths: List[Path],
                       margin: int = 120) -> dict:
     results = {}
     for file_path in file_paths:
-        text = file_path.read_text()
+        text = file_path.read_text().lower()
         # Split text into words
         all_words = text.split()
         word_positions = {}
         
-        for search_word in words:
+        for search_phrase in words:
+            # Split search phrase into individual words
+            phrase_words = search_phrase.split()
+            phrase_len = len(phrase_words)
+            
             # Find positions in terms of word count
             positions = []
-            for i, word in enumerate(all_words):
-                if word.startswith(search_word):
+            # Need to check up to len(all_words) - phrase_len + 1 to avoid index out of range
+            for i in range(len(all_words) - phrase_len + 1):
+                # Check if consecutive words match the phrase
+                matches = True
+                for j in range(phrase_len):
+                    if not all_words[i + j].startswith(phrase_words[j]):
+                        matches = False
+                        break
+                if matches:
                     positions.append(i)
-            word_positions[search_word] = positions
+                    
+            if positions:  # Only add to word_positions if matches were found
+                word_positions[search_phrase] = positions
+
             
         duplicates = {}
         for word, positions in word_positions.items():
@@ -63,11 +77,15 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-# b_last_word = True
 b_last_word = False
+b_multiple = False
 
-# files = find_typ_files("2_Wr/1_Chapters/0_Intro")
-# files = find_typ_files("2_Wr/1_Chapters/1_Standards")
+files_list = [
+    "2_Wr/1_Chapters/0_Intro",      # 0
+    "2_Wr/1_Chapters/1_Standards"   # 1
+              ]
+
+# files = find_typ_files(files_list[1])
 
 # just fine: A
 # contains some rep, but fine : BJ
@@ -78,7 +96,7 @@ b_last_word = False
 # singl_file = "2_Wr/1_Chapters/0_Intro/3_Work_Strucutre.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/4_Novelty.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/0_Intro/5_Research_Enabler.typ" # A
-# singl_file = "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ" # A
+# singl_file = "2_Wr/1_Chapters/0_Intro/6_State_Of_Art.typ" # BJ
 
 # ---------------------------- chap 1 - standards ---------------------------- #
 # singl_file = "2_Wr/1_Chapters/1_Standards/0_Standards.typ" # A
@@ -92,13 +110,26 @@ singl_file = "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ" # BJ
 
 if "singl_file" in locals():
     files = find_typ_file(singl_file)
+    
 words_to_find = w_h.words_2_find
 
-if b_last_word:
+if b_last_word :
     words_to_find = [words_to_find[-1]]
-
-results = analyze_duplicates(files, words_to_find)
-display_results(results=results)
+    
+# ------------------------- multiple files last word ------------------------- #
+if b_multiple:
+    print("running multiple files")
+    for i, ct_file in enumerate(files_list):
+        files = find_typ_files(ct_file)
+        results = analyze_duplicates(files, words_to_find)
+        
+        print(f"\noutcome for {ct_file}")
+        display_results(results=results)
+        
+# -------------------------------- single file ------------------------------- #
+else:
+    results = analyze_duplicates(files, words_to_find)
+    display_results(results=results)
 
 if "singl_file" in locals():
     print(f"\ndone with: {singl_file}")

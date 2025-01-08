@@ -45,8 +45,8 @@ To introduce torque that a body experiences onto a tank, two #gls("lie", long:tr
 ) <fig_6>
 
 The shells connect the pressure vessel and a load-bearing part of the car's body. These shells, which act as #glspl("lie"), can transfer any torque experienced by the car's body to the pressure vessel and vice versa. The connection between the shells (or #glspl("lie")) and the hydrogen tanks is a friction-locked connection created using clamping ring bands. 
-This concept certainly represents a possibility to introduce torque into #gls("cgh2") tanks. However, it requires that the clamping rings can generate sufficiently strong pressures to maintain grip or adhesion between the tanks and the shells. Force transmission via friction is only possible if proper contact between the tanks and the shells is established.
-A potential source of danger could be the magnitude of the occurring torque. In the case of very high torque, the pressure acting on the clamping ring bands, which ensures load transfer, needs to be increased accordingly. However, by doing so, the clamping pressure could become too high for the #gls("cgh2") tanks to sustain.
+This concept certainly represents a possibility to introduce torque into #gls("cgh2") tanks. Critically, it requires that the clamping rings can generate sufficiently strong pressures to maintain grip or adhesion between the tanks and the shells. Force transmission via friction is only possible if proper contact between the tanks and the shells is established.
+A potential source of danger could be the magnitude of the occurring torque. In the case of very high torque, the pressure acting on the clamping ring bands, which ensures load transfer, needs to be increased accordingly. In turn, by doing so, the clamping pressure could become too high for the #gls("cgh2") tanks to sustain.
 To aid in understanding this concept, additional information shall be provided via static friction illustration. The static friction is given in @eq_0, where $H$, $mu$, and $N$ are denoted as static friction force, static friction coefficient, and normal force, respectively.
 
 $  H <=  mu N $<eq_0>
@@ -106,9 +106,9 @@ For completeness, it shall be stated that patents from the field of aviation wer
 
 // -------------------------------------------------------------------------- //
 #summary_([
-In summary, academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks. It is evident that these tanks are of interest not only for aviation but also for automotive applications. However, the available literature in this field is scarce, mirroring the limited research in aerospace.
+In summary, academic work in the automotive industry reveals common aims with aerospace regarding structural integral hydrogen tanks. It is evident that these tanks are of interest not only for aviation but also for automotive applications. Nevertheless, the available literature in this field is scarce, mirroring the limited research in aerospace.
 The sole academic paper found in the automotive sector @Bleser2012 focused on utilizing hydrogen tanks as torque absorbers.
-However, details were sparse, especially regarding the experimental section.
+Regrettably, details were sparse, especially regarding the experimental section.
 Consequently, based on the current state of research, no significant added value could be derived from automotive academic literature for certification-oriented experimental structural validation tests of #glspl("swith").
 While additional patents aimed at using tanks as load-bearing structural integral parts were identified, their descriptions did not contain substantial additional information for experimental structural validation tests of #glspl("swith"). This further underscores the need for more comprehensive research in this area across both industries.
 ])

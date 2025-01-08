@@ -36,9 +36,9 @@ This document sets ambitious goals for the aviation industry, including a 75% re
 
 One promising approach to meeting these environmental difficulties, as mentioned in @chap_0_1, is the replacement of current kerosene fuel with hydrogen. In addition to 
 eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. 
-However, lack of awareness or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
+Nevertheless, lack of awareness or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
 These are especially of importance in the face of conducting experimental structural validation tests that are mandatory for certifying any aircraft. A more detailed examination of hydrogen's properties and challenges can be found in @chap_2_0 to @chap_2_2.
-Finding an alternative fuel for aerospace is of high importance. However, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022 @Capurso2022. 
+Finding an alternative fuel for aerospace is of high importance. Moreover, in the case of hydrogen, gaining knowledge on how to work with hydrogen can be regarded as equally important as finding an alternative fuel. This is due to the wide application fields of hydrogen @Rasul2022 @Capurso2022. 
 Considering only the mobility sector 
 @Rasul2022 @Capurso2022 @Qureshi2022, hydrogen could power, among others, ships, motorcycles, cars, vans, helicopters, trains, and quadcopters. Whether in the mobility industry or the energy sector, subtle mistakes could cause 
 severe damage, necessitating a deeper exploration of hydrogen for applications beyond aviation.
@@ -53,7 +53,7 @@ The dual functionality of #glspl("swith") - serving as both fuel storage and loa
 Certification authorities need to ensure that #glspl("swith") can be safely operated by pilots and utilized by passengers. The integration of high-pressure hydrogen tanks within the wing structure raises numerous questions that are not adequately addressed by current norms, as further elaborated in @chap_1.
 First, there is limited knowledge regarding which experimental structural tests should be conducted to provide comprehensive certification. This lack of established protocols highlights the need for developing new testing methodologies specifically tailored to the unique characteristics of #glspl("swith").
 Second, even when assuming it would be known what to test, there remains a 
-formidable challenge in determining how to conduct these tests safely. Addressing these certification constraints is crucial for the successful implementation of #glspl("swith") in commercial aviation.
+formidable challenge in determining how to conduct these tests safely. Resolving these certification constraints is crucial for the successful implementation of #glspl("swith") in commercial aviation.
 
 The primary focus of this work is scientific, aiming to advance the understanding of #glspl("swith") and their experimental structural validation tests.
 However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #glspl("swith") could have 

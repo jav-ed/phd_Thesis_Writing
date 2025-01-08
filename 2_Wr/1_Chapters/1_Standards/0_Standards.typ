@@ -30,7 +30,7 @@ Moreover, as more stakeholders adopt these standards, network effects come into 
 
 In fields characterized by innovation and uncertainty, such as #gls("swith") development, standards take on heightened importance @Narayanan2012 @Zoo2017 @Morse2018.
 The contribution of experts to the composition and revision of standards ensures consideration of aspects that an individual might not think of, thereby enhancing the safety and reliability of products and systems.
-Rather than acting as restrictive barriers, standards in innovative contexts serve as foundational reference points. 
+Rather than acting as restrictive barriers, standards in innovative contexts establish foundational reference points. 
 They offer a structured approach to addressing known obstacles while providing flexibility for novel solutions. 
 This balance is crucial in the development of #glspl("swith"), where the integration of high-pressure hydrogen tanks with aircraft wing structures presents unique engineering hurdles.
 The role of standards extends beyond the physical design of #glspl("swith") to encompass the development process, including structural validation testing. 
@@ -66,7 +66,7 @@ Consequently, it can be said that the evolution of standards is likely to play a
 In conclusion, the role of standards in #gls("swith") development is multifaceted and still in its infancy. 
 While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these hurdles also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
 At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
-Consequently, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
+As a result, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #glspl("swith").
 By carefully adapting existing standards and paving the way for #gls("swith")-specific standards, researchers and engineers can establish comprehensive validation protocols. These protocols ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
 ])

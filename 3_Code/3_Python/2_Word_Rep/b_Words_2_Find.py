@@ -74,6 +74,13 @@ words_2_find = [
         "moreover",
         "consequently",
         "however",
+        "serve as",
+        "establish",
+        "act as",
+        "listed",
+        "appear",
+        "specifically",
+        "result",
         
         
         

@@ -22,8 +22,8 @@ Within each topic, careful attention is given to delivering essential fundamenta
 To the best knowledge of the author, effort has been made throughout this work to identify situations where assumptions might not be immediately evident to readers. When such instances were recognized, the author attempted to establish appropriate justification to support scientific transparency and enhance reader comprehension.
 These documented assumptions serve as the foundation upon which results are derived, presented, and interpreted within their respective chapters.
 The decision to furnish background information for each topic stems from the broad scope of the research. 
-Given the diversity of subjects covered, readers cannot reasonably be expected to possess comprehensive knowledge of all fundamental aspects. 
-Readers with expertise in structural engineering will likely find the beam modeling background detailed in @chap_4_2 familiar from their prior education and experience. Similarly, those well-versed in numerical optimization will recognize the fundamental principles demonstrated in @chap_4_3 from their existing knowledge base.
+Due to the diversity of subjects covered, readers cannot reasonably be expected to possess comprehensive knowledge of all fundamental aspects. 
+Readers with expertise in structural engineering will likely find the beam modeling background detailed in @chap_4_2 familiar from their prior education and experience. Similarly, those well-versed in numerical optimization will recognize the underlying principles demonstrated in @chap_4_3 from their existing knowledge base.
 Conversely, readers from other disciplines might require additional theoretical foundations beyond what these chapters contain.
 The research encompasses various interconnected subjects, including:
 
@@ -44,7 +44,7 @@ A detailed review of the state of the art regarding #glspl("swith") is provided 
 
 @chap_1 encompasses a comprehensive overview of the standards relevant to #glspl("swith"). It begins by explaining the importance of standards in @chap_1_0. 
 The @chap_1 then proceeds to evaluate potentially applicable aerospace standards, highlighting their relevance and limitations in @chap_1_1.
-The fundamentals of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_2. 
+The core concepts of pressure vessels are explored, laying the groundwork for understanding the unique challenges posed by #glspl("swith") in @chap_1_2. 
 Subsequently, it delves into the preliminary development of structural integral tanks in the automotive industry, offering insights into parallel innovations in @chap_1_3, including a review of relevant patents.
 An examination of specific standards from various sectors follows, along with an analysis of overarching norms applicable to high-pressure hydrogen systems in @chap_1_4. 
 @chap_1 concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_5.
