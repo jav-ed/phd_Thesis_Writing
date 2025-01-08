@@ -29,7 +29,7 @@ This thesis is written in Germany; thus, the focus is primarily on European stan
 The European Union has established uniform standards for the aviation industry that are binding for all member states. This ensures a consistent basis for aircraft operation and safety in air traffic. 
 European aviation standards are referred to as #gls("cs", long:true) @Mensen2013 @EASA_CS_Genereral. Among these, the standards that might be classified as relevant to #glspl("swith") are #gls("cs")-23 @EASA_CS_23, #gls("cs")-25 @EASA_CS_25, #gls("cs")-27 @EASA_CS_27, and #gls("cs")-29 @EASA_CS_29.
 
-#gls("cs")-23, for instance, can be applied for the certification of small aircraft that fall within specific criteria regarding their category, maximum take-off mass, and passenger capacity. However, exceeding these criteria may require the application of #gls("cs")-25. #gls("cs")-23 differs from #gls("cs")-25 essentially in that it places less demanding requirements on aircraft performance and equipment. Another difference is that #gls("cs")-25 requires a more detailed examination of the aircraft structure, fuel supply, electrical systems, flight control, and other systems. This is because larger aircraft generally have more complex systems and are therefore exposed to higher risks.
+#gls("cs")-23, for instance, can be applied for the certification of small aircraft that fall within specific criteria regarding their category, maximum take-off mass, and passenger capacity. However, exceeding these criteria may necessitate the application of #gls("cs")-25. #gls("cs")-23 differs from #gls("cs")-25 essentially in that it places less demanding criteria on aircraft performance and equipment. Another difference is that #gls("cs")-25 mandates a more detailed examination of the aircraft structure, fuel supply, electrical systems, flight control, and other systems. This is because larger aircraft generally have more complex systems and are therefore exposed to higher risks.
 
 Nevertheless, the intent of this thesis is not to delve into a comprehensive explanation of the #gls("cs") standards, as such an exhaustive explanation would exceed the scope of this document. Instead, @tab_15, which enumerates #gls("swith")-potentially relevant #gls("cs") standards alongside their respective application fields, should suffice as a suitable reference.
 
@@ -82,7 +82,7 @@ Additionally,
 
 #quote(attribution: [#gls("easa") #gls("cs")-25 @EASA_CS_25])[the maximum working pressure must include the maximum normal operating pressure, the transient and surge pressures, tolerances of any pressure limiting means and possible pressure variations in the normal operating modes. Transient or surge pressures need not be considered except where these exceed the maximum normal operating pressure multiplied by 1.10.]
 
-Furthermore, temperature influence and proof of strength are addressed. Specifically, the following three requirements are made for the proof of strength:
+Furthermore, temperature influence and proof of strength are addressed. Specifically, the following three specifications are outlined for the proof of strength:
 
 + Compliance with the test and burst factors from @tab_1. These factors, obtained from CS 25.1453, are to be used in conjunction with the maximum working pressure.
 
@@ -120,7 +120,7 @@ One might evaluate the possibility of convincing approval authorities to accept 
 One relevant option is space technology. In this field, the ANSI/AIAA S-081B-2018 Space Systems—Composite Overwrapped Pressure Vessels standard @ansi_standard_2018 is noteworthy. 
 ANSI, the American National Standards Institute, primarily develops standards for use in the USA. However, it is common for other countries or the EU to use existing standards as a basis for developing their own @Mensen2013. 
 While complete adoption of foreign guidelines is conceivable, there is no guarantee of universal acceptance.
-Standards are generally distinguished by their geographical scope of adoption. Internationally recognized standards have global acceptance, followed by continental and national standards. Individual states may require additional approval criteria beyond international and continental standards. Failure to meet all requirements could significantly impact the progress of an innovative project under a given jurisdiction.
+Standards are generally distinguished by their geographical scope of adoption. Internationally recognized standards have global acceptance, followed by continental and national standards. Individual states may mandate additional approval criteria beyond international and continental standards. Failure to meet all requirements could significantly impact the progress of an innovative project under a given jurisdiction.
 
 
 /* -------------------------------------------------------------------------- */

@@ -84,8 +84,8 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word =  False
-b_multiple =   False
+b_last_word =  True
+b_multiple =   True
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
@@ -94,7 +94,7 @@ files_list = [
     "2_Wr/1_Chapters/2_Hydrogen",   # 3
               ]
 
-files = find_typ_files(files_list[3])
+# files = find_typ_files(files_list[3])
 
 # just fine: A
 # contains some rep, but fine : BJ
@@ -120,6 +120,11 @@ files = find_typ_files(files_list[3])
 # singl_file = "2_Wr/1_Chapters/1_Standards/3_Automotive.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/1_Standards/4_Various_Fields.typ" # A
 # singl_file = "2_Wr/1_Chapters/1_Standards/5_Essential_Standards.typ" # BJ
+
+# ------------------------------ chap 2 - hydro ------------------------------ #
+# singl_file = "2_Wr/1_Chapters/2_Hydrogen/0_H2_Prop.typ" # BJ
+
+
 
 # ---------------------------------------------------------------------------- #
 

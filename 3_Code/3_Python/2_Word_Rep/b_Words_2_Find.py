@@ -18,10 +18,7 @@ words_2_find = [
         "approach",
         "notable",
         "exhaustive",
-        "necessitates",
         "essential",
-        "necessary",
-        "requires",
         "demonstrate",
         "particular",
         "careful",
@@ -85,6 +82,8 @@ words_2_find = [
         "denote",
         "stand for",
         "stands for",
+        "require",
+        "necess" # "necessitate, necessity, necessary"
         
         
         

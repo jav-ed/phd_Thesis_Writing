@@ -8,9 +8,9 @@ A comprehensive definition and state-of-the-art review of #gls("swith", long:tru
 The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in this chapter.
 This chapter explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
 First, @chap_2_0 establishes the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
-Following this, @chap_2_1 conducts an in-depth examination of the safety-relevant characteristics of #gls("cgh2", long:true), addressing both theoretical considerations and practical implications for structural design.
-The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide critical insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety considerations. 
-Finally, acknowledging that #glspl("swith") must withstand both internal pressure and external aerodynamic loads, @chap_2_3 analyzes critical findings regarding the behavior of pressure vessels under external dynamic loading conditions.
+Following this, @chap_2_1 conducts an in-depth examination of the safety-relevant characteristics of #gls("cgh2", long:true), addressing both theoretical principles and practical implications for structural design.
+The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide critical insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety measures. 
+Finally, acknowledging that #glspl("swith") must withstand both internal pressure and external aerodynamic loads, @chap_2_3 analyzes findings regarding the behavior of pressure vessels under external dynamic loading conditions.
 This comprehensive approach integrates theoretical understanding, safety considerations, and practical engineering obstacles to establish a robust framework for developing and validating #glspl("swith").
 
 // Title was tested and is inshallah fine
@@ -106,13 +106,12 @@ For convenience, all principal and safety-wise harmless information of this sect
 ) <fig_15>
 
 While @tab_18 provides important information about hydrogen, one special aspect warrants detailed examination. A major reason for hydrogen's attractiveness as an energy carrier is its gravimetric energy density. Gravimetric energy density describes the usable energy per unit mass. A high gravimetric energy density implies that substantial energy can be employed with less weight.
-Due to the ongoing environmental crisis, most mobility sectors are eager to find an energy medium that offers both high energy content for economic reasons and low weight for environmental concerns. The lighter the energy carrier, the less mass needs to be transported, thereby reducing power consumption demands. be transported, which reduces power consumption demands.
-
-
-In its pure form, hydrogen possesses a high gravimetric energy density @Usman2022 @Yao2022 @Prewitz2020 @TashieLewis2021. However, the gravimetric energy densities achieved in practical applications are significantly lower than those of hydrogen in its pure form. This reduction is primarily due to the storage system requirements.
-For practical applications, hydrogen must be stored within a tank. In the case of #gls("cgh2"), pressure is a major factor influencing the gravimetric energy density. There are several considerations regarding pressure and tank design. Firstly, there is a technical limit on how much pressure can be created within a tank. Secondly, higher demanded pressure exerts more stress on the tank, necessitating appropriate tank materials. More details on this can be found in @chap_1_2. Furthermore, the mass required for pressure containment reduces the overall gravimetric energy density of the hydrogen-storage system, as the tank's mass does not contribute to the energy content.
+Due to the ongoing environmental crisis, most mobility sectors are eager to find an energy medium that offers both high energy content for economic reasons and low weight for environmental concerns. The lighter the energy carrier, the less mass needs to be transported, thereby reducing power consumption demands.
+//
+In its pure form, hydrogen possesses a high gravimetric energy density @Usman2022 @Yao2022 @Prewitz2020 @TashieLewis2021. However, the gravimetric energy densities achieved in practical applications are significantly lower than those of hydrogen in its pure form. This reduction is primarily due to the storage system specifications.
+For practical applications, hydrogen must be stored within a tank. In the case of #gls("cgh2"), pressure is a major factor influencing the gravimetric energy density. There are several considerations regarding pressure and tank design. Firstly, there is a technical limit on how much pressure can be created within a tank. Secondly, higher operating pressure exerts more stress on the tank, dictating appropriate tank materials. More details on this can be found in @chap_1_2. Furthermore, the mass necessary for pressure containment reduces the overall gravimetric energy density of the hydrogen-storage system, as the tank's mass does not contribute to the energy content.
 Consequently, if the tank is very heavy but does not allow for the storage of much hydrogen mass, the resulting gravimetric energy density is low.
-A comparison of gravimetric energy densities between pure forms and practical storage systems for commonly used fuels is presented in @fig_16. In this figure, the suffix #emp_("G") denotes gaseous state, #emp_("L") represents liquid state, and #emp_("NG") stands for natural gas.
+A comparison of gravimetric energy densities between pure forms and practical storage systems for commonly used fuels is presented in @fig_16. In this figure, the suffix #emp_("G") denotes gaseous state, #emp_("L") stands for liquid state, and #emp_("NG") stands for natural gas.
 
 
 #figure(
@@ -131,7 +130,7 @@ $ Z = m_"ideal" / m_"real" $<eq_5>
 
 When $Z = 1$, there is no difference between real and ideal gas behavior. 
 When $Z$ exceeds 1 ($m_"ideal" > m_"real" => Z > 1$), the ideal gas equation overestimates the mass. Conversely, when $Z$ is less than 1 ($m_"ideal" < m_"real" => Z < 1$), the equation underestimates the mass. 
-Real gas factors are typically determined empirically and presented as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ represent coefficients specific to the regression model.
+Real gas factors are typically determined empirically and formulated as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ function as coefficients specific to the regression model.
 
 $ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 "MPa"))^(c_i) $<eq_6>
 

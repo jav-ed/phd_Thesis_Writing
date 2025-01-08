@@ -25,8 +25,7 @@ A visual depiction of the i-2 is given in @fig_2.
 ) <fig_2>
 
 
-Due to the goal of bringing this aircraft to market, real-world demands must be considered. A primary concern is the range of flight 
-@butt2021development @Viswanathan2022, which necessitates storing as much hydrogen as possible within the tanks @Muthukumar2023.
+Due to the goal of bringing this aircraft to market, real-world demands must be considered. A primary concern is the range of flight @butt2021development @Viswanathan2022, which mandates storing as much hydrogen as possible within the tanks @Muthukumar2023.
 Given the focus on gaseous hydrogen @Manigandan2023 @Yusaf2024 @Meissner2023, two main options exist for increasing storage capacity: enlarging the tank dimensions or compressing the gas. However, increasing the dimensions presents significant challenges due to constraints from various disciplines. Larger tubes would add mass, a crucial factor in structural design. 
 Moreover, any change in the shape or dimensions of the tubes would necessitate corresponding changes to the wing shape and dimensions, as they are structurally connected. The wing, being the primary generator of aerodynamic force, is highly sensitive to such changes. Any modification of the wing would directly impact the lift distribution
 @McLean2014 @McBain2012 @Schuetz_2023 @Hucho2012 @Sigloch2022. 
@@ -69,8 +68,8 @@ The scarcity of openly available scientific work on #glspl("swith"), coupled wit
 According to publicly available information from APUS @APUS_1, the full wingspan is 13.2 meters. 
 From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises approximately more than half of this length, suggesting a tube length of around 7 meters. 
 Generally, with a given pressure, longer tubes allow for increased hydrogen storage capacity. 
-Consequently, for extended flight ranges and assuming the highest allowable pressure has already been selected, even longer tubes may be required.
-Based on the 7-meter assumption, it is plausible that manufacturers could need to either develop novel methods or materially improve existing techniques to craft such large-scale and complex structures. This process must adhere to the required material specifications and manufacturing accuracy demands, potentially posing a substantial engineering barriers.
+Consequently, for extended flight ranges and assuming the highest allowable pressure has already been selected, even longer tubes may be necessary.
+Based on the 7-meter assumption, it is plausible that manufacturers could need to either develop novel methods or materially improve existing techniques to craft such large-scale and complex structures. This process must adhere to the prescribed material specifications and manufacturing accuracy demands, potentially posing a substantial engineering barriers.
   
   
 /* --------------------------------- summary -------------------------------- */

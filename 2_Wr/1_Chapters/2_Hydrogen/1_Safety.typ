@@ -151,7 +151,7 @@ The minimum ignition energies for hydrogen, methane, and propane across various 
 ) <fig_19>
 
 
-An analysis of @fig_19 reveals that the aforementioned $20 "mJ"$ energy from a static discharge exceeds the minimum ignition energy required for an appropriate hydrogen-air composition. Comparing hydrogen to methane and propane, two key observations emerge: hydrogen not only requires lower ignition energies than methane but also exhibits flammability across a substantially wider range of air-fuel mixtures.
+An analysis of @fig_19 reveals that the aforementioned $20 "mJ"$ energy from a static discharge exceeds the minimum ignition energy threshold for an appropriate hydrogen-air composition. Comparing hydrogen to methane and propane, two key observations emerge: hydrogen not only exhibits lower ignition energy levels than methane but also exhibits flammability across a substantially wider range of air-fuel mixtures.
 To promote deeper understanding, it is essential to define two critical technical terms:
 
 1. *Flash point*: For a flammable liquid, this refers to the lowest temperature at which, under specified conditions, sufficient vapors are produced to form an ignitable vapor/air mixture above the liquid surface upon external ignition. Notably, if the ignition source is removed, the flames extinguish @Klell2018 @Klell2023.

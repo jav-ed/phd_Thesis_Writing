@@ -69,7 +69,7 @@ Type I tanks are made of metal only @Su2021, and common metals used include stee
 Furthermore, similar to Type I, Type II tanks are also all-metal cylinders, except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
 Nonetheless, evaluating the costs of Types III and IV is more complex.
 To build some intuition for this, initially some insights provided by @Mori2009 shall be examined, followed by concrete comparisons made between tank Types III and IV.
-In @Mori2009 it could be shown that the tank Types III and IV require less than 40% of the thickness that tank Type I would need for the same given pressure value.
+In @Mori2009 it could be shown that the tank Types III and IV utilize less than 40% of the thickness that tank Type I would need for the same given pressure value.
 A visual depiction of this is highlighted in @fig_11.
 
 #figure(
@@ -81,7 +81,7 @@ A visual depiction of this is highlighted in @fig_11.
 // -------------------------------------------------------------------------- //
 Less thickness means less material, which has a beneficial impact on reducing the tank's weight and raw material costs.
 Furthermore, #gls("cfrp") has a lower density than steel and aluminum @Hans_Bargel_2022 @Schuermann2007 @Rossow_2014, which also contributes to weight reduction.
-Thus, the composite tanks not only require less material than their steel counterparts but also achieve significant weight reduction due to the lower density of #gls("cfrp") compared to metal.
+Thus, the composite tanks not only employ less material than their steel counterparts but also achieve significant weight reduction due to the lower density of #gls("cfrp") compared to metal.
 
 To observe some unexpected behavior that could arise when attempting to give general pricing rules for tank Types III and IV, results from @Cheng2024 shall be examined.
 @Cheng2024 compared Type III tanks at 300 and 700 bar with a Type IV tank at 700 bar. 
@@ -145,7 +145,7 @@ The complete listing can be found in @Shin2023 or updated prices at @link_plasti
 
 To conclude the analysis about the costs, especially for tank Types III and IV, the following can be said. 
 The economic viability of each tank type depends on various factors, such as desired pressure, hydrogen storage capacity @KubilayKarayel2023, lightweight demands, raw material costs, and other manufacturing costs.
-It is crucial to note that even if simplified statements like 633 \$/kg were backed up with all the required surrounding information, some important aspects still need to be evaluated.
+It is crucial to note that even if simplified statements like 633 \$/kg were backed up with all the necessary contextual information, some important aspects still need to be evaluated.
 The relationship between required tank mass and desired pressure is not linear, as shown with experimental tests in @KubilayKarayel2023.
 Following that, the relationship between tank material costs and pressure is non-linear.
 Furthermore, the relationship between hydrogen storage capacity and pressure is also non-linear @KubilayKarayel2023 @Yanxing2019.

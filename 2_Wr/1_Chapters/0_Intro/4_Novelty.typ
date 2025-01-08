@@ -16,7 +16,7 @@ This subsection explores the direct, demonstrable contributions of this research
 Finally, it underscores the specific benefits that industry stakeholders can realize through the proposed optimization framework.
 
 The central issue that #glspl("swith") aim to mitigate is the substantial impact of aviation on climate change. 
-As #glspl("swith") utilize hydrogen as power source, they offer a pathway to maintain air travel in this high-demand while significantly reducing environmental impact. To appreciate the critical role of aviation, readers are directed to @chap_0_2 for a review of its necessity.
+As #glspl("swith") utilize hydrogen as power source, they offer a pathway to maintain air travel in this high-demand while significantly reducing environmental impact. To appreciate the critical role of aviation, readers are directed to @chap_0_2 for a review of its vital importance.
 
 /* ---------------------------------- norms --------------------------------- */
 In @chap_1 this work examines the applicability of existing standards from various sectors, including aerospace and automotive, to #gls("swith") for future certification processes. It clearly outlines the associated challenges and uncertainties, acknowledging the current lack of a comprehensive standard for #gls("swith").
