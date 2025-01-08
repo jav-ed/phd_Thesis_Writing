@@ -53,7 +53,7 @@ $  H <=  mu N $<eq_0>
 
 
 The torque causes a circumferential force that would induce sliding between the hydrogen tanks and the #glspl("lie"). However, to prevent this sliding between the shell and the tank, the ring clamping force acting perpendicular to the circumferential force must be sufficiently high.
-Due to friction, the circumferential force invokes the static friction force $H$. Assuming a static relationship, where no movement is allowed, this explanation can be expressed mathematically as @eq_1, where $F_t$ denotes the circumferential force.
+Due to friction, the circumferential force invokes the static friction force $H$. Assuming a static relationship, where no movement is allowed, this explanation can be expressed mathematically as @eq_1, where $F_t$ stands for the circumferential force.
 
 $  F_t = H and  H <=  mu N $<eq_1>
 

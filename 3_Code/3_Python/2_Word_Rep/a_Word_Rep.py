@@ -50,13 +50,20 @@ def analyze_duplicates(file_paths: List[Path],
                 # Check if consecutive words match the phrase
                 matches = True
                 for j in range(phrase_len):
-                    if not all_words[i + j].startswith(phrase_words[j]):
-                        matches = False
-                        break
+                    # For single words, use startswith
+                    if phrase_len == 1:
+                        if not all_words[i + j].startswith(phrase_words[j]):
+                            matches = False
+                            break
+                    # For multi-word phrases, require exact matches
+                    else:
+                        if all_words[i + j] != phrase_words[j]:
+                            matches = False
+                            break
                 if matches:
                     positions.append(i)
                     
-            if positions:  # Only add to word_positions if matches were found
+            if positions:
                 word_positions[search_phrase] = positions
 
             
@@ -77,16 +84,17 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word = False
-b_multiple = False
+b_last_word =  False
+b_multiple =   False
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
     "2_Wr/1_Chapters/0_Intro",      # 1
-    "2_Wr/1_Chapters/1_Standards"   # 2
+    "2_Wr/1_Chapters/1_Standards",  # 2
+    "2_Wr/1_Chapters/2_Hydrogen",   # 3
               ]
 
-files = find_typ_files(files_list[0])
+files = find_typ_files(files_list[3])
 
 # just fine: A
 # contains some rep, but fine : BJ

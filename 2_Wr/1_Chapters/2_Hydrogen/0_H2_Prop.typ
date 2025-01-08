@@ -9,7 +9,7 @@ The findings from these regulatory frameworks serve as crucial guideposts for th
 This chapter explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
 First, @chap_2_0 establishes the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
 Following this, @chap_2_1 conducts an in-depth examination of the safety-relevant characteristics of #gls("cgh2", long:true), addressing both theoretical considerations and practical implications for structural design.
-The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide crucial insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety considerations. 
+The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide critical insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety considerations. 
 Finally, acknowledging that #glspl("swith") must withstand both internal pressure and external aerodynamic loads, @chap_2_3 analyzes critical findings regarding the behavior of pressure vessels under external dynamic loading conditions.
 This comprehensive approach integrates theoretical understanding, safety considerations, and practical engineering obstacles to establish a robust framework for developing and validating #glspl("swith").
 
@@ -19,7 +19,7 @@ This comprehensive approach integrates theoretical understanding, safety conside
 The pursuit of structural validation tests for #gls("swith") certification represents a novel endeavor, motivated by multiple factors examined throughout this thesis. This section focuses specifically on the hydrogen aspect of these tests. Conducting structural tests with compressed hydrogen necessitates both a foundational understanding and an in-depth investigation of hydrogen's properties, particularly those related to safety.
 This section explores the basic properties of hydrogen, elucidating why it stands as an attractive alternative to current fossil fuels. The potential hazards associated with hydrogen in practical applications are addressed in @chap_2_1. Initially, a clear rationale for understanding hydrogen's basic properties is presented. Following this, the fundamental properties of hydrogen are outlined in a clear and structured manner.
 
-The integration of compressed hydrogen in #glspl("swith") represents a pioneering approach in aircraft design, directly addressing at least two major barriers in sustainable aviation: fuel storage and structural efficiency. The innovative nature of this concept, however, results in a scarcity of research on related topics. While this limited body of work poses challenges, it simultaneously emphasizes the importance of further investigation.
+The integration of compressed hydrogen in #glspl("swith") marks a pioneering approach in aircraft design, directly addressing at least two major barriers in sustainable aviation: fuel storage and structural efficiency. The innovative nature of this concept, however, results in a scarcity of research on related topics. While this limited body of work poses challenges, it simultaneously emphasizes the importance of further investigation.
 The necessity to thoroughly understand hydrogen's properties is supported by several factors. Such understanding is essential for comprehending hydrogen's remarkable properties, which make it a promising alternative fuel option. This knowledge guides the successful design, manufacturing, and ultimate commercial certification of #glspl("swith"). Moreover, it is pivotal when designing and conducting both experimental structural tests and simulations of #glspl("swith"). These experiments and simulations are crucial not only for potential future certification but also for advancing the scientific understanding of #glspl("swith").
 For convenience, all principal and safety-wise harmless information of this section is compiled and presented in @tab_18.
 
@@ -74,7 +74,7 @@ For convenience, all principal and safety-wise harmless information of this sect
 
     $ mu_"JT" = (delta T) / (delta p) $<eq_4>
 
-    where T represents temperature, p represents pressure, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
+    where T represents temperature, p stands for pressure, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
     
     [Physical Properties], 
     [- Hydrogen is the lowest density element (approximately 14 times lighter than air) @Klell2018 @Klell2023. 
@@ -135,7 +135,7 @@ Real gas factors are typically determined empirically and presented as analytica
 
 $ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 "MPa"))^(c_i) $<eq_6>
 
-The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Examining @eq_6, it is evident that the first term corresponds to the widely known ideal gas equation, $ p / (rho R T)$ @Stephan2013. The subsequent terms in the equation represent the regression-based modifications that account for the real gas behavior. These additional terms quantify the deviation from ideal gas behavior as a function of temperature and pressure.
+The associated constants $a_i$, $b_i$, and $c_i$ are presented in @tab_19. Examining @eq_6, it is evident that the first term corresponds to the widely known ideal gas equation, $ p / (rho R T)$ @Stephan2013. The subsequent terms in the equation express the regression-based modifications that account for the real gas behavior. These additional terms quantify the deviation from ideal gas behavior as a function of temperature and pressure.
 
 #figure(
   table(

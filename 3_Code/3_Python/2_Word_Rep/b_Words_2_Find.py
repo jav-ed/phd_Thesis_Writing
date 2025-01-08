@@ -81,6 +81,10 @@ words_2_find = [
         "appear",
         "specifically",
         "result",
+        "represent",
+        "denote",
+        "stand for",
+        "stands for",
         
         
         
