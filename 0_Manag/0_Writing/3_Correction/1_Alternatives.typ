@@ -14,9 +14,8 @@
 12. defining
 13. paramount 
 14. primary 
-15. decisive 
-16. dominant 
-17. major 
+15. dominant 
+16. major 
 
 
 

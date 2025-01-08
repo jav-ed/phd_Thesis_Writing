@@ -84,7 +84,9 @@ words_2_find = [
         "stands for",
         "require",
         "necess" # "necessitate, necessity, necessary"
-        "study"
+        "study",
+        "major",
+        "solution"
         
         
         

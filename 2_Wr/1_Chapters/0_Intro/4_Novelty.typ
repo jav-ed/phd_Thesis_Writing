@@ -49,7 +49,7 @@ This question is of high importance for real-world certification: Can an alterna
 
 
 /* ----------------------------- optimization 0 ----------------------------- */
-Building upon this, @chap_4_5 demonstrates the application of optimization techniques to resolve key challenges in the structural testing of #gls("swith"). The study tackles major questions such as determining the optimal number of #glspl("lie"), their ideal placement, dimensions, and the necessary applied forces. A major focus of this research lies in developing methods that do not require access to high-performance computers, making the calculations feasible on standard laptops.
+Building upon this, @chap_4_5 demonstrates the application of optimization techniques to resolve key challenges in the structural testing of #gls("swith"). The study tackles substantial questions such as determining the optimal number of #glspl("lie"), their ideal placement, dimensions, and the necessary applied forces. A major focus of this research lies in developing methods that do not require access to high-performance computers, making the calculations feasible on standard laptops.
 @chap_4 provides in-depth explanations of the theoretical foundations underlying these methods and their integration into the optimization process. The implementation relies entirely on free and open-source tools, offering several advantages for the research community. The choice of programming language and selected tools facilitates cost-effective replication of the presented progress. 
 Furthermore, these widely-used and well-documented tools benefit from extensive online community support, enhancing their accessibility and ease of use.
 /* -------------------------------------------------------------------------- */

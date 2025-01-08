@@ -107,7 +107,7 @@ For convenience, all principal and safety-wise harmless information of this sect
   caption: [Illustrative example of different methods to store hydrogen @Usman2022.],
 ) <fig_15>
 
-While @tab_18 provides important information about hydrogen, one special aspect warrants detailed examination. A major reason for hydrogen's attractiveness as an energy carrier is its gravimetric energy density. Gravimetric energy density describes the usable energy per unit mass. A high gravimetric energy density implies that substantial energy can be employed with less weight.
+While @tab_18 provides important information about hydrogen, one special aspect warrants detailed examination. A main reason for hydrogen's attractiveness as an energy carrier is its gravimetric energy density. Gravimetric energy density describes the usable energy per unit mass. A high gravimetric energy density implies that substantial energy can be employed with less weight.
 Due to the ongoing environmental crisis, most mobility sectors are eager to find an energy medium that offers both high energy content for economic reasons and low weight for environmental concerns. The lighter the energy carrier, the less mass needs to be transported, thereby reducing power consumption demands.
 //
 In its pure form, hydrogen possesses a high gravimetric energy density @Usman2022 @Yao2022 @Prewitz2020 @TashieLewis2021. However, the gravimetric energy densities achieved in practical applications are significantly lower than those of hydrogen in its pure form. This reduction is primarily due to the storage system specifications.
