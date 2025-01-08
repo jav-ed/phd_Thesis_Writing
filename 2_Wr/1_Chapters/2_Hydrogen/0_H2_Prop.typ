@@ -2,13 +2,15 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 // Title was tested and is inshallah fine
 = High-Pressure Hydrogen Properties and Structural Considerations <chap_2>
 A comprehensive definition and state-of-the-art review of #gls("swith", long:true) were provided in @chap_0_7, establishing the foundational context for this investigation. Building upon this, @chap_1 presented an extensive analysis of current standards and regulations governing the commercial certification of #gls("swith", long:true). 
 The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in this chapter.
 This chapter explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
-First, @chap_2_0 establishes the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
-Following this, @chap_2_1 conducts an in-depth examination of the safety-relevant characteristics of #gls("cgh2", long:true), addressing both theoretical principles and practical implications for structural design.
+First, @chap_2_0 outlines the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
+Following this, @chap_2_1 conducts an in-depth study of the safety-relevant characteristics of #gls("cgh2", long:true), addressing both theoretical principles and practical implications for structural design.
 The theoretical foundation then transitions to practical applications in @chap_2_2, where experimental investigations and numerical simulations provide critical insights into hydrogen behavior under conditions relevant to aircraft operations. These studies illuminate the complex interplay between hydrogen properties, structural requirements, and safety measures. 
 Finally, acknowledging that #glspl("swith") must withstand both internal pressure and external aerodynamic loads, @chap_2_3 analyzes findings regarding the behavior of pressure vessels under external dynamic loading conditions.
 This comprehensive approach integrates theoretical understanding, safety considerations, and practical engineering obstacles to establish a robust framework for developing and validating #glspl("swith").
@@ -19,7 +21,7 @@ This comprehensive approach integrates theoretical understanding, safety conside
 The pursuit of structural validation tests for #gls("swith") certification represents a novel endeavor, motivated by multiple factors examined throughout this thesis. This section focuses specifically on the hydrogen aspect of these tests. Conducting structural tests with compressed hydrogen necessitates both a foundational understanding and an in-depth investigation of hydrogen's properties, particularly those related to safety.
 This section explores the basic properties of hydrogen, elucidating why it stands as an attractive alternative to current fossil fuels. The potential hazards associated with hydrogen in practical applications are addressed in @chap_2_1. Initially, a clear rationale for understanding hydrogen's basic properties is presented. Following this, the fundamental properties of hydrogen are outlined in a clear and structured manner.
 
-The integration of compressed hydrogen in #glspl("swith") marks a pioneering approach in aircraft design, directly addressing at least two major barriers in sustainable aviation: fuel storage and structural efficiency. The innovative nature of this concept, however, results in a scarcity of research on related topics. While this limited body of work poses challenges, it simultaneously emphasizes the importance of further investigation.
+The integration of compressed hydrogen in #glspl("swith") marks a pioneering approach in aircraft design, directly targeting at least two major barriers in sustainable aviation: fuel storage and structural efficiency. The innovative nature of this concept, however, results in a scarcity of research on related topics. While this limited body of work poses challenges, it simultaneously emphasizes the importance of further investigation.
 The necessity to thoroughly understand hydrogen's properties is supported by several factors. Such understanding is essential for comprehending hydrogen's remarkable properties, which make it a promising alternative fuel option. This knowledge guides the successful design, manufacturing, and ultimate commercial certification of #glspl("swith"). Moreover, it is pivotal when designing and conducting both experimental structural tests and simulations of #glspl("swith"). These experiments and simulations are crucial not only for potential future certification but also for advancing the scientific understanding of #glspl("swith").
 For convenience, all principal and safety-wise harmless information of this section is compiled and presented in @tab_18.
 
@@ -111,7 +113,7 @@ Due to the ongoing environmental crisis, most mobility sectors are eager to find
 In its pure form, hydrogen possesses a high gravimetric energy density @Usman2022 @Yao2022 @Prewitz2020 @TashieLewis2021. However, the gravimetric energy densities achieved in practical applications are significantly lower than those of hydrogen in its pure form. This reduction is primarily due to the storage system specifications.
 For practical applications, hydrogen must be stored within a tank. In the case of #gls("cgh2"), pressure is a major factor influencing the gravimetric energy density. There are several considerations regarding pressure and tank design. Firstly, there is a technical limit on how much pressure can be created within a tank. Secondly, higher operating pressure exerts more stress on the tank, dictating appropriate tank materials. More details on this can be found in @chap_1_2. Furthermore, the mass necessary for pressure containment reduces the overall gravimetric energy density of the hydrogen-storage system, as the tank's mass does not contribute to the energy content.
 Consequently, if the tank is very heavy but does not allow for the storage of much hydrogen mass, the resulting gravimetric energy density is low.
-A comparison of gravimetric energy densities between pure forms and practical storage systems for commonly used fuels is presented in @fig_16. In this figure, the suffix #emp_("G") denotes gaseous state, #emp_("L") stands for liquid state, and #emp_("NG") stands for natural gas.
+A comparison of gravimetric energy densities between pure forms and practical storage systems for commonly used fuels is presented in @fig_16. In this figure, the suffix #emp_("G") denotes gaseous state, #emp_("L") the liquid state, and #emp_("NG") natural gas.
 
 
 #figure(
@@ -130,7 +132,7 @@ $ Z = m_"ideal" / m_"real" $<eq_5>
 
 When $Z = 1$, there is no difference between real and ideal gas behavior. 
 When $Z$ exceeds 1 ($m_"ideal" > m_"real" => Z > 1$), the ideal gas equation overestimates the mass. Conversely, when $Z$ is less than 1 ($m_"ideal" < m_"real" => Z < 1$), the equation underestimates the mass. 
-Real gas factors are typically determined empirically and formulated as analytical equations or regression-derived terms. An example for hydrogen is given in @Lemmon2008 by @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ function as coefficients specific to the regression model.
+Real gas factors are typically determined empirically and formulated as analytical equations or regression-derived terms. An example for hydrogen is provided in @Lemmon2008 through @eq_6, where $p,T, rho$, and $R$ denote pressure, temperature, density and the ideal gas constant, respectively, while $a_i$, $b_i$, and $c_i$ function as coefficients specific to the regression model.
 
 $ Z(p,T) = p / (rho R T) = 1 + sum_(i=1)^9  a_i ((100 K) / T)^(b_i) (p / (1 "MPa"))^(c_i) $<eq_6>
 
@@ -187,7 +189,7 @@ For this study, a custom tool was developed to generate insights into the real g
 
 
 #summary_([
-This section has presented an overview of the fundamental properties of hydrogen. While the safety aspects will be addressed in @chap_2_1, the properties examined thus far demonstrate hydrogen's predominantly positive characteristics as an energy carrier. However, one notable limitation is hydrogen's invisibility to the human eye due to its small molecular size, which could pose challenges for detection and measurement.
+This section has presented an overview of the fundamental properties of hydrogen. While the safety aspects will be addressed in @chap_2_1, the properties elaborated thus far demonstrate hydrogen's predominantly positive characteristics as an energy carrier. However, one notable limitation is hydrogen's invisibility to the human eye due to its small molecular size, which could pose challenges for detection and measurement.
 The relationship between hydrogen's high theoretical gravimetric energy density and its practical energy density in real-world storage systems has been elucidated. This comparison highlights the hurdles and potential of hydrogen as a fuel source.
 Furthermore, analytical functions for calculating hydrogen mass from density and volume across various pressure and temperature ranges have been explored. 
 These functions, accounting for real gas behavior, are crucial for accurate modeling and simulation of hydrogen storage and use in applications such as #glspl("swith").
