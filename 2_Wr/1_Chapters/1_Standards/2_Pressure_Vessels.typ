@@ -65,7 +65,7 @@ Despite these advancements, Type V tanks remain the most expensive variant among
 A general trend can be observed across the tank Types I to V: as the type number increases, there is a decrease in weight accompanied by an increase in maximum bearable pressure and, typically, in cost. 
 However, it is important to interpret such general statements, especially with regard to costs, as a rough overview.
 Generally, it can be said that the tank Type II costs more than Type I, and that Types III, IV, and V cost more than Types I and II.
-Type I tanks are made of metal only @Su2021, and common metals used include steel and aluminium alloys. Because such tanks are the easiest to manufacture among the five Types, they are generally the cheapest variant @Cheng2024 @khzouz2020hydrogen.
+Type I tanks are made of metal only @Su2021, and common metals used include steel and aluminum alloys. Because such tanks are the easiest to manufacture among the five Types, they are generally the cheapest variant @Cheng2024 @khzouz2020hydrogen.
 Furthermore, similar to Type I, Type II tanks are also all-metal cylinders, except that they have carbon fibre or glass fibre filament wrapped around their straight body part @Cheng2024.
 Nonetheless, evaluating the costs of Types III and IV is more complex.
 To build some intuition for this, initially some insights provided by @Mori2009 shall be examined, followed by concrete comparisons made between tank Types III and IV.
