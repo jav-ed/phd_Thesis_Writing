@@ -19,7 +19,7 @@ def display_results(results: dict):
     for file_path, word_data in results.items():
         print(f"\nFile: {file_path}")
         for word, duplicates in word_data.items():
-            print(f"- {word:<30} appears {len(duplicates)} times in close proximity")
+            print(f"- {word:<17} appears {len(duplicates)} times in close proximity")
 
 def find_typ_files(root_dir: str) -> List[Path]:
     return sorted(Path(root_dir).rglob("*.typ"))
@@ -84,8 +84,8 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word =  True
-b_multiple =   True
+b_last_word =  False
+b_multiple =   False
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
