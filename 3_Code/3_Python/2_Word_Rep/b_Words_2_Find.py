@@ -20,7 +20,7 @@ words_2_find = [
         "exhaustive",
         "essential",
         "demonstrate",
-        "particular",
+        
         "careful",
         "warrant",
         "analy",
@@ -76,7 +76,6 @@ words_2_find = [
         "act as",
         "listed",
         "appear",
-        "specifically",
         "result",
         "represent",
         "denote",
@@ -94,8 +93,11 @@ words_2_find = [
         "lead to",
         "lead",
         "outcome",
-        "finding"
-        
+        "finding",
+        "meaningful",
+        "particular",
+        "specifically",
+        "especially",
         
         
 ]
