@@ -86,7 +86,15 @@ words_2_find = [
         "necess" # "necessitate, necessity, necessary"
         "study",
         "major",
-        "solution"
+        "solution",
+        "assess",
+        "nevertheless",
+        # "in addition",
+        # "cause",
+        # "lead to",
+        #"lead",
+        # "outcome",
+        # "finding"
         
         
         
