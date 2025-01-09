@@ -19,7 +19,7 @@ To address this question, the most critical load cases will be examined in @chap
 The investigation of filling media begins with three-dimensional modeling in @chap_3_2. 
 To make the complex structural responses more interpretable, @chap_3_3 introduces a simplified two-dimensional representation.
 Through systematic averaging procedures, this approach transforms intricate structural behaviors into clear, meaningful results.
-Finally, @chap_3_4 studies the implementation of physical loads during experimental tests using defined criteria. These insights lay the groundwork for the aerodynamic load discretization and optimization framework presented in @chap_4.
+Finally, @chap_3_4 studies the implementation of physical loads during experimental tests using designated criteria. These insights lay the groundwork for the aerodynamic load discretization and optimization framework presented in @chap_4.
 
 
 // Title was tested and is inshallah fine
@@ -73,9 +73,9 @@ The reasons for inclusion of pressurized cylinder tests for #glspl("swith") were
 
 
 // --------------------------- general load cases --------------------------- //
-The following description of general loads that occur during flight and on ground operations draws primarily from @heinze2023aircraft. Aerodynamic forces induced during flight operations, specifically the pressure differentials that generate lift and negative lift forces, constitute a primary category. These aerodynamic loads manifest predominantly during dynamic flight maneuvers. 
+The following description of general loads that occur during flight and on ground operations draws primarily from @heinze2023aircraft. Aerodynamic forces induced during flight operations, specifically the pressure differentials that generate lift and negative lift forces, form a primary category. These aerodynamic loads manifest predominantly during dynamic flight maneuvers. 
 During coordinated turns, the lift coefficient must exceed the weight-induced load factor to maintain the desired flight path. Similarly, the transition from descent to level flight at low altitudes necessitates substantial lift forces that exceed those experienced in steady-state flight conditions.
-Atmospheric perturbations, particularly gust loads, constitute another critical category of aerodynamic forces. These are complemented by control surface-induced loads, where rudder deflections alter the pressure distribution patterns and generate supplementary force components.
+Atmospheric perturbations, particularly gust loads, pose another critical category of aerodynamic forces. These are complemented by control surface-induced loads, where rudder deflections alter the pressure distribution patterns and generate supplementary force components.
 Buffeting represents another important flight phenomenon, characterized by highly non-linear dynamic and fluctuating loads that cause noticeable vibrations in the aircraft structure. This phenomenon can occur in various flight conditions: during transonic flight, at high angles of attack, when flying through vortices, when encountering wake turbulence, or due to shock wave oscillations (fluctuating shock location) in transonic conditions @Caruana2005. Additional aerodynamic loads can arise from complex flow interactions, especially in regions such as the wing-fuselage junction.
 
 Beyond aerodynamic loads, inertial forces constitute another significant load category. These forces arise whenever the aircraft or its components experience acceleration or deceleration. This comprises all phases of operation including takeoff acceleration, landing deceleration, and general flight maneuvers. 
@@ -157,7 +157,7 @@ The flight envelope characterizes the relationship between load factors and airs
   caption: [Illustrative V-n diagram for normal category aircraft showing flight envelope limits in accordance with #gls("easa") #gls("cs")-23 @EASA_CS_23.],
 ) <fig_28>
 
-The horizontal axis of the flight envelope in @fig_28 shows the Equivalent Airspeed (EAS) in knots (KEAS), defined by @eq_10. The variables $rho$ and $rho_0$ denote the air density at current flight altitude and at sea level, respectively, while $V_"TAS"$ indicates the True Airspeed. The True Airspeed is defined as the relative velocity between the undisturbed far-field flow and the aircraft @Gudmundsson2014.
+The horizontal axis of the flight envelope in @fig_28 shows the Equivalent Airspeed (EAS) in knots (KEAS), specified by @eq_10. The variables $rho$ and $rho_0$ denote the air density at current flight altitude and at sea level, respectively, while $V_"TAS"$ indicates the True Airspeed. The True Airspeed is given as the relative velocity between the undisturbed far-field flow and the aircraft @Gudmundsson2014.
 
 $ V_"EAS" = sqrt(rho /rho_0) space V_"TAS" $<eq_10>
 
@@ -170,8 +170,8 @@ Note that the load factor is dimensionless and corresponds to the safe load or l
 $ "ultimate load" = 1.5 times "limit load" $<eq_12>
 
 The safety factor is intended to account for variations in loads and material properties, as well as potential inaccuracies in calculation methods. Additionally, it helps prevent catastrophic structural failure if operating limits are marginally exceeded @Rossow_2014.
-The flight envelope is obtained by combining the effects of both maneuver and gust loads. In @fig_28, these load conditions are visually distinguished through different colors: the gust loads are indicated by orange lines, while the maneuver loads are shown in pink. The intersection and overlap of these load conditions define the complete flight envelope, depicted as the cross-hatched blue region. This envelope expresses the safe operating boundaries or limit loads within which the aircraft is designed to function.
-The characteristic points marked in the legend of @fig_28 represent commonly used design speeds, which are defined below according to @Rossow_2014 @Gudmundsson2014 @EASA_CS_Abbrevs:
+The flight envelope is obtained by combining the effects of both maneuver and gust loads. In @fig_28, these load conditions are visually distinguished through different colors: the gust loads are indicated by orange lines, while the maneuver loads are shown in pink. The intersection and overlap of these load conditions establish the complete flight envelope, depicted as the cross-hatched blue region. This envelope expresses the safe operating boundaries or limit loads within which the aircraft is designed to function.
+The characteristic points marked in the legend of @fig_28 represent commonly used design speeds, which are outlined below according to @Rossow_2014 @Gudmundsson2014 @EASA_CS_Abbrevs:
 
 - *Design Maneuvering Speed V#sub[A]*: V#sub[A] is the design limit speed up to which a full deflection of any one control surface (aileron, elevator, and rudder) is possible with retracted flaps without causing structural failure. Simultaneous full deflections of multiple control surfaces as well as multiple deflections of a single control surface are not permitted at V#sub[A].
   

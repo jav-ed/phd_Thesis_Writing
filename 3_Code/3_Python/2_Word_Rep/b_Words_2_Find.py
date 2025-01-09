@@ -98,8 +98,9 @@ words_2_find = [
         "particular",
         "specifically",
         "especially",
-        # "constitute",
-        # "define",
+        "constitute",
+        "define",
+        "describe"
         
         
 ]
