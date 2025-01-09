@@ -216,8 +216,7 @@ However, it is important to note that the goals of maximizing tank size and inte
 
 
 Another key distinguishing factor for #glspl("swith"), particularly in comparison to land vehicles, is their operation across a range of altitudes. 
-// TODO maybe another word for considerations, since it is quiote close to the next consideration, maybe concern?
-This variability in operational environment introduces several intricate considerations. 
+This variability in operational environment introduces several intricate phenomena. 
 At higher altitudes, the reduced ambient pressure results in a greater pressure differential between the hydrogen tanks and the surrounding environment. This increased differential potentially leads to higher velocities of hydrogen release in the event of a leak. It is significant to note that if the release velocity does not exceed the speed of sound in hydrogen, a hydrogen shock wave is not anticipated.
 However, the situation is complicated by the fact that the speed of sound in air decreases with altitude. This reduction raises the probability of an air shock wave forming, even at lower hydrogen release velocities. When diffusion processes between the released hydrogen and the surrounding air result in an ignitable concentration, a range of phenomena from ignition to detonation becomes possible.
 Conversely, the decrease in air density at higher altitudes introduces a counteracting effect. The reduced density could potentially slow or complicate the process of achieving ignitable concentrations through the diffusion of air and hydrogen. 
@@ -252,8 +251,6 @@ Despite the acknowledged threat of hydrogen self-ignition, literature review sup
 However, it is substantial to exercise caution when considering the direct transposition of hydrogen applications from the automotive industry to #glspl("swith") on the scale of large commercial aircraft, such as the Airbus A350-1000. 
 A more judicious strategy involves conducting a series of smaller-scale experimental and numerical studies, incrementally approaching the scale of a large aircraft. 
 This approach allows for the systematic accumulation of knowledge and the careful management of risks associated with scaling up hydrogen technologies in aviation.
-A potential path towards achieving this goal, emphasizing the importance of a gradual, 
-// TODO maybe: systematic procedure ?
-methodical approach to research and development, was outlined. 
+A potential path towards achieving this goal, emphasizing the importance of a gradual, systematic strategy for research and development, was outlined.
 ])
 

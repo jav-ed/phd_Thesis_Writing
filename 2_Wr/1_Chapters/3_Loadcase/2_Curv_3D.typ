@@ -3,7 +3,6 @@
 /* -------------------------------------------------------------------------- */
 
 
-// TODO Word rep
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 3D<chap_3_2>
 The fundamental concept of critical loads was established in @chap_3_0, followed by an analysis of the relationship between curvature and filling agent impact on structural properties in @chap_3_1. Building upon these foundations, this section presents a methodology for assessing the curvature of a #gls("swith", long:true) and its implications for experimental validation tests.

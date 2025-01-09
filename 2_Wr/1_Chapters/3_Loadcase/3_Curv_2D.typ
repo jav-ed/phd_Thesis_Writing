@@ -2,7 +2,6 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
-// TODO Word rep
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 2D<chap_3_3>
 This section addresses the need to minimize potential errors in the interpretation of curvature results. In @chap_3_1, the application of curvature analysis was introduced as a method to evaluate the impact of filling agents on structural behavior. This evaluation becomes particularly critical when considering the replacement of hydrogen with alternative filling agents in experimental structural validation tests. The current limitations in safely handling hydrogen in long tubes at high pressures, as detailed in @chap_2_1 and @chap_2_2, necessitate this investigation.
