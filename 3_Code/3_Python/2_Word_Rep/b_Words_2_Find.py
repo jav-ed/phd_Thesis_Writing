@@ -89,12 +89,12 @@ words_2_find = [
         "solution",
         "assess",
         "nevertheless",
-        # "in addition",
-        # "cause",
-        # "lead to",
-        #"lead",
-        # "outcome",
-        # "finding"
+        "in addition",
+        "cause",
+        "lead to",
+        "lead",
+        "outcome",
+        "finding"
         
         
         

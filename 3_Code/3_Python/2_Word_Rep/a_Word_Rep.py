@@ -84,8 +84,8 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word =  False
-b_multiple =   False
+b_last_word =  True
+b_multiple =   True
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
@@ -124,7 +124,8 @@ files_list = [
 # ------------------------------ chap 2 - hydro ------------------------------ #
 # singl_file = "2_Wr/1_Chapters/2_Hydrogen/0_H2_Prop.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/2_Hydrogen/1_Safety.typ" # BJ
-singl_file = "2_Wr/1_Chapters/2_Hydrogen/2_Experiment.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/2_Hydrogen/2_Experiment.typ" # BJ
+singl_file = "2_Wr/1_Chapters/2_Hydrogen/3_Pressurized_Body.typ" # BJ
 
 
 

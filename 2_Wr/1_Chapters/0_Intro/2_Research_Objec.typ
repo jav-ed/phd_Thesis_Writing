@@ -39,7 +39,6 @@ This analysis is vital for developing safe, practical, and cost-effective testin
 
 
 /* ---------------------- curvature, impact fill medium --------------------- */
-// ---------------------------------- here ---------------------------------- //
 Should the research determine that hydrogen is not suitable as a filling agent for experimental investigations, a thorough justification for this conclusion needs to be provided. The study should then focus on identifying and evaluating alternative filling agents that could be used in place of hydrogen. 
 This evaluation should consider several crucial aspects. 
 Firstly, the safety profile of potential alternative agents needs to be addressed, taking into account any properties that could pose risks to personnel, the environment, or the #gls("swith") structure itself. 
@@ -76,7 +75,8 @@ Successfully answering these questions would demonstrate the power of interdisci
 
 /* ---------------------------- discussion demand --------------------------- */
 The next requirement, while not demanding research on a new topic, can still be considered part of the research objectives. Namely, the need to convey the research in an easily graspable way. 
-Given the multidisciplinary nature of the thesis, covering various fields, it is crucial to include a dedicated chapter (@chap_6) that collect the key findings.
+Given the multidisciplinary nature of the thesis, covering various fields, it is crucial to include a dedicated chapter (@chap_6) that collect the key insights.
+
 In conclusion, #glspl("swith") represent an innovative endeavor in aviation. 
-The primary objective of this dissertation is to contribute meaningful findings that advance the potential certification of a #gls("swith"). All previously outlined research objectives serve this overarching goal.
+The primary objective of this dissertation is to contribute meaningful findings that advance the potential certification of a #gls("swith"). All research objectives outlined in this section serve this overarching goal.
 

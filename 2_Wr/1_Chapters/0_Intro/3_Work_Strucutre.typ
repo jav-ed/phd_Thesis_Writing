@@ -63,7 +63,7 @@ Finally, acknowledging that #glspl("swith") must withstand both internal pressur
 // -------------------------------- loadcase -------------------------------- //
 The primary objective of this @chap_3 is to determine whether hydrogen can be substituted with an alternative filling agent without substantially altering the structural properties that would invalidate test results. 
 To address this question, the most significant load cases will be detailed in @chap_3_0. 
-@chap_3_1 examines experimental studies comparing the behavior of liquid and gas-filled pressure vessels. Based on these findings, critical curvature is introduced as a key metric for assessing filling media impact.
+@chap_3_1 examines experimental studies comparing the behavior of liquid and gas-filled pressure vessels. Based on these insights, critical curvature is introduced as a key metric for assessing filling media impact.
 The investigation of filling media begins with three-dimensional modeling in @chap_3_2. 
 To make the complex structural responses more interpretable, @chap_3_3 introduces a simplified two-dimensional 
 representation.
