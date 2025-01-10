@@ -2,6 +2,8 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// TODO the word While duplicated here mutliple times
+
 #hor_Line("Assessment: Collet")
 
 The deployment of collets as #glspl("lie") for aircraft experimental structural testing necessitates careful analysis of multiple factors that influence operational efficiency and economic viability.

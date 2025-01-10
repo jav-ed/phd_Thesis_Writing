@@ -49,7 +49,7 @@ The development of surrogate models through these approaches requires substantia
 
 
 To reduce training time, #glspl("gpu", long:true) @Kaur2023 @DeLuca2024 are essential processing resources. The widespread adoption of machine learning has driven advances in software frameworks that enable parallel training across multiple #glspl("gpu"), further accelerating model development @Paszke2019 @tensorflow2015_whitepaper @Sergeev2018 @link_ray2024 @link_deepspeed2024 @link_accelerate2024.
-While the training phase of deep learning models can be time-intensive, the subsequent inference time is orders of magnitude lower @butt2021development. Inference, which refers to generating model outputs, can often be performed in real-time. Additionally, depending on the neural network architecture, models trained on multiple #glspl("gpu") may operate efficiently on a single #gls("gpu") or even a #gls("cpu", long:true). 
+Although the training phase of deep learning models can be time-intensive, the subsequent inference time is orders of magnitude lower @butt2021development. Inference, which refers to generating model outputs, can often be performed in real-time. Additionally, depending on the neural network architecture, models trained on multiple #glspl("gpu") may operate efficiently on a single #gls("gpu") or even a #gls("cpu", long:true). 
 For models that fit within RAM (Random Access Memory), inference operations on standard #glspl("cpu") typically execute orders of magnitude faster than high-fidelity #gls("fem") @Mittelstedt2021 @Mittelstedt2022 @Werkle2021a @Hahn2018 @Langtangen2016 @Langtangen2019 @Dhondt2004 or #gls("cfd") simulations.
 
 

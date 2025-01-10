@@ -43,7 +43,7 @@ One conventional approach involves designating a dedicated space for hydrogen ta
 The specific location for placing these tanks is complex and depends on numerous factors
 @Eissele2023 @Adler2024 @Onorato2022
 @Prewitz2023 @Huete2021 @Huete2022 @Cipolla2022. 
-Yet, an alternative option involves integrating high-pressure hydrogen tanks structurally inside the fuselage
+Yet, an alternative option consists of integrating high-pressure hydrogen tanks structurally inside the fuselage
 @Onorato2022 @Huete2021 @Baroutaji2019 @Verstraete2013 @onorato2021fuel.
 This research focuses on the structural integration of high-pressure hydrogen tanks into the wing structure. This integration forms a structural connection through which loads are distributed between the tanks and the wing. More specifically, when the wing experiences lift distribution, part of the load transfers to the hydrogen tanks.
 Conversely, deformations induced by the internal pressure of the tanks generate stresses in the wing skin. These structural connections establish specific load paths in the interface regions between wing and tanks. 

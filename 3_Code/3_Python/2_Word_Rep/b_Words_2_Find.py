@@ -112,6 +112,20 @@ words_2_find = [
         "corresponds to",
         "formulate",
         "inspect",
+        "pose",
+        "involve",
+        "yet",
+        "although"
+        
+        
+        
+        
+        
+        
+        
+        
+        # checked including 3 Loadcases
+        # "while",
         
         
 ]

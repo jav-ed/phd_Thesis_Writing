@@ -234,7 +234,7 @@ Discontinuities in the first derivative propagate to the second derivative calcu
 
 $ kappa approx u'' $<eq_34>
 
-The first derivative exhibits abrupt behavior, yet this does not contradict $u' << 1$. For example, values of $1 times 10^(-3)$ and $1 times 10^(-9)$ differ by six orders of magnitude, yet both remain significantly smaller than 1.
+The first derivative exhibits abrupt behavior, yet this does not contradict $u' << 1$. For example, values of $1 times 10^(-3)$ and $1 times 10^(-9)$ differ by six orders of magnitude, while both remain significantly smaller than 1.
 The numerical output of @eq_28 alone is insufficient to verify if the critical curvature was exceeded. Proper interpretation of local curvature discontinuities requires understanding of both curvature derivation and engineering principles.
 To evaluate the influence of the fill medium, only structurally relevant areas should be included when determining if the critical curvature $kappa_"krit"$ was exceeded. Including non-representative areas would lead to misinterpretation.
 To emphasize the significance of proper engineering evaluation, an additional consideration for real-world application shall be viewed. The evaluation of filling agent impact needs to be limited to the inner wing section, as the tanks are exclusively positioned within this region. Consequently, the outer wing section falls outside the scope of this analysis.
