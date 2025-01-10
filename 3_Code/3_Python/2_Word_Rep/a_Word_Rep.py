@@ -130,7 +130,13 @@ files_list = [
 
 # ----------------------------- chap 3 - loadcase ---------------------------- #
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/0_Loadcase.typ" # BJ
-singl_file = "2_Wr/1_Chapters/3_Loadcase/1_Curv_Theory.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/1_Curv_Theory.typ" # BJ
+singl_file = "2_Wr/1_Chapters/3_Loadcase/2_Curv_3D.typ" # BJ
+
+# open
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/3_Curv_2D.typ" # 
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/4_Physical_Load.typ" # 
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ" # 
 
 
 # ---------------------------------------------------------------------------- #
