@@ -49,7 +49,7 @@ overline(u_(y_i,j))^(2')
 
  $ <eq_54>
 
-Similar to @eq_53, the combined output of the three spatial scalar components yields a three-dimensional curvature vector. The Euclidean norm, as defined in @eq_33, can then be applied to obtain a single scalar-valued mean curvature.
+Similar to @eq_53, the combined output of the three spatial scalar components encompasses a three-dimensional curvature vector. The Euclidean norm, as defined in @eq_33, can then be applied to obtain a single scalar-valued mean curvature.
 The third method follows a hybrid approach between methods 1 and 2. While it calculates the curvature-related variables similarly to the first method, it differs in the sequence of averaging operations. Rather than averaging the final curvature values, this method performs averaging at intermediate stages for each required variable independently.
 In this approach, both the first-order displacement derivative $u'$ and the second-order gradient $u''$ are averaged across the $x$ and $z$ axes before being utilized in the mean curvature calculation. 
 This distinguishes it from method 2, where the gradients $u'$ and $u''$ are derived from the averaged displacement $overline(u)$. The fundamental difference lies in the gradient computation, which follows the methodology of method 1 but applies averaging at each derivative stage. The mathematical formulation of this approach is presented in @eq_55.

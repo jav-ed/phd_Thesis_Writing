@@ -102,6 +102,9 @@ words_2_find = [
         "define",
         "describe",
         "since",
+        "constraint",
+        "yield",
+        "reveal",
         
         
 ]

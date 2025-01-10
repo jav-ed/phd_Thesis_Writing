@@ -84,8 +84,8 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word =  False
-b_multiple =   False
+b_last_word =  True
+b_multiple =   True
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
