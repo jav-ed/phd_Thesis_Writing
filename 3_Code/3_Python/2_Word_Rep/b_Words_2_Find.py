@@ -105,6 +105,13 @@ words_2_find = [
         "constraint",
         "yield",
         "reveal",
+        "compute",
+        "strategy",
+        
+        "correspond to",
+        "corresponds to",
+        "formulate",
+        "inspect",
         
         
 ]

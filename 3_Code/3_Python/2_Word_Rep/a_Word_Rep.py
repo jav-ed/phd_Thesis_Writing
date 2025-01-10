@@ -84,8 +84,8 @@ def analyze_duplicates(file_paths: List[Path],
 
 # ---------------------------------------------------------------------------- #
 # if only the last word shall be checked
-b_last_word =  False
-b_multiple =   False
+b_last_word =  True
+b_multiple =   True
 
 files_list = [
     "2_Wr/0_Prerequire",            # 0
@@ -147,8 +147,7 @@ if "singl_file" in locals():
 words_to_find = w_h.words_2_find
 
 if b_last_word :
-    words_to_find = [words_to_find[-1]]
-    
+    words_to_find = [words_to_find[-1]]    
 # ------------------------- multiple files last word ------------------------- #
 if b_multiple:
     print("running multiple files")
@@ -158,6 +157,9 @@ if b_multiple:
         
         print(f"\noutcome for {ct_file}")
         display_results(results=results)
+        
+    if b_last_word:
+        print(f"\nlast word was: {words_to_find}")
         
 # -------------------------------- single file ------------------------------- #
 else:
