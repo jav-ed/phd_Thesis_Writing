@@ -110,7 +110,7 @@ It could also be that the structure being loaded has to undergo the same test mu
 
 Testing requirements for prototype structures present additional complexities, particularly given the typically limited availability of test specimens due to high manufacturing costs. 
 These constraints often necessitate non-destructive testing protocols to preserve specimen integrity for subsequent analyses or practical implementation. Such preservation requirements preclude certain invasive methods, such as drilling mounting holes or applying permanent adhesives. Furthermore, surface integrity considerations may extend to protective coatings, where paint degradation needs to be prevented.
-Beyond these foundational demands, the load introduction elements must demonstrate a higher strength characteristics than the test specimens to prevent unintended failure modes that could compromise experimental validity @Rossow_2014. 
+Beyond these foundational demands, the #glspl("lie") must demonstrate a higher strength characteristics than the test specimens to prevent unintended failure modes that could compromise experimental validity @Rossow_2014. 
 A notable distinction exists between testing standardized versus complex structures. 
 While standardized geometries often benefit from existing test facilities and established protocols, complex geometries typically require custom-manufactured #glspl("lie"). The subsequent sections examine in detail the individual load introduction methods presented in @tab_30.
 
