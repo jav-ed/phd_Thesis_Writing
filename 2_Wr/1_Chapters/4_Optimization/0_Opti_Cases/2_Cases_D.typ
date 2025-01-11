@@ -201,7 +201,6 @@ This complexity manifests in the number of iterations required. Solutions for fo
 
 The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") and four #glspl("lie") at a 50% visibility demand. The case with eight #glspl("lie") required approximately eight times more iterations to find a solution. Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found even after 3000 iterations.
 
-// ---------------------------------- here ---------------------------------- //
 // -------------------------------------------------------------------------- //
 // TODO corrections required here (langauge based) 
 Finally, all the figures shwoing infromaiton aboout objective function values across different number of #glspl("lie") can be used to decide on the final number of #glspl("lie"). Generally, it can be assumed the lower the number of #glspl("lie") the lwoer the cost for obtianing these physical #glspl("lie"). Likewose the cost of maintaining and 

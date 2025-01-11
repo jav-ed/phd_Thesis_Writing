@@ -133,10 +133,27 @@ files_list = [
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/1_Curv_Theory.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/2_Curv_3D.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/3_Curv_2D.typ" # BJ
-singl_file = "2_Wr/1_Chapters/3_Loadcase/4_Physical_Load.typ" # BJ 
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/4_Physical_Load.typ" # BJ 
+singl_file = "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ" # BJ
 
-# open
-# singl_file = "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ" # 
+# ----------------------------------- open ----------------------------------- #
+
+# --------------------------- chap 4 - optimization -------------------------- #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ" #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ" #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/2_Beam_Model.typ" #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/3_Optim_Basics.typ" #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/4_Beam_Opti.typ" #
+
+# ---------------------------- optimization cases ---------------------------- #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/0_Res_Init.typ" # 
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/1_Cases_B.typ" # 
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_C.typ" # 
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_D.typ" # 
+
+# ------------------------------ chap - 5 final ------------------------------ #
+# singl_file = "2_Wr/1_Chapters/5_Final/0_Discus.typ" # 
+# singl_file = "2_Wr/1_Chapters/5_Final/1_Conc.typ" # 
 
 
 # ---------------------------------------------------------------------------- #

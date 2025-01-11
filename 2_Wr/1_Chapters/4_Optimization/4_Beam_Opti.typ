@@ -146,7 +146,6 @@ Composite materials diverge fundamentally from this behavior, as they are engine
 This intentional introduction of anisotropic properties represents a defining advantage of composite materials in structural applications.
 Given these material characteristics, the assessment methodology should incorporate failure criteria specifically developed for composite materials. Appropriate options include the ZTL criterion, Hashin criterion, or Puck criterion @Altenbach2018 @markmiller2024cas.
 
-// ---------------------------------- here ---------------------------------- //
 The quantitative evaluation approach presented in @fig_78 enables the assessment of #gls("ld") behavior in three-dimensional space. 
 The precision of this evaluation relies upon multiple parameters that require proper examination. The selected procedure for transforming one-dimensional discretized loads into three-dimensional force distributions constitutes a principal factor that shapes the evaluation outcomes. 
 Additionally, the particular structural configuration of the #gls("swith") introduces further complexities into the evaluation process. It can be assumed that the #gls("ld") optimization efficacy correlates with the uniformity of material properties, notably the consistency of stiffness characteristics throughout the structure.

@@ -60,7 +60,6 @@ $ Q = - integral q dif x   $    <eq_100>
 $ M = integral Q   dif x $     <eq_101>
 $ M   = - integral integral q dif x dif x  $   <eq_102>
 
-// ---------------------------------- here ---------------------------------- //
 The equations from @eq_88 to @eq_102 enable the calculation of normal force, shear force, and bending moment distributions through both symbolic computation @Valipour2021 @Elham2021 @Kulyabov2021 @butt2021development and traditional analytical methods. While computational tools can automate and accelerate this process, it is beneficial to first examine an illustrative example of a beam model and its resulting internal force distributions.
 The upper subplot in @fig_70 depicts the support configuration, including support type and position, along with the applied force distribution and its direction. 
 This information constitutes the complete set of parameters required to solve the beam model problem using the aforementioned equations. The lower subplot illustrates the resulting support reaction forces
