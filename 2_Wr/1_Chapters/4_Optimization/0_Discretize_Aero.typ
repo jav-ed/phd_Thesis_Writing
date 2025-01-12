@@ -3,29 +3,23 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
-// INFO
-// all refs
-// all figs - the image data was copied
-// all eqs
-// compared with true german text
-
 
 = Structural Testing Optimization Framework<chap_4>
 The critical load case for an experimental structural static test was identified in @chap_3_0. 
-The question whether hydrogen can be replaced by other filling agents was addressed through the curvature study presented in @chap_3_1 to @chap_3_3.
+The question whether hydrogen can be replaced by other filling agents was addressed through the curvature study outlined in @chap_3_1 to @chap_3_3.
 Subsequently, @chap_3_4 details the physical objects required to exert forces on the wing of a #gls("swith", long:true).
 As established in @chap_3_4, selecting an appropriate #gls("lie") or a combination of them requires additional information.
-To obtain this information, an optimization framework is developed.
+To obtaderivein this information, an optimization framework is developed.
 Initially, @chap_4_0 describes how force distributions can be discretized.
 @chap_4_1 then explains how aerodynamic forces can be obtained and incorporated into the method selected in @chap_4_0.
 Since the optimization framework needs to work with structural information, essential beam model background is provided in @chap_4_2.
 Similarly, fundamental knowledge about optimization is presented in @chap_4_3.
 As optimization is a vast topic, only selected information relevant to understanding the optimization framework is included.
-The integration of beam modeling within the optimization framework is presented in @chap_4_4.
-The latter section also provides justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
-The optimization framework is then applied to obtain multiple solutions.
+The integration of beam modeling within the optimization framework is elaborated in @chap_4_4.
+The latter section also offers justification for choosing beam modeling over the well-established #gls("fem") approach for structural calculations.
+The optimization framework is then applied to generate multiple solutions.
 These solutions reflect real-world efforts undertaken for static experimental structural validation testing.
-The modeling rationale and results are presented in @chap_4_5_0 to @chap_4_5_3.
+The modeling rationale and results are given in @chap_4_5_0 to @chap_4_5_3.
 
 
 // Title was tested and is inshallah fine
@@ -34,7 +28,7 @@ The modeling rationale and results are presented in @chap_4_5_0 to @chap_4_5_3.
 In the previous @chap_3_4, #gls("lie", long:true) was introduced as a method for approximating aerodynamic loads in structural testing. Further investigation has identified key parameters that determine the effectiveness of #gls("lie") configurations, including their quantity, dimensional specifications, and the anticipated load magnitudes. These parameters require systematic determination through comprehensive load approximation 
 // analysis overused
 analysis.
-The development of a structural testing methodology for both conventional aircraft and #gls("swith") necessitates the transformation of continuous aerodynamic loads into physically applicable discrete forces. This transformation presents a fundamental challenge in experimental mechanics: how to appropriately represent a continuous load distribution through a finite number of discrete load application points while maintaining the essential characteristics of the original distribution.
+The development of a structural testing methodology for both conventional aircraft and #gls("swith") necessitates the transformation of continuous aerodynamic loads into physically applicable discrete forces. This transformation act as a fundamental challenge in experimental mechanics: how to appropriately represent a continuous load distribution through a finite number of discrete load application points while maintaining the essential characteristics of the original distribution.
 
 The following section examines various approaches to this discretization hurdle, evaluating both traditional regression-based methods and modern unsupervised machine learning techniques. Through systematic comparison of these approaches, a preferred method is identified based on reasoned analysis.
 This method's capabilities and limitations are then examined in detail, followed by an exploration of complementary techniques for addressing the identified constraints.
@@ -80,7 +74,7 @@ $ norm(x)_2^2 = (sqrt(sum_i^n x_i^2))^2 = sum_i^n x_i^2 $ <eq_71>
 $ norm(x)_1 = sum_i^n space.thin abs(x_i) $ <eq_72>
 
 Alternative norms exist but fall outside the scope of this work. For comprehensive coverage of additional norm types, interested readers may refer to @Brunton2022.
-The least-squares error metric, derived from the L2-norm @Brunton2022, is presented in @eq_73, where $n$ denotes the number of data points, $f(x_k)$ represents the training dataset value or function output, and $x_k$ indicates the regression model's estimate.
+The least-squares error metric, derived from the L2-norm @Brunton2022, is formulated in @eq_73, where $n$ denotes the number of data points, $f(x_k)$ represents the training dataset value or function output, and $x_k$ indicates the regression model's estimate.
 
 $ E_2(f) = sqrt(1/n sum_(k=1) ^n [x_k- f(x_k)]^2) $<eq_73>
 
@@ -104,7 +98,7 @@ This comparative behavior is illustrated in @fig_60, where both models demonstra
 ) <fig_60>
 
 // -------------------------------------------------------------------------- //
-While model accuracy is paramount, computational efficiency warrants consideration in the implementation of regression and optimization methods. The relationship between model complexity and computational requirements has evolved significantly with modern hardware capabilities. For instance, a model with 2 parameters versus 100 parameters may exhibit substantial differences in extrapolation accuracy, yet the computational overhead for such parameter ranges is negligible on contemporary hardware architectures.
+While model accuracy is paramount, computational efficiency warrants consideration in the implementation of regression and optimization methods. The relationship between model complexity and computational requirements has evolved markedly with modern hardware capabilities. For instance, a model with 2 parameters versus 100 parameters may exhibit substantial differences in extrapolation accuracy, yet the computational overhead for such parameter ranges is negligible on contemporary hardware architectures.
 Contemporary computational workflows increasingly utilize #gls("gpu") rather than traditional #gls("cpu") processing, leveraging the parallel processing capabilities of graphics hardware as previously mentioned in @chap_3. This architectural shift has dramatically expanded the feasible parameter space for optimization problems. 
 To contextualize the scale of modern computational capabilities, it is instructive to consider recent developments in #gls("llm", long:true). Current #gls("llm") implementations routinely employ $7 times 10^9$ parameters @Li2023 @Jiang2023 @Touvron2023a @Touvron2023, with larger architectures extending to $7 times 10^10$ parameters @Chowdhery2022 @Team2023 @Almazrouei2023 @link_Mixtral_8_7.
 A comprehensive review of model parameter scaling is provided in @Minaee2024, with even #emp_[tiny] language models utilizing approximately $1 times 10^9$ parameters @Zhang2024
@@ -116,7 +110,7 @@ This stark contrast, combined with the demonstrated computational capabilities o
 In considering accuracy optimization, the choice between L1 and L2 norms becomes significant. The L2-norm demonstrates advantages for interpolation tasks, particularly when rapid convergence during optimization is prioritized. This characteristic proves beneficial for models requiring flexibility within the training domain. Conversely, the L1-norm exhibits an inherent capacity to nullify superfluous model parameters during optimization, effectively setting them to zero. This property renders L1-norm optimization particularly suitable for extrapolation tasks.
 Given that physical reality demands both interpolation and extrapolation capabilities, the selection of an appropriate norm requires careful consideration. 
 The principle of parsimony, which states that models should maintain only necessary complexity, guides this selection. For regression models, this translates to minimizing the number of model parameters while preserving essential physical behavior. 
-The L1-norm's tendency toward parameter sparsity naturally aligns with this approach, particularly when modeling phenomena that exhibit simple underlying patterns.
+The L1-norm's tendency toward parameter sparsity naturally aligns with this approach, particularly when modeling phenomena that manifest simple underlying patterns.
 
 
 // --------------------- relationship ML and regression --------------------- //
@@ -154,7 +148,7 @@ Beyond curve fitting and regression approaches, machine learning offers alternat
 @Pruneski2022 @Das2024 @Nafea2024 @Sun2024
 // unsupervised
 @Luong2020 @Zhang2022a @Naeem2023 @Eckhardt2022. 
-Unsupervised learning presents a distinct approach where the model independently identifies patterns and relationships within input data without reference to comparison datasets. This methodology warrants examination through concrete examples, as illustrated in @fig_61 through @fig_63.
+Unsupervised learning constitutes a distinct approach where the model independently identifies patterns and relationships within input data without reference to comparison datasets. This methodology warrants examination through concrete examples, as illustrated in @fig_61 through @fig_63.
 
 
 // -------------------------------------------------------------------------- //
@@ -229,7 +223,7 @@ $ op("argmin",limits: #true)_(mu_i)
 sum_(i)^k underbrace(sum_(x_j in C_i) norm(x_j - mu_i)_2^2, Phi(C_i))  = sum_(i)^k Phi(C_i) $ <eq_76>
 
 
-The preceding analysis has established fundamental distinctions between regression and unsupervised learning approaches, presenting specific methodologies for each technique with particular emphasis on k-means++. To demonstrate the robustness and versatility of k-means++, it is instructive to examine its widespread applications across diverse scientific and industrial domains. The algorithm has proven effective in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, healthcare systems @Sim2024, pandemic modeling @GarciaVidal2024, voice synthesis @Wang2024, and chaotic system analysis @link_Javed_Master. This broad applicability establishes k-means++ as a robust foundation for addressing the challenges of #gls("ld").
+The preceding analysis has established fundamental distinctions between regression and unsupervised learning approaches, elaborating specific methodologies for each technique with particular emphasis on k-means++. To demonstrate the robustness and versatility of k-means++, it is instructive to examine its widespread applications across diverse scientific and industrial domains. The algorithm has proven effective in image recognition @Alam2018 @Omari2024, image processing @Nanda2018 @Eqtedaei2023, image segmentation @Zhai2024, market analysis @Siregar2024, medicine @Xiang2024, healthcare systems @Sim2024, pandemic modeling @GarciaVidal2024, voice synthesis @Wang2024, and chaotic system analysis @link_Javed_Master. This broad applicability establishes k-means++ as a robust foundation for addressing the challenges of #gls("ld").
 @fig_65 presents a comparative overview of clustering methods related to k-means. 
 A comprehensive review of these methods extends beyond this work's scope. Interested readers may find detailed elaborations in @Ikotun2023 and through the supplementary resources available at @link_Cluster_Meth. @Ikotun2023 further explores recent developments in k-means methodology and its expanding applications.
 
@@ -289,7 +283,7 @@ This summation approach ensures proper accounting of all contributing loads with
 The top plot in @fig_66 presents a sinusoidal force distribution selected for demonstration purposes. The data points are color-coded to indicate their membership in one of five clusters. A two-dimensional colored background highlights the regions where data points would be assigned to their respective color-coded clusters.
 The varying lengths of these colored background regions indicate that clusters possess different spatial extents for potential member placement. Although not immediately apparent in this visualization, cluster membership sizes can vary significantly. One cluster might contain the majority of data points while the remaining clusters together comprise the minority.
 The diamond-shaped markers in the top plot indicate the two-dimensional positions of each centroid. The adjacent numerical values represent the force magnitudes computed by k-means++. During its iterative process, k-means++ uses mean values for updates until convergence. At convergence, these centroid values represent the mean forces within their respective clusters.
-These mean values correspond to the forces shown in the bottom left plot. A comparison with the bottom right plot reveals significant differences between averaged and summed forces. This disparity becomes increasingly pronounced as the number of members within each cluster increases.
+These mean values correspond to the forces shown in the bottom left plot. A comparison with the bottom right plot reveals decisive differences between averaged and summed forces. This disparity becomes increasingly pronounced as the number of members within each cluster increases.
 
 // --------------------------------- sklearn -------------------------------- //
 The practical implementation of k-means++ is facilitated through Scikit-learn @Pedregosa2011, a free and open-source library. This implementation offers optimized performance through multi-core processing capabilities. Scikit-learn's widespread adoption and extensive use across various applications is well-documented @Volk2024 @Chen2024a @Wang2023 @Mehdi2024 @Yu2024. Its accessibility and straightforward implementation enable efficient computation of cluster force summations following k-means++ analysis.
@@ -301,10 +295,10 @@ This reduction in available space can prove disadvantageous when clearance is re
 
 // ------------------------------ reg vs kmeans ----------------------------- //
 Following the detailed examination of both regression-based approaches and k-means++ clustering, it is necessary to evaluate their relative merits for #gls("ld"). The k-means++ algorithm demonstrates particular utility in providing initial values for two critical parameters. First, the center positions of the #glspl("lie") can be directly derived from the centroid positions represented by $bold(C[:,0])$. Second, the requisite force magnitudes can be determined through the cluster summation method detailed previously.
-These characteristics render k-means++ preferable to regression-based approaches for initial parameter determination. However, it is essential to acknowledge certain limitations in the k-means++ methodology with respect to comprehensive structural testing requirements. While the algorithm effectively determines initial #glspl("lie") positions and corresponding force magnitudes, it provides limited guidance regarding optimal dimensional specifications for individual #glspl("lie").
+These characteristics render k-means++ preferable to regression-based approaches for initial parameter determination. However, it is essential to acknowledge certain limitations in the k-means++ methodology with respect to comprehensive structural testing requirements. While the algorithm effectively determines initial #glspl("lie") positions and corresponding force magnitudes, it offers limited guidance regarding optimal dimensional specifications for individual #glspl("lie").
 
 This dimensional consideration assumes particular significance in contexts requiring unobstructed viewing areas. Although complete wing coverage with #glspl("lie") is theoretically possible, such an approach deviates from established testing practices and introduces several operational constraints. The presence of extensive #glspl("lie") coverage would impede both optical measurement systems and direct visual inspection by engineering personnel.
-To illustrate this limitation, consider a pressure testing scenario where internal pressure requires incremental increase from $10 #unit("MPa")$ to $60 #unit("MPa")$. During this process, the ability to visually detect potential structural anomalies or damage becomes critical. Excessive #glspl("lie") coverage would significantly compromise this essential monitoring capability.
+To illustrate this limitation, consider a pressure testing scenario where internal pressure requires incremental increase from $10 #unit("MPa")$ to $60 #unit("MPa")$. During this process, the ability to visually detect potential structural anomalies or damage becomes critical. Excessive #glspl("lie") coverage would substantially compromise this essential monitoring capability.
 
 Consequently, while k-means++ provides valuable initial parameters, these values are best utilized as starting points for subsequent optimization processes that can incorporate additional practical constraints and testing requirements. 
 The integration of k-means++ with a comprehensive optimization framework is examined in detail in @chap_4_5_0 to @chap_4_5_3.
@@ -313,9 +307,9 @@ The integration of k-means++ with a comprehensive optimization framework is exam
 #summary_([
 This section established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads. The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 
-Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
+Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. The algorithm's capability to yield both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
-However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. 
+However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. These limitations, while important, do not diminish the method's value as an initial parameter determination tool. Rather, they highlight the necessity for further optimization to address practical constraints in structural testing applications. 
 The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provides a pathway for addressing these remaining challenges while maintaining the advantages of the clustering approach.
 
 

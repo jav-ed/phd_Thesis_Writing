@@ -93,9 +93,10 @@ files_list = [
     "2_Wr/1_Chapters/1_Standards",  # 2
     "2_Wr/1_Chapters/2_Hydrogen",   # 3
     "2_Wr/1_Chapters/3_Loadcase",   # 4
+    "2_Wr/1_Chapters/4_Optimization",   # 5
               ]
 
-# files = find_typ_files(files_list[3])
+# files = find_typ_files(files_list[5])
 
 # just fine: A
 # contains some rep, but fine : BJ
@@ -134,12 +135,12 @@ files_list = [
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/2_Curv_3D.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/3_Curv_2D.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/3_Loadcase/4_Physical_Load.typ" # BJ 
-singl_file = "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/3_Loadcase/5_Physical_Collet.typ" # BJ
 
 # ----------------------------------- open ----------------------------------- #
 
 # --------------------------- chap 4 - optimization -------------------------- #
-# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ" #
+singl_file = "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/2_Beam_Model.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/3_Optim_Basics.typ" #
