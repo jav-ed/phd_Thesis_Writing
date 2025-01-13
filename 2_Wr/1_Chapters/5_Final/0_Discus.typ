@@ -176,7 +176,7 @@ These critical parameters required rigorous determination through load approxima
 This investigation provided a methodological foundation for #gls("lie") selection and established the motivation for the detailed #gls("ld", long:true) analysis presented in @chap_4.
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //#
-Building upon this, @chap_4_0 established the fundamental concepts and methodologies for #gls("ld", long:true), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
+Building upon this, @chap_4_0 established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
 The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. 
 Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 

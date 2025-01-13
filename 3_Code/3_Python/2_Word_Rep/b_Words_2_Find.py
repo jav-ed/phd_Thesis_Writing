@@ -116,7 +116,8 @@ words_2_find = [
         "involve",
         "yet",
         "although",
-        "decisive"
+        "decisive",
+        "determin"
         
         
         

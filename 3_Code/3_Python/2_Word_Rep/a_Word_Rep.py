@@ -140,8 +140,8 @@ files_list = [
 # ----------------------------------- open ----------------------------------- #
 
 # --------------------------- chap 4 - optimization -------------------------- #
-singl_file = "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ" #
-# singl_file = "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ" #
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ" # BJ
+singl_file = "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/2_Beam_Model.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/3_Optim_Basics.typ" #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/4_Beam_Opti.typ" #
