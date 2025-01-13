@@ -64,7 +64,7 @@ The practical value of this research is evidenced by its implementation at IMA M
 Despite their extensive experience in structural testing, IMA incorporated the findings, analyses, and optimization framework presented here into their testing expertise for a #gls("swith"). 
 This adoption by one of the few institutions capable of conducting such specialized structural tests demonstrates the practical utility of this research. The successful execution of these tests using the proposed methods provides additional validation of this thesis's effectiveness in real-world applications.
 
-In conclusion, attempting to determine the optimal #gls("lie") configuration through purely experimental means would likely incur costs orders of magnitude higher than utilizing a free optimization framework. This comparison underscores the significant value that the proposed optimization approach brings to the field of #gls("swith") research and development.
+In conclusion, attempting to define the optimal #gls("lie") configuration through purely experimental means would likely incur costs orders of magnitude higher than utilizing a free optimization framework. This comparison underscores the significant value that the proposed optimization approach brings to the field of #gls("swith") research and development.
 
 
 

@@ -126,7 +126,7 @@ words_2_find = [
         
         
         
-        # checked including 3 Loadcases
+        # checked including 3 Loadcases, start from chapter 4, 2_Wr/1_Chapters/4_Optimization/0_Discretize_Aero.typ
         # "while",
         
         
