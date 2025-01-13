@@ -45,7 +45,7 @@ Test reproducibility utilizing collets as #gls("lie") demonstrates favorable cha
 A potential mitigation strategy involves the utilization of single-sided collets that partially enclose either the upper or lower wing surface exclusively. This approach allows unrestricted vertical expansion of the structure during loading. Correspondence with IMA Dresden has confirmed the practical feasibility of such an approach. 
 The application of tension loads through collets present various implementation possibilities, especially when combining crane and cylinder systems. While the crane-only approach exhibits certain operational limitations, the integration of hydraulic cylinders enables enhanced load application flexibility. However, the numerical representation of collet-wing interactions in #gls("fem") models introduces additional complexity due to the requisite precision in contact condition modeling. This complexity manifests particularly in scenarios where the collet encases the profile, introducing asymmetric loading conditions between the constrained lower surface and the unconstrained upper surface during lift operations.
 
-To conclude, cost assessment for collet implementation remains contingent upon detailed specification of load discretization requirements and accuracy parameters. 
+To conclude, cost assessment for collet implementation remains contingent upon detailed specification of #gls("ld") requirements and accuracy parameters. 
 The integration of crane systems and associated load harnesses introduces significant cost implications relative to simpler methods such as the sandbag implementation. 
 The determination of collet suitability for specific testing scenarios necessitates in-depth evaluation of two critical factors: achievable load introduction accuracy and the influence of constraint forces on structural behavior. 
 These aspects must be thoroughly analyzed within the context of specific test requirements to ensure appropriate selection of the load introduction methods.
@@ -214,7 +214,7 @@ The revised evaluation framework, presented in @tab_33, reflects this adjusted p
 The systematic evaluation of #glspl("lie") revealed varying degrees of certainty in assessment outcomes across different criteria. While some characteristics could be definitively evaluated, others demonstrated strong dependence on specific project parameters and implementation details. This variance in assessment confidence highlights the context-dependent nature of #gls("lie") selection, suggesting that optimal solutions must be determined within the framework of specific project requirements rather than through universal generalizations.
 The presented evaluation framework, while not exhaustive, establishes a valuable foundation for structured decision-making in #gls("lie") selection. This contribution is particularly significant given that load introduction methodology often represents specialized industrial knowledge, typically confined within commercial enterprises and specialized testing facilities. The systematic reasoning approach outlined here can be adapted and extended to accommodate project-specific requirements, providing a methodological template for future evaluations.
 
-Load discretization analysis yields critical methods for finding other key variables that guide the final #gls("lie") selection. These include:
+#gls("ld") analysis yields critical methods for finding other key variables that guide the final #gls("lie") selection. These include:
 
 + Required quantity of #glspl("lie")
 + Dimensional specifications
@@ -237,6 +237,6 @@ The evaluation of the innovation criterion demonstrated how different perspectiv
 This highlights both the systematic nature and inherent complexity of the assessment process.
 The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific variables and some identified critical parameters. 
 These critical parameters require rigorous determination through load approximation analysis.
-This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed load discretization analysis presented in @chap_4.
+This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed #gls("ld") analysis presented in @chap_4.
 
 ])

@@ -68,7 +68,7 @@ The investigation of filling media begins with three-dimensional modeling in @ch
 To make the complex structural responses more interpretable, @chap_3_3 introduces a simplified two-dimensional 
 representation.
 Through systematic averaging procedures, this approach transforms intricate structural behaviors into clear, meaningful results.
-Finally, @chap_3_4 investigates the implementation of physical loads during experimental tests using defined criteria. These findings lay the groundwork for the aerodynamic load discretization and optimization framework elucidated in @chap_4.
+Finally, @chap_3_4 investigates the implementation of physical loads during experimental tests using defined criteria. These findings lay the groundwork for the aerodynamic #gls("ld", long:true) and optimization framework elucidated in @chap_4.
 
 // ------------------------------ optimization ------------------------------ //
 Initially, @chap_4_0 describes how force distributions can be discretized.

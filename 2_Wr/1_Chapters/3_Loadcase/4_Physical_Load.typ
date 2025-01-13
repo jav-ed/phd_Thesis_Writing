@@ -17,7 +17,7 @@ However, experimental investigations present distinct challenges. The applicatio
 
 This section addresses some of these experimental barriers by examining physical #glspl("lie", long:true) for aircraft wings. 
 An analysis of each #gls("lie")'s characteristics is outlined, followed by systematic evaluation using relevant assessment criteria to determine suitable approaches for structural testing.
-These findings provide the motivation for the upcoming aerodynamic load discretization and optimization detailed in @chap_4. 
+These findings provide the motivation for the upcoming aerodynamic #gls("ld", long:true) and optimization detailed in @chap_4. 
 Understanding the practical implications of different load introduction methods enables crucial insights for developing effective structural testing procedures that balance theoretical requirements with experimental feasibility.
 
 // -------------------------------------------------------------------------- //
