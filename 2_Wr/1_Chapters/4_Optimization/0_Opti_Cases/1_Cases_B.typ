@@ -17,7 +17,8 @@ Conversely, the second support allows horizontal movement but constrains vertica
 While this support system has received approval from the IMA, certain aspects of its underlying rationale remain proprietary. It is noteworthy that no standardized support configuration exists for #gls("swith") systems, primarily due to their absence in commercial markets. Given the innovative nature of #glspl("swith"), the final support system implementation may deviate substantially from the presented configuration. Furthermore, as #glspl("swith") become commercially available, support systems may vary across different designs, reinforcing the requirement for a versatile beam modeling approach.
 
 // -------------------------------------------------------------------------- //
-Inspection of @fig_84 reveals that the aerodynamic force is not applied along the entire wing span. While conventional aircraft wings typically experience aerodynamic loading across their full span, several practical considerations justify this partial loading approach for #glspl("swith"). 
+Inspection of @fig_84 reveals that the aerodynamic force is not applied along the entire wing span. 
+Although conventional aircraft wings typically experience aerodynamic loading across their full span, several practical considerations justify this partial loading approach for #glspl("swith"). 
 A primary consideration stems from the design flexibility of the pressurized tube system. The #gls("swith") concept does not require tubes to extend through the complete wing span. Instead, tubes may be confined to the inner wing section, leaving the outer wing tank-free. This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
 The modular outer wing design permits customization of aerodynamic properties through interchangeable sections, allowing a single primary #gls("swith") design to accommodate varying performance requirements. Additionally, removable outer wing sections facilitate maintenance access to the pressurized tubes. This design approach is particularly beneficial for research and development, as it enables focused simulation and experimental investigation of the wing-tube section while utilizing simplified outer wing structures for testing purposes.
 
@@ -205,7 +206,8 @@ While this optimization definition proves suitable for scenarios without restric
   caption: [Comparison of reference and optimized load distributions showing distributed loads, shear forces, bending moments, and #gls("lie") positions for optimization case B with eight #glspl("lie").],
 )<fig_86>
 
-The influence of varying #gls("lie") quantities on optimization performance is illustrated in @fig_87. In alignment with the findings from optimization case A (@chap_4_5_0), increasing the number of #glspl("lie") leads to a reduction in the objective function value, resulting in improved load approximation accuracy. While optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to reach the optimal solution.
+The influence of varying #gls("lie") quantities on optimization performance is illustrated in @fig_87. In alignment with the findings from optimization case A (@chap_4_5_0), increasing the number of #glspl("lie") leads to a reduction in the objective function value, resulting in improved load approximation accuracy. 
+Although optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to reach the optimal solution.
 
 // optimiaztion progress
 #figure(

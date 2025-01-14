@@ -163,10 +163,11 @@ This aspect, supported by practical experience, suggests a guiding principle in 
 
 // -------------------------------------------------------------------------- //
 
-In practical optimization applications, the concept of constraints warrants careful consideration. While constraints serve as another form of boundaries, they are distinctly expressed through mathematical equations. This formulation enables the incorporation of complex physical principles and empirical knowledge, either through direct mathematical expressions or surrogate models.
+In practical optimization applications, the concept of constraints warrants careful consideration. 
+While constraints serve as another form of boundaries, they are distinctly expressed through mathematical equations. This formulation enables the incorporation of complex physical principles and empirical knowledge, either through direct mathematical expressions or surrogate models.
 To summarize the preceding elaboration, the definition of a complete optimization problem encompasses several essential components. 
 Design variables form the primary element, serving as parameters the optimizer can adjust to minimize the objective function. Additional components include the aforementioned constraints, expressed through equations, and the previously described boundaries. 
-While this framework provides a general approach to optimization, the earlier example demonstrated that formulating a precise optimization problem often involves an iterative process.
+Although this framework provides a general approach to optimization, the earlier example demonstrated that formulating a precise optimization problem often involves an iterative process.
 With some fundamental concepts established and under the assumption of a well-defined optimization formulation, the process for obtaining a solution can be addressed. 
 The optimization procedure can be conceptualized as a structured exploration of the design space.
 The dimensionality of this space corresponds directly to the number of design variables, with each variable forming an independent dimension in which the optimizer can search for optimal values.
