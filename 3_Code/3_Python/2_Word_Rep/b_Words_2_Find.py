@@ -9,7 +9,7 @@ words_2_find = [
         "provide",
         "obtain",
         "present",
-        "method",
+        # "method",
         "mention",
         "consider",
         "comprehensive",
