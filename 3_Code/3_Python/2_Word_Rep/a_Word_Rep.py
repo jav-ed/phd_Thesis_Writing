@@ -144,7 +144,7 @@ files_list = [
 # singl_file = "2_Wr/1_Chapters/4_Optimization/1_Get_Aero.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/4_Optimization/2_Beam_Model.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/4_Optimization/3_Optim_Basics.typ" # BJ
-singl_file = "2_Wr/1_Chapters/4_Optimization/4_Beam_Opti.typ" #
+singl_file = "2_Wr/1_Chapters/4_Optimization/4_Beam_Opti.typ" # BJ
 
 # ---------------------------- optimization cases ---------------------------- #
 # singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/0_Res_Init.typ" # 
