@@ -117,7 +117,7 @@ words_2_find = [
         "yet",
         "although",
         "decisive",
-        "determin"
+        "determin",
         
         
         
