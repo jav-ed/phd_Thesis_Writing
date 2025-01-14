@@ -115,7 +115,7 @@ The validation results for five statically determinate and five indeterminate be
 
 In conclusion, IndeterminateBeam @interdetbeam_tool was selected as the computational beam model solver based on its validation against known beam model solutions and its capability for integration into existing numerical optimization frameworks.
 
-// TODO read it again
+// TODO read it again, ltex detected some writing errors
 Finally, it can be said that IndeterminateBeam @interdetbeam_tool was chosen as the computaitonal beam model solver, it was valitaed with known solutions of beam models and it can be incorporated into existing numerical optimiaztion frameworks.
 
 
