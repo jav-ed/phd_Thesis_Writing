@@ -66,7 +66,7 @@ Through optimization, questions such as the number of required #glspl("lie"), th
 To lay the groundwork for this aim, the research should first provide fundamental concepts of optimization. 
 
 Following this, a detailed explanation of the methods used for numerical simulations is necessary. 
-The research must highlight the connection between the chosen simulation methods and the optimization process. With the optimization framework established, the study should clearly define the optimization problem. 
+The research must elucidate the connection between the chosen simulation methods and the optimization process. With the optimization framework established, the study should clearly define the optimization problem. 
 If bounds or constraints are utilized, their selection needs to be justified ideally by physical principles
 Where feasible, the final optimization framework should be tested under different scenarios, with a clear explanation of why these specific scenarios were chosen. 
 Next, the research needs to present and interpret the obtained results. 

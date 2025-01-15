@@ -6,7 +6,9 @@
 
 // Title was checked and is fine - inshallah
 == Specific Standards from Various Fields <chap_1_4>
-In previous @chap_1_3 and @chap_1_2, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. While the automotive industry was highlighted, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
+In previous @chap_1_3 and @chap_1_2, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. 
+
+While particular attention was given to the automotive industry, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
 The goal of this section is to offer a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_5.
 
 Throughout @chap_1, it was observed that many fields desire a secure, feasible, and industrial application of hydrogen. The automotive industry, being one of them, was especially highlighted in @chap_1_2 and @chap_1_3. However, the automotive industry is only one crucial domain under the broader category of mobility.

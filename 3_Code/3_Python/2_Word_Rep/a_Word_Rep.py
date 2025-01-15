@@ -94,6 +94,7 @@ files_list = [
     "2_Wr/1_Chapters/2_Hydrogen",   # 3
     "2_Wr/1_Chapters/3_Loadcase",   # 4
     "2_Wr/1_Chapters/4_Optimization",   # 5
+    "2_Wr/1_Chapters/5_Final",   # 6
               ]
 
 # files = find_typ_files(files_list[5])
