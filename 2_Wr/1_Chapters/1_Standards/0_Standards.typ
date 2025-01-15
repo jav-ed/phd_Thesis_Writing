@@ -65,7 +65,7 @@ Consequently, it can be said that the evolution of standards is likely to play a
 #summary_([
 In conclusion, the role of standards in #gls("swith") development is multifaceted and still in its infancy. 
 While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these hurdles also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
-At the moment of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
+At the time of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
 As a result, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #glspl("swith").
 By carefully adapting existing standards and paving the way for #gls("swith")-specific standards, researchers and engineers can establish comprehensive validation protocols. These protocols ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
