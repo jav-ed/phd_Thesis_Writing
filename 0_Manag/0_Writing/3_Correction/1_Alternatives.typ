@@ -38,6 +38,7 @@
 16. vital
 17. serious
 18. sophisticated
+19. pivotal
 
 // ------------------------------ significantly ----------------------------- //
 

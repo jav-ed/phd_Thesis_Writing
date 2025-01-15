@@ -21,7 +21,7 @@ Here, it was concluded that all hydrogen-powered aircraft concepts share the sam
 The structural integration of hydrogen tanks offers a dual advantage. 
 These tanks not only store hydrogen but also share the load with the attached structural components. 
 At the time of writing, two distinct approaches to structural integration were identified: fuselage-integrated and wing-integrated.
-The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research presents both advantages and barriers. 
+The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research embodies both advantages and barriers. 
 On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. 
 Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial hurdles that need to be overcome in the pursuit of sustainable aviation.
@@ -29,7 +29,7 @@ Conversely, the limited availability of prior work means that scientists have a 
 // ------------------------------- 0_Standards ------------------------------ //
 Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
 The role of standards for #gls("swith") certification is multifaceted and remains in its infancy.
-While the innovative nature of #glspl("swith") present challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
+While the innovative nature of #glspl("swith") face challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
 At the time of writing this thesis, no established standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").
 Consequently, there is a pressing need for appropriate standards upon which industry and scientific institutions can build.
 This proactive approach to standardization is crucial for overcoming current limitations and facilitating broader adoption of #glspl("swith").
@@ -38,22 +38,22 @@ These procedures could ensure that #glspl("swith") are developed and structurall
 
 // ---------------------------- 1_Aero_Standards ---------------------------- //
 However, the path toward establishing these standards presented several obstacles. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
-To address this gap, two standards specifically for hydrogen-powered general aviation were announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not yet commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
+To address this gap, two standards specifically for hydrogen-powered general aviation were announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not currently commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
 Firstly, the scope of these SAE standards regarding tank configuration remains uncertain. 
-Specifically, it is not yet clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
+In particular, it is not yet clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
 While they may address fuselage-integral hydrogen tanks, their applicability to wing-integral tanks is not guaranteed. 
 Therefore, the relevance of these announced SAE standards to #gls("swith") certification remains to be determined.
 Secondly, these standards may require modifications before gaining acceptance within European regulatory frameworks.
 The timeline of aerospace standardization developments provided additional context. 
 In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. 
 Subsequently, in 2019, SAE initiated the development of SAE AS7373 @SAE_Liquid for liquid hydrogen in aviation. 
-Notably, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and careful consideration.
+Notably, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and effort.
 
 // --------------------------- 2_Pressure_Vessels --------------------------- //
 While standards development progressed, the broader context of hydrogen pressure vessels revealed promising opportunities. 
 As outlined in @chap_1_2, there existed a vast field of applications for hydrogen pressure vessels.
-The examination of different mobility sectors, which are crucial drivers of economic and scientific growth, underscored the fundamental importance of hydrogen pressure vessels. 
-Analysis of the five known tank types, including their applications, advantages, and disadvantages, presented in @chap_1_2 led to a clear conclusion: tank Type IV emerged as the most suitable choice for #gls("swith") design, based on its maturity, commercial availability, and optimal balance between performance and safety considerations.
+The examination of different mobility sectors, which are pivotal drivers of economic and scientific growth, underscored the fundamental importance of hydrogen pressure vessels. 
+Analysis of the five known tank types, including their applications, advantages, and disadvantages, outlined in @chap_1_2 led to a clear conclusion: tank Type IV emerged as the most suitable choice for #gls("swith") design, based on its maturity, commercial availability, and optimal balance between performance and safety considerations.
 
 // ------------------------------ 3_Automotive ------------------------------ //
 Beyond tank selection, @chap_1_3 explored potential insights from the automotive sector. Academic work in the automotive industry revealed common aims with aerospace regarding structural integral hydrogen tanks, demonstrating interest in this technology across multiple transportation sectors.
@@ -102,13 +102,11 @@ This synthesis of theory and practice proves crucial for the experimental struct
 
 
 // ------------------------------ 2_Experiment ------------------------------ //
-Building on these safety considerations, experimental investigations provided further insights into specific obstacles and mitigation strategies.
+Building on these safety considerations, experimental investigations revealed further insights into specific obstacles and mitigation strategies.
 The experimental investigations mentioned in @chap_2_2 demonstrated that hydrogen self-ignition represents a tangible concern in real-world applications.
 Additionally, @chap_2_2 identified the primary geometrical factors that can precipitate ignition and outlined the necessary modifications to mitigate this risk. 
-While the threat of hydrogen self-ignition requires serious consideration, the literature review supported the feasibility of secure hydrogen application, provided that its properties are thoroughly understood and appropriately managed.
-A critical 
-// consideration overused
-consideration emerges when evaluating the transferability of hydrogen applications from the automotive industry to #glspl("swith") for large commercial aircraft, such as the Airbus A350-1000 @link_Airbus_350. 
+While the threat of hydrogen self-ignition requires serious scrutiny, the literature review supported the feasibility of secure hydrogen application, provided that its properties are thoroughly understood and appropriately managed.
+A critical aspect emerges when evaluating the transferability of hydrogen applications from the automotive industry to #glspl("swith") for large commercial aircraft, such as the Airbus A350-1000 @link_Airbus_350. 
 Rather than direct transposition, a systematic approach becomes necessary.
 This involved conducting a series of smaller-scale experimental and numerical studies, progressively advancing toward large aircraft scale. 
 Such a methodical progression enables systematic knowledge accumulation while carefully managing the risks associated with scaling up hydrogen technologies in aviation.
@@ -121,20 +119,21 @@ The literature review presented in @chap_2_3 revealed substantial research on pr
 The reviewed studies demonstrated that, for their specific test configurations, internal pressure significantly influences structural behavior, with lateral loads typically generating higher stresses than axial loads. 
 The documented failure mechanisms progress from initial deformation through local failure to global failure, depending on impact energy levels.
 While these studies provided valuable insights into pressure vessel behavior for dynamic loading conditions, which are essential for aircraft certification, they did not address quasi-static loading scenarios. 
-Quasi-static testing, such as ultimate load testing, represents another critical requirement for aircraft certification and, consequently, for potential #gls("swith") certification. 
+Quasi-static testing, such as ultimate load testing, represents another crucial requirement for aircraft certification and, consequently, for potential #gls("swith") certification. 
 This identified gap in current research emphasized the necessity for additional investigations into pressure vessel behavior under external static loads.
 
-// ------------------------------- 0_Loadcase ------------------------------- //
-The challenge of understanding static load behavior becomes particularly significant when considering the broader context of aircraft load cases. As detailed in @chap_3_0, the task of identifying critical load cases for conventional aircraft already presents significant complexity. 
+// ------------------------------- 0_Loadcase ------------------------------- // 
+The challenge of understanding static load behavior becomes particularly significant when framed within the broader context of aircraft load cases.
+As detailed in @chap_3_0, the task of identifying critical load cases for conventional aircraft already presents significant complexity. 
 For #glspl("swith"), this complexity increases substantially due to their hybrid nature, combining characteristics of both aircraft and pressurized vessels. This dual characteristic necessitates consideration of load cases from both domains, creating a more intricate evaluation scenario.
 Nevertheless, @chap_3_0 demonstrated that through careful statistical assessment, a comprehensive list of critical load cases for general aviation can be established. 
-From this foundational investigation, a key load case for #glspl("swith") has been derived. The validity of this methodological approach gains significant credibility through confirmation from two leading German aerospace companies. 
+From this foundational investigation, a key load case for #glspl("swith") has been derived. The validity of this methodological approach gains pronounced credibility through confirmation from two leading German aerospace companies. 
 Furthermore, detailed examination of the V-n diagram provided essential insights into the relationship between the identified critical load case and the flight envelope.
 
 
 // ------------------------------ 1_Curv_Theory ----------------------------- //
-Building upon this understanding of load cases, @chap_3_1 explored another crucial aspect: the effects of fill media on pressurized structures under static external loading. The research revealed that both internal pressure and medium selection significantly influence structural behavior. 
-Comparative studies demonstrated that water-filled pipes consistently outperformed their air-filled counterparts, exhibiting higher maximum bending moments and enhanced curvature tolerance across all pressure ranges evaluated. 
+Building upon this understanding of load cases, @chap_3_1 explored another crucial aspect: the effects of fill media on pressurized structures under static external loading. The research revealed that both internal pressure and medium selection substantially influence structural behavior. 
+Comparative studies demonstrated that water-filled pipes consistently outperformed their air-filled counterparts, achieving higher maximum bending moments and enhanced curvature tolerance across all pressure ranges evaluated. 
 The observed relationship between internal pressure and structural response exhibited distinct patterns: while both media showed comparable increases in maximum bending moment with elevated pressure, their curvature responses differed markedly. 
 A simplified conceptual model was proposed to explain these experimental observations. The model suggested that in water-filled pipes, the confined liquid acts as an integral part of the structural system. 
 Under pressure, water particles maintain relatively fixed positions, enabling effective load transfer and redistribution across the pipe's inner surface. 
@@ -148,7 +147,7 @@ To further advance the understanding of these structural behaviors, @chap_3_2 pr
 The study employed a #gls("fem", long:true) simulation model of a #gls("swith") configuration, detailed the procedure for obtaining necessary derivatives. 
 A key strength of this approach lies in its displacement-based foundation, enabling application to both analytical solutions and numerical simulations.
 The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations. 
-Through illustrative examples of critical curvature assessment, the work revealed inherent hurdles in directly comparing obtained curvature results with critical curvature values for complex structures like aircraft.
+Through illustrative examples of critical curvature assessment, the work revealed inherent hurdles in directly comparing computed curvature results with critical curvature values for complex structures like aircraft.
 The findings yielded practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. However, the examination also highlighted the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach, which was subsequently presented in @chap_3_3.
 
 // -------------------------------- 3_Curv_2D ------------------------------- //
@@ -164,27 +163,27 @@ However, while the interpretation needs to be done for each specific simulation 
 
 // ----------------------------- 4_Physical_Load ---------------------------- //
 // ---------------------------- 5_Physical_Collet --------------------------- //
-As another critical aspect of experimental structural testing, @chap_3_4 addressed a fundamental requirement by establishing the core principles of load introduction in aircraft testing, with particular emphasis on #gls("swith") configurations.
+As another crucial aspect of experimental structural testing, @chap_3_4 addressed a fundamental requirement by establishing the core principles of load introduction in aircraft testing, with particular emphasis on #gls("swith") configurations.
 Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie", long:true) methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
-A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
-The assessment results were presented through detailed analytical considerations and concise evaluation matrices, enabling clear comparison across methods. 
+A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, incorporating factors ranging from economic viability to technical implementation challenges. 
+The assessment results were obtained through detailed analytical reasoning and concise evaluation matrices, enabling clear comparison across methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This highlighted both the methodical nature and inherent complexity of the assessment process.
-The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified critical parameters. 
-These critical parameters required rigorous determination through load approximation analysis.
-This investigation provided a methodological foundation for #gls("lie") selection and established the motivation for the detailed #gls("ld", long:true) analysis presented in @chap_4.
+The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific factors and some identified crucial parameters. 
+These crucial parameters required rigorous determination through load approximation analysis.
+This investigation provided a methodological foundation for #gls("lie") selection and established the motivation for the detailed #gls("ld", long:true) analysis outlined in @chap_4.
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //#
 Building upon this, @chap_4_0 established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
 The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. 
 Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct determination of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
-The algorithm's capability to provide both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
+The algorithm's capability to return both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
 Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
-However, critical limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. 
-These limitations, while significant, do not diminish the method's value as an initial parameter determination tool. 
+However, major limitations were identified in the k-means++ approach, particularly regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. 
+These limitations, while substantial, do not diminish the method's value as an initial parameter determination tool. 
 Rather, they highlighted the necessity for further optimization to address practical constraints in structural testing applications. 
 The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provided a pathway for addressing these remaining challenges while maintaining the advantages of the clustering approach.
 
@@ -207,7 +206,7 @@ The findings outlined in @chap_4_1 provided the essential foundation for underst
 
 Building upon these computational efficiency considerations, @chap_4_2 delved into the essential mathematical foundations of beam modeling theory. 
 While analytical solutions for individual beam models using traditional pen-and-paper methods are feasible, this approach is impractical for integration within numerical optimization frameworks. 
-To address this limitation, the Python programming language was selected as the computational environment, with a detailed justification provided for this choice. 
+To address this limitation, the Python programming language was adopted as the computational environment, with a detailed justification delineated for this choice. 
 The investigation examined two beam solvers, which were first validated against established textbook solutions and subsequently integrated into an optimization framework. 
 The transformation of three-dimensional support conditions in #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. 
 Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the most appropriate solution.
