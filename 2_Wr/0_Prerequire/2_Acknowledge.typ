@@ -13,7 +13,7 @@
     
 = Acknowledgments
 
-// the i needs to be small to hihglight that i am small, when we talk about Allah the allmighty
+// the i needs to be small to highlight that i am small, when we talk about Allah the Almighty
 // it not only the word i, but also you and other pronouns that are not related to Allah. so only if Allah is referred to the pronoun should be big
 Thanks belong to the *ONE* Who does not need my thanks.
 
