@@ -41,7 +41,8 @@ Investigations on Aircraft Wing Structure-Integrated High-Pressure Hydrogen Tank
 ]
 
 #v(1em)
-Technische Universität Dresden (Germany)\
+// Technische Universität Dresden (Germany)\
+TUD Dresden University of Technology (Germany)\
 Faculty of Mechanical Science and Engineering\
 Institute of Aerospace Engineering\
 Chair of Aircraft Engineering\

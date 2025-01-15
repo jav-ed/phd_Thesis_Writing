@@ -11,7 +11,8 @@ This section reports on research outcomes focused on utilizing numerical optimiz
 
 The investigation is structured into multiple optimization cases, beginning with Case A as the fundamental approach. 
 Each subsequent case incorporates additional constraints and engineering considerations that emerged through iterative consultations with structural testing experts at IMA Dresden. These considerations reflect real-world requirements, ensuring the optimization framework's practical applicability. 
-The progressive refinement of constraints through expert consultation serves multiple purposes. It bridges the gap between theoretical optimization and practical implementation requirements for potential #gls("swith") certification. This iterative development process also offers broader benefits for the field. The methodology demonstrates adaptability to varying experimental testing demands. Furthermore, it reveals how distinct optimization problem definitions can effectively address different requirements. This flexibility proves valuable for both certification authorities and manufacturers, who may encounter diverse technical specifications and constraints.
+The progressive refinement of constraints through expert consultation serves multiple purposes. 
+It bridges the gap between theoretical optimization and practical implementation requirements for potential #gls("swith") certification. This iterative development process also offers broader benefits for the field. The methodology demonstrates adaptability to varying experimental testing demands. Furthermore, it reveals how distinct optimization problem definitions can effectively address different requirements. This flexibility proves valuable for both certification authorities and manufacturers, who may encounter diverse technical specifications and constraints.
 
 It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
@@ -231,8 +232,6 @@ While APAME generates numerous discrete load values as detailed in @chap_4_1, di
 // newly added
 By synthesizing the outlined information, a surrogate model that serves as an efficient preliminary wing modeling approach can be established.
 //
-
-//TODO is the usage of beyond fine here? Sentce structure?
 This simplified representation serves multiple purposes in aerospace engineering beyond optimization tasks. 
 Its applications include preliminary sizing of structural components, quick assessment of different load scenarios, evaluation of various support configurations, and rapid iteration of design concepts. 
 The second row of @fig_80 shows the reaction forces, providing quantitative information about the resulting shear forces and bending moments at the support locations. 

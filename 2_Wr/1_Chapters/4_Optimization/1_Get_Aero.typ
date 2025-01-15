@@ -12,7 +12,7 @@ Prior to executing #gls("ld") and its subsequent steps, it is essential to obtai
 
 // -------------------------------------------------------------------------- //
 
-Prior research at TU Dresden has established foundational work in this domain, especially through the development of a computational framework that integrates structural and aerodynamic analyses using #gls("fem"). This framework employs APAME @Filkovic as its aerodynamic solver, utilizing a three-dimensional frictionless panel method for load calculations.
+Prior research at TUD Dresden University of Technology has established foundational work in this domain, especially through the development of a computational framework that integrates structural and aerodynamic analyses using #gls("fem"). This framework employs APAME @Filkovic as its aerodynamic solver, utilizing a three-dimensional frictionless panel method for load calculations.
 While APAME does not target high-fidelity aerodynamic analysis, it provides an effective balance between computational efficiency and accuracy in predicting lift distribution. The solver processes several key input parameters, including flight velocity, density, Mach number, and geometric characteristics, to generate spanwise lift distributions. Based on fluid-structure coupling, these aerodynamic loads are mapped from the aerodynamic mesh to the structural mesh, enabling their integration into the #gls("fem") analysis environment.
 @fig_67 presents a representative output from APAME, illustrating the distribution of lift coefficients, scaled by local chord length, along the wing span.
 
