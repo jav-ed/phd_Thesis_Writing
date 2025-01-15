@@ -2,6 +2,8 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 // Title was tested and is inshallah fine 
 === Optimization Case D <chap_4_5_3>
 // talk about overlappting collets and how this issues was resolved
@@ -38,13 +40,13 @@ $ bold(x)_d =  [
 $<eq_118>
 
 With the design variables established, attention can be directed to the second constraint in @eq_117. This constraint has been modified by incorporating the term $x_(s,2)$. 
-By adding the term $x_(s,2)$, which represents the position of the second support point, it is ensured that #glspl("lie") cannot be placed in the region left of the second support position. 
+By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that #glspl("lie") cannot be placed in the region left of the second support position. 
 The underlying beam model remains consistent with that used in optimization Cases B and C, as illustrated in @fig_84. In the third constraint of @eq_117, the variable $beta$ serves as a factor that determines what proportion of the tube-wing length may be utilized for #glspl("lie") placement.
 Regarding the force design variables $x_(F,i)$, bounds have been implemented where $F_(r,i)$ represents the resultant force when force members within a cluster are summed, as detailed in @chap_4_0. 
 The lower force factor $gamma_l$ and upper force factor $gamma_u$ can be applied to the resultant force to constrain its possible values.
 
 // ---------------------------------- scipy --------------------------------- //
-For practical computational implementation, the matrix form of the constraints is presented in @eq_119 to @eq_121. Since this optimization case involves an increased number of design variables that no longer corresponds directly to the number of #glspl("lie"), the indexing notation has been adapted accordingly. The variable $n_"cl"$ denotes the number of #glspl("lie"), while $n$ represents the total number of design variables. The force design variables $x_(F,i)$ do not contribute to the first and second constraints, therefore their corresponding coefficients in the design variable coefficient matrix $bold(A)$ are set to zero in @eq_119 and @eq_120.
+For practical computational implementation, the matrix form of the constraints is presented in @eq_119 to @eq_121. Since this optimization case involves an increased number of design variables that no longer corresponds directly to the number of #glspl("lie"), the indexing notation has been adapted accordingly. The variable $n_"cl"$ denotes the number of #glspl("lie"), while $n$ indicates the total number of design variables. The force design variables $x_(F,i)$ do not contribute to the first and second constraints, therefore their corresponding coefficients in the design variable coefficient matrix $bold(A)$ are set to zero in @eq_119 and @eq_120.
 
 // ------------------------------ constraint 1 ------------------------------ //
 $
@@ -196,10 +198,11 @@ Not all objective functions appear in the plots, as only solutions satisfying al
 
 Analysis of the first row in @fig_95 reveals that the lowest objective function value for a 50% visibility demand was achieved with eight #glspl("lie"). 
 For a 66.7% visibility demand, the optimal #gls("ld", long:true) was achieved with seven #glspl("lie"), while maintaining constraint compliance. Similarly, for visibility demands of 71% and 75%, the best results were obtained with six and five #glspl("lie"), respectively. These findings informed the selection of #glspl("lie") numbers for @fig_91 to @fig_94.
-Further examination of the objective function values in @fig_95 reveals that increasing the number of #glspl("lie") generally improves the quality of #gls("ld"). However, the second row of @fig_95 demonstrates that higher numbers of #glspl("lie") significantly increase the optimization complexity.
-This complexity manifests in the number of iterations required. Solutions for four #glspl("lie") were found for all visibility demands. However, increasing the number of #glspl("lie") led to iteration counts approaching the maximum limit of 3000.
+Further examination of the objective function values in @fig_95 indicates that increasing the number of #glspl("lie") generally improves the quality of #gls("ld"). 
+However, the second row of @fig_95 demonstrates that higher numbers of #glspl("lie") significantly increase the optimization complexity.
+This complexity manifests in the number of iterations required. Solutions for four #glspl("lie") were found for all visibility demands. Notably, increasing the number of #glspl("lie") led to iteration counts approaching the maximum limit of 3000.
 
-The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") and four #glspl("lie") at a 50% visibility demand. The case with eight #glspl("lie") required approximately eight times more iterations to find a solution. Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found even after 3000 iterations.
+The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") and four #glspl("lie") at a 50% visibility demand. The case with eight #glspl("lie") necessitated approximately eight times more iterations to find a solution. Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found even after 3000 iterations.
 
 // -------------------------------------------------------------------------- //
 // TODO corrections required here (langauge based) 
@@ -247,17 +250,19 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 #summary_([
 
 The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. The framework was developed to determine key parameters of the #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
-The progression of optimization cases reflects increasingly sophisticated engineering demands. Case A introduces the foundational framework with a single clamped support configuration, establishing the baseline approach for #gls("ld"). Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
+The progression of optimization cases reflects increasingly sophisticated engineering demands. 
+Case A demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
 While maintaining the core optimization framework, Case C addresses practical installation requirements by incorporating spatial restrictions for essential components such as landing gear and propulsion systems. Case D extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
 
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. 
 Despite computational complexity increasing across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands
 
-The developed optimization framework successfully answered essential questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
+The developed optimization framework successfully answered critical questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
 
 Some optimizations were conducted on the High-Performance Computing (HPC) cluster #emp_[Barnard] at the Technical University Dresden. 
-However, all optimization cases can be executed on conventional desktop computers. This was demonstrated by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
-Using this hardware specifications, the complete analysis spanning configurations from four to eight #glspl("lie") required computation times ranging from a few hours to under a day, depending on the number of required iterations.
+However, all optimization cases can be executed on conventional desktop computers. 
+This was confirmed by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
+Using this hardware specifications, the complete analysis spanning configurations from four to eight #glspl("lie") yielded computation times ranging from a few hours to under a day, depending on the number of required iterations.
 
 The results demonstrate the feasibility of achieving satisfactory #gls("ld") while meeting practical engineering constraints. The framework's adaptability to diverse requirements indicates its potential value for future #gls("swith") structural testing and certification processes.
 

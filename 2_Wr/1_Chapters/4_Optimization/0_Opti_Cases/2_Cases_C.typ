@@ -2,6 +2,8 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
+
 // Title was tested and is inshallah fine 
 === Optimization Case C <chap_4_5_2>
 

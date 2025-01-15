@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 #pagebreak(weak:true)
 
+// Word rep ins. done
 
 // Title was tested and is inshallah fine 
 == Optimization-Based Load Discretization for Structural Testing <chap_4_5>
@@ -12,13 +13,15 @@ This section reports on research outcomes focused on utilizing numerical optimiz
 The investigation is structured into multiple optimization cases, beginning with Case A as the fundamental approach. 
 Each subsequent case incorporates additional constraints and engineering considerations that emerged through iterative consultations with structural testing experts at IMA Dresden. These considerations reflect real-world requirements, ensuring the optimization framework's practical applicability. 
 The progressive refinement of constraints through expert consultation serves multiple purposes. 
-It bridges the gap between theoretical optimization and practical implementation requirements for potential #gls("swith") certification. This iterative development process also offers broader benefits for the field. The methodology demonstrates adaptability to varying experimental testing demands. Furthermore, it reveals how distinct optimization problem definitions can effectively address different requirements. This flexibility proves valuable for both certification authorities and manufacturers, who may encounter diverse technical specifications and constraints.
+It bridges the gap between theoretical optimization and practical test implementation requirements for potential #gls("swith") certification. 
+This iterative development process also offers broader benefits for the field. The methodology demonstrates adaptability to varying experimental testing demands. Furthermore, it reveals how distinct optimization problem definitions can effectively address different requirements. This flexibility proves valuable for both certification authorities and manufacturers, who may encounter diverse technical specifications and constraints.
 
-It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
+It is noteworthy that while the cases are presented in order of increasing complexity, this hierarchy does not imply superiority of later cases. Rather, each optimization case represents a distinct definition suitable for specific scenarios. 
+The presentation of multiple optimization cases serves to illustrate how the mathematical framework and implemented tools can be adapted to incorporate diverse project-specific demands while maintaining consistent optimization methodology.
 
 // Title was tested and is inshallah fine 
 === Optimization Case A <chap_4_5_0>
-Optimization case A represents the first application of the theoretical foundations established in @chap_4_0 to @chap_4_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
+Optimization case A serves as the first application of the theoretical foundations established in @chap_4_0 to @chap_4_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
 By solving this optimization problem, critical questions posed in @chap_4_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
 As this case serves as the foundation for subsequent optimization scenarios, the mathematical formulation and its implications are explained in detail. The mathematical formulation of optimization case A is given in @eq_107.
 
@@ -47,10 +50,12 @@ To maintain equation clarity and conciseness, these dependencies are acknowledge
 For optimization case A, the design variable vector consists solely of the #gls("lie") lengths $x_("cl",i)$ ($bold(x)_d = {x_("cl",i)}$). 
 The constraints that follow in the "subject to" portion are formatted with design variables on the left side of the inequality ($<=$ non-design variable parameters), a convention that facilitates implementation in optimization frameworks such as SciPy.
 
-It should be noted that the positions $x_i$ are not design variables but rather represent the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0 and @chap_4_1. These centroid locations physically correspond to the centers of the #glspl("lie").
+It should be noted that the positions $x_i$ are not design variables but rather define the centers of the centroids, determined through k-means++ clustering as detailed in @chap_4_0 and @chap_4_1. These centroid locations physically correspond to the centers of the #glspl("lie").
 
-The first constraint ensures that #glspl("lie") remain within the considered beam length, where ha denotes the half-span length. This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
-For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint requires the sum of the centroid position and the #gls("lie") length to remain within the halfspan length.
+The first constraint ensures that #glspl("lie") remain within the considered beam length, where ha denotes the half-span length. 
+This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
+For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. 
+The first constraint can be rearranged into a more intuitive form, presented in @eq_108. Through these supplementary materials, it becomes evident that the first constraint ensures the sum of the centroid position and the #gls("lie") length to remain within the halfspan length.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
@@ -68,14 +73,15 @@ The third constraint from @eq_107 stipulates that the cumulative length of all #
 The bounds defined in @eq_107 establish the permissible range for each #gls("lie") length. A minimum length of 3% of the halfspan was selected as the lower bound. The upper bound was set to $"ha"/ n_"cl"$, where $n_"cl"$ represents the total number of #glspl("lie"). This choice of bounds ensures equal treatment of all #glspl("lie") in the optimization, as each can occupy the same maximum fractional length of the span.
 
 // ----------------------------- scipy notation ----------------------------- //
-In alignment with the objective of providing initial guidance for #glspl("swith") certification, this work prioritizes the use of free and open-source computational tools whenever feasible. This approach ensures global accessibility of the methodology, facilitating its adoption and further development by the scientific community. Following this principle, SciPy was selected as the optimization framework for implementation.
+In alignment with the objective of providing initial guidance for #glspl("swith") certification, this work prioritizes the use of free and open-source computational tools whenever feasible. This approach ensures global accessibility of the methodology, facilitating its adoption and further development by the scientific community. Following this principle, SciPy was chosen to serve as the core optimization engine.
 
-To maintain consistency with this open-source commitment and enhance reproducibility, the matrix notation utilized in SciPy is presented in @eq_110 to @eq_112. These equations express the linear constraints through lower and upper bounds, represented as vectors with dimensions corresponding to the number of constraints $m$. The design variable coefficient matrix, which assigns weights to each design variable, maintains dimensions of $m$ constraints by $n$ design variables.
+To maintain consistency with this open-source commitment and enhance reproducibility, the matrix notation utilized in SciPy is presented in @eq_110 to @eq_112. 
+These equations express the linear constraints through lower and upper bounds, described as vectors with dimensions corresponding to the number of constraints $m$. The design variable coefficient matrix, which assigns weights to each design variable, maintains dimensions of $m$ constraints by $n$ design variables.
 
 The complete shape information for the optimization problem can be expressed compactly as:
 $bold(l)^(m) <= bold(A)_c^(m times n) space bold(x)_d^(n) <= bold(r)^(m)$
 
-This matrix formulation proves particularly valuable for implementation purposes, as it directly maps to SciPy's optimization interface while maintaining mathematical rigor. Furthermore, this representation facilitates the verification of dimensional consistency across the optimization problem and enables efficient computational implementation. Understanding this standardized matrix structure establishes a foundation for implementing more complex optimization cases, as subsequent formulations can follow the same systematic approach regardless of their specific constraints or objectives. 
+This matrix formulation proves particularly valuable for implementation purposes, as it directly maps to SciPy's optimization interface while maintaining mathematical rigor. Furthermore, this representation facilitates the verification of dimensional consistency across the optimization problem and enables efficient computational implementation. Understanding this standardized matrix structure establishes a foundation for constructing more complex optimization cases, as subsequent formulations can follow the same systematic approach regardless of their specific constraints or objectives. 
 This transferability of knowledge not only reduces implementation effort but also minimizes the likelihood of errors through consistent structure and enables straightforward verification of new optimization formulations through dimensional analysis.
 // ------------------------------ constraint 1 ------------------------------ //
 $
@@ -218,7 +224,7 @@ $ <eq_112>
 @fig_80 presents the fundamental beam model configuration and its analytical solution, which serves as the reference for optimization. The figure consists of four key elements arranged in rows, each providing essential information for the analysis.
 In the first row, the beam schematic illustrates the support configuration and loading conditions. The beam's left end features a fixed support (clamp), which constrains both translational and rotational degrees of freedom, enabling it to resist forces in horizontal and vertical directions while bearing bending moments. The applied loads are indicated by upward-pointing arrows, corresponding to the aerodynamic lift forces that maintain the aircraft's altitude during flight.
 A notable difference between @fig_80 and @fig_70 lies in the depiction of distributed loads. 
-While APAME generates numerous discrete load values as detailed in @chap_4_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to represent the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
+While APAME generates numerous discrete load values as detailed in @chap_4_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to characterize the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
@@ -236,7 +242,7 @@ This simplified representation serves multiple purposes in aerospace engineering
 Its applications include preliminary sizing of structural components, quick assessment of different load scenarios, evaluation of various support configurations, and rapid iteration of design concepts. 
 The second row of @fig_80 shows the reaction forces, providing quantitative information about the resulting shear forces and bending moments at the support locations. 
 The third and fourth rows illustrate the shear force and bending moment distributions, respectively. 
-All diagrams utilize a normalized span length, which facilitates result interpretation and comparison across different configurations.
+All diagrams utilize a normalized span length, which facilitates data interpretation and comparison across different configurations.
 
 The span length selection significantly influences both the optimization process and its computational requirements. The optimization search space expands proportionally with span length, as longer spans create more possible combinations for design variable values. For instance, a normalized span length of 1 mm creates a relatively confined design space between 0 and 1, whereas actual aircraft spans can be substantially larger. As referenced in @chap_1_5, large aircraft can have span lengths of approximately $80 "m "$ or $num("80000") "mm"$, creating a vast design space that demands increased computational resources.
 Current #gls("swith") development focuses primarily on smaller aircraft, as evidenced by APUS's efforts mentioned in @chap_0_7 @APUS_0. Given this context and considering computational efficiency, this study employs a beam length corresponding to smaller aircraft dimensions. Specifically, the length was selected to match the half-span of the APUS i-2 @APUS_1, leveraging the assumption of vertical axis symmetry in wing design. 

@@ -2,6 +2,7 @@
 #import "../../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 
+// Word rep ins. done
 
 // Title was tested and is inshallah fine 
 === Optimization Case B <chap_4_5_1>
@@ -14,12 +15,12 @@ Rather than employing a single clamp at the wing root, the new model incorporate
 The first support restricts displacement in the horizontal direction and can withstand bending moments while permitting vertical movement. 
 Conversely, the second support allows horizontal movement but constrains vertical displacement while also bearing bending moments. This unconventional support configuration emphasizes the necessity for flexibility in the beam modeling approach, particularly in accommodating various structural modifications.
 
-While this support system has received approval from the IMA, certain aspects of its underlying rationale remain proprietary. It is noteworthy that no standardized support configuration exists for #gls("swith") systems, primarily due to their absence in commercial markets. Given the innovative nature of #glspl("swith"), the final support system implementation may deviate substantially from the presented configuration. Furthermore, as #glspl("swith") become commercially available, support systems may vary across different designs, reinforcing the requirement for a versatile beam modeling approach.
+While this support system has received approval from the IMA, certain aspects of its underlying rationale remain proprietary. It is noteworthy that no standardized support configuration exists for #gls("swith") systems, primarily due to their absence in commercial markets. Given the innovative nature of #glspl("swith"), the final support system implementation may deviate substantially from the presented configuration. Furthermore, as #glspl("swith") become commercially available, support systems may vary across different designs, reinforcing the demand for a versatile beam modeling approach.
 
 // -------------------------------------------------------------------------- //
 Inspection of @fig_84 reveals that the aerodynamic force is not applied along the entire wing span. 
 Although conventional aircraft wings typically experience aerodynamic loading across their full span, several practical considerations justify this partial loading approach for #glspl("swith"). 
-A primary consideration stems from the design flexibility of the pressurized tube system. The #gls("swith") concept does not require tubes to extend through the complete wing span. Instead, tubes may be confined to the inner wing section, leaving the outer wing tank-free. This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
+A primary consideration stems from the design flexibility of the pressurized tube system. The #gls("swith") concept does not dictate tubes to extend through the complete wing span. Instead, tubes may be confined to the inner wing section, leaving the outer wing tank-free. This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
 The modular outer wing design permits customization of aerodynamic properties through interchangeable sections, allowing a single primary #gls("swith") design to accommodate varying performance requirements. Additionally, removable outer wing sections facilitate maintenance access to the pressurized tubes. This design approach is particularly beneficial for research and development, as it enables focused simulation and experimental investigation of the wing-tube section while utilizing simplified outer wing structures for testing purposes.
 
 Furthermore, @fig_84 shows a small gap between the left and right supports where no aerodynamic load is applied. This gap represents the fuselage-wing junction area, accounting for the structural interface between these major components.
@@ -189,8 +190,9 @@ bold(r)\
 
 $ <eq_116>
 
-As established in optimization case A (@chap_4_5_0), the optimization results are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve  high-quality approximations of both shear force and bending moment distributions.
-For clarity in @fig_86, the force text annotations for the 8 #glspl("lie") configuration are deliberately positioned with alternating vertical offsets. This arrangement was necessary to prevent textual overlap between adjacent annotations. The visualization maintains consistent scaling across all subplots to enable direct comparisons between different configurations. The color-coded text scheme aids in distinguishing individual force components.
+As established in optimization case A (@chap_4_5_0), the optimization results are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve high-quality approximations of both shear force and bending moment distributions.
+For clarity in @fig_86, the force text annotations for the 8 #glspl("lie") configuration are deliberately positioned with alternating vertical offsets. This arrangement was necessary to prevent textual overlap between adjacent annotations. 
+The visualization maintains consistent scaling across all subplots to enable direct comparisons between different configurations. The color-coded text scheme aids in distinguishing individual force components.
 The results demonstrate that the #glspl("lie") positions satisfy the constraint that prohibits overlapping between individual #glspl("lie"). The optimizer utilized the entire available inner wing length for #gls("lie") placement, identifying this as the optimal design configuration.
 While this optimization definition proves suitable for scenarios without restrictions on #gls("lie") placement within the wing-tube section, applications requiring optical measurement devices necessitate specific regions to remain free of #glspl("lie"). This consideration is addressed in optimization case D, presented in @chap_4_5_3.
 
