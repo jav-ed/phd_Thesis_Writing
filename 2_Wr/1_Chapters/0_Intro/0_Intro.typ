@@ -3,10 +3,11 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 /* ------------------------------ Introduction ------------------------------ */
 = Introduction <chap_0>
-The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers with a foundational overview of the research field, while a detailed examination of the subject is 
+The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers a foundational overview of the research field, while a detailed examination of the subject is 
 given in @chap_0_7.
 Following an introduction to #glspl("swith"), @chap_0_2 explains the motivation underlying this work. @chap_0_3 delineates the overall objectives of the research. @chap_0_4 outlines the structural organization of this thesis, offering readers a systematic overview of the covered topics.
 @chap_0_5 addresses the novel contributions and importance of this dissertation. The introduction also includes @chap_0_6, which enables transparency regarding the research funding sources and acknowledges all financial support.
@@ -28,8 +29,8 @@ When dealing with hydrogen, engineers currently have two economically viable opt
 //
 and liquid hydrogen 
 //
-@Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024. 
-This thesis focuses on gaseous hydrogen. To achieve operational flight ranges, the hydrogen must be stored at elevated pressures. Following the principle of gas compressibility, increased pressure allows for greater hydrogen mass storage within a given volume. These storage conditions necessitate the development of structurally robust containment systems.
+@Manigandan2023 @Degirmenci2023 @Eissele2023 @Yusaf2024  @Adler2024 @Tiwari2024, with this thesis focusing on the former option of gaseous hydrogen.
+To achieve commercially viable flight ranges, the hydrogen must be stored at elevated pressures. Following the principle of gas compressibility, increased pressure allows for greater hydrogen mass storage within a given volume. These storage conditions necessitate the development of structurally robust containment systems.
 
 One conventional approach involves designating a dedicated space for hydrogen tanks within the aircraft structure @Eissele2023 @Adler2024. An alternative method maintains the existing aircraft configuration while incorporating additional external storage space. This external storage solution is illustrated in @fig_0.
 
