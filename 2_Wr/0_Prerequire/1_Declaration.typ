@@ -4,6 +4,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 #set par(
     justify: true,

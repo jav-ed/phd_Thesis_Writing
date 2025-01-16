@@ -4,6 +4,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 #set par(
     justify: true,
@@ -69,7 +70,8 @@ you can call Him how you like, the most beautiful names are His.
 // -------------------------------------------------------------------------- //
 
 // from here on regular english cna be used, that is, I should be written big
-Prof. Johannes Markmiller, thank you for that decisive job interview. Your warm and approachable personality convinced me to accept the position at your Chair of Aircraft Engineering, even though the research topic seemed rather unexciting at first. 
+Professor Johannes Markmiller, thank you for that decisive job interview. 
+Your warm and approachable personality convinced me to accept the position at your Chair of Aircraft Engineering, even though the research topic seemed rather unexciting at first. 
 Having worked with you over these years, I would like to highlight one special aspect: I truly enjoyed our conversations. Our meetings often extended well beyond their planned duration. It was especially enriching that we could explore various topics, not solely those related to science. You possess the rare ability to present complex differential equations with remarkable clarity. One quality that particularly impressed me was your skill in making me feel respected throughout our interactions.
 
 #v(1em)
@@ -89,7 +91,7 @@ The author gratefully acknowledges the computing time made available to him on t
 
 // -------------------------------------------------------------------------- //
 
-The next I would like to acknowledge is something that highly concerned me. So much so that, during that time, I could not have cared less about the research on #glspl("swith", long:true).
+Next, I would like to acknowledge is something that highly concerned me. So much so that, during that time, I could not have cared less about the research on #glspl("swith", long:true).
 I felt ashamed - ashamed of myself, of what I had achieved, of my current situation. I felt weak and questioned my life's decisions. People were being bombed - elderly, men, women, children, and even newborns. I was unable to do anything to help them.
 At the time of writing this thesis, I lived in Dresden, Germany. 
 During this period, while Israel was bombing Palestine, leading German politicians publicly declared that the German nation would stand with Israel.
@@ -99,8 +101,8 @@ While this short paragraph does not permit space for detailed elaborations, I wo
 I am saying this as a non-Arab - I was not born in Palestine, I never went there, from what I know I also do not have any family members there, nor do I have any connections to people there.
 Taking away drinking water from any population, be it a Muslim Arab or whoever else, can easily be seen as a monstrous act. I know that every human was gifted with dignity, honor and respect.
 Part of this dignity is unrestricted access to water. Another important element of human dignity are human rights - all of them.
-
-Many more examples could be given, highlighting simple and ubiquitously ethical aspects. Yet, even politically constrained academia can be consulted @Jones2024 @Kunichoff2024 @El_Shewy2024 @Brooks2024 @Ram2024 @Khafaei2024 @neier2024israel @Segal2024 @Abuawad2024 @link_UN_3.
+ 
+Many more examples could be given, highlighting simple and ubiquitously ethical aspects. Beyond my personal observations, even politically constrained academia can be consulted @Jones2024 @Kunichoff2024 @El_Shewy2024 @Brooks2024 @Ram2024 @Khafaei2024 @neier2024israel @Segal2024 @Abuawad2024 @link_UN_3.
 Most of them are very clear in their arguments, such as:
 
 #quote(attribution: [Duality and dual use in Israel's war on Gaza|\ Craig Jones, Ichamati Mousamputri, Mark Griffiths @Jones2024])[
