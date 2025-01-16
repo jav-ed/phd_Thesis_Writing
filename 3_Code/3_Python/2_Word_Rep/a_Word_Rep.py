@@ -151,7 +151,7 @@ files_list = [
 # singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/0_Res_Init.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/1_Cases_B.typ" # BJ
 # singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_C.typ" # BJ
-# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/2_Cases_D.typ" # BJ
+# singl_file = "2_Wr/1_Chapters/4_Optimization/0_Opti_Cases/3_Cases_D.typ" # BJ
 
 # ------------------------------ chap - 5 final ------------------------------ #
 singl_file = "2_Wr/1_Chapters/5_Final/0_Discus.typ" # 
