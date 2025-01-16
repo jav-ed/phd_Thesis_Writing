@@ -62,7 +62,13 @@
   set quote(block: true)
 
   // allow tables and figure to be displayed across pages, that is, tables are broken properly to the next page
-  show figure: set block(breakable: true)
+  // show figure: set block(breakable: true)
+
+  // only for tables it should be allowed that the tables stretches across multiple pages. it is possible that the table caption appears on the next side. if this is disliked for one special table, deactivate it for that special table
+  show figure.where(kind: table):it => {
+    set block(breakable: true)
+    it
+  }
 
 
   /* -------------------------------- keep it ------------------------------- */
