@@ -3,11 +3,12 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 /* ------------------------------- Motivation ------------------------------- */
 == Motivation <chap_0_2>
 This section outlines the fundamental reasons inspiring this research contribution.
-The contemporary world heavily relies on aviation, serving crucial functions in both personal and business spheres that extend far beyond mere transportation
+The contemporary world heavily relies on aviation, serving critical functions in both personal and business spheres that extend far beyond mere transportation
 @Rupcic2023 @Afonso2023 @Ansell2023 @Abrantes2024 @Ficca2023.
 For individual consumers, aircraft provide a comfortable, secure, and expeditious option to traverse vast distances. 
 This capability has changed personal travel, enabling people to explore distant lands, reunite with loved ones, and broaden their cultural horizons in ways that were previously difficult or impossible. The speed and efficiency of air travel have an impact on international understanding and cultural exchange.
@@ -31,16 +32,15 @@ While there are many more reasons why aviation has become indispensable @Meijer2
 The negative impact of aircraft emissions on the environment is a growing concern for governments, industry stakeholders, and consumers. 
 This dichotomy between the essential nature of aviation and its environmental footprint underscores the urgent need for sustainable solutions in this sector, providing a compelling motivation for the research presented in this thesis.
 
-
 To maintain the benefits of aircraft while addressing environmental concerns, more environmentally friendly alternatives are in high demand.
 The environmental impact of aviation is significant and cannot be neglected, primarily due to the emissions produced when aircraft burn fuel. 
 These emissions include carbon dioxide (CO2), nitrogen oxides (NOx), and sulfur dioxide (SO2), all of which contribute to climate change and air pollution @Rupcic2023.
 The magnitude of this issue is reflected in policy initiatives such as the European Commission's Flightpath 2050 @Zaporozhets2021. 
 This document sets ambitious goals for the aviation industry, including a 75% reduction in CO2 emissions and a 90% reduction in NOx emissions per passenger kilometer @Zaporozhets2021. These targets underscore the urgent need for innovative solutions in aviation technology and fuel systems.
 
-One promising approach to meeting these environmental difficulties, as mentioned in @chap_0_1, is the replacement of current kerosene with hydrogen. In addition to 
+One promising approach to meeting these environmental concerns, as mentioned in @chap_0_1, is the replacement of current kerosene with hydrogen. In addition to 
 eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. 
-Nevertheless, lack of awareness or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
+Nevertheless, lack of awareness of or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
 These considerations hold particular relevance when conducting experimental structural validation tests that are mandatory for certifying any aircraft. 
 A more detailed examination of hydrogen's properties and challenges can be found in @chap_2_0 to @chap_2_2.
 
@@ -62,10 +62,12 @@ First, there is limited knowledge regarding which experimental structural tests 
 Second, even when assuming it would be known what to test, there remains a 
 formidable challenge in determining how to conduct these tests safely. Resolving these certification constraints is crucial for the successful implementation of #glspl("swith") in commercial aviation.
 
-The primary focus of this work is scientific, aiming to advance the understanding of #glspl("swith") and their experimental structural validation tests.
+The primary focus of this work is scientific, aiming to contribute meaningful findings that advance the potential certification of #glspl("swith").
 However, it is important to note that the potential impact of this research extends beyond purely scientific outcomes. The development of #glspl("swith") could have 
 profound implications in economic, technological, and strategic domains.
-While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. These possible advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this thesis. A more comprehensive exploration of these aspects is presented in @chap_0_5.
+While a detailed exploration of these broader impacts is beyond the scope of this motivation section, it is worth acknowledging that nations and organizations investing in this research may position themselves to gain numerous benefits. 
+These possible advantages, which could encompass economic growth, technological leadership, and strategic positioning in the aviation sector, underscore the wider significance of this thesis. A more comprehensive exploration of these aspects is presented in @chap_0_5.
+
 
 
 /* --------------------------------- summary -------------------------------- */
