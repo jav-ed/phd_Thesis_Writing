@@ -83,5 +83,4 @@ The next requirement, while not demanding research on a new topic, can still be 
 Given the multidisciplinary nature of the thesis, covering various fields, it is crucial to include a dedicated chapter (@chap_6) that collects the key insights.
 
 In conclusion, #glspl("swith") represent an innovative endeavor in aviation. 
-For that, the primary objective of this dissertation is to contribute meaningful findings that advance the potential certification of a #gls("swith"). All research objectives outlined in this section serve this overarching goal.
-
+For that, the primary objective of this dissertation is to contribute meaningful findings that advance the potential certification of a #gls("swith"). All research objectives outlined in this section serve this overarching goal. Finally, a more in-depth view on aspects addressed through this thesis can be found in @chap_0_4 and their main findings in condensed form in @chap_6.
