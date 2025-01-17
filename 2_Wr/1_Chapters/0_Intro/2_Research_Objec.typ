@@ -67,7 +67,7 @@ constraints of each approach in the context of #glspl("swith") structural verifi
 Optimization stands as a crucial task in this research.
 This contribution needs to employ optimization techniques to address real-world application questions concerning #glspl("swith") certification.
 For this potential certification, one part is to conduct an experimental structural validation test.
-Through optimization, questions such as the number of required #glspl("lie"), their optimal placement, dimensions, and the forces that need to be applied shall be answered.
+Through optimization, the research can determine major aspects of #glspl("lie"): their required quantity, strategic positioning along the wing structure, geometric dimensions of each element, and the magnitudes of forces that act on the #gls("swith") structure through the #glspl("lie"). 
 To lay the groundwork for this aim, the research should first provide fundamental concepts of optimization. 
 
 Following this, a detailed explanation of the methods used for numerical simulations is necessary. 
