@@ -223,7 +223,7 @@ The presented evaluation framework, while not exhaustive, establishes a valuable
 + Force magnitude and directional parameters
 
 @chap_4 describes a systematic approach to obtain these parameters through detailed load approximation analysis, surrogate modeling, and optimization. Knowledge of these variables, combined with the evaluation frameworks established in @tab_32 and @tab_33, enables enhanced precision in assessing each #gls("lie") configuration's suitability. 
-The required quantity of #glspl("lie") directly impacts required costs. Additionally, spacing requirements influence both the feasibility of an attachment strategy and the availability of unobstructed areas. These clear areas are potentially beneficial for visual strain measurements and structural monitoring.
+The required quantity of #glspl("lie") directly impacts required costs. Additionally, spacing requirements influence both the feasibility of an attachment strategy and the availability of unobstructed areas. These clear areas can be  beneficial for visual strain measurements and structural monitoring.
 This quantitative foundation, coupled with the qualitative evaluation criteria, forms a solid basis for informed #gls("lie") selection tailored to specific project requirements.
 
 

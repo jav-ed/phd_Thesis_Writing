@@ -7,8 +7,6 @@
 
 // Word rep ins. done
 
-
-
 // Title was tested and is inshallah fine
 == Integration of Structural Analysis for Optimization  <chap_4_4>
 In @chap_4_0 it was explained how to discretize load distributions, in @chap_4_1 how to obtain the aerodynamic loads, in @chap_4_2 important fundamental information about the beam model and in @chap_4_3 some general background about optimization was provided. 

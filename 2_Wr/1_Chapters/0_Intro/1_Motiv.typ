@@ -5,6 +5,9 @@
 // Word rep ins. done
 // proofread ins. done
 
+// -------------------------------- comments -------------------------------- //
+// the motivation is just fine. other aspects that usally people would put inside here, have their inshallah their own dedicated sections. therefore, this arragenemtn is inshallah even better than what regular phds would do.
+
 /* ------------------------------- Motivation ------------------------------- */
 == Motivation <chap_0_2>
 This section outlines the fundamental reasons inspiring this research contribution.
