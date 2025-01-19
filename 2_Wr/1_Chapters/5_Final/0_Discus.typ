@@ -26,7 +26,7 @@ Hence, this situation underscores the need for further investigation into #glspl
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 
 // ------------------------------- 0_Standards ------------------------------ //
-Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization and certification, as detailed in @chap_1. 
+Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization, development and certification, as detailed in @chap_1. 
 The role of standards for #gls("swith") certification is multifaceted and remains in its infancy.
 While the innovative nature of #glspl("swith") face challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
 At the time of writing this thesis, no known standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").

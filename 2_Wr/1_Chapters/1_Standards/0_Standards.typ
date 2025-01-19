@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was checked and is fine - inshallah
 = Standards and Regulations<chap_1>
@@ -12,7 +13,7 @@ Subsequently, it delves into the preliminary development of structural integral 
 An examination of specific standards from various sectors follows, along with an analysis of overarching norms governing high-pressure hydrogen systems in @chap_1_4. 
 This chapter concludes by identifying and evaluating the most pertinent standards for #glspl("swith") in @chap_1_5.
 Throughout, the text emphasizes the current standardization hurdles and the need for new or adapted standards. 
-The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in @chap_2.
+The safety considerations, particularly those arising from the application of hydrogen, that must be addressed in the experimental structural validation testing of #glspl("swith") geared towards final certification are detailed in the upcoming @chap_2.
 
 // Title was checked and is fine - inshallah
 == Importance of Standards <chap_1_0>
@@ -34,12 +35,14 @@ Rather than acting as restrictive barriers, standards in innovative contexts est
 They offer a structured approach to addressing known obstacles while providing flexibility for novel solutions. 
 This balance is crucial in the development of #glspl("swith"), where the integration of high-pressure hydrogen tanks with aircraft wing structures presents unique engineering hurdles.
 The role of standards extends beyond the physical design of #glspl("swith") to encompass the development process, including structural validation testing. 
-For the goal of safely designing and conducting experimental structural validation tests of a #gls("swith"), standards can be assumed to provide critical guidelines. 
-Moreover, standards form the basis for certification procedures, ensuring that #glspl("swith") meet the stringent safety and performance requirements of the aerospace industry. As such, the development of comprehensive standards is not only beneficial but vital for the successful implementation and certification of #glspl("swith") in aviation.
+For the goal of safely designing and conducting experimental structural validation tests of a #gls("swith"), standards can be assumed to provide critical guidelines.
+Moreover, standards form the basis for certification procedures, ensuring that #glspl("swith") meet the stringent safety and performance requirements of the aerospace industry. 
+As such, the development of comprehensive standards is not only beneficial but vital for the successful implementation and certification of #glspl("swith") in aviation.
 
 
 /* ------------------------------- advantages ------------------------------- */
-As the development of thorough standards proves essential for #glspl("swith") employment and certification, it is enlightening to understand the specific advantages these standards bring to such a novel field. The application of standards in #gls("swith") development offers several key benefits that extend beyond mere regulatory compliance
+The development of thorough standards proves essential for #glspl("swith") employment and certification. Understanding the specific advantages these standards bring to such a novel field is enlightening.
+The application of standards in #gls("swith") development offers several key benefits that extend beyond mere regulatory compliance.
 Firstly, it offers a common language and set of expectations among researchers, engineers, and regulators. This shared understanding facilitates more effective collaboration and communication. 
 Furthermore, the shared framework also promotes compatibility and interoperability between different components and systems, which is significant for the complex systems @Narayanan2012.
 Secondly, standards help in identifying potential risks and difficulties early in the development process, allowing for proactive mitigation strategies @Narayanan2012 @Zoo2017. 
@@ -51,23 +54,24 @@ While the benefits of applying standards to #glspl("swith") development are clea
 The primary barrier lies in the innovative nature of #gls("swith") itself. 
 As an emerging technology, there is no single standard that would cover all the unique characteristics of #glspl("swith"). This absence, however, does not diminish the importance of standards-based approaches. 
 Instead, it necessitates a careful and considered application of related standards from adjacent fields.
-In the case of #gls("swith"), relevant adjacent fields include aerospace engineering, hydrogen storage and handling, pressure vessel design, and structural engineering. The task lies in judiciously selecting and adapting these standards to address the specific needs of #gls("swith") development.
-This adaptive system is particularly crucial in the realm of experimental structural testing. Standards provide guidance on test methodologies, safety protocols, and data collection and analysis procedures. By leveraging these established practices, researchers can ensure that their experimental work on #gls("swith") is rigorous, repeatable, and aligned with industry expectations.
+// does this sentce sound strange?
+In the case of #gls("swith"), relevant adjacent fields include aerospace engineering, hydrogen storage and handling, pressure vessel design, and structural engineering. The task lies in judiciously selecting and adapting these standards to address the specific needs of #gls("swith") development and certification.
+This adaptive system is particularly crucial in the realm of experimental structural testing. Standards provide guidance on test methodologies, safety protocols, and data collection and analysis procedures. By leveraging these established practices, researchers can ensure that their experimental work on #glspl("swith") is rigorous, repeatable, and aligned with industry expectations.
 
-On top of that, the process of applying and adapting existing standards to #gls("swith") development could itself contribute to the eventual formulation of #gls("swith")-specific standards @Jiang2018. 
-This iterative process of standard application and refinement is a hallmark of technological progress, ensuring that as #glspl("swith") mature, so too does the regulatory and standards framework surrounding it @Jiang2018. 
+On top of that, the process of applying and adapting existing standards to #gls("swith") development and certification could itself contribute to the eventual formulation of #gls("swith")-specific standards @Jiang2018. 
+This iterative process of standard application and refinement is a hallmark of technological progress, ensuring that as #glspl("swith") mature, so too does the regulatory and standards framework surrounding them @Jiang2018.
 In other words, theoretically as the technology progresses from concept to prototype to commercial product, standards will need to adapt accordingly. 
 For instance, in the early stages of #gls("swith") development, standards might hypothetically focus on areas such as materials testing and structural analysis. 
 Regardless of the initial focus, as #glspl("swith") advances, standards may expand to cover areas such as manufacturing processes, maintenance procedures, and operational guidelines for hydrogen-powered aircraft.
-Consequently, it can be said that the evolution of standards is likely to play a pivotal role in the maturation of #glspl("swith"). 
+Consequently, it naturally follows that the evolution of standards plays a pivotal role in the maturation of #glspl("swith").
 
 
 #summary_([
-In conclusion, the role of standards in #gls("swith") development is multifaceted and still in its infancy. 
+In conclusion, the role of standards in #gls("swith") development and certification is multifaceted and still in its infancy. 
 While the innovative nature of #glspl("swith") presents challenges in terms of standard application, these hurdles also offer opportunities for advancing both the technology and the regulatory framework surrounding it.
 At the time of writing this thesis, there are no known standards or regulations that could be applied for obtaining certification for #glspl("swith"). This lack of an available certification procedure severely limits the industrial and scientific employment of #glspl("swith"). 
 As a result, there is a clear demand for proper standards on which industry and scientific institutions can build upon.
 This proactive approach to standardization could be crucial in overcoming the current limitations and facilitating the wider adoption of #glspl("swith").
-By carefully adapting existing standards and paving the way for #gls("swith")-specific standards, researchers and engineers can establish comprehensive validation protocols. These protocols ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
+By carefully adapting existing standards and paving the way for #gls("swith")-specific standards, researchers and engineers could establish comprehensive validation protocols. These protocols ensure that #glspl("swith") are developed and structurally validated in a manner that is safe, efficient, and aligned with industry and regulatory expectations.
 ])
 
