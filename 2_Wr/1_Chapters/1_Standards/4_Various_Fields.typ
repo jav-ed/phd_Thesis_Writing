@@ -7,18 +7,20 @@
 // Title was checked and is fine - inshallah
 == Specific Standards from Various Fields <chap_1_4>
 In previous @chap_1_3 and @chap_1_2, it was explained that the automotive industry is ahead of aviation in some areas, and it was observed that both sectors pursue similar goals. Moreover, it was demonstrated that the use cases for hydrogen are vast. 
-
 While particular attention was given to the automotive industry, it was noted that the mobility sector as a whole is one of the domains targeting the secure, feasible, and industrial application of hydrogen.
-The goal of this section is to offer a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection. Once a comprehensive listing is provided, some essential standards shall be reasonably selected in the upcoming @chap_1_5.
+The goal of this section is to offer a list of standards from various fields that could have potential links to #gls("swith", long:true). To achieve this, the domains chosen shall be clearly mentioned, supported by reasoning for their selection.
+Once a comprehensive listing is provided, some essential standards shall be selected based on rational criteria in the upcoming @chap_1_5.
 
 Throughout @chap_1, it was observed that many fields desire a secure, feasible, and industrial application of hydrogen. The automotive industry, being one of them, was especially highlighted in @chap_1_2 and @chap_1_3. However, the automotive industry is only one crucial domain under the broader category of mobility.
 The focus is on finding standards that could yield helpful insights for #gls("swith")-related standards. 
 There are two principal rationales for the emphasis on mobility.
 First, #glspl("swith") are conventional aircraft that have undergone specific modifications. Aircraft themselves are a subset of mobility. 
 Consequently, it can be hypothesized that hydrogen-powered aircraft exhibit significant parallels with other mobility sectors. A concrete example of this was presented in @chap_1_3 through the work of Opel, as reported in @Bleser2012.
-Second, economically impactful mobility sectors can be assumed to be regulated and supported through standards. Thus, availability for both academic publications and science and government-backed standards should be given.
+Second, economically impactful mobility sectors can be assumed to be regulated and supported through standards. 
+Thus, relevant academic publications and government-backed standards are expected to be readily accessible.
 In addition to targeting the mobility sector, it would be worthwhile to investigate available standards that are dedicated specifically to hydrogen applications.
-As laid out on many occasions in @chap_1, currently there is no single standard that could be used for the commercial certification of #glspl("swith"). Due to the sensibility found in the outlined reasoning, both mentioned approaches shall be undertaken.
+As laid out on many occasions in @chap_1, currently there is no single standard that could be used for the commercial certification of #glspl("swith"). 
+Due to the reasoning outlined above, both mentioned approaches shall be undertaken.
 
 The automotive industry generally includes cars (motor vehicles), buses, and heavy goods transporters (trucks). The mobility sector, on the other hand, encompasses the automotive industry and other noteworthy sectors. Examples of other mobility industrial sectors for which hydrogen is being considered as a potential future energy source are listed in @tab_3. 
 It is important to note that the stated industries are actively conducting research to realize hydrogen-powered vehicles in their respective domains.
@@ -58,7 +60,9 @@ It is important to note that the stated industries are actively conducting resea
 )<tab_3>
 
 The primary motivation across the mentioned domains can be assumed to be the same as in aviation. It is to offer sustainable and affordable transportation to science, industry, and the average consumer. The average consumer is actively involved in burdening the environment through various transportation-related activities, including daily car use, consumption of shipped goods, and air travel for business and leisure.
-A significant difference between aviation and ground mobility vehicles such as trains, cars, and motorcycles lies in the environmental conditions of the pressure vessels. While motor vehicles operate on the ground and are thus not exposed to large pressure differences, aircraft must be designed for different flight altitudes @Franco2011. This results in high pressure differences, which lead to higher loads in the structural design.
+A significant difference between aviation and ground mobility vehicles such as trains, cars, and motorcycles lies in the environmental conditions of the pressure vessels. 
+// was mentioned in another section, get the reference to it
+While motor vehicles operate on the ground and are thus not exposed to large pressure differences, aircraft must be designed for different flight altitudes @Franco2011. This results in high pressure differences, which lead to higher loads in the structural design.
 
 
 Moreover, the temperature changes with flight altitude, ranging from $15 " " degree.c "to" hyph.minus 50 " " degree.c $ ($288.15 "K " "to"  233.15 "K " $)
@@ -71,7 +75,7 @@ There are three common atmospheric models: the ICAO Standard Atmosphere @link_ic
 It is important to note that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree.c$ might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree.c$ in Dubai during summer would be markedly lower than the typical temperatures experienced in that region.
 Furthermore, similar to the modern automotive industry, aviation is an area strongly dominated by lightweight construction. Thus, this information should be taken into account when adopting hydrogen standards from non-lightweight-focused areas.
 Generally, for hydrogen-powered mobility domains in transport, a distinction can be made between light and heavy mobility solutions. 
-An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel for the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application, are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards issued by #gls("iso", long:true) are given in @tab_8.
+An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel for the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards issued by #gls("iso", long:true) are given in @tab_8.
 
 /* -------------------------------------------------------------------------- */
 /* ----------------------------------- car ---------------------------------- */
