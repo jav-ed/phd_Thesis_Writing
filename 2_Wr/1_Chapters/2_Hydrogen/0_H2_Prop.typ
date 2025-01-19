@@ -6,7 +6,7 @@
 
 // Title was tested and is inshallah fine
 = High-Pressure Hydrogen Properties and Structural Considerations <chap_2>
-A comprehensive definition and state-of-the-art review of #gls("swith", long:true) were provided in @chap_0_7, establishing the foundational context for this investigation. Building upon this, @chap_1 presented an extensive analysis of current standards and regulations governing the commercial certification of #gls("swith", long:true). 
+A comprehensive definition and state-of-the-art review of #gls("swith", long:true) were provided in @chap_0_7, establishing the foundational context for this investigation. Building upon this, @chap_1 presented an extensive analysis of current standards and regulations governing the commercial certification of #gls("swith"). 
 The findings from these regulatory frameworks serve as crucial guideposts for the methodological approach undertaken in this chapter.
 This chapter explores the multifaceted challenges of integrating hydrogen tanks as load-carrying components within aircraft wing structures. The investigation follows a systematic progression through four interconnected areas: 
 First, @chap_2_0 outlines the fundamental properties of hydrogen, examining its basic characteristics, including its gravimetric energy density and its behavior under varying pressure and temperature conditions.
