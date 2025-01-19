@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was checked and is fine - inshallah
 == Structural Integration of Hydrogen Tanks in the Automotive Industry <chap_1_3>
@@ -14,7 +15,7 @@ The objective of this section and study is to find publicly available research f
 // -------------------------------------------------------------------------- //
 
 The insights obtained from @chap_1_2 can be regarded as one part of the motivation for conducting an in-depth investigation into the automotive industry to find helpful insights for experimental structural validation tests of #glspl("swith"). Nonetheless, additional motivations shall be presented.
-First, according to the current state of knowledge, no flying cars are known to exist. Thus, a crucial difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
+First, according to the current state of knowledge, no flying cars are documented to exist. Thus, a crucial difference between the automotive industry and aviation remains: aircraft must be able to operate both on the ground and in the air at various flight altitudes, whereas the automotive industry produces road-bound vehicles. Yet, the vehicle industry is ahead of aviation in terms of incorporating new technologies @LopezVega2023 @Rizvi2023. This includes advancements in autonomous driving @Zhao2024 @Chib2024 @Teng2023, object recognition @Caro2023 @Liu2024a @Wang2023, and drive mode assistance @Suganthi2023 @Monk2023 @Hong2024. The same applies to hydrogen-powered vehicles, as indicated in @fig_9.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/0_Standards/2_Mobility/0_Readinesslevel.png", 
@@ -26,7 +27,7 @@ First, according to the current state of knowledge, no flying cars are known to 
 
 There are already hydrogen cars approved for traffic @link_hyundai_nexo_img @link_hyundai_ix35_img @link_toyota_mirai_ii_img @link_honda_clarity_img @link_mercedes_glc_img, as demonstrated in @chap_1_2. This raises the justified question of whether there are already initial concepts for externally loaded structural integral #gls("cgh2") tanks in the automotive industry. 
 One of the main reasons for aviation lagging behind is that it has numerous and stringent approval and quality standards. Furthermore, aircraft are significantly larger in dimensions than cars, resulting in high costs for planning and manufacturing. Consequently, there are comparatively few manufacturers and less competition. Even if there were meaningful competition, building aircraft remains a highly complex and interdisciplinary achievement. While acknowledging that road vehicles are also interdisciplinary, aircraft design, manufacturing, and approval demand substantially more time from concept to finished product than is necessary for road vehicles.
-In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this work, the torque stiffness of the body was to be increased with the help of #gls("cfrp") tanks. This is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that Opel carried out a first preliminary test. In this test, tension bands were wrapped around the tanks, as shown in @fig_5. In this configuration, the introduction of moments and longitudinal forces is only possible to a limited extent.
+In the literature, one contribution could be found that describes the use of structural integral tanks in automobiles @Bleser2012. In this work, the torque stiffness of the body was to be increased with the help of #gls("cfrp") tanks. This is mainly due to the closed form of the hydrogen high-pressure cylinder. It is mentioned that Opel carried out a first preliminary test. In this test, tension bands were wrapped around the tanks, as shown in @fig_5. The introduction of moments and longitudinal forces in this configuration is only possible to a limited extent.
 
 
 #figure(
@@ -35,7 +36,8 @@ In the literature, one contribution could be found that describes the use of str
   caption: [Tank configuration of Opel's HydroGen4 project @Bleser2012.],
 ) <fig_5>
 
-The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. The same applies for a moment around the longitudinal axis. Such a moment would cause rotation around the longitudinal axis of the cylinders. Analogously, only frictional force would generate resistance in this case as well.
+The tension bands press the cylinders against the carrier system. If a longitudinal force were to be exerted on a cylinder, the only resistance to displacement would be the frictional force. 
+The same applies to a moment around the longitudinal axis. Such a moment would cause rotation around the longitudinal axis of the cylinders. Analogously, only frictional force would generate resistance in this case as well.
 To introduce torque that a body experiences onto a tank, two #gls("lie", long:true) are utilized. The concept proposed in @Bleser2012 is shown in @fig_6.
 
 #figure(
@@ -70,7 +72,8 @@ This explanation is made visually apparent through @fig_14.
 ) <fig_14>
 
 
-The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu $, which is usually significantly smaller than 1 @Gross2019. For stationary evaluation, the condition is: $F_t = H = mu N$. If the equation is rearranged, the following can be concluded:
+The static friction force $H$ itself is composed of the normal force $N$ and a friction coefficient $mu $, which is usually significantly smaller than 1 @Gross2019. For stationary evaluation, the condition is: $F_t = H = mu N$. 
+Rearranging the equation leads to the following conclusion:
 
 $ N = F_t / mu  = H/ mu $<eq_2>
 
@@ -87,7 +90,8 @@ It can be seen that the automotive industry also had a similar idea of not only 
 
 In addition to academic literature, the field of patents could offer potential insights for experimental structural validation tests of #glspl("swith"). Given that #glspl("swith") exhibit a pioneering concept, and adherence to proper scientific work ethics necessitates the utilization of all publicly available resources, it is prudent to examine and present research findings from patents as well.
 // --------------------------------- patents -------------------------------- //
-The patent research offered some information about existing concepts similar to #gls("swith"). Two German patents from the automotive industry are particularly noteworthy in their pursuit of load-bearing pressure cylinder concepts. The first, published by BMW in 2015 @Stahl2017, suggests constructing the first longitudinal structure as a pressure cylinder capable of absorbing both fuel and external forces. However, according to the description on Google Patents @Stahl2017, this patent was withdrawn, possibly due to the novelty and complexity of such an endeavor.
+
+The patent research offered some information about existing concepts similar to #glspl("swith"). Two German patents from the automotive industry are particularly noteworthy in their pursuit of load-bearing pressure cylinder concepts. The first, published by BMW in 2015 @Stahl2017, suggests constructing the first longitudinal structure as a pressure cylinder capable of absorbing both fuel and external forces. However, according to the description on Google Patents @Stahl2017, this patent was withdrawn, possibly due to the novelty and complexity of such an endeavor.
 The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses motor vehicles with pressure cylinders. The patent description explicitly states that the pressure cylinder should be able to absorb both forces and moments within the motor vehicle. The concept involves introducing loads into the rigid pressure cylinder via pole caps attached at the ends. The sketch from this patent is depicted in @fig_7. According to Google Patents @ChristophBechtold2019, the patent remains active until its expiration on December 14, 2037.
 
 
@@ -99,9 +103,10 @@ The second patent, published by Audi in 2017 @ChristophBechtold2019, addresses m
 
 
 Similar to the academic paper @Bleser2012, the cited patents clearly indicate that the automotive industry is interested in load-bearing structurally integral tanks. 
-Upon further consideration, these automotive concepts could potentially inspire additional load cases for integrated tanks in aerospace applications. 
+By drawing insights from these automotive concepts and upon deeper consideration, 
+these automotive concepts could potentially inspire additional load case configurations for integrated tanks in aerospace applications. 
 However, neither academic papers nor patent descriptions from the automotive industry provide direct additional valuable insights for experimental structural validation tests of #glspl("swith").
-For completeness, it shall be stated that patents from the field of aviation were already covered in @chap_0_7. The only relevant patent to highlight again is @Scheffel2015. While @Friedmann2023 names 7 patents, only 2 of them could be found, which might be due to the fact that the other five predate 1939.
+For completeness, it shall be stated that patents from the field of aviation were already covered in @chap_0_7. The only relevant patent to highlight again is @Scheffel2015. While @Friedmann2023 names seven patents, only two of them could be found online, which might be due to the fact that the other five predate 1939.
 
 
 // -------------------------------------------------------------------------- //
