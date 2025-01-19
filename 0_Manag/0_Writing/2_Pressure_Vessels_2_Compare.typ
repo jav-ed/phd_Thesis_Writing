@@ -3,7 +3,6 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
-// proofread ins. done
 
 // Title was checked and is fine - inshallah
 == Classification and Analysis of Hydrogen Pressure Vessels <chap_1_2>
@@ -18,7 +17,7 @@ Linking back to industry standards, specific guidelines for pressure vessels are
 The primary objective is to identify information that could enhance the state of the art for certifying #glspl("swith"). As motivated in @chap_1_0, this shall be achieved through commercially available standards. Pressure tanks can be regarded as the second major sub-area into which #glspl("swith") can be categorized. These specialized containers are designed to safely store and deliver compressed gases under high pressure.
 The literature and patents reveal various pressure vessel geometries @Rosen2018 @blair2015composite @Jaber2024 @aceves2006advanced @Yersak2019 @Geuskens2011. One of the main motivations for developing conformable pressure vessels is to improve space utilization @aceves2006advanced. 
 Consequently, fields focused on lightweight construction, such as aerospace and automotive @Czerwinski2021 @Wang2023a @Hou2023, or areas where space is at a premium, could significantly benefit from conformable pressure vessels.
-While the aerospace industry is renowned for its emphasis on lightweight structures @Khan2024 @Chen2023 @Acanfora2023 @Okorie2023 @Seo2023, it also grapples with limited free space. Despite the substantial size of commercial aircraft, space remains a critical factor due to some of the economic demands of civil aviation. Increased available space translates to either more paying passengers or additional cargo capacity. As a concrete example, conformable pressure vessels could be utilized to design structurally efficient pressure cabins for blended wing-body aircraft @Geuskens2011.
+While the aerospace industry is renowned for its emphasis on lightweight structures @Khan2024 @Chen2023 @Acanfora2023 @Okorie2023 @Seo2023, it also grapples with limited free space. Despite the substantial size of commercial aircraft, space remains a critical factor due some of the economic demands of civil aviation. Increased available space translates to either more paying passengers or additional cargo capacity. As a concrete example, conformable pressure vessels could be utilized to design structurally efficient pressure cabins for blended wing-body aircraft @Geuskens2011.
 In the automotive sector, @aceves2006advanced suggests that vehicle range can be extended by 20% to 40%, depending on the geometry of the available space and the degree of vessel conformability. Beyond optimal space utilization, conformable pressure vessels also find applications in storing non-compressible liquids @Geuskens2011.
 
 While conformable pressure vessels can have various shapes, a demonstrative example is depicted in @fig_10.
@@ -171,7 +170,7 @@ This includes personal vehicles, electronic devices such as laptops and smartpho
 
 It has been demonstrated that tank Types I and II are heavier than Types III to V. 
 Due to the desire to reduce environmental impact and the cost of fuel or other driving energy in every mobility sector, these high weights are undesired.
-Thus, tanks of Types I and II are best suited for stationary applications @barral2006hydrogen.
+Thus, tanks of Types I and II are best suited for stationary applications @barral2006hydrogen
 Consequently, the remaining lighter Types III to V are more favorable for mobile applications like in the automotive or aerospace sectors.
 Literature research confirms this statement, as shown in @tab_17.
 It can be observed that the automotive sector solely makes use of tank types greater than II.
@@ -221,35 +220,31 @@ Moreover, the documented instances in @tab_17 suggest that tank Type IV has the 
 Yet, the list could be incomplete and more examples could change that perspective.
 However, as elaborated earlier, due to the higher liner costs of the tank Type III, generally, the costs of the tank Type III are higher than those of the tank Type IV @Shin2023a.
 // ---------------------------------- here ---------------------------------- //
-Moreover, as explained with @fig_12, for a pressure of 700 bar, the Type III not only cost more than the Type IV, but it also weighs more.
-As a result, the tank Type IV currently allows storing the same mass of hydrogen while being lighter.
+Moreover, as explained with @fig_12, for a pressure of 700 bar, the Type III not only cost more than the Type IV, but it also weights more.
+As a result, the tank Type IV currently allows to store the same mass of hydrogen while being lighter.
 The latter translates into the tank Type IV offering a higher gravimetric density than the Type III.
 This observation is confirmed by the gravimetric density values in @tab_17 and literature such as @khzouz2020hydrogen @Rivard2019 @Shin2023 @Barthelemy2017 @Hassan2021 @Wang2021b.
 Concluding all the findings up to this point, it can be said that the only two remaining types of tanks that should be considered for an efficient application for #glspl("swith") are the Types IV and V.
 
 // -------------------------------------------------------------------------- //
 
-Next, a comparison between Type V and IV tanks shall be made to provide insight into which should be used and when. First, it can be said that the costs of Type V are higher than Type IV. Secondly, as of writing this thesis, the availability of Type V tanks is very scarce.
+Next, a comparison between Type V and IV tanks shall be made to provide insight into which should be used when. First, it can be said that the costs of Type V are higher than Type IV. Secondly, as of writing this thesis, the availability of Type V tanks is very scarce.
 The advantages of Type V over Type IV are that Type V is said to be 20% lighter @Su2021 and allows pressures up to 1000 bar @Cheng2024. 
-Since the #gls("swith") is an aircraft, lightweight structures are highly desired. 
-At first glance, the higher pressure would allow higher compression rates and thus enable more hydrogen storage. 
-As a result, longer flight ranges could be achieved, demonstrating the promising potential of this solution
+Since the #gls("swith") is an aircraft, lightweight structures are kept highly desired. At first glance, the higher pressure would allow higher compression rates and thus enable more hydrogen storage. 
+As a result, longer flight ranges could be achieved, and the outcome seems very positive.
 However, careful consideration reveals that higher working pressure requires more effort to be put into safety aspects @Yanxing2019 @Klell2023 @Zheng2012. 
-Moreover, for #glspl("swith"), besides the internal pressure, additional external loads must also be withstood to ensure safe operation.
+For #glspl("swith"), besides the internal pressure, additional external loads need to be withstood as well. 
 
 
-The pursuit of developing a #gls("swith") is a pioneering project. 
-Combining it with Type V tanks could lead to undesired safety concerns, as these tanks are not yet widely adopted commercially and still need 
+The pursuit of developing a #gls("swith") is a pioneering project. Combining it with Type V tanks could lead to undesired safety concerns, as these tanks are not yet widely adopted commercially and still need 
 development to demonstrate maturity @Air2023 @Air2023a.
-Given the innovative nature of #glspl("swith"), it is prudent to avoid combining it with other non-mature technologies. Instead, Type IV vessels, which are more mature and actively used in commercial applications, present a safer option under current conditions @Air2023.
-Consequently, as of writing this thesis, #glspl("swith") should be operated with Type IV tanks. 
-However, once Type V tank development has advanced sufficiently, safe utilization of their potential benefits can be expected, and #glspl("swith") can transition from Type IV to Type V tanks.
-
+Given the innovative nature of #gls("swith"), it is prudent to avoid combining it with non-mature technologies. Instead, Type IV vessels, which are more mature and actively used in commercial applications, present a safer option at this stage @Air2023.
+Consequently, as of writing this thesis, #glspl("swith") should be operated with Type IV tanks. However, once enough progress is made with Type V tanks, safe utilization of the potential benefits can be expected, and Type IV can be switched to Type V for #glspl("swith").
+//
 // ------------------------------ to sum table ------------------------------ //
-Finally, @tab_0 provides a concise overview of the tank types, including material information and maximum bearable pressure. Similar, though less detailed, information on maximum bearable pressure values for the tank types can be found in other sources, including @Wang2021b, @Jella2024, @Rivard2019, and @khzouz2020hydrogen.
+Finally, @tab_0 provides a concise overview of the tank types, including material information and maximum bearable pressure. Similar, though less detailed, information on maximum bearable pressure values for the tank types can be found in other sources, including @Wang2021b, @Jella2024, @Rivard2019, and @khzouz2020hydrogen
 /* -------------------------------------------------------------------------- */
 
-#pagebreak(weak:true)
 
 #figure(
   table(
