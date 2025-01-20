@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was checked and is fine - inshallah
 == Specific Standards from Various Fields <chap_1_4>
@@ -60,22 +61,21 @@ It is important to note that the stated industries are actively conducting resea
 )<tab_3>
 
 The primary motivation across the mentioned domains can be assumed to be the same as in aviation. It is to offer sustainable and affordable transportation to science, industry, and the average consumer. The average consumer is actively involved in burdening the environment through various transportation-related activities, including daily car use, consumption of shipped goods, and air travel for business and leisure.
-A significant difference between aviation and ground mobility vehicles such as trains, cars, and motorcycles lies in the environmental conditions of the pressure vessels. 
-// was mentioned in another section, get the reference to it
-While motor vehicles operate on the ground and are thus not exposed to large pressure differences, aircraft must be designed for different flight altitudes @Franco2011. This results in high pressure differences, which lead to higher loads in the structural design.
+A significant difference between aviation and ground mobility vehicles, such as trains, cars, and motorcycles lies in the environmental conditions of the pressure vessels, as mentioned in @chap_1_3.
+While motor vehicles operate on the ground and are thus not exposed to large pressure differences, aircraft must be designed for different flight altitudes @Franco2011. This results in high pressure differences, which lead to higher structural loads.
 
 
-Moreover, the temperature changes with flight altitude, ranging from $15 " " degree.c "to" hyph.minus 50 " " degree.c $ ($288.15 "K " "to"  233.15 "K " $)
-for an altitude from $0  "km to" 10  "km" $
+Moreover, the temperature changes with flight altitude, ranging from $288.15 "K " "to"  233.15 "K " $ ($15 " " degree.c "to" hyph.minus 50 " " degree.c $) for an altitude from $0  "km to" 10  "km" $
 cruise altitude. According to @Rossow_2014, the maximal flight height is around $10 "km to" 13 "km"$, and according to @Filippone2010, most commercial airliners and business jets have final cruise altitudes well beyond $12 "km" ( approx 40,000 "ft")$. From $0 "km to" 11 "km"$, the altitude range is called the troposphere, where the temperature drops from $288.15 "K " "to"  216.65 "K "$ ($15 " " degree.c "to"  hyph.minus 56.5 " " degree.c$).
 From $11 "km to" 20 "km"$, the stratosphere is reached, where no difference in temperature is observed. As the temperature remains constant between $11 "km and" 13 "km"$, it can be said that aircraft need to withstand temperatures between $288.15 "K "$ ($15 " " degree.c$) and $216.65 "K "$ ($hyph.minus 56.5 " " degree.c$), as well as variations within this range.
 
 
 There are three common atmospheric models: the ICAO Standard Atmosphere @link_icao_atmposhere, the US Standard Atmosphere @link_us_atmposhere, and the Norm Atmosphere DIN 5450 @lecture_notes_Entwerfen_von_Verkehrsflugzeugen_I @butt2021development. The temperatures stated above were obtained using the Norm Atmosphere DIN 5450.
 It is important to note that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree.c$ might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree.c$ in Dubai during summer would be markedly lower than the typical temperatures experienced in that region.
-Furthermore, similar to the modern automotive industry, aviation is an area strongly dominated by lightweight construction. Thus, this information should be taken into account when adopting hydrogen standards from non-lightweight-focused areas.
+Similar to the modern automotive industry, aviation is strongly dominated by lightweight construction. Nevertheless, the lightweight consideration should be taken into account when adopting hydrogen standards from non-lightweight-focused areas.
+
 Generally, for hydrogen-powered mobility domains in transport, a distinction can be made between light and heavy mobility solutions. 
-An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel for the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards issued by #gls("iso", long:true) are given in @tab_8.
+An overview of some of the identified standards and projects that deal with #gls("cgh2") as fuel in the light mobile sector is provided in @tab_4. Comparable standards for heavy means of transportation are presented in @tab_5. Standards for pressure cylinders in general for mobile application are listed in @tab_6. Near-ground static pressure storage standards are outlined in @tab_7, and the hydrogen-based standards issued by #gls("iso", long:true) are given in @tab_8.
 
 /* -------------------------------------------------------------------------- */
 /* ----------------------------------- car ---------------------------------- */
@@ -290,7 +290,9 @@ An overview of some of the identified standards and projects that deal with #gls
 
 
 Besides #gls("iso")'s focus on hydrogen, another reason for including #gls("iso") hydrogen-based standards is the organization's excellent international reputation. This increases the chances of partial to potentially full international recognition of these standards.
-As mentioned in the introduction of this section, the goal was to identify potential #gls("cgh2") standards, provide reasons for their selection, and present them in an organized manner. The process of filtering the standards with the highest potential for providing information relevant to #gls("swith") certification will be addressed in @chap_1_5, based on specific criteria.
+As mentioned in the introduction of this section, the goal was to identify potential #gls("cgh2") standards, provide reasons for their selection, and present them in an organized manner. 
+The process of filtering out the standards with the greatest potential to inform #gls("swith") certification, based on specific criteria, will be addressed in @chap_1_5.
+
 
 
 #summary_([
