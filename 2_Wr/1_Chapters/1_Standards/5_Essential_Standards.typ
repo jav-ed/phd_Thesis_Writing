@@ -125,7 +125,7 @@ For #glspl("swith"), four standards meeting all criteria and complementing each 
     table.header(table.cell(colspan:2,[*Essential Standards*])),
     /* -------------- */
     [1) EC 406/2010 @EU_406_2010],
-    [2) ISO 11119-3:2020 @11119_3_ISO],
+    [2) #gls("iso") 11119-3:2020 @11119_3_ISO],
     [3) #gls("cs")-23 @EASA_CS_23],
     [4) #gls("cs")-25 @EASA_CS_25],
   ),
@@ -135,13 +135,13 @@ For #glspl("swith"), four standards meeting all criteria and complementing each 
 )<tab_11>
 
 
-It is essential to address important points of the selected standards. The EC 406/2010 @EU_406_2010 and the ISO 11119-3:2020 @11119_3_ISO are established regulations for the automotive industry. 
+It is essential to address important points of the selected standards. The EC 406/2010 @EU_406_2010 and the #gls("iso") 11119-3:2020 @11119_3_ISO are established regulations for the automotive industry. 
 The EC 406/2010 is available in multiple languages and is valid across 50 geopolitical regions, including various islands and countries. However, there are several objections to its direct application to aviation. The full title in English states: #emp_[COMMISSION REGULATION (EU) No 406/2010 of 26 April 2010 implementing Regulation (EC) No 79/2009 of the European Parliament and of the Council on type-approval of hydrogen-powered motor vehicles]. While by definition an airplane is also a vehicle, the German translation of the EC 406/2010 uses the term  #emp_[Kraftfahrzeug] (motor vehicle), which limits the applications to road vehicles. 
 
 Consequently, from the title definition in the English version itself, it is not clear whether aviation use would be legally permissible. 
-The limitation to road-bound vehicles is further emphasized by the ISO 19881:2018 @iso_19881. 
+The limitation to road-bound vehicles is further emphasized by the #gls("iso") 19881:2018 @iso_19881. 
 This standard, which serves similar purposes as the EC 406/2010 @EU_406_2010, explicitly restricts its scope through its title #emp_[Gaseous hydrogen - Land vehicle fuel containers]. 
-The phrase #emp_[Land vehicle] unequivocally precludes application to aircraft. Moreover, the ISO 19881:2018 specifically mandates permanently attached tanks, adding another layer of incompatibility with aviation applications. However, for #glspl("swith"), replaceable tanks could offer significant advantages over permanently attached ones. This potential benefit arises from two main considerations. Firstly, in the event of hydrogen tank issues, replaceable tanks allow for faster substitution, minimizing aircraft inactivity periods. Such efficiency is crucial in airline economics, where prolonged inactivity is highly undesirable. Secondly, replaceable tanks facilitate easier upgrades, such as transitioning from Type IV to Type V tanks when new technological advancements become available.
+The phrase #emp_[Land vehicle] unequivocally precludes application to aircraft. Moreover, the #gls("iso") 19881:2018 specifically mandates permanently attached tanks, adding another layer of incompatibility with aviation applications. However, for #glspl("swith"), replaceable tanks could offer significant advantages over permanently attached ones. This potential benefit arises from two main considerations. Firstly, in the event of hydrogen tank issues, replaceable tanks allow for faster substitution, minimizing aircraft inactivity periods. Such efficiency is crucial in airline economics, where prolonged inactivity is highly undesirable. Secondly, replaceable tanks facilitate easier upgrades, such as transitioning from Type IV to Type V tanks when new technological advancements become available.
 
 An additional advantage of replaceable tanks lies in the potential for increased specialization across subdomains. The entire process—encompassing design, manufacturing, attachment, refilling, maintenance (including special inspections), and upgrades—could be more easily outsourced to specialized third parties. #gls("swith") construction,  similar to regular aircraft construction, is highly multidisciplinary. 
 Outsourcing certain aspects to dedicated experts could benefit both existing aircraft manufacturers, enabling them to produce more reliable aircraft, and newcomers to the aircraft manufacturing industry, facilitating their entry into this complex field.
@@ -149,7 +149,7 @@ The implementation of replaceable tanks in #glspl("swith") offers multiple benef
 Furthermore, airlines might realize significant cost and time savings in their refueling operations. With replaceable tanks, hydrogen refilling stations would not necessarily need to be in the immediate vicinity of aircraft landing locations. Instead, pre-filled tanks could be swapped out efficiently, potentially reducing turnaround times compared to on-site refilling. This approach could also mitigate some of the time-consuming security measures associated with local refilling operations.
 
 Returning to the EC 406/2010, beyond the aforementioned language specifications, studying the EC 406/2010 reveals that it lacks any direct references to aircraft applications. Additionally, the EC 406/2010 specifies additional potential limitations, particularly in its testing requirements. These requirements may exceed available economic resources, as they stipulate that multiple #glspl("swith") specimens must undergo a single experimental test.
-This demand for multiple specimens is not unique to the EC 406/2010, but it also appears in the ISO 11119-3:2020 @11119_3_ISO. A notable example is found in ISO-11119-3, paragraph 8.2.1, which explicitly states: #emp_[A minimum of 30 cylinders of the new design shall be made available for prototype testing]. 
+This demand for multiple specimens is not unique to the EC 406/2010, but it also appears in the #gls("iso") 11119-3:2020 @11119_3_ISO. A notable example is found in the #gls("iso") 11119-3, paragraph 8.2.1, which explicitly states: #emp_[A minimum of 30 cylinders of the new design shall be made available for prototype testing]. 
 
 The necessity for multiple #glspl("swith") samples is highly undesirable due to the cost-intensive and time-consuming nature of their manufacturing process. To illustrate this point, consider the dimensions of the #gls("cfrp", long:true) tubes involved: for small aircraft, these range between around 7 and 15 meters in span length @APUS_0, while for large aircraft, they can extend up to approximately 80 meters @link_Lufthansa_Airbus_380. 
 It is important to recall that a #gls("swith") consists of a wing with multiple structure-integrated tubes. The integration of multiple tubes, rather than a single one, is driven by the need to optimally utilize all available space within the wing. 
@@ -157,18 +157,18 @@ If a single tube-shaped tank were employed, it would only fit at the location of
 While future advancements may potentially yield airfoil-shaped high-pressure hydrogen tanks, the scope of this work is limited to regular-shaped tanks, specifically cylinders. 
 
 Based on the conceptualization of #glspl("swith") and the illustrated dimensions of integrated composite tubes, the prohibitive expense of producing multiple #glspl("swith") for experimental tests becomes evident. This economic constraint presents a significant challenge in meeting the testing requirements outlined in current standards.
-Another obstacle to the direct applicability of the EC 406/2010 to #glspl("swith") stems from certain prescribed demands that may be considered excessively stringent. These requirements, found identically in both the EC 406/2010 and the ISO 19881:2018, relate to the gaseous hydrogen burst ratio criteria. In particular, these criteria are delineated in section 3.6 of the EC 406/2010 and section 7.3.2 of the ISO 19881:2018.
+Another obstacle to the direct applicability of the EC 406/2010 to #glspl("swith") stems from certain prescribed demands that may be considered excessively stringent. These requirements, found identically in both the EC 406/2010 and the #gls("iso") 19881:2018, relate to the gaseous hydrogen burst ratio criteria. In particular, these criteria are delineated in section 3.6 of the EC 406/2010 and section 7.3.2 of the #gls("iso") 19881:2018.
 Both standards mandate the fulfillment of @eq_3, where $p_"burst"$, $psi$, and $p_"wnp"$ represent the minimal burst pressure, a factor dependent on the over-wrap material, and the nominal working pressure, respectively.
 
 $ p_"burst" ≥ psi space.thin p_"wnp" $<eq_3>
 
 The safety factors $psi$ specified for different fiber materials are as follows: 3.5 for glass, 3.0 for aramid, and 2.25 for carbon. Consequently, when using aramid as the fiber material, the hydrogen tank must withstand three times the nominal pressure. For instance, if the nominal pressure for a #gls("swith") tank were set at $300 "bar"$, the tank would need to withstand a minimum of $900 "bar"$.
-These high safety factors, as defined in the EC 406/2010 and the ISO 19881:2018, pose significant technical hurdles. 
+These high safety factors, as defined in the EC 406/2010 and the #gls("iso") 19881:2018, pose significant technical hurdles. 
 Higher safety factors necessitate more material to meet the requirements, resulting in increased mass and weight. This outcome is highly undesirable in aviation, as emphasized on multiple occasions in @chap_1.
 
 The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 "bar"$. 
-The maximum working nominal pressures ($p_"wnp"$) achievable under the EC 406/2010 and ISO 19881:2018 standards range from $300$ to $465 "bar"$, depending on the fiber material.
-However, when considering the factors specified in the ISO 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between $437.5$ and $525 "bar"$.
+The maximum working nominal pressures ($p_"wnp"$) achievable under the EC 406/2010 and #gls("iso") 19881:2018 standards range from $300$ to $465 "bar"$, depending on the fiber material.
+However, when considering the factors specified in the #gls("iso") 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between $437.5$ and $525 "bar"$.
 
 A comprehensive overview of these relationships is provided in @tab_14. 
 The table presents the complete list of fiber material-dependent safety factors for the three aforementioned standards, shown as the denominators of the fractions. Additionally, it illustrates the maximum allowable operating pressures for each combination of fiber material and standard, calculated based on the maximum test pressure of $1050 "bar"$ @Cebolla2019.
@@ -199,13 +199,13 @@ The table presents the complete list of fiber material-dependent safety factors 
 )<tab_14>
 
 Despite its limitations, the EC 406/2010 remains a viable choice in the selection of applicable standards for #glspl("swith"). 
-In contrast, the ISO 19881:2018 has been disqualified from consideration due to ambiguities in its testing instructions. While copyright restrictions prevent direct quotation of the original document, a description of the problematic aspects can be provided.
+In contrast, the #gls("iso") 19881:2018 has been disqualified from consideration due to ambiguities in its testing instructions. While copyright restrictions prevent direct quotation of the original document, a description of the problematic aspects can be provided.
 The issue centers on #emp_[Table 1 - Material tests]. 
 This table comprises headers for material test, clause, material type, and four fields corresponding to the four possible tank or container types. For the category material type, multiple metal materials are listed, with each associated field for Type IV tanks marked as applicable. This layout suggests that these tests are mandatory not only for metal tanks but also for #gls("cfrp") tanks. However, the test descriptions lack any explicit reference to #gls("cfrp") materials.
 Given the significant differences between metal and plastic liners, one would expect variations in testing protocols. The absence of a clear distinction or an explicit statement indicating uniform testing across all materials introduces ambiguity. This raises a critical question: should composite tanks undergo identical testing procedures as metallic tanks, or are these tests specifically designed for metallic tanks?
-The inability to resolve this ambiguity within a reasonable timeframe and effort has led to the decision to remove the ISO 19881:2018 from the list of applicable standards for #glspl("swith"). This decision underscores the importance of #emp_[clarity and specificity] in standards applicable to novel technologies such as #glspl("swith").
+The inability to resolve this ambiguity within a reasonable timeframe and effort has led to the decision to remove the #gls("iso") 19881:2018 from the list of applicable standards for #glspl("swith"). This decision underscores the importance of #emp_[clarity and specificity] in standards applicable to novel technologies such as #glspl("swith").
 
-To lay out a structured overview of potential tests that #glspl("swith") might undergo, selected information from the chosen essential standards is presented. A list of the mandatory and optional tests, as outlined in the ISO 11119-3:2020, appears in @tab_12 and @tab_13, respectively. These tables offer a concise summary of the testing requirements, distinguishing between tests that are universally mandatory and those that may be warranted under specific circumstances.
+To lay out a structured overview of potential tests that #glspl("swith") might undergo, selected information from the chosen essential standards is presented. A list of the mandatory and optional tests, as outlined in the #gls("iso") 11119-3:2020, appears in @tab_12 and @tab_13, respectively. These tables offer a concise summary of the testing requirements, distinguishing between tests that are universally mandatory and those that may be warranted under specific circumstances.
 
 #figure(
   table(
@@ -236,7 +236,7 @@ To lay out a structured overview of potential tests that #glspl("swith") might u
   ),
 
   kind: table,
-  caption: [Mandatory tests specified in ISO 11119-3:2020 @11119_3_ISO.],
+  caption: [Mandatory tests specified in #gls("iso") 11119-3:2020 @11119_3_ISO.],
 )<tab_12>
 
 
@@ -262,7 +262,7 @@ To lay out a structured overview of potential tests that #glspl("swith") might u
   ),
 
   kind: table,
-  caption: [Optional tests specified in ISO 11119-3:2020 @11119_3_ISO, with conditions for mandatory application.],
+  caption: [Optional tests specified in #gls("iso") 11119-3:2020 @11119_3_ISO, with conditions for mandatory application.],
 )<tab_13>
 
 The presentation of these tables, which primarily list test names, does not raise copyright concerns due to their limited content. 

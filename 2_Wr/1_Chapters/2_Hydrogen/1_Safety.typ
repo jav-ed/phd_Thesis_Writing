@@ -15,8 +15,8 @@ By thoroughly examining these safety-relevant properties, this study establishes
 
 
 The identification of standards potentially relevant to #gls("swith") was conducted systematically in @chap_1.
-These standards were further refined in @chap_1_5 to determine the most essential ones. Although not specifically developed for #gls("swith") certification, these standards provide insights into potential tests that engineers and scientists can anticipate. The mandatory and optional structural tests, as per ISO 11119-3:2020 @11119_3_ISO, are listed in @tab_12 and @tab_13 respectively. These tests must be demonstrated for high-pressure cylinder certification.
-The ISO 11119-3 states in paragraph 8.5.1.1: #emp_[When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen]. 
+These standards were further refined in @chap_1_5 to determine the most essential ones. Although not specifically developed for #gls("swith") certification, these standards provide insights into potential tests that engineers and scientists can anticipate. The mandatory and optional structural tests, as per #gls("iso") 11119-3:2020 @11119_3_ISO, are listed in @tab_12 and @tab_13 respectively. These tests must be demonstrated for high-pressure cylinder certification.
+The #gls("iso") 11119-3 states in paragraph 8.5.1.1: #emp_[When carrying out the pressure test, a suitable fluid shall be used as the test medium. This can include liquids such as water or oil and gases such as air or nitrogen]. 
 This stipulation allows for various filling media in pressure approval tests. In the context of #gls("swith"), the filling medium refers to the substance stored and pressurized within the wing tanks.
 
 For other tests, the standard permits additional variations in testing media.
