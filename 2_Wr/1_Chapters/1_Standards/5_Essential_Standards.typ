@@ -105,7 +105,7 @@ It is important to acknowledge that in other geographical or political settings,
 
 The #emp_[cost of acquisition] plays a decisive role, particularly for start-ups and small to medium-sized research and industrial institutions. These entities often operate under constrained budgets, making affordability a key factor in standard selection.
 The #emp_[coverage of #glspl("swith")] requirements is a crucial criterion. It is generally understood that any standard failing to account for this aspect would be automatically disqualified from assessment. This criterion acts as a fundamental filter, ensuring that only relevant standards are included in the selection process.
-The final criterion, #emp_[clearly understandable and detailed specifications], is essential for effective implementation. Standards should provide precise and comprehensive guidelines to ensure consistent application across different projects and organizations. This clarity facilitates accurate interpretation and implementation, reducing the risk of errors or misunderstandings that could compromise safety or performance in #glspl("swith") applications.
+The final criterion, #emp_[clearly understandable and detailed specifications], is essential for effective implementation. Standards should provide precise and comprehensive guidelines to ensure consistent application across different projects and organizations. This clarity facilitates accurate interpretation and implementation, reducing the risk of errors or misunderstandings that could compromise safety or performance in #gls("swith") applications.
 For #glspl("swith"), four standards meeting all criteria and complementing each other have been identified in @tab_11.
 
 #figure(

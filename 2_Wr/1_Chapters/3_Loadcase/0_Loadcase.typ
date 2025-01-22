@@ -142,7 +142,8 @@ Within the scope of this thesis, experimental and simulative replication of all 
 
 // ----------------------- selected critical load case ---------------------- //
 According to @tab_29, vertical gust loading emerges as one of the most probable critical load cases, with a 100% probability of being dimensioning. Consequently, this dissertation identifies vertical gust loading combined with internal pressure as the critical load case for #glspl("swith"). 
-While gust loading is inherently a dynamic load case, for the experimental static strength verification only the maximum occurring loads are considered. Thus, the vertical gust load obtained through the V-n diagram can be treated as a static load case, where the peak load factor represents the governing design condition. This method is consistent with standard aircraft structural testing practices, where static tests verify the structure's capability to withstand limit and ultimate loads.
+While gust loading is inherently a dynamic load case, for the experimental static strength verification only the maximum occurring loads are considered. 
+Thus, the vertical gust load obtained through the V-n diagram can be treated as a static load case, where the peak load factor represents the governing design condition. This method is consistent with standard aircraft structural testing practices, where static tests verify the structure's capability to withstand limit and ultimate loads.
 
 // ---------------------------- why statical test --------------------------- //
 The selection of a static load case is justified by several reasons. First, vertical gust loads can be derived for all commercially available aircraft through the V-n diagram, thus promoting the generalizability of this work.

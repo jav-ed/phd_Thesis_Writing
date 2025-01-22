@@ -163,7 +163,7 @@ The outcome of some experimental data from @KubilayKarayel2023 was used to displ
 
 /* -------------------------- current applicaitons -------------------------- */
 
-Having examined some of the complex relationships between tank types, costs, and performance characteristics, it is essential to explore how existing real-world applications can be translated for #glspl("swith") applications.
+Having examined some of the complex relationships between tank types, costs, and performance characteristics, it is essential to explore how existing real-world applications can be translated for #gls("swith") applications.
 One approachable method to infer insights is to review pressure vessels in their current application fields @GonzalezGaray2022 @Schmidt2020.
 Hydrogen pressure vessels are known to be required, among others, in submarines @barral2006hydrogen @Li2024a, aviation @link_hydro_airbus, personal vehicles @link_hyundai_nexo @Rath2019, and trains @link_alstom.
 A comprehensive list of additional hydrogen applications is provided in @Rath2019. 
