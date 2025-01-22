@@ -71,7 +71,7 @@ From $11 "km to" 20 "km"$, the stratosphere is reached, where no difference in t
 
 
 There are three common atmospheric models: the ICAO Standard Atmosphere @link_icao_atmposhere, the US Standard Atmosphere @link_us_atmposhere, and the Norm Atmosphere DIN 5450 @lecture_notes_Entwerfen_von_Verkehrsflugzeugen_I @butt2021development. The temperatures stated above were obtained using the Norm Atmosphere DIN 5450.
-It is important to note that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree.c$ might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree.c$ in Dubai during summer would be markedly lower than the typical temperatures experienced in that region.
+It should be emphasized that the actual ground temperature can vary significantly depending on the airport's location. While  $15 " " degree.c$ might be accurate for some locations during certain seasons, it could be highly inaccurate for others. For instance,  $15 " " degree.c$ in Dubai during summer would be markedly lower than the typical temperatures experienced in that region.
 Similar to the modern automotive industry, aviation is strongly dominated by lightweight construction. Nevertheless, the lightweight consideration should be taken into account when adopting hydrogen standards from non-lightweight-focused areas.
 
 Generally, for hydrogen-powered mobility domains in transport, a distinction can be made between light and heavy mobility solutions. 
