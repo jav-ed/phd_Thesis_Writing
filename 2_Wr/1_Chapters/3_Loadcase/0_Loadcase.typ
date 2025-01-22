@@ -4,6 +4,7 @@
 #pagebreak(weak:true)
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was tested and is inshallah fine
 = Load Case Assessment and Filling Media Influence<chap_3>
@@ -28,7 +29,7 @@ Finally, @chap_3_4 studies the implementation of physical loads during experimen
 // Title was tested and is inshallah fine
 // word repetition task inshallah completed
 == Study of Critical Load Cases<chap_3_0>
-Findings from @chap_2_1 and @chap_2_2 underscore that conducting experimental structural tests with hydrogen in long tubes and under high pressure exhibit severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
+Findings from @chap_2_1 and @chap_2_2 underscore that conducting experimental structural tests with hydrogen in long tubes and under high pressure exhibits severe safety risks for both the testing environment and engineering personnel. This raises the question of whether an alternative filling agent could be used to mitigate these safety concerns.
 To address this question, it is first necessary to define the primary prerequisite: identifying concrete load cases for an analysis. Thus, this section focuses on identifying critical load cases and explains why testing all potential load cases, either experimentally or through simulation, is not feasible. Based on these constraints, an alternative methodological approach is described and justified. It is demonstrated how one critical load case can be filtered from the many available. Additionally, an introduction to the V-n diagram is provided to establish the relationship between the primary critical load case and the flight envelope.
 
 The identification of important load cases for structure-integrated hydrogen tanks embodies a complex engineering hurdle when designed as an integral component of the wing of an aircraft.
