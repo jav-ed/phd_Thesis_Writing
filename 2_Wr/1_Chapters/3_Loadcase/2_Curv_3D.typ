@@ -6,13 +6,20 @@
 
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 3D<chap_3_2>
-The fundamental concept of critical loads was established in @chap_3_0, followed by an analysis of the relationship between curvature and filling agent impact on structural properties in @chap_3_1. Building upon these foundations, this section presents a methodology for assessing the curvature of a #gls("swith", long:true) and its implications for experimental validation tests.
-While the theoretical basis for curvature calculation provides essential insights, determining whether hydrogen can be substituted with an alternative filling agent for experimental structural validation testing warrants additional considerations. This section introduces the concept of critical curvature and develops a systematic approach for its practical application. Through a study of a #gls("fem") model, it is demonstrated that direct comparison between calculated and critical curvature values yields significant challenges in real-world applications, especially for complex three-dimensional structures.
-The proposed methodology distinguishes itself through its broad applicability, as it requires only displacement field data as input. This strategy enables curvature assessment from various sources, including experimental measurements, beam models, or numerical simulations, thereby extending its utility beyond specific analysis methods. However, the complexity of three-dimensional structures necessitates careful interpretation of the results, particularly in regions with abrupt stiffness changes or geometric discontinuities. These practical obstacles and their implications for experimental testing are studied, providing essential guidance for future structural validation efforts.
+The fundamental concept of critical loads was established in @chap_3_0, followed by an analysis of the relationship between curvature and filling agent impact on structural properties in @chap_3_1. Building upon these foundations, this section presents a methodology for assessing the curvature of #gls("swith", long:true) and their implications for experimental validation tests.
+While the theoretical basis for curvature calculation provides essential insights, determining whether hydrogen can be substituted with an alternative filling agent for experimental structural validation tests warrants additional considerations. 
+This section introduces the concept of a critical curvature and develops a systematic approach for its practical application. 
+Through a study of a #gls("fem", long:true) model, it is demonstrated that direct comparison between calculated and critical curvature values yields significant challenges. 
+These challenges are especially evident in real-world applications, which often involve complex three-dimensional structural simulation models.
+The proposed methodology distinguishes itself through its broad applicability, as it requires only displacement field data as input. This strategy enables curvature assessment from various sources, including experimental measurements, beam models, or numerical simulations, thereby extending its utility beyond specific analysis methods. Nevertheless, the complexity of three-dimensional structures necessitates careful interpretation of the results, particularly in regions with abrupt stiffness changes or geometric discontinuities. 
+These practical obstacles and their implications for experimental testing are addressed, providing essential guidance for future structural validation efforts.
 
 
-Due to resource constraints, cost-intensive experimental investigations cannot be conducted within this work. Therefore, an alternative method was developed to make qualitative assessments for initial findings regarding experimental static structural validation tests.
-The foundation for this approach is derived from an examination of the results presented in @Liu2019. @fig_33 demonstrates that bending moment curves exhibit similar curvature values within a specific range, independent of fill medium and pressure. This observation enables the definition of a critical curvature value, below which the bending moment remains independent of both filling agent and pressure, as illustrated in @fig_34.
+Due to resource constraints, cost-intensive experimental investigations cannot be conducted within this dissertation. 
+Therefore, an alternative method was developed to make qualitative assessments relevant to experimental static structural validation tests of #glspl("swith").
+The foundation for this approach is derived from an examination of the results presented in @Liu2019. 
+@fig_33 demonstrates that bending moment curves exhibit similar curvature and moment values within a specific range, independent of the filling medium and pressure.
+This observation enables the definition of a critical curvature value, below which the bending moment remains independent of both filling agent and pressure, as illustrated in @fig_34.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/0_Critical_Curv.png", 
@@ -21,21 +28,25 @@ The foundation for this approach is derived from an examination of the results p
 ) <fig_34>
 
 
-Analysis of the data suggests two potential permissible values: $0.4 upright("m")^(-1)$ and $0.5 upright("m")^(-1)$. Taking a conservative approach, this study defines the critical curvature as $0.4 upright("m")^(-1)$, where the deviation between bending moment curves becomes negligible. This definition can be formally expressed as @eq_27.
+Analysis of the data suggests two potential permissible values: $0.4 space upright("m")^(-1)$ and $0.5 space upright("m")^(-1)$. Taking a conservative approach, this study defines the critical curvature as $0.4 space upright("m")^(-1)$, where the deviation between bending moment curves becomes negligible. This definition can be formally expressed as @eq_27.
 
 $ kappa_"crit" >= 0.4 $<eq_27>
 
 // ---------------------------- model explanation --------------------------- //
 To evaluate whether a #gls("swith") model's curvature exceeds this critical value, its curvature values must be calculated.
-This dissertation assumes the existence of displacement data with corresponding coordinates, which could be obtained from a #gls("fem") model. While acknowledging that the design of #gls("swith") and its modeling is of pivotal importance, the focus here is on the methodology rather than specific model creation.
-This approach can be justified by examining the current state of #glspl("swith"). Two key observations highlight their early development stage: First, as of writing this thesis, no commercially certified #gls("swith") exists. Second, there are no established standards available for the commercial application of #glspl("swith"). Additionally, the special properties of hydrogen, as outlined in @chap_2_1 and @chap_2_2, necessitate substantial development work to ensure safe operation. Given this early stage, focusing on a specific #gls("swith") design with predefined constraints would risk developing methods that may not apply to future configurations, which could differ significantly from current concepts.
+This dissertation assumes the existence of displacement data with corresponding coordinates, which, for instance, could be obtained from a #gls("fem") model. 
+While acknowledging that the design of a #gls("swith") and its modeling is of pivotal importance, the focus here is on the methodology rather than specific model creation.
+This reasoning is supported by an examination of the current state of #glspl("swith") as detailed in @chap_0_7.
+Two key observations highlight their early development stage: First, as of writing this thesis, no commercially certified #gls("swith") exists. Second, there are no established standards available for their commercial application. 
+Additionally, the special properties of hydrogen, as outlined in @chap_2_1 and @chap_2_2, necessitate substantial development work to ensure operational safety. 
+Given this early stage, focusing on a specific #gls("swith") design with predefined constraints would risk developing methods that may not apply to future configurations, which could differ significantly from current concepts.
 Therefore, it is more beneficial to focus on developing general approaches rather than specific numerical models with limited practical application. 
 These general approaches aim to be applicable across different simulation techniques, offering broader applicability.
 Consequently, emphasis is placed on explaining the solution process, enabling interested readers to adapt these methods to their specific cases.
-For demonstration purposes, a #gls("fem") model incorporating both aerodynamic forces and internal pressure loads is utilized. The aerodynamic loads are calculated using APAME @Filkovic, a frictionless open-source 3D panel tool, and applied to the structural mesh through coupling. Following the design concept from @APUS_1, four tanks were implemented. The internal pressure of these tanks is defined as a variable parameter for in-depth analysis.
+For demonstration purposes, a #gls("fem") model incorporating both aerodynamic forces and internal pressure loads is utilized. The aerodynamic loads are calculated using APAME @Filkovic, a frictionless open-source 3D panel tool, and applied to the structural mesh through fluid-structure coupling. Following the design concept from @APUS_1, four tanks were implemented. The internal pressure of these tanks is defined as a variable parameter for in-depth analysis.
 
 // --------------------------- explanation starts --------------------------- //
-The outcome of the #gls("fem") model provides, among other things, the displacements
+The outcome of the #gls("fem") model provides, among other things, the displacements.
 @fig_35 presents an extract of these displacement values in the three spatial directions for all nodes of an element.
 
 
@@ -56,25 +67,27 @@ The element ID furnishes crucial information about element location and node ass
 
 
 // ---------------------------- curvature formula --------------------------- //
-For calculating curvature from known displacement values, @eq_28 @Gross2021 @Gross2023 is employed, where $u$ represents displacement, and $u', u''$ denote the first and second derivatives of displacement with respect to the directional coordinate.
+For calculating curvature from known displacement values, @eq_28 @Gross2021 @Gross2023 is employed, where $u$ represents displacement, and $u', u''$ denote the first and second derivatives of displacement with respect to a directional coordinate.
 
 $ kappa = u''/ ( (1 + u'^2) ^(3/2)) $<eq_28>
 
 While @Liu2019 established a geometric relationship for direct analytical curvature calculation in their specific case, no such relationship exists for the general case. Therefore, @eq_28 is adopted for this analysis.
 
-With known displacements, derivatives can be obtained through numerical differentiation. Two main approaches are available: the well-established #gls("fd") methods @Baerwolff2020 @Meister2019 @Munz2019 @Richter2017 @Langtangen2017 and the less conventional Complex-Step @mdobook. Within the #gls("fd") methods, three common procedures exist.
-These procedures, derived from Taylor series expansion, are subject to truncation error @mdobook. Additional rounding errors arise from numerical calculations @Baerwolff2020. Modern computers typically use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwolff2020), limiting the precision of numerical values beyond a certain decimal place. These rounding errors, while inevitable, demand particular attention when working with very small numbers and must be considered in relation to accuracy specifications.
+With known displacements, derivatives can be obtained through numerical differentiation. Two main approaches are available: the well-established #gls("fd", long:true) methods @Baerwolff2020 @Meister2019 @Munz2019 @Richter2017 @Langtangen2017 and the less conventional Complex-Step @mdobook. Within the #gls("fd") methods, three common procedures exist.
+These procedures, derived from Taylor series expansion, are subject to truncation error @mdobook. 
+Additional rounding errors arise from numerical calculations @Baerwolff2020. Modern computers typically use double precision ($2^(-52) approx num("2.2 e-16")$ @Baerwolff2020), limiting the precision of numerical values beyond a certain decimal place. These rounding errors, while inevitable, demand particular attention when working with very small numbers and must be considered in relation to accuracy specifications.
 The three common #gls("fd") methods are Forward, Backward, and Central Difference. 
 The Central Difference method achieves higher accuracy as a second-order method, but requires two support points for derivative calculation at each point. 
 In contrast, Forward and Backward methods are first-order methods that typically offer lower accuracy, yet require only one support point for derivative calculation. This characteristic makes them computationally more efficient and simpler to implement.
 The choice between Forward and Backward methods depends on the specific case, as their derivative quality varies by application. Determining an appropriate step size typically calls for a convergence study, seeking an optimum that minimizes both rounding and truncation errors. 
-While @mdobook suggests that a step size of $h approx 10^(-6)$ often yields high-quality results, this is impractical for structural mesh applications. In #gls("fem"), the step size $h$ is the distance between nodes of interest. Such a small distance between nodes is unusual in structural mechanics. For #gls("fem") the step size will be provided by the mesh size that can accurately solve the given mechanical description.
+While @mdobook suggests that a step size of $h approx 10^(-6)$ often yields high-quality results, this is impractical for structural mesh applications. In #gls("fem"), the step size $h$ is the distance between nodes of interest. Such a small distance between nodes is unusual in structural mechanics. 
+For #gls("fem"), the step size will be dictated by the mesh size that can accurately solve the given mechanical problem.
 
 
 // ------------------------------ complex step ------------------------------ //
 The Complex-Step is mathematically proven to be a second-order method, as demonstrated in @mdobook. A notable characteristic of this method is that it necessitates only one support point. However, unlike the #gls("fd") methods which operate on discrete point values and their distances, the Complex-Step requires a mathematical function. Since the method eliminates the need to subtract function values at very small distances from each other, it avoids rounding errors and can operate at maximum machine precision (step size: $h approx 10^(-30)$) @mdobook. Nevertheless, the truncation error inherent to second-order methods remains.
 
-The mathematical definitions of the #gls("fd") methods are expressed in @eq_29 - @eq_31, where $f'$ denotes the derivative function, $x_i$ represents discretization points, and $h$ indicates the step size or distance between two discretization points $x_i$ and $x_j$ ($i != j$).
+The mathematical definitions of the #gls("fd") methods are expressed in @eq_29 - @eq_31, where $f'$ denotes the derivative function, $x_i$ represents discretization points, and $h$ indicates the step size or distance between two discretization points $x_i$ and $x_j$, where ($i != j$).
 // ---------------------------- differential eqs ---------------------------- //
 $ f'_("forward")(x_1) = (f(x_2) - f(x_1))/h $<eq_29>
 $ f'_("backward")(x_1) = (f(x_1) - f(x_0))/h $<eq_30>
@@ -93,10 +106,11 @@ The mathematical formulation for the Complex-Step is expressed in @eq_32:
 
 $ f'(x) = "Imag"[f(x + i space.thin h)]/h $<eq_32>
 
-While it is possible to determine the approximation function for displacements using the Complex-Step, this would involve greater time expenditure. Given that the results are primarily compared with the diagram from @Liu2019 illustrated in @fig_34, such high precision is not warranted for this application.
-
+While it is possible to determine the approximation function for displacements using the Complex-Step, this would involve greater time expenditure and be potentially less generalizable. 
+Additionally, given that the results are primarily compared with the diagram from @Liu2019 illustrated in @fig_34, such high precision is not warranted for this application.
+//
 // --------------------------- selected fd methods -------------------------- //
-Consequently, a #gls("fd") method should be selected. The central difference method generally achieves higher accuracy than the first-order methods (forward and backward difference). However, to understand the additional computational and implementation complexity associated with the central #gls("fd") method, it is instructive to examine a concrete example.
+Consequently, a #gls("fd") method should be selected. The Central Difference method generally achieves higher accuracy than the first-order methods (Forward and Backward Difference). However, to understand the additional computational and implementation complexity associated with the central #gls("fd") method, it is instructive to examine a concrete example.
 As shown in @fig_38, the structural mesh is discretized using eight-node elements. The variables $x_i$, where $i in [0, 7]$, represent the local nodal positions within each element.
 
 // ------------------------------- 8 nodes fdm ------------------------------ //
@@ -107,14 +121,17 @@ As shown in @fig_38, the structural mesh is discretized using eight-node element
 ) <fig_38>
 
 To calculate the derivative, both the local nodal coordinates and corresponding function values are required. Since the objective is to determine the curvature according to @eq_28, it is assumed that for each discretization point $x_i$, both its local coordinates and the corresponding displacement value $u$ are known. Applying a #gls("fd") method computes the derivative of displacement with respect to position, yielding the strain.
-Given the nodal arrangement of a single element as illustrated in @fig_38, strain values can be calculated for only two nodes ($x_4$ and $x_6$) out of the total eight nodes, as expressed in @eq_35 and @eq_36, respectively.
+Given the nodal arrangement of a single element as illustrated in @fig_38, strain values can be calculated for two nodes only ($x_4$ and $x_6$) out of the total eight nodes, as expressed in @eq_35 and @eq_36, respectively.
 
 $ f'_("central")(x_4) = (f(x_2) - f(x_3))/(h) $<eq_35>
 $ f'_("central")(x_6) = (f(x_1) - f(x_0))/(h) $<eq_36>
 
-Comparing @eq_35 and @eq_36 with @eq_31 reveals two important observations. First, the indices in @eq_35 and @eq_36 do not follow the pattern described in @eq_31. This underscores why the #gls("fd") equations should be interpreted in conjunction with their corresponding visual representations in @fig_37 and @fig_38. Second, while @eq_31 includes division by twice the step size $h$, the $h$ term in @eq_35 and @eq_36 already reflects the correct distance between the nodes of interest for the central difference scheme.
-Having established this intuitive understanding of the central #gls("fd") method, some significant limitations warrant elaboration. As shown in @fig_38, a single #gls("fem") element provides derivatives for only two nodes out of eight. Obtaining the remaining six derivatives requires proper identification and assignment of neighboring elements and nodes. 
-This introduces complexity and consequently risk of mistake incorporation. The simplest scenario occurs when element IDs increase chronologically in all three dimensions, as illustrated for the one-dimensional case in @fig_39.
+Comparing @eq_35 and @eq_36 with @eq_31 reveals two important observations. First, the indices in @eq_35 and @eq_36 do not follow the pattern described in @eq_31. This underscores why the #gls("fd") equations should be interpreted in conjunction with their corresponding visual representations in @fig_37 and @fig_38. 
+Second, while @eq_31 includes division by twice the step size $h$, the $h$ term in @eq_35 and @eq_36 already accounts for the correct distance between the nodes of interest in the Central Difference scheme.
+Having established this intuitive understanding of the central #gls("fd") method, some significant limitations warrant elaboration. 
+As shown in @fig_38, a single #gls("fem") element provides derivatives for only two nodes out of eight. 
+Obtaining the remaining six derivatives requires proper identification and assignment of neighboring elements and nodes. 
+This introduces complexity and consequently risk of mistake incorporation. The simplest scenario occurs when element IDs increase chronologically in all three dimensions, as illustrated for the two-dimensional case in @fig_39.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/5_Chron_Order.svg", 
@@ -123,7 +140,7 @@ This introduces complexity and consequently risk of mistake incorporation. The s
 ) <fig_39>
 
 
-In practice, however, element IDs rarely follow such chronological ordering. A pictorial representation of this is given in @fig_40. For complex three-dimensional #gls("swith") simulation models, this non-sequential ordering increases the complexity of identifying and managing element and node neighborhood relationships.relationships.
+In practice, however, element IDs rarely follow such chronological ordering. A pictorial representation of this is given in @fig_40. For complex three-dimensional #gls("swith") simulation models, this non-sequential ordering increases the complexity of identifying and managing element and node neighborhood relationships.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/6_Complex_Ids.svg", 
@@ -136,11 +153,12 @@ While acknowledging the higher accuracy of the central #gls("fd") method, its dr
 Considering both accuracy demands and implementation complexity, the Forward #gls("fd") method was preferred over the central #gls("fd") method for calculating the necessary derivatives for curvature evaluation.
 In this thesis, #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. When conducting #gls("fem") simulations, strains (first derivatives of displacement with respect to local coordinates) are extracted as part of its solution, alongside displacements. However, it is important to explain how to obtain strains when only displacement values are available.
 
-The rationale behind this approach is to strengthen the universal applicability of this dissertation. The presented method for calculating curvature can be equally applied to displacement data from various sources, including alternative simulation techniques such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019 and experimental measurements. By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach maintains broad applicability. This generality enhances the practical value of the described methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is sourced.
+The rationale behind this approach is to strengthen the universal applicability of this dissertation. As previously explained, the presented method for calculating curvature can be applied equally to displacement data from various sources, including alternative simulation techniques such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019 and experimental measurements. 
+By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach maintains broad applicability. This generality enhances the practical value of the described methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is sourced.
 
 // ----------------------------- steps with fem ----------------------------- //
 
-Having laid out the general nature of the proposed approach, concrete steps for curvature derivation using the #gls("fd") method shall be given. For this example, the structure model is discretized through elements as depicted in @fig_38. 
+Having laid out the general nature of the proposed approach, concrete steps for curvature derivation using the #gls("fd") method shall be delineated. For this example, the structure model is discretized through elements as depicted in @fig_38. 
 This example employs #gls("fem") meshing, yet the principles remain applicable across various methods.
 With the local displacement values and their corresponding coordinates, five of the eight required derivatives per element can be computed without involving neighborhood relationships. These are expressed in @eq_37 to @eq_41, where the function $f(x_i)$ returns the displacement value at discretization point $x_i$.
 
@@ -151,6 +169,8 @@ $ f'_("forward")(x_7) = (f(x_5) - f(x_7))/(h) $<eq_39>
 $ f'_("forward")(x_3) = 2 space (f(x_6) - f(x_3))/(h) $<eq_40>
 $ f'_("forward")(x_6) = 2 space (f(x_2) - f(x_6))/(h) $<eq_41>
 
+// ---------------------------------- here ---------------------------------- //
+// TODO there is an issue here
 To obtain the derivatives of the three remaining discretization points $x_1, x_5 "and" x_2$, a neighboring element is required. According to @fig_39, the ending nodes of one element are the starting nodes of the next element. Thus, @eq_37 to @eq_41 can be used again.
 To derive the second-order gradient of the displacement, the output of @eq_37 to @eq_41 is used as input for @eq_42 to @eq_46.
 
