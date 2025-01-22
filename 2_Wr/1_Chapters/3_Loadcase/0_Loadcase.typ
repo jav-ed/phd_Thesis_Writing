@@ -228,5 +228,9 @@ Both organizations demonstrated pronounced interest in the structural testing, d
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
-In summary, identifying critical load cases for conventional aircraft already presents a highly demanding task. The complexity increases substantially for #glspl("swith"), as they combine characteristics of both aircraft and pressurized vessels, necessitating consideration of load cases from both domains. However, through valuable statistical analysis, a comprehensive list of critical load cases for general aviation was established. From this analysis, a specific critical load case for #glspl("swith") was derived. The validity of this approach was confirmed by two leading German aerospace companies. Furthermore, review of the V-n diagram provided meaningful insights into the relationship between the identified critical load case and the flight envelope.
+In summary, identifying critical load cases for conventional aircraft already presents a highly demanding task. 
+The complexity increases substantially for #glspl("swith"), as they combine characteristics of both aircraft and pressurized vessels, necessitating consideration of load cases from both domains. 
+However, through valuable statistical analysis, a comprehensive list of critical load cases for general aviation was established. 
+From this analysis, a specific critical load case for #glspl("swith") was derived. The validity of this approach was confirmed by two leading German aerospace companies. 
+Furthermore, a review of the V-n diagram provided meaningful insights into the relationship between the identified critical load case and the flight envelope.
 ])
