@@ -56,7 +56,7 @@ The development of surrogate models through these approaches requires substantia
 
 To reduce training time, #glspl("gpu", long:true) @Kaur2023 @DeLuca2024 are essential processing resources. The widespread adoption of machine learning has driven advances in software frameworks that enable parallel training across multiple #glspl("gpu"), further accelerating model development @Paszke2019 @tensorflow2015_whitepaper @Sergeev2018 @link_ray2024 @link_deepspeed2024 @link_accelerate2024.
 Although the training phase of deep learning models can be time-intensive, the subsequent inference time is orders of magnitude lower @butt2021development. Inference, which refers to generating model outputs, can often be performed in real-time. Additionally, depending on the neural network architecture, models trained on multiple #glspl("gpu") may operate efficiently on a single #gls("gpu") or even a #gls("cpu", long:true). 
-For models that fit within RAM (Random Access Memory), inference operations on standard #glspl("cpu") typically execute orders of magnitude faster than high-fidelity #gls("fem") @Mittelstedt2021 @Mittelstedt2022 @Werkle2021a @Hahn2018 @Langtangen2016 @Langtangen2019 @Dhondt2004 or #gls("cfd", long:true) simulations.
+For models that fit within RAM (Random Access Memory), inference operations on standard #glspl("cpu") typically execute orders of magnitude faster than high-fidelity #gls("fem", long:true) @Mittelstedt2021 @Mittelstedt2022 @Werkle2021a @Hahn2018 @Langtangen2016 @Langtangen2019 @Dhondt2004 or #gls("cfd", long:true) simulations.
 
 
 Significant computational speed improvements through machine learning applications have been realized in various fields. An example of this is found in a case study of particle accelerator simulations @Edelen2020. In their primary test case, while the physics simulation completed in 590 seconds using 8 computing cores, the neural network surrogate model executed in less than one millisecond on a single laptop core, representing a speedup of $cal(O)(10^6)$.
@@ -198,10 +198,16 @@ The characteristic points marked in the legend of @fig_28 represent commonly use
 - *Stalling Speed V#sub[S]*: V#sub[S] is the minimum flight speed in level flight with retracted flaps at which no flow separation occurs on the wing (stall speed). In other words, this is flight at the maximum lift coefficient C#sub[L,max].
   
 
-Having defined these velocities, it is worth mentioning that the mathematical relationships between them for constructing V-n diagrams are specified in certification standards such as @EASA_CS_23 and @EASA_CS_25. The V-n diagram primarily addresses symmetrical flight loads and generally does not encompass asymmetrical load cases. An noteworthy exception exists for banked turns which, although technically asymmetrical load cases, can be incorporated into the V-n diagram analysis @Rossow_2014.
+
+Having defined these velocities, it is worth mentioning that their mathematical relationships, necessary for constructing V-n diagrams, are specified in certification standards such as @EASA_CS_23 and @EASA_CS_25. 
+These diagrams primarily address symmetrical flight loads and generally do not encompass asymmetrical load cases. 
+A noteworthy exception exists for banked turns, which, although technically asymmetrical load cases, can be incorporated into the V-n diagram analysis @Rossow_2014.
 Beyond its use in structural analysis, the V-n diagram provides valuable operational information for pilots. By interpreting the diagram, pilots can determine critical flight parameters, such as the maximum airspeed for control surface deflection, dive speed limitations, and required deceleration points @Gudmundsson2014.
 
-For a comprehensive understanding and detailed construction of V-n diagrams, readers are referred to standard references such as @Rossow_2014 @Gudmundsson2014, along with certification standards @EASA_CS_23 @EASA_CS_25. The V-n diagram presented in @fig_28 was generated using the open-source aerodynamics tool #emp_[ADRpy] @link_ADRpy, which has been validated against #gls("cs")-23 specifications @EASA_CS_23. Within the scope of this work, the validation confirms #emp_[ADRpy]'s accuracy specifically for small aircraft V-n diagrams. The only modification to the standard #emp_[ADRpy] output was the implementation of Plotly @plotly_2015 as the visualization library, replacing the default Matplotlib @Hunter2007 plotting system.
+For a comprehensive understanding and detailed construction of V-n diagrams, readers are referred to standard references such as @Rossow_2014 @Gudmundsson2014, along with certification standards such as @EASA_CS_23 @EASA_CS_25. 
+The V-n diagram presented in @fig_28 was generated using the open-source aerodynamics tool #emp_[ADRpy] @link_ADRpy, which has been validated against the #gls("cs")-23 specifications @EASA_CS_23. 
+Therefore, this work confirms that #emp_[ADRpy] produces accurate V-n diagrams for small aircraft.
+The only modification to the standard #emp_[ADRpy] output was the implementation of Plotly @plotly_2015 as the visualization library, replacing the default Matplotlib @Hunter2007 plotting system.
 
 // ---------------------- positve effects because of vn --------------------- //
 The selection of vertical gust loading as a critical load case, obtainable through V-n diagram analysis, offers several advantageous implications for #gls("swith") development. A primary benefit stems from the broad applicability of V-n diagrams across various aircraft categories, including normal, utility, aerobatic, and commuter classifications, as well as large aircraft. This universality enables the extension of #gls("swith") applications across diverse aircraft categories and size ranges. It should be emphasized that the construction of flight envelopes varies according to specific aircraft categories and dimensions, with distinct regulatory requirements governing each case.
@@ -213,10 +219,11 @@ The variables are denoted as lift coefficient $C_L$, lift force $L$, aircraft we
 
 $ C_L = L / ( rho/2 u^2 S)  =  (W space.thin n) / ( rho/2 u^2 S) =  (m space.thin g space.thin n) / ( rho/2 u^2 S) $<eq_13>
 
-This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem") models.
+This lift coefficient, combined with the aircraft's geometrical data, serves as input for lift distribution tools such as the 3D panel method solver APAME @Filkovic. 
+The resulting spanwise lift distribution can then be applied as loading conditions for both simplified structural models and high-fidelity structural analysis through #gls("fem").
 
 Having established the theoretical foundation for critical load cases and V-n diagram analysis, industry consultation provided empirical validation. Meetings were conducted with two German companies: a pioneering aircraft manufacturer#footnote[Company name withheld due to confidential knowledge.] 
-and IMA Dresden, one of Europe's leading small and large aerospace testing facilities. 
+and  IMA Materialforschung und Anwendungstechnik GmbH Dresden, one of Europe's leading small and large aerospace testing facilities. 
 Both organizations demonstrated pronounced interest in the structural testing, development, and commercial certification of #glspl("swith"). One of these companies conducted independent investigations of critical load cases and shared their findings with this research. While specific details remain confidential, it is noteworthy that both organizations corroborated the identification of multiple load cases from the V-n diagram as critical. This industry validation supports the adoption of V-n diagram analysis as a valuable methodology for the structural validation testing of #glspl("swith").
 
 // --------------------------------- summary -------------------------------- //

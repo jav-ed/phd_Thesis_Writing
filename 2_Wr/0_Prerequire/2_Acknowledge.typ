@@ -75,17 +75,17 @@ Your warm and approachable personality convinced me to accept the position at yo
 Having worked with you over these years, I would like to highlight one special aspect: I truly enjoyed our conversations. Our meetings often extended well beyond their planned duration. It was especially enriching that we could explore various topics, not solely those related to science. You possess the rare ability to present complex differential equations with remarkable clarity. One quality that particularly impressed me was your skill in making me feel respected throughout our interactions.
 
 #v(1em)
-Next, I would like to thank Dr.-Ing. Florian Dexl. You were one of the reasons why I applied at the TUD Dresden University of Technology in the first place. It turned out that you would become the supervisor of our small engineering working group. A standout experience I remember is how enjoyable it was to solve analytical equations with you.
-Besides the scientific aspect, I enjoyed our conversations about other topics as well. Thank you also for conducting the perfume study with me.
-All in all, I want to express my gratitude for your time and appreciation of your ideas.
+Next, I would like to thank Dr.-Ing. Florian Dexl. Your research paper about multidisciplinary optimization was one of the reasons why I applied at the TUD Dresden University of Technology in the first place. 
+It turned out that you would become the supervisor of the small engineering working group. A standout experience I remember is how enjoyable it was to solve analytical equations with you.
+Thank you also for conducting the perfume study with me.
 
 
 #v(1em)
-I would like to thank Dr.-Ing. Silvio Nebel, Head of Department Aerospace at IMA Dresden, for sharing valuable experience through monthly meetings. His and IMA's contributions were pivotal for the project K#sub[2]H#sub[2] as mentioned in @chap_0_6 and ultimately for this doctoral thesis.
+I would like to thank Dr.-Ing. Silvio Nebel, Head of Department Aerospace at IMA Materialforschung und Anwendungstechnik GmbH Dresden, for sharing valuable experience through monthly meetings. His and IMA's contributions were pivotal for the project K#sub[2]H#sub[2] as mentioned in @chap_0_6.
 
 
 #line(length: 100%)
-The author gratefully acknowledges the computing time made available to him on the high-performance computer at the NHR Center of TU Dresden. This center is jointly supported by the Federal Ministry of Education and Research and the state governments participating in the NHR (#link("www.nhr-verein.de/unsere-partner")).
+The author gratefully acknowledges the computing time made available to him on the high-performance computer at the NHR Center of TUD Dresden University of Technology. This center is jointly supported by the Federal Ministry of Education and Research and the state governments participating in the NHR (#link("www.nhr-verein.de/unsere-partner")).
 
 #line(length: 100%)
 
