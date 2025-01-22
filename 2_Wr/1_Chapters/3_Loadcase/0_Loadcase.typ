@@ -92,7 +92,7 @@ Component-specific vibrations and flutter phenomena also contribute to the inert
 Ground operations introduce a distinct set of loads: landing impact forces and subsequent braking loads, runway surface irregularities, towing forces during ground handling, and maintenance-related loads such as jacking operations @heinze2023aircraft.
 Of particular concern are tool drop scenarios during maintenance, which must be considered in the structural analysis.
 
-It's important to note that these various load cases do not act uniformly across the aircraft structure, nor do they necessarily occur simultaneously. Rather, specific locations experience characteristic load combinations that can result in critical stress states, forming the fundamental basis for structural dimensioning @heinze2023aircraft.
+It's important to emphasize that these various load cases do not act uniformly across the aircraft structure, nor do they necessarily occur simultaneously. Rather, specific locations experience characteristic load combinations that can result in critical stress states, forming the fundamental basis for structural dimensioning @heinze2023aircraft.
 // ----------------------------------- MBB ---------------------------------- //
 Given the outlined challenges, this work leverages established industry knowledge to identify potentially key load cases for #glspl("swith"). The former company MBB performed a statistical evaluation to determine the probability of each load case being critical. Their findings, expressed as the percentage of instances in which a specific load case was found to be critical, are provided in @tab_29.
 
@@ -122,7 +122,6 @@ Given the outlined challenges, this work leverages established industry knowledg
   caption: [Statistical probability distribution of critical load cases in commercial aircraft design, derived from lecture materials in #emp_[Design of Commercial Aircraft II] @heinze2023aircraft.],
 ) <tab_29>
 
-// ---------------------------------- here ---------------------------------- //
 The critical load cases mentioned in @tab_29 were obtained through a presentation in the lecture course #emp_[Design of Commercial Aircraft II] at TU Braunschweig in Germany @heinze2023aircraft, delivered by Dr. Heinze. Such data of load cases embodies valuable proprietary knowledge typically protected within large aerospace companies and rarely accessible to the broader scientific community. The availability of this data through academic channels provides unique insights into industry-validated load case hierarchies.
 
 // ------------------------------ explain table ----------------------------- //
@@ -130,13 +129,14 @@ In the following brief explanations about the crucial load cases identified in @
 The elevator maneuver involves the pilot executing and maintaining maximum elevator deflection from level flight. This creates impactful initial control forces on the horizontal tail, inducing fuselage bending and aircraft pitching motion. The subsequent climbing or descending motion generates additional aerodynamic forces on the wings, making these load cases often dimensioning for various structural areas, particularly the horizontal tail and aft fuselage section.
 Landing impact follows at 90% criticality, characterized by the dynamic response of the airframe during touchdown, where vertical acceleration loads are transmitted through the landing gear into the primary structure. 
 Aileron maneuvers and ground rolling (80%) introduce asymmetric lift distributions with substantial moment arms to the wing root, while ground rolling creates dynamic loads through partially-fueled wings interacting with runway irregularities. 
+
 Lateral gusts and rudder maneuvers (70%) primarily influence fuselage design through asymmetric loading conditions, with distributed side forces and concentrated loads at the vertical tail transmitted through the fuselage structure. 
 Steady pull-up maneuvers (50%) involve transition from descent to level flight, generating elevated but not maximum load factors @heinze2023aircraft. 
 Frontal gusts (40%) create longitudinal loads, though their criticality is generally lower. 
 Crash landing and cabin pressure cases (20%) ensure minimum structural integrity for occupant survivability, with cabin pressure's lower criticality often resulting from other load cases determining basic skin thickness requirements @heinze2023aircraft. 
 Single engine failure and maximum engine thrust (10%) typically become crucial only in localized areas around engine mounts and pylons.
 // -------------------------------------------------------------------------- //
-
+//
 Within the scope of this thesis, experimental and simulative replication of all identified critical load cases is not feasible. Rather than attempting to address all load cases for general aircraft, this work aims to contribute some important findings. These findings could support a final certification process of #glspl("swith") within a feasible timeframe and available scientific resources. This reasoning necessitates a focused approach, concentrating on the single most relevant load case.
 
 // ----------------------- selected critical load case ---------------------- //
@@ -145,6 +145,7 @@ While gust loading is inherently a dynamic load case, for the experimental stati
 
 // ---------------------------- why statical test --------------------------- //
 The selection of a static load case is justified by several reasons. First, vertical gust loads can be derived for all commercially available aircraft through the V-n diagram, thus promoting the generalizability of this work.
+// ---------------------------------- here ---------------------------------- //
 To emphasize the relevance of this work, it is important to note that once a setup for conducting static experimental structural tests is assembled, the same or similar setup can be used for multiple static tests.
 Aircraft certification authorities require five static load cases for static strength substantiation @Rossow_2014. These are: preliminary static tests (calibration load cases), proof pressure tests, limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$). 
 From these five tests, four can be conducted without requiring many changes to the setup developed for the major load case: preliminary static tests (calibration load cases), limit load tests, ultimate load tests ($1.5 times "limit load"$), and the rupture test ($gt.equiv 1.5 times "limit load"$).
