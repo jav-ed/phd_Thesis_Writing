@@ -7,26 +7,30 @@
 // Title was tested and is inshallah fine
 == Experimental and Computational Investigations for Hydrogen Safety<chap_2_2>
 In @chap_2_0 essential properties of hydrogen were introduced, followed by an elaboration of the safety-relevant properties of hydrogen from a theoretical perspective in @chap_2_1. The analysis conducted in @chap_2_1 came to the conclusion that theoretical knowledge for hydrogen application is of paramount importance. Yet, for the final goal of conducting structural validation tests for #gls("swith", long:true), additional information from experimental investigations and numerical simulations is required. This serves as a solution to close the gap between theoretical knowledge and models and observed physical phenomena. Through this, important information could be obtained, such as whether there are known methods to suppress hydrogen ignition and reduce explosion damage.
-The synergy of theoretical knowledge, numerical simulation, and empirical data from physical experiments is vital for drawing comprehensive conclusions regarding the progress of experimental structural validation tests for #glspl("swith"). 
-This section aims to expand upon the previously established theoretical framework of hydrogen properties by incorporating insights from experimental and simulative investigations, with a focus on practical applications. 
-The content will commence with a detailed exposition of the rationale behind investing additional resources in gathering information from numerical simulations and experimental studies. 
-Subsequently, the outcomes will be presented. The section will conclude by synthesizing the findings from these investigations and drawing relevant conclusions for experimental structural validation tests for #glspl("swith"). 
+The synergy of theoretical knowledge, numerical simulations, and empirical data is vital for advancing experimental structural validation tests for #glspl("swith"). This section builds on the theoretical framework of hydrogen properties by integrating experimental and simulative insights, emphasizing practical applications. The content will commence with a detailed exposition of the rationale behind investing additional resources in gathering information from numerical simulations and experimental studies. The findings from these investigations will then be presented, followed by a synthesis of the results and their implications for experimental structural validation tests of #glspl("swith").
 
-The understanding of hydrogen's safety-critical properties, as elaborated in the preceding sections, are crucial to assess the potential risks and challenges associated with hydrogen use in #glspl("swith"). This knowledge base comprises three interconnected components: theoretical data, theoretical models (including numerical simulations), and experimental investigations.
+
+The understanding of hydrogen's safety-critical properties, as elaborated in the preceding sections, are crucial to assess the potential risks and challenges associated with hydrogen's use in #glspl("swith"). This knowledge base comprises three interconnected components: theoretical data, theoretical models (including numerical simulations), and experimental investigations.
 Theoretical data forms the foundation of our understanding, offering fundamental principles and measured properties of hydrogen. Theoretical models, including numerical simulations, build upon this data to predict hydrogen behavior in complex systems. 
-It is important to note that numerical models, while often more sophisticated, are still a form of theoretical knowledge as they represent attempts to model reality mathematically.
-While these theoretical approaches offer valuable insights, they often simplify complex physical phenomena and may not fully capture the nuanced interactions that occur in practical scenarios. Factors such as material interactions, environmental variables, and unforeseen system dynamics can lead to discrepancies between theoretical expectations and real-world outcomes. This limitation becomes particularly significant when dealing with a substance as volatile and potentially hazardous as hydrogen.
+It is important to note that numerical models, though often more sophisticated, are still a form of theoretical knowledge as they represent attempts to model reality mathematically.
+While these theoretical approaches offer valuable insights, they often simplify complex phenomena and may fail to capture the intricate interactions seen in practical scenarios.
+Factors such as material interactions, environmental variables, and unforeseen system dynamics can lead to discrepancies between theoretical expectations and real-world outcomes. This limitation becomes particularly significant when dealing with a medium as volatile and potentially hazardous as hydrogen.
 
-Experimental investigations bridge the gap between theory and practice, offering tangible evidence of hydrogen behavior under various conditions. This empirical approach is essential for several reasons. Firstly, experiments can validate theoretical predictions and simulation results, confirming where they align with reality and highlighting areas where further investigation is needed. Secondly, the safety-critical nature of #glspl("swith") demands a level of certainty that theoretical approaches alone cannot offer. Experimental data is crucial for identifying potential safety issues that may not be apparent from theoretical considerations. Moreover, regulatory bodies and certification processes for #glspl("swith") will likely require experimental validation of safety measures, in addition to theoretical justifications. Lastly, experiments provide direct observations of physical phenomena, offering insights into intricate properties and behaviors that may not be fully captured by theoretical approaches.
-However, it is important to note the contrasting risk profiles between theoretical/numerical approaches and experimental/practical applications. 
+Experimental investigations bridge the gap between theory and practice, offering tangible evidence of hydrogen behavior under various conditions. This empirical approach is essential for several reasons. Firstly, experiments can validate theoretical predictions and simulation results, confirming where they align with reality and highlighting areas where further investigation is needed. Secondly, the safety-critical nature of #glspl("swith") demands a level of certainty that theoretical approaches alone cannot offer. Experimental data is crucial for identifying potential safety issues that may not be apparent from theoretical considerations. 
+
+Moreover, regulatory bodies and certification processes for #glspl("swith") will likely require experimental validation of safety measures, in addition to theoretical justifications. 
+Lastly, experiments provide unique observations of physical phenomena, revealing properties and behaviors that theoretical models may overlook.
+However, a stark contrast exists between the risk profiles of theoretical/numerical approaches and experimental/practical applications.
 While theoretical and numerical work shields researchers from direct physical dangers, experimental work involves tangible hazards, including the risk of explosions, which pose real threats to life and safety.
 
 A comprehensive understanding of hydrogen behavior necessitates the integration of all three knowledge types. This holistic approach not only enhances the collective knowledge base but also informs the development of robust safety protocols and design decisions for practical applications of #glspl("swith").
 By synthesizing insights from theoretical data, advanced numerical models, and carefully conducted experiments, the chances of bridging the gap between theoretical understanding and practical implementation increase. 
 // -------------------------------------------------------------------------- //
 
-The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K "$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
-An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. In their study, hydrogen was initially compressed to $250 "bar"$ in a pressure vessel and allowed to flow into the free atmosphere through a nozzle. The simulation output, shown in @fig_22, depict the system at different times after the hydrogen exits the nozzle.
+The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. 
+Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the presented results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K "$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
+An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. In their study, hydrogen was initially compressed to $250 "bar"$ in a pressure vessel and allowed to flow into the free atmosphere through a nozzle. 
+The simulation output, shown in @fig_22, depicts the system at different times after the hydrogen exits the nozzle.
 
 
 #figure(
@@ -36,11 +40,11 @@ An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. I
 ) <fig_22>
 
 
-The Mach number, indicating the multiple of the speed of sound, is used to represent the flow velocity. Its mathematically description is provided in @eq_9,where $v$ and $a$ denote the current speed of the medium and its speed of sound, respectively. 
+The Mach number, indicating the multiple of the speed of sound, is used to quantify the flow velocity. Its mathematically description is provided in @eq_9, where $v$ and $a$ denote the current speed of the medium and its speed of sound, respectively. 
 
 $ "Ma" = v/a $<eq_9>
 
-For instance, a Mach number of 5 indicates that the local velocity is five times the speed of sound. Based on the outcomes of @Xu2009, @fig_22 illustrates that the Mach scale extends to a maximum value of 7. Pressure shocks, with their aforementioned consequences, occur at Mach 1. At higher Mach numbers, it is expected that the effects—high temperatures, high pressures, and increased volume—are significantly amplified. For a more comprehensive interpretation of these results, @tab_26 should be examined.
+For instance, a Mach number of 5 indicates that the local velocity is five times the speed of sound. Based on the outcomes of @Xu2009, @fig_22 illustrates that the Mach scale extends to a maximum value of 7. Pressure shocks, with their aforementioned consequences, occur at Mach 1. At higher Mach numbers, it is expected that the effects—high temperatures, high pressures, and increased volume—are significantly amplified. For a more in-depth interpretation of these results, @tab_26 should be examined.
 
 
 // -------------------------- speed of sound table -------------------------- //
@@ -82,14 +86,14 @@ For instance, a Mach number of 5 indicates that the local velocity is five times
     [Methane], [446],
   ),
   kind: table,
-  caption: [Speed of sound in various substances. Gases are measured at $20 " " degree.c$ and $1 "bar"$ @Sigloch2022.],
+  caption: [Speed of sound in various media. Gases are measured at $20 " " degree.c$ and $1 "bar"$ @Sigloch2022.],
 ) <tab_26>
 
-Each medium possesses a characteristic speed of sound, which represents how pressure changes or sound waves propagate through it. The mathematical description is given in @eq_8, where $a$, $p$, and $rho$ denote the speed of sound, pressure, and density, respectively @Sigloch2022.
+Each medium possesses a characteristic speed of sound, which represents how pressure changes or sound waves propagate through the material. The mathematical description is given in @eq_8, where $a$, $p$, and $rho$ denote the speed of sound, pressure, and density, respectively @Sigloch2022.
 
 $ a = sqrt((d p)/(d rho)) $<eq_8>
 
-A high speed of sound in a substance corresponds to a high information transmission speed. For instance, when one end of a steel rod is struck, the sound travels to the other end at $5170 "m/s"$, making it quickly audible. The speed of sound in hydrogen at $20 " " degree.c$ and $1 "bar"$ is $1300 "m/s"$, significantly higher than in air ($343 "m/s"$). Consequently, information exchange within hydrogen occurs more rapidly than in air.
+A high speed of sound in a medium corresponds to a high information transmission speed. For instance, when one end of a steel rod is struck, the sound travels to the other end at $5170 "m/s"$, making it quickly audible. The speed of sound in hydrogen at $20 " " degree.c$ and $1 "bar"$ is $1300 "m/s"$, significantly higher than in air ($343 "m/s"$). Consequently, information exchange within hydrogen occurs more rapidly than in air.
 This characteristic is crucial for understanding the behavior of pressurized hydrogen released into the atmosphere. Air experiences a pressure shock at $343 "m/s"$, triggering a pronounced temperature increase. In contrast, hydrogen can reach nearly four times this speed before a pressure shock occurs.
 A proposed simplified explanation for the high temperature increase during pressure shocks is as follows: When air molecules lack sufficient time to adapt to pressure changes due to slow information transport, they are forced to change abruptly. This phenomenon is analogous to a supersonic aircraft encountering air molecules before they can "receive information" about its approach. The resulting rapid compression and numerous, hard, impulsive collisions lead to a meaningful conversion of kinetic energy into thermal energy, causing a substantial temperature increase. It's worth noting that this process occurs primarily in compressible media such as gases, which is why shock waves are prominent in air and hydrogen.
 The temperature contours associated with @fig_22 are presented in @fig_23. Notably, temperatures exceeding $1000 "K "$ are typically associated with explosions @Frost2021 @Lebel2013 @Cashdollar2007 @Goroshin2006.
@@ -100,25 +104,34 @@ The temperature contours associated with @fig_22 are presented in @fig_23. Notab
   caption: [Simulative investigation of hydrogen release into the free environment from a pressure vessel standing under $250 "bar"$. Temperature contours can be seen at 6 different time points @Xu2009.],
 ) <fig_23>
 
-The derived model, when applied to the outcomes, shows that as hydrogen flows out into the free environment, its outflow velocity is already higher than the speed of sound of the surrounding air. This means that the air would already experience a shock wave and develop very high temperatures due to rapid compression. The hydrogen itself, however, would not have reached its own speed of sound and would therefore not generate its own shock wave initially. 
+The derived model, when applied to the described outcomes, indicates that as hydrogen flows out into the free environment, its outflow velocity is already higher than the speed of sound of the surrounding air. This means that the air would already experience a shock wave and develop very high temperatures due to rapid compression. The hydrogen itself, however, would not have reached its own speed of sound initially and would therefore not generate its own shock wave. 
 The high temperatures in the vicinity of the hydrogen, induced by the air shock wave, may not lead to immediate detonation of the hydrogen. Subsequently, as hydrogen moves in the air and diffusion processes take place, an ignitable concentration in the oxygen-hydrogen mixture is eventually reached. At this point, the surrounding high temperature becomes sufficient to cause ignition, which under certain conditions can escalate to detonation.
 It's important to note that this explanation is a simplified model designed to illustrate the core concepts. The actual physics of shock wave formation and the resulting temperature increase involve more complex thermodynamic processes. For a more comprehensive treatment, readers are directed to advanced non-linear compressible fluid dynamics texts @Sasoh2020.
 
 // -------------------------------------------------------------------------- //
-Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. Notably, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. 
-It is noteworthy that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
+Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
+Notably, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. 
+That said, it is crucial to acknowledge that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
+
 Among these mechanisms, diffusion ignition as proposed by Wolański and Wójcicki @wolanski1973investigation, has received significant attention. This model describes a spontaneous ignition phenomenon occurring when pressurized hydrogen is released into a chamber containing either pure oxygen or air @Qiu2024. Interestingly, @astbury2007spontaneous concluded that diffusion ignition, along with compression ignition, Joule-Thomson expansion, and ignition by hot surfaces, is unlikely for most unintentional releases of hydrogen at ambient temperature. 
 Nonetheless, despite this assessment, extensive research has been conducted on the diffusion ignition mechanism.
-One notable example of intensive experimental investigations into the outflow of pressurized hydrogen into the free environment was conducted by @dryer2007spontaneous. Furthermore, numerous studies using shock cylindrical tubes have been carried out by various researchers, including @Mogi2008, @Golub2008, @Mogi2009, @Lee2011, @Kim2013, @Kitabayashi2013, @Grune2014, @Gong2016, @Duan2016, @Jiang2019, and @Wang2019. 
+One notable example of intensive experimental investigations into the outflow of pressurized hydrogen into the free environment was conducted by @dryer2007spontaneous. Furthermore, numerous studies using shock cylindrical tubes have been carried out by various researchers @Mogi2008 @Golub2008 @Mogi2009 @Lee2011 @Kim2013 @Kitabayashi2013 @Grune2014 @Gong2016 @Duan2016 @Jiang2019 @Wang2019. 
 Comprehensive reviews and summaries on the spontaneous ignition mechanisms of pressurized hydrogen released through tubes can be found in @Qiu2024 and @Yang2021.
-The findings from these studies are not only valuable for conducting experimental investigations with hydrogen but also have major implications for the design of #glspl("swith"). These findings will be presented in detail, followed by explanations of their importance in the context of #gls("swith") design and experimental procedures.
+The findings from these studies are not only valuable for conducting experimental investigations with hydrogen but also have major implications for the design of #glspl("swith"). 
+Next, these findings shall be presented in detail, followed by explanations of their importance in the context of #gls("swith") design and experimental procedures
 
-When pressurized hydrogen is released from its vessel, certain geometrical aspects have a significant impact on the subsequent spontaneous ignition. One crucial factor is the tube length. Both numerical simulations and experimental studies on releasing pressurized hydrogen indicate that the longer the pipe, the greater the chance of spontaneous ignition occurring @Qiu2024 @Zhou2022 @Yang2021 @Jin2021. However, when the length of the tube exceeds a certain threshold, the tendency for self-ignition of high-pressure hydrogen becomes weaker @Zhou2022. According to @Wang2019, this weakening of the self-ignition tendency occurs only after the tube length exceeds $1700 "mm"$.
-For this thesis, the shape of the tubes containing the #gls("cgh2", long:true) was defined as cylindrical. Regarding tube length, it was previously noted that high ranges are desired for economic reasons. Conversely, if longer tubes could increase the risk of self-ignition, the determination of optimal tube length becomes more complex.
+When pressurized hydrogen is released from its vessel, certain geometrical aspects have a significant impact on the subsequent spontaneous ignition. One crucial factor is the tube length. 
 
-For designing #glspl("swith"), in addition to the available literature on experimental self-ignition tests, it may be necessary to conduct similar tests with markedly longer tubes. The need for much longer tubes, in the range of $~ 5"m to" ~80 "m "$ @link_Lufthansa_Airbus_380, is driven by the economic desire to increase flight range and the fact that tanks integrated inside the wings of commercial aircraft are much longer than the tubes commonly used in experimental tests.
-The preference for shorter tubes (less than $5 "m "$) in current experiments is primarily due to cost and time constraints faced by researchers. According to reviews by @Qiu2024 @Zhou2022 @Yang2021 @Wang2019, experimental tests are generally conducted with tubes of length $ <= 4200 "mm"$. Notably, tubes with lengths $<= 1000 "mm"$ are more common than the comparatively long tubes of $4200 "mm"$ used in @Kitabayashi2013.
-A comprehensive list of experimental parameters, including tube lengths used in various studies, is provided in @tab_27, as compiled by @Yang2021. This table highlights the current limitations in experimental setups and underscores the need for tests more closely aligned with the actual dimensions of #glspl("swith") applications.
+Both numerical simulations and experimental studies on releasing pressurized hydrogen indicate that the longer the pipe, the greater the likelihood of spontaneous ignition occurrence @Qiu2024 @Zhou2022 @Yang2021 @Jin2021. 
+However, when the length of the tube exceeds a certain threshold, the tendency for self-ignition of high-pressure hydrogen becomes weaker @Zhou2022. 
+According to @Wang2019, this weakening of the self-ignition tendency occurs only after the tube length exceeds $1700 "mm"$.
+For this thesis, the shape of the tubes containing the #gls("cgh2", long:true) were defined as cylindrical. Regarding tube length, in @chap_0_7 it was noted that high ranges are desired for economic reasons. Conversely, if longer tubes could increase the risk of self-ignition, the determination of optimal tube length becomes more complex.
+
+For designing #glspl("swith"), in addition to the available literature on experimental self-ignition tests, it may be necessary to conduct similar tests with markedly longer tubes. The need for much longer tubes, in the range of $~ 5 "m to" ~80 "m "$ @link_Lufthansa_Airbus_380, is driven by the economic desire to increase flight range and the fact that tanks integrated inside the wings of commercial aircraft are much longer than the tubes commonly used in experimental tests.
+The preference for shorter tubes (less than $5 "m "$) in current experiments is primarily due to cost and time constraints faced by researchers. 
+
+According to reviews by @Qiu2024 @Zhou2022 @Yang2021 @Wang2019, experimental tests are generally conducted with tubes of length $ <= 4200 "mm"$. Notably, tubes with lengths $<= 1000 "mm"$ are more common than the comparatively long tubes of $4200 "mm"$ employed in @Kitabayashi2013.
+A comprehensive list of experimental parameters, including tube lengths used in various studies, is provided in @tab_27 @Yang2021. This table highlights the current limitations in experimental setups and underscores the need for tests more closely aligned with the actual dimensions of #glspl("swith").
 
 #figure(
   table(
@@ -151,9 +164,12 @@ A comprehensive list of experimental parameters, including tube lengths used in 
 ) <tab_27>
 
 
-Depending on the outcome of self-ignition experiments for aircraft-relevant tube lengths, more advanced methods like optimization might be necessary to determine the optimal tube lengths. Besides length, tube diameter is another crucial geometrical variable. Studies have shown that tubes with smaller diameters are more prone to spontaneous ignition @Qiu2024 @Zhou2022 @Kim2013a. Consequently, based on the current state of the art, a larger diameter is generally recommended to mitigate the risk of self-ignition.
+Depending on the outcome of self-ignition experiments for aircraft-relevant tube lengths, more advanced methods like optimization might be necessary to determine optimal tube lengths. Besides length, tube diameter is another crucial geometrical variable. Studies have shown that tubes with smaller diameters are more prone to spontaneous ignition @Qiu2024 @Zhou2022 @Kim2013a. 
+Consequently, based on the current state-of-the-art understanding, a larger diameter is generally recommended to mitigate the risk of self-ignition.
 Cross-sectional area is another important geometrical parameter investigated in relation to spontaneous ignition @Xu2012 @Xu2014. Decreasing (contraction) or increasing the local cross-section demonstrates a lower critical release pressure threshold for ignition compared to constant cross-section tubes @Qiu2024 @Xu2012 @Xu2014. 
 The general shape of the tube does not significantly affect the minimum burst pressure required for spontaneous ignition @Qiu2024. However, in non-circular cross-section tubes, potential turbulent flow in the corners can promote the mixing of hydrogen and air. This enhanced mixing can result in the production of a larger amount of the hydrogen/air mixture @Li2019.
+
+// ---------------------------------- here ---------------------------------- //
 Both diameter and cross-section are major parameters for designing the tubes of #glspl("swith"). Together with tube length, these factors govern the maximum volume of the tubes for #glspl("swith") or general cylindrical pressure vessels. For ease of reference, a concise summary of these findings is presented in @tab_28.
 
 
@@ -172,7 +188,7 @@ Both diameter and cross-section are major parameters for designing the tubes of 
     [*Parameter*], [*Operation*], 
     // ---------------------------------------------------------------------- //
     [length ], [short],
-    [diameter,], [big ],
+    [diameter], [big ],
     [compression pressure in the container],  [low],
 
     table.cell(colspan: 2, align: center, fill: table_cl_header, [*Other influencing factors*]),
