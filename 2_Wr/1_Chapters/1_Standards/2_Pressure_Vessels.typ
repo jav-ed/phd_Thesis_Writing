@@ -220,7 +220,6 @@ Moreover, the documented instances in @tab_17 suggest that tank Type IV has the 
 
 Yet, the list could be incomplete and more examples could change that perspective.
 However, as elaborated earlier, due to the higher liner costs of the tank Type III, generally, the costs of the tank Type III are higher than those of the tank Type IV @Shin2023a.
-// ---------------------------------- here ---------------------------------- //
 Moreover, as explained with @fig_12, for a pressure of 700 bar, the Type III not only cost more than the Type IV, but it also weighs more.
 As a result, the tank Type IV currently allows storing the same mass of hydrogen while being lighter.
 The latter translates into the tank Type IV offering a higher gravimetric density than the Type III.
