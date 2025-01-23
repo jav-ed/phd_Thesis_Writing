@@ -6,21 +6,29 @@
 
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 2D<chap_3_3>
-This section addresses the need to minimize potential errors in the interpretation of curvature results. In @chap_3_1, the application of curvature analysis was introduced as a method to evaluate the impact of filling agents on structural behavior. This evaluation becomes particularly critical when considering the replacement of hydrogen with alternative filling agents in experimental structural validation tests. The current limitations in safely handling hydrogen in long tubes at high pressures, as detailed in @chap_2_1 and @chap_2_2, necessitate this investigation.
-@chap_3_2 established the methodology for calculating curvature based on displacement data and corresponding coordinate information. While the three-dimensional curvature results maintain their validity, the interpretation of these values for complex three-dimensional geometries, such as the #gls("swith", long:true), embodies a challenging and potentially error-prone task. 
+
+This section addresses the need to minimize the potential for errors in the interpretation of curvature results.
+In @chap_3_1, the application of curvature analysis was introduced as a method to evaluate the impact of filling agents on structural behavior. 
+This evaluation becomes particularly critical when considering the replacement of hydrogen with alternative filling agents in experimental structural validation tests. The current limitations in safely handling hydrogen in long tubes at high pressures, as detailed in @chap_2_1 and @chap_2_2, necessitate this investigation.
+@chap_3_2 established the methodology for calculating curvature based on displacement data and corresponding coordinate information. While the three-dimensional curvature results maintain their validity, the interpretation of these values for complex three-dimensional geometries, such as the #gls("swith", long:true), embodies a challenging and thus error-prone task. 
 To address this barrier, this section introduces two methodological approaches for transforming three-dimensional curvature data into two-dimensional span curvature representations.
 This transformation streamlines the interpretation of curvature data. The obtained representation enables more robust assessment of critical curvature thresholds, thereby facilitating more accurate determinations of filling agent impacts on structural behavior.
 
 // -------------------------------------------------------------------------- //
 The curvature calculations and critical curvature assessment elaborated in @chap_3_2 were conducted in three dimensions. However, evaluating data in two dimensions offers several advantages: it reduces the likelihood of interpretation errors and provides clearer insights. Furthermore, analyzing two-dimensional data requires less computational resources compared to processing higher-dimensional data.
 Based on these advantages, this investigation of filling medium influence on maximum sustainable bending moment is conducted in two dimensions. The transformation from three-dimensional curvature values to lower dimensions is achieved by averaging along the remaining axes. Three averaging approaches have been identified for this transformation. Before detailing these methods, it is essential to establish some fundamentals.
-When analyzing results from a three-dimensional gls("fem") model of a #gls("swith"), several quantities need be taken into account: displacement, first-order derivatives, second-order derivatives, and the resulting curvature. Each of these quantities is inherently three-dimensional. For each quantity, components along all three axes are available, and their magnitude can be calculated using methods such as the Euclidean norm, as defined in @eq_33.
+When analyzing results from a three-dimensional #gls("fem", long:true) model of a #gls("swith"), several quantities need be taken into account: displacement, first-order derivatives, second-order derivatives, and the resulting curvature.
 
-These discrete quantities correspond to specific nodes within the #gls("fem") mesh. A six-dimensional vector is required to fully represent each nodal entry, comprising three coordinate directions and three components of the considered variable. Given the high node count in the #gls("fem") mesh, matrices of dimension $bold(A)^(n times 6)$ are necessary, where $bold(A)$ corresponds to a generic matrix and $n$ denotes the total number of nodes. Consequently, in three dimensions, each variable can be expressed through its own matrix: displacement $bold(U)$, first-order derivative $bold(U)'$, second-order derivative $bold(U)''$, and curvature $bold(kappa)$.
+
+These discrete quantities are inherently multidimensional and correspond to specific nodes within the #gls("fem") mesh. 
+A six-dimensional vector is required to fully represent each nodal entry, comprising three coordinate directions and three components of the considered variable. 
+Given the high node count in the #gls("fem") mesh, matrices of dimension $bold(A)^(n times 6)$ are necessary, where $bold(A)$ corresponds to a generic matrix and $n$ denotes the total number of nodes. 
+Consequently, in three dimensions, each variable can be expressed through its own matrix: displacement $bold(U)$, first-order derivative $bold(U)'$, second-order derivative $bold(U)''$, and curvature $bold(kappa)$.
 
 // -------------------------------------------------------------------------- //
 Having established the fundamental concepts regarding curvature-related variables and their dimensions, the first averaging method can now be examined. This method begins by calculating the displacements and required derivatives to obtain the curvature for the entire structure in three dimensions.
-Subsequently, for a constant spanwise position $y_i$, the curvature values are averaged across the two remaining axes: the chordwise (x) and vertical (z) directions. Specifically, at each constant spanwise position $y_i$, the corresponding nodal distribution is defined by its $(x,z)$ coordinates in the plane perpendicular to the spanwise direction. This collection of nodes at constant $y_i$ forms a planar slice through the structural geometry. Due to the numerical nature of the computations, small deviations from the exact $y_i$ position are acceptable when identifying nodes belonging to the same planar slice.
+Subsequently, for a constant spanwise position $y_i$, the curvature values are averaged across the two remaining axes: the chordwise (x) and vertical (z) directions. Specifically, at each constant spanwise position $y_i$, the corresponding nodal distribution is defined by its $(x,z)$ coordinates in the plane perpendicular to the spanwise direction. This collection of nodes at constant $y_i$ forms a planar slice through the structural geometry. 
+Due to the numerical nature of the computations, small deviations from the exact $y_i$ position for are acceptable when identifying nodes belonging to the same planar slice.
 The process of averaging along the chordwise (x) and vertical (z) directions for a given $y_i$ value is depicted in @fig_45.
 
 #figure(
@@ -30,17 +38,18 @@ The process of averaging along the chordwise (x) and vertical (z) directions for
   
 ) <fig_45>
 
-The ellipses in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes $n_(y,"const")$ for one span section at a numerically constant $y_i$, and $j$ for the axis component.
+The black ellipses in @fig_45 indicate the directions of the axes along which averaging occurs. The process of the first method can be expressed mathematically for each $y_i$ as shown in @eq_53. The following variables are used in the equation: displacement $u$, first-order derivative $u'$, second-order derivative $u''$, curvature $kappa$, total number of nodes for one span section $n_(y,"const")$ at a numerically constant $y_i$, and $j$ for the axis component.
 
 // -------------------------------- method 1 -------------------------------- //
 $ overline(kappa_(1, y_i,j)) &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j) ^'' / ( (1 + u_(i,j)^(2')) ^(3/2))  \
 &=  1/n_(y,"const") sum_i ^(n_(y,"const")) kappa_(i,j) $ <eq_53>
 
 
-For a selected span section $y_i$ and axis $j$, the output of @eq_53 is a scalar-valued averaged component of the curvature $overline(kappa_(1, y_i,j))$. Since the output along all three axes is required, the combined result forms a three-dimensional curvature vector. To obtain a single scalar averaged mean value for the curvature, the Euclidean norm can be applied following @eq_33.
+For a selected span section $y_i$ and axis $j$, the output of @eq_53 is a scalar-valued averaged curvature component $overline(kappa_(1, y_i,j))$. Since the output along all three axes is required, the combined result forms a three-dimensional curvature vector. To obtain a single scalar averaged mean value for the curvature, the Euclidean norm can be applied following @eq_33.
 
 // ------------------------------ second method ----------------------------- //
-The second method employs a different strategy by using displacements as its primary input. These displacements are averaged across the chordwise (x) and vertical (z) axes for a numerically constant span section $y_i$. Based on these averaged displacements $overline(u)$, the method calculates the required gradients $u'$ and $u''$, which then yield the mean curvature $overline(kappa_2)$. For a selected span section $y_i$ and dimension axis $j$, these quantities are formally expressed as mean gradients $overline(u_(y_i,j))^(')$ and $overline(u_(y_i,j))^('')$. The mathematical formulation of this averaging approach is given in @eq_54.
+The second method employs a different strategy by using displacements as its primary input. These displacements are averaged across the chordwise (x) and vertical (z) axes for a numerically constant span section $y_i$. Based on these averaged displacements $overline(u)$, the method calculates the required gradients $u'$ and $u''$, which then yield the mean curvature $overline(kappa_2)$. 
+For a selected span section $y_i$ and dimension axis $j$, these quantities are formally expressed as mean gradients $overline(u_(y_i,j))^(')$ and $overline(u_(y_i,j))^('')$. The mathematical formulation of this averaging approach is given in @eq_54.
 
 $ 
 overline(u_(y_i,j)) &= 1/n_(y,"const") sum_i ^(n_(y,"const")) u_(i,j) \
@@ -130,8 +139,8 @@ $ overline(kappa_3) = ((-cos(x) - sin(x)) / 2)  / [1 + ( (-sin(x) + cos(x)) / 2)
    $ <eq_66>
 
 // ------------------------------ inert 90 deg ------------------------------ //
-To identify which methods yield identical results and which differ, an input angle of 90 degrees (or $pi/2$ radians) is selected for comparison. For this angle, the following trigonometric values apply: $sin(x = 90 degree = pi/2) = 1$ and $cos(x = 90 degree = pi/2) = 0$.
-Inserting these defined variables into @eq_60, the results for the first method are shown in @eq_67.
+To identify which methods yield identical results and which differ, an input angle of 90 degrees ($pi/2$ radians) is selected for comparison. For this angle, the following trigonometric values apply: $sin(x = 90 degree = pi/2) = 1$ and $cos(x = 90 degree = pi/2) = 0$.
+Inserting these defined variables into @eq_60 yields the results for the first method in @eq_67.
 
 // ---------------------------------- kap_1 --------------------------------- //
 $ overline(kappa_(1)) &= 1/2  [ 
@@ -143,7 +152,7 @@ $ overline(kappa_(1)) &= 1/2  [
   
   $<eq_67>
 
-Inserting the defined variables into @eq_63, the results for the second method are given in @eq_68.
+Inserting these defined variables into @eq_63 yields the results for the second method in @eq_68.
 
 // ---------------------------------- kap 2 --------------------------------- //
 $ overline(kappa_2) &= (( cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
@@ -151,7 +160,7 @@ $ overline(kappa_2) &= (( cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (
 &= (-1/2) / [1 + (-1/2)^2] ^(3/2) = (-1/2) / [1 + 1/4] ^(3/2) = (-1) / (2 (5/4) ^(3/2))
    $ <eq_68>
 
-Inserting the defined variables into @eq_66, the results for the third method are provided in @eq_69.
+Inserting these defined variables into @eq_66 yields the results for the second method in @eq_69.
 
 // ---------------------------------- kap 3 --------------------------------- //
 $ overline(kappa_3) &= ((cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
@@ -160,14 +169,16 @@ $ overline(kappa_3) &= ((cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-
    $ <eq_69>
 
 
-Analysis of the results shows that the output of method 1, $overline(kappa_(1)) = -1/2$, differs from both method 2, $overline(kappa_2) = (-1) / (2 (5/4) ^(3/2))$, and method 3, $overline(kappa_3) = -1/ (2 (5/4)^(3/2))$ ($overline(kappa_(1)) != overline(kappa_(2)) "and" overline(kappa_(1)) != overline(kappa_(3))$).
+Analysis of the results shows that the output of method 1 ($overline(kappa_(1)) = -1/2$) differs from both method 2 ($overline(kappa_2) = (-1) / (2 (5/4) ^(3/2))$), and method 3 [($overline(kappa_3) = -1/ (2 (5/4)^(3/2))); space (overline(kappa_(1)) != overline(kappa_(2)) "and" overline(kappa_(1)) != overline(kappa_(3))$)].
 However, methods 2 and 3 yield identical outcomes: $overline(kappa_2) = overline(kappa_3) = (-1) / (2 (5/4) ^(3/2))$. Therefore, while three approaches were initially proposed for obtaining the curvature as a $bold(kappa)^(n_y times 2)$ matrix, effectively only two distinct methods exist.
 
 // --------------------------------- results -------------------------------- //
 Having established the theoretical fundamentals, the numerical results can now be presented. Note that the results depicted for method 2 are equivalent to those of method 3. The results for method 1 are given in @fig_46 to @fig_49.
-
-@fig_46 displays the magnitude of the curvature averaged along the chord (x) and vertical (z) axes versus the normalized span position. The averaged curvatures are inspected for six different lift coefficients, $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$, at a constant pressure of $51.03 "MPa"$. 
-The results demonstrate that curvature generally increases with increasing lift coefficient, with the highest curvature values occurring at $C_L = 2.5$. The critical curvature $kappa_"crit"$ is indicated by a horizontal red line; when this threshold is exceeded, the impact of the filling agent becomes significant.
+//
+@fig_46 displays the magnitude of the curvature averaged along the chord (x) and vertical (z) axes versus the normalized span position. The averaged curvatures are inspected for six different lift coefficients, $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$, at a constant pressure of $51.03 "MPa"$ ($510.3 "bar"$). 
+The results demonstrate that curvature generally increases with increasing lift coefficient, with the highest curvature values occurring at $C_L = 2.5$. 
+The critical curvature $kappa_"crit"$ is indicated by a horizontal red line. 
+When this threshold is exceeded, the impact of the filling agent becomes significant.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/1_510bar_Ca_Var_Method_1.svg", 
@@ -175,9 +186,19 @@ The results demonstrate that curvature generally increases with increasing lift 
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 1 according to @eq_53, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_46>
 
-From the arguments provided in this text, an undisturbed region can be identified. @fig_47 displays the averaged curvature for the normalized span position for one portion of this undisturbed area, with all other parameters remaining identical to those in @fig_46.
-The investigation reveals that even at the highest lift coefficient value ($C_L = 2.5$), no curvature approaches the critical threshold. While the critical curvature was set to $kappa_"crit" = 0.4$, the observed curvatures remain substantially below $0.4 space upright("m")^(-1)$. In fact, the curvature values are significantly smaller than $0.1 space upright("m")^(-1)$. To properly visualize the impact of varying lift coefficient values, a scale is used where the critical curvature lies beyond the visible range.
-The interpretation of @fig_47 indicates that for this specific simulation model at a pressure of $51.03 "MPa"$ and lift coefficients up to $C_L = 2.5$, the filling agent's impact on the maximum bearable bending moment in experimental structural validation tests can be neglected. This interpretation suggests that for these specific conditions, hydrogen can be replaced with water for these tests. As with any simulation-based analysis, these findings are specific to the current model configuration and would need to be validated for different structural configurations or loading conditions.
+Previous @chap_3_2 provided the rationale for focusing on undisturbed regions and the description for identifying them, which led to the identification of such a region. 
+@fig_47 displays the averaged curvature for the normalized span position for one portion of an undisturbed area, with all other parameters remaining identical to those in @fig_46.
+The investigation reveals that even for the highest lift coefficient value ($C_L = 2.5$), no curvature approaches the critical threshold. 
+While the critical curvature was set to $kappa_"crit" = 0.4$, the observed curvatures remain substantially below $0.4 space upright("m")^(-1)$. 
+In fact, the curvature values are significantly smaller than $0.1 space upright("m")^(-1)$. 
+To properly visualize the impact of varying lift coefficient values, a scale where the critical curvature lies beyond the visible range would be required.
+
+The interpretation of @fig_47 indicates that for this specific simulation model at a pressure of $51.03 "MPa"$ and lift coefficients up to $C_L = 2.5$, the filling agent's impact on the maximum bearable bending moment in experimental structural validation tests can be neglected. 
+Consequently, this interpretation suggests that for these specific conditions, hydrogen can be replaced with water. As with any simulation-based analysis, these findings are specific to the current model configuration and would need to be validated for different structural configurations or loading conditions.
+
+
+Following method 1, @fig_48 and @fig_49 investigate the pressure effects while maintaining a constant lift coefficient of $C_L approx 0.6$. 
+Although @fig_48 demonstrates that pressure variations influence the resulting curvature, this impact remains notably small despite the considerable pressure range from $15 "MPa"$ to $110 "MPa"$.
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/3_Curv_1D/2_510bar_Ca_Var_Undisturbed_Method_1.svg", 
@@ -185,9 +206,7 @@ The interpretation of @fig_47 indicates that for this specific simulation model 
   caption: [Averaged curvature magnitude in the undisturbed region along the normalized span position calculated using method 1 according to @eq_53, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_47>
 
-The evaluation presented in @fig_46 and @fig_47 examines the impact of the lift coefficient $C_L$ at a constant pressure of $51.03 "MPa"$. 
-Following method 1, @fig_48 and @fig_49 investigate the pressure effects while maintaining a constant lift coefficient of $C_L approx 0.6$. 
-Although @fig_48 demonstrates that pressure variations influence the resulting curvature, this impact remains notably small despite the considerable pressure range from $15 "MPa"$ to $110 "MPa"$.
+
 // ---------------------------- method 1 pressure --------------------------- //
 // fine
 #figure(
@@ -196,7 +215,9 @@ Although @fig_48 demonstrates that pressure variations influence the resulting c
   caption: [Averaged curvature magnitude along the normalized span position calculated using method 1 according to @eq_53, comparing pressure values from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$.]
 ) <fig_48>
 
-Analogous to @fig_47, @fig_49 offers a detailed examination of the undisturbed area. The study reveals that the computed curvature values remain substantially below the critical curvature threshold. The magnitude of this difference is so significant that the critical curvature falls outside the selected scale range necessary for proper visualization of the pressure effects.
+Analogous to @fig_47, @fig_49 offers a detailed examination of the undisturbed area. The study reveals that the computed curvature values remain substantially below the critical curvature threshold. 
+// ---------------------------------- here ---------------------------------- //
+The magnitude of this difference is so significant that the critical curvature falls outside the selected scale range necessary for proper visualization of the pressure effects.
 
 // fine
 #figure(
