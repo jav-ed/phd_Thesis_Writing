@@ -3,6 +3,8 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
+
 
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 3D<chap_3_2>
@@ -41,7 +43,7 @@ Two key observations highlight their early development stage: First, as of writi
 Additionally, the special properties of hydrogen, as outlined in @chap_2_1 and @chap_2_2, necessitate substantial development work to ensure operational safety. 
 Given this early stage, focusing on a specific #gls("swith") design with predefined constraints would risk developing methods that may not apply to future configurations, which could differ significantly from current concepts.
 Therefore, it is more beneficial to focus on developing general approaches rather than specific numerical models with limited practical application. 
-These general approaches aim to be applicable across different simulation techniques, offering broader applicability.
+These general approaches are designed to work across different simulation techniques, enhancing their practical relevance.
 Consequently, emphasis is placed on explaining the solution process, enabling interested readers to adapt these methods to their specific cases.
 For demonstration purposes, a #gls("fem") model incorporating both aerodynamic forces and internal pressure loads is utilized. The aerodynamic loads are calculated using APAME @Filkovic, a frictionless open-source 3D panel tool, and applied to the structural mesh through fluid-structure coupling. Following the design concept from @APUS_1, four tanks were implemented. The internal pressure of these tanks is defined as a variable parameter for in-depth analysis.
 
@@ -151,7 +153,7 @@ In practice, however, element IDs rarely follow such chronological ordering. A p
 // ----------------------------- forward method ----------------------------- //
 While acknowledging the higher accuracy of the central #gls("fd") method, its drawbacks have been noted. The Forward and Backward Difference methods offer sufficient accuracy with comparatively simple implementation. For a #gls("fem") application, the step size is inherently defined by the mesh discretization. 
 Considering both accuracy demands and implementation complexity, the Forward #gls("fd") method was preferred over the central #gls("fd") method for calculating the necessary derivatives for curvature evaluation.
-In this thesis, #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. When conducting #gls("fem") simulations, strains (first derivatives of displacement with respect to local coordinates) are extracted as part of its solution, alongside displacements. However, it is important to explain how to obtain strains when only displacement values are available.
+In this thesis, #gls("fem") is used to simulate the structural behavior of the #gls("swith") model. When conducting #gls("fem") simulations, strains (first derivatives of displacement with respect to local coordinates) are extracted as part of its solution, alongside displacements. However, it is important to clarify how to obtain strains when only displacement values are available.
 
 The rationale behind this approach is to strengthen the universal applicability of this dissertation. As previously explained, the presented method for calculating curvature can be applied equally to displacement data from various sources, including alternative simulation techniques such as beam models @Gross2021b @Gross2019 @Gross2021 @Gross2017 @Gross2021a @Gross2019a @Spura2019 and experimental measurements. 
 By focusing on a method that requires only displacement data and coordinates, rather than leveraging #gls("fem")-specific outputs like strains, the approach maintains broad applicability. This generality enhances the practical value of the described methodology, as it can serve as a reference procedure for future work, regardless of how displacement data is sourced.
@@ -169,10 +171,11 @@ $ f'_("forward")(x_7) = (f(x_5) - f(x_7))/(h) $<eq_39>
 $ f'_("forward")(x_3) = 2 space (f(x_6) - f(x_3))/(h) $<eq_40>
 $ f'_("forward")(x_6) = 2 space (f(x_2) - f(x_6))/(h) $<eq_41>
 
-// ---------------------------------- here ---------------------------------- //
-// TODO there is an issue here
-To obtain the derivatives of the three remaining discretization points $x_1, x_5 "and" x_2$, a neighboring element is required. According to @fig_39, the ending nodes of one element are the starting nodes of the next element. Thus, @eq_37 to @eq_41 can be used again.
-To derive the second-order gradient of the displacement, the output of @eq_37 to @eq_41 is used as input for @eq_42 to @eq_46.
+
+To obtain the derivatives of the three remaining discretization points $x_1, x_5 "and" x_2$, a neighboring element is required. 
+According to @fig_39, the ending nodes of one element are the starting nodes of the next element. 
+Leveraging this information and the scheme explained through @eq_37 to @eq_41, the forward #gls("fd") method can be applied to calculate the derivatives for the remaining points.
+In order to derive the second-order gradients of the displacements, the output of @eq_37 to @eq_41 is used as input for @eq_42 to @eq_46.
 
 $ f''_("forward")(x_0) = 2 space (f'(x_4) - f'(x_0))/(h) $<eq_42>
 $ f''_("forward")(x_4) = 2 space (f'(x_1) - f'(x_4))/(h) $<eq_43>
@@ -181,9 +184,10 @@ $ f''_("forward")(x_3) = 2 space (f'(x_6) - f'(x_3))/(h) $<eq_45>
 $ f''_("forward")(x_6) = 2 space (f'(x_2) - f'(x_6))/(h) $<eq_46>
 
 
-The presented procedure assumes a constant element size $h$ and ideally centered nodes. Thus, either $h$ or $h/2$ could be used as the step size, depending on the discretization points of interest. However, in practical applications, meshes may be distorted, and elements of different sizes or types may be used. In such cases, the element size cannot be taken as constant, and the geometric distance between discretization points of consideration $h$ must be evaluated for potentially every calculation.
+The presented procedure assumes a constant element size $h$ and ideally centered nodes. Thus, either $h$ or $h/2$ could be used as the step size, depending on the discretization points of interest. However, in practical applications, meshes may be distorted, and elements of different sizes or types may be used. 
+In such cases, the element size cannot be taken as constant, and the geometric distance between discretization points $h$ must potentially be evaluated for each calculation.
 
-While @eq_37 to @eq_46 with neighboring relationships can be used with the forward #gls("fd") method, the global right-ending nodes require special treatment.
+While @eq_37 to @eq_46 along with neighboring relationships can be used with the forward #gls("fd") method, the global right-ending nodes require special treatment.
 This issue is visualized in @fig_41, where the global right-ending discretization points are colored red.
 
 #figure(
@@ -193,43 +197,49 @@ This issue is visualized in @fig_41, where the global right-ending discretizatio
 ) <fig_41>
 
 // ----------------------------- backward story ----------------------------- //
-To obtain the gradients of the red points shown in @fig_41 using the forward #gls("fd") method, additional discretization points would be needed to their right. However, since these are the last points, only discretization points from the left are available. Therefore, the backward #gls("fd") method could be employed for these points. Yet, implementing this feature might not be necessary, depending on the relevance of the outermost region. If the curvature values of the rightmost nodes are not relevant, dummy values could be inserted. Should the outermost red nodes be required, the missing derivatives of the three remaining discretization points $x_1, x_5 "and" x_2$ according to @fig_38, can be formulated using the backward #gls("fd") method through @eq_47 to @eq_52.
+To obtain the gradients of the red points shown in @fig_41 using the forward #gls("fd") method, additional discretization points would be needed to their right. However, since these are already the rightmost points, only discretization points to their left are available. 
+Therefore, the backward #gls("fd") method could be employed for these points. Yet, depending on the relevance of the outermost region, implementing this feature might not be necessary.
+If the curvature values of the rightmost nodes are not relevant, dummy values could be inserted instead. Should the outermost red nodes be required, the missing derivatives of the three remaining discretization points $x_1, x_5 "and" x_2$ according to @fig_38, can be formulated using the backward #gls("fd") method through @eq_47 to @eq_52.
 
 $ f'_("backward")(x_1) = 2 space (f(x_1) - f(x_4))/h $<eq_47>
 $ f'_("backward")(x_5) = (f(x_5) - f(x_7))/h $<eq_48>
 $ f'_("backward")(x_2) = 2 space (f(x_2) - f(x_6))/h $<eq_49>
 
 $ f''_("backward")(x_1) = 2 space (f'(x_1) - f'(x_4))/h $<eq_50>
-$ f''_("backward")(x_5) = (f'(x_5) - f('x_7))/h $<eq_51>
+$ f''_("backward")(x_5) = (f'(x_5) - f'(x_7))/h $<eq_51>
 $ f''_("backward")(x_2) = 2 space (f'(x_2) - f'(x_6))/h $<eq_52>
 
 
 // ---------------------------- first 3d results ---------------------------- //
-With displacements, first and second derivatives now known, the curvature can be calculated according to @eq_28. To cover a broad spectrum, the #gls("swith") model was computed with internal pressure variations between $15 "MPa"$ to $110 "MPa"$ (or $150 "bar"$ to $1100 "bar"$) using 30 linearly spaced values. While $150 "bar"$ is too low for economical aviation use, it represents a practical value for experimental testing environments. The upper limit of $1100 "bar"$ exceeds the maximum pressure currently storable in a type IV tank, as elaborated in @chap_1_2, where type V tanks are noted to provide a maximum pressure of $1000 "bar"$.
-As explained in @chap_1_2, while type IV tanks currently offer the best compromise between safety and economic considerations, type V technology could become the preferred option as it advances. Given likely future technical advancements, type V tanks might eventually store hydrogen at pressures exceeding $1000 "bar"$ or even $1100 "bar"$. Additionally, using such high pressure values in the simulation emphasizes that pressure increases are more readily implemented in numerical models than in experimental testing.
+With displacements, first and second derivatives known, the curvature can be calculated according to @eq_28. To cover a broad spectrum, the #gls("swith") model was computed with internal pressure variations between $150 "bar"$ to $1100 "bar"$ (or $15 "MPa"$ to $110 "MPa"$) using 30 linearly spaced values. While $150 "bar"$ is too low for economical aviation use, it represents a practical value for experimental testing environments. 
+The upper limit of $1100 "bar"$ exceeds the maximum pressure currently storable in a type IV tank, as elaborated in @chap_1_2, where type V tanks are noted to provide a maximum pressure of $1000 "bar"$.
+As explained in @chap_1_2, although type IV tanks currently offer the best compromise between safety and economic considerations, type V technology could become the preferred option as it advances. 
+Given likely future technical advancements, type V tanks might eventually store hydrogen at pressures exceeding $1000 "bar"$ or even $1100 "bar"$. 
+
+Moreover, using such high pressure values in the simulation emphasizes that pressure elevations are more readily implemented in numerical models than in experimental testing.
 The lift coefficient variation $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ was selected to cover the range from small aircraft to large aircraft with potential high-lift devices in application @Wild2022, leading to 180 total variations.
 // a = np.linspace(15,110,30)
 // a[11] = 51.034
-An illustrative example of the displacement on the top left, the strains or first-order derivative on the top right, the second-order derivative on the bottom left and resulting curvature on the bottom right for a pressure of $p approx 510 "bar"$ and a lift coefficient of $C_L approx 0.6$ is depicted in @fig_42.
+An illustrative example of the displacement on the top left, the strains or first-order derivative on the top right, the second-order derivative on the bottom left, and the resulting curvature on the bottom right for a pressure of $p approx 510 "bar"$ and a lift coefficient of $C_L approx 0.6$ is depicted in @fig_42.
 
-// -------------------------------- 3d plots -------------------------------- //
-#figure(
-  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/8_Skin_Ca_06_P_510.png", 
-  width: 100%),
-  caption: [Illustrative depiction of the displacements ([mm], top left), first-order derivative ([-], top right), second-order derivative ([$"mm"^(-1)$], bottom left) and curvature ([$"mm"^(-1)$], bottom right) for a #gls("swith") model at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
-) <fig_42>
-
-// --------------------------------- here 1 --------------------------------- //
-The magnitude values are calculated according to the Euclidean norm. For curvature, the calculation follows @eq_33, where $kappa_x$, $kappa_y$, and $kappa_z$ correspond to the curvature components in their respective spatial directions.
+The magnitude values are calculated according to the Euclidean norm. 
+For curvature, the calculation follows @eq_33, where $kappa_x$, $kappa_y$, and $kappa_z$ correspond to the curvature components in their respective spatial directions.
 
 $ kappa_("mag") = sqrt(kappa_x^(2) + kappa_y^2 + kappa_z^2) $<eq_33>
 
 Given the pivotal importance of tank structural behavior in #glspl("swith"), the corresponding information is provided separately for the tanks in @fig_43.
 
+// -------------------------------- 3d plots -------------------------------- //
+#figure(
+  image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/8_Skin_Ca_06_P_510.png", 
+  width: 81%),
+  caption: [Illustrative depiction of the displacements ([mm], top left), first-order derivative ([-], top right), second-order derivative ([$"mm"^(-1)$], bottom left) and curvature ([$"mm"^(-1)$], bottom right) for a #gls("swith") model at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
+) <fig_42>
+
 
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/2_Loadcases/2_Curv_Application/9_Tubes_Ca_06_P_510.png", 
-  width: 100%),
+  width: 81%),
   caption: [Illustrative depiction of the displacements ([mm], top left), first-order derivative ([-], top right), second-order derivative ([$"mm"^(-1)$], bottom left) and curvature ([$"mm"^(-1)$], bottom right) solely for the tubes of a #gls("swith") model at $C_L approx 0.6$ and internal pressure $p approx 510 "bar"$.],
 ) <fig_43>
 
@@ -246,33 +256,38 @@ The application of curvature outcomes to real-world scenarios necessitates analy
 
 
 The top left of @fig_44 exhibits notably high strains at the inner wing's skin interface. This occurs due to the implementation of a dummy stiffness value in this region where the wing extends into the fuselage. The skin stiffness is reduced to a minimal value here, while retaining the fuselage area to facilitate aerodynamic modeling and calculations.
+At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffness are added.  
+Due to local stiffening elements, abrupt stiffness differences are expected and observable. 
+One example is shown by the circumferential rings, with these differences noticeable in the top right at the landing gear position and the bottom left at the tube ending position in @fig_44.
 
-At the landing gear and engine connection points, as well as tank ends, circumferential rings with high stiffness are applied.  
-Due to local stiffening elements, abrupt stiffness differences are observable. One example is shown through the circumferential rings, where these differences are visible in the top right at the landing gear position and bottom left at the tube ending position in @fig_44.
 
-Discontinuities in the first derivative propagate to the second derivative calculations. These discontinuities also appear in the curvature results, as curvature depends on both derivatives of displacement. For small first derivatives ($u' << 1$), the curvature expression @eq_28 simplifies to @eq_34 @Gross2021. This demonstrates direct proportionality between curvature $kappa$ and the second derivative $u$.
+Discontinuities in the first derivative propagate to the second derivative calculations. These discontinuities also appear in the curvature results, as curvature depends on both derivatives of displacement. 
+For small first derivatives ($u' << 1$), the curvature formula given in @eq_28 simplifies to @eq_34 @Gross2021. This demonstrates direct proportionality between curvature $kappa$ and the second derivative $u$.
 
 $ kappa approx u'' $<eq_34>
 
 The first derivative exhibits abrupt behavior, yet this does not contradict $u' << 1$. For example, values of $1 times 10^(-3)$ and $1 times 10^(-9)$ differ by six orders of magnitude, while both remain significantly smaller than 1.
 The numerical output of @eq_28 alone is insufficient to verify if the critical curvature was exceeded. Proper interpretation of local curvature discontinuities requires understanding of both curvature derivation and engineering principles.
-To evaluate the influence of the fill medium, only structurally relevant areas should be included when determining if the critical curvature $kappa_"krit"$ was exceeded. Including non-representative areas would lead to misinterpretation.
-To emphasize the significance of proper engineering evaluation, an additional consideration for real-world application shall be viewed. The evaluation of filling agent impact needs to be limited to the inner wing section, as the tanks are exclusively positioned within this region. Consequently, the outer wing section falls outside the scope of this analysis.
+When evaluating the influence of the fill medium, only structurally relevant areas should be considered to determine whether the critical curvature $kappa_"krit"$ has been exceeded.
+Including non-representative areas would lead to misinterpretation.
+To emphasize the significance of proper engineering evaluation, an additional consideration for real-world application shall be viewed. 
+The evaluation of filling agent impact needs to be limited to the inner wing section, as the tanks are exclusively positioned within this region. Consequently, the outer wing section falls outside the scope of this analysis.
 
-Based on the real-world-guided simulation model of a #gls("swith") and the in-depth interpretations presented, fundamental guidelines for assessing critical curvature were provided. 
-Upon inspection, the results, accounting for modeling aspects and their implications, yield a significant finding: the curvature remains below the critical threshold within undisturbed regions
+Based on the real-world-guided simulation model of a #gls("swith") and the essential interpretations presented, fundamental guidelines for assessing critical curvature were provided. 
+Upon inspection, the results, accounting for modeling aspects and their implications, yield a significant finding: the curvature remains below the critical threshold within undisturbed regions.
 This observation, derived from the #gls("fem") simulation model of a potential real-world #gls("swith") design, suggests that the choice of fill medium does not substantially influence the maximum sustainable bending moment.
-However, the interpretation of curvature calculations for complex three-dimensional models raises crucial challenges and requires meticulous attention to detail. 
-The complexity of this assessment process introduces potential opportunities for misinterpretation when thorough investigations are not conducted. Recognizing these barriers, @chap_3_3 introduces an enhanced methodology designed to facilitate result interpretation and reduce the likelihood of errors in critical curvature assessment.
-It is essential to acknowledge the limitations of these insights within the framework of the underlying assumptions. The analysis employed linear-static solutions, excluding considerations of gas compression effects and potential nonlinearities. These constraints might need to be taken into account when applying these outcomes to practical applications.
+However, the interpretation of curvature calculations for complex three-dimensional models raises serious challenges and requires meticulous attention to detail. 
+The complexity of this assessment process introduces opportunities for misinterpretation when thorough investigations are not conducted. 
+Recognizing these barriers, @chap_3_3 introduces an enhanced methodology designed to facilitate result interpretation and reduce the likelihood of errors in critical curvature assessment.
+It is essential to acknowledge the limitations of these insights within the framework of the underlying assumptions. The analysis employed linear-static solutions, excluding considerations of gas compression effects and potential nonlinearities. These constraints might need to be taken into account when applying the outcomes to practical applications.
 
-
+#pagebreak(weak: true)
 // --------------------------------- summary -------------------------------- //
 #summary_([
 
-In summary, a methodology for calculating curvature and its interpretation was provided. For this analysis, a #gls("fem") simulation model of a #gls("swith") configuration was utilized. The procedure for obtaining required derivatives was explained in detail. Since the methodology was developed from a displacement-based foundation, it can be applied to both analytical and numerical simulation approaches.
-The method's applicability extends beyond simulation, as displacement data could alternatively be acquired from experimental investigations. 
-Through important examples demonstrating critical curvature assessment, the challenges of directly comparing computed curvature outcomes with critical curvature values for complex structures like aircraft became evident.
+In summary, a methodology for calculating curvature and its interpretation was provided. For this analysis, a #gls("fem") simulation model of a #gls("swith") was utilized. The procedure for obtaining required derivatives was explained in detail. Since the methodology was developed from a displacement-based foundation, it can be applied to both analytical and numerical simulation approaches.
+Furthermore, the method's applicability extends beyond simulation, as displacement data could alternatively be acquired from experimental investigations. 
+Through important examples of critical curvature assessment, the challenges of directly comparing computed curvature outcomes with the critical curvature value for complex structures like aircraft became evident.
 The interpretation of the results indicated that for experimental testing, hydrogen could be replaced with an alternative filling agent without significantly impacting the maximum bearable bending moment. Finally, the complexity of assessing critical curvature in three-dimensional space was acknowledged, leading to the introduction of an enhanced approach in @chap_3_3.
 
 ])
