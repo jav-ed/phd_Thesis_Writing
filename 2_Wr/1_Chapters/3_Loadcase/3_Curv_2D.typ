@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was tested and is inshallah fine
 == Assessment of Filling Agent Impact in 2D<chap_3_3>
@@ -28,7 +29,7 @@ Consequently, in three dimensions, each variable can be expressed through its ow
 // -------------------------------------------------------------------------- //
 Having established the fundamental concepts regarding curvature-related variables and their dimensions, the first averaging method can now be examined. This method begins by calculating the displacements and required derivatives to obtain the curvature for the entire structure in three dimensions.
 Subsequently, for a constant spanwise position $y_i$, the curvature values are averaged across the two remaining axes: the chordwise (x) and vertical (z) directions. Specifically, at each constant spanwise position $y_i$, the corresponding nodal distribution is defined by its $(x,z)$ coordinates in the plane perpendicular to the spanwise direction. This collection of nodes at constant $y_i$ forms a planar slice through the structural geometry. 
-Due to the numerical nature of the computations, small deviations from the exact $y_i$ position for are acceptable when identifying nodes belonging to the same planar slice.
+Due to the numerical nature of the computations, small deviations from the exact $y_i$ position are acceptable when identifying nodes belonging to the same planar slice.
 The process of averaging along the chordwise (x) and vertical (z) directions for a given $y_i$ value is depicted in @fig_45.
 
 #figure(
@@ -160,7 +161,7 @@ $ overline(kappa_2) &= (( cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (
 &= (-1/2) / [1 + (-1/2)^2] ^(3/2) = (-1/2) / [1 + 1/4] ^(3/2) = (-1) / (2 (5/4) ^(3/2))
    $ <eq_68>
 
-Inserting these defined variables into @eq_66 yields the results for the second method in @eq_69.
+Inserting these defined variables into @eq_66 yields the results for the third method in @eq_69.
 
 // ---------------------------------- kap 3 --------------------------------- //
 $ overline(kappa_3) &= ((cancel(-cos(x= pi/2)) - sin(x= pi/2)) / 2)  / [1 + ( (-sin(x= pi/2) + cancel(cos(x= pi/2))) / 2)^(2)]^(3/2) \
@@ -216,8 +217,7 @@ Although @fig_48 demonstrates that pressure variations influence the resulting c
 ) <fig_48>
 
 Analogous to @fig_47, @fig_49 offers a detailed examination of the undisturbed area. The study reveals that the computed curvature values remain substantially below the critical curvature threshold. 
-// ---------------------------------- here ---------------------------------- //
-The magnitude of this difference is so significant that the critical curvature falls outside the selected scale range necessary for proper visualization of the pressure effects.
+The magnitude of this difference is so significant that the critical curvature would fall outside the scale range necessary for proper visualization of the pressure effects.
 
 // fine
 #figure(
@@ -229,8 +229,10 @@ The magnitude of this difference is so significant that the critical curvature f
 // ========================================================================== //
 // ================================ method 2 ================================ //
 // ========================================================================== //
-The results obtained using method 1 clearly indicate that hydrogen could be replaced with water without modifying the maximum bearable bending moment. To validate this finding through comparison with method 2, as defined in @eq_54, an analysis is depicted in @fig_50 to @fig_55.
-@fig_50 presents the magnitude of the averaged displacement $overline(u)$ along the normalized span position for six lift coefficients ($C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$) at a constant pressure of $51.03 "MPa"$. The lift coefficient's influence exhibits a direct correlation with displacement magnitude: higher lift coefficients correspond to larger displacements. The maximum displacement occurs at $C_L = 2.5$ near the wing tip. This behavior aligns with structural mechanics principles, as the wing tip lacks direct support. Consequently, while maximum stress concentrations develop at the support position, the greatest deflection manifests at the wing tip due to the maximum lever arm effect.
+The results obtained using method 1 clearly indicate that hydrogen could be replaced with water without modifying the maximum bearable bending moment. 
+To validate this finding through comparison with method 2, as defined in @eq_54, the analyses are depicted in @fig_50 to @fig_55.
+@fig_50 presents the magnitude of the averaged displacement $overline(u)$ along the normalized span position for six lift coefficients ($C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$) at a constant pressure of $51.03 "MPa"$. The lift coefficient's influence exhibits a direct correlation with displacement magnitude: higher lift coefficients correspond to larger displacements. The maximum displacement occurs at $C_L = 2.5$ near the wing tip. This behavior aligns with structural mechanics principles, as the wing tip lacks direct support. 
+Consequently, while maximum stress concentrations develop at the support position, the greatest deflection manifests at the wing tip due to the longest lever arm.
 
 // fine
 #figure(
@@ -239,8 +241,11 @@ The results obtained using method 1 clearly indicate that hydrogen could be repl
   caption: [Averaged displacement magnitude $overline(u)$ along the normalized span position calculated using method 2 according to @eq_54, comparing six lift coefficients $C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$ at a constant pressure of $51.03 "MPa"$.]
 ) <fig_50>
 
-@fig_51 displays the magnitude of the averaged curvature along the normalized span position using method 2, as defined in @eq_54, for six lift coefficients ($C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$) at a constant pressure of $51.03 "MPa"$. The interpretations previously established for method 1 in @fig_46 are applicable to the method 2 results presented in @fig_51. While the influence of the lift coefficient is evident, its magnitude remains relatively small.
-As local distributions must be filtered out for the final assessment, the undisturbed area is highlighted in @fig_52. This representation enables evaluation of the filling agent's impact on structural behavior. The observed behavior closely corresponds to that shown in @fig_47 using method 1.
+@fig_51 displays the magnitude of the averaged curvature along the normalized span position using method 2, as defined in @eq_54, for six lift coefficients ($C_L = [0.5, 0.6, 1.0, 1.5, 2.0, 2.5]$) at a constant pressure of $51.03 "MPa"$. 
+The interpretations previously established for method 1 in @fig_46 are applicable to the method 2 results presented in @fig_51 as well. 
+While the influence of the lift coefficient is evident, its magnitude remains relatively small.
+As local disturbances must be filtered out for the final assessment, the undisturbed area is highlighted in @fig_52. 
+This representation enables evaluation of the filling agent's impact on structural behavior. The observed behavior closely corresponds to that shown in @fig_47 using method 1.
 
 // fine
 #figure(
@@ -269,8 +274,9 @@ The pressure's influence demonstrates nonlinear behavior. The local span positio
 ) <fig_53>
 
 The impact on the magnitude of the averaged curvature is depicted in @fig_54. The analysis comprises the averaged curvature magnitude along the normalized span position using method 2 according to @eq_54, examining pressure values ranging from $15 "MPa"$ to $110 "MPa"$ at a constant lift coefficient of $C_L approx 0.6$. 
-The behavior exhibits a measurable but minimal impact of pressure variations, showing consistency with the method 1 results in @fig_48.
-A focused review of this configuration within the undisturbed region, isolated from local disturbances, is presented in @fig_55.
+The behavior exhibits a measurable but minimal impact as pressure varies, showing consistency with the results of method 1 in @fig_48.
+A focused review of this configuration within the undisturbed region, thus, isolated from local disturbances, is presented in @fig_55.
+
 
 // fine
 #figure(
@@ -287,22 +293,26 @@ A focused review of this configuration within the undisturbed region, isolated f
 ) <fig_55>
 
 
-The results obtained through method 1 according to @eq_53 and method 2 according to @eq_54, analyzed across various lift coefficients $C_L$ and pressure values, demonstrate major similarities. A key finding common to both methods is that the curvatures in the undisturbed region remain significantly below the critical curvature threshold.
+The results obtained through method 1 according to @eq_53 and method 2 according to @eq_54, analyzed across various lift coefficients $C_L$ and pressure values, demonstrate major similarities. 
+A key finding shared by both methods is that the curvatures in the undisturbed region remain significantly below the critical curvature threshold.
 This insight has important implications for experimental validation testing, though it must be noted that these outcomes are specific to the current simulation model and load conditions. Based on the simulation results, it can be concluded that hydrogen could be substituted with an alternative filling agent in experimental structural validation tests without affecting the maximum bearable bending moment.
-The substantial margin between measured and critical curvature values in the undisturbed region eliminates the need for detailed investigation of differences between method 1 and method 2. However, for scenarios where curvature values approach the critical threshold, a thorough comparative analysis would become necessary. Such an analysis would provide deeper insights into when each method might be preferential over the other.
+The substantial margin between measured and critical curvature values in the undisturbed region eliminates the need for detailed investigation of differences between method 1 and method 2. However, for scenarios where curvature values approach the critical threshold, a thorough comparative analysis would become necessary. 
+Such an analysis would provide deeper insights into when each method might be preferable over the other.
 
-Finally, based on practical industrial knowledge, water shall be evaluated as an alternative filling agent to hydrogen. IMA Materialforschung und Anwendungstechnik GmbH Dresden has established expertise in conducting experimental structural validation tests. 
-Through collaboration with IMA, it has been noted that they have particular experience in filling pressure vessels with water.
-From a safety perspective, water exhibits advantageous characteristics for experimental structural validation tests. Some justification for these safety considerations can be found by reviewing @chap_2_0 to @chap_2_2.
+
+Finally, drawing on practical industrial expertise, water has been identified as a viable alternative filling agent to hydrogen for experimental structural validation tests. 
+IMA Materialforschung und Anwendungstechnik GmbH Dresden has demonstrated considerable expertise in conducting tests on pressure vessels, particularly when they are filled with water. 
+Collaboration with IMA has underscored the practicality and reliability of water as a filling agent. From a safety standpoint, water offers significant advantages, including reduced risks associated with handling and pressurization. Further justification for these safety benefits and the suitability of water can be found in @chap_2_0 to @chap_2_2.
 
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
-This section addressed the challenge of interpreting complex three-dimensional curvature data by developing transformation methods for two-dimensional analysis. The mathematical framework established how to convert six-dimensional matrix representations ($bold(A)^(n times 6)$) into more manageable two-dimensional forms ($bold(A)^(n times 2)$). 
+This section addressed the challenge of interpreting complex three-dimensional curvature data by developing transformation methods for two-dimensional analysis. 
+The mathematical framework established a method for converting six-dimensional matrix representations ($bold(A)^(n times 6)$) into more manageable two-dimensional forms ($bold(A)^(n times 2)$).
 While three averaging approaches were initially proposed, mathematical analysis demonstrated that only two fundamentally different methods exist.
 These methods were systematically evaluated using a range of lift coefficients and internal pressures from $15 "MPa"$ to $110 "MPa"$. 
 The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region remained substantially below critical thresholds.
-This finding led to a practical conclusion potentially specific to the investigated simulation model. 
+This finding led to a practical conclusion, potentially specific to the investigated simulation model. 
 Under the examined load conditions, hydrogen could be substituted with an alternative filling agent in experimental structural validation testing. 
 This substitution would not affect the structural behavior, as the material's stiffness characteristics would remain unchanged.
 However, while the interpretation needs to be done for each specific simulation configuration, the laid out method is of general nature.
