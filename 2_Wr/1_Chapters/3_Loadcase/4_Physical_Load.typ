@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was tested and is inshallah fine
 // word repetition task inshallah completed
@@ -80,7 +81,9 @@ Wind tunnel implementation involves distinct technical obstacles.
 The requirement for explosion-proof containment systems introduces complexity to facility design. Furthermore, structural failure events could result in serious facility damage under high-pressure conditions. The spatial requirements for comprehensive instrumentation systems, pressure regulation equipment, and containment structures exceed typical wind tunnel facility capabilities. These dimensional constraints suggest that existing facilities might prove inadequate, potentially necessitating development of purpose-built testing infrastructure.
 
 Through systematic evaluation of these considerations, ground-based testing in a secure facility emerges as the most viable approach for structural validation. 
-This methodology enables obeying safety protocols while maintaining precise control over experimental parameters. Having established this foundational testing approach, @tab_30 lists conventional physical #glspl("lie").
+This methodology facilitates compliance with safety protocols while maintaining precise control over experimental parameters.
+
+Having established this foundational testing approach, @tab_30 lists conventional physical #glspl("lie").
 
 #figure(
   table(
@@ -116,7 +119,7 @@ It could also be that the structure being loaded has to undergo the same test mu
 
 Testing requirements for prototype structures present additional complexities, particularly given the typically limited availability of test specimens due to high manufacturing costs. 
 These constraints often necessitate non-destructive testing protocols to preserve specimen integrity for subsequent analyses or practical implementation. Such preservation requirements preclude certain invasive methods, such as drilling mounting holes or applying permanent adhesives. Furthermore, surface integrity considerations may extend to protective coatings, where paint degradation needs to be prevented.
-Beyond these foundational demands, the #glspl("lie") must demonstrate a higher strength characteristics than the test specimens to prevent unintended failure modes that could compromise experimental validity @Rossow_2014. 
+Beyond these foundational demands, the #glspl("lie") must demonstrate higher strength characteristics than the test specimens to prevent unintended failure modes that could compromise experimental validity @Rossow_2014. 
 A notable distinction exists between testing standardized versus complex structures. 
 While standardized geometries often benefit from existing test facilities and established protocols, complex geometries typically require custom-manufactured #glspl("lie"). The subsequent parts of this section examine the individual load introduction methods presented in @tab_30 in detail.
 
@@ -194,25 +197,25 @@ Following the introduction of individual #gls("lie") configurations, a systemati
 From a cost perspective, sandbags represent the most economical #gls("lie") option, with minimal procurement costs per unit. Even implementations requiring numerous units maintain decisive cost advantages over alternative methods. The absence of operational energy requirements further enhances their economic efficiency compared to powered alternatives such as stage lifts or crane-cylinder systems.
 However, sandbags demonstrate major limitations in load introduction precision relative to other #glspl("lie"). Their loading capability is fundamentally constrained by gravitational forces acting vertically downward. 
 While angled force components could theoretically be achieved through strategic sandbag placement on inclined surfaces, such arrangements would introduce additional complexities and reduce load application precision. 
-The implementation requires a comparatively high quantity of individual #gls("lie") units, unlike the efficient electromechanical systems where a single cylinder could replace multiple sandbag units. 
+The implementation requires a comparatively high quantity of individual #gls("lie") units, unlike efficient electromechanical systems where a single cylinder could replace multiple sandbags. 
 Despite these shortcomings, sandbags offer advantages in procurement accessibility and versatile reusability across various applications.
 Safety considerations vary significantly between standard wing tests and pressurized tank configurations. 
-Unlike conventional unpressurized testing, the integration of pressurized water tanks constructed from #gls("cfrp") introduces substantial safety concerns. 
-Structural failure scenarios could result in the release of fine, sharp #gls("cfrp") particles, posing risks of cutaneous injuries. Additional investigation is required regarding potential damage to measurement instrumentation and associated systems from particle dispersion. The respiratory hazard from airborne #gls("cfrp") particles presents a decisive occupational safety consideration requiring thorough risk assessment.
+Unlike conventional unpressurized testing, the integration of pressurized water tanks constructed from #gls("cfrp", long:true) introduces substantial safety concerns. 
+Structural failure scenarios could result in the release of fine, sharp #gls("cfrp") particles, posing risks of cutaneous injuries. Additional investigation is required regarding potential damage to measurement instrumentation and associated systems from particle dispersion. The respiratory hazard from airborne #gls("cfrp") particles presents a paramount occupational safety consideration requiring thorough risk assessment.
 // -------------------------------------------------------------------------- //
 
 In the event of tank failure, sandbags provide limited safety mitigation, restricting #gls("cfrp") particle dispersion only in the vertical direction. 
 While sandbag placement typically allows flexible load distribution adjustment during structural verification of small aircraft, this flexibility becomes a critical safety concern with pressurized tanks. Post-pressurization modification of sandbag positioning entails life-threatening risks, effectively precluding load distribution adjustments under pressurized conditions using current methodologies.
-Testing multiple load cases necessitates complete system depressurization and likely draining and refilling of the test medium between investigations. 
+Testing multiple load cases necessitates complete system depressurization and likely draining and refilling the test medium between investigations. 
 Additionally, automotive industry regulations for high-pressure vessels mandate dynamic testing protocols alongside static evaluations. The inherent limitations of sandbag-based loading render dynamic structural verification, particularly cyclic loading scenarios, infeasible.
 Control system requirements demonstrate notable variation based on load distribution precision demands. 
 Although achieving high-quality load distribution embodies substantial effort and monitoring, basic load application can be accomplished with minimal control infrastructure. The potential for unintended loading during sandbag placement necessitates careful sequence analysis. 
 
-Given the novelty of combined internal pressure and external loading in #gls("swith"), precise load distribution becomes especially critical for validating simulation models and understanding the structural behavior under these multi-load conditions.
+Given the novelty of combined internal pressure and external loading in #glspl("swith"), precise load distribution becomes especially critical for validating simulation models and understanding the structural behavior under these multi-load conditions.
 Personnel requirements remain minimal, with basic material handling competencies sufficing for implementation. Standard equipment operation (hand trucks, forklifts) combined with supervised placement verification adequately supports testing procedures. However, test reproducibility suffers from inherent restrictions in load distribution precision, resulting in poor repeatability characteristics.
 While sandbags represent established methodology without significant innovation potential, they offer advantages regarding constraint forces. The axial loading nature and absence of profile enclosure requirements minimize unwanted force introduction into the test structure.
 Tension load introduction remains infeasible through sandbag application due to their inherent gravitational operation. Yet, the modeling aspects demonstrate favorable characteristics, as sandbag loading can be approximated as constant surface pressure. This simplification facilitates straightforward integration into simulation frameworks with minimal computational overhead.
 
-Summarizing the sandbag assessment: Despite offering economic advantages and accessibility with minimal personnel training requirements, sandbags present impactful obstacles in load distribution precision. 
+Summarizing the sandbag assessment: Despite offering economic advantages and accessibility with minimal personnel training requirements, sandbags face decisive obstacles in load distribution precision. 
 Safety considerations with pressurized #gls("swith") preclude manual load adjustments post-pressurization, though automated systems could potentially address this barrier. In turn, this would introduce additional complexity and cost, negating the primary advantages of sandbag application. 
 The method's suboptimal characteristics for combined loading scenarios emphasize the necessity for thorough requirement analysis in #gls("lie") selection, particularly for novel structural configurations involving internal pressure and external loads.

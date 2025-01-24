@@ -163,13 +163,13 @@ However, while the interpretation needs to be done for each specific simulation 
 // ----------------------------- 4_Physical_Load ---------------------------- //
 // ---------------------------- 5_Physical_Collet --------------------------- //
 As another crucial aspect of experimental structural testing, @chap_3_4 addressed a fundamental requirement by delineating the core principles of load introduction in aircraft testing, with particular emphasis on #gls("swith") configurations.
-Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct #gls("lie", long:true) methodologies were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
+Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct load introduction methods were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
 A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, incorporating factors ranging from economic viability to technical implementation challenges. 
 The assessment results were obtained through analytical reasoning and concise evaluation matrices, enabling clear comparison across methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
 This highlighted both the methodical nature and inherent complexity of the assessment process.
-The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific aspects and some identified crucial parameters. 
+The analysis revealed that optimal #gls("lie", long:true) selection depends strongly on context-specific aspects and some identified crucial parameters. 
 These crucial parameters required rigorous determination through load approximation analysis.
 This investigation provided a methodological foundation for #gls("lie") selection and forming the motivation for the detailed #gls("ld", long:true) analysis outlined in @chap_4.
 
