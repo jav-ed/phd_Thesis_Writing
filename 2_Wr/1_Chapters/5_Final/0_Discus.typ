@@ -175,16 +175,16 @@ This investigation provided a methodological foundation for #gls("lie") selectio
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //#
 Building upon this, @chap_4_0 established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
-The investigation presented two primary approaches for determining optimal #glspl("lie") configurations: regression-based methods and k-means++ clustering. 
-Initial analysis explored regression techniques, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
-Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct computation of #glspl("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
+The investigation presented two primary approaches for determining optimal #gls("lie") configurations: regression-based methods and k-means++ clustering, an unsupervised machine learning technique.
+Initial analysis explored regression methods, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
+Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct computation of #gls("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
 The algorithm's capability to return both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
 Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
-However, major limitations were identified in the k-means++ approach, especially regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurement. 
+However, major limitations were identified in the k-means++ approach, especially regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurements. 
 These limitations, while substantial, do not diminish the method's value as an initial parameter derivation tool. 
-Rather, they highlighted the necessity for further optimization to overcome practical constraints in structural testing applications. 
-The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provided a pathway for resolving these remaining challenges while maintaining the advantages of the clustering approach.
+Rather, they highlighted the necessity for additional steps to overcome practical constraints in structural testing applications. 
+The integration of k-means++ outputs with a comprehensive optimization framework, as examined in @chap_4_5_0 to @chap_4_5_3, provided a pathway for resolving these remaining challenges. This approach also retains the advantages of the clustering method.
 
 
 // ------------------------------- 1_Get_Aero ------------------------------- //
