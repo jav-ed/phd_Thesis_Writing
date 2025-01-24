@@ -192,7 +192,6 @@ Following the introduction of individual #gls("lie") configurations, a systemati
 // ========================================================================== //
 // =========================== Assessment sandbag =========================== //
 // ========================================================================== //
-// ---------------------------------- here ---------------------------------- //
 #hor_Line("Assessment: Sandbag")
 From a cost perspective, sandbags represent the most economical #gls("lie") option, with minimal procurement costs per unit. Even implementations requiring numerous units maintain decisive cost advantages over alternative methods. The absence of operational energy requirements further enhances their economic efficiency compared to powered alternatives such as stage lifts or crane-cylinder systems.
 However, sandbags demonstrate major limitations in load introduction precision relative to other #glspl("lie"). Their loading capability is fundamentally constrained by gravitational forces acting vertically downward. 
