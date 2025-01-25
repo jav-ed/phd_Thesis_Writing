@@ -6,7 +6,7 @@
 
 // Title was tested and is inshallah fine
 == Aerodynamic Load Computation and Post-Processing <chap_4_1>
-In @chap_3_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the establishment of the necessity of #gls("ld", long:true). 
+In @chap_3_4, an examination of available #glspl("lie", long:true) for introducing physical loads in the wing of #gls("swith", long:true) was conducted. These elements were evaluated against specific criteria, leading to the conclusion that #gls("ld", long:true) is necessary.
 The investigation continued in @chap_4_0, exploring various #gls("ld") possibilities and concluding that the elaborated methods require integration with optimization approaches to address the remaining issues. 
 Prior to executing optimization-based #gls("ld") and its subsequent steps, obtaining the aerodynamic loads acting on the aircraft wing is essential.
 This section presents a methodology for acquiring these loads through numerical simulation and details their transformation from distributed loads to discrete point loads. 
@@ -141,7 +141,7 @@ The distribution of partial point loads within a single #gls("fem") element can 
 For a given element $i$, this relationship leads to an important property regarding the distribution of forces.
 Consider an element $i$ where $i = "const"$ and $j in {0,1, ..., n_F-1}$.
 It follows that for $F_(i= "const", j)$, all partial forces are equal
-$F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F)$.
+$F_(i,j=0) = F_(i,j=1) = ... = F_(i,j=n_F-1)$.
 This equality demonstrates that all partial point loads within the same element maintain identical magnitudes. However, this equality relationship is strictly limited to forces within a single element and does not extend to forces across different elements.
 The obtained data structure can be expressed as a matrix $bold(X)$, following the convention used in Scikit-learn @Pedregosa2011, as shown in @eq_85.
 
