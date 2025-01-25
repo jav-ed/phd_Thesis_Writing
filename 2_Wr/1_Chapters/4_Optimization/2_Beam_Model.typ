@@ -9,7 +9,7 @@
 
 The previous @chap_4_1 explained how aerodynamic loads are obtained and what steps are required to convert them into a suitable input format for k-means++ during the initial step of #gls("ld", long:true). 
 It was also mentioned that the one-dimensional representation of the resulting partial forces $F_(a,i,j)$ enables the integration of one-dimensional beam models within an optimization framework. 
-This section provides a mathematical description of beam modelling. It addresses fundamental questions about its definition, application, and computational implementation.
+This section provides a mathematical description of beam modeling. It addresses fundamental questions about its definition, application, and computational implementation.
 The examination of optimization fundamentals follows in @chap_4_3. 
 Subsequently, @chap_4_4 analyzes the incorporation of beam models within an optimization framework and assesses their advantages and limitations compared to alternative approaches.
 
