@@ -22,6 +22,11 @@
   // to have the following sections start with A.1, A.2, and so on
   counter(heading).update(1)
 
+  // have Appendix Section A.1
+  show heading.where(level: 1): set heading(supplement: [Appendix Chapter])
+  show heading.where(level: 2): set heading(supplement: [Appendix Section])
+  show heading.where(level: 3): set heading(supplement: [Appendix Subsection])
+
   // -------------------------------- keep it ------------------------------- //
   body
 

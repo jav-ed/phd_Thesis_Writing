@@ -207,7 +207,7 @@ Building upon these computational efficiency considerations, @chap_4_2 delved in
 While analytical solutions for individual beam models using traditional pen-and-paper methods are feasible, this approach is impractical for integration within numerical optimization frameworks. 
 To address this limitation, the Python programming language was adopted as the computational environment, with a detailed justification delineated for this choice. 
 The investigation examined two beam solvers, which were first validated against proven textbook solutions and subsequently integrated into an optimization framework. 
-The transformation of three-dimensional support conditions in #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. 
+The transformation of three-dimensional support conditions of #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. 
 Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the most appropriate option.
 
 // ----------------------------- 3_Optim_Basics ----------------------------- //
