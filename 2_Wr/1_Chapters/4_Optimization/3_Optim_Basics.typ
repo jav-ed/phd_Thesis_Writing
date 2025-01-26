@@ -31,6 +31,24 @@ These characteristics, including multimodality and the distinction between local
 // ---------------------------- global and local ---------------------------- //
 The function depicted in @fig_72 features distinct points of absolute maximum and minimum values. 
 Within the entire considered function space, the point with the highest value is defined as the global maximum, while the point with the lowest value as the global minimum.
+
+// -------------------------------------------------------------------------- //
+// TODO
+1. Inflection Points vs. Sign Change in the First Derivative
+Text to Check (current):
+
+The analysis can be extended to inflection points observable in the function. Before and after inflection points, the first derivative, which represents the function's slope, usually undergoes a sign change.
+
+Issue:
+An inflection point is where the second derivative typically changes sign (the function’s concavity changes). It does not necessarily imply that the first derivative changes sign. Indeed, the slope can remain positive (or negative) through an inflection point. Local minima/maxima occur where the first derivative is zero and changes sign, but inflection points are different.
+
+Suggested Revision:
+
+The analysis can be extended to inflection points, which occur where the second derivative changes sign and the function’s concavity transitions from concave up to concave down or vice versa. Unlike local minima or maxima, the slope (first derivative) at an inflection point need not be zero, nor must it change sign.
+
+// -------------------------------------------------------------------------- //
+
+
 The analysis can be extended to inflection points observable in the function. 
 Before and after inflection points, the first derivative, which represents the function's slope, usually undergoes a sign change.
 Local minima and maxima occur precisely at points where the first derivative equals zero. 
@@ -128,7 +146,7 @@ To better understand this process, it is imperative to define the objective func
 The objective function establishes a mathematical framework that quantifies the optimization goal through fundamental principles of the respective field, incorporating physical laws, empirical relationships, and other measurable criteria. This function transforms a set of design variables into a single scalar value representing the quantity to be optimized. The mathematical formulation facilitates numerical implementation, where computational logic enhances solution efficiency and manages complex constraints. This approach enables systematic design space exploration while maintaining mathematical rigor and computational efficiency.
 
 // -------------------------------------------------------------------------- //
-In practical applications, a large number of design variables is only justified when sufficient computing resources are available, and the modeling accuracy necessitates such complexity.
+In practical applications, a large number of design variables are only justified when sufficient computing resources are available, and the modeling accuracy necessitates such complexity.
 In such cases, sensitivity analysis serves as a structured approach to evaluate the significance of each design variable.
 The magnitude and direction of gradients provide crucial information about the relationship between design variables and the objective function. 
 A high positive or negative gradient indicates that the design variable substantially influences the objective function, while a gradient approaching zero suggests minimal impact. 
@@ -144,8 +162,8 @@ These barriers manifest in multiple aspects: the complexity of maintaining and c
 The diversity of disciplines in such optimization problems can span multiple domains, including economics, environmental impact, mechanical structural analysis, logistics, aerodynamics, propulsion systems, and control engineering. 
 This diversity extends to their mathematical tractability, which can vary significantly among disciplines.
 Some disciplines, such as structural mechanics and aerodynamics, can be comprehensively described through differential equations.
-Others, vy contrast, may resist complete mathematical formulation due to their inherent qualitative nature. 
-In such cases, developing appropriate numerical representations may cost significant effort. 
+Others, by contrast, may resist complete mathematical formulation due to their inherent qualitative nature. 
+In such cases, developing appropriate numerical representations may demand significant effort. 
 The obstacle lies in attempting to capture the essential characteristics while maintaining computational feasibility.
 
 The aforementioned disciplines exemplify the complexity inherent in optimization problems, which among others are found in aircraft design. While these disciplines demonstrate key aspects of aircraft development, the field encompasses an even broader range of specialized domains than those enumerated.
