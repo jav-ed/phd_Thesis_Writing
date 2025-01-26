@@ -4,6 +4,7 @@
 #pagebreak(weak:true)
 
 // Word rep ins. done
+// proofread ins. done
 
 = Structural Testing Optimization Framework<chap_4>
 The critical load case for an experimental structural static test was identified in @chap_3_0. 
