@@ -9,7 +9,9 @@
 
 // ------------------------------- beam model ------------------------------- //
 // TODO better phrasing - mayabe two distinct sentences
-The beam model utilized for optimization case B, depicted in @fig_84, differs significantly from case A, as described in @chap_4_5_0, through its modified support configuration.
+In previous @chap_4_5_0 optimization case A was elaborated. 
+The beam model utilized for optimization case B, depicted in @fig_84, differs significantly from case A through its modified support configuration.
+
 Preliminary assessments suggest that this configuration more closely resembles the real-world support characteristics of a #gls("swith").
 Rather than employing a single clamp at the wing root, the new model incorporates two supports positioned in close proximity to each other.
 The first support restricts displacement in the horizontal direction and can withstand bending moments, but it permits vertical movement. 
@@ -52,8 +54,11 @@ J_B = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n_s \
 & 0.03 "ha" <= x_("cl",i) <= "ha"/n_"cl"
 $<eq_113>
 
-A comparison between optimization cases A and B reveals modifications in the first and third constraints. The first constraint introduces the variable $Phi$, representing the outer wing length, which effectively restricts the placement of #glspl("lie") to the inner wing region. The third constraint stipulates that the cumulative length of all #glspl("lie") must remain within the inner wing length.
-Despite the reduction in effective length available for #glspl("lie") placement, the bounds remain consistent with optimization case A. 
+A comparison between optimization cases A and B reveals modifications in the first and third constraints. The first constraint introduces the variable $Phi$, representing the outer wing length, which effectively restricts the placement of #glspl("lie") to the inner wing region. 
+The third constraint stipulates that the cumulative length of all #glspl("lie") must remain within the inner wing length.
+Despite the reduction in effective length available for #glspl("lie") placement, the bounds remain consistent with optimization case A 
+// TODO should this reference be added here?
+(@chap_4_5_0). 
 This design choice was made as the combined effect of bounds and constraints ensures appropriate #gls("lie") length limitations. The current formulation offers enhanced flexibility in #gls("lie") length distribution, allowing individual #glspl("lie") to vary significantly in length relative to others. This flexibility potentially facilitates improved minimization of the objective function.
 Following the methodology established in optimization case A, the matrix notation necessary for practical computational implementation is presented in @eq_114 to @eq_116.
 
