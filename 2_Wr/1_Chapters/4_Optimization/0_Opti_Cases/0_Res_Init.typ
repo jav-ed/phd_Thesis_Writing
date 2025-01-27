@@ -4,6 +4,8 @@
 #pagebreak(weak:true)
 
 // Word rep ins. done
+// proofread ins. done
+
 
 // Title was tested and is inshallah fine 
 == Optimization-Based Load Discretization for Structural Testing <chap_4_5>
@@ -23,7 +25,8 @@ It shall be highlighted that although the cases are presented in order of increa
 
 // Title was tested and is inshallah fine 
 === Optimization Case A <chap_4_5_0>
-Optimization case A serves as the first application of the theoretical foundations established in @chap_4_0 to @chap_4_4. The primary objective is to achieve #gls("ld", long:true) of a numiercal continuous aerodynamic load distribution through numerical optimization. 
+Optimization case A serves as the first application of the theoretical foundations established in @chap_4_0 to @chap_4_4. 
+The primary objective is to achieve #gls("ld", long:true) of a numerical continuous aerodynamic load distribution through numerical optimization. 
 By solving this optimization problem, critical questions posed in @chap_4_0 are addressed, specifically regarding the optimal number of #glspl("lie"), their attachment locations, dimensions, and required load magnitudes. 
 As this case serves as the foundation for subsequent optimization scenarios, the mathematical formulation and its implications are explained in detail. The mathematical formulation of optimization case A is given in @eq_107.
 
@@ -58,7 +61,7 @@ The first constraint ensures that the #glspl("lie") remain within the considered
 This half-span approach leverages the common assumption that aircraft wings are symmetric about the vertical axis, effectively reducing the computational domain and, consequently, the computational time required for optimization.
 For better understanding of these and subsequent constraints, @fig_79 provides a visual representation. The figure illustrates the span direction $x$, the centroid locations $x_i$, and the #gls("lie") lengths $x_("cl",i)$. 
 The first constraint can be rearranged into a more intuitive form, presented in @eq_108. 
-Through these supplementary materials, it becomes evident that the first constraint ensures the sum of the centroid position and the #gls("lie") length needs to remain within the halfspan length.
+Through these supplementary materials, it becomes evident that the first constraint ensures the sum of the centroid position and the #gls("lie") length needs to remain within the half-span length.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
@@ -72,8 +75,8 @@ The second constraint from @eq_107 ensures that #glspl("lie") are properly posit
 
 $ x_i - x_("cl",i)/2 >= 0 $ <eq_109>
 
-The third constraint from @eq_107 stipulates that the cumulative length of all #glspl("lie") must not exceed the halfspan length ha. If this constraint were not imposed, the optimization might suggest #gls("lie") lengths that would physically overlap or extend beyond the wing structure, which would be difficult or impossible to implement in practice. As these constraints stem from physical demands, their inclusion in the optimization formulation is self-evident.
-The bounds defined in @eq_107 establish the permissible range for each #gls("lie") length. A minimum length of 3% of the halfspan was selected as the lower bound. The upper bound was set to $"ha"/ n_"cl"$, where $n_"cl"$ represents the total number of #glspl("lie"). This choice of bounds ensures equal treatment of all #glspl("lie") in  optimization, as each can occupy the same maximum fractional length of the span.
+The third constraint from @eq_107 stipulates that the cumulative length of all #glspl("lie") must not exceed the half-span length ha. If this constraint were not imposed, the optimization might suggest #gls("lie") lengths that would physically overlap or extend beyond the wing structure, which would be difficult or impossible to implement in practice. As these constraints stem from physical demands, their inclusion in the optimization formulation is self-evident.
+The bounds defined in @eq_107 establish the permissible range for each #gls("lie") length. A minimum length of 3% of the half-span was selected as the lower bound. The upper bound was set to $"ha"/ n_"cl"$, where $n_"cl"$ represents the total number of #glspl("lie"). This choice of bounds ensures equal treatment of all #glspl("lie") in optimization, as each can occupy the same maximum fractional length of the span.
 
 // ----------------------------- scipy notation ----------------------------- //
 In alignment with the objective of providing initial guidance for the certification of #glspl("swith"), this work prioritizes the use of free and open-source computational tools whenever feasible. 
