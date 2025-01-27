@@ -63,6 +63,7 @@ For better understanding of these and subsequent constraints, @fig_79 provides a
 The first constraint can be rearranged into a more intuitive form, presented in @eq_108. 
 Through these supplementary materials, it becomes evident that the first constraint ensures the sum of the centroid position and the #gls("lie") length needs to remain within the half-span length.
 
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/1_Pos_Graph_Ink.svg", 
   width: 100%),
@@ -246,9 +247,10 @@ The second row of @fig_80 shows the reaction forces, providing quantitative info
 The third and fourth rows illustrate the shear force and bending moment distributions, respectively. 
 All diagrams utilize a normalized span length, which facilitates data interpretation and comparison across different configurations.
 
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 
-  width: 85%),
+  width: 87%),
   caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case A.],
 )<fig_80>
 

@@ -220,8 +220,6 @@ An overview of some of the identified standards and projects that deal with #gls
 )<tab_7>
 
 
-// tables that are within figures shoud be breakable 
-#show figure: set block(breakable: true)
 #figure(
   table(
     columns: (0.3fr, 1fr),

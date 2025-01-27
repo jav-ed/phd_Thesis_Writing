@@ -6,29 +6,31 @@
 
 // Title was tested and is inshallah fine 
 === Optimization Case B <chap_4_5_1>
-// word approach is used many times here
 
 // ------------------------------- beam model ------------------------------- //
-
-The beam model utilized for optimization case B, depicted in @fig_84, differs significantly from case A through its modified support configuration, which potentially offers a more representative characterization of a #gls("swith") system based on preliminary assessments.
+The beam model utilized for optimization case B, depicted in @fig_84, differs significantly from case A through its modified support configuration. 
+Preliminary assessments suggest that this configuration more closely resembles the real-world support characteristics of a #gls("swith").
 Rather than employing a single clamp at the wing root, the new model incorporates two supports positioned in close proximity to each other.
-The first support restricts displacement in the horizontal direction and can withstand bending moments while permitting vertical movement. 
-Conversely, the second support allows horizontal movement but constrains vertical displacement while also bearing bending moments. This unconventional support configuration emphasizes the necessity for flexibility in the beam modeling approach, particularly in accommodating various structural modifications.
+The first support restricts displacement in the horizontal direction and can withstand bending moments, but it permits vertical movement. 
+Conversely, the second support allows horizontal movement and constrains vertical displacement while also bearing bending moments. 
+This unconventional support configuration emphasizes the necessity for flexibility in the beam modeling approach. As mentioned in @chap_4_4, this flexibility is particularly important in accommodating various structural modifications.
 
-While this support system has received approval from the IMA, certain aspects of its underlying rationale remain proprietary. It is noteworthy that no standardized support configuration exists for #gls("swith") systems, primarily due to their absence in commercial markets. Given the innovative nature of #glspl("swith"), the final support system implementation may deviate substantially from the presented configuration. Furthermore, as #glspl("swith") become commercially available, support systems may vary across different designs, reinforcing the demand for a versatile beam modeling approach.
+Although this support system has received approval from the IMA Dresden, certain aspects of its underlying rationale remain proprietary. 
+Yet, it shall be highlighted that the absence of #glspl("swith") in commercial markets means that no standardized support configuration has been established.
+Given the innovative nature of #glspl("swith"), the final support system implementation may deviate substantially from the presented configuration. Furthermore, as #glspl("swith") become commercially available, support systems may vary across different designs, reinforcing the demand for a versatile beam modeling approach.
 
 // -------------------------------------------------------------------------- //
 Inspection of @fig_84 reveals that the aerodynamic force is not applied along the entire wing span. 
-Although conventional aircraft wings typically experience aerodynamic loading across their full span, several practical considerations justify this partial loading approach for #glspl("swith"). 
-A primary consideration stems from the design flexibility of the pressurized tube system. The #gls("swith") concept does not dictate tubes to extend through the complete wing span. Instead, tubes may be confined to the inner wing section, leaving the outer wing tank-free. This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
+In contrast to conventional aircraft wings, which typically experience aerodynamic loading across their full span, several practical considerations justify this partial loading approach for #glspl("swith").
+A primary consideration stems from the design flexibility of the pressurized tubes. The #gls("swith") concept does not dictate tubes to extend through the complete wing span. Instead, tubes may be confined to the inner wing section, leaving the outer wing tank-free. 
+This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
 The modular outer wing design permits customization of aerodynamic properties through interchangeable sections, allowing a single primary #gls("swith") design to accommodate varying performance requirements. Additionally, removable outer wing sections facilitate maintenance access to the pressurized tubes. This design approach is particularly beneficial for research and development, as it enables focused simulation and experimental investigation of the wing-tube section while utilizing simplified outer wing structures for testing purposes.
 
 Furthermore, @fig_84 shows a small gap between the left and right supports where no aerodynamic load is applied. This gap represents the fuselage-wing junction area, accounting for the structural interface between these major components.
 
-
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/0_True_Bem_combined.svg", 
-  width: 95%),
+  width: 87%),
   caption: [Beam schematic with boundary conditions, corresponding reaction forces, shear force distribution, and bending moment distribution across the normalized span for optimization case B.],
 )<fig_84>
 
