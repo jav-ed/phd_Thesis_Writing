@@ -112,7 +112,7 @@ The optimization framework exhibits adaptability through design variables, bound
 A detailed exposition of these optimization parameters for each investigated scenario appears in @chap_4_5. 
 Despite these case-specific adaptations, the fundamental form of the objective function presented in @eq_106 remains unchanged throughout all investigations documented in @chap_4_5.
 
-The computational implementation utilizes the differential evolution algorithm @Storn1997 @osti_1163659 @Suganthan2012 @Wong @Wang2012 through its integration in the open-source numerical computing package SciPy @Virtanen2020a. 
+The computational implementation utilizes the differential evolution algorithm @Storn1997 @osti_1163659 @Suganthan2012 @Wong @Wang2012 through its integration in the open-source numerical computing package SciPy @Virtanen2020a @RalfGommers2024. 
 This selection was motivated by several technical and practical considerations. 
 The primary advantage stems from the seamless integration capabilities between SciPy and the beam model solver IndeterminateBeam @interdetbeam_tool, both being free and open-source tools. 
 This compatibility facilitates reproducibility of the research findings, enabling other researchers to build upon this work without requiring substantial financial resources.
