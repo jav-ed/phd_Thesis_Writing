@@ -52,7 +52,7 @@ The computational implementation draws substantial benefit from available open-s
 The computational efficiency of beam models proves decisively advantageous within optimization frameworks. 
 The reduced calculation times become especially valuable when viewing the numerous function evaluations required for optimization procedures. 
 This temporal efficiency permits more extensive exploration of design spaces within practical time constraints, enabling more comprehensive optimization studies.
-Such advantages gain significant relevance in light of the iterative nature of formulating a complete optimiaztion problem as explained previously.
+Such advantages gain significant relevance in light of the iterative nature of formulating a complete optimization problem as explained previously.
 
 // -------------------------------- fem story ------------------------------- //
 The implementation of #gls("fem") analyses reveals several critical considerations that necessitate thorough examination. 
