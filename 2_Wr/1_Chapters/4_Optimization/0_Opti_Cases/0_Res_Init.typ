@@ -224,7 +224,7 @@ $ <eq_112>
 @fig_80 presents the fundamental beam model configuration and its analytical solution, which serves as the reference for optimization. The figure consists of four key elements arranged in rows, each providing essential information for the analysis.
 In the first row, the beam schematic illustrates the support configuration and loading conditions. The beam's left end features a fixed support (clamp), which constrains both translational and rotational degrees of freedom, enabling it to resist forces in horizontal and vertical directions while bearing bending moments. The applied loads are indicated by upward-pointing arrows, corresponding to the aerodynamic lift forces that maintain the aircraft's altitude during flight.
 A notable difference between @fig_80 and @fig_70 lies in the depiction of distributed loads. 
-While APAME generates numerous discrete load values as detailed in @chap_4_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to characterize the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
+While APAME @Filkovic  generates numerous discrete load values as detailed in @chap_4_1, displaying individual numerical values would compromise the figure's clarity due to the high density of data points. Instead, a continuous red distribution curve is employed to characterize the true aerodynamic load distribution, providing a clear visual representation of the loading pattern while maintaining figure legibility.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_A/0_True_Bem_combined.svg", 

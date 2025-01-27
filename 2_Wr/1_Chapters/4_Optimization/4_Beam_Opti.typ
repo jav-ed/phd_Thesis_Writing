@@ -6,6 +6,7 @@
 #import "../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/4_Beam_Optim/1_Opti_Step.typ": *
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was tested and is inshallah fine
 == Integration of Structural Analysis for Optimization  <chap_4_4>
@@ -41,13 +42,13 @@ However, when individual optimization cycles demand computational periods extend
 // -------------------------------------------------------------------------- //
 A systematic comparison between beam model and #gls("fem") approaches outlines their fundamental characteristics regarding accuracy and computational requirements. 
 While beam models exhibit reduced accuracy in structural response reproduction, they demonstrate enhanced computational efficiency when compared to detailed #gls("fem") analyses. 
-This trade off manifests in several practical advantages that warrant careful consideration.
+This trade-off manifests in several practical advantages that warrant careful consideration.
 The development and implementation of beam models present notable efficiency advantages. Model creation proceeds with increased rapidity, enabling engineers to evaluate multiple design variants within compressed time frames. This accelerated development cycle facilitates comprehensive exploration of structural configurations, providing valuable insights.
 The theoretical foundation of beam models offers distinct practical benefits. 
 The mathematical principles underlying beam theory offer enhanced accessibility for practitioners new to structural analysis. 
 These fundamental concepts pose reduced conceptual barriers when compared with the mathematical complexities inherent in #gls("fem") formulations. Such accessibility extends to educational settings, where students can engage effectively with structural analysis concepts through practical implementation.
 
-The computational implementation draws substantial benefit from available open source Python libraries, as documented in @chap_4_2. These frameworks maintain mathematical transparency while providing accessible tools for beam analysis implementation. The modest computational requirements enable analyses on standard computing hardware, eliminating dependence on specialized computational resources. This accessibility yields additional advantages, including reduced financial costs and environmental impact associated with computational resource usage. Furthermore, the relative simplicity of beam models can expedite the identification and resolution of numerical issues during development.
+The computational implementation draws substantial benefit from available open-source Python libraries, as documented in @chap_4_2. These frameworks maintain mathematical transparency while providing accessible tools for beam analysis implementation. The modest computational requirements enable analyses on standard computing hardware, eliminating dependence on specialized computational resources. This accessibility yields additional advantages, including reduced financial costs and environmental impact associated with computational resource usage. Furthermore, the relative simplicity of beam models can expedite the identification and resolution of numerical issues during development.
 The computational efficiency of beam models proves decisively advantageous within optimization frameworks. 
 The reduced calculation times become especially valuable when viewing the numerous function evaluations required for optimization procedures. 
 This temporal efficiency permits more extensive exploration of design spaces within practical time constraints, enabling more comprehensive optimization studies.
@@ -116,7 +117,7 @@ This selection was motivated by several technical and practical considerations.
 The primary advantage stems from the seamless integration capabilities between SciPy and the beam model solver IndeterminateBeam @interdetbeam_tool, both being free and open-source tools. 
 This compatibility facilitates reproducibility of the research findings, enabling other researchers to build upon this work without requiring substantial financial resources.
 The SciPy package offers additional advantages through its robust documentation, straightforward installation process, and established reliability within the scientific computing community. 
-A especially relevant feature of the SciPy differential evolution implementation lies in its ability to utilize multiple #gls("cpu", long:true) cores while providing extensive customization options for optimization.
+An especially relevant feature of the SciPy differential evolution implementation lies in its ability to utilize multiple #gls("cpu", long:true) cores while providing extensive customization options for optimization.
 
 // --------------------------- application to lie --------------------------- //
 The optimization process yields a discretized representation of the aerodynamic loads, providing essential parameters for experimental structural testing. 
@@ -162,7 +163,7 @@ Suitable options include the ZTL, Hashin, and Puck criteria @Altenbach2018 @mark
 The quantitative evaluation approach presented in @fig_78 enables the assessment of #gls("ld", long:true) behavior in three-dimensional space. 
 The precision of this evaluation relies upon multiple parameters that require proper examination. The selected procedure for transforming one-dimensional discretized loads into three-dimensional force distributions constitutes a principal factor that shapes the evaluation outcomes. 
 Additionally, the particular structural configuration of the #gls("swith") introduces further complexities into the evaluation process. 
-It can be assumed that the optimization based #gls("ld") efficacy correlates with the uniformity of material properties, notably the consistency of stiffness characteristics throughout the structure.
+It can be assumed that the optimization-based #gls("ld") efficacy correlates with the uniformity of material properties, notably the consistency of stiffness characteristics throughout the structure.
 Finally, for practical applications, the open-source tool meshio @schlomer2022meshio offers comprehensive capabilities for processing element and nodal values, enabling the calculation of deviations between distinct #gls("fem") solutions. 
 This functionality supports open-source platforms and remains compatible with various commercial #gls("fem") solvers, thereby providing a systematic approach for structural response comparisons.
 
