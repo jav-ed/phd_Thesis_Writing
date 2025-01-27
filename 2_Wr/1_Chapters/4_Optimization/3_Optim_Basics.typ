@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 
 // Title was tested and is inshallah fine
@@ -31,26 +32,6 @@ These characteristics, including multimodality and the distinction between local
 // ---------------------------- global and local ---------------------------- //
 The function depicted in @fig_72 features distinct points of absolute maximum and minimum values. 
 Within the entire considered function space, the point with the highest value is defined as the global maximum, while the point with the lowest value as the global minimum.
-
-// -------------------------------------------------------------------------- //
-// TODO
-1. Inflection Points vs. Sign Change in the First Derivative
-Text to Check (current):
-
-The analysis can be extended to inflection points observable in the function. Before and after inflection points, the first derivative, which represents the function's slope, usually undergoes a sign change.
-
-Issue:
-An inflection point is where the second derivative typically changes sign (the function’s concavity changes). It does not necessarily imply that the first derivative changes sign. Indeed, the slope can remain positive (or negative) through an inflection point. Local minima/maxima occur where the first derivative is zero and changes sign, but inflection points are different.
-
-Suggested Revision:
-
-The analysis can be extended to inflection points, which occur where the second derivative changes sign and the function’s concavity transitions from concave up to concave down or vice versa. Unlike local minima or maxima, the slope (first derivative) at an inflection point need not be zero, nor must it change sign.
-
-// -------------------------------------------------------------------------- //
-
-
-The analysis can be extended to inflection points observable in the function. 
-Before and after inflection points, the first derivative, which represents the function's slope, usually undergoes a sign change.
 Local minima and maxima occur precisely at points where the first derivative equals zero. 
 This mathematical property establishes a key distinction: although a function typically possesses a singular global maximum and a singular global minimum, it may contain multiple local maxima and minima.
 
@@ -73,7 +54,7 @@ A representative example of a saddle point is illustrated in @fig_74.
 #figure(
   image("../../../1_Data/2_Figs/0_Content/1_Chap/3_Optimization/3_Opti_Basics/2_Saddle_Point.svg", 
   width: 100%),
-  caption: [Analytical representation of a function exhibiting a saddle point, demonstrating characteristic derivative behavior in one dimension.],
+  caption: [Representation of an analytical function exhibiting a saddle point, demonstrating characteristic derivative behavior in one dimension.],
 )<fig_74>
 
 // --------------------------- multivariate optim --------------------------- //
