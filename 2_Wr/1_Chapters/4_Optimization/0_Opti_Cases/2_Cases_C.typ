@@ -6,8 +6,11 @@
 
 // Title was tested and is inshallah fine 
 === Optimization Case C <chap_4_5_2>
+// ---------------------------------- here ---------------------------------- //
+In the previous @chap_4_5_1, optimization case B was introduced with its results being shown and interpreted. 
+For optimization case C, the underlying beam model remains identical to that presented in optimization case B through @fig_84. 
 
-For optimization case C, the underlying beam model remains identical to that presented in optimization case B through @fig_84. Similarly, the optimization definition maintains consistency with case B as provided in @eq_113. The primary contribution of optimization case C emerges from addressing a constraint commonly encountered in real-world applications.
+Similarly, the optimization definition maintains consistency with case B as provided in @eq_113. The primary contribution of optimization case C emerges from addressing a constraint commonly encountered in real-world applications.
 In practical aircraft design, certain sections of the wing-tube structure are inherently unsuitable for #glspl("lie") placement. This limitation typically occurs in areas where critical components such as propulsion systems and landing gear are mounted to the wing-tube section. Even in scenarios where these components could theoretically be relocated, existing structural connection elements may preclude the placement of standard #glspl("lie").
 The k-means++ algorithm, which outputs centroids representing the central positions of the #glspl("lie"), allows for modification of its input matrix $bold(X)$ to accommodate these constraints. For this investigation, the region between $approx 0.21$ and $approx 0.289$ is designated as a prohibited domain for #glspl("lie") placement. To implement this constraint, all forces within the prohibited domain are redistributed to adjacent regions on either side. This modification ensures centroid placement occurs exclusively outside the prohibited domain.
 

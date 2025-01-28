@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
 
 // Title was tested and is inshallah fine 
 === Optimization Case B <chap_4_5_1>
@@ -28,7 +29,7 @@ A primary consideration stems from the design flexibility of the pressurized tub
 This configuration enables the implementation of replaceable outer wing sections, offering multiple advantages for both operational and research purposes.
 The modular outer wing design permits customization of aerodynamic properties through interchangeable sections, allowing a single primary #gls("swith") design to accommodate varying performance requirements. Additionally, removable outer wing sections facilitate maintenance access to the pressurized tubes. This design approach is particularly beneficial for research and development, as it enables focused simulation and experimental investigation of the wing-tube section while utilizing simplified outer wing structures for testing purposes.
 
-Furthermore, @fig_84 shows a small gap between the left and right supports where no aerodynamic load is applied. This gap represents the fuselage-wing junction area, accounting for the structural interface between these major components.
+Moreover, @fig_84 shows a small gap between the left and right supports where no aerodynamic load is applied. This gap represents the fuselage-wing junction area, accounting for the structural interface between these major components.
 
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_B/0_True_Bem_combined.svg", 
