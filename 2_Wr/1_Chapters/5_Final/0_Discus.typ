@@ -235,4 +235,4 @@ Some optimizations were conducted on the High-Performance Computing (HPC) cluste
 However, all optimization cases can also be executed on conventional desktop computers. This was confirmed by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
 Using these hardware specifications, the complete analysis, spanning configurations from four to eight #glspl("lie"), yielded computation times ranging from a few hours to less than a day, depending on the number of required iterations.
 
-The results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. The framework's flexibility and adaptability highlight its potential value for future #gls("swith") structural testing and certification processes.
+In conclusion, the results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. Furthermore, the framework's flexibility and adaptability underscore its potential value for future #gls("swith") structural testing and certification processes.
