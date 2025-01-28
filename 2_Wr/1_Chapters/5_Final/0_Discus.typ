@@ -75,7 +75,7 @@ Through the application of specific assessment criteria, four essential standard
 Although these standards do not comprehensively address all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks.
 As such, they provide valuable insights into potential certification requirements and testing protocols.
 Among these selected standards, two offer critical specifications regarding working nominal pressure. 
-The maximum allowable nominal pressure varies between standards, ranging from $437.5$ to $525 "bar"$. 
+The maximum allowable nominal pressure varies between standards, ranging from $437.5 "bar"$ to $525 "bar"$. 
 This upper bound was not arbitrary but rather constrained by the capabilities of existing test facilities, which cannot exceed certain pressure levels for experimental structural verification tests.
 These findings emphasized the dual considerations necessary for #gls("swith") development and certification: adherence to both hydrogen containment and aircraft-specific regulations, as well as acknowledging the current technological limits in testing high-pressure systems.
 
@@ -94,11 +94,12 @@ Although these analytical capabilities are helpful, they must be complemented by
 The focus on safety aspects in @chap_2_1 revealed that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
 Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
 Additionally, hydrogen's diffusion behavior and material compatibility emerged as another critical hurdle for safe containment. 
-While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement. The analysis in @chap_2_1 emphasized the critical importance of addressing hydrogen safety in real-world applications. It also underscored the value of integrating numerical simulations and experimental tests to bridge the gap between theoretical insights and practical implementation. This integration is essential for the experimental structural validation tests of #glspl("swith"), where precise prediction and management of hydrogen behavior are crucial for both safety and performance.
+While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement. The analysis in @chap_2_1 emphasized the critical importance of addressing hydrogen safety in real-world applications. 
+It also underscored the value of integrating numerical simulations and experimental tests to bridge the gap between theoretical insights and practical implementation. This integration is essential for the experimental structural validation tests of #glspl("swith"), where precise prediction and management of hydrogen behavior are crucial for both safety and performance.
 
 
 // ------------------------------ 2_Experiment ------------------------------ //
-Building on these safety considerations, experimental investigations revealed further insights into specific obstacles and mitigation strategies.
+Building on these safety considerations, experimental investigations identified specific obstacles and proposed mitigation strategies.
 The experimental investigations mentioned in @chap_2_2 demonstrated that hydrogen self-ignition represents a tangible concern in real-world applications.
 Additionally, @chap_2_2 identified the primary geometrical factors that can precipitate ignition and outlined the necessary modifications to mitigate this risk. 
 Despite the threat of hydrogen self-ignition requiring serious scrutiny, the literature review supported the feasibility of secure hydrogen application, provided its properties are thoroughly understood and appropriately accounted for.
@@ -140,17 +141,17 @@ Such insights prove especially relevant for #glspl("swith"), where pressurized v
 
 // -------------------------------- 2_Curv_3D ------------------------------- //
 To further advance the understanding of these structural behaviors, @chap_3_2 presented a comprehensive methodology for curvature calculation and interpretation. 
-The study employed a #gls("fem", long:true) simulation model of a #gls("swith") configuration, detailed the procedure for obtaining necessary derivatives. 
+The study employed a #gls("fem", long:true) simulation model of a #gls("swith") configuration and detailed the procedure for obtaining necessary derivatives. 
 A key strength of this approach lies in its displacement-based foundation, enabling application to both analytical solutions and numerical simulations.
-The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations. 
-Through illustrative examples of critical curvature assessment, the work revealed inherent hurdles in directly comparing computed curvature results with critical curvature values for complex structures like aircraft.
-The findings yielded practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. However, the examination also highlighted the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach, which was subsequently presented in @chap_3_3.
+The methodology's versatility extends beyond computational applications, as displacement data can also be sourced from experimental investigations.
+The critical curvature indicates whether the impact of the filling media on structural properties can be neglected. Through illustrative examples of critical curvature assessment, the work revealed significant challenges in directly comparing computed results with this reference value for complex structures like aircraft.
+The outcome yielded practical implications for experimental testing: hydrogen could potentially be substituted with an alternative filling agent without significantly affecting the maximum bearable bending moment. 
+However, the examination also highlighted the complexities involved in assessing critical curvature in three-dimensional space, necessitating the development of an enhanced approach.
 
 // -------------------------------- 3_Curv_2D ------------------------------- //
-@chap_3_3 addressed this complexity by introducing transformation methods that convert three-dimensional curvature data into more manageable two-dimensional representations. 
-The developed mathematical framework enabled the conversion of six-dimensional matrix representations ($bold(A)^(n times 6)$) into simplified two-dimensional forms ($bold(A)^(n times 2)$). 
+@chap_3_3 addressed the aforementioned complexity by introducing transformation methods. The resulting mathematical framework facilitated the conversion of six-dimensional matrix representations ($bold(A)^(n times 6)$) into simplified two-dimensional forms ($bold(A)^(n times 2)$).
 While three averaging approaches were initially considered, mathematical evaluation demonstrated that only two fundamentally different methods exist.
-These methods were systematically evaluated using a range of lift coefficients and internal pressures from $15 "MPa"$ to $110 "MPa"$. 
+These methods were systematically evaluated using a range of lift coefficients and internal pressures from $150 "bar"$ to $1100 "bar"$ ($15 "MPa"$ to $110 "MPa"$). 
 The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region remained substantially below critical thresholds.
 This finding led to a practical conclusion potentially specific to the investigated simulation model. 
 Under the analyzed load conditions, hydrogen could be substituted with an alternative filling agent in experimental structural validation testing. 

@@ -168,7 +168,7 @@ Higher safety factors necessitate more material to meet the requirements, result
 
 The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 "bar"$. 
 The maximum working nominal pressures ($p_"wnp"$) achievable under the EC 406/2010 and #gls("iso") 19881:2018 standards range from $300$ to $465 "bar"$, depending on the fiber material.
-However, when considering the factors specified in the #gls("iso") 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between $437.5$ and $525 "bar"$.
+However, when considering the factors specified in the #gls("iso") 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between $437.5 "bar"$ and $525 "bar"$.
 
 A comprehensive overview of these relationships is provided in @tab_14. 
 The table presents the complete list of fiber material-dependent safety factors for the three aforementioned standards, shown as the denominators of the fractions. Additionally, it illustrates the maximum allowable operating pressures for each combination of fiber material and standard, calculated based on the maximum test pressure of $1050 "bar"$ @Cebolla2019.
@@ -277,7 +277,7 @@ Among these, as explained in @chap_1_1, #gls("cs")-23 is limited to small aircra
 From the numerous available standards, the introduced assessment criteria were used to obtain a few essential standards in a structured manner. 
 The analysis has identified four essential standards pertinent to the development and certification of #glspl("swith"). While these standards collectively do not address all the unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks. 
 They provide valuable insights into potential certification requirements and testing protocols for #glspl("swith").
-Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from $437.5$ to $525 "bar"$. 
+Two of the selected standards offer critical information regarding working nominal pressure. Depending on the applicable standard, the maximum allowable nominal pressure ranges from $437.5 "bar"$ to $525 "bar"$. 
 This upper limit is constrained by the capabilities of existing test facilities, which cannot generate arbitrarily high pressures for experimental structural verification tests.
 These findings underscore the importance of considering both hydrogen containment and aircraft-specific regulations in the development and certification of #glspl("swith"), while also highlighting the current technological limitations in testing high-pressure systems.
 ])

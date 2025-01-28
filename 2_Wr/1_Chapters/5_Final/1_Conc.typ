@@ -20,7 +20,7 @@ This research established foundational steps toward certification of #glspl("swi
 // -------------------------------------------------------------------------- //
 The investigation revealed numerous existing standards and regulations in the field. However, none of these adequately addresses the unique properties associated with #glspl("swith"). Based on specific assessment criteria, four essential standards were identified as particularly relevant. These standards represent the current state of the art and provide valuable insights not only for the development of #glspl("swith") but also for understanding potential certification testing requirements.
 A significant finding from this investigation concerns practical constraints related to testing capabilities. 
-Current test facility limitations impose maximum allowable nominal pressure ranges between $437.5$ and $525 "bar"$.
+Current test facility limitations impose maximum allowable nominal pressure ranges between $437.5 "bar"$ and $525 "bar"$.
 The investigation conducted an extensive analysis of pressure vessel technology. The study examined hydrogen pressure vessel applications across various mobility sectors. 
 
 Based on this investigation, Type IV vessels emerged as the currently most suitable configuration for #glspl("swith").
