@@ -274,19 +274,12 @@ Analysis of configurations ranging from four to eight #glspl("lie") showed a gen
 Despite computational complexity increasing across all cases with higher #gls("lie") 
 quantities, Case D exhibited particularly significant computational demands.
 
+The developed optimization framework successfully answered critical questions for experimental structural testing, including the dimensioning, spatial distribution, force magnitudes, and quantity determination of #glspl("lie").
 
-// ---------------------------------- here ---------------------------------- //
-// note these adjustments must also be incorporated into 0_Discuss
-// its must be clear that everything is linked to lie, not just the domensioning:
-The developed optimization framework successfully answered critical questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
-
-Some optimizations were conducted on the High-Performance Computing (HPC) cluster #emp_[Barnard] at the Technical University Dresden. 
-However, all optimization cases can be executed on conventional desktop computers. 
+Some optimizations were conducted on the High-Performance Computing (HPC) cluster #emp_[Barnard] at the TUD Dresden University of Technology. 
+However, all optimization cases can also be executed on conventional desktop computers. 
 This was confirmed by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
-Using this hardware specifications, the complete analysis spanning configurations from four to eight #glspl("lie") yielded computation times ranging from a few hours to under a day, depending on the number of required iterations.
+Using these hardware specifications, the complete analysis, spanning configurations from four to eight #glspl("lie"), yielded computation times ranging from a few hours to less than a day, depending on the number of required iterations.
 
-The results demonstrate the feasibility of achieving satisfactory #gls("ld") while meeting practical engineering constraints. The framework's adaptability to diverse requirements indicates its potential value for future #gls("swith") structural testing and certification processes.
-
-
-
+The results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. The framework's flexibility and adaptability highlight its potential value for future #gls("swith") structural testing and certification processes.
 ])
