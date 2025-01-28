@@ -63,7 +63,7 @@ While existing patents described tanks as load-bearing structural integral compo
 This gap in specialized technical documentation emphasized the need for more comprehensive research spanning both automotive and aerospace industries.
 
 // ---------------------------- 4_Various_Fields ---------------------------- //
-Moving beyond transportation sectors, @chap_1_4 added a broader perspective on hydrogen standards. A significant number of standards addressing hydrogen applications were identified. 
+Moving beyond transportation sectors, @chap_1_4 added a broader perspective on hydrogen standards. A significant number of standards relating to hydrogen applications were identified. 
 These standards existed in various stages of development. Some standards were in use, whereas others were undergoing updates. 
 Additionally, several standards had been announced, but still awaited their initial publication.
 Given this extensive array of standards, a systematic approach emerged as imperative for identifying the ones most applicable to #gls("swith") development and certification processes.
@@ -72,7 +72,7 @@ Given this extensive array of standards, a systematic approach emerged as impera
 The implementation of this systematic approach, as detailed in @chap_1_5, yielded 
 meaningful results. 
 Through the application of specific assessment criteria, four essential standards were identified as particularly relevant to the development and certification of #glspl("swith"). 
-Although these standards do not comprehensively address all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks.
+Although these standards do not comprehensively cover all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks.
 As such, they provide valuable insights into potential certification requirements and testing protocols.
 Among these selected standards, two offer critical specifications regarding working nominal pressure. 
 The maximum allowable nominal pressure varies between standards, ranging from $437.5 "bar"$ to $525 "bar"$. 
@@ -152,31 +152,31 @@ However, the examination also highlighted the complexities involved in assessing
 @chap_3_3 addressed the aforementioned complexity by introducing transformation methods. The resulting mathematical framework facilitated the conversion of six-dimensional matrix representations ($bold(A)^(n times 6)$) into simplified two-dimensional forms ($bold(A)^(n times 2)$).
 While three averaging approaches were initially considered, mathematical evaluation demonstrated that only two fundamentally different methods exist.
 These methods were systematically evaluated using a range of lift coefficients and internal pressures from $150 "bar"$ to $1100 "bar"$ ($15 "MPa"$ to $110 "MPa"$). 
-The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region remained substantially below critical thresholds.
-This finding led to a practical conclusion potentially specific to the investigated simulation model. 
+The analysis revealed that for the studied simulation model and load cases, the curvatures in the undisturbed region stayed substantially below the critical threshold.
+This finding led to a practical conclusion, potentially specific to the investigated simulation model. 
 Under the analyzed load conditions, hydrogen could be substituted with an alternative filling agent in experimental structural validation testing. 
 This substitution would not affect the structural behavior, as the material's stiffness characteristics would remain unchanged.
-However, while the interpretation needs to be done for each specific simulation configuration, the laid out method remains of general nature.
+However, while the interpretation needs to be done for each specific simulation configuration, the laid out method is of general nature.
 
 // ----------------------------- 4_Physical_Load ---------------------------- //
 // ---------------------------- 5_Physical_Collet --------------------------- //
-As another crucial aspect of experimental structural testing, @chap_3_4 addressed a fundamental requirement by delineating the core principles of load introduction in aircraft testing, with particular emphasis on #gls("swith") configurations.
+As another crucial aspect of experimental structural testing, @chap_3_4 tackled a fundamental requirement by delineating the core principles of load introduction in aircraft testing, with particular emphasis on #glspl("swith").
 Following an examination of critical load cases and safety considerations from previous sections, the analysis presented three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. After establishing ground-based testing as the most viable approach, four distinct load introduction methods were extensively evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
 A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, incorporating factors ranging from economic viability to technical implementation challenges. 
-The assessment results were obtained through analytical reasoning and concise evaluation matrices, enabling clear comparison across methods. 
+The assessment results were obtained through analytical reasoning and concise evaluation matrices, enabling clear comparison across the methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
-This highlighted both the methodical nature and inherent complexity of the assessment process.
+This highlighted the methodical nature as well as the inherent complexity of the assessment process.
 The analysis revealed that optimal #gls("lie", long:true) selection depends strongly on context-specific aspects and some identified crucial parameters. 
 These crucial parameters required rigorous determination through load approximation analysis.
-This investigation provided a methodological foundation for #gls("lie") selection and forming the motivation for the detailed #gls("ld", long:true) analysis outlined in @chap_4.
+This investigation provided a methodological foundation for #gls("lie") selection and formed the motivation for the detailed #gls("ld", long:true) analysis outlined in @chap_4.
 
 // ---------------------------- 0_Discretize_Aero --------------------------- //#
 Building upon this, @chap_4_0 established the fundamental concepts and methodologies for #gls("ld"), defining it as the systematic approximation of continuous aerodynamic loads through discrete point and area loads.
 The investigation presented two primary approaches for determining optimal #gls("lie") configurations: regression-based methods and k-means++ clustering, an unsupervised machine learning technique.
 Initial analysis explored regression methods, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these approaches were thoroughly investigated to assess their applicability to load approximation tasks.
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct computation of #gls("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
-The algorithm's capability to return both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
+The algorithm's capability to return both positional information and to compute force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches.
 Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
 However, major limitations were identified in the k-means++ approach, especially regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurements. 
@@ -187,6 +187,7 @@ The integration of k-means++ outputs with a comprehensive optimization framework
 
 // ------------------------------- 1_Get_Aero ------------------------------- //
 To implement this optimization framework effectively, @chap_4_1 introduced a sophisticated methodology for transforming complex three-dimensional aerodynamic loads into manageable one-dimensional resulting point loads.
+// ---------------------------------- here ---------------------------------- //
 The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
 To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. 
 The procedure addressed some key hurdles. 
@@ -203,7 +204,7 @@ The findings outlined in @chap_4_1 provided the essential foundation for underst
 
 Building upon these computational efficiency considerations, @chap_4_2 delved into the core mathematical foundations of beam modeling theory. 
 While analytical solutions for individual beam models using traditional pen-and-paper methods are feasible, this approach is impractical for integration within numerical optimization frameworks. 
-To address this limitation, the Python programming language was adopted as the computational environment, with a detailed justification delineated for this choice. 
+To overcome this limitation, the Python programming language was adopted as the computational environment, with a detailed justification delineated for this choice. 
 The investigation examined two beam solvers, which were first validated against proven textbook solutions and subsequently integrated into an optimization framework. 
 The transformation of three-dimensional support conditions of #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. 
 Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the most appropriate option.

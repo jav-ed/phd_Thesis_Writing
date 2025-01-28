@@ -346,7 +346,7 @@ The investigation presented two primary options for determining optimal #gls("li
 Initial analysis explored regression methods, examining their capabilities through the lens of interpolation, extrapolation, and various error metrics including L1 and L2 norms. The mathematical foundations of these options were thoroughly investigated to assess their applicability to load approximation tasks.
 
 Subsequently, k-means++ clustering emerged as a particularly promising methodology, offering direct computation of #gls("lie") positions through centroid calculation and enabling physical interpretation of cluster regions. 
-The algorithm's capability to yield both positional information and appropriate force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches. 
+The algorithm's capability to return both positional information and to compute force magnitudes through cluster summation demonstrated significant advantages over regression-based approaches.
 Furthermore, the widespread implementation of k-means++ across diverse scientific applications supported its selection as the preferred method.
 
 However, critical limitations were identified in the k-means++ approach, especially regarding the determination of individual #gls("lie") dimensions and the maintenance of unobstructed viewing areas necessary for inspection and measurements.

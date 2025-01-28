@@ -239,10 +239,10 @@ This quantitative foundation, coupled with the qualitative evaluation criteria, 
 This section provided the fundamentals of physical load introduction methods for aircraft structural testing, with particular focus on #glspl("swith"). Following an examination of critical load cases and safety aspects from previous sections, the analysis found three potential approaches for experimental load application: flight testing, wind tunnel testing, and ground-based structural testing. 
 After establishing ground-based testing as the most viable approach, four distinct load introduction methods were evaluated: sandbags, profile-conforming collets, air cushions, and hydraulic cylinders with pads.
 A comprehensive evaluation framework comprising thirteen criteria was developed and applied to each method, considering factors ranging from economic viability to technical implementation challenges. 
-The assessment results were obtained through analytical reasoning and outlined as concise evaluation matrices, enabling clear comparison across methods. 
+The assessment results were obtained through analytical reasoning and outlined as concise evaluation matrices, enabling clear comparison across the methods. 
 
 The evaluation of the innovation criterion demonstrated how different perspectives can lead to opposing yet equally valid conclusions. 
-This highlights both the systematic nature and inherent complexity of the assessment process.
+This highlights both the systematic nature and the inherent complexity of the assessment process.
 The analysis revealed that optimal #gls("lie") selection depends strongly on context-specific variables and some identified critical parameters. 
 These critical parameters require rigorous determination through load approximation analysis.
 This investigation provides a methodological foundation for #gls("lie") selection and establishes the motivation for the detailed #gls("ld") analysis presented in @chap_4.
