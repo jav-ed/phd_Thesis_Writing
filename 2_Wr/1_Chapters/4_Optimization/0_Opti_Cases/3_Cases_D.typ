@@ -3,6 +3,8 @@
 /* -------------------------------------------------------------------------- */
 
 // Word rep ins. done
+// proofread ins. done
+
 
 // Title was tested and is inshallah fine 
 === Optimization Case D <chap_4_5_3>
@@ -40,9 +42,6 @@ $ bold(x)_d =  [
 $<eq_118>
 
 With the design variables established, attention can be directed to the second constraint in @eq_117. This constraint has been modified by incorporating the term $x_(s,2)$. 
-By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that the #glspl("lie") cannot be placed in the left to the second support position. 
-The underlying beam model remains consistent with that used in optimization Cases B and C. Its beam schematic is illustrated in the first row of @fig_84. 
-
 By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that the #glspl("lie") cannot be placed to the left of the second support position. 
 The underlying beam model remains consistent with that used in optimization Cases B and C, of which the schematic is depicted in the first row of @fig_84.
 In the third constraint of @eq_117, the variable $beta$ serves as a factor that determines what proportion of the tube-wing length may be utilized for the placement of #glspl("lie").
@@ -211,7 +210,7 @@ Further examination of the objective function values in @fig_95 indicates that i
 However, the second row of @fig_95 demonstrates that higher numbers of #glspl("lie") significantly increase the optimization complexity.
 This complexity manifests itself in the number of iterations required. Solutions for four #glspl("lie") were found for all visibility demands. Notably, increasing the number of #glspl("lie") led to iteration counts approaching the maximum limit of 3000.
 The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") (1907) and four #glspl("lie") (244) at a 50% visibility demand. 
-The case with eight #glspl("lie") necessitated approximately eight times more iterations to find a solution ($1907/244 approx 7.82$). 
+The case with eight #glspl("lie") necessitated approximately eight times as many iterations to find a solution ($1907/244 approx 7.82$). 
 Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found, even after 3000 iterations.
 
 // -------------------------------------------------------------------------- //
