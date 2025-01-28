@@ -6,7 +6,7 @@
 
 // Title was tested and is inshallah fine 
 === Optimization Case D <chap_4_5_3>
-// talk about overlappting collets and how this issues was resolved
+// talk about overlapping collets and how this issues was resolved
 // case L,M,N,O
 // D 50%
 // D 66%
@@ -32,7 +32,7 @@ J_D = &(sum_(i)^n abs(M_("true",i) - M_("optim",i)))/n_s \
 & gamma_l dot F_(r,i) <= x_(F,i) <= gamma_u dot F_(r,i)
 $<eq_117>
 
-To understand the optimization definition for Case D, the design variables require clear specification. The design variable vector for optimization Case D consists of the #glspl("lie") lengths $x_("cl",i)$ and the forces $x_(F,i)$ that act on the corresponding #glspl("lie"). The mathematical representation is given in @eq_118.
+To understand the optimization definition for Case D, the design variables require clear specification. The design variable vector $bold(x_d)$ for optimization Case D consists of the #glspl("lie") lengths $x_("cl",i)$ and the forces $x_(F,i)$ that act on the corresponding #glspl("lie"). The mathematical description of the design variable vector $bold(x_d)$ is given in @eq_118.
 
 $ bold(x)_d =  [
   x_("cl",0), x_("cl",1), x_("cl",2) ... x_("cl",n_"cl"-1), quad
@@ -40,9 +40,14 @@ $ bold(x)_d =  [
 $<eq_118>
 
 With the design variables established, attention can be directed to the second constraint in @eq_117. This constraint has been modified by incorporating the term $x_(s,2)$. 
-By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that #glspl("lie") cannot be placed in the region left of the second support position. 
-The underlying beam model remains consistent with that used in optimization Cases B and C, as illustrated in @fig_84. In the third constraint of @eq_117, the variable $beta$ serves as a factor that determines what proportion of the tube-wing length may be utilized for #glspl("lie") placement.
-Regarding the force design variables $x_(F,i)$, bounds have been implemented where $F_(r,i)$ represents the resultant force when force members within a cluster are summed, as detailed in @chap_4_0. 
+By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that the #glspl("lie") cannot be placed in the left to the second support position. 
+The underlying beam model remains consistent with that used in optimization Cases B and C. Its beam schematic is illustrated in the first row of @fig_84. 
+
+By adding the term $x_(s,2)$, which defines the position of the second support point, it is ensured that the #glspl("lie") cannot be placed to the left of the second support position. 
+The underlying beam model remains consistent with that used in optimization Cases B and C, of which the schematic is depicted in the first row of @fig_84.
+In the third constraint of @eq_117, the variable $beta$ serves as a factor that determines what proportion of the tube-wing length may be utilized for the placement of #glspl("lie").
+Regarding the force design variables $x_(F,i)$, bounds have been implemented. 
+Here, $F_(r,i)$ represents the resultant force obtained by summing the force members within a cluster, as detailed in @chap_4_0.
 The lower force factor $gamma_l$ and upper force factor $gamma_u$ can be applied to the resultant force to constrain its possible values.
 
 // ---------------------------------- scipy --------------------------------- //
@@ -190,27 +195,35 @@ $ <eq_121>
 
 
 // -------------------------------------------------------------------------- //
-Different $beta$ values were analyzed in the subsequent results. The parameter $beta$, as defined in @eq_117, determines the maximum proportion of tube-wing length available for placing #glspl("lie"). 
-Its complement (1 - $beta$) represents the proportion of length that must remain free of #glspl("lie"), referred to as the visibility demand in subsequent analyses. 
+Different $beta$ values were analyzed in the subsequent results. The parameter $beta$, as defined in @eq_117, determines the maximum proportion of tube-wing length available for placing #glspl("lie"). Its complement (1 - $beta$) represents the proportion of length that must remain free of #glspl("lie"), referred to as the visibility demand in later analyses. 
 The investigated $beta$ values were $beta = [0.5, space 0.33, space 0.285, space 0.25]$, corresponding to visibility demands (free lengths) of $[50%, space ~66.7%, space 71.5%, space 75%]$. These outcomes are illustrated in @fig_91 to @fig_94.
-The number of #glspl("lie") selected for these results is based on the analysis presented in @fig_95, which depicts the objective function for four different visibility demands. 
-Not all objective functions appear in the plots, as only solutions satisfying all constraints were considered feasible and displayed in the first row of @fig_95. It is important to note that the absence of plotted solutions does not indicate a lack of solutions altogether, but rather suggests that these solutions violated one or more constraints.
+The number of the #glspl("lie") selected for these results is based on the analysis presented in @fig_95.
+@fig_95 depicts the objective function for four different visibility demands and five different numbers of #glspl("lie").
+Not all objective functions appear in the plots, as only solutions satisfying all constraints were considered feasible and displayed in the first row of @fig_95. 
+It is important to note that the absence of plotted solutions does not indicate a lack of solutions altogether, but rather suggests that these solutions violated one or more constraints.
 
 Analysis of the first row in @fig_95 reveals that the lowest objective function value for a 50% visibility demand was achieved with eight #glspl("lie"). 
-For a 66.7% visibility demand, the optimal #gls("ld", long:true) was achieved with seven #glspl("lie"), while maintaining constraint compliance. Similarly, for visibility demands of 71% and 75%, the best results were obtained with six and five #glspl("lie"), respectively. These findings informed the selection of #glspl("lie") numbers for @fig_91 to @fig_94.
+For a 66.7% visibility demand, the optimal #gls("ld", long:true) was achieved with seven #glspl("lie"), while maintaining constraint compliance. 
+Similarly, for visibility demands of 71% and 75%, the best results were obtained with six and five #glspl("lie"), respectively. 
+These findings informed the selection of #glspl("lie") numbers for @fig_91 to @fig_94.
 Further examination of the objective function values in @fig_95 indicates that increasing the number of #glspl("lie") generally improves the quality of #gls("ld"). 
-However, the second row of @fig_95 demonstrates that higher numbers of #glspl("lie") significantly increase the optimization complexity.
-This complexity manifests in the number of iterations required. Solutions for four #glspl("lie") were found for all visibility demands. Notably, increasing the number of #glspl("lie") led to iteration counts approaching the maximum limit of 3000.
 
-The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") and four #glspl("lie") at a 50% visibility demand. The case with eight #glspl("lie") necessitated approximately eight times more iterations to find a solution. Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found even after 3000 iterations.
+However, the second row of @fig_95 demonstrates that higher numbers of #glspl("lie") significantly increase the optimization complexity.
+This complexity manifests itself in the number of iterations required. Solutions for four #glspl("lie") were found for all visibility demands. Notably, increasing the number of #glspl("lie") led to iteration counts approaching the maximum limit of 3000.
+The computational demand becomes particularly evident when comparing the number of iterations required for eight #glspl("lie") (1907) and four #glspl("lie") (244) at a 50% visibility demand. 
+The case with eight #glspl("lie") necessitated approximately eight times more iterations to find a solution ($1907/244 approx 7.82$). 
+Moreover, for the other three visibility demands with eight #glspl("lie"), no constraint-satisfying solutions were found, even after 3000 iterations.
 
 // -------------------------------------------------------------------------- //
-// TODO corrections required here (langauge based) 
-Finally, all the figures shwoing infromaiton aboout objective function values across different number of #glspl("lie") can be used to decide on the final number of #glspl("lie"). Generally, it can be assumed the lower the number of #glspl("lie") the lwoer the cost for obtianing these physical #glspl("lie"). Likewose the cost of maintaining and 
-// maybe control engineering or somehting else?
-control theory is reduced. If a higher number of #glspl("lie") does not give better #gls("ld") there is no need to buy more #glspl("lie"). However, if costs is a concern, trade offs can be made througha nsweing the question, wheter adding additional #glspl("lie") would significantly improve the #gls("ld") quality.
 
-// adapt the figure caption?
+Finally, especially @fig_95, which shows information about objective function values across different numbers of #glspl("lie"), can be used to determine the optimal number of #glspl("lie").
+Generally, it can be assumed that the lower the number of #glspl("lie"), the lower the cost of obtaining these physical #glspl("lie"). 
+Likewise, the costs of maintenance and the potential need for control engineering are reduced.
+If a higher number of #glspl("lie") does not result in better #gls("ld"), there is no need to purchase additional #glspl("lie"). 
+However, if costs are a concern, trade-offs can be evaluated through @fig_95 by answering the question of whether adding additional #glspl("lie") would significantly improve the #gls("ld") quality.
+
+
+
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D_50/int_Forc_8.svg",
   width: 95%),
@@ -238,27 +251,33 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 
 
 
-// optimiaztion progress
+// optimization progress
 #figure(
   image("../../../../1_Data/2_Figs/0_Content/2_Chap/0_Results/Case_D/1_L_Comb_Obj.svg",
   width: 100%),
-  caption: [optimization case D (50%, 66.7%, 71%, 75%) shows objective funciton values and the required number of iterations for the differen number of #glspl("lie").],
+  caption: [Objective function values and the required number of iterations for different numbers of #glspl("lie") and visibility demands (50%, 66.7%, 71%, 75%) for optimization Case D.],
 )<fig_95>
 
 
 // --------------------------------- summary -------------------------------- //
 #summary_([
 
-The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. The framework was developed to determine key parameters of the #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
+The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. This framework was developed to determine key parameters of #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
 The progression of optimization cases reflects increasingly sophisticated engineering demands. 
-Case A demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). 
-Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
-While maintaining the core optimization framework, Case C addresses practical installation requirements by incorporating spatial restrictions for essential components such as landing gear and propulsion systems. 
-Case D extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
+Case A (@chap_4_5_0) demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). 
+Case B (@chap_4_5_1) adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
+While maintaining the core optimization framework, Case C (@chap_4_5_2) addresses practical installation requirements by incorporating spatial restrictions for essential components, such as landing gear and propulsion systems. 
+Case D (@chap_4_5_3) extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
 
+// -------------------------------------------------------------------------- //
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. 
-Despite computational complexity increasing across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands
+Despite computational complexity increasing across all cases with higher #gls("lie") 
+quantities, Case D exhibited particularly significant computational demands.
 
+
+// ---------------------------------- here ---------------------------------- //
+// note these adjustments must also be incorporated into 0_Discuss
+// its must be clear that everything is linked to lie, not just the domensioning:
 The developed optimization framework successfully answered critical questions for experimental structural testing, including #gls("lie") dimensioning, spatial distribution, force magnitude, and quantity determination.
 
 Some optimizations were conducted on the High-Performance Computing (HPC) cluster #emp_[Barnard] at the Technical University Dresden. 
