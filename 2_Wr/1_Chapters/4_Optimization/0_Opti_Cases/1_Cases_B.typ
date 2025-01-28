@@ -8,10 +8,9 @@
 === Optimization Case B <chap_4_5_1>
 
 // ------------------------------- beam model ------------------------------- //
-// TODO better phrasing - mayabe two distinct sentences
-In previous @chap_4_5_0 optimization case A was elaborated. 
-The beam model utilized for optimization case B, depicted in @fig_84, differs significantly from case A through its modified support configuration.
 
+In the previous @chap_4_5_0, optimization case A was elaborated upon. 
+The beam model used for optimization case B, shown in @fig_84, differs significantly from case A due to its modified support configuration. 
 Preliminary assessments suggest that this configuration more closely resembles the real-world support characteristics of a #gls("swith").
 Rather than employing a single clamp at the wing root, the new model incorporates two supports positioned in close proximity to each other.
 The first support restricts displacement in the horizontal direction and can withstand bending moments, but it permits vertical movement. 
@@ -56,9 +55,7 @@ $<eq_113>
 
 A comparison between optimization cases A and B reveals modifications in the first and third constraints. The first constraint introduces the variable $Phi$, representing the outer wing length, which effectively restricts the placement of #glspl("lie") to the inner wing region. 
 The third constraint stipulates that the cumulative length of all #glspl("lie") must remain within the inner wing length.
-Despite the reduction in effective length available for #glspl("lie") placement, the bounds remain consistent with optimization case A 
-// TODO should this reference be added here?
-(@chap_4_5_0). 
+Despite the reduction in effective length available for #glspl("lie") placement, the bounds remain consistent with optimization case A (@chap_4_5_0). 
 This design choice was made as the combined effect of bounds and constraints ensures appropriate #gls("lie") length limitations. The current formulation offers enhanced flexibility in #gls("lie") length distribution, allowing individual #glspl("lie") to vary significantly in length relative to others. This flexibility potentially facilitates improved minimization of the objective function.
 Following the methodology established in optimization case A, the matrix notation necessary for practical computational implementation is presented in @eq_114 to @eq_116.
 
@@ -199,9 +196,8 @@ bold(r)\
 
 $ <eq_116>
 
-// ---------------------------------- here ---------------------------------- //
-As established in optimization case A (@chap_4_5_0), the optimization results are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve high-quality approximations of both shear force and bending moment distributions.
-For clarity in @fig_86, the force text annotations for the 8 #glspl("lie") configuration are deliberately positioned with alternating vertical offsets. This arrangement was necessary to prevent textual overlap between adjacent annotations. 
+As established in optimization case A, the results of optimization case B are presented for configurations with 4 and 8 #glspl("lie") in @fig_85 and @fig_86, respectively. Analogous to the findings in case A, these variations achieve high-quality approximations of both shear force and bending moment distributions.
+For reasons of clarity, in @fig_86, the force text annotations for the 8 #glspl("lie") configuration are deliberately positioned with alternating vertical offsets. This arrangement was necessary to prevent textual overlap between adjacent annotations. 
 The visualization maintains consistent scaling across all subplots to enable direct comparisons between different configurations. The color-coded text scheme aids in distinguishing individual force components.
 The results demonstrate that the #glspl("lie") positions satisfy the constraint that prohibits overlapping between individual #glspl("lie"). The optimizer utilized the entire available inner wing length for #gls("lie") placement, identifying this as the optimal design configuration.
 While this optimization definition proves suitable for scenarios without restrictions on #gls("lie") placement within the wing-tube section, applications requiring optical measurement devices necessitate specific regions to remain free of #glspl("lie"). This consideration is addressed in optimization case D, presented in @chap_4_5_3.
@@ -219,7 +215,7 @@ While this optimization definition proves suitable for scenarios without restric
 )<fig_86>
 
 The influence of varying #gls("lie") quantities on optimization performance is illustrated in @fig_87. In alignment with the findings from optimization case A (@chap_4_5_0), increasing the number of #glspl("lie") leads to a reduction in the objective function value, resulting in improved load approximation accuracy. 
-Although optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to reach the optimal solution.
+Although optimization case B requires more iterations to converge compared to case A, the overall computational effort remains modest, with relatively few iterations needed to achieve the optimized solutions.
 
 // optimiaztion progress
 #figure(

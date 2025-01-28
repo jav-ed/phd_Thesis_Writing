@@ -251,8 +251,10 @@ control theory is reduced. If a higher number of #glspl("lie") does not give bet
 
 The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. The framework was developed to determine key parameters of the #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
 The progression of optimization cases reflects increasingly sophisticated engineering demands. 
-Case A demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
-While maintaining the core optimization framework, Case C addresses practical installation requirements by incorporating spatial restrictions for essential components such as landing gear and propulsion systems. Case D extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
+Case A demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). 
+Case B adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
+While maintaining the core optimization framework, Case C addresses practical installation requirements by incorporating spatial restrictions for essential components such as landing gear and propulsion systems. 
+Case D extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
 
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. 
 Despite computational complexity increasing across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands
