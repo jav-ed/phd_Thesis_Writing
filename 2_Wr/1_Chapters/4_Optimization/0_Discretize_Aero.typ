@@ -247,7 +247,6 @@ The computational implementation requires calculating distances between each dat
 )<fig_64>
 // -------------------------------------------------------------------------- //
 
-// ---------------------------------- here ---------------------------------- //
 Employing the squared L2-norm as the distance metric in @eq_75 yields the k-means optimization problem shown in @eq_76, where $Phi(C_i)$ represents the cumulative distances between a cluster's centroid and its respective members.
 
 $ op("argmin",limits: #true)_(mu_i) 

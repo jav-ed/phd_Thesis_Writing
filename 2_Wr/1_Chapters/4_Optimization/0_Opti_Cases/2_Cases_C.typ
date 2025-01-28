@@ -7,7 +7,6 @@
 
 // Title was tested and is inshallah fine 
 === Optimization Case C <chap_4_5_2>
-// ---------------------------------- here ---------------------------------- //
 In the previous @chap_4_5_1, optimization case B was introduced with its results being shown and interpreted. 
 For optimization case C, the underlying beam model remains identical to that presented in optimization case B through @fig_84. 
 Similarly, the optimization definition maintains consistency with case B, as provided in @eq_113. 

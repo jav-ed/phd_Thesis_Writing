@@ -5,43 +5,41 @@
 
 = Discussion <chap_6>
 
-Starting with @chap_0_2, it was explained that aviation has become an indispensable part of the global economy, serving both personal and business sectors with fast and reliable transportation. 
-However, its negative environmental impact warranted acknowledgment
-This acknowledgment necessitated research into alternative, more environmentally friendly fuels. 
+Starting with @chap_0_2, it was explained that aviation has become an indispensable part of the global economy, serving both personal and business sectors with fast and reliable transportation.
+However, its negative environmental impact necessitated recognition, prompting research into alternative and more environmentally friendly fuels.
 Hydrogen emerged as a promising candidate, not only for aviation but across various sectors, making research in this area broadly valuable. 
 In this context, #gls("swith", long:true) represent a novel approach. 
-The hydrogen tanks not only store the fuel, but also are an active part of the wing such that loads across wing and hydrogen tanks are shared.
+The hydrogen tanks not only store fuel but also actively function as part of the wing, sharing loads between the wing and the tanks.
 This innovative design aims to optimize space usage and potentially increase wing stiffness, showcasing how scientific ingenuity could address multiple challenges simultaneously.
 
 // ------------------------------ state of art ------------------------------ //
-
 The detailed definition of a #gls("swith") and its comparison with other structure integrated concepts as well with regular aircraft is given in @chap_0_7.
 Here, it was concluded that all hydrogen-powered aircraft concepts share the same primary objective: the reduction of negative environmental impact. 
-The structural integration of hydrogen tanks offers a dual advantage. 
-These tanks not only store hydrogen but also share the load with the attached structural components. 
+The structural integration of hydrogen tanks provides a dual advantage by combining fuel storage with load-sharing capabilities.
 At the time of writing, two distinct approaches to structural integration were identified: fuselage-integrated and wing-integrated.
 The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research embodies both advantages and barriers. 
-On one hand, it enhances the value and supports the novelty aspect of the #gls("swith") research. 
+On one hand, it enhances the value and supports the novelty aspect of #gls("swith") research. 
 Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 
 // ------------------------------- 0_Standards ------------------------------ //
-Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization, development and certification, as detailed in @chap_1. 
+Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization, development, and certification, as detailed in @chap_1. 
 The role of standards for #gls("swith") certification is multifaceted and remains in its infancy.
-While the innovative nature of #glspl("swith") face challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
-At the time of writing this thesis, no known standards or regulations exist for certifying #glspl("swith"). This absence of certification procedures significantly constrains both industrial and scientific application of #glspl("swith").
+While the innovative nature of #glspl("swith") faces challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
+As of this writing, no known standards or regulations exist for certifying #glspl("swith"). 
+This absence of certification procedures significantly constrains industrial and scientific applications of #glspl("swith").
 Consequently, there is a pressing need for appropriate standards upon which industry and scientific institutions can build.
 This proactive approach to standardization is crucial for overcoming current limitations and facilitating broader adoption of #glspl("swith").
-Through careful adaptation of existing standards and development of #gls("swith")-specific regulations, researchers and engineers can establish robust validation procedures. 
-These procedures could ensure that #glspl("swith") are developed and structurally validated in a manner that is both safe and efficient, while meeting industry and regulatory requirements.
+Through careful adaptation of existing standards and certifications and the development of #gls("swith")-specific regulations, researchers and engineers could establish robust validation procedures. 
+These procedures should ensure that #glspl("swith") are developed and structurally validated in a manner that is safe and efficient, while meeting industry and regulatory requirements.
 
 // ---------------------------- 1_Aero_Standards ---------------------------- //
 However, the path toward establishing these standards presented several obstacles. While there are currently available standards that, in theory, could be applied to #gls("swith")-certification, authorities can reject their application due to fundamental differences in pressure requirements and tank scale.
-To bridge this gap, two standards specifically for hydrogen-powered general aviation were announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not currently commercially available, their potential applicability to #glspl("swith") remains uncertain for several reasons.
+To bridge this gap, two standards specifically for hydrogen-powered general aviation were announced: SAE AS 6679 @SAE_Liquid and SAE AS 7373 @SAE_Gas. Though not currently commercially available, their potential applicability to #glspl("swith") is unclear for several reasons.
 Firstly, the scope of these SAE standards regarding tank configuration remains uncertain. 
-In particular, it is not yet clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
+In particular, currently it is not clear whether these standards will be limited to non-integral, non-external loaded, and thus non-load-carrying hydrogen tanks, or if they will extend to external-load carrying integrated designs.
 While they may address fuselage-integral hydrogen tanks, their applicability to wing-integral tanks is not guaranteed. 
-Therefore, the relevance of these announced SAE standards to #gls("swith") certification remains to be determined.
+Therefore, the relevance of these announced SAE standards to #gls("swith") certification has yet to be determined.
 Secondly, these standards may require modifications before gaining acceptance within European regulatory frameworks.
 The timeline of aerospace standardization developments provided additional context. 
 In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. 
@@ -52,59 +50,58 @@ Notably, this development continues as of late 2024, five years after its initia
 While standards development progressed, the broader context of hydrogen pressure vessels exhibited promising opportunities. 
 As derived in @chap_1_2, there exists a vast field of applications for hydrogen pressure vessels.
 The examination of different mobility sectors, which are pivotal drivers of economic and scientific growth, underscored the fundamental importance of hydrogen pressure vessels. 
-Analysis of the five known tank types, including their applications, advantages, and disadvantages, outlined in @chap_1_2 led to a clear conclusion: tank Type IV emerged as the most suitable choice for #gls("swith") design, based on its maturity, commercial availability, and optimal balance between performance and safety considerations.
+Analysis of the five known tank types, including their applications, advantages, and disadvantages, outlined in @chap_1_2, led to a clear conclusion: tank Type IV emerged as the most suitable choice for #gls("swith") design.
+This choice is justified by its maturity, commercial availability, and optimal balance between performance and safety considerations
 
 // ------------------------------ 3_Automotive ------------------------------ //
 Beyond tank selection, @chap_1_3 explored potential insights from the automotive sector. Academic work in the automotive industry revealed common aims with aerospace regarding structural integral hydrogen tanks, demonstrating interest in this technology across multiple transportation sectors.
-As in the aerospace field, available literature on this topic remained scarce.
+Similar to the aerospace field, available literature on this topic remained scarce.
 The most relevant academic contribution from the automotive sector, presented by @Bleser2012, investigated the use of hydrogen tanks as torque absorbers.
 However, this research lacked crucial details, particularly regarding experimental methodology.
 Consequently, the state of automotive research offered limited guidance for certification-oriented experimental structural validation tests of #glspl("swith").
-While existing patents described tanks as load-bearing structural integral components, they too provided insufficient details for experimental structural validation tests of #glspl("swith"). This gap in specialized technical documentation emphasized the need for more comprehensive research spanning both automotive and aerospace industries.
+While existing patents described tanks as load-bearing structural integral components, they too provided insufficient details to support such tests.
+This gap in specialized technical documentation emphasized the need for more comprehensive research spanning both automotive and aerospace industries.
 
 // ---------------------------- 4_Various_Fields ---------------------------- //
 Moving beyond transportation sectors, @chap_1_4 added a broader perspective on hydrogen standards. A significant number of standards addressing hydrogen applications were identified. 
-These standards existed in various stages of development. Some standards were in use, while others were undergoing updates. 
-Additionally, several standards had been announced but still awaited their initial publication.
-Given this extensive array of standards, a systematic approach emerged as imperative for identifying those most applicable to #gls("swith") certification.
-This methodical evaluation proved crucial in determining which standards offered the most relevant guidance for #gls("swith") development and certification processes.
+These standards existed in various stages of development. Some standards were in use, whereas others were undergoing updates. 
+Additionally, several standards had been announced, but still awaited their initial publication.
+Given this extensive array of standards, a systematic approach emerged as imperative for identifying the ones most applicable to #gls("swith") development and certification processes.
 
 // -------------------------- 5_Essential_Standards ------------------------- //
-The implementation of this systematic approach, as detailed in @chap_1_5, has yielded 
+The implementation of this systematic approach, as detailed in @chap_1_5, yielded 
 meaningful results. 
-Through the application of specific assessment criteria, four essential standards have been identified as particularly relevant to the development and certification of #glspl("swith"). 
-Although these standards do not comprehensively address all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks and provide valuable insights into potential certification requirements and testing protocols.
+Through the application of specific assessment criteria, four essential standards were identified as particularly relevant to the development and certification of #glspl("swith"). 
+Although these standards do not comprehensively address all unique aspects of #glspl("swith"), they represent the current state of the art in relevant regulatory frameworks.
+As such, they provide valuable insights into potential certification requirements and testing protocols.
 Among these selected standards, two offer critical specifications regarding working nominal pressure. 
-The maximum allowable nominal pressure varies between standards, ranging from 437.5 to $525 "bar"$. 
+The maximum allowable nominal pressure varies between standards, ranging from $437.5$ to $525 "bar"$. 
 This upper bound was not arbitrary but rather constrained by the capabilities of existing test facilities, which cannot exceed certain pressure levels for experimental structural verification tests.
-These findings emphasized the dual considerations necessary for #gls("swith") development and certification: adherence to both hydrogen containment and aircraft-specific regulations, while acknowledging the current technological limits in testing high-pressure systems.
+These findings emphasized the dual considerations necessary for #gls("swith") development and certification: adherence to both hydrogen containment and aircraft-specific regulations, as well as acknowledging the current technological limits in testing high-pressure systems.
 
 // -------------------------------- 0_H2_Prop ------------------------------- //
 Given these regulatory requirements and testing constraints, a comprehensive understanding of the physical properties and behavior of hydrogen became essential for successful #gls("swith") development and certification.
 @chap_2_0 provided an overview of hydrogen's fundamental properties that underpin its potential as an aviation fuel.
-While safety aspects are addressed in @chap_2_1, the examined properties demonstrated hydrogen's predominantly positive characteristics as an energy carrier. 
+Furthermore, the examined properties demonstrated hydrogen's predominantly positive characteristics as an energy carrier. 
 One notable hurdle, however, was hydrogen's invisibility to the human eye due to its small molecular size, which presents specific detection and measurement requirements.
-The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems highlighted both opportunities and challenges in its implementation as a fuel source. 
-The analytical functions developed for calculating hydrogen mass from density and volume across various pressure and temperature ranges enhance this understanding. 
-These functions, which account for real gas behavior, can support the modeling and simulation of hydrogen storage in applications such as #glspl("swith").
-Moreover, the custom analysis tool developed, based on these functions, can offer valuable insights into hydrogen's behavior under various pressure and temperature conditions. 
+The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems highlighted opportunities as well as challenges in its implementation as a fuel source.
+The analytical functions introduced for calculating hydrogen mass from density and volume across various pressure and temperature ranges deepen this understanding. 
+By accounting for real gas behavior, these functions support the modeling and simulation of hydrogen storage in applications such as #glspl("swith"). 
+Furthermore, the custom analysis tool, developed using these functions, provides valuable insights into hydrogen's behavior under varying pressure and temperature conditions.
 
 // -------------------------------- 1_Safety -------------------------------- //
-While these analytical capabilities are helpful, they must be complemented by a thorough understanding of hydrogen's safety implications, especially for high-pressure applications like #glspl("swith").
+Although these analytical capabilities are helpful, they must be complemented by a thorough understanding of hydrogen's safety implications, especially for high-pressure #glspl("swith").
 The focus on safety aspects in @chap_2_1 revealed that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
 Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
 Additionally, hydrogen's diffusion behavior and material compatibility emerged as another critical hurdle for safe containment. 
-While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement.
-The theoretical knowledge presented in @chap_2_1 emphasized the need for heightened attention to hydrogen safety in real-world applications. 
-It also highlighted the importance of combining data from numerical simulations and experimental tests to bridge gaps between theoretical understanding and practical behavior. 
-This synthesis of theory and practice proves crucial for the experimental structural validation tests of #glspl("swith"), where accurate prediction and management of hydrogen behavior are essential for both safety and performance.
+While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement. The analysis in @chap_2_1 emphasized the critical importance of addressing hydrogen safety in real-world applications. It also underscored the value of integrating numerical simulations and experimental tests to bridge the gap between theoretical insights and practical implementation. This integration is essential for the experimental structural validation tests of #glspl("swith"), where precise prediction and management of hydrogen behavior are crucial for both safety and performance.
 
 
 // ------------------------------ 2_Experiment ------------------------------ //
 Building on these safety considerations, experimental investigations revealed further insights into specific obstacles and mitigation strategies.
 The experimental investigations mentioned in @chap_2_2 demonstrated that hydrogen self-ignition represents a tangible concern in real-world applications.
 Additionally, @chap_2_2 identified the primary geometrical factors that can precipitate ignition and outlined the necessary modifications to mitigate this risk. 
-While the threat of hydrogen self-ignition requires serious scrutiny, the literature review supported the feasibility of secure hydrogen application, provided that its properties are thoroughly understood and appropriately managed.
+Despite the threat of hydrogen self-ignition requiring serious scrutiny, the literature review supported the feasibility of secure hydrogen application, provided its properties are thoroughly understood and appropriately accounted for.
 A critical aspect emerges when evaluating the transferability of hydrogen applications from the automotive industry to #glspl("swith") for large commercial aircraft, such as the Airbus A350-1000 @link_Airbus_350. 
 Rather than direct transposition, a structured approach becomes necessary.
 This involved conducting a series of smaller-scale experimental and numerical studies, progressively advancing toward large aircraft scale. 
@@ -113,7 +110,7 @@ The research delineated a potential development path that emphasized this gradua
 
 
 // --------------------------- 3_Pressurized_Body --------------------------- //
-Given that #glspl("swith") must withstand both internal pressure from hydrogen storage and external aerodynamic loads during flight, understanding the behavior of pressurized vessels under external loading conditions becomes crucial.
+Since #glspl("swith") must withstand internal pressure from hydrogen storage as well as aerodynamic loads during flight, it is crucial to assess the behavior of pressurized vessels under external loading conditions.
 The literature review presented in @chap_2_3 revealed substantial research on pressurized vessels under external dynamic loading. 
 The reviewed studies demonstrated that, for their specific test configurations, internal pressure significantly influences structural behavior, with lateral loads typically generating higher stresses than axial loads. 
 The documented failure mechanisms progress from initial deformation through local failure to global failure, depending on impact energy levels.
