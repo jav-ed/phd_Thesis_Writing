@@ -167,7 +167,7 @@ These high safety factors, as defined in the EC 406/2010 and the #gls("iso") 198
 Higher safety factors necessitate more material to meet the requirements, resulting in increased mass and weight. This outcome is highly undesirable in aviation, as emphasized on multiple occasions in @chap_1.
 
 The limitations of current testing facilities further complicate this issue. The high-pressure gas tank testing facility of the European Commission (GasTeF) @Cebolla2019 reports a maximum internal pressure testing capability of $1050 "bar"$. 
-The maximum working nominal pressures ($p_"wnp"$) achievable under the EC 406/2010 and #gls("iso") 19881:2018 standards range from $300$ to $465 "bar"$, depending on the fiber material.
+The maximum working nominal pressures ($p_"wnp"$) achievable under the EC 406/2010 and #gls("iso") 19881:2018 standards range from $300 "bar"$ to $465 "bar"$, depending on the fiber material.
 However, when considering the factors specified in the #gls("iso") 11119-3:2020, the expected maximum working nominal pressures ($p_"wnp"$) range between $437.5 "bar"$ and $525 "bar"$.
 
 A comprehensive overview of these relationships is provided in @tab_14. 
