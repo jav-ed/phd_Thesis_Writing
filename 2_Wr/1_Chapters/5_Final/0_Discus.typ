@@ -187,13 +187,13 @@ The integration of k-means++ outputs with a comprehensive optimization framework
 
 // ------------------------------- 1_Get_Aero ------------------------------- //
 To implement this optimization framework effectively, @chap_4_1 introduced a sophisticated methodology for transforming complex three-dimensional aerodynamic loads into manageable one-dimensional resulting point loads.
-// ---------------------------------- here ---------------------------------- //
-The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
+The investigation began with explaining the derivation of aerodynamic loads and their structural relevance. 
+This was followed by an examination of the data format requirements for k-means++ clustering.
 To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. 
 The procedure addressed some key hurdles. 
 First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. 
-Second, it resolved mesh density variations that could potentially bias k-means++ clustering results.
-The implementation of a reference-length-based force discretization method proved instrumental in resolving these obstacles. 
+Second, it resolved mesh density variations that can bias k-means++ clustering results.
+The implementation of a reference-length-based force discretization proved instrumental in resolving these obstacles. 
 The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
 
 The reduction of the three-dimensional load distributions to one-dimensional representations enabled the use of computationally efficient beam models as alternatives to #gls("fem") analysis. 
@@ -203,9 +203,9 @@ The findings outlined in @chap_4_1 provided the essential foundation for underst
 // ------------------------------ 2_Beam_Model ------------------------------ //
 
 Building upon these computational efficiency considerations, @chap_4_2 delved into the core mathematical foundations of beam modeling theory. 
-While analytical solutions for individual beam models using traditional pen-and-paper methods are feasible, this approach is impractical for integration within numerical optimization frameworks. 
-To overcome this limitation, the Python programming language was adopted as the computational environment, with a detailed justification delineated for this choice. 
-The investigation examined two beam solvers, which were first validated against proven textbook solutions and subsequently integrated into an optimization framework. 
+Despite analytical solutions for individual beam models using traditional pen-and-paper methods being feasible, this approach is impractical for integration within numerical optimization frameworks. 
+To overcome this limitation, the programming language Python was adopted as the computational environment, with a detailed justification delineated for this choice.
+The investigation examined two beam model solvers, which were first validated against proven textbook solutions and subsequently integrated into an optimization framework.
 The transformation of three-dimensional support conditions of #glspl("swith") to two-dimensional representations can introduce additional complexity, as it can yield statically indeterminate beam models. 
 Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the most appropriate option.
 
@@ -213,7 +213,7 @@ Consequently, the IndeterminateBeam @interdetbeam_tool solver emerged as the mos
 With the beam modeling approach established, @chap_4_3 transitioned to the fundamental principles of optimization. 
 It introduced essential optimization terminology, including objective functions, design variables, constraints, and boundaries.
 The iterative nature of formulating complete optimization problems was demonstrated through a practical example, emphasizing the intricate relationships of integrating these components into a coherent problem definition. 
-The elaboration substantiated the practical relevance of local optima in real-world applications and examined the distinctions between gradient-based and gradient-free optimization.
+The elaboration substantiated the practical relevance of local optima in real-world applications and explained the distinctions between gradient-based and gradient-free optimization.
 Optimization is a very large field that finds application in various industries. For interested readers, several helpful book resources were listed: @Gritzmann2013 @Papageorgiou2015 @Stein2018 @Stein2018a @Koop2018 @Grimme2018 @Scholz2018 @Jarre2019 @Dietz2019 @Schumacher2020. Additionally, for multidisciplinary optimization, reference was made to the textbook @mdobook.
 
 // ------------------------------- 4_Beam_Opti ------------------------------ //
@@ -224,9 +224,13 @@ Subsequently, it was demonstrated how the beam model solver could be integrated 
 
 // --------------------------- optimiaztion cases --------------------------- //
 The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 built upon the optimization framework elucidated in @chap_4_4. This framework was developed to determine key parameters of #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
-The progression of optimization cases reflects increasingly sophisticated engineering demands. Case A (@chap_4_5_0) demonstrated the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). Case B (@chap_4_5_1) adapted to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. While maintaining the core optimization framework, Case C (@chap_4_5_2) addressed practical installation requirements by incorporating spatial restrictions for essential components, such as landing gear and propulsion systems. Case D (@chap_4_5_3) extended these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
+The progression of optimization cases reflects increasingly sophisticated engineering demands. Case A (@chap_4_5_0) demonstrated the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). 
+Case B (@chap_4_5_1) adapted to specific structural requirements by implementing a dual-support system based on proprietary data to better represent #gls("swith") characteristics.
+While maintaining the core optimization framework, Case C (@chap_4_5_2) addressed practical installation requirements by incorporating spatial restrictions for essential components, such as landing gear and propulsion systems. 
+Case D (@chap_4_5_3) extended these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment, without compromising the fundamental optimization approach.
 
-Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. While computational complexity increased across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands. 
+Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. 
+Although computational complexity increased across all cases with higher #gls("lie") quantities, Case D exhibited particularly significant computational demands. 
 The developed optimization framework successfully answered pivotal questions for experimental structural testing, including the dimensioning, spatial distribution, force magnitudes, and quantity determination of #glspl("lie").
 
 
@@ -234,4 +238,5 @@ Some optimizations were conducted on the High-Performance Computing (HPC) cluste
 However, all optimization cases can also be executed on conventional desktop computers. This was confirmed by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
 Using these hardware specifications, the complete analysis, spanning configurations from four to eight #glspl("lie"), yielded computation times ranging from a few hours to less than a day, depending on the number of required iterations.
 
-In conclusion, the results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. Furthermore, the framework's flexibility and adaptability underscore its potential value for future #gls("swith") structural testing and certification processes.
+In conclusion, the results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. 
+Furthermore, the framework's flexibility and adaptability underscore its value for the potential structural testing and certification processes of #glspl("swith") in the future.

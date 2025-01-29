@@ -174,9 +174,10 @@ A dedicated study of both the beam model and the optimization methodology is pre
 // --------------------------------- summary -------------------------------- //
 #summary_([
 Building upon @chap_4_0, this section detailed a methodology for obtaining and transforming three-dimensional aerodynamic loads into one-dimensional resulting point loads. 
-The investigation began with explaining the derivation of aerodynamic loads and their structural relevance, followed by an examination of the data format requirements for k-means++ clustering in relation to APAME's output characteristics.
+The investigation began with explaining the derivation of aerodynamic loads and their structural relevance.
+This was followed by an examination of the data format requirements for k-means++ clustering.
 To bridge the identified gaps between APAME's outputs and k-means++ requirements, a systematic transformation procedure was developed. The procedure addressed some key challenges. First, it enabled the conversion of distributed loads to point loads while maintaining their physical significance. Second, it resolved mesh density variations that can bias k-means++ clustering results.
-The implementation of a reference-length-based force discretization method proved instrumental in resolving these hurdles. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
+The implementation of a reference-length-based force discretization proved instrumental in resolving these hurdles. The development process was supported by numerous visual illustrations and mathematical equations to ensure clear understanding.
 
 The reduction of the three-dimensional load distributions to one-dimensional representations enables the use of computationally efficient beam models as alternatives to #gls("fem") analysis. 
 This simplified modeling approach proves particularly advantageous within optimization frameworks, where computational efficiency becomes crucial due to iterative model evaluations.

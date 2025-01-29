@@ -237,7 +237,7 @@ Multi-objective optimization theory is well documented in the literature @Sengup
 Essential aspects of optimization terminology were introduced, including objective functions, design variables, constraints, and boundaries. 
 The iterative nature of formulating complete optimization problems was demonstrated through a practical example, emphasizing the 
 intricate relationships of integrating these components into a coherent problem definition. 
-The elaboration established the practical relevance of local optima in real-world applications and examined the distinctions between gradient-based and gradient-free optimization.
+The elaboration established the practical relevance of local optima in real-world applications and explained the distinctions between gradient-based and gradient-free optimization.
 Optimization is a very large field that finds application in various industries. For interested readers, several helpful book resources can be listed: @Gritzmann2013 @Papageorgiou2015 @Stein2018 @Stein2018a @Koop2018 @Grimme2018 @Scholz2018 @Jarre2019 @Dietz2019 @Schumacher2020. Finally, for multidisciplinary optimization, reference is made to the textbook @mdobook.
 
 ])

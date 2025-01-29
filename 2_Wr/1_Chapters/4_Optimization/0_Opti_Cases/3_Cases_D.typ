@@ -264,9 +264,11 @@ However, if costs are a concern, trade-offs can be evaluated through @fig_95 by 
 The optimization cases presented in @chap_4_5_0 to @chap_4_5_3 build upon the optimization framework elucidated in @chap_4_4. This framework was developed to determine key parameters of #glspl("lie"), including their dimensions, positioning, force magnitudes, and optimal number. These parameters significantly influence both testing quality and economic efficiency in static structural evaluation procedures.
 The progression of optimization cases reflects increasingly sophisticated engineering demands. 
 Case A (@chap_4_5_0) demonstrates the elementary implementation with a single clamped support configuration, establishing the baseline approach for #gls("ld"). 
-Case B (@chap_4_5_1) adapts to specific structural requirements by implementing a dual-support system, incorporating proprietary data to better represent #gls("swith") characteristics. 
+Case B (@chap_4_5_1) adapts to specific structural requirements by implementing a dual-support system based on proprietary data to better represent #gls("swith") characteristics.
 While maintaining the core optimization framework, Case C (@chap_4_5_2) addresses practical installation requirements by incorporating spatial restrictions for essential components, such as landing gear and propulsion systems. 
-Case D (@chap_4_5_3) extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment while preserving the fundamental optimization approach.
+Case D (@chap_4_5_3) extends these practical considerations by implementing visibility requirements, ensuring sufficient unobstructed areas for measurement and monitoring equipment, without compromising the fundamental optimization approach.
+
+
 
 // -------------------------------------------------------------------------- //
 Analysis of configurations ranging from four to eight #glspl("lie") showed a generally positive correlation between #gls("lie") quantity and load approximation accuracy. 
@@ -279,5 +281,7 @@ However, all optimization cases can also be executed on conventional desktop com
 This was confirmed by performing the majority of computations on standard hardware (Intel i5-10500 CPU, 3.10 GHz, 6 cores/12 threads, 16 GB RAM). 
 Using these hardware specifications, the complete analysis, spanning configurations from four to eight #glspl("lie"), yielded computation times ranging from a few hours to less than a day, depending on the number of required iterations.
 
-In conclusion, the results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. Furthermore, the framework's flexibility and adaptability underscore its potential value for future #gls("swith") structural testing and certification processes.
+In conclusion, the results demonstrate the feasibility of achieving satisfactory #gls("ld") while adhering to practical engineering constraints. 
+Furthermore, the framework's flexibility and adaptability underscore its value for the potential structural testing and certification processes of #glspl("swith") in the future.
+
 ])
