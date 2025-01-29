@@ -91,16 +91,17 @@ The author gratefully acknowledges the computing time made available to him on t
 
 // -------------------------------------------------------------------------- //
 
-Next, I would like to acknowledge is something that highly concerned me. So much so that, during that time, I could not have cared less about the research on #glspl("swith", long:true).
+Next, I would like to acknowledge something that highly concerned me.
+So much so that, during that time, I could not have cared less about the research on #glspl("swith", long:true).
 I felt ashamed - ashamed of myself, of what I had achieved, of my current situation. I felt weak and questioned my life's decisions. People were being bombed - elderly, men, women, children, and even newborns. I was unable to do anything to help them.
 At the time of writing this thesis, I lived in Dresden, Germany. 
 During this period, while Israel was bombing Palestine, leading German politicians publicly declared that the German nation would stand with Israel.
 Dear reader, I ask you to recognize my utmost desire to distance myself as much as possible from the actions taken by leading German politicians in the years 2023 and 2024.
 
 While this short paragraph does not permit space for detailed elaborations, I would like to pinpoint a few crucial points.
-I am saying this as a non-Arab - I was not born in Palestine, I never went there, from what I know I also do not have any family members there, nor do I have any connections to people there.
-Taking away drinking water from any population, be it a Muslim Arab or whoever else, can easily be seen as a monstrous act. I know that every human was gifted with dignity, honor and respect.
-Part of this dignity is unrestricted access to water. Another important element of human dignity are human rights - all of them.
+I am saying this as a non-Arab - I was not born in Palestine, I have never been there, and from what I know, I also do not have any family members there, nor do I have any connections to people there.
+Taking away drinking water from any population, be it a Muslim Arab or whoever else, can easily be seen as a monstrous act. I know that every human was gifted with dignity, honor, and respect.
+Part of this dignity is unrestricted access to water. Another important element of human dignity is human rights - all of them.
  
 Many more examples could be given, highlighting simple and ubiquitously ethical aspects. Beyond my personal observations, even politically constrained academia can be consulted @Jones2024 @Kunichoff2024 @El_Shewy2024 @Brooks2024 @Ram2024 @Khafaei2024 @neier2024israel @Segal2024 @Abuawad2024 @link_UN_3.
 Most of them are very clear in their arguments, such as:
