@@ -45,7 +45,7 @@ Therefore, the relevance of these announced SAE standards to #gls("swith") certi
 Secondly, these standards may require modifications before gaining acceptance within European regulatory frameworks.
 The timeline of aerospace standardization developments provided additional context. 
 In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 was released for space systems. 
-Subsequently, in 2019, SAE initiated the development of SAE AS7373 @SAE_Liquid for liquid hydrogen in aviation. 
+Subsequently, in 2019, SAE initiated the development of SAE AS 6679 @SAE_Liquid for liquid hydrogen in aviation. 
 Notably, this development continues as of late 2024, five years after its initiation. This extended development period demonstrates that adapting space standards for general aviation applications requires substantial time and effort.
 
 // --------------------------- 2_Pressure_Vessels --------------------------- //

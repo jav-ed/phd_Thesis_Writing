@@ -19,7 +19,8 @@ Lastly, it investigates emerging standards currently under development and evalu
 
 /* -------------------------------------------------------------------------- */
 At the outset of this section, it is important to reiterate that, at the time of writing this thesis, there is no single standard available that pertains to the certification of #glspl("swith").  
-Certification extends beyond mere bureaucratic processes; it signifies that local or global aviation authorities permit the use of a #gls("swith"). Only with such certification, commercial application of a #gls("swith") would be possible.
+Certification extends beyond mere bureaucratic processes; it signifies that local or global aviation authorities permit the use of a #gls("swith"). 
+Only with such certification would commercial application of a #gls("swith") be possible.
 // ------------------------------- subdomains ------------------------------- //
 Considering one of the subdomains in which #glspl("swith") can be classified, namely aviation, it is crucial to understand how aircraft are categorized. In aviation, aircraft classification is based on various factors, including the region of certification, maximum takeoff mass, and type of aircraft. The region of certification refers to the geographical location where the aircraft is to be approved and operated. Different approval authorities and regulations exist depending on the country or region in which the aircraft is to be certified. For instance, in Europe, the #gls("easa", long:true) @EASA_Homepage @Mensen2013 is responsible for aircraft approval, while in the USA, this task falls under the purview of the Federal Aviation Administration (FAA) @FAA_Homepage @Mensen2013.
 
@@ -176,7 +177,7 @@ Firstly, it is unknown whether these SAE standards will be limited to non-integr
 Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
 Secondly, these standards, in their current form, might not be accepted in Europe without modifications.
 
-Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS7373 @SAE_Liquid, a standard for liquid hydrogen in aviation. 
+Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS 6679  @SAE_Liquid, a standard for liquid hydrogen in aviation. 
 However, as of late 2024, five years after its initiation, this development is still ongoing. This extended timeline suggests that transferring existing space standards to general aviation is not straightforward and requires substantial time and effort.
 
 ])
