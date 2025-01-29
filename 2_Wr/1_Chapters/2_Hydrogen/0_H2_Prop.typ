@@ -76,11 +76,11 @@ For convenience, all principal, non-safety-critical information of this section 
     
     [Production], [Renewable production is possible through water electrolysis powered by wind, solar, or other renewable energy sources @Rosen2018 @Ishaq2022 @Younas2022 @Dawood2020.],
     
-    [Thermodynamic Properties],[Exhibits a negative Joule-Thomson coefficient at high pressures @Li2023a @Zhang2024b @Li2023b. This implies that an increase in pressure results in a decrease in temperature, and vice versa. This relationship can be mathematically expressed as:
+    [Thermodynamic Properties],[Exhibits a negative Joule-Thomson coefficient at high pressures @Li2023a @Zhang2024b @Li2023b. This implies that, under constant enthalpy $h$, an increase in pressure results in a decrease in temperature (cooling during relaxation in a throttle @Klell2018), and vice versa. This relationship can be mathematically expressed as:
 
-    $ mu_"JT" = (delta T) / (delta p) $<eq_4>
+    $ mu_"JT" = ((delta T) / (delta p))_h $<eq_4>
 
-    where T represents temperature, p stands for pressure, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
+    where T represents temperature, p stands for pressure, $h$ indicates the constant enthalpy, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
     
     [Physical Properties], 
     [- Hydrogen is the lowest density element (approximately 14 times lighter than air) @Klell2018 @Klell2023. 
