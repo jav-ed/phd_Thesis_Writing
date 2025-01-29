@@ -2,6 +2,7 @@
 #import "../../../3_Code/1_Fcns/0_Fcn_Main.typ": *
 /* -------------------------------------------------------------------------- */
 // Word rep ins. done
+// proofread ins. done
 
 = Discussion <chap_6>
 
@@ -18,14 +19,15 @@ Here, it was concluded that all hydrogen-powered aircraft concepts share the sam
 The structural integration of hydrogen tanks provides a dual advantage by combining fuel storage with load-sharing capabilities.
 At the time of writing, two distinct approaches to structural integration were identified: fuselage-integrated and wing-integrated.
 The field of #glspl("swith") is characterized by a scarcity of scientific literature. This paucity of research embodies both advantages and barriers. 
-On one hand, it enhances the value and supports the novelty aspect of #gls("swith") research. 
-Hence, this situation underscores the need for further investigation into #glspl("swith"), potentially encouraging more researchers to explore this topic.
+On the one hand, it enhances the value and supports the novelty aspect of #gls("swith") research. 
+Hence, this situation underscores the need for further investigation into #glspl("swith") and potentially encourages more researchers to explore this topic.
+
 Conversely, the limited availability of prior work means that scientists have a reduced foundation of existing research upon which to build. As a result, it poses initial hurdles that need to be overcome in the pursuit of sustainable aviation.
 
 // ------------------------------- 0_Standards ------------------------------ //
 Beyond these general research obstacles, a critical concern for #glspl("swith") lies in their standardization, development, and certification, as detailed in @chap_1. 
 The role of standards for #gls("swith") certification is multifaceted and remains in its infancy.
-While the innovative nature of #glspl("swith") faces challenges for standard application, they also create opportunities for advancing both the technology and their regulatory framework.
+While the innovative nature of #glspl("swith") faces challenges for standard application, it also creates opportunities for advancing both the technology and their regulatory framework.
 As of this writing, no known standards or regulations exist for certifying #glspl("swith"). 
 This absence of certification procedures significantly constrains industrial and scientific applications of #glspl("swith").
 Consequently, there is a pressing need for appropriate standards upon which industry and scientific institutions can build.
@@ -83,7 +85,7 @@ These findings emphasized the dual considerations necessary for #gls("swith") de
 Given these regulatory requirements and testing constraints, a comprehensive understanding of the physical properties and behavior of hydrogen became essential for successful #gls("swith") development and certification.
 @chap_2_0 provided an overview of hydrogen's fundamental properties that underpin its potential as an aviation fuel.
 Furthermore, the examined properties demonstrated hydrogen's predominantly positive characteristics as an energy carrier. 
-One notable hurdle, however, was hydrogen's invisibility to the human eye due to its small molecular size, which presents specific detection and measurement requirements.
+One notable hurdle, however, was hydrogen's invisibility to the human eye, due to its small molecular size, which presents specific detection and measurement requirements.
 The analysis of hydrogen's theoretical gravimetric energy density in relation to its practical energy density in real-world storage systems highlighted opportunities as well as challenges in its implementation as a fuel source.
 The analytical functions introduced for calculating hydrogen mass from density and volume across various pressure and temperature ranges deepen this understanding. 
 By accounting for real gas behavior, these functions support the modeling and simulation of hydrogen storage in applications such as #glspl("swith"). 
@@ -93,7 +95,7 @@ Furthermore, the custom analysis tool, developed using these functions, provides
 Although these analytical capabilities are helpful, they must be complemented by a thorough understanding of hydrogen's safety implications, especially for high-pressure #glspl("swith").
 The focus on safety aspects in @chap_2_1 revealed that hydrogen's potential for ignition, explosion, and detonation depends significantly on specific air-hydrogen mixtures.
 Two factors particularly impact safety considerations: the wide range of ignitable mixture ratios and the sufficiency of small static discharges to trigger ignition to detonation. 
-Additionally, hydrogen's diffusion behavior and material compatibility emerged as another critical hurdle for safe containment. 
+Moreover, hydrogen's diffusion behavior and material compatibility emerged as additional critical hurdles for safe containment.
 While metals provide superior retention compared to plastics, they face the concern of potential hydrogen embrittlement. The analysis in @chap_2_1 emphasized the critical importance of addressing hydrogen safety in real-world applications. 
 It also underscored the value of integrating numerical simulations and experimental tests to bridge the gap between theoretical insights and practical implementation. This integration is essential for the experimental structural validation tests of #glspl("swith"), where precise prediction and management of hydrogen behavior are crucial for both safety and performance.
 
@@ -102,7 +104,7 @@ It also underscored the value of integrating numerical simulations and experimen
 Building on these safety considerations, experimental investigations identified specific obstacles and proposed mitigation strategies.
 The experimental investigations mentioned in @chap_2_2 demonstrated that hydrogen self-ignition represents a tangible concern in real-world applications.
 Additionally, @chap_2_2 identified the primary geometrical factors that can precipitate ignition and outlined the necessary modifications to mitigate this risk. 
-Despite the threat of hydrogen self-ignition requiring serious scrutiny, the literature review supported the feasibility of secure hydrogen application, provided its properties are thoroughly understood and appropriately accounted for.
+Despite the threat of hydrogen self-ignition requiring serious scrutiny, the literature review supported the feasibility of safe hydrogen application, provided its properties are thoroughly understood and appropriately accounted for.
 A critical aspect emerges when evaluating the transferability of hydrogen applications from the automotive industry to #glspl("swith") for large commercial aircraft, such as the Airbus A350-1000 @link_Airbus_350. 
 Rather than direct transposition, a structured approach becomes necessary.
 This involved conducting a series of smaller-scale experimental and numerical studies, progressively advancing toward large aircraft scale. 

@@ -18,8 +18,7 @@ I hereby declare that the present work, the doctoral thesis, is solely and indep
 
 
 I would like to acknowledge that I leveraged Artificial Intelligence (AI) through #glspl("llm") for writing assistance. 
-They were used specifically for English language refinements such as grammar and spelling check. 
-In rare instances, they were also used to verify sentence comprehensibility by having the #glspl("llm") evaluate whether complex sentences remain understandable to readers.
+In particular, they were used for English language refinements, such as grammar and spelling checks, and, on occasion, for verifying sentence comprehensibility. The latter was done by having the #glspl("llm") evaluate whether complex sentences remained understandable to readers.
 
 Following the declaration of independent work, and addressing the matter of ethical integrity, I, Javed Arshad Butt, choose to make my commitment to scientific standards in a way that reflects my identity.
 

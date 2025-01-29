@@ -273,7 +273,7 @@ Concurrently with these experimental efforts, attempts should be made to encapsu
 
 In conclusion, the potential for hydrogen self-ignition has been demonstrated to be a tangible concern in real-world applications. 
 This section elucidated the primary geometrical factors that can precipitate ignition and explained the modifications necessary to mitigate this risk. 
-Despite the acknowledged threat of hydrogen self-ignition, literature review supports the premise that secure hydrogen application is feasible, provided that its properties are thoroughly understood and accounted for.
+Despite the acknowledged threat of hydrogen self-ignition, literature review supports the premise that safe hydrogen application is feasible, provided that its properties are thoroughly understood and accounted for.
 However, it is crucial to exercise caution when considering the direct transposition of hydrogen applications from the automotive industry to #glspl("swith") on the scale of large commercial aircraft, such as the Airbus A350-1000. 
 A more judicious strategy involves conducting a series of smaller-scale experimental and numerical studies, incrementally approaching the scale of a large aircraft. 
 This approach allows for the systematic accumulation of knowledge and the careful management of risks associated with scaling up hydrogen technologies in aviation.
