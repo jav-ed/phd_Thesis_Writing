@@ -43,7 +43,7 @@ This document sets ambitious goals for the aviation industry, including a 75% re
 
 One promising approach to meeting these environmental concerns, as mentioned in @chap_0_1, is the replacement of current kerosene with hydrogen. In addition to 
 eliminating certain environmental impacts, hydrogen possesses specific properties that could be highly beneficial for aviation. 
-Nevertheless, lack of awareness of or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
+Nevertheless, a lack of awareness of or mishandling of these properties could cause serious damage to humans and the surrounding environment @Hu2023. Furthermore, there remain numerous open questions and hurdles regarding the practical implementation of hydrogen in aviation.
 These considerations hold particular relevance when conducting experimental structural validation tests that are mandatory for certifying any aircraft. 
 A more detailed examination of hydrogen's properties and challenges can be found in @chap_2_0 to @chap_2_2.
 

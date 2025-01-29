@@ -7,8 +7,7 @@
 
 /* ------------------------------ Introduction ------------------------------ */
 = Introduction <chap_0>
-The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers a foundational overview of the research field, while a detailed examination of the subject is 
-given in @chap_0_7.
+The introduction begins with an initial background of the niche field of #gls("swith", long:true) in @chap_0_1. This offers readers a foundational overview of the research field, while a detailed examination of the subject is given in @chap_0_7.
 Following an introduction to #glspl("swith"), @chap_0_2 explains the motivation underlying this work. @chap_0_3 delineates the overall objectives of the research. @chap_0_4 outlines the structural organization of this thesis, offering readers a systematic overview of the covered topics.
 @chap_0_5 addresses the novel contributions and importance of this dissertation. The introduction also includes @chap_0_6, which enables transparency regarding the research funding sources and acknowledges all financial support.
 
@@ -57,7 +56,7 @@ An illustrative example of the wing of a #gls("swith") is provided in @fig_1. Wh
   caption: [Conceptual illustration of a #gls("swith") configuration, highlighting the integration of four hydrogen pressure tubes.],
 ) <fig_1>
 
-When working with #glspl("swith"), it is crucial to understand the implications arising from the key differences between regular aircraft and non-wing structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. The initial assessment involves the modification of space arrangement and mass distribution required for secure tank placement.
+When working with #glspl("swith"), it is crucial to understand the implications arising from the key differences between regular aircraft and non-wing structure-integrated hydrogen tank aircraft. As mentioned earlier, the integration of high-pressure hydrogen tanks into the wing structure introduces unique challenges. The initial assessment involves modifications to space arrangement and mass distribution required for secure tank placement.
 
 Beyond these spatial and mass-related aspects, a fundamental distinguishing feature of #glspl("swith") is the addition of high pressure loads to the wing structure. This characteristic sets them apart from both conventional aircraft and those with non-integrated hydrogen tanks. 
 The wings of #glspl("swith") must withstand not only the usual aerodynamic loads but also the newly added pressure loads from the integrated tanks. Depending on the internal pressure values, these pressure loads may have a greater structural impact on the wing than the aerodynamic loads themselves. 
