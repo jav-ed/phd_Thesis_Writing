@@ -7,7 +7,8 @@
 
 == State of The Art <chap_0_7>
 
-This section presents an overview of #glspl("swith"). Initially, a detailed definition of #gls("swith", long:true) shall be provided. The section then shall examine whether #glspl("swith") are purely a scientific concept or if they are being attempted to be manufactured in the real world for commercial purposes. 
+This section presents an overview of #glspl("swith"). Initially, a detailed definition of #gls("swith", long:true) shall be provided. 
+The section shall then examine whether #glspl("swith") remain purely a scientific concept or if attempts are being made to manufacture them for commercial purposes.
 Other existing approaches for utilizing hydrogen as fuel in aircraft shall be addressed, highlighting the differences between these attempts and #glspl("swith").
 Subsequently, the key benefits of #glspl("swith") shall be outlined, followed by a short analysis of potential drawbacks associated with this pioneering concept. 
 By this point, the differences between #glspl("swith") and currently available commercial aircraft should have become evident. 
@@ -66,7 +67,7 @@ At the time of this thesis's composition, only one publicly available scientific
 
 The scarcity of openly available scientific work on #glspl("swith"), coupled with the limited number of aircraft manufacturers capable of demonstrating a prototype of a #gls("swith"), suggests that the manufacturing industry could face significant challenges in the production process. A primary obstacle is the complexity of producing a single component that integrates both the wing and the tubes.
 According to publicly available information from APUS @APUS_1, the full wingspan is 13.2 meters. 
-From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises approximately more than half of this length, suggesting a tube length of around 7 meters. 
+From the visual depiction provided in @APUS_1, it can be assumed that the structurally integrated portion of the wing comprises slightly more than half of this length, suggesting a tube length of around 7 meters.
 Generally, with a given pressure, longer tubes allow for increased hydrogen storage capacity. 
 Consequently, for extended flight ranges and assuming the highest allowable pressure has already been selected, even longer tubes than 7 meters may be necessary.
 Based on the 7-meter assumption and since 7 meters is a considerable length for structure-integrated #gls("cfrp", long:true) wing tanks, manufacturing these structures faces unique hurdles. Manufacturers could be expected to either develop novel methods or materially improve existing techniques to craft such large-scale and complex structures.
