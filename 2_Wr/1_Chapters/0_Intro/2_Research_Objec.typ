@@ -21,7 +21,7 @@ The concrete topics to be covered in this research are as follows.
 
 /* ---------------------------------- intro --------------------------------- */
 One primary objective of this research is to develop a comprehensive understanding of the #gls("swith") concept. This involves precisely defining what a #gls("swith") is, exploring its applications in aviation and elucidating its relationship with #gls("cgh2", long:true) as fuel. 
-The study should evaluate the benefits that #glspl("swith") could bring to aviation and environment. 
+The study should evaluate the benefits that #glspl("swith") could bring to aviation and the environment.
 Following this, the research needs to conduct an analysis of the current state of the art in #glspl("swith"), reviewing existing literature, patents, and ongoing research projects to identify key advancements, challenges, and trends in the field.
 
 /* ---------------------------------- norms --------------------------------- */
