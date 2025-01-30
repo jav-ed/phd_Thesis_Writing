@@ -38,7 +38,7 @@ To illustrate this breadth of content, the research encompasses various intercon
 + Impact of filling agents on structural behavior
 + Feasibility assessment of hydrogen substitution in structural testing
 + Methods for physical load introduction
-+ Methods for aerodynamic #gls("ld", long:true) discretization
++ Methods for aerodynamic #gls("ld", long:true) 
 + Beam modeling and optimization 
 
 
