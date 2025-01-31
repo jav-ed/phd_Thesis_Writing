@@ -115,7 +115,7 @@ An overview of some of the identified standards and projects that deal with #gls
       - EIHP @eihp
       - #gls("iso") 15869:2009, status: withdrawn @iso_15869
       - #gls("iso") 19881:2018, announced to be updated @iso_19881
-      - ISO/DIS 19881, under development @iso_19881_New
+      - #gls("iso")/DIS 19881, under development @iso_19881_New
     ],
   ),
 
@@ -282,7 +282,7 @@ An overview of some of the identified standards and projects that deal with #gls
     [#gls("iso")/AWI TR 22734-2], [Hydrogen generators using water electrolysis — Part 2: Testing guidance for performing electricity grid service @iso_22734_2, status: under development],
   ),
   kind: table,
-  caption: [Standards following ISO/TC 197 - Hydrogen technologies.],
+  caption: [Standards following #gls("iso")/TC 197 - Hydrogen technologies.],
 )<tab_8>
 
 

@@ -177,7 +177,7 @@ Firstly, it is unknown whether these SAE standards will be limited to non-integr
 Additionally, they might include provisions for fuselage-integral hydrogen tanks, but possibly not wing-integral tanks. In essence, at the moment, the applicability of the announced SAE standards to the certification of #glspl("swith") remains unclear.
 Secondly, these standards, in their current form, might not be accepted in Europe without modifications.
 
-Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS 6679  @SAE_Liquid, a standard for liquid hydrogen in aviation. 
+Finally, a connection was made between two events in aerospace standardization. In 2018, ANSI/AIAA S-081B-2018 @ansi_standard_2018 became available for space systems. The following year, in 2019, SAE announced plans to develop SAE AS 6679 @SAE_Liquid, a standard for liquid hydrogen in aviation. 
 However, as of late 2024, five years after its initiation, this development is still ongoing. This extended timeline suggests that transferring existing space standards to general aviation is not straightforward and requires substantial time and effort.
 
 ])
