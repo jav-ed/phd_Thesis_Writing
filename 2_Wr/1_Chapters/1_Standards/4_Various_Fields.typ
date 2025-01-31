@@ -260,11 +260,9 @@ An overview of some of the identified standards and projects that deal with #gls
 
     [#gls("iso")/AWI 19884-1], [Gaseous Hydrogen - Pressure vessels for stationary storage Part 1: Part 1: general requirements @iso_19884_1, status: under development],
 
-    [#gls("iso")/AWI TR 19884-2 status: under development], [Gaseous Hydrogen - Pressure vessels for stationary storage Part 2: Material test data of class A materials (steels and aluminum alloys) compatible to hydrogen service @iso_19884_2, status: under development],
+    [#gls("iso")/AWI TR 19884-2], [Gaseous Hydrogen - Pressure vessels for stationary storage Part 2: Material test data of class A materials (steels and aluminum alloys) compatible to hydrogen service @iso_19884_2, status: under development],
 
     [#gls("iso")/AWI TR 19884-3], [Gaseous Hydrogen - Pressure vessels for stationary storage Part 3: Pressure cycle test data to demonstrate shallow pressure cycle estimation methods @iso_19884_3,  status: under development],
-
-
 
     [#gls("iso")/CD 19885-1], [Gaseous hydrogen — Fuelling protocols for hydrogen-fuelled vehicles — Part 1: Design and development process for fuelling protocols @iso_19885_1, status: under development],
 
