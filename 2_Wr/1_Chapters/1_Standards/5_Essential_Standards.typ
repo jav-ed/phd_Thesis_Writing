@@ -131,7 +131,7 @@ For #glspl("swith"), four standards meeting all criteria and complementing each 
   ),
 
   kind: table,
-  caption: [Selection of four essential standards that, while not fully covering all aspects of #gls("swith"), collectively represent the current state of the art.],
+  caption: [Selection of four essential standards that, while not fully covering all aspects of #glspl("swith"), collectively represent the current state of the art.],
 )<tab_11>
 
 
