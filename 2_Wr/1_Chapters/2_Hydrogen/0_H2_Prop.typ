@@ -83,7 +83,7 @@ For convenience, all principal, non-safety-critical information of this section 
     where T represents temperature, p stands for pressure, $h$ indicates the constant enthalpy, and $delta$ denotes the derivative or change in temperature with respect to pressure. Hydrogen also deviates from ideal gas behavior.],
     
     [Physical Properties], 
-    [- Hydrogen is the lowest density element (approximately 14 times lighter than air) @Klell2018 @Klell2023. 
+    [- Hydrogen is the lowest-density element (approximately 14 times lighter than air) @Klell2018 @Klell2023. 
     
     - It primarily exists in liquid and gaseous states. 
 
