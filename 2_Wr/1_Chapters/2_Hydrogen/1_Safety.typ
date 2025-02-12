@@ -69,7 +69,7 @@ The significance of the chosen filling medium for experimental tests becomes app
   caption: [Factors influencing the selection of filling medium in experimental and simulative structural tests for #glspl("swith").],
 ) <tab_20>
 
-The factors outlined in @tab_20 underscore the necessity for a comprehensive understanding of the medium used in #gls("swith") applications. For hydrogen specifically, the properties elaborated in @chap_1_5 are essential for conducting in-depth investigations into its unique characteristics.
+The factors outlined in @tab_20 underscore the necessity for a comprehensive understanding of the medium used in #gls("swith") applications. For hydrogen specifically, the properties elaborated in @chap_2_0 are essential for conducting in-depth investigations into its unique characteristics.
 When evaluating various filling agents for #gls("swith") applications from a safety perspective, a crucial question emerges: does the medium merely emit an unpleasant odor, or does it possess the potential for detonation under certain conditions? 
 This stark contrast in safety implications underscores the critical nature of medium selection in #gls("swith") design, operation and structural testing.
 To elucidate the potential complications arising from hydrogen use, it is imperative to establish some fundamental knowledge and definitions. Sigloch @Sigloch2022 provides the following key concepts:
