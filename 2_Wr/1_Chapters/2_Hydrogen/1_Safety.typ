@@ -199,7 +199,13 @@ Of particular relevance is that in both cases, ignition can only occur if an app
     caption: [Comparison of ignition-relevant properties for hydrogen and various other fuels @Klell2023. Note: (l) denotes liquid state; all others are in gaseous state.],
 )<tab_24>
 
-An analysis of @tab_24 reveals that hydrogen exhibits a relatively high ignition temperature compared to other gases. Nevertheless, it is crucial to note that hydrogen-air mixtures remain flammable across a comparatively wide range of concentrations. While this broad flammability range might be manageable through appropriate safety measures, hydrogen presents a unique challenge due to its exceptionally low minimum ignition energy—the lowest among the fuels listed in @tab_24. This characteristic poses a significant safety concern, as it increases the risk of unwanted and accidental ignitions.
+An analysis of @tab_24 reveals that hydrogen exhibits a relatively high ignition temperature compared to other gases. Nevertheless, it is crucial to note that hydrogen-air mixtures remain flammable across a comparatively wide range of concentrations 
+// TODO add some references @Yang2021 @Wen2022 @Gao2016 (note, Wen2022 - get it from the h2 paper )
+. While this broad flammability range might be manageable through appropriate safety measures, hydrogen presents a unique challenge due to its exceptionally low minimum ignition energy—the lowest among the fuels listed in @tab_24. This characteristic poses a significant safety concern, as it 
+// TODO possible to add some refers from security file of h2 paper
+// note, not all refs are new
+// @Yang2021 @Wen2022 @Mirza2011 @Weiner2011 @Campari2023a @Stolzenburg2009 Alfasfos2024
+increases the risk of both unintentional and accidental ignitions.
 Further complicating safety considerations is the fact that hydrogen is invisible to the naked eye. However, experimental investigations conducted by @schefer2009visible have successfully recorded hydrogen flames under specific conditions. 
 A visual representation of these flames is provided in @fig_20, offering insights into the observable features of hydrogen combustion.
 
