@@ -125,7 +125,9 @@ The combustion speeds and associated pressure increases that are to be expected 
   caption: [Estimated pressure thresholds for structural damage @Sigloch2022.],
 ) <tab_22>
 
-A vital consideration in experimental investigations involving hydrogen is its potential for various combustion processes, including burning, deflagration, explosion, and detonation. It is important to note that hydrogen, in isolation, is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. However, hydrogen can become flammable or even detonable when combined with specific factors. These crucial factors, as outlined in @tab_23, create the conditions necessary for hydrogen's combustibility.
+A vital consideration in experimental investigations involving hydrogen is its potential for various combustion processes, 
+// TODO maybe burning is not the best word - remove it here?
+including burning, deflagration, explosion, and detonation. It is important to note that hydrogen, in isolation, is not inherently flammable @Klell2018 @Cheikhravat2012 @Crowl2007 @Sanchez2014 @Zhang2022. However, hydrogen can become flammable or even detonable when combined with specific factors. These crucial factors, as outlined in @tab_23, create the conditions necessary for hydrogen's combustibility.
 
 #figure(
   table(

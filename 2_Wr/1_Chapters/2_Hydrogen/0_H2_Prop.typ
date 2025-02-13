@@ -201,7 +201,9 @@ For this study, a custom tool was developed to generate insights into the real g
 
 
 #summary_([
-This section has presented an overview of the fundamental properties of hydrogen. While the safety aspects will be addressed in @chap_2_1, the properties elaborated thus far demonstrate hydrogen's predominantly positive characteristics as an energy carrier. However, one notable limitation is hydrogen's invisibility to the human eye due to its small molecular size, which could pose challenges for detection and measurement.
+This section has presented an overview of the fundamental properties of hydrogen. While the safety aspects will be addressed in @chap_2_1, the properties elaborated thus far demonstrate hydrogen's predominantly positive characteristics as an energy carrier. However, one notable limitation is hydrogen's invisibility to the human eye due to its small molecular size, which 
+// TODO there are some referene in the H2 paper that could be used here - it is diffcult to detect hydrogen
+could pose challenges for detection and measurement.
 The relationship between hydrogen's high theoretical gravimetric energy density and its practical energy density in real-world storage systems has been elucidated. This comparison highlights the hurdles and potential of hydrogen as a fuel source.
 Furthermore, analytical functions for calculating hydrogen mass from density and volume across various pressure and temperature ranges have been explored. 
 These functions, accounting for real gas behavior, are crucial for accurate modeling and simulation of hydrogen storage and use in applications such as #glspl("swith").
