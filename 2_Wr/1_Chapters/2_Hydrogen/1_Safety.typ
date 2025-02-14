@@ -206,7 +206,9 @@ An analysis of @tab_24 reveals that hydrogen exhibits a relatively high ignition
 // note, not all refs are new
 // @Yang2021 @Wen2022 @Mirza2011 @Weiner2011 @Campari2023a @Stolzenburg2009 Alfasfos2024
 increases the risk of both unintentional and accidental ignitions.
-Further complicating safety considerations is the fact that hydrogen is invisible to the naked eye. However, experimental investigations conducted by @schefer2009visible have successfully recorded hydrogen flames under specific conditions. 
+Further complicating safety considerations is the fact that hydrogen is invisible to the naked eye
+// TODO add refs: @Tunes2024 @Ma2023 @Darmadi2023 @schefer2009visible
+. However, experimental investigations conducted by @schefer2009visible have successfully recorded hydrogen flames under specific conditions. 
 A visual representation of these flames is provided in @fig_20, offering insights into the observable features of hydrogen combustion.
 
 #figure(
