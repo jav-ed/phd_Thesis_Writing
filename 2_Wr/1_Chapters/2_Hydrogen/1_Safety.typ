@@ -273,6 +273,8 @@ Moreover, hydrogen becomes detonable within a narrower but still significant ran
 
 Beyond the air content hurdles outlined in @tab_25, @tab_23 highlights two exceptional cases of hydrogen reactivity. Firstly, hydrogen and chlorine can initiate a reaction solely through light irradiation, resulting in a loud, explosive bang known as the chlorine oxyhydrogen reaction @Klell2018 @Klell2023. 
 Secondly, hydrogen exhibits similarly explosive reactions with fluorine @Klell2018 @Klell2023. 
+// TODO: optional: none of these refs should be here, get from h2 paper
+//  Further studies on the explosion limits of various hydrogen-oxygen mixtures can be found in literature such as \cite{Liang2017, Li2018, Liang2019, Liu2023, Liu2018, Zhou2021, Li2023_H2}.
 These cases underscore the diverse and potentially hazardous reactive properties of hydrogen.
 The reactive nature of hydrogen not only manifests in gaseous interactions but also in its interactions with solid materials. 
 Hydrogen-material compatibility emerges as another substantial consideration in hydrogen handling. Metals, in particular, can accumulate hydrogen within their lattices, potentially leading to embrittlement. For a more detailed examination of hydrogen embrittlement, the reader is directed to @chap_1_2.
