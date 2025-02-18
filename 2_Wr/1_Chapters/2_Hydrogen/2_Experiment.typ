@@ -29,7 +29,9 @@ By synthesizing insights from theoretical data, advanced numerical models, and c
 // -------------------------------------------------------------------------- //
 
 The initial investigation focuses on pressure shocks @Sigloch2022 @McLean2014 @Vos2015 @Liu2022a. These phenomena occur when supersonic velocities arise locally at a single point. 
-Pressure shocks are complex phenomena and will be explained here only to the extent necessary for understanding the presented results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K "$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
+Pressure shocks are complex phenomena 
+// TODO possible to add reference: @Jiang2022 (see h2 paper)
+and will be explained here only to the extent necessary for understanding the presented results. The effects of pressure shocks manifest in three primary ways. Firstly, they generate very high pressures. Secondly, the temperatures can reach extreme levels, up to several thousand Kelvin ($3000 "K "$ @Xu2009 and more @Goroshin2006). Lastly, rapid and significant pressure changes produce airborne noise, necessitating the use of hearing protection.
 An attempt to simulate the effect of pressure shocks was conducted by @Xu2009. In their study, hydrogen was initially compressed to $250 "bar"$ in a pressure vessel and allowed to flow into the free atmosphere through a nozzle. 
 The simulation output, shown in @fig_22, depicts the system at different times after the hydrogen exits the nozzle.
 
@@ -110,7 +112,7 @@ The high temperatures in the vicinity of the hydrogen, induced by the air shock 
 It's important to note that this explanation is a simplified model designed to illustrate the core concepts. The actual physics of shock wave formation and the resulting temperature increase involve more complex thermodynamic processes. For a more comprehensive treatment, readers are directed to advanced non-linear compressible fluid dynamics texts @Sasoh2020.
 
 // -------------------------------------------------------------------------- //
-Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, and mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
+Ignitions that occur without external ignition sources are referred to as self-ignitions or spontaneous ignitions @Stauffer2008. Various theoretical models for self-ignition have been proposed, including the reverse Joule-Thomson effect, electrostatic ignition, brush discharges, corona discharges, diffusion ignition, sudden adiabatic compression, hot surface ignition, mechanical friction and impact ignition @astbury2007spontaneous @Zhou2022 @Qiu2024 @Yang2021. 
 Notably, compression ignition, Joule-Thomson expansion, diffusion ignition, and ignition by hot surfaces are considered unlikely mechanisms for most unintentional releases of hydrogen at ambient temperature @astbury2007spontaneous. 
 That said, it is crucial to acknowledge that several of these mechanisms may collectively contribute to a self-ignition event @astbury2007spontaneous.
 
